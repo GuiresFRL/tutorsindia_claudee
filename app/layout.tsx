@@ -3,6 +3,7 @@ import "./globals.css";
 import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { Analytics } from '@vercel/analytics/next';
 
 const siteUrl = "https://tutorsindia.com";
 
@@ -97,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main style={{ flex: 1 }}>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
