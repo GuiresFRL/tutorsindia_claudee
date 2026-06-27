@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 110" width="320" height="110">
+  <defs>
+    <style>
+      .logo-text { font-family: 'Georgia', 'Times New Roman', serif; }
+      .logo-sub  { font-family: 'Arial', sans-serif; }
+    </style>
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1a2a6c"/>
+    </linearGradient>
+    <!-- Gold gradient for stars/trim -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f9c74f"/>
+      <stop offset="100%" stop-color="#e0a020"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="emblemShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="rgba(0,0,0,0.25)"/>
+    </filter>
+  </defs>
+
+  <!-- ══════════════════════════════════════════════════════
+       EMBLEM (left side)
+       ══════════════════════════════════════════════════════ -->
+  <g transform="translate(55,55)" filter="url(#emblemShadow)">
+
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="50" fill="url(#shieldGrad)" />
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#f9c74f" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="44" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+    <!-- ── Left laurel branch ── -->
+    <g stroke="#4ade80" stroke-width="1.2" fill="#22c55e">
+      <!-- stem -->
+      <path d="M-46,0 Q-38,-8 -28,-18" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+      <!-- leaves left side -->
+      <ellipse cx="-44" cy="-4"  rx="5" ry="2.5" transform="rotate(-40,-44,-4)"   fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="-40" cy="-10" rx="5" ry="2.5" transform="rotate(-55,-40,-10)"  fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="-35" cy="-16" rx="5" ry="2.5" transform="rotate(-65,-35,-16)"  fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="-29" cy="-21" rx="5" ry="2.5" transform="rotate(-75,-29,-21)"  fill="#22c55e" opacity="0.9"/>
+      <!-- lower leaves -->
+      <path d="M-46,0 Q-40,8 -30,15" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+      <ellipse cx="-44" cy="5"   rx="5" ry="2.5" transform="rotate(35,-44,5)"    fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="-39" cy="11"  rx="5" ry="2.5" transform="rotate(50,-39,11)"   fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="-33" cy="16"  rx="5" ry="2.5" transform="rotate(65,-33,16)"   fill="#22c55e" opacity="0.9"/>
+    </g>
+
+    <!-- ── Right laurel branch (mirror) ── -->
+    <g>
+      <path d="M46,0 Q38,-8 28,-18" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+      <ellipse cx="44"  cy="-4"  rx="5" ry="2.5" transform="rotate(40,44,-4)"    fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="40"  cy="-10" rx="5" ry="2.5" transform="rotate(55,40,-10)"   fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="35"  cy="-16" rx="5" ry="2.5" transform="rotate(65,35,-16)"   fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="29"  cy="-21" rx="5" ry="2.5" transform="rotate(75,29,-21)"   fill="#22c55e" opacity="0.9"/>
+      <path d="M46,0 Q40,8 30,15" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+      <ellipse cx="44"  cy="5"   rx="5" ry="2.5" transform="rotate(-35,44,5)"    fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="39"  cy="11"  rx="5" ry="2.5" transform="rotate(-50,39,11)"   fill="#22c55e" opacity="0.9"/>
+      <ellipse cx="33"  cy="16"  rx="5" ry="2.5" transform="rotate(-65,33,16)"   fill="#22c55e" opacity="0.9"/>
+    </g>
+
+    <!-- Bottom laurel tie -->
+    <ellipse cx="0" cy="42" rx="8" ry="3.5" fill="#f9c74f"/>
+
+    <!-- ── 5 gold stars at top ── -->
+    <g fill="url(#goldGrad)">
+      <polygon points="0,-42  1.4,-38.5  5,-38.5  2,-36.5  3.5,-33  0,-35  -3.5,-33  -2,-36.5  -5,-38.5  -1.4,-38.5" transform="scale(0.75)"/>
+      <polygon points="0,-42  1.4,-38.5  5,-38.5  2,-36.5  3.5,-33  0,-35  -3.5,-33  -2,-36.5  -5,-38.5  -1.4,-38.5" transform="translate(-14,0) scale(0.65)"/>
+      <polygon points="0,-42  1.4,-38.5  5,-38.5  2,-36.5  3.5,-33  0,-35  -3.5,-33  -2,-36.5  -5,-38.5  -1.4,-38.5" transform="translate(14,0) scale(0.65)"/>
+      <polygon points="0,-42  1.4,-38.5  5,-38.5  2,-36.5  3.5,-33  0,-35  -3.5,-33  -2,-36.5  -5,-38.5  -1.4,-38.5" transform="translate(-24,-4) scale(0.5)"/>
+      <polygon points="0,-42  1.4,-38.5  5,-38.5  2,-36.5  3.5,-33  0,-35  -3.5,-33  -2,-36.5  -5,-38.5  -1.4,-38.5" transform="translate(24,-4) scale(0.5)"/>
+    </g>
+
+    <!-- ── Inner shield shape ── -->
+    <path d="M0,-28 L20,-20 L20,8 Q20,24 0,32 Q-20,24 -20,8 L-20,-20 Z"
+          fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+
+    <!-- ── Open Book ── -->
+    <g transform="translate(0,-4)">
+      <!-- Book base/spine -->
+      <rect x="-14" y="-2" width="28" height="16" rx="2" fill="white" opacity="0.95"/>
+      <!-- Spine line -->
+      <line x1="0" y1="-2" x2="0" y2="14" stroke="#1a2a6c" stroke-width="1.5"/>
+      <!-- Left page lines -->
+      <line x1="-12" y1="3"  x2="-2" y2="3"  stroke="#1a2a6c" stroke-width="0.8" opacity="0.6"/>
+      <line x1="-12" y1="7"  x2="-2" y2="7"  stroke="#1a2a6c" stroke-width="0.8" opacity="0.6"/>
+      <line x1="-12" y1="11" x2="-2" y2="11" stroke="#1a2a6c" stroke-width="0.8" opacity="0.6"/>
+      <!-- Right page lines -->
+      <line x1="2"  y1="3"  x2="12" y2="3"  stroke="#1a2a6c" stroke-width="0.8" opacity="0.6"/>
+      <line x1="2"  y1="7"  x2="12" y2="7"  stroke="#1a2a6c" stroke-width="0.8" opacity="0.6"/>
+      <line x1="2"  y1="11" x2="12" y2="11" stroke="#1a2a6c" stroke-width="0.8" opacity="0.6"/>
+      <!-- Page curve at top -->
+      <path d="M-14,-2 Q-7,-8 0,-2" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+      <path d="M14,-2  Q7,-8  0,-2" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+    </g>
+
+    <!-- ── Pen / Quill ── -->
+    <g transform="translate(10,-18) rotate(40)">
+      <!-- Quill body -->
+      <path d="M0,0 Q2,6 0,18 Q-2,6 0,0" fill="#f9c74f" stroke="#e0a020" stroke-width="0.5"/>
+      <!-- Nib -->
+      <path d="M0,18 L-1.5,24 L0,22 L1.5,24 Z" fill="#1a2a6c"/>
+      <!-- Feather lines -->
+      <path d="M0,3 Q5,2 8,-2"  fill="none" stroke="white" stroke-width="0.6" opacity="0.7"/>
+      <path d="M0,6 Q5,5 9,1"   fill="none" stroke="white" stroke-width="0.6" opacity="0.7"/>
+      <path d="M0,9 Q4,9 7,6"   fill="none" stroke="white" stroke-width="0.6" opacity="0.7"/>
+      <path d="M0,3 Q-5,2 -8,-2" fill="none" stroke="white" stroke-width="0.6" opacity="0.7"/>
+      <path d="M0,6 Q-5,5 -9,1"  fill="none" stroke="white" stroke-width="0.6" opacity="0.7"/>
+      <path d="M0,9 Q-4,9 -7,6"  fill="none" stroke="white" stroke-width="0.6" opacity="0.7"/>
+    </g>
+
+  </g><!-- end emblem group -->
+
+  <!-- ══════════════════════════════════════════════════════
+       TEXT (right side)
+       ══════════════════════════════════════════════════════ -->
+
+  <!-- "Tutors" -->
+  <text x="118" y="43"
+        class="logo-text"
+        font-size="30"
+        font-weight="700"
+        fill="#1a2a6c"
+        letter-spacing="1">Tutors</text>
+
+  <!-- "India" -->
+  <text x="118" y="72"
+        class="logo-text"
+        font-size="30"
+        font-weight="700"
+        fill="#1a2a6c"
+        letter-spacing="1">India</text>
+
+  <!-- Decorative rule -->
+  <line x1="118" y1="78" x2="295" y2="78" stroke="#e87722" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- "Since 2001" -->
+  <text x="118" y="94"
+        class="logo-sub"
+        font-size="12"
+        font-weight="600"
+        fill="#e87722"
+        letter-spacing="2.5">SINCE 2001</text>
+
+</svg>
