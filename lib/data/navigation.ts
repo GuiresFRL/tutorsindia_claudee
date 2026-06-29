@@ -150,6 +150,7 @@ export const navigation: NavItem[] = [
       { label: "Ask an Expert", href: "/ask-an-expert/" },
     ],
   },
+  { label: "Academy", href: "/academy/" },
   { label: "Blog", href: "/blog/" },
   { label: "Contact Us", href: "/contact-us/" },
 ];

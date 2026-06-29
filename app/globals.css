@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 @import "tailwindcss";
 
+/* ─────────────────────────────
+   CSS VARIABLES
+───────────────────────────── */
 :root {
   --navy: #1a2a6c;
   --navy-dark: #12214a;
@@ -15,34 +18,28 @@
   --border: #dde2ef;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* ─────────────────────────────
+   RESET & BASE
+───────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: 'Source Sans 3', sans-serif;
   color: var(--text);
   font-size: 16px;
   line-height: 1.6;
+  overflow-x: hidden;
 }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; }
+button { cursor: pointer; font-family: inherit; }
+select { font-family: inherit; }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* ─────────────────────────────
+   NAVIGATION
+───────────────────────────── */
+.nav-desktop { display: flex; gap: 4px; align-items: center; }
 
-img {
-  max-width: 100%;
-}
-
-/* ── Navigation ── */
-.nav-desktop {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
 .nav-mobile-btn {
   display: none;
   background: none;
@@ -53,12 +50,15 @@ img {
   padding: 4px 8px;
   line-height: 1;
 }
+
 .nav-mobile-menu {
   display: none;
   background: #fff;
-  border-top: 1px solid var(--border);
-  padding: 16px 20px;
+  border-top: 2px solid var(--orange);
+  padding: 12px 16px;
 }
+.nav-mobile-menu.open { display: block !important; }
+
 .nav-dropdown {
   position: absolute;
   top: calc(100% + 4px);
@@ -70,47 +70,188 @@ img {
   min-width: 220px;
   z-index: 200;
 }
-.nav-dropdown a:last-child {
-  border-bottom: none !important;
-}
-.nav-link:hover {
-  background: var(--light-blue);
-  color: var(--blue) !important;
+.nav-dropdown a:last-child { border-bottom: none !important; }
+.nav-link:hover { background: var(--light-blue); color: var(--blue) !important; }
+
+/* Header breakpoint — switch to hamburger at 1060 */
+@media (max-width: 1060px) {
+  .hdr-desktop     { display: none !important; }
+  .hdr-hamburger   { display: block !important; }
+  .hdr-pricing-btn { display: none !important; }
+  .hdr-mobile-panel.open { display: block !important; }
+  /* Legacy nav classes */
+  .nav-desktop    { display: none !important; }
+  .nav-mobile-btn { display: block !important; }
+  .nav-cta-outline { display: none !important; }
 }
 
+/* ─────────────────────────────
+   TOPBAR
+───────────────────────────── */
+.topbar-email { display: flex; }
+.topbar-wa    { display: flex; }
+@media (max-width: 640px) {
+  .topbar-email { display: none !important; }
+  .topbar-wa    { display: none !important; }
+}
+
+/* ─────────────────────────────
+   LAYOUT GRIDS (named classes)
+───────────────────────────── */
+.two-col-grid    { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.three-col-grid  { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.four-col-grid   { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.five-col-grid   { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; }
+.sidebar-layout  { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
+.service-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.service-right   { padding-left: 20px; border-left: 1px solid var(--border); }
+
+/* ─────────────────────────────
+   RESPONSIVE — TABLET 1024px
+───────────────────────────── */
+@media (max-width: 1024px) {
+  .four-col-grid  { grid-template-columns: 1fr 1fr !important; }
+  .five-col-grid  { grid-template-columns: repeat(3,1fr) !important; }
+}
+
+/* ─────────────────────────────
+   RESPONSIVE — TABLET 900px
+───────────────────────────── */
 @media (max-width: 900px) {
-  .nav-desktop      { display: none !important; }
-  .nav-mobile-btn   { display: block !important; }
-  .nav-mobile-menu.open { display: block !important; }
-  .nav-cta-outline  { display: none !important; }
+  .three-col-grid  { grid-template-columns: 1fr 1fr !important; gap: 18px !important; }
+  .testimonial-grid { grid-template-columns: 1fr 1fr !important; }
+  .process-four-grid { grid-template-columns: repeat(3,1fr) !important; }
+  .stats-grid { grid-template-columns: repeat(3,1fr) !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
 }
 
-/* ── Layout helpers ── */
-.two-col-grid       { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.three-col-grid     { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-.four-col-grid      { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
-.sidebar-layout     { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
-.service-two-col    { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-
-@media (max-width: 900px) {
-  .three-col-grid  { grid-template-columns: 1fr 1fr !important; }
-  .four-col-grid   { grid-template-columns: 1fr 1fr !important; }
-}
+/* ─────────────────────────────
+   RESPONSIVE — MOBILE 768px
+───────────────────────────── */
 @media (max-width: 768px) {
-  .two-col-grid    { grid-template-columns: 1fr !important; }
-  .sidebar-layout  { grid-template-columns: 1fr !important; }
+  body { font-size: 15px; }
+
+  /* Grids → single column */
+  .two-col-grid    { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .sidebar-layout  { grid-template-columns: 1fr !important; gap: 24px !important; }
   .service-two-col { grid-template-columns: 1fr !important; }
-}
-@media (max-width: 600px) {
-  .three-col-grid  { grid-template-columns: 1fr !important; }
-  .four-col-grid   { grid-template-columns: 1fr !important; }
+  .service-right   { padding-left: 0 !important; border-left: none !important; margin-top: 16px; }
+  .contact-grid    { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .about-grid      { grid-template-columns: 1fr !important; gap: 24px !important; }
+
+  /* Hero */
+  .hero-inner { grid-template-columns: 1fr !important; }
+  .hero-badge { display: none !important; }
+
+  /* Blog layout */
+  .blog-layout { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .post-layout { grid-template-columns: 1fr !important; gap: 24px !important; }
+
+  /* Related grid */
+  .related-grid { grid-template-columns: 1fr 1fr !important; gap: 14px !important; }
+
+  /* Testimonials */
+  .testimonial-grid { grid-template-columns: 1fr !important; }
+
+  /* Trust grid (homepage) */
+  .trust-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Sample grid */
+  .sample-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Stats grid */
+  .stats-grid { grid-template-columns: repeat(2,1fr) !important; gap: 16px !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 20px !important; }
+
+  /* Process steps */
+  .process-four-grid { grid-template-columns: 1fr 1fr !important; gap: 14px !important; }
+  .process-arrow { display: none !important; }
+
+  /* Section padding */
+  section[style*="padding"] { padding-left: 16px !important; padding-right: 16px !important; }
+
+  /* Tables — scroll on mobile */
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  pre   { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
-/* ── Footer ── */
+/* ─────────────────────────────
+   RESPONSIVE — SMALL MOBILE 580px
+───────────────────────────── */
+@media (max-width: 580px) {
+  .three-col-grid  { grid-template-columns: 1fr !important; gap: 14px !important; }
+  .four-col-grid   { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .related-grid    { grid-template-columns: 1fr !important; }
+  .footer-grid     { grid-template-columns: 1fr !important; }
+  .trust-grid      { grid-template-columns: 1fr !important; }
+  .sample-grid     { grid-template-columns: 1fr !important; }
+  .process-four-grid { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ─────────────────────────────
+   RESPONSIVE — EXTRA SMALL 420px
+───────────────────────────── */
+@media (max-width: 420px) {
+  .four-col-grid  { grid-template-columns: 1fr !important; }
+  .stats-grid     { grid-template-columns: 1fr 1fr !important; }
+  h1 { font-size: clamp(1.2rem, 5vw, 1.7rem) !important; }
+}
+
+/* ─────────────────────────────
+   FOOTER
+───────────────────────────── */
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1.2fr 1.2fr 1.5fr;
   gap: 36px;
 }
-@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+
+/* ─────────────────────────────
+   PROCESS STEPS
+───────────────────────────── */
+.process-four-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+}
+.process-arrow { display: block; }
+
+/* ─────────────────────────────
+   STATS / TESTIMONIALS / GRIDS
+───────────────────────────── */
+.stats-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 20px; text-align: center; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.trust-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.sample-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.blog-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; }
+.post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; }
+
+/* ─────────────────────────────
+   HERO RESPONSIVE (inline overrides)
+───────────────────────────── */
+.hero-inner { display: grid; }
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr !important; }
+  .hero-badge { display: none !important; }
+}
+
+/* ─────────────────────────────
+   RESPONSIVE TABLES & OVERFLOW
+───────────────────────────── */
+@media (max-width: 768px) {
+  img { max-width: 100%; }
+  .wp-content table { min-width: 500px; }
+}
+
+/* ─────────────────────────────
+   SERVICE COLUMN
+───────────────────────────── */
+@media (max-width: 768px) {
+  .service-two-col { display: grid; grid-template-columns: 1fr !important; }
+  .service-right { padding-left: 0 !important; border-left: none !important; border-top: 1px solid var(--border); padding-top: 16px !important; margin-top: 8px !important; }
+}
