@@ -1,0 +1,49 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+export const metadata: Metadata = { title: "Academic Law Writing Help | UG, Masters, PhD | Tutors India", description: "Expert Academic Law Writing for UG, Masters and PhD students. Commercial law, criminal law, international law, constitutional law. Harvard & OSCOLA. Tutors India." };
+const areas = ["Contract Law","Tort Law","Criminal Law","Constitutional Law","Administrative Law","Company Law","International Law","Human Rights Law","Employment Law","Family Law","Property Law","Intellectual Property","Environmental Law","Medical Law & Ethics","EU Law","Equity & Trusts"];
+const services = [{ icon: "📚", t: "Law Dissertation Writing", d: "Complete Masters and PhD law dissertations with comprehensive legal analysis, case law, statutory interpretation, and OSCOLA or Harvard referencing." }, { icon: "✍️", t: "Law Essay Writing", d: "Critical legal essays demonstrating understanding of case law, legislation, legal arguments, and academic legal writing at postgraduate level." }, { icon: "⚖️", t: "Case Analysis & Mooting", d: "Detailed case analysis, judicial reasoning critique, and mooting preparation covering landmark legal decisions." }, { icon: "📋", t: "Legal Research Reports", d: "Comprehensive legal research reports covering statute law, case law, and secondary legal sources with accurate citation." }];
+const faqs = [
+  { q: "What law subjects do you cover?", a: "We cover all areas of law including Contract Law, Tort Law, Criminal Law, Constitutional Law, Administrative Law, Company Law, International Law, Human Rights Law, Employment Law, Family Law, Property Law, Intellectual Property, Environmental Law, Medical Law & Ethics, EU Law, and Equity & Trusts. Our legal writers hold LLB, LLM, or PhD qualifications from top UK and US law schools." },
+  { q: "Which citation styles do you use for law writing?", a: "We use OSCOLA (Oxford Standard for the Citation of Legal Authorities) for UK law papers and Harvard (Legal) for other academic law papers. We ensure all case law citations, statute references, journal articles, and secondary sources are formatted correctly according to your university's specific referencing requirements." },
+  { q: "Can you help with law dissertation literature reviews?", a: "Yes. We write comprehensive legal literature reviews drawing from primary sources (case law, legislation, statutory instruments) and secondary sources (academic journals, textbooks, law reports). We use Westlaw, LexisNexis, BAILII, EUR-Lex, and other legal databases to ensure comprehensive coverage." },
+  { q: "Do you provide legal case analysis?", a: "Yes. Our legal writers provide detailed case analysis covering: facts of the case, legal issues raised, judicial reasoning and obiter dicta, application of legal principles, significance and impact on the law, and critical evaluation of the judgment in the context of wider legal doctrine." },
+  { q: "Is the legal writing plagiarism-free?", a: "Yes. All legal writing is original and scanned using Turnitin before delivery. Less than 5% similarity is guaranteed. All legal arguments are properly supported by citations to primary and secondary legal sources, ensuring academic integrity and compliance with your university's plagiarism policy." },
+];
+const testimonials = [{ quote: "First and foremost, I want to express my gratitude for your writer's assistance. It would be difficult to accomplish this assignment on deadline without your assistance. I believe that this legal subject is rather challenging, and starting without your writer's assistance would be extremely difficult.", author: "Hunter W. Lindström, JD, PhD", avatar: "/images/testimonials/user-profile.png" }, { quote: "Even though my professor refused to extend my deadline, I needed to find an assignment assistance provider, and I'm glad I found Tutors India. They responded quickly, and I received an exceptionally well-written paper before the deadline.", author: "Dr. Logan C. Sinclair, PhD", avatar: "/images/testimonials/user-profile.png" }];
+export default function AcademicLawPage() {
+  return (
+    <>
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
+          <div>
+            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}><Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/subjects/" style={{ color: "#a0b8e0" }}>Subjects</Link>{" / "}<span style={{ color: "#fff" }}>Academic Law Writing</span></div>
+            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>Academic Law Writing Help — UG, Masters &amp; PhD</h1>
+            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build great confidence to submit their legal writing successfully. Our qualified legal writers help with law dissertations, essays, case analysis, and legal research across all areas of law.</p>
+            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "22px" }}>OSCOLA · Harvard (Legal) · Westlaw · LexisNexis · All Law Areas</p>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}><Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link><Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link></div>
+          </div>
+          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
+            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>LLB · LLM · PhD<br />Qualified Writers<br />OSCOLA Experts</div>
+          </div>
+        </div>
+        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
+      </section>
+      <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "18px", marginBottom: "28px" }} className="two-col-grid">
+          {services.map(s => (<div key={s.t} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "22px" }}><div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{s.icon}</div><h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "7px" }}>{s.t}</h3><p style={{ fontSize: "0.84rem", color: "#666", lineHeight: 1.65 }}>{s.d}</p></div>))}
+        </div>
+        <div style={{ marginBottom: "28px" }}><h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Law Areas We Cover</h2><div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>{areas.map(a => (<span key={a} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{a}</span>))}</div></div>
+        <div style={{ marginBottom: "28px" }}><h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What Our Clients Say</h2><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }} className="two-col-grid">{testimonials.map((t, i) => (<div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}><div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div><p style={{ color: "#555", fontSize: "0.84rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "12px" }}>{t.quote}</p><div style={{ display: "flex", alignItems: "center", gap: "10px" }}><img src={t.avatar} alt={t.author} style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" /><div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.84rem" }}>{t.author}</div></div></div>))}</div></div>
+        <div style={{ marginBottom: "28px" }}><h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2><FaqAccordion faqs={faqs} /></div>
+      </section>
+      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
+        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get Expert Law Writing Support</h2>
+        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>LLB · LLM · PhD Writers · OSCOLA · All Law Areas · Response in 30 min</p>
+        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}><Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link><Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link></div>
+      </section>
+    </>
+  );
+}
