@@ -102,6 +102,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Floating call button — above WhatsApp */}
         <FloatingCallButton />
 
+        {/* Elementor tabs initializer */}
+        <script dangerouslySetInnerHTML={{ __html: `
+(function(){
+  function initTabs(){
+    document.querySelectorAll('.wp-content .elementor-tabs').forEach(function(el){
+      var titles = el.querySelectorAll('.elementor-tab-title.elementor-tab-desktop-title');
+      var contents = el.querySelectorAll('.elementor-tab-content');
+      if(!titles.length || !contents.length) return;
+      // activate first tab, hide rest
+      titles[0].setAttribute('aria-selected','true');
+      contents.forEach(function(c,i){ c.style.setProperty('display', i===0?'block':'none','important'); });
+      titles.forEach(function(title){
+        title.addEventListener('click',function(){
+          var tab = this.getAttribute('data-tab');
+          titles.forEach(function(t){ t.setAttribute('aria-selected', t.getAttribute('data-tab')===tab?'true':'false'); });
+          contents.forEach(function(c){ c.style.setProperty('display', c.getAttribute('data-tab')===tab?'block':'none','important'); });
+        });
+      });
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initTabs);
+  else initTabs();
+})();
+        `}} />
+
         {/* WhatsApp floating button — bottom left */}
         <a
           href="https://wa.me/918754446690"

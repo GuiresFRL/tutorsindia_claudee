@@ -555,10 +555,62 @@ a.wa-float:hover {
 }
 .wp-content .elementor-button:hover { background: #c0601a; }
 
+/* Elementor Tabs — functional tab UI */
+.wp-content .elementor-tabs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 2px solid #dde2ef;
+  margin-bottom: 0;
+}
+.wp-content .elementor-tab-title.elementor-tab-desktop-title {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+  border: 1px solid #dde2ef;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  background: #f5f6fa;
+  transition: background 0.15s, color 0.15s;
+  user-select: none;
+}
+.wp-content .elementor-tab-title.elementor-tab-desktop-title[aria-selected="true"],
+.wp-content .elementor-tab-title.elementor-tab-desktop-title.e-active {
+  background: #1a2a6c;
+  color: #fff;
+  border-color: #1a2a6c;
+}
+.wp-content .elementor-tab-title.elementor-tab-desktop-title:hover:not([aria-selected="true"]) {
+  background: #e8f0fb;
+  color: #1a2a6c;
+}
+.wp-content .elementor-tab-content {
+  display: none !important;
+  padding: 16px 20px;
+  border: 1px solid #dde2ef;
+  border-top: none;
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  background: #f9fafb;
+  border-radius: 0 0 6px 6px;
+  word-break: break-word;
+}
+.wp-content .elementor-tab-content.elementor-active {
+  display: block !important;
+}
+/* Hide Elementor's duplicate mobile tab titles */
+.wp-content .elementor-tab-title.elementor-tab-mobile-title { display: none !important; }
+/* Hide Elementor's mobile content accordion arrows */
+.wp-content .elementor-tab-mobile-title { display: none !important; }
+
 /* Responsive: single column on small screens */
 @media (max-width: 768px) {
   .wp-content .elementor-container { flex-direction: column; }
   .wp-content .elementor-column { flex: 1 1 100%; }
   .wp-content h1 { font-size: 1.4rem; }
   .wp-content h2 { font-size: 1.15rem; }
+  .wp-content .elementor-tab-title.elementor-tab-desktop-title { font-size: 0.78rem; padding: 7px 12px; }
 }
