@@ -42,41 +42,70 @@ const FETCH_OPTS = {
  * Fetch ALL published Academy posts — paginated through WP REST API.
  * WP REST API caps at 100 per page; this fetches every page in parallel.
  */
-export async function getAcademyPosts(): Promise<AcademyPost[]> {
+const LISTING_FIELDS = "_fields=id,slug,date,modified,title,excerpt,_links,_embedded";
+
+export interface AcademyCategory {
+  id: number;
+  name: string;
+  slug: string;
+  count: number;
+}
+
+export interface AcademyPostsPage {
+  posts: AcademyPost[];
+  total: number;
+  totalPages: number;
+}
+
+// Excluded category slugs — non-subject content types
+const EXCLUDED_SLUGS = new Set([
+  "uncategorized", "ebooks", "infographics", "videos",
+  "futuretopics-titles", "future-topics-titles",
+  "engineering-and-technology-ebooks",
+  "engineering-and-technology-infographics",
+  "engineering-and-technology-videos",
+  "business-management-videos", "business-management-info",
+]);
+
+/** Fetch one page of academy posts — used by the listing page (server-side pagination) */
+export async function getAcademyPostsPage(
+  page = 1,
+  perPage = 15,
+  categoryId?: number
+): Promise<AcademyPostsPage> {
   try {
-    // Step 1: fetch page 1 and read total pages from headers
-    const firstRes = await fetch(
-      `${ACADEMY_API_BASE}/posts?_embed&per_page=100&page=1&status=publish&orderby=date&order=desc`,
+    const qs = new URLSearchParams({
+      _embed: "1",
+      per_page: String(perPage),
+      page: String(page),
+      status: "publish",
+      orderby: "date",
+      order: "desc",
+    });
+    const url = `${ACADEMY_API_BASE}/posts?${qs}&${LISTING_FIELDS}${categoryId ? `&categories=${categoryId}` : ""}`;
+    const res = await fetch(url, FETCH_OPTS);
+    if (!res.ok) return { posts: [], total: 0, totalPages: 0 };
+    const total      = parseInt(res.headers.get("X-WP-Total") ?? "0", 10);
+    const totalPages = parseInt(res.headers.get("X-WP-TotalPages") ?? "0", 10);
+    const posts: AcademyPost[] = await res.json();
+    return { posts, total, totalPages };
+  } catch (err) {
+    console.error("[Academy WP] getAcademyPostsPage error:", err);
+    return { posts: [], total: 0, totalPages: 0 };
+  }
+}
+
+/** Fetch academy categories for the filter dropdown */
+export async function getAcademyCategoryList(): Promise<AcademyCategory[]> {
+  try {
+    const res = await fetch(
+      `${ACADEMY_API_BASE}/categories?per_page=100&hide_empty=true&orderby=count&order=desc`,
       FETCH_OPTS
     );
-
-    if (!firstRes.ok) return [];
-
-    const totalPages = parseInt(firstRes.headers.get("X-WP-TotalPages") ?? "1", 10);
-    const total      = parseInt(firstRes.headers.get("X-WP-Total") ?? "0", 10);
-    const firstPage: AcademyPost[] = await firstRes.json();
-
-    console.log(`[Academy WP] Total: ${total} posts across ${totalPages} pages`);
-
-    if (totalPages <= 1) return firstPage;
-
-    // Step 2: fetch remaining pages in parallel
-    const remainingResults = await Promise.allSettled(
-      Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((pageNum) =>
-        fetch(
-          `${ACADEMY_API_BASE}/posts?_embed&per_page=100&page=${pageNum}&status=publish&orderby=date&order=desc`,
-          FETCH_OPTS
-        ).then((r) => (r.ok ? (r.json() as Promise<AcademyPost[]>) : []))
-      )
-    );
-
-    const extraPosts = remainingResults.flatMap((r) =>
-      r.status === "fulfilled" ? r.value : []
-    );
-
-    return [...firstPage, ...extraPosts];
-  } catch (err) {
-    console.error("[Academy WP] getAcademyPosts error:", err);
+    if (!res.ok) return [];
+    const cats: AcademyCategory[] = await res.json();
+    return cats.filter((c) => !EXCLUDED_SLUGS.has(c.slug));
+  } catch {
     return [];
   }
 }

@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import AcademyCategoryFilter from "@/components/ui/AcademyCategoryFilter";
 import {
-  getAcademyPosts,
+  getAcademyPostsPage,
+  getAcademyCategoryList,
   getAcademyFeaturedImage,
   getAcademyImageAlt,
   getAcademyAuthor,
@@ -21,48 +22,39 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600;
 
-const POSTS_PER_PAGE = 9;
+const POSTS_PER_PAGE = 15;
 
 interface Props {
-  searchParams: Promise<{ page?: string; category?: string }>;
+  searchParams: Promise<{ page?: string; category?: string; "category-id"?: string }>;
 }
 
 export default async function AcademyPage({ searchParams }: Props) {
-  const { page, category } = await searchParams;
-  const currentPage   = Math.max(1, parseInt(page ?? "1", 10));
+  const { page, category, "category-id": catIdParam } = await searchParams;
+  const currentPage    = Math.max(1, parseInt(page ?? "1", 10));
   const activeCategory = category ?? "";
+  const categoryId     = catIdParam ? parseInt(catIdParam, 10) : undefined;
 
-  const allPosts = await getAcademyPosts();
+  // Fetch categories + current page of posts in parallel
+  const [categoriesData, postsData] = await Promise.all([
+    getAcademyCategoryList(),
+    getAcademyPostsPage(currentPage, POSTS_PER_PAGE, categoryId),
+  ]);
 
-  // Build category map with counts
-  const categoryMap = new Map<string, number>();
-  allPosts.forEach((p) =>
-    getAcademyCategories(p).forEach((cat) =>
-      categoryMap.set(cat, (categoryMap.get(cat) ?? 0) + 1)
-    )
-  );
-  const categoryList = Array.from(categoryMap.entries())
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => a.name.localeCompare(b.name));
-
-  // Filter by category
-  const filteredPosts = activeCategory
-    ? allPosts.filter((p) => getAcademyCategories(p).includes(activeCategory))
-    : allPosts;
-
-  const totalPosts  = filteredPosts.length;
-  const totalPages  = Math.ceil(totalPosts / POSTS_PER_PAGE);
-  const safePage    = Math.min(currentPage, totalPages || 1);
-  const start       = (safePage - 1) * POSTS_PER_PAGE;
-  const posts       = filteredPosts.slice(start, start + POSTS_PER_PAGE);
+  const { posts, total: totalPosts, totalPages } = postsData;
+  const safePage = Math.min(currentPage, totalPages || 1);
 
   const pageHref = (p: number) => {
     const params = new URLSearchParams();
     if (activeCategory) params.set("category", activeCategory);
-    if (p > 1) params.set("page", String(p));
+    if (categoryId)     params.set("category-id", String(categoryId));
+    if (p > 1)          params.set("page", String(p));
     const qs = params.toString();
     return `/academy/${qs ? `?${qs}` : ""}`;
   };
+
+  const categoryList = categoriesData.map((c) => ({ name: c.name, count: c.count, id: c.id }));
+
+  const start = (safePage - 1) * POSTS_PER_PAGE;
 
   return (
     <>
@@ -85,7 +77,6 @@ export default async function AcademyPage({ searchParams }: Props) {
                 {totalPosts} {activeCategory ? `guides in "${activeCategory}"` : "resources"} · Page {safePage} of {Math.max(1, totalPages)}
               </p>
             </div>
-            {/* Also visit blog */}
             <Link
               href="/blog/"
               style={{ flexShrink: 0, padding: "9px 18px", background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)", color: "#fff", borderRadius: "6px", fontSize: "0.84rem", fontWeight: 600, whiteSpace: "nowrap", alignSelf: "center" }}
@@ -121,7 +112,6 @@ export default async function AcademyPage({ searchParams }: Props) {
           </div>
         ) : (
           <>
-            {/* Grid */}
             <div className="blog-grid" style={{ marginBottom: "36px" }}>
               {posts.map((post) => {
                 const image   = getAcademyFeaturedImage(post);
@@ -133,7 +123,6 @@ export default async function AcademyPage({ searchParams }: Props) {
 
                 return (
                   <article key={post.id} className="blog-card">
-                    {/* Image */}
                     <Link href={`/academy/${post.slug}/`} className="blog-card-img">
                       {image ? (
                         <img src={image} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
@@ -143,7 +132,6 @@ export default async function AcademyPage({ searchParams }: Props) {
                       {cats[0] && <span className="blog-card-badge">{cats[0]}</span>}
                     </Link>
 
-                    {/* Content */}
                     <div className="blog-card-body">
                       <div className="blog-card-meta">
                         <span>📅 {date}</span>

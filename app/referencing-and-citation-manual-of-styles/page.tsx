@@ -1,9 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getTIPageById } from "@/lib/api/tutorsindia";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Referencing & Citation Manual of Styles | Harvard, APA, MLA | Tutors India",
   description: "Complete guide to referencing and citation styles — Harvard, APA, MLA, Chicago, Vancouver, OSCOLA, Turabian, IEEE. Free referencing guide for academic writing. Tutors India.",
+  robots: { index: false, follow: false },
+  alternates: { canonical: "https://tutorsindia.com/referencing-and-citation-manual-of-styles/" },
 };
 
 const styles = [
@@ -98,7 +103,8 @@ const tips = [
   { icon: "💡", tip: "When in doubt, cite it! Over-citing is far less serious in academic writing than under-citing (which risks plagiarism)." },
 ];
 
-export default function ReferencingPage() {
+export default async function ReferencingPage() {
+  const page = await getTIPageById(499);
   return (
     <>
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
@@ -180,6 +186,13 @@ export default function ReferencingPage() {
         </div>
       </section>
       <style>{`@media(max-width:900px){.ref-grid{grid-template-columns:1fr!important;}.two-col-grid{grid-template-columns:1fr!important;}}`}</style>
+
+      {/* Live WP content */}
+      {page && (
+        <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px 20px" }}>
+          <div className="wp-content" dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+        </section>
+      )}
     </>
   );
 }
