@@ -123,7 +123,7 @@ export default async function AcademyPostPage({ params }: Props) {
         )}
 
         {/* WordPress HTML content */}
-        <div className="wp-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
 
         {/* Author card */}
         <div style={{ marginTop: "44px", padding: "22px", background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", display: "flex", gap: "14px", alignItems: "center" }}>

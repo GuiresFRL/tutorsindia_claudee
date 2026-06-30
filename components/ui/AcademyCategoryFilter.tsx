@@ -2,8 +2,14 @@
 
 import { useRouter } from "next/navigation";
 
+interface Category {
+  name: string;
+  count: number;
+  id?: number;
+}
+
 interface Props {
-  categories: { name: string; count: number }[];
+  categories: Category[];
   activeCategory: string;
 }
 
@@ -11,9 +17,16 @@ export default function AcademyCategoryFilter({ categories, activeCategory }: Pr
   const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value;
-    router.push(value ? `/academy/?category=${encodeURIComponent(value)}` : "/academy/");
+    const raw = e.target.value; // "ID:name" or ""
+    if (!raw) { router.push("/academy/"); return; }
+    const [id, ...nameParts] = raw.split(":");
+    const name = nameParts.join(":");
+    router.push(`/academy/?category=${encodeURIComponent(name)}&category-id=${id}`);
   };
+
+  const totalPosts = categories.reduce((s, c) => s + c.count, 0);
+  const activeCat  = categories.find((c) => c.name === activeCategory);
+  const selectValue = activeCat?.id ? `${activeCat.id}:${activeCategory}` : (activeCategory || "");
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
@@ -27,7 +40,7 @@ export default function AcademyCategoryFilter({ categories, activeCategory }: Pr
       <div style={{ position: "relative", flex: 1, minWidth: "220px", maxWidth: "320px" }}>
         <select
           id="academy-category-filter"
-          value={activeCategory}
+          value={selectValue}
           onChange={handleChange}
           style={{
             width: "100%",
@@ -47,10 +60,10 @@ export default function AcademyCategoryFilter({ categories, activeCategory }: Pr
             transition: "border-color 0.2s",
           }}
         >
-          <option value="">All Academy Posts ({categories.reduce((s, c) => s + c.count, 0)})</option>
+          <option value="">All Academy Posts ({totalPosts})</option>
           <optgroup label="── Categories ──" style={{ fontWeight: 700, color: "#888", fontSize: "0.8rem" }}>
             {categories.map((cat) => (
-              <option key={cat.name} value={cat.name}>
+              <option key={cat.name} value={cat.id ? `${cat.id}:${cat.name}` : cat.name}>
                 {cat.name} ({cat.count})
               </option>
             ))}

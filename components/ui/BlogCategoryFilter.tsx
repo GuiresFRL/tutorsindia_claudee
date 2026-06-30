@@ -2,8 +2,14 @@
 
 import { useRouter } from "next/navigation";
 
+interface Category {
+  name: string;
+  count: number;
+  id?: number;
+}
+
 interface Props {
-  categories: { name: string; count: number }[];
+  categories: Category[];
   activeCategory: string;
 }
 
@@ -11,13 +17,14 @@ export default function BlogCategoryFilter({ categories, activeCategory }: Props
   const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value;
-    if (value) {
-      router.push(`/blog/?category=${encodeURIComponent(value)}`);
-    } else {
-      router.push("/blog/");
-    }
+    const raw = e.target.value; // "ID:name" or ""
+    if (!raw) { router.push("/blog/"); return; }
+    const [id, ...nameParts] = raw.split(":");
+    const name = nameParts.join(":");
+    router.push(`/blog/?category=${encodeURIComponent(name)}&category-id=${id}`);
   };
+
+  const totalPosts = categories.reduce((s, c) => s + c.count, 0);
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
@@ -31,7 +38,7 @@ export default function BlogCategoryFilter({ categories, activeCategory }: Props
       <div style={{ position: "relative", flex: 1, minWidth: "220px", maxWidth: "320px" }}>
         <select
           id="category-filter"
-          value={activeCategory}
+          value={activeCategory ? (categories.find((c) => c.name === activeCategory)?.id ? `${categories.find((c) => c.name === activeCategory)!.id}:${activeCategory}` : activeCategory) : ""}
           onChange={handleChange}
           style={{
             width: "100%",
@@ -51,63 +58,26 @@ export default function BlogCategoryFilter({ categories, activeCategory }: Props
             transition: "border-color 0.2s, box-shadow 0.2s",
           }}
         >
-          <option value="">All Posts ({categories.reduce((s, c) => s + c.count, 0)})</option>
+          <option value="">All Posts ({totalPosts})</option>
           <optgroup label="── Categories ──" style={{ fontWeight: 700, color: "#888", fontSize: "0.8rem" }}>
             {categories.map((cat) => (
-              <option key={cat.name} value={cat.name}>
+              <option key={cat.name} value={cat.id ? `${cat.id}:${cat.name}` : cat.name}>
                 {cat.name} ({cat.count})
               </option>
             ))}
           </optgroup>
         </select>
-
-        {/* Custom arrow */}
-        <span
-          style={{
-            position: "absolute",
-            right: "12px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            pointerEvents: "none",
-            color: activeCategory ? "#1a2a6c" : "#888",
-            fontSize: "0.8rem",
-            fontWeight: 700,
-          }}
-        >
-          ▾
-        </span>
+        <span style={{ position: "absolute", right: "12px", top: "50%", transform: "translateY(-50%)", pointerEvents: "none", color: activeCategory ? "#1a2a6c" : "#888", fontSize: "0.8rem", fontWeight: 700 }}>▾</span>
       </div>
 
-      {/* Active filter badge + clear */}
       {activeCategory && (
         <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
-          <span
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "6px",
-              padding: "5px 12px",
-              background: "#1a2a6c",
-              color: "#fff",
-              borderRadius: "20px",
-              fontSize: "0.78rem",
-              fontWeight: 600,
-            }}
-          >
+          <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "5px 12px", background: "#1a2a6c", color: "#fff", borderRadius: "20px", fontSize: "0.78rem", fontWeight: 600 }}>
             {activeCategory}
           </span>
           <button
             onClick={() => router.push("/blog/")}
-            style={{
-              fontSize: "0.78rem",
-              color: "#e87722",
-              fontWeight: 700,
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              textDecoration: "underline",
-              padding: 0,
-            }}
+            style={{ fontSize: "0.78rem", color: "#e87722", fontWeight: 700, background: "none", border: "none", cursor: "pointer", textDecoration: "underline", padding: 0 }}
           >
             ✕ Clear
           </button>

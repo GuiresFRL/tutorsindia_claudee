@@ -38,60 +38,62 @@ const FETCH_OPTS = {
   headers: { Accept: "application/json" },
 };
 
-/**
- * Fetch ALL published blog posts by paginating through the WP REST API.
- * WP REST API maximum is 100 per page — this function fetches every page
- * in parallel and returns the full combined list filtered to /blog/ posts.
- */
-export async function getBlogPosts(): Promise<WPPost[]> {
+// Listing fields — excludes content.rendered to keep each page response small
+const LISTING_FIELDS = "_fields=id,slug,date,modified,title,excerpt,link,_links,_embedded";
+
+export interface WPCategory {
+  id: number;
+  name: string;
+  slug: string;
+  count: number;
+}
+
+export interface BlogPostsPage {
+  posts: WPPost[];
+  total: number;
+  totalPages: number;
+}
+
+/** Fetch one page of blog posts — used by the listing page (server-side pagination) */
+export async function getBlogPostsPage(
+  page = 1,
+  perPage = 15,
+  categoryId?: number
+): Promise<BlogPostsPage> {
   try {
-    // ── Step 1: fetch page 1 and read total pages from headers ──
-    const firstRes = await fetch(
-      `${WP_API_BASE}/posts?_embed&per_page=100&page=1&status=publish&orderby=date&order=desc`,
+    const qs = new URLSearchParams({
+      _embed: "1",
+      per_page: String(perPage),
+      page: String(page),
+      status: "publish",
+      orderby: "date",
+      order: "desc",
+    });
+    // Add _fields individually so URLSearchParams doesn't encode the = signs
+    const url = `${WP_API_BASE}/posts?${qs}&${LISTING_FIELDS}${categoryId ? `&categories=${categoryId}` : ""}`;
+    const res = await fetch(url, FETCH_OPTS);
+    if (!res.ok) return { posts: [], total: 0, totalPages: 0 };
+    const total      = parseInt(res.headers.get("X-WP-Total") ?? "0", 10);
+    const totalPages = parseInt(res.headers.get("X-WP-TotalPages") ?? "0", 10);
+    const posts: WPPost[] = await res.json();
+    return { posts, total, totalPages };
+  } catch (err) {
+    console.error("[WP] getBlogPostsPage error:", err);
+    return { posts: [], total: 0, totalPages: 0 };
+  }
+}
+
+/** Fetch all blog categories (for the filter dropdown) */
+export async function getBlogCategories(): Promise<WPCategory[]> {
+  try {
+    const res = await fetch(
+      `${WP_API_BASE}/categories?per_page=100&hide_empty=true&orderby=count&order=desc`,
       FETCH_OPTS
     );
-
-    if (!firstRes.ok) return [];
-
-    const totalPages = parseInt(firstRes.headers.get("X-WP-TotalPages") ?? "1", 10);
-    const total      = parseInt(firstRes.headers.get("X-WP-Total") ?? "0", 10);
-
-    const firstPage: WPPost[] = await firstRes.json();
-
-    if (totalPages <= 1) {
-      return firstPage.filter((p) => p.link.includes("/blog/"));
-    }
-
-    // ── Step 2: fetch remaining pages in parallel ──
-    const remainingPageNumbers = Array.from(
-      { length: totalPages - 1 },
-      (_, i) => i + 2           // pages 2, 3, 4 …
-    );
-
-    const remainingResults = await Promise.allSettled(
-      remainingPageNumbers.map((pageNum) =>
-        fetch(
-          `${WP_API_BASE}/posts?_embed&per_page=100&page=${pageNum}&status=publish&orderby=date&order=desc`,
-          FETCH_OPTS
-        ).then((r) => (r.ok ? (r.json() as Promise<WPPost[]>) : []))
-      )
-    );
-
-    // ── Step 3: combine all pages ──
-    const extraPosts = remainingResults.flatMap((result) =>
-      result.status === "fulfilled" ? result.value : []
-    );
-
-    const allPosts = [...firstPage, ...extraPosts];
-
-    console.log(
-      `[WP] Fetched ${allPosts.length}/${total} posts across ${totalPages} pages`
-    );
-
-    // Filter to posts whose link contains "/blog/"
-    return allPosts.filter((p) => p.link.includes("/blog/"));
-  } catch (err) {
-    console.error("[WP] getBlogPosts error:", err);
+    if (!res.ok) return [];
+    const cats: WPCategory[] = await res.json();
+    return cats.filter((c) => c.slug !== "uncategorized");
+  } catch {
     return [];
   }
 }
