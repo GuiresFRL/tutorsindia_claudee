@@ -60,7 +60,7 @@ export default async function TitleDetailPage({ params }: Props) {
             <img src={image} alt={stripTIHtml(page.title.rendered)} style={{ width: "100%", height: "auto", display: "block", maxHeight: "400px", objectFit: "cover" }} />
           </div>
         )}
-        <div className="wp-content" dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
 
         {/* Nav */}
         <div style={{ marginTop: "36px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>

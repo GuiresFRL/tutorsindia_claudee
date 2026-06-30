@@ -40,7 +40,7 @@ export default async function LatestResearchTrendsPage() {
       {/* Content */}
       <section style={{ maxWidth: "1100px", margin: "0 auto", padding: "44px 20px" }}>
         {page ? (
-          <div className="wp-content" dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
         ) : (
           <p style={{ color: "#666" }}>Content loading…</p>
         )}

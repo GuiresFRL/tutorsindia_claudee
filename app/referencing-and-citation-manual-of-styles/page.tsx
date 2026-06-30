@@ -190,7 +190,7 @@ export default async function ReferencingPage() {
       {/* Live WP content */}
       {page && (
         <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px 20px" }}>
-          <div className="wp-content" dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
         </section>
       )}
     </>

@@ -66,7 +66,7 @@ export default async function InsightsPage() {
 
         {/* WP content */}
         {page && (
-          <div className="wp-content" dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
         )}
       </section>
 
