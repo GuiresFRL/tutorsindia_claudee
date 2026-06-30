@@ -503,7 +503,7 @@ a.wa-float:hover {
 /* Elementor layout — make columns stack on mobile, row on desktop */
 .wp-content .elementor-section { margin-bottom: 1.5em; }
 .wp-content .elementor-container { display: flex; flex-wrap: wrap; gap: 20px; }
-.wp-content .elementor-column { flex: 1 1 260px; min-width: 0; }
+.wp-content .elementor-column { flex: 1 1 100% !important; width: 100% !important; max-width: 100% !important; min-width: 0; }
 .wp-content .elementor-widget-wrap { display: flex; flex-direction: column; gap: 10px; }
 .wp-content .elementor-widget-container { width: 100%; }
 
