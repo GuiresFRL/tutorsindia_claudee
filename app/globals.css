@@ -450,3 +450,115 @@ a.wa-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 24px rgba(0,0,0,0.35);
 }
+
+/* ─────────────────────────────
+   WP / ELEMENTOR CONTENT
+───────────────────────────── */
+
+/* Base typography inside wp-content */
+.wp-content {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #333;
+}
+.wp-content h1,
+.wp-content h2,
+.wp-content h3,
+.wp-content h4,
+.wp-content h5,
+.wp-content h6 {
+  font-family: 'Merriweather', serif;
+  color: #1a2a6c;
+  line-height: 1.3;
+  margin: 1.4em 0 0.5em;
+}
+.wp-content h1 { font-size: 1.8rem; }
+.wp-content h2 { font-size: 1.35rem; border-bottom: 2px solid #e87722; padding-bottom: 6px; }
+.wp-content h3 { font-size: 1.1rem; }
+.wp-content h4 { font-size: 1rem; }
+.wp-content p  { margin-bottom: 1em; }
+.wp-content ul,
+.wp-content ol { margin: 0.5em 0 1em 1.4em; }
+.wp-content li { margin-bottom: 0.3em; }
+.wp-content a  { color: #2563b0; text-decoration: underline; }
+.wp-content a:hover { color: #e87722; }
+.wp-content strong, .wp-content b { font-weight: 700; }
+.wp-content em, .wp-content i { font-style: italic; }
+.wp-content blockquote {
+  border-left: 4px solid #e87722;
+  margin: 1em 0;
+  padding: 10px 18px;
+  background: #fff8f4;
+  color: #555;
+  font-style: italic;
+}
+.wp-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.2em; }
+.wp-content th, .wp-content td { border: 1px solid #dde2ef; padding: 8px 12px; text-align: left; font-size: 0.92rem; }
+.wp-content th { background: #1a2a6c; color: #fff; font-weight: 700; }
+.wp-content tr:nth-child(even) td { background: #f5f6fa; }
+.wp-content img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.5em 0; }
+.wp-content hr { border: none; border-top: 1px solid #dde2ef; margin: 1.5em 0; }
+
+/* Elementor layout — make columns stack on mobile, row on desktop */
+.wp-content .elementor-section { margin-bottom: 1.5em; }
+.wp-content .elementor-container { display: flex; flex-wrap: wrap; gap: 20px; }
+.wp-content .elementor-column { flex: 1 1 260px; min-width: 0; }
+.wp-content .elementor-widget-wrap { display: flex; flex-direction: column; gap: 10px; }
+.wp-content .elementor-widget-container { width: 100%; }
+
+/* Hide Elementor / WP junk we don't want rendered */
+.wp-content .elementor > .elementor-section:first-child,
+.wp-content .elementor-widget-breadcrumbs,
+.wp-content .elementor-widget-post-info,
+.wp-content [class*="share"],
+.wp-content [class*="social"],
+.wp-content [class*="breadcrumb"],
+.wp-content .elementor-icon-list--layout-inline,
+.wp-content .wp-post-navigation,
+.wp-content .post-navigation,
+.wp-content .elementor-widget-wp-widget-recent-posts,
+.wp-content .elementor-widget-wp-widget-categories,
+.wp-content .widget_recent_entries,
+.wp-content .elementor-widget__width-auto.elementor-widget-text-editor,
+.wp-content .elementor-widget__width-auto.elementor-widget-heading,
+.wp-content svg,
+.wp-content img[src*="facebook"],
+.wp-content img[src*="twitter"],
+.wp-content img[src*="whatsapp"] { display: none !important; }
+
+/* Elementor heading widget */
+.wp-content .elementor-widget-heading .elementor-heading-title {
+  font-family: 'Merriweather', serif;
+  color: #1a2a6c;
+}
+
+/* Elementor text editor */
+.wp-content .elementor-widget-text-editor p { margin-bottom: 0.8em; }
+
+/* Elementor icon list (bullet lists) */
+.wp-content .elementor-icon-list-items { list-style: none; margin: 0; padding: 0; }
+.wp-content .elementor-icon-list-item { display: flex; align-items: flex-start; gap: 8px; padding: 4px 0; border-bottom: 1px solid #f0f2fa; }
+.wp-content .elementor-icon-list-item-text { font-size: 0.93rem; color: #333; }
+
+/* Elementor button */
+.wp-content .elementor-button {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #e87722;
+  color: #fff !important;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  margin: 6px 0;
+}
+.wp-content .elementor-button:hover { background: #c0601a; }
+
+/* Responsive: single column on small screens */
+@media (max-width: 768px) {
+  .wp-content .elementor-container { flex-direction: column; }
+  .wp-content .elementor-column { flex: 1 1 100%; }
+  .wp-content h1 { font-size: 1.4rem; }
+  .wp-content h2 { font-size: 1.15rem; }
+}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIChildPages, stripTIHtml } from "@/lib/api/tutorsindia";
+import { getTIChildPages } from "@/lib/api/tutorsindia";
 
 export const revalidate = 3600;
 
@@ -36,22 +36,18 @@ export default async function TitlePage() {
       {/* Grid of subject cards */}
       <section style={{ maxWidth: "1100px", margin: "0 auto", padding: "44px 20px" }}>
         <div className="three-col-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }}>
-          {pages.map((p) => {
-            const excerpt = stripTIHtml(p.excerpt?.rendered ?? "", 120);
-            return (
-              <Link
-                key={p.id}
-                href={`/title/${p.slug}/`}
-                style={{ display: "flex", flexDirection: "column", background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "22px", textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.04)", transition: "box-shadow 0.2s" }}
-              >
-                <div style={{ fontSize: "1.6rem", marginBottom: "10px" }}>📄</div>
-                <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px", lineHeight: 1.45 }}
-                  dangerouslySetInnerHTML={{ __html: p.title.rendered }} />
-                {excerpt && <p style={{ fontSize: "0.8rem", color: "#666", lineHeight: 1.6, flex: 1 }}>{excerpt}</p>}
-                <span style={{ marginTop: "14px", fontSize: "0.82rem", color: "#e87722", fontWeight: 700 }}>View Titles →</span>
-              </Link>
-            );
-          })}
+          {pages.map((p) => (
+            <Link
+              key={p.id}
+              href={`/title/${p.slug}/`}
+              style={{ display: "flex", flexDirection: "column", background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "22px", textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.04)", transition: "box-shadow 0.2s" }}
+            >
+              <div style={{ fontSize: "1.6rem", marginBottom: "10px" }}>📄</div>
+              <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "auto", lineHeight: 1.45 }}
+                dangerouslySetInnerHTML={{ __html: p.title.rendered }} />
+              <span style={{ marginTop: "14px", fontSize: "0.82rem", color: "#e87722", fontWeight: 700 }}>View Titles →</span>
+            </Link>
+          ))}
         </div>
 
         {/* Also see topics */}
