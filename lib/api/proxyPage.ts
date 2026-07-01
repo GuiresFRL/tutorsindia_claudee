@@ -53,17 +53,20 @@ function removeStyles(html: string): string {
   return html.replace(/<style[\s\S]*?<\/style>/gi, '');
 }
 
-/** Remove sections that have a background-image inline style (live-site hero banners we don't want) */
+/** Handle background-image sections:
+ *  - If content is trivially small (only <br> spacers) → remove entirely
+ *  - If content has real text → keep section but strip the background-image style
+ */
 function removeDecorativeSections(html: string): string {
   let result = html;
-  // Find every <div class="section mcb-section..."> whose opening tag contains background-image:
   const openTagRe = /<div\s+class="section mcb-section[^"]*"[^>]*>/g;
   let match: RegExpExecArray | null;
-  const toRemove: string[] = [];
+  const actions: Array<{ block: string; replace: string }> = [];
+
   while ((match = openTagRe.exec(result)) !== null) {
     const openTag = match[0];
     if (!openTag.includes('background-image:')) continue;
-    // Depth-track to find the closing tag
+
     const start = match.index;
     const afterOpen = start + openTag.length;
     let depth = 1;
@@ -72,18 +75,25 @@ function removeDecorativeSections(html: string): string {
       const nextOpen = result.indexOf('<div', cursor);
       const nextClose = result.indexOf('</div>', cursor);
       if (nextClose === -1) break;
-      if (nextOpen !== -1 && nextOpen < nextClose) {
-        depth++;
-        cursor = nextOpen + 4;
-      } else {
-        depth--;
-        cursor = nextClose + 6;
-      }
+      if (nextOpen !== -1 && nextOpen < nextClose) { depth++; cursor = nextOpen + 4; }
+      else { depth--; cursor = nextClose + 6; }
     }
-    toRemove.push(result.slice(start, cursor));
+    const block = result.slice(start, cursor);
+
+    // Check if section has actual content
+    const textContent = block.replace(/<br\s*\/?>/gi, '').replace(/<[^>]+>/g, '').trim();
+    if (textContent.length < 50) {
+      // Purely decorative spacer → remove entirely
+      actions.push({ block, replace: '' });
+    } else {
+      // Has real content → strip only the background-image from the opening tag style
+      const cleanedOpenTag = openTag.replace(/background-image:[^;]*(;|(?="))/g, '');
+      actions.push({ block, replace: block.replace(openTag, cleanedOpenTag) });
+    }
   }
-  for (const block of toRemove) {
-    result = result.replace(block, '');
+
+  for (const { block, replace } of actions) {
+    result = result.replace(block, replace);
   }
   return result;
 }
