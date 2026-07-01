@@ -1,11 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import ServiceTabs from "@/components/home/ServiceTabs";
+import TestimonialsSlider from "@/components/home/TestimonialsSlider";
 import { blogPosts } from "@/lib/data/blog";
-import { testimonials, siteInfo } from "@/lib/data/site";
+import { siteInfo } from "@/lib/data/site";
 
 export const metadata: Metadata = {
-  title: "Masters/MBA Dissertation Writing and Editing Services | Tutors India",
+  title: "Masters/MBA Dissertation Writing and Editing Services",
   description: "Tutors India provides expert Masters, MBA and PhD dissertation writing, editing, statistics and coding services. Trusted by 200,000+ scholars since 2001.",
 };
 
@@ -26,17 +27,20 @@ const processSteps = [
 
 const sampleCards = [
   {
-    head: "Top UK Universities Dissertation Assistance",
-    items: ["Masters Dissertation", "PhD Dissertation", "Research Proposal", "Literature Review", "Statistical Analysis"],
+    head: "Dissertation Samples",
+    image: "https://www.tutorsindia.com/wp-content/uploads/2024/08/A-Dissertation-Writing-Service-features-that-helps-image.webp",
+    items: ["Topic Selection", "Research Proposal", "Literature Review", "Research Methodology", "Data Analysis", "Full Dissertation"],
     href: "/our-sample-works/dissertation-samples/",
   },
   {
-    head: "Coursework & Assignment Help",
+    head: "Assignment Writing Samples",
+    image: "https://www.tutorsindia.com/wp-content/uploads/2021/08/Assignment-Writing.jpg",
     items: ["Essay Writing", "Assignment Help", "Annotated Bibliography", "Reflective Report", "Case Studies"],
     href: "/our-sample-works/essay-writing-samples/",
   },
   {
     head: "Publication & Research Support",
+    image: "https://www.tutorsindia.com/wp-content/uploads/2021/10/Editing-Services.jpg",
     items: ["Manuscript Development", "Medical Writing", "Engineering Research", "Conference Papers", "Biostatistics"],
     href: "/our-sample-works/",
   },
@@ -53,7 +57,6 @@ const stats = [
 
 export default function Home() {
   const recentPosts = blogPosts.slice(0, 3);
-  const featuredTestimonials = testimonials.slice(0, 6);
 
   return (
     <>
@@ -253,30 +256,13 @@ export default function Home() {
             <h2 style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px" }}>What Our Clients Say</h2>
             <p style={{ color: "var(--text-mid)" }}>Trusted by scholars and professionals across the globe</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }} className="testimonial-grid">
-            {featuredTestimonials.map((t, i) => (
-              <div key={i} style={{ background: "#fff", borderRadius: "10px", padding: "24px", border: "1px solid var(--border)", position: "relative" }}>
-                <div style={{ color: "var(--orange)", fontSize: "2.5rem", lineHeight: 1, marginBottom: "8px", fontFamily: "serif" }}>&ldquo;</div>
-                <p style={{ color: "var(--text-mid)", fontSize: "0.88rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "16px" }}>{t.quote}</p>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "var(--navy)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.9rem", fontWeight: 700, flexShrink: 0 }}>
-                    {t.author.charAt(0)}
-                  </div>
-                  <div>
-                    <div style={{ fontWeight: 700, color: "var(--navy)", fontSize: "0.85rem" }}>{t.author}</div>
-                    {t.location && <div style={{ fontSize: "0.75rem", color: "var(--text-light)" }}>{t.location}</div>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialsSlider />
           <div style={{ textAlign: "center", marginTop: "28px" }}>
             <Link href="/testimonials/" style={{ padding: "10px 28px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600 }}>
               View All Testimonials →
             </Link>
           </div>
         </div>
-        <style>{`@media(max-width:900px){.testimonial-grid{grid-template-columns:1fr 1fr!important;}} @media(max-width:500px){.testimonial-grid{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* SAMPLE WORK */}
@@ -289,10 +275,18 @@ export default function Home() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }} className="sample-grid">
             {sampleCards.map((card) => (
               <div key={card.head} style={{ background: "#fff", borderRadius: "10px", border: "1px solid var(--border)", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
-                <div style={{ background: "var(--navy)", color: "#fff", padding: "14px 18px", fontSize: "0.88rem", fontWeight: 600 }}>{card.head}</div>
+                <div style={{ position: "relative", height: "160px", overflow: "hidden", background: "#dde8f5" }}>
+                  <img
+                    src={card.image}
+                    alt={card.head}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,42,108,0.75) 0%, transparent 55%)" }} />
+                  <div style={{ position: "absolute", bottom: "12px", left: "14px", right: "14px", color: "#fff", fontSize: "0.92rem", fontWeight: 700, lineHeight: 1.3 }}>{card.head}</div>
+                </div>
                 <ul style={{ padding: "12px 18px", listStyle: "none" }}>
                   {card.items.map((item) => (
-                    <li key={item} style={{ padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.87rem", color: "var(--text-mid)", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <li key={item} style={{ padding: "7px 0", borderBottom: "1px solid var(--border)", fontSize: "0.87rem", color: "var(--text-mid)", display: "flex", alignItems: "center", gap: "8px" }}>
                       <span style={{ color: "var(--orange)", fontSize: "0.8rem" }}>→</span>
                       {item}
                     </li>
@@ -318,14 +312,27 @@ export default function Home() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "24px" }} className="blog-grid">
             {recentPosts.map((post) => (
               <article key={post.slug} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "10px", overflow: "hidden" }}>
-                <div style={{ background: "var(--light-blue)", height: "140px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem" }}>📖</div>
-                <div style={{ padding: "20px" }}>
-                  <div style={{ fontSize: "0.78rem", color: "var(--text-light)", marginBottom: "8px" }}>{post.date} · {post.categories[0]}</div>
-                  <h3 style={{ fontSize: "0.98rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px", lineHeight: 1.4 }}>
-                    <Link href={`/blog/${post.slug}/`}>{post.title}</Link>
+                <Link href={`/blog/${post.slug}/`} style={{ display: "block", position: "relative", height: "180px", overflow: "hidden", background: "#dde8f5" }}>
+                  {post.featuredImage ? (
+                    <img
+                      src={post.featuredImage}
+                      alt={post.title}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }}
+                    />
+                  ) : (
+                    <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(135deg,#1a2a6c,#2563b0)", color: "#fff", fontSize: "2.5rem" }}>📖</div>
+                  )}
+                  <div style={{ position: "absolute", top: "10px", left: "10px", background: "var(--orange)", color: "#fff", fontSize: "0.7rem", fontWeight: 700, padding: "3px 8px", borderRadius: "3px", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                    {post.categories[0]}
+                  </div>
+                </Link>
+                <div style={{ padding: "18px" }}>
+                  <div style={{ fontSize: "0.76rem", color: "var(--text-light)", marginBottom: "7px" }}>{post.date}</div>
+                  <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px", lineHeight: 1.4 }}>
+                    <Link href={`/blog/${post.slug}/`} style={{ color: "var(--navy)" }}>{post.title}</Link>
                   </h3>
-                  <p style={{ fontSize: "0.85rem", color: "var(--text-mid)", marginBottom: "14px", lineHeight: 1.6 }}>{post.excerpt.slice(0, 110)}…</p>
-                  <Link href={`/blog/${post.slug}/`} style={{ color: "var(--blue)", fontWeight: 600, fontSize: "0.85rem" }}>Read More →</Link>
+                  <p style={{ fontSize: "0.84rem", color: "var(--text-mid)", marginBottom: "14px", lineHeight: 1.6 }}>{post.excerpt.slice(0, 100)}…</p>
+                  <Link href={`/blog/${post.slug}/`} style={{ color: "var(--blue)", fontWeight: 600, fontSize: "0.84rem" }}>Read More →</Link>
                 </div>
               </article>
             ))}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Computer Science & IT Academic Writing | Masters, PhD | Tutors India", description: "Expert Computer Science & IT academic writing. AI, ML, Data Science, Software Engineering, Networks, Cybersecurity. IEEE, ACM. Masters & PhD. Tutors India." };
+export const metadata: Metadata = { title: "Computer Science & IT Academic Writing | Masters, PhD", description: "Expert Computer Science & IT academic writing. AI, ML, Data Science, Software Engineering, Networks, Cybersecurity. IEEE, ACM. Masters & PhD. Tutors India." };
 const areas = ["Artificial Intelligence & ML","Data Science & Big Data","Software Engineering","Computer Networks","Cybersecurity & Information Security","Database Management Systems","Cloud Computing","Human-Computer Interaction","Computer Vision","Natural Language Processing","IoT & Embedded Systems","Blockchain Technology","Quantum Computing","High-Performance Computing","Operating Systems","Compiler Design"];
 const journals = ["IEEE Transactions","ACM Computing Surveys","Journal of Systems & Software","Computers & Security","Expert Systems with Applications","Information Sciences","Pattern Recognition","Neural Networks","Knowledge-Based Systems","Future Generation Computer Systems"];
 const faqs = [

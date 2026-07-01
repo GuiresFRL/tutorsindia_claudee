@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Academic Writing by Subject | Law, Engineering, Medicine, Business | Tutors India",
+  title: "Academic Writing by Subject | Law, Engineering, Medicine, Business",
   description: "Expert academic writing support across all subjects — Law, Engineering, Economics, Medicine, Business, Arts, Biological Sciences, Computer Science. Tutors India.",
 };
 

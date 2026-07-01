@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Conference Abstract Writing Services | Tutors India",
+  title: "Conference Abstract Writing Services",
   description: "Expert Conference Abstract Writing. Structured, compelling abstracts for academic conferences. All disciplines. Unique topic selection. Tutors India.",
 };
 

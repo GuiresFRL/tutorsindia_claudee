@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getTIPageBySlug, getTIChildSlugs, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutorsindia";
+import { cleanElementorHtml } from "@/lib/cleanElementor";
 
 export const revalidate = 3600;
 
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title} | Tutors India`,
     description: desc,
-    robots: { index: false, follow: false },
+    
     alternates: { canonical: `https://tutorsindia.com/topic/${slug}/` },
   };
 }
@@ -60,7 +61,7 @@ export default async function TopicDetailPage({ params }: Props) {
             <img src={image} alt={stripTIHtml(page.title.rendered)} style={{ width: "100%", height: "auto", display: "block", maxHeight: "400px", objectFit: "cover" }} />
           </div>
         )}
-        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: cleanElementorHtml(page.content.rendered) }} />
 
         {/* Nav */}
         <div style={{ marginTop: "36px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>

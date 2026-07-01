@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK Reflective Report Writing Help | Tutors India",
+  title: "UK Reflective Report Writing Help",
   description: "UK Reflective Report Writing Service using Gibbs (1988) and Kolb's (1984) experiential learning cycle. Double Entry, Learning Diary, Reflective Note, Log Book. Tutors India.",
 };
 

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK Undergraduate Bachelor's Dissertation Writing Service | Tutors India",
+  title: "UK Undergraduate Bachelor's Dissertation Writing Service",
   description: "The UK Undergraduate / Bachelor's Complete or Part Dissertation Writing Service. 5000+ UG dissertations completed. Expert writers from UK & US universities.",
 };
 

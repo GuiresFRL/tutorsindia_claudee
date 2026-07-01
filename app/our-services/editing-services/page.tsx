@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { serviceCategories } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Academic Editing Services | Language, Technical, Scientific | Tutors India",
+  title: "Academic Editing Services | Language, Technical, Scientific",
   description: "Professional Academic Editing Services — Language Editing, Technical Editing, Proofreading, Plagiarism Reports, Transcription, Translation, Citation Compliance. Tutors India.",
 };
 

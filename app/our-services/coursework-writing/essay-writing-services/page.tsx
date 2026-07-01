@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Custom Essay Writing Services UK & UAE | Masters & MBA | Tutors India",
+  title: "Custom Essay Writing Services UK & UAE | Masters & MBA",
   description: "Custom Essay Writing Services for Academic Success in the UK and UAE. Masters, MBA, PhD level essays by expert UK & US writers. Plagiarism-free, unlimited revisions.",
 };
 

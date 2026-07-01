@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Masters Dissertation Proposal Writing Services UK & US | Tutors India",
+  title: "Masters Dissertation Proposal Writing Services UK & US",
   description: "UK and US Masters/MBA Dissertation Proposal Writing Services. Custom proposals by expert researchers. Unlimited revisions, plagiarism-free, on-time delivery.",
 };
 

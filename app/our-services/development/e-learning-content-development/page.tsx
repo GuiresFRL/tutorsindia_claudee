@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "E-Learning Content Development Services | Tutors India", description: "Expert E-Learning Content Development. Interactive modules, SCORM, LMS integration, instructional design, video lectures. All subjects. Tutors India." };
+export const metadata: Metadata = { title: "E-Learning Content Development Services", description: "Expert E-Learning Content Development. Interactive modules, SCORM, LMS integration, instructional design, video lectures. All subjects. Tutors India." };
 const services = [
   { icon: "📱", title: "Interactive E-Learning Modules", desc: "Engaging, interactive e-learning modules with quizzes, assessments, branching scenarios, and multimedia elements developed using Articulate Storyline, Rise, and Adobe Captivate." },
   { icon: "🎬", title: "Video Lecture Production", desc: "Professional lecture video production — screen recordings, talking head videos, whiteboard animations, and fully edited educational video content." },

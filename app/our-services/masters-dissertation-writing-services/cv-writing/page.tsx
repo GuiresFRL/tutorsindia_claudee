@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Professional CV Writing Service UK | Tutors India",
+  title: "Professional CV Writing Service UK",
   description: "Professional CV, Personal Statement, Cover Letter & LinkedIn Profile Writing Service by UK certified specialists. Stand out to employers and land interviews.",
 };
 

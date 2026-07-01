@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { serviceCategories } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Publication Support Services | Manuscript, Medical Writing, Biostatistics | Tutors India",
+  title: "Publication Support Services | Manuscript, Medical Writing, Biostatistics",
   description: "Publication Support Services — Manuscript Development, Conference Papers, Medical Writing, Biostatistics, Statistical Services. Expert UK & US writers. Tutors India.",
 };
 

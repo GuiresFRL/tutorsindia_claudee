@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Engineering & Technology Academic Writing | Masters, PhD | Tutors India", description: "Expert Engineering & Technology academic writing. Civil, Mechanical, Electrical, Computer, Chemical, Aerospace. IEEE, ASCE, ASME publications. Masters & PhD. Tutors India." };
+export const metadata: Metadata = { title: "Engineering & Technology Academic Writing | Masters, PhD", description: "Expert Engineering & Technology academic writing. Civil, Mechanical, Electrical, Computer, Chemical, Aerospace. IEEE, ASCE, ASME publications. Masters & PhD. Tutors India." };
 const disciplines = ["Civil & Structural Engineering","Mechanical Engineering","Electrical & Electronics Engineering","Computer Engineering & Software","Chemical Engineering","Aerospace & Aeronautical","Environmental Engineering","Biomedical Engineering","Materials Science","Industrial Engineering","Petroleum Engineering","Telecommunications Engineering","Automotive Engineering","Renewable Energy Engineering","Robotics & Mechatronics","VLSI & Embedded Systems"];
 const faqs = [
   { q: "What engineering disciplines do you cover?", a: "Engineering research deals with the discovering and systematic conceptual structuring of knowledge. We cover all engineering disciplines including Civil & Structural, Mechanical, Electrical & Electronics, Computer Engineering, Chemical, Aerospace, Environmental, Biomedical, Materials Science, Industrial, Petroleum, Telecommunications, Automotive, Renewable Energy, Robotics & Mechatronics, and VLSI & Embedded Systems." },

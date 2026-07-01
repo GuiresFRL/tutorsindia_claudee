@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK Assignment Writing Services | Masters & MBA | Tutors India",
+  title: "UK Assignment Writing Services | Masters & MBA",
   description: "Professional UK Assignment Writing Services for Masters, MBA and PhD students. Expert writers assist at all stages. In-depth research, high-quality academic writing. Tutors India.",
 };
 

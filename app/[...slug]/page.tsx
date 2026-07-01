@@ -1,97 +1,157 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import CTASidebar from "@/components/ui/CTASidebar";
+import { getTIPageBySlug, getTIPostBySlug, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutorsindia";
+import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { cleanElementorHtml } from "@/lib/cleanElementor";
+
+export const revalidate = 3600;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
 }
 
 function slugToTitle(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
+  return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const title = slugToTitle(slug[slug.length - 1]);
+  const lastSlug = slug[slug.length - 1];
+  const path = `/${slug.join("/")}/`;
+
+  const wpContent = (await getTIPageBySlug(lastSlug)) ?? (await getTIPostBySlug(lastSlug));
+  if (wpContent && wpContent.content?.rendered?.trim().length > 50) {
+    const title = stripTIHtml(wpContent.title.rendered);
+    const desc = stripTIHtml(wpContent.excerpt?.rendered ?? "", 160);
+    return {
+      title: `${title} | Tutors India`,
+      description: desc || `${title} — Academic writing support from Tutors India.`,
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const proxied = await fetchProxiedPage(path);
+  const title = proxied?.title || slugToTitle(lastSlug);
   return {
     title: `${title} | Tutors India`,
-    description: `${title} — Academic writing support from Tutors India. Expert Masters and PhD dissertation services since 2001.`,
+    description: `${title} — Academic writing support from Tutors India.`,
+    robots: { index: false, follow: false },
+    alternates: { canonical: `https://tutorsindia.com${path}` },
   };
 }
 
 export default async function CatchAllPage({ params }: Props) {
   const { slug } = await params;
-  const title = slugToTitle(slug[slug.length - 1]);
+  const lastSlug = slug[slug.length - 1];
+  const path = `/${slug.join("/")}/`;
   const breadcrumbPath = ["", ...slug];
+
+  // Try WP REST API first (works for non-BeBuilder posts/pages)
+  const wpContent = (await getTIPageBySlug(lastSlug)) ?? (await getTIPostBySlug(lastSlug));
+
+  if (wpContent && wpContent.content?.rendered?.trim().length > 50) {
+    const image = getTIFeaturedImage(wpContent);
+    const title = stripTIHtml(wpContent.title.rendered);
+    const date = wpContent.modified
+      ? new Date(wpContent.modified).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
+      : "";
+
+    return (
+      <>
+        <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
+          <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px" }}>
+              {breadcrumbPath.map((segment, i) => {
+                const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
+                const label = i === 0 ? "Home" : slugToTitle(segment);
+                const isLast = i === breadcrumbPath.length - 1;
+                return (
+                  <span key={i}>
+                    {isLast ? <span style={{ color: "#fff" }}>{label}</span> : <Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link>}
+                    {!isLast && <span style={{ color: "#a0b8e0" }}> / </span>}
+                  </span>
+                );
+              })}
+            </div>
+            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.35, marginBottom: "10px" }}
+              dangerouslySetInnerHTML={{ __html: wpContent.title.rendered }} />
+            {date && <p style={{ color: "#a0b8e0", fontSize: "0.82rem" }}>Updated {date}</p>}
+          </div>
+        </section>
+
+        <article style={{ maxWidth: "960px", margin: "0 auto", padding: "40px 20px" }}>
+          {image && (
+            <div style={{ marginBottom: "28px", borderRadius: "12px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}>
+              <img src={image} alt={title} style={{ width: "100%", height: "auto", display: "block", maxHeight: "420px", objectFit: "cover" }} />
+            </div>
+          )}
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: cleanElementorHtml(wpContent.content.rendered) }} />
+          <div style={{ marginTop: "36px", display: "flex", justifyContent: "flex-end", gap: "12px" }}>
+            <Link href="/order-now/" style={{ padding: "9px 20px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.87rem" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "9px 20px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600, fontSize: "0.87rem" }}>Contact Us</Link>
+          </div>
+        </article>
+
+        <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Help?</h2>
+          <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+          <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
+          </div>
+        </section>
+      </>
+    );
+  }
+
+  // Fallback: BeBuilder/Elementor page — use HTML proxy
+  const proxied = await fetchProxiedPage(path);
+  const title = proxied?.title || slugToTitle(lastSlug);
 
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px", display: "flex", flexWrap: "wrap", gap: "4px" }}>
             {breadcrumbPath.map((segment, i) => {
               const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
               const label = i === 0 ? "Home" : slugToTitle(segment);
               const isLast = i === breadcrumbPath.length - 1;
               return (
-                <span key={i}>
-                  {isLast ? label : <Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link>}
-                  {!isLast && " / "}
+                <span key={i} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                  {isLast ? <span style={{ color: "#fff" }}>{label}</span> : <><Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>}
                 </span>
               );
             })}
           </div>
-          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "2rem", marginBottom: "12px" }}>{title}</h1>
-          <p style={{ color: "#c5d5f0" }}>Tutors India — Academic Writing & Research Services</p>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}>{title}</h1>
         </div>
       </section>
 
-      <section style={{ maxWidth: "1200px", margin: "60px auto", padding: "0 20px", display: "grid", gridTemplateColumns: "2fr 1fr", gap: "40px", alignItems: "start" }} className="catchall-layout">
-        <article>
-          <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "12px", padding: "32px" }}>
-            <h2 style={{ fontSize: "1.3rem", fontWeight: 700, color: "var(--navy)", marginBottom: "16px" }}>{title}</h2>
-            <p style={{ color: "var(--text-mid)", lineHeight: 1.8, marginBottom: "16px" }}>
-              Welcome to Tutors India&apos;s resource section on <strong>{title}</strong>. Our team of PhD-qualified academic experts has extensive knowledge and experience in this area, and we provide comprehensive support to Masters and PhD students.
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "40px 20px" }}>
+        {proxied?.content && proxied.content.trim().length > 100 ? (
+          <div className="library-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: proxied.content }} />
+        ) : (
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "32px" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px" }}>
+              Content for <strong>{title}</strong> is available on the live Tutors India website.
             </p>
-            <p style={{ color: "var(--text-mid)", lineHeight: 1.8, marginBottom: "16px" }}>
-              At Tutors India, we have been providing expert academic writing, editing, and research support services since 2001. We serve over 200,000 students worldwide, with offices in Sheffield (UK) and Dallas (US).
-            </p>
-            <p style={{ color: "var(--text-mid)", lineHeight: 1.8, marginBottom: "24px" }}>
-              Whether you need help with your dissertation, research proposal, statistical analysis, or any other academic task, our team is here to support you every step of the way.
-            </p>
-
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
-              {[
-                { icon: "✓", text: "PhD-qualified expert writers" },
-                { icon: "✓", text: "On-time delivery guaranteed" },
-                { icon: "✓", text: "100% plagiarism-free work" },
-                { icon: "✓", text: "Unlimited free revisions" },
-              ].map((item) => (
-                <div key={item.text} style={{ display: "flex", gap: "8px", padding: "10px", background: "var(--gray)", borderRadius: "6px", fontSize: "0.88rem", color: "var(--text-mid)" }}>
-                  <span style={{ color: "var(--orange)", fontWeight: 700 }}>{item.icon}</span>
-                  {item.text}
-                </div>
-              ))}
+            <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
+              <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
+              <Link href="/contact-us/" style={{ padding: "10px 24px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
             </div>
           </div>
+        )}
+      </div>
 
-          <div style={{ marginTop: "24px", background: "var(--orange)", color: "#fff", borderRadius: "12px", padding: "24px", textAlign: "center" }}>
-            <h3 style={{ fontWeight: 700, marginBottom: "10px" }}>Need Help with {title}?</h3>
-            <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)", marginBottom: "16px" }}>Contact our expert team for a free consultation and quote.</p>
-            <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "10px 24px", background: "#fff", color: "var(--orange)", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-              <Link href="/contact-us/" style={{ padding: "10px 24px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
-            </div>
-          </div>
-        </article>
-
-        <CTASidebar />
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Help?</h2>
+        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
+          <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
+        </div>
       </section>
-
-      <style>{`@media(max-width:768px){.catchall-layout{grid-template-columns:1fr!important;}}`}</style>
     </>
   );
 }

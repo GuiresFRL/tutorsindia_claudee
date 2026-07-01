@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Textbook Writing Services | Tutors India",
+  title: "Textbook Writing Services",
   description: "Professional Textbook Writing Services. Experienced creative copywriters deliver brilliant, pedagogically sound textbooks across all academic disciplines. Tutors India.",
 };
 

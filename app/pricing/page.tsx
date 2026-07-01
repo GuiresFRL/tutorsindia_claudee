@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pricing — Academic Writing Services | Tutors India",
+  title: "Pricing — Academic Writing Services",
   description: "Transparent pricing for Masters dissertation, PhD dissertation, statistical analysis, manuscript writing and editing services. Competitive student-friendly rates. Tutors India.",
 };
 

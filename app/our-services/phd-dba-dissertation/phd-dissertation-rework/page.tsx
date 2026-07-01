@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD Dissertation Rework / Resubmission Writing Help UK | Tutors India",
+  title: "PhD Dissertation Rework / Resubmission Writing Help UK",
   description: "PhD Dissertation Resubmission or Rework or Rewriting Help UK. 100% success rate in resit dissertation. Point-by-point supervisor response. Unlimited revisions.",
 };
 

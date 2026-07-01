@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { footerLinks } from "@/lib/data/navigation";
 import { siteInfo } from "@/lib/data/site";
+import SocialIcons from "@/components/ui/SocialIcons";
 
 export default function Footer() {
   return (
@@ -64,19 +65,7 @@ export default function Footer() {
             ))}
           </ul>
           <h4 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "10px" }}>Follow Us</h4>
-          <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-            {[
-              { label: "Facebook", href: siteInfo.social.facebook, bg: "#1877f2" },
-              { label: "Twitter", href: siteInfo.social.twitter, bg: "#1da1f2" },
-              { label: "LinkedIn", href: siteInfo.social.linkedin, bg: "#0077b5" },
-              { label: "YouTube", href: siteInfo.social.youtube, bg: "#ff0000" },
-            ].map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                style={{ padding: "5px 12px", borderRadius: "4px", fontSize: "0.78rem", fontWeight: 600, color: "#fff", background: s.bg }}>
-                {s.label}
-              </a>
-            ))}
-          </div>
+          <SocialIcons size={18} gap={8} variant="circle" />
         </div>
       </div>
 

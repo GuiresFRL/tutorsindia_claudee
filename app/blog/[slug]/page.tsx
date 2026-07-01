@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${stripHtml(post.title.rendered, 70)} | Tutors India Blog`,
     description,
-    robots: { index: false, follow: false },
+    
     alternates: { canonical: `https://tutorsindia.com/blog/${slug}/` },
     openGraph: {
       title: stripHtml(post.title.rendered),

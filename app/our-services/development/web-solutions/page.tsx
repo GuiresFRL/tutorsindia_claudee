@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Web Solutions & Development Services | Tutors India", description: "Expert Web Solutions. E-commerce, corporate websites, web applications, CMS, SEO. React, Angular, WordPress, Shopify. Full web development services. Tutors India." };
+export const metadata: Metadata = { title: "Web Solutions & Development Services", description: "Expert Web Solutions. E-commerce, corporate websites, web applications, CMS, SEO. React, Angular, WordPress, Shopify. Full web development services. Tutors India." };
 const services = [
   { icon: "🌐", title: "Corporate Website Development", desc: "Professional corporate websites designed to represent your brand — responsive, fast, SEO-optimised, and built for conversion." },
   { icon: "🛒", title: "E-Commerce Solutions", desc: "Full e-commerce website development — Shopify, WooCommerce, Magento — with product management, payment gateway integration, and order management." },

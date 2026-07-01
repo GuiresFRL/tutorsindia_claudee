@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Academic Translation Services | Research & Manuscript | Tutors India", description: "Professional Translation Services for academic manuscripts and research documents. Original to desired language with academic integrity. Expert translators. Tutors India." };
+export const metadata: Metadata = { title: "Academic Translation Services | Research & Manuscript", description: "Professional Translation Services for academic manuscripts and research documents. Original to desired language with academic integrity. Expert translators. Tutors India." };
 const languages = ["English (British & American)","French","German","Spanish","Italian","Portuguese","Dutch","Russian","Japanese","Chinese (Simplified & Traditional)","Arabic","Korean","Turkish","Polish","Swedish"];
 const faqs = [
   { q: "What translation services do you offer?", a: "Our professional translation experts provide full assistance to develop your final manuscript from original to desired language, maintaining academic integrity and technical precision. We translate academic manuscripts, dissertations, research papers, journal articles, conference papers, and other research documents." },

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Business & Management Studies Academic Writing | MBA, Masters | Tutors India",
+  title: "Business & Management Studies Academic Writing | MBA, Masters",
   description: "Expert Business & Management Studies academic writing — MBA, Masters, PhD dissertations, assignments, manuscripts. 400+ writers. HRM, Marketing, Finance, Strategy. Tutors India.",
 };
 

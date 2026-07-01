@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Writers — PhD & Masters Qualified Academic Experts | Tutors India",
+  title: "Our Writers — PhD & Masters Qualified Academic Experts",
   description: "Tutors India's 2000+ expert writers hold PhD or Masters degrees from top UK and US universities. Native English speakers with 5+ years research experience.",
 };
 

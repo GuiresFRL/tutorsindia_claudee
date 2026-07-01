@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD Doctorate Research Proposal Writing Help | Tutors India",
+  title: "PhD Doctorate Research Proposal Writing Help",
   description: "PhD Doctorate Research Proposal Writing Service by qualified US & UK researchers. Free Gantt chart, ethical form, executive summary. Unlimited revisions.",
 };
 

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { serviceCategories } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Development Services | Coding, Software, Big Data, Animation | Tutors India",
+  title: "Development Services | Coding, Software, Big Data, Animation",
   description: "Expert Development Services — Coding, Algorithm, Software Programming, Big Data Analytics, Animation, Graphic Design, Web Solutions, E-Learning. Tutors India.",
 };
 

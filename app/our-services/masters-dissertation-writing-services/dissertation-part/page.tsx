@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Masters Part / Chapter Dissertation Writing Services UK | Tutors India",
+  title: "Masters Part / Chapter Dissertation Writing Services UK",
   description: "UK & US Master's Part / Chapter-wise Dissertation Writing Service. Introduction, Literature Review, Methodology, Results, Discussion — any chapter. Expert writers.",
 };
 

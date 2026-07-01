@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us — World's Reputed Academic Guidance Provider | Tutors India",
+  title: "About Us — World's Reputed Academic Guidance Provider",
   description: "Tutors India is the world's reputed academic guidance provider since 2001, having guided more than 4,500 Ph.D. scholars and 10,500 Masters students across the globe.",
 };
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Technical Editing Services | Academic & Scientific | Tutors India", description: "Expert Technical Editing Services for academic and scientific manuscripts. Subject matter experts review technical accuracy, argument, clarity, and structure. Tutors India." };
+export const metadata: Metadata = { title: "Technical Editing Services | Academic & Scientific", description: "Expert Technical Editing Services for academic and scientific manuscripts. Subject matter experts review technical accuracy, argument, clarity, and structure. Tutors India." };
 const checks = [
   { icon: "🔬", title: "Technical Accuracy", desc: "Subject matter experts verify all technical claims, equations, methodology descriptions, data interpretations, and scientific terminology." },
   { icon: "📐", title: "Argument Structure", desc: "Logical flow of technical arguments reviewed. Gaps in reasoning identified and recommendations provided for clearer technical communication." },

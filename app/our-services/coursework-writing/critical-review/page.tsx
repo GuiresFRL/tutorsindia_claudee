@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK / US Critical Review Writing Service | Tutors India",
+  title: "UK / US Critical Review Writing Service",
   description: "The US / UK Critical Review Service. Expert critical evaluation and summary of academic texts. Peer-reviewed sources only. Plagiarism-free. Unlimited revisions. Tutors India.",
 };
 

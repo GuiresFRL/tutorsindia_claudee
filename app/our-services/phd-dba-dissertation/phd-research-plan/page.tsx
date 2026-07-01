@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD & DBA Dissertation Research Planning & Consultation | Tutors India",
+  title: "PhD & DBA Dissertation Research Planning & Consultation",
   description: "PhD & DBA Doctorate Dissertation Research Planning & Consultation Help. 5–10 page research plan with framework, Gantt chart, and timeline. 5000+ PhD theses supported.",
 };
 

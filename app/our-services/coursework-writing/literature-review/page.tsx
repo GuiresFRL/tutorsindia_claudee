@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK Postgraduate & Doctorate Literature Review Writing Help | Tutors India",
+  title: "UK Postgraduate & Doctorate Literature Review Writing Help",
   description: "The UK Postgraduate & Doctorate Literature Review Writing Help. Minimum 80 references. Systematic, critical, thematic reviews. Expert researchers. Tutors India.",
 };
 

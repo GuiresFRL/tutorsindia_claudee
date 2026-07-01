@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Biostatistics Services | Clinical Trial Analysis | Tutors India",
+  title: "Biostatistics Services | Clinical Trial Analysis",
   description: "Expert Biostatistics Services. Clinical trial analysis, survival analysis, logistic regression, SEM. SPSS, R, SAS, STATA. PhD biostatisticians. Tutors India.",
 };
 

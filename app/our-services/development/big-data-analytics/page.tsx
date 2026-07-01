@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Big Data Analytics Services | Hadoop, Spark, ML | Tutors India", description: "Expert Big Data Analytics Services. Predictive Analytics, Time Series, Machine Learning, Hadoop, Hive, Spark. Tutors India." };
+export const metadata: Metadata = { title: "Big Data Analytics Services | Hadoop, Spark, ML", description: "Expert Big Data Analytics Services. Predictive Analytics, Time Series, Machine Learning, Hadoop, Hive, Spark. Tutors India." };
 const models = ["Predictive Analytics","Time Series (Moving Average, ARIMA)","Linear & Non-linear Regression","Logistic Regression","Classification Models","Clustering (K-means, DBSCAN)","Neural Networks & Deep Learning","Random Forest & Ensemble Methods","Support Vector Machines","Natural Language Processing","Recommendation Systems","Anomaly Detection"];
 const tools = ["Apache Hadoop","Apache Hive","Apache Spark","Python (Pandas, NumPy, Scikit-learn)","R & R Studio","TensorFlow / PyTorch","Tableau / Power BI","SQL / NoSQL Databases","Kafka","Airflow","Databricks","AWS EMR"];
 const faqs = [

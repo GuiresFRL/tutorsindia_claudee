@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK Case Report Writing Services | Medical, Business, Legal | Tutors India",
+  title: "UK Case Report Writing Services | Medical, Business, Legal",
   description: "The US / UK Report Writing Service. Medical/Nursing case reports, Business case studies, Legal case reports. Expert UK & US writers. Plagiarism-free. Tutors India.",
 };
 

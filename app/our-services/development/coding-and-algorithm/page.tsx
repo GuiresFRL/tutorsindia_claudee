@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Coding & Algorithm Development Services | IEEE Projects | Tutors India",
+  title: "Coding & Algorithm Development Services | IEEE Projects",
   description: "Expert Coding and Algorithm Development for IEEE Projects. NS2, Java, CloudSim, MATLAB, OMNET++, Android, Hadoop and 20+ tools. Tutors India.",
 };
 

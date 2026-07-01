@@ -452,6 +452,181 @@ a.wa-float:hover {
 }
 
 /* ─────────────────────────────
+   LIBRARY PROXIED CONTENT (Betheme/BeBuilder)
+───────────────────────────── */
+.library-content { font-family: 'Source Sans 3', sans-serif; font-size: 0.97rem; line-height: 1.8; color: #333; }
+
+/* ── CRITICAL FIX: sectionscroll has overflow:scroll + fixed height in live CSS ── */
+.library-content .sectionscroll {
+  overflow: visible !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  padding: 0 !important;
+}
+
+/* ── BeBuilder sections / wrappers ── */
+.library-content .section { margin-bottom: 0; padding: 16px 0 !important; }
+.library-content .section_wrapper,.library-content .mcb-section-inner { max-width: 100% !important; padding: 0 !important; }
+.library-content .wrap.mcb-wrap,.library-content .mcb-wrap-inner { display: flex; flex-wrap: wrap; width: 100%; }
+
+/* ── BeBuilder column widths — all expand to full width (no sidebar) ── */
+.library-content .column.mcb-column { box-sizing: border-box; min-width: 0; }
+.library-content .column.mcb-column.one       { flex: 0 0 100%; max-width: 100%; }
+.library-content .column.mcb-column.two-third { flex: 0 0 100%; max-width: 100%; }
+.library-content .column.mcb-column.one-second{ flex: 0 0 100%; max-width: 100%; }
+.library-content .column.mcb-column.one-third { flex: 0 0 calc(33.33% - 8px); max-width: 33.33%; }
+.library-content .column.mcb-column.one-fourth{ flex: 0 0 calc(25% - 8px); max-width: 25%; }
+@media(max-width:768px){
+  .library-content .column.mcb-column.one-third,
+  .library-content .column.mcb-column.one-fourth { flex: 0 0 100%; max-width: 100%; }
+}
+.library-content .column_attr { padding: 12px !important; box-sizing: border-box; }
+
+/* ── Bootstrap grid (col-md-*) ── */
+.library-content .row { display: flex; flex-wrap: wrap; margin: 0 -8px; }
+.library-content [class*="col-md-"] { padding: 0 8px; box-sizing: border-box; }
+.library-content .col-md-1  { flex: 0 0 8.33%;  max-width: 8.33%; }
+.library-content .col-md-2  { flex: 0 0 16.66%; max-width: 16.66%; }
+.library-content .col-md-3  { flex: 0 0 25%;    max-width: 25%; }
+.library-content .col-md-4  { flex: 0 0 33.33%; max-width: 33.33%; }
+.library-content .col-md-5  { flex: 0 0 41.66%; max-width: 41.66%; }
+.library-content .col-md-6  { flex: 0 0 50%;    max-width: 50%; }
+.library-content .col-md-7  { flex: 0 0 58.33%; max-width: 58.33%; }
+.library-content .col-md-8  { flex: 0 0 66.66%; max-width: 66.66%; }
+.library-content .col-md-9  { flex: 0 0 75%;    max-width: 75%; }
+.library-content .col-md-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+.library-content .col-md-12 { flex: 0 0 100%;   max-width: 100%; }
+@media(max-width:768px){
+  .library-content [class*="col-md-"] { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* ── Bootstrap panels (essay/dissertation cards) ── */
+.library-content .panel {
+  background: #fff; border: 1px solid #dde2ef; border-radius: 10px;
+  margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-left: 4px solid #1a2a6c; overflow: hidden;
+}
+.library-content .panel-body { padding: 16px 18px; }
+.library-content .panel-body a { font-weight: 700; color: #1a2a6c; font-size: 0.95rem; text-decoration: none; display: block; margin-bottom: 8px; }
+.library-content .panel-body a:hover { color: #e87722; }
+.library-content .panel-body p { font-size: 0.85rem; color: #555; margin-bottom: 0; line-height: 1.6; }
+.library-content .panel-footer {
+  background: #f5f7fb; border-top: 1px solid #dde2ef; padding: 8px 16px;
+  font-size: 0.8rem; color: #666; display: flex; gap: 12px; align-items: center;
+}
+
+/* ── Bootstrap list-group (sidebar nav reused in content) ── */
+.library-content .list-group { margin-bottom: 8px; padding-left: 0; list-style: none; }
+.library-content .list-group-item {
+  display: block; padding: 7px 14px; border: 1px solid #dde2ef;
+  border-radius: 5px !important; color: #1a2a6c; font-size: 0.88rem;
+  margin-bottom: 4px; text-decoration: none; transition: background 0.15s;
+}
+.library-content .list-group-item:hover { background: #1a2a6c; color: #fff !important; }
+
+/* ── Text colour helpers from Betheme ── */
+.library-content .white,.library-content h3.white,.library-content h4.white,
+.library-content p.white { color: #fff !important; }
+/* whiteking = visible dark navy by default; overridden white inside dark sections */
+.library-content .whiteking { color: #1a2a6c !important; font-weight: 700; }
+.library-content .section[style*="background-color:#283ea3"] .whiteking,
+.library-content .column_attr[style*="background-color:#283ea3"] .whiteking { color: #fff !important; }
+.library-content .black,.library-content h3.black,.library-content h4.black { color: #1a2a6c !important; }
+.library-content .blackk  { color: #1a2a6c !important; background: #f0f4ff; padding: 4px 8px; border-radius: 4px; }
+.library-content .blackcontent { color: #333 !important; }
+
+/* ── Coloured section backgrounds ── */
+.library-content .section[style*="background-color:#283ea3"],
+.library-content .section[style*="background-color: #283ea3"] {
+  background: linear-gradient(135deg,#1a2a6c,#2563b0) !important;
+  padding: 24px 0 !important; border-radius: 10px; margin: 16px 0 !important;
+}
+.library-content .section[style*="background-color:#283ea3"] *,
+.library-content .section[style*="background-color: #283ea3"] * { color: #fff; }
+.library-content .section[style*="background-color:#283ea3"] a.btn-defaultfourboxx,
+.library-content .section[style*="background-color: #283ea3"] a.btn-defaultfourboxx {
+  background: #e87722; color: #fff; padding: 8px 20px; border-radius: 5px; font-weight: 700;
+  display: inline-block; text-decoration: none; margin-top: 8px;
+}
+
+/* ── Buttons ── */
+.library-content .btn { display: inline-block; padding: 7px 16px; border-radius: 5px; font-size: 0.87rem; font-weight: 600; cursor: pointer; text-decoration: none; border: none; }
+.library-content .btn-primary,.library-content .btn-info { background: #1a2a6c !important; color: #fff !important; }
+.library-content .btn-warning { background: #e87722 !important; color: #fff !important; }
+.library-content .btn-block { display: block; width: 100%; text-align: center; margin-bottom: 8px; }
+.library-content .btn-defaultfourboxx { background: #e87722; color: #fff; padding: 8px 18px; border-radius: 5px; font-weight: 700; }
+
+/* ── Top section menu (REFERENCE / CHAPTERS / LINE SPACING bar) ── */
+.library-content #topsectionmenu {
+  background: #f5f7fb; border: 1px solid #dde2ef; border-radius: 8px;
+  padding: 10px 16px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+}
+.library-content #topsectionmenu a,
+.library-content #topsectionmenu .btn { color: #1a2a6c !important; font-size: 0.85rem; font-weight: 600; }
+.library-content .popup-content { display: none; }
+.library-content .dropdown-menu { display: none; position: static; }
+
+/* ── Article body headings ── */
+.library-content h1,.library-content h2,.library-content h3,.library-content h4,.library-content h5 {
+  font-family: 'Merriweather', serif; color: #1a2a6c; margin: 1.3em 0 0.5em; line-height: 1.4;
+}
+.library-content h1 { font-size: 1.3rem; }
+.library-content h2 { font-size: 1.15rem; }
+.library-content h3 { font-size: 1.02rem; }
+.library-content h4 { font-size: 0.93rem; }
+.library-content p { margin-bottom: 0.9em; text-align: justify; }
+.library-content ul,.library-content ol { padding-left: 1.5em; margin-bottom: 1em; }
+.library-content li { margin-bottom: 0.35em; }
+.library-content b,.library-content strong { font-weight: 700; }
+.library-content a { color: #2563b0; }
+.library-content a:hover { color: #e87722; }
+.library-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.2em; font-size: 0.9rem; }
+.library-content th { background: #1a2a6c; color: #fff; padding: 8px 12px; text-align: left; }
+.library-content td { border: 1px solid #dde2ef; padding: 8px 12px; vertical-align: top; }
+.library-content tr:nth-child(even) td { background: #f5f7fb; }
+.library-content img { max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 12px 0; }
+
+/* ── Hide leftover decorative / broken elements ── */
+.library-content .rightsideidebg,.library-content .ppc-menu,
+.library-content .section.the_content.no_content,
+.library-content .section-page-footer { display: none !important; }
+
+/* ── Hide proxied background-image hero sections (we render our own hero above) ── */
+.library-content .section[style*="background-image"] {
+  display: none !important;
+}
+
+/* ── Search form overflow fix ── */
+.library-content input[type="text"],
+.library-content input[type="search"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* ── Listing page subject grid (one-fourth columns as category cards) ── */
+.library-content .column.mcb-column.one-fourth .column_attr {
+  background: #fff; border: 1px solid #dde2ef; border-radius: 10px;
+  padding: 16px !important; box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.library-content p.whiteking,.library-content h1.whiteking,.library-content h2.whiteking {
+  font-size: 0.88rem; margin: 12px 0 6px; text-transform: uppercase; letter-spacing: 0.04em;
+  padding-bottom: 5px; border-bottom: 2px solid #e87722;
+}
+
+/* ─────────────────────────────
+   Q&A ANSWER CONTENT
+───────────────────────────── */
+.qa-answer { font-family: 'Source Sans 3', sans-serif; font-size: 0.97rem; line-height: 1.8; color: #333; }
+.qa-answer p { margin-bottom: 1em; }
+.qa-answer h3 { font-family: 'Merriweather', serif; font-size: 1rem; color: #1a2a6c; margin: 1.4em 0 0.5em; font-weight: 700; }
+.qa-answer strong { font-weight: 700; color: #222; }
+.qa-answer em { font-style: italic; color: #555; background: #f5f7fb; padding: 1px 4px; border-radius: 3px; }
+.qa-answer ul, .qa-answer ol { padding-left: 1.4em; margin-bottom: 1em; }
+.qa-answer li { margin-bottom: 0.4em; line-height: 1.65; }
+
+/* ─────────────────────────────
    WP / ELEMENTOR CONTENT
 ───────────────────────────── */
 
@@ -510,7 +685,6 @@ a.wa-float:hover {
 /* Hide Elementor / WP junk we don't want rendered */
 .wp-content .elementor > .elementor-section:first-child,
 .wp-content .elementor-widget-breadcrumbs,
-.wp-content .elementor-widget-post-info,
 .wp-content [class*="share"],
 .wp-content [class*="social"],
 .wp-content [class*="breadcrumb"],
@@ -526,6 +700,68 @@ a.wa-float:hover {
 .wp-content img[src*="facebook"],
 .wp-content img[src*="twitter"],
 .wp-content img[src*="whatsapp"] { display: none !important; }
+
+/* ── Post Info / Meta block (Info, Published, Tagged) ── */
+.wp-content .elementor-widget-post-info .elementor-widget-container,
+.wp-content .elementor-post-info__items {
+  background: #f5f7fb;
+  border: 1px solid #dde2ef;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.wp-content .elementor-post-info__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #444;
+  flex-wrap: wrap;
+}
+.wp-content .elementor-post-info__item-prefix,
+.wp-content .elementor-post-info__item .elementor-icon {
+  font-weight: 700;
+  color: #1a2a6c;
+  min-width: 90px;
+}
+/* Tag pills */
+.wp-content .elementor-post-info__item a,
+.wp-content .elementor-post-info .elementor-terms a {
+  display: inline-block;
+  padding: 3px 12px;
+  background: #1a2a6c;
+  color: #fff !important;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  margin: 2px 2px 0 0;
+}
+.wp-content .elementor-post-info__item a:hover { background: #e87722 !important; }
+
+/* Hide filter sidebar columns — elementor-col-33 and smaller are always sidebar/filter columns */
+.wp-content .elementor-col-33,
+.wp-content .elementor-col-25,
+.wp-content .elementor-col-20,
+.wp-content .elementor-col-30 { display: none !important; }
+
+/* Article card grids from custom Elementor plugins (rt-col, etc.) */
+.wp-content .rt-container,
+.wp-content [class*="even-grid"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; width: 100%; }
+.wp-content .rt-col-md-4,
+.wp-content .rt-col-sm-6,
+.wp-content [class*="grid-item"] { background: #fff; border: 1px solid #dde2ef; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.wp-content .rt-col-md-4 img,
+.wp-content .rt-col-sm-6 img,
+.wp-content [class*="grid-item"] img { width: 100%; height: 180px; object-fit: cover; display: block !important; }
+.wp-content .rt-col-md-4 a,
+.wp-content .rt-col-sm-6 a,
+.wp-content [class*="grid-item"] a { color: #1a2a6c; text-decoration: none; font-weight: 600; }
+.wp-content .rt-col-md-4 a:hover,
+.wp-content .rt-col-sm-6 a:hover { color: #e87722; }
 
 /* Elementor heading widget */
 .wp-content .elementor-widget-heading .elementor-heading-title {
@@ -613,4 +849,286 @@ a.wa-float:hover {
   .wp-content h1 { font-size: 1.4rem; }
   .wp-content h2 { font-size: 1.15rem; }
   .wp-content .elementor-tab-title.elementor-tab-desktop-title { font-size: 0.78rem; padding: 7px 12px; }
+}
+
+/* ─────────────────────────────
+   FINISHING — GLOBAL POLISH
+───────────────────────────── */
+
+/* Smooth global transitions */
+a, button { transition: color 0.18s, background 0.18s, border-color 0.18s, opacity 0.18s; }
+
+/* ── Card hover lift (apply .card-hover to any card) ── */
+.card-hover {
+  transition: box-shadow 0.22s ease, transform 0.22s ease !important;
+}
+.card-hover:hover {
+  box-shadow: 0 10px 32px rgba(26,42,108,0.13) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ── Auto-apply lift to blog & library cards ── */
+.blog-card {
+  transition: box-shadow 0.22s ease, transform 0.22s ease !important;
+}
+.blog-card:hover {
+  box-shadow: 0 10px 28px rgba(26,42,108,0.12) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ── Button polish — any orange / navy inline button ── */
+a[style*="background: #e87722"],
+a[style*="background:#e87722"] {
+  transition: background 0.18s, box-shadow 0.18s, transform 0.15s !important;
+}
+a[style*="background: #e87722"]:hover,
+a[style*="background:#e87722"]:hover {
+  background: #c0601a !important;
+  box-shadow: 0 4px 14px rgba(232,119,34,0.35) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Navy buttons */
+a[style*="background: #1a2a6c"],
+a[style*="background:#1a2a6c"] {
+  transition: background 0.18s, box-shadow 0.18s, transform 0.15s !important;
+}
+a[style*="background: #1a2a6c"]:hover,
+a[style*="background:#1a2a6c"]:hover {
+  background: #253d9e !important;
+  box-shadow: 0 4px 14px rgba(26,42,108,0.28) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ── Footer link hover ── */
+footer a {
+  transition: color 0.16s ease !important;
+}
+footer a:hover {
+  color: #e87722 !important;
+}
+
+/* ── Nav link animated underline ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--orange);
+  transition: left 0.2s ease, right 0.2s ease;
+}
+.nav-link:hover::after {
+  left: 8px;
+  right: 8px;
+}
+
+/* ── WP content link hover — smooth underline ── */
+.wp-content a,
+.library-content a {
+  text-underline-offset: 3px;
+  transition: color 0.15s ease !important;
+}
+
+/* ── Blockquote polish ── */
+.wp-content blockquote {
+  position: relative;
+  border-left: 4px solid var(--orange);
+  background: linear-gradient(90deg, #fff8f4 0%, #fff 100%);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 20px 14px 20px;
+  margin: 1.2em 0;
+  font-style: italic;
+  color: #555;
+}
+.wp-content blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  font-size: 2.8rem;
+  color: var(--orange);
+  opacity: 0.25;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* ── Section heading accent ── */
+.wp-content h2 {
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 7px;
+  display: inline-block;
+}
+
+/* ── Image hover zoom inside wp-content ── */
+.wp-content figure,
+.wp-content .rt-col-md-4,
+.wp-content [class*="grid-item"] {
+  overflow: hidden;
+}
+.wp-content figure img {
+  transition: transform 0.35s ease !important;
+}
+.wp-content figure:hover img {
+  transform: scale(1.04) !important;
+}
+
+/* ── Table row hover ── */
+.wp-content tr:hover td,
+.library-content tr:hover td {
+  background: #edf2ff !important;
+  transition: background 0.15s;
+}
+
+/* ── Focus ring — accessibility ── */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Star rating component ── */
+.star-rating {
+  display: inline-flex;
+  gap: 2px;
+  color: #f5a623;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.star-rating::before { content: '★★★★★'; }
+
+/* ── Trust badge pill ── */
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #f0f4ff;
+  border: 1px solid #c5d5f0;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ── Section divider — subtle wave line ── */
+.section-divider {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--orange) 40%, var(--blue) 60%, transparent 100%);
+  margin: 0;
+  opacity: 0.35;
+}
+
+/* ── Page fade-in on load ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+main > *:first-child {
+  animation: fadeInUp 0.45s ease both;
+}
+
+/* ── Gradient hero text (optional class) ── */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 30%, #c5d5f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Library panel hover lift ── */
+.library-content .panel {
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+.library-content .panel:hover {
+  box-shadow: 0 8px 24px rgba(26,42,108,0.12) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ── List-group hover polish ── */
+.library-content .list-group-item {
+  transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease !important;
+}
+.library-content .list-group-item:hover {
+  padding-left: 20px !important;
+}
+
+/* ── Input / select polish ── */
+input, select, textarea {
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,176,0.15);
+  outline: none;
+}
+
+/* ── Smooth scroll bar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f0f4ff; }
+::-webkit-scrollbar-thumb { background: #b0c0d8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--navy); }
+
+/* ── Selection highlight ── */
+::selection { background: var(--orange); color: #fff; }
+
+/* ─────────────────────────────
+   HIDE SHARE / LIKE WIDGETS GLOBALLY
+───────────────────────────── */
+/* WordPress sharedaddy / Jetpack sharing */
+.sharedaddy, .sd-sharing, .sd-block, .sd-like,
+.sd-content, .sd-social, .sd-like-enabled,
+.jp-relatedposts, .jetpack-likes-widget-wrapper,
+[id^="like-post-wrapper"], [id^="jp-post-flair"],
+.wpl-button, .like-count { display: none !important; }
+
+/* "Share this:" / "Like this:" heading + content anywhere */
+.wp-content [class*="sharedaddy"],
+.wp-content [class*="sd-block"],
+.wp-content [class*="sd-like"],
+.wp-content [class*="jp-"],
+.library-content [class*="sharedaddy"],
+.library-content [class*="sd-block"],
+.library-content [class*="sd-like"],
+.library-content [class*="jp-"] { display: none !important; }
+
+/* Catch inline "Share this:" text nodes rendered via Elementor heading */
+.wp-content .elementor-widget:has(.elementor-heading-title:empty),
+.wp-content .elementor-widget-social-icons { display: none !important; }
+
+/* Proxied BeBuilder share rows */
+.library-content .share-post,
+.library-content .post-share,
+.library-content [class*="share-"],
+.library-content [class*="-share"],
+.library-content [class*="social-share"],
+.library-content .addthis_toolbox,
+.library-content .addtoany_share { display: none !important; }
+
+/* BeBuilder "Share this:" block (.sharet class) — hide entire column */
+.library-content .sharet,
+.library-content .column_attr:has(.sharet),
+.library-content .mcb-column:has(.sharet) { display: none !important; }
+
+/* "Like this:" / Like button widgets */
+.library-content [class*="like-"],
+.library-content [class*="-like"],
+.library-content .likebtn-wrapper { display: none !important; }
+
+/* ── Print: hide floats and nav ── */
+@media print {
+  .wa-float, header, footer, nav { display: none !important; }
+  body { font-size: 12pt; color: #000; }
+  a { color: #000; text-decoration: underline; }
 }

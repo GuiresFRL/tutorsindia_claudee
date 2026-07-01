@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Statistical Services for Research & Publication | Tutors India",
+  title: "Statistical Services for Research & Publication",
   description: "Expert Statistical Services for academic research and publication. SPSS, R, SAS, STATA, E-Views, Minitab. In-depth domain expertise across industries. Tutors India.",
 };
 

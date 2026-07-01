@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD & Professional Doctorate Coursework Writing Service | Tutors India",
+  title: "PhD & Professional Doctorate Coursework Writing Service",
   description: "UK PhD & Professional Doctorate Coursework Writing, Editing & Consultation Help. Research methodology, statistical analysis, literature review and more. Expert writers.",
 };
 

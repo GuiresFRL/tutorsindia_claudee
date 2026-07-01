@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Manuscript Development & Writing Services | Tutors India",
+  title: "Manuscript Development & Writing Services",
   description: "Expert Manuscript Development services. Rewrite based on reviewer comments, technical editing, proofreading, formatting to journal guidelines. Tutors India.",
 };
 
