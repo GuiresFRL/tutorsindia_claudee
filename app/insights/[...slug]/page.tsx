@@ -17,7 +17,7 @@ function slugToTitle(slug: string): string {
 async function getInsightsContent(lastSlug: string, path: string) {
   // Try WP posts first (most insights articles are posts)
   const post = await getTIPostBySlug(lastSlug);
-  if (post?.content?.rendered?.trim().length > 50) {
+  if ((post?.content?.rendered?.trim().length ?? 0) > 50) {
     return {
       title: post.title.rendered.replace(/<[^>]+>/g, ""),
       content: cleanElementorHtml(post.content.rendered),
@@ -26,7 +26,7 @@ async function getInsightsContent(lastSlug: string, path: string) {
   }
   // Try WP pages
   const page = await getTIPageBySlug(lastSlug);
-  if (page?.content?.rendered?.trim().length > 50) {
+  if ((page?.content?.rendered?.trim().length ?? 0) > 50) {
     return {
       title: page.title.rendered.replace(/<[^>]+>/g, ""),
       content: cleanElementorHtml(page.content.rendered),
