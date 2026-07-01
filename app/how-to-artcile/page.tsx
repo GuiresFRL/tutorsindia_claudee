@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "How To Articles | Tutors India",
+  title: "How To Articles",
   description: "Step-by-step how-to guides and academic writing articles from Tutors India's expert team.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/how-to-artcile/" },
 };
 

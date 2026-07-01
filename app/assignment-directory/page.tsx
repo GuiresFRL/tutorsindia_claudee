@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Assignment Directory | Tutors India",
+  title: "Assignment Directory",
   description: "Browse Tutors India's full directory of academic writing services — dissertations, coursework, publication support, editing, development, and more.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/assignment-directory/" },
 };
 

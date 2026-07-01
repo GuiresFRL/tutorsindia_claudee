@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Journal & Dissertation Formatting Service | Tutors India", description: "Expert Formatting Service for journals and dissertations. Word count, margins, fonts, headings, citations, figures, tables. All journal and university styles. Tutors India." };
+export const metadata: Metadata = { title: "Journal & Dissertation Formatting Service", description: "Expert Formatting Service for journals and dissertations. Word count, margins, fonts, headings, citations, figures, tables. All journal and university styles. Tutors India." };
 const faqs = [
   { q: "What does your formatting service include?", a: "Our journal and dissertation formatting support team ensures your paper meets your journal's or university's exact requirements. We handle word count compliance, paper size, margin settings, line spacing, page numbering, text font, alignment, front cover, acknowledgement, abstract, table of contents, lists of figures and tables, abbreviations, main text, chapter and section headings, citation format, academic style, attribution, plagiarism check, and assessment report." },
   { q: "Which formatting styles do you support?", a: "We handle all formatting styles including Harvard, APA (7th edition), MLA (9th edition), Chicago (18th edition), Vancouver, Turabian, OSCOLA, IEEE, AMA, and any other university-specific or journal-specific formatting requirements. We review your target journal's author guidelines or your university's dissertation formatting guide before beginning work." },

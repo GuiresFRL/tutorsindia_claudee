@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Biological & Life Science Academic Writing | Masters, PhD | Tutors India", description: "Expert Biological & Life Science academic writing. Molecular Biology, Genetics, Ecology, Biochemistry, Microbiology. Masters & PhD. Tutors India." };
+export const metadata: Metadata = { title: "Biological & Life Science Academic Writing | Masters, PhD", description: "Expert Biological & Life Science academic writing. Molecular Biology, Genetics, Ecology, Biochemistry, Microbiology. Masters & PhD. Tutors India." };
 const areas = ["Molecular Biology","Cell Biology & Cytology","Genetics & Genomics","Ecology & Environmental Biology","Biochemistry","Microbiology","Immunology","Neuroscience","Pharmacology","Physiology","Plant Biology & Botany","Zoology & Animal Biology","Marine Biology","Evolutionary Biology","Bioinformatics","Developmental Biology"];
 const faqs = [
   { q: "What biological and life science subjects do you cover?", a: "Writing a biology and life science paper can be stressful, specifically when your objective is to obtain a good grade. We cover molecular biology, cell biology, genetics & genomics, ecology, biochemistry, microbiology, immunology, neuroscience, pharmacology, physiology, plant biology, zoology, marine biology, evolutionary biology, bioinformatics, and developmental biology." },

@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Nursing Assignment Q and A | Tutors India",
+  title: "Nursing Assignment Q and A",
   description: "Expert answers to common nursing assignment questions — structure, evidence, critical analysis, citation styles, Gibbs Reflective Cycle, and more.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/coursework/nursing-assignment-q-and-a/" },
 };
 

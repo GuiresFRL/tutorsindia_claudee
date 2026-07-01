@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Academic PowerPoint Presentation Service for PhD | Tutors India",
+  title: "Academic PowerPoint Presentation Service for PhD",
   description: "Academic PowerPoint Presentation Service for PhD scholars. World-class presentations for internal/external committee. Professional graphic designers. Tutors India.",
 };
 

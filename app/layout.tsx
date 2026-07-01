@@ -29,13 +29,11 @@ export const metadata: Metadata = {
   creator: "Tutors India",
   publisher: "Tutors India",
   robots: {
-    index: false,
-    follow: false,
-    nocache: true,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
+      index: true,
+      follow: true,
     },
   },
   openGraph: {
@@ -83,10 +81,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-GB">
       <head>
-        {/* Global noindex, nofollow — explicit meta tag for maximum compatibility */}
-        <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+        {/* Prevent indexing until site is ready for launch */}
+        <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
-        <meta name="bingbot" content="noindex, nofollow" />
         {/* Charset & viewport */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -94,6 +91,73 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* <meta name="google-site-verification" content="YOUR_CODE" /> */}
         {/* Font Awesome — required for library proxied content icons */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossOrigin="anonymous" />
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://tutorsindia.com/#organization",
+              "name": "Tutors India",
+              "url": "https://tutorsindia.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://tutorsindia.com/tutorsindia-logo-hd.jpg",
+                "width": 200,
+                "height": 200
+              },
+              "description": "Tutors India provides expert Masters, MBA and PhD dissertation writing, editing, statistics and coding services. Trusted by 200,000+ scholars since 2001.",
+              "foundingDate": "2001",
+              "address": [
+                {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10, Kutty Street, Nungambakkam",
+                  "addressLocality": "Chennai",
+                  "postalCode": "600034",
+                  "addressCountry": "IN"
+                },
+                {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Manchester",
+                  "addressCountry": "GB"
+                }
+              ],
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+44-1143520021",
+                  "contactType": "customer service",
+                  "areaServed": "GB"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-8754446690",
+                  "contactType": "customer service",
+                  "areaServed": "IN"
+                }
+              ],
+              "sameAs": [
+                "https://www.facebook.com/TutorsIndia",
+                "https://twitter.com/TutorsIndia",
+                "https://www.linkedin.com/company/tutors-india",
+                "https://www.instagram.com/tutorsindia/",
+                "https://www.youtube.com/c/TutorsIndia"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://tutorsindia.com/#website",
+              "url": "https://tutorsindia.com",
+              "name": "Tutors India",
+              "publisher": { "@id": "https://tutorsindia.com/#organization" },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://tutorsindia.com/blog/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }
+          ]
+        })}} />
       </head>
       <body style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <TopBar />
@@ -201,6 +265,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',processWPContent);
   else processWPContent();
+})();
+        `}} />
+
+        {/* Tawk.to Live Chat */}
+        <script dangerouslySetInnerHTML={{ __html: `
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/679b32f93a842732607721d7/1iir3u863';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
 })();
         `}} />
 

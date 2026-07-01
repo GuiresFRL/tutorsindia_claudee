@@ -5,9 +5,9 @@ import { getTIChildPages } from "@/lib/api/tutorsindia";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Dissertation Topics — Free Research Topic Ideas by Subject | Tutors India",
+  title: "Dissertation Topics — Free Research Topic Ideas by Subject",
   description: "Explore free dissertation topic ideas across Business, Engineering, Computer Science, Biology, Law and more. Expert curated by Tutors India's PhD team.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/topic/" },
 };
 

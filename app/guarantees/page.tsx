@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Guarantees — Plagiarism Free, On-Time, Unlimited Revisions | Tutors India",
+  title: "Our Guarantees — Plagiarism Free, On-Time, Unlimited Revisions",
   description: "Tutors India guarantees: 100% plagiarism-free work, unlimited revisions, on-time delivery, subject matter expertise, complete confidentiality, and free research articles.",
 };
 

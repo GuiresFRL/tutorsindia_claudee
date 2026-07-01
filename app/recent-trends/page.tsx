@@ -6,7 +6,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Tutors India Recent Trends | Latest Academic Insights",
   description: "Stay updated with the latest academic writing trends, blog posts, and insights from Tutors India.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/recent-trends/" },
 };
 

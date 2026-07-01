@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Animation & VFX Services | 3D Modelling, Architectural Design | Tutors India", description: "Professional Animation Services. 3D Modelling, Architectural Design, 2D/3D Animation, VFX, Interior Design, Landscape Design. Tutors India." };
+export const metadata: Metadata = { title: "Animation & VFX Services | 3D Modelling, Architectural Design", description: "Professional Animation Services. 3D Modelling, Architectural Design, 2D/3D Animation, VFX, Interior Design, Landscape Design. Tutors India." };
 const services = [
   { icon: "🏙️", title: "3D Modelling & Animation", desc: "3D animation, 3D flythrough, 3D modelling for academic, commercial, and research purposes with photorealistic rendering." },
   { icon: "🏗️", title: "Architectural Design", desc: "Commercial, construction, design & drafting, interior design, and landscape design with accurate architectural visualisations." },

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${item.question} | Tutors India`,
     description: `Expert answer: ${item.question} — Free academic Q&A from Tutors India's PhD-qualified specialists.`,
-    robots: { index: false, follow: false },
+    
     alternates: { canonical: `https://tutorsindia.com/ask-an-expert/${subjectSlug}/${questionSlug}/` },
   };
 }

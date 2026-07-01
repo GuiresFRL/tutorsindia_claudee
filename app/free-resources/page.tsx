@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Resources | Tutors India",
+  title: "Free Resources",
   description: "Free academic resources from Tutors India — essays, dissertation examples, titles, topics, referencing guides, research trends, and more.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/free-resources/" },
 };
 

@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Ask a Question — Free Expert Academic Answer in 24 Hours | Tutors India",
+  title: "Ask a Question — Free Expert Academic Answer in 24 Hours",
   description: "Submit your academic question and receive a free expert answer within 24 hours from Tutors India's team of PhD-qualified specialists.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/ask-an-expert/ask-a-question/" },
 };
 

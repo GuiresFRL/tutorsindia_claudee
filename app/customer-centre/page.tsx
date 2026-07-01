@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customer Centre — Support & Account Management | Tutors India",
+  title: "Customer Centre — Support & Account Management",
   description: "Tutors India Customer Centre — track your order, request revisions, contact support, download your work. 24/7 support for all clients.",
 };
 

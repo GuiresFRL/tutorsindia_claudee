@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Order Your Project — Academic Writing Services | Tutors India",
+  title: "Order Your Project — Academic Writing Services",
   description: "Order academic writing, dissertation support, statistical analysis or editing from Tutors India. Response within 30 minutes. Trusted since 2001.",
 };
 

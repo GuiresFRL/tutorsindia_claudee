@@ -5,7 +5,7 @@ import { fetchProxiedPage } from "@/lib/api/proxyPage";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Marketing — Academic Samples & Insights | Tutors India",
+  title: "Marketing — Academic Samples & Insights",
   description: "Marketing academic sample works, essays and insights from Tutors India's PhD-qualified experts.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://tutorsindia.com/marketing/" },

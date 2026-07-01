@@ -2,6 +2,46 @@ import type { Post } from "@/lib/types";
 
 export const blogPosts: Post[] = [
   {
+    id: "0a",
+    slug: "wrong-statistical-test-dissertation-revisions-uk",
+    title: "Why Choosing the Wrong Statistical Test Leads to Dissertation Revisions in UK Universities",
+    excerpt: "Choosing the wrong statistical test has been the reason why many dissertations have needed revisions in UK universities. Learn how to pick the right one.",
+    content: "",
+    date: "2026-06-30",
+    categories: ["Master's Statistical Analysis"],
+    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Statistical-Analysis-Thumbnail.webp",
+  },
+  {
+    id: "0b",
+    slug: "supervisor-expectations-delay-dissertation-germany",
+    title: "How Supervisor Expectations Delay Master's Dissertation Completion in Germany",
+    excerpt: "Dissertations in Germany are getting delayed due to the contrast between the expectations of students and their supervisors. Here's how to align effectively.",
+    content: "",
+    date: "2026-06-27",
+    categories: ["Master's Dissertation"],
+    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Dissertation-Thumbnail.webp",
+  },
+  {
+    id: "0c",
+    slug: "ai-generated-content-journal-rejection-uae",
+    title: "AI-Generated Content and Journal Rejection: What UAE Researchers Must Know in 2026",
+    excerpt: "ChatGPT, Gemini, Claude, and Copilot are being widely used by master's students — but journals are rejecting AI-generated manuscripts. Here's what you must know.",
+    content: "",
+    date: "2026-06-25",
+    categories: ["Publication Support"],
+    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Publication-Support-Thumbnail-TI.webp",
+  },
+  {
+    id: "0d",
+    slug: "computer-science-manuscripts-rejected-uk-journals",
+    title: "Why Computer Science Master's Manuscripts Get Rejected by UK Journals",
+    excerpt: "Poor literature review is among the leading reasons for journal submission denials. Discover the full list and how to write a manuscript that passes review.",
+    content: "",
+    date: "2026-06-23",
+    categories: ["Manuscript"],
+    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Journal-Rejection-Thumbnail-TI.webp",
+  },
+  {
     id: "1",
     slug: "masters-essay-writing-help-in-uae",
     title: "Why Healthcare Master's Essays Receive Low Grades in UAE Universities",
@@ -9,6 +49,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-20",
     categories: ["Essay Writing"],
+    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Essay-writing-Thumbnail-TI.webp",
   },
   {
     id: "2",
@@ -18,6 +59,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-18",
     categories: ["Topic Selection"],
+    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Topic-Selection-Thumbnail-TI-1.webp",
   },
   {
     id: "3",
@@ -27,6 +69,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-16",
     categories: ["Masters Full Dissertation"],
+    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Dissertation-Thumbnail.webp",
   },
   {
     id: "4",

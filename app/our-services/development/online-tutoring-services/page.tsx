@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Online Tutoring Services | Masters, MBA, PhD | Tutors India", description: "Expert Online Tutoring Services for Masters, MBA and PhD students. 1-on-1 tutoring, research guidance, subject-specific support. 2000+ tutors. Tutors India." };
+export const metadata: Metadata = { title: "Online Tutoring Services | Masters, MBA, PhD", description: "Expert Online Tutoring Services for Masters, MBA and PhD students. 1-on-1 tutoring, research guidance, subject-specific support. 2000+ tutors. Tutors India." };
 const subjects = [
   { icon: "💼", title: "Business & Management", desc: "Strategy, HRM, Marketing, Operations, Finance, Entrepreneurship, International Business, and MBA-specific subject tutoring." },
   { icon: "📊", title: "Statistics & Research Methods", desc: "Research methodology, statistical analysis, SPSS/R/STATA guidance, dissertation methodology chapter support, and data interpretation." },

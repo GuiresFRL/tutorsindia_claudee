@@ -5,9 +5,9 @@ import { fetchProxiedPage } from "@/lib/api/proxyPage";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Topic Selection Sample Work | Tutors India",
+  title: "Topic Selection Sample Work",
   description: "Browse topic selection sample work from Tutors India's PhD-qualified academic experts. Dissertation and research topic samples across all disciplines.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/topic-selection-sample-work/" },
 };
 

@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Tutors India",
+  title: "Terms and Conditions",
   description: "Read Tutors India's terms and conditions covering service delivery, payment, refunds, revisions, and quality assurance.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/terms-and-conditions/" },
 };
 

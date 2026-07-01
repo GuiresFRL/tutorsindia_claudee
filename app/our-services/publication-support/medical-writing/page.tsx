@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Medical Writing Services | Clinical, Regulatory, Scientific | Tutors India",
+  title: "Medical Writing Services | Clinical, Regulatory, Scientific",
   description: "Professional Medical Writing Services — Clinical manuscripts, regulatory documents, systematic reviews, case reports, grant proposals. PhD Medical Writers. Tutors India.",
 };
 

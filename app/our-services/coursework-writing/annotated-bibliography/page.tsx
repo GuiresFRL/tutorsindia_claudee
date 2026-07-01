@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK Annotated Bibliography Writing Services | Tutors India",
+  title: "UK Annotated Bibliography Writing Services",
   description: "UK Annotated Bibliography Writing Help. Summary, Critical Evaluation, and Mixed annotations. APA, MLA, Chicago. 8000+ annotated bibliographies completed. Tutors India.",
 };
 

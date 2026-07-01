@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title} | Tutors India`,
     description: desc,
-    robots: { index: false, follow: false },
+    
     alternates: { canonical: `https://tutorsindia.com/title/${slug}/` },
   };
 }

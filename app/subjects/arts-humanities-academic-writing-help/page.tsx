@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Arts & Humanities Academic Writing Help | Masters, PhD | Tutors India", description: "Expert Arts & Humanities academic writing. Literature, History, Philosophy, Cultural Studies, Media Studies, Sociology. Masters & PhD. Tutors India." };
+export const metadata: Metadata = { title: "Arts & Humanities Academic Writing Help | Masters, PhD", description: "Expert Arts & Humanities academic writing. Literature, History, Philosophy, Cultural Studies, Media Studies, Sociology. Masters & PhD. Tutors India." };
 const areas = ["English Literature & Linguistics","History & Historiography","Philosophy & Ethics","Cultural Studies","Media & Communication Studies","Sociology","Anthropology","Political Science","International Relations","Gender Studies","Archaeology","Art History","Music & Musicology","Theatre & Performance Studies","Creative Writing","Education & Pedagogy"];
 const faqs = [
   { q: "What arts and humanities subjects do you cover?", a: "Writing an arts and humanities paper can be stressful, specifically when your objective is to obtain a good grade. We cover English Literature & Linguistics, History, Philosophy & Ethics, Cultural Studies, Media & Communication, Sociology, Anthropology, Political Science, International Relations, Gender Studies, Archaeology, Art History, Music, Theatre, Creative Writing, and Education." },

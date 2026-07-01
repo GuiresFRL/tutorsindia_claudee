@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Exam Notes Writing Service UK | Tutors India",
+  title: "Exam Notes Writing Service UK",
   description: "UK Exam Notes Writing Service by subject matter experts. Concise, well-structured revision notes for Masters, MBA and PhD examinations. Tutors India.",
 };
 

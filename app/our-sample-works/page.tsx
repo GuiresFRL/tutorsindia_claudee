@@ -5,9 +5,9 @@ import { fetchProxiedPage } from "@/lib/api/proxyPage";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Sample Works — Academic Writing Examples | Tutors India",
+  title: "Sample Works — Academic Writing Examples",
   description: "View our sample academic work including dissertations, literature reviews, research proposals, and essays to understand the quality Tutors India delivers.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/our-sample-works/" },
 };
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Economics & Finance Academic Writing Help | Masters, PhD | Tutors India", description: "Expert Economics & Finance academic writing. Macroeconomics, Microeconomics, Financial Markets, Econometrics. STATA, E-Views, R. Masters & PhD. Tutors India." };
+export const metadata: Metadata = { title: "Economics & Finance Academic Writing Help | Masters, PhD", description: "Expert Economics & Finance academic writing. Macroeconomics, Microeconomics, Financial Markets, Econometrics. STATA, E-Views, R. Masters & PhD. Tutors India." };
 const areas = ["Macroeconomics","Microeconomics","Financial Markets & Investments","Econometrics & Statistical Methods","Development Economics","International Economics & Trade","Monetary Policy & Banking","Behavioural Economics","Financial Accounting","Management Accounting","Taxation & Public Finance","Corporate Finance","Risk Management","Islamic Finance","Real Estate Finance","Economic Policy Analysis"];
 const tools = ["STATA","E-Views","R","MATLAB","Bloomberg Terminal","DataStream","SPSS","Python (Pandas/NumPy)"];
 const faqs = [

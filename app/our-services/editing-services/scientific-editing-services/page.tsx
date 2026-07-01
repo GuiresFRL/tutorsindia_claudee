@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Scientific Editing Services | Medical & Research Manuscripts | Tutors India", description: "Expert Scientific Editing Services for medical and research manuscripts. Native English editors with scientific expertise. Publication quality. Reporting guidelines. Tutors India." };
+export const metadata: Metadata = { title: "Scientific Editing Services | Medical & Research Manuscripts", description: "Expert Scientific Editing Services for medical and research manuscripts. Native English editors with scientific expertise. Publication quality. Reporting guidelines. Tutors India." };
 const faqs = [
   { q: "What is scientific editing?", a: "A medical writer has to communicate scientific information in a clear manner appropriate to the target audience. Our scientific editors ensure your research meets the highest publication standards by combining language editing with technical accuracy review — ensuring scientific claims, terminology, data presentation, and methodology descriptions are all accurate and clearly communicated." },
   { q: "What scientific documents do you edit?", a: "We edit all types of scientific documents including original research articles, review articles, systematic reviews, meta-analyses, case reports, letters to the editor, conference abstracts, grant proposals, clinical study reports, and scientific theses and dissertations across all life science, medical, engineering, and natural science disciplines." },

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD Doctorate Full Dissertation Writing Services | Tutors India",
+  title: "PhD Doctorate Full Dissertation Writing Services",
   description: "PhD Doctorate Full Dissertation Writing Consultation Services — Abstract to Conclusion. Expert PhD-qualified writers from UK & US. 3,500+ PhDs completed. Unlimited revisions.",
 };
 

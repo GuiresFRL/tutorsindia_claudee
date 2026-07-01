@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Software Development Services | Custom Applications | Tutors India", description: "Expert Software Development Services. Custom software, web apps, mobile apps, enterprise systems. Agile methodology. All industries. Tutors India." };
+export const metadata: Metadata = { title: "Software Development Services | Custom Applications", description: "Expert Software Development Services. Custom software, web apps, mobile apps, enterprise systems. Agile methodology. All industries. Tutors India." };
 const services = [
   { icon: "🖥️", title: "Custom Software Development", desc: "Bespoke software solutions tailored to your specific academic or business requirements — desktop, web, and enterprise applications." },
   { icon: "📱", title: "Mobile App Development", desc: "iOS and Android mobile application development with intuitive UX/UI design, backend integration, and comprehensive testing." },

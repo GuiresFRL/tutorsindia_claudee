@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Quality Procedures | Tutors India",
+  title: "Our Quality Procedures",
   description: "Learn about Tutors India's rigorous quality assurance procedures including plagiarism checks, editing, proofreading, and dual quality reviews.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/our-quality-procedures/" },
 };
 

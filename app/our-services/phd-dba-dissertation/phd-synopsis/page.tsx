@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD Doctorate Synopsis Writing Consultation Services | Tutors India",
+  title: "PhD Doctorate Synopsis Writing Consultation Services",
   description: "PhD Doctorate Synopsis Writing Service by qualified US & UK researchers. 5000+ PhD synopses completed. All components included. Unlimited revisions.",
 };
 

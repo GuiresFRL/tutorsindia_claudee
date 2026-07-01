@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Coursework & Assignment Help | Masters, MBA, PhD | Tutors India",
+  title: "Coursework & Assignment Help | Masters, MBA, PhD",
   description: "Expert coursework and assignment writing help for Masters, MBA and PhD students. Essays, reports, case studies, literature reviews, research methodology and more. Tutors India.",
 };
 

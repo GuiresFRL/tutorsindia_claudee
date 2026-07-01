@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Engineering Research Writing Services | Masters & PhD | Tutors India",
+  title: "Engineering Research Writing Services | Masters & PhD",
   description: "Expert Engineering Research Paper Writing for Masters and PhD. Civil, Mechanical, Electrical, Chemical, Structural Engineering. IEEE, ASCE, ASME. Tutors India.",
 };
 

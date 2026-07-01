@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Statistical Analysis Q&A | Tutors India",
+  title: "Statistical Analysis Q&A",
   description: "Expert answers to common statistical analysis questions — test selection, hypothesis formulation, Likert scales, regression, SEM, Bayesian analysis, and more.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/coursework/statistical-analysis/" },
 };
 

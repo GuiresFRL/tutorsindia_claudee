@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD / DBA Defense Viva-Voce Examination Training Help | Tutors India",
+  title: "PhD / DBA Defense Viva-Voce Examination Training Help",
   description: "PhD / DBA Defense preparation & Public Viva-Voce Examination Training. World-class professional viva-voce training. Overcome viva fear. Tutors India.",
 };
 

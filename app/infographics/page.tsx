@@ -5,7 +5,7 @@ import { fetchProxiedPage } from "@/lib/api/proxyPage";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Dissertation & Thesis Infographics | Tutors India",
+  title: "Dissertation & Thesis Infographics",
   description: "Visual infographics on dissertation writing, thesis preparation, PhD research, and academic writing concepts from Tutors India.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://tutorsindia.com/infographics/" },

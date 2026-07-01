@@ -5,9 +5,9 @@ import { getTIChildPages, stripTIHtml } from "@/lib/api/tutorsindia";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Essays — Free University Essay Examples by Subject | Tutors India",
+  title: "Essays — Free University Essay Examples by Subject",
   description: "Browse free university essay examples across 50+ subjects. Expert-written samples demonstrating proper structure, research methods, and citation styles.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/essays/" },
 };
 

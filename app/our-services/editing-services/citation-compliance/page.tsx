@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Citation Compliance & Referencing Services | Tutors India", description: "Expert Citation Compliance services. Harvard, APA, MLA, Vancouver, Chicago, OSCOLA referencing. In-text citations, reference lists, bibliographies. 100% compliance. Tutors India." };
+export const metadata: Metadata = { title: "Citation Compliance & Referencing Services", description: "Expert Citation Compliance services. Harvard, APA, MLA, Vancouver, Chicago, OSCOLA referencing. In-text citations, reference lists, bibliographies. 100% compliance. Tutors India." };
 const styles = [
   { style: "Harvard", used: "Most common in UK universities — author-date system", icon: "🇬🇧" },
   { style: "APA (7th Ed.)", used: "Psychology, Education, Social Sciences", icon: "📊" },

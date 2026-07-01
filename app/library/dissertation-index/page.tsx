@@ -5,9 +5,9 @@ import { fetchProxiedPage } from "@/lib/api/proxyPage";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Dissertation Index — Sample Works | Tutors India",
+  title: "Dissertation Index — Sample Works",
   description: "Browse PhD and Masters dissertation sample works across all academic disciplines. Tutors India library of dissertation examples.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/library/dissertation-index/" },
 };
 

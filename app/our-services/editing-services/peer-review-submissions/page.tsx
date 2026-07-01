@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Peer Review Submissions & Pre-Submission Support | Tutors India", description: "Expert Peer Review Submission support. Pre-submission checks, cover letter writing, reviewer response letters, resubmission support. All journals. Tutors India." };
+export const metadata: Metadata = { title: "Peer Review Submissions & Pre-Submission Support", description: "Expert Peer Review Submission support. Pre-submission checks, cover letter writing, reviewer response letters, resubmission support. All journals. Tutors India." };
 const faqs = [
   { q: "What peer review submission services do you offer?", a: "We assist in preparing high-quality peer review submissions that meet journal standards and editorial expectations, ensuring your paper is in accordance with the target audience's expectations. Our services include pre-submission manuscript checks, cover letter writing, reviewer response letter preparation, resubmission support, and journal selection guidance." },
   { q: "Can you help me respond to peer reviewer comments?", a: "Yes. We provide comprehensive reviewer response letter writing — systematically addressing every reviewer comment with clear explanations of changes made and scientific justifications for unchanged elements. All responses are written in the professional, objective tone expected by journal editors and reviewers." },

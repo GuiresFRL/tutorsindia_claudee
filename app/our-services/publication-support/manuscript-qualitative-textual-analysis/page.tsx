@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Manuscript Statistics & Qualitative Analysis Services | Tutors India",
+  title: "Manuscript Statistics & Qualitative Analysis Services",
   description: "Manuscript Statistical & Qualitative Textual Analysis for publications. SPSS, R, SAS, STATA, NVIVO. Medical, Engineering, Management. PhD-qualified statisticians. Tutors India.",
 };
 

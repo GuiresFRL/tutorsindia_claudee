@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Grant Proposal Writing Services | Research Funding | Tutors India", description: "Expert Grant Proposal Writing Services. Research funding applications, NIH, RCUK, Wellcome Trust, EU Horizon. Expert writers and core technical editors. Tutors India." };
+export const metadata: Metadata = { title: "Grant Proposal Writing Services | Research Funding", description: "Expert Grant Proposal Writing Services. Research funding applications, NIH, RCUK, Wellcome Trust, EU Horizon. Expert writers and core technical editors. Tutors India." };
 const faqs = [
   { q: "What grant proposal writing services do you offer?", a: "Our expert grant writers and core technical and scientific editing professionals ensure to develop and edit grant proposals meeting funder requirements and demonstrating compelling research value. We cover research council applications (RCUK, NIH, NSF, EU Horizon, Wellcome Trust, NIHR), institutional grants, industry-funded research proposals, and charitable foundation applications." },
   { q: "Can you help with the full grant application?", a: "Yes. We provide end-to-end grant proposal support — from identifying suitable funding opportunities through to writing the complete application including lay summary, scientific case for support, impact statement, methodology, timeline, budget justification, CVs of key investigators, and letters of support." },

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Masters Dissertation Topic Selection Services UK | Tutors India",
+  title: "Masters Dissertation Topic Selection Services UK",
   description: "Expert Dissertation Topic Selection for master's students. Unique, research-oriented, feasible topics across all academic areas. UK & UAE specialists. Tutors India.",
 };
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Masters Dissertation Writing Services UK | Tutors India",
+  title: "Masters Dissertation Writing Services UK",
   description: "UK Master's and MBA Dissertation Writing Services. Expert US & UK writers, plagiarism-free, unlimited revisions. Trusted by 2,00,000+ scholars since 2001.",
 };
 

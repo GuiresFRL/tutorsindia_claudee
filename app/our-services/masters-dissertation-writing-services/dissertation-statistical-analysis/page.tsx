@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Masters Dissertation Statistical Analysis Services UK | Tutors India",
+  title: "Masters Dissertation Statistical Analysis Services UK",
   description: "UK Master's Dissertation Textual (Qualitative) & Statistical (Quantitative) Analysis Help. SPSS, R, STATA, NVIVO, Atlas-ti and more. Expert statisticians with PhD & Masters.",
 };
 

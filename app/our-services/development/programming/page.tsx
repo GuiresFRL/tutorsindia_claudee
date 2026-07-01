@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Computer Programming Services | Python, Java, C++ | Tutors India", description: "Expert Computer Programming Services. Python, Java, C++, R, JavaScript, MATLAB, Scala. Academic and commercial programming projects. Tutors India." };
+export const metadata: Metadata = { title: "Computer Programming Services | Python, Java, C++", description: "Expert Computer Programming Services. Python, Java, C++, R, JavaScript, MATLAB, Scala. Academic and commercial programming projects. Tutors India." };
 const langs = ["Python","Java","C","C++","R","MATLAB","JavaScript","Scala","Kotlin","Swift","PHP","Ruby","Go","Rust","SQL","TypeScript"];
 const services = [
   { icon: "🐍", title: "Python Programming", desc: "Data analysis, machine learning, automation, web development (Django/Flask), and scientific computing projects using Python." },

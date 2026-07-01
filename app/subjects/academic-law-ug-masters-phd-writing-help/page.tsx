@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Academic Law Writing Help | UG, Masters, PhD | Tutors India", description: "Expert Academic Law Writing for UG, Masters and PhD students. Commercial law, criminal law, international law, constitutional law. Harvard & OSCOLA. Tutors India." };
+export const metadata: Metadata = { title: "Academic Law Writing Help | UG, Masters, PhD", description: "Expert Academic Law Writing for UG, Masters and PhD students. Commercial law, criminal law, international law, constitutional law. Harvard & OSCOLA. Tutors India." };
 const areas = ["Contract Law","Tort Law","Criminal Law","Constitutional Law","Administrative Law","Company Law","International Law","Human Rights Law","Employment Law","Family Law","Property Law","Intellectual Property","Environmental Law","Medical Law & Ethics","EU Law","Equity & Trusts"];
 const services = [{ icon: "📚", t: "Law Dissertation Writing", d: "Complete Masters and PhD law dissertations with comprehensive legal analysis, case law, statutory interpretation, and OSCOLA or Harvard referencing." }, { icon: "✍️", t: "Law Essay Writing", d: "Critical legal essays demonstrating understanding of case law, legislation, legal arguments, and academic legal writing at postgraduate level." }, { icon: "⚖️", t: "Case Analysis & Mooting", d: "Detailed case analysis, judicial reasoning critique, and mooting preparation covering landmark legal decisions." }, { icon: "📋", t: "Legal Research Reports", d: "Comprehensive legal research reports covering statute law, case law, and secondary legal sources with accurate citation." }];
 const faqs = [

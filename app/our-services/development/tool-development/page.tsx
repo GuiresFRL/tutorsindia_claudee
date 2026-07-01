@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Research Tool & Instrument Development | Questionnaires | Tutors India", description: "Expert Research Tool Development. Questionnaires, interview guides, survey instruments, data collection tools. Validation & reliability testing. Tutors India." };
+export const metadata: Metadata = { title: "Research Tool & Instrument Development | Questionnaires", description: "Expert Research Tool Development. Questionnaires, interview guides, survey instruments, data collection tools. Validation & reliability testing. Tutors India." };
 const toolTypes = [
   { icon: "📝", title: "Questionnaire Development", desc: "Open-ended, closed-ended, and Likert-scale questionnaires designed with proper question sequencing, response categories, and scale validation for your specific research design." },
   { icon: "🎤", title: "Interview Guide Development", desc: "Semi-structured and structured interview guides with probe questions, topic coverage matrices, and interviewer instructions aligned to your research questions and methodology." },

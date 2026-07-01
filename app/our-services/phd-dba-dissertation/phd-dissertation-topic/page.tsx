@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD Dissertation Topic Selection & Outline Help | Tutors India",
+  title: "PhD Dissertation Topic Selection & Outline Help",
   description: "PhD & Professional Doctorate Dissertation Topic Selection & Outline Help. Research gap identification, aims, methodology from qualified UK & US researchers.",
 };
 

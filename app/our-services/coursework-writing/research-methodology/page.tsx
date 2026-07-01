@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Research Methodology Writing Services UK | Tutors India",
+  title: "Research Methodology Writing Services UK",
   description: "Expert Research Methodology Writing for Masters, MBA and PhD dissertations. Qualitative, Quantitative and Mixed methods. SPSS, NVIVO, STATA. Tutors India.",
 };
 

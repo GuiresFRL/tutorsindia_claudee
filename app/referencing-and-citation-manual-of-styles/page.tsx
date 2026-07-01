@@ -5,9 +5,9 @@ import { getTIPageById } from "@/lib/api/tutorsindia";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Referencing & Citation Manual of Styles | Harvard, APA, MLA | Tutors India",
+  title: "Referencing & Citation Manual of Styles | Harvard, APA, MLA",
   description: "Complete guide to referencing and citation styles — Harvard, APA, MLA, Chicago, Vancouver, OSCOLA, Turabian, IEEE. Free referencing guide for academic writing. Tutors India.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/referencing-and-citation-manual-of-styles/" },
 };
 

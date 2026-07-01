@@ -5,9 +5,9 @@ import { fetchProxiedLibraryPage } from "@/lib/api/proxyPage";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Library — Academic Essay & Dissertation Samples | Tutors India",
+  title: "Library — Academic Essay & Dissertation Samples",
   description: "Browse Tutors India's academic library: essays, dissertations, proposals, methodologies, literature reviews, and manuscript templates across all subjects.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/library/" },
 };
 

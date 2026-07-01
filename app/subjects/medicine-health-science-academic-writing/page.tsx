@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Medicine & Health Science Academic Writing | Masters, PhD | Tutors India", description: "Expert Medicine & Health Science academic writing. Clinical medicine, nursing, public health, pharmacology, epidemiology. PRISMA, CONSORT. Tutors India." };
+export const metadata: Metadata = { title: "Medicine & Health Science Academic Writing | Masters, PhD", description: "Expert Medicine & Health Science academic writing. Clinical medicine, nursing, public health, pharmacology, epidemiology. PRISMA, CONSORT. Tutors India." };
 const areas = ["Clinical Medicine","Nursing & Midwifery","Public Health","Pharmacology & Pharmacy","Epidemiology","Medical Education","Healthcare Management","Biomedical Science","Physiotherapy & Rehabilitation","Mental Health & Psychiatry","Nutrition & Dietetics","Occupational Health","Medical Microbiology","Pathology & Laboratory Medicine","Paediatrics","Anaesthesiology"];
 const guidelines = ["CONSORT (Clinical Trials)","STROBE (Observational Studies)","PRISMA (Systematic Reviews)","CARE (Case Reports)","STARD (Diagnostic Studies)","ARRIVE (Animal Research)","SQUIRE (Quality Improvement)","TREND (Non-Randomised Trials)"];
 const faqs = [

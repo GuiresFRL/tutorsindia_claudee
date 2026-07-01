@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { serviceCategories } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Coursework Writing Services UK | Essays, Reports, Reviews | Tutors India",
+  title: "Coursework Writing Services UK | Essays, Reports, Reviews",
   description: "Expert Coursework Writing Services for Master's, MBA and PhD students. Essay Writing, Annotated Bibliography, Reflective Reports, Critical Reviews and more. Tutors India.",
 };
 

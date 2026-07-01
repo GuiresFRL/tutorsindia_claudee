@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Plagiarism Report & Detection Services | Turnitin | Tutors India", description: "Expert Plagiarism Report & Detection Services. Turnitin scans, plagiarism removal, < 5% guarantee, plagiarism-free certificate. Academic writing support. Tutors India." };
+export const metadata: Metadata = { title: "Plagiarism Report & Detection Services | Turnitin", description: "Expert Plagiarism Report & Detection Services. Turnitin scans, plagiarism removal, < 5% guarantee, plagiarism-free certificate. Academic writing support. Tutors India." };
 const faqs = [
   { q: "What plagiarism detection tools do you use?", a: "Plagiarism refers to the act of appropriation of another person's language, ideas, or other original process. We provide detailed plagiarism reports using Turnitin and WriteCheck — the same tools used by universities worldwide. All work is scanned before delivery and we guarantee less than 5% similarity." },
   { q: "Can you reduce the plagiarism in my existing document?", a: "Yes. We provide plagiarism removal services — rewriting, paraphrasing, and restructuring content to reduce similarity scores while maintaining the academic integrity and meaning of your work. We scan the revised document again with Turnitin to confirm the score is below the required threshold." },

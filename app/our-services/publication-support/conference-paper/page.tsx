@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Conference Paper & Seminar Presentation Writing Services | Tutors India",
+  title: "Conference Paper & Seminar Presentation Writing Services",
   description: "Expert Conference Paper and Seminar Presentation Writing. Abstract to full paper, PowerPoint, speaker notes. All disciplines. Tutors India.",
 };
 

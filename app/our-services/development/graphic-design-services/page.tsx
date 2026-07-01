@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Graphic Design Services for Academic & Research | Tutors India", description: "Professional Graphic Design Services for thesis, research and academic work. Infographics, illustrations, branding, poster design. Expert designers. Tutors India." };
+export const metadata: Metadata = { title: "Graphic Design Services for Academic & Research", description: "Professional Graphic Design Services for thesis, research and academic work. Infographics, illustrations, branding, poster design. Expert designers. Tutors India." };
 const services = [
   { icon: "📊", title: "Research Infographics", desc: "Visual representations of complex research data — charts, graphs, process diagrams, and data visualisations formatted for publications and presentations." },
   { icon: "🖼️", title: "Academic Illustrations", desc: "Technical illustrations, scientific diagrams, anatomical drawings, engineering schematics, and conceptual artwork for academic publications." },

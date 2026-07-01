@@ -13,10 +13,10 @@ import {
 } from "@/lib/api/academy";
 
 export const metadata: Metadata = {
-  title: "Academy — Academic Study Guides & Learning Resources | Tutors India",
+  title: "Academy — Academic Study Guides & Learning Resources",
   description:
     "Tutors India Academy — in-depth academic study guides, how-to articles, research tips, and learning resources for Masters, MBA and PhD students worldwide.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/academy/" },
 };
 

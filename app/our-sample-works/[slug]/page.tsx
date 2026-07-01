@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title} — Sample Works | Tutors India`,
     description: `View our ${title.toLowerCase()} sample work. Tutors India provides high-quality academic writing examples for reference and guidance.`,
-    robots: { index: false, follow: false },
+    
     alternates: { canonical: `https://tutorsindia.com/our-sample-works/${slug}/` },
   };
 }

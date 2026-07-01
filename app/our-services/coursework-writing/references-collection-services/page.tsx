@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "UK References Collection Services | Tutors India",
+  title: "UK References Collection Services",
   description: "Comprehensive References Collection Services. Peer-reviewed sources from Web of Science, ProQuest, Emerald, IEEE, Google Scholar. Harvard, APA, MLA, Chicago. Tutors India.",
 };
 

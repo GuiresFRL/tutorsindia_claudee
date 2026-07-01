@@ -5,9 +5,9 @@ import { subjects } from "./data";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Ask an Expert — Free Academic Q&A in 24 Hours | Tutors India",
+  title: "Ask an Expert — Free Academic Q&A in 24 Hours",
   description: "Ask any academic question and receive a free expert answer within 24 hours. Browse Q&A across Accounts, Statistics, Management, Nursing, Economics, and Psychology.",
-  robots: { index: false, follow: false },
+  
   alternates: { canonical: "https://tutorsindia.com/ask-an-expert/" },
 };
 

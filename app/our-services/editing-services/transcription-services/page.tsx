@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-export const metadata: Metadata = { title: "Academic Transcription Services | Interview & Audio | Tutors India", description: "Professional Transcription Services for academic research. Interview transcripts, focus group recordings, conference audio. Verbatim & intelligent. Tutors India." };
+export const metadata: Metadata = { title: "Academic Transcription Services | Interview & Audio", description: "Professional Transcription Services for academic research. Interview transcripts, focus group recordings, conference audio. Verbatim & intelligent. Tutors India." };
 const services = [
   { icon: "🎤", title: "Interview Transcription", desc: "Verbatim or intelligent verbatim transcription of research interviews — one-to-one, semi-structured, and unstructured interview recordings." },
   { icon: "👥", title: "Focus Group Transcription", desc: "Multi-speaker focus group and group discussion transcriptions with speaker identification and timestamps." },
