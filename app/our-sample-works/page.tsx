@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIPageById, stripTIHtml } from "@/lib/api/tutorsindia";
+import { fetchProxiedPage } from "@/lib/api/proxyPage";
 
 export const revalidate = 3600;
 
@@ -13,16 +13,20 @@ export const metadata: Metadata = {
 
 const categories = [
   { href: "/our-sample-works/dissertation-samples/", title: "Dissertation Samples", icon: "🎓", count: "50+" },
-  { href: "/our-sample-works/literature-review-samples/", title: "Literature Review Samples", icon: "📚", count: "30+" },
+  { href: "/our-sample-works/topic-selection/", title: "Topic Selection", icon: "🔍", count: "20+" },
   { href: "/our-sample-works/research-proposal-samples/", title: "Research Proposal Samples", icon: "📋", count: "25+" },
   { href: "/our-sample-works/introduction-samples/", title: "Introduction Samples", icon: "📖", count: "20+" },
-  { href: "/our-sample-works/essay-writing-samples/", title: "Essay Writing Samples", icon: "📝", count: "40+" },
+  { href: "/our-sample-works/literature-review-samples/", title: "Literature Review Samples", icon: "📚", count: "30+" },
+  { href: "/our-sample-works/research-methodology-samples/", title: "Research Methodology Samples", icon: "📐", count: "15+" },
+  { href: "/our-sample-works/conclusion-and-discussion-samples/", title: "Conclusion & Discussion Samples", icon: "📑", count: "15+" },
+  { href: "/our-sample-works/data-analysis-samples/", title: "Data Analysis Samples", icon: "📊", count: "20+" },
+  { href: "/our-sample-works/business-plan-samples/", title: "Business Plan Samples", icon: "💼", count: "10+" },
   { href: "/our-sample-works/assignment-writing-samples/", title: "Assignment Writing Samples", icon: "✍️", count: "35+" },
-  { href: "/our-sample-works/topic-selection-samples/", title: "Topic Selection Samples", icon: "🔍", count: "20+" },
+  { href: "/our-sample-works/essay-writing-samples/", title: "Essay Writing Samples", icon: "📝", count: "40+" },
 ];
 
 export default async function SampleWorksPage() {
-  const page = await getTIPageById(9585);
+  const proxied = await fetchProxiedPage("/our-sample-works/");
 
   return (
     <>
@@ -34,7 +38,7 @@ export default async function SampleWorksPage() {
             <span style={{ color: "#fff" }}>Our Sample Works</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.2rem)", marginBottom: "10px" }}>
-            {page ? <span dangerouslySetInnerHTML={{ __html: page.title.rendered }} /> : "Our Sample Works"}
+            {proxied?.title || "Our Sample Works"}
           </h1>
           <p style={{ color: "#c5d5f0", fontSize: "0.97rem", maxWidth: "680px" }}>
             Browse real academic writing samples across dissertations, essays, proposals and more — so you know exactly what to expect.
@@ -61,9 +65,9 @@ export default async function SampleWorksPage() {
           ))}
         </div>
 
-        {/* WP content */}
-        {page && (
-          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+        {/* Proxied content */}
+        {proxied?.content && proxied.content.trim().length > 100 && (
+          <div className="library-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: proxied.content }} />
         )}
       </section>
 

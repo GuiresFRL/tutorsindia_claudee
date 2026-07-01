@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getTIPageBySlug, getTIPostBySlug, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutorsindia";
 import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { cleanElementorHtml } from "@/lib/cleanElementor";
 
 export const revalidate = 3600;
 
@@ -84,7 +85,7 @@ export default async function CatchAllPage({ params }: Props) {
               <img src={image} alt={title} style={{ width: "100%", height: "auto", display: "block", maxHeight: "420px", objectFit: "cover" }} />
             </div>
           )}
-          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: wpContent.content.rendered }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: cleanElementorHtml(wpContent.content.rendered) }} />
           <div style={{ marginTop: "36px", display: "flex", justifyContent: "flex-end", gap: "12px" }}>
             <Link href="/order-now/" style={{ padding: "9px 20px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.87rem" }}>Order Now</Link>
             <Link href="/contact-us/" style={{ padding: "9px 20px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600, fontSize: "0.87rem" }}>Contact Us</Link>

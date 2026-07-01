@@ -3,9 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 
 const NUMBERS = [
-  { label: "India",         flag: "🇮🇳", number: "+91 8754446690", tel: "tel:+918754446690", tz: ["Asia/Kolkata","Asia/Calcutta"] },
-  { label: "UK",            flag: "🇬🇧", number: "+44 1143520021", tel: "tel:+441143520021", tz: [] },
-  { label: "Customer Care", flag: "📞", number: "+91 9384672299", tel: "tel:+919384672299", tz: [] },
+  { label: "India", flag: "🇮🇳", number: "+91 8754446690", tel: "tel:+918754446690", tz: ["Asia/Kolkata","Asia/Calcutta"] },
+  { label: "UK",    flag: "🇬🇧", number: "+44 1143520021", tel: "tel:+441143520021", tz: [] },
 ];
 
 function detectPrimary() {
