@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIPageById, stripTIHtml } from "@/lib/api/tutorsindia";
 
 export const revalidate = 3600;
 
@@ -11,18 +10,146 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://tutorsindia.com/insights/" },
 };
 
-const sections = [
-  { href: "/insights/news/", title: "News", icon: "📰", desc: "Latest news from the academic world — AI, assessment changes, and higher education policy updates." },
-  { href: "/insights/r-and-d/", title: "R&D", icon: "🔬", desc: "Research and development insights, future research directions, and industry innovations." },
-  { href: "/insights/case-studies/", title: "Case Studies", icon: "📊", desc: "Success stories and case studies from our clients across various academic disciplines." },
-  { href: "/insights/fact-sheet/", title: "Fact Sheets", icon: "📋", desc: "Academic fact sheets and quick reference guides for students and researchers." },
-  { href: "/insights/template/", title: "Templates", icon: "📝", desc: "Downloadable templates for dissertations, research proposals, and academic papers." },
-  { href: "/insights/check-list/", title: "Checklists", icon: "✅", desc: "Academic writing checklists to ensure your work meets all requirements." },
+const insightCards = [
+  {
+    href: "/about-us/",
+    title: "Who We Are",
+    desc: "Trust, Quality & Customer Care — learn about Tutors India's mission, values, and the expert team behind 200,000+ satisfied scholars.",
+    icon: "🏛️",
+    color: "#1a2a6c",
+    external: false,
+  },
+  {
+    href: "/blog/",
+    title: "Blog",
+    desc: "Improve your knowledge by reading our academic blog. Expert articles on dissertation writing, research methods, and study strategies.",
+    icon: "📝",
+    color: "#2563b0",
+    external: false,
+  },
+  {
+    href: "/insights/dissertation-journey/",
+    title: "Dissertation Journey",
+    desc: "Get to know how we handle our clients through every stage of the dissertation process — from topic selection to final submission.",
+    icon: "🎓",
+    color: "#1a2a6c",
+    external: false,
+  },
+  {
+    href: "/insights/essay-journey/",
+    title: "Essay Journey",
+    desc: "Get to know how we handle our clients through the essay writing process — research, drafting, editing, and referencing.",
+    icon: "📄",
+    color: "#2563b0",
+    external: false,
+  },
+  {
+    href: "/insights/brochure/",
+    title: "Brochure",
+    desc: "Download our service brochures — comprehensive guides to the academic writing and editing services offered by Tutors India.",
+    icon: "📋",
+    color: "#059669",
+    external: false,
+  },
+  {
+    href: "/insights/infographics/",
+    title: "Infographics",
+    desc: "Visual guides and academic infographics covering dissertation structure, referencing styles, research methodologies, and more.",
+    icon: "📊",
+    color: "#7c3aed",
+    external: false,
+  },
+  {
+    href: "/insights/storyboard/",
+    title: "Storyboard",
+    desc: "Get to know how we handle our clients through illustrated storyboards showing our expert writing and research process.",
+    icon: "🎬",
+    color: "#b45309",
+    external: false,
+  },
+  {
+    href: "/insights/videos-and-gif/",
+    title: "Videos & GIFs",
+    desc: "Watch video guides and animated explanations on academic writing, research methods, and how to make the most of Tutors India's services.",
+    icon: "🎥",
+    color: "#dc2626",
+    external: false,
+  },
+  {
+    href: "/insights/check-list/",
+    title: "Checklist",
+    desc: "Academic writing checklists to ensure your dissertation, essay, or assignment meets all requirements before submission.",
+    icon: "✅",
+    color: "#059669",
+    external: false,
+  },
+  {
+    href: "/insights/fact-sheet/",
+    title: "Fact Sheet",
+    desc: "Quick-reference fact sheets covering key academic writing rules, referencing formats, and university submission guidelines.",
+    icon: "📑",
+    color: "#0284c7",
+    external: false,
+  },
+  {
+    href: "/insights/template/",
+    title: "Template",
+    desc: "Downloadable academic templates for dissertations, research proposals, literature reviews, and other academic papers.",
+    icon: "📐",
+    color: "#6b7280",
+    external: false,
+  },
+  {
+    href: "/latest-research-trends/",
+    title: "Latest Research Trends",
+    desc: "Choose your topic from our curated latest research trends. Stay current with emerging methodologies and innovations across all disciplines.",
+    icon: "🔬",
+    color: "#1a2a6c",
+    external: false,
+  },
+  {
+    href: "/future-research-directions/",
+    title: "Future Research Directions",
+    desc: "Explore future research directions and emerging opportunities across all academic fields. Find your next research agenda.",
+    icon: "🔭",
+    color: "#2563b0",
+    external: false,
+  },
+  {
+    href: "/insights/press-release/",
+    title: "Press Release",
+    desc: "Official press releases and media announcements from Tutors India — company milestones, new services, and academic partnerships.",
+    icon: "📰",
+    color: "#374151",
+    external: false,
+  },
+  {
+    href: "/news/",
+    title: "News",
+    desc: "Latest academic and higher education news — AI in academia, assessment policy changes, and university updates from around the world.",
+    icon: "🗞️",
+    color: "#0284c7",
+    external: false,
+  },
+  {
+    href: "/how-to-artcile/",
+    title: "How To Articles",
+    desc: "Step-by-step how-to articles on academic writing, research skills, referencing styles, and using academic databases effectively.",
+    icon: "📖",
+    color: "#059669",
+    external: false,
+  },
 ];
 
-export default async function InsightsPage() {
-  const page = await getTIPageById(10491);
+const externalLinks = [
+  { href: "https://www.slideshare.net/tutorsindia", label: "SlideShare", icon: "🖥️", desc: "Academic presentations and research slides" },
+  { href: "https://www.quora.com/profile/Jacob-Ethan-28", label: "Quora", icon: "💬", desc: "Q&A on academic writing and research" },
+  { href: "https://tutorsindia.tumblr.com", label: "Tumblr", icon: "📷", desc: "Academic tips and study inspiration" },
+  { href: "https://sheffield.academia.edu/TutorsIndia", label: "Academia.edu", icon: "🎓", desc: "Academic papers and research publications" },
+  { href: "https://tutorsindia.wordpress.com", label: "WordPress Blog", icon: "✍️", desc: "Extended articles and academic guides" },
+];
 
+export default function InsightsPage() {
   return (
     <>
       {/* Hero */}
@@ -32,42 +159,98 @@ export default async function InsightsPage() {
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
             <span style={{ color: "#fff" }}>Insights</span>
           </div>
-          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.2rem)", marginBottom: "10px" }}>
-            {page ? <span dangerouslySetInnerHTML={{ __html: page.title.rendered }} /> : "Insights"}
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.3rem)", marginBottom: "12px" }}>
+            Insights
           </h1>
-          <p style={{ color: "#c5d5f0", fontSize: "0.97rem", maxWidth: "680px" }}>
-            Academic research trends, industry news, case studies, and practical resources for students and researchers.
+          <p style={{ color: "#c5d5f0", fontSize: "0.97rem", maxWidth: "680px", marginBottom: "20px" }}>
+            Academic research trends, industry news, case studies, practical resources, and expert guides for students and researchers worldwide.
           </p>
+          <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+            <Link href="/latest-research-trends/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Research Trends</Link>
+            <Link href="/blog/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Read Our Blog</Link>
+          </div>
         </div>
       </section>
 
-      {/* Section cards */}
+      {/* Main insight cards grid */}
       <section style={{ maxWidth: "1100px", margin: "0 auto", padding: "44px 20px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))", gap: "20px", marginBottom: "44px" }}>
-          {sections.map((s) => (
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          All Insights & Resources
+        </h2>
+        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px" }}>
+          {insightCards.length} sections available — click any card to explore
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "18px" }}>
+          {insightCards.map((card) => (
             <Link
-              key={s.href}
-              href={s.href}
-              style={{ display: "flex", flexDirection: "column", gap: "10px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "24px", textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}
+              key={card.href}
+              href={card.href}
+              style={{
+                display: "flex", flexDirection: "column", gap: "10px",
+                background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px",
+                padding: "22px", textDecoration: "none",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                borderTop: `4px solid ${card.color}`,
+              }}
             >
-              <span style={{ fontSize: "1.8rem" }}>{s.icon}</span>
-              <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c" }}>{s.title}</h2>
-              <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.6, flex: 1 }}>{s.desc}</p>
-              <span style={{ fontSize: "0.82rem", color: "#e87722", fontWeight: 700 }}>Read more →</span>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <span style={{ fontSize: "1.6rem" }}>{card.icon}</span>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", fontWeight: 700, color: card.color }}>{card.title}</h3>
+              </div>
+              <p style={{ fontSize: "0.83rem", color: "#555", lineHeight: 1.65, flex: 1 }}>{card.desc}</p>
+              <span style={{ fontSize: "0.78rem", color: "#e87722", fontWeight: 700 }}>Explore →</span>
             </Link>
           ))}
         </div>
+      </section>
 
-        {/* Also see */}
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "32px" }}>
-          <Link href="/latest-research-trends/" style={{ padding: "10px 20px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Latest Research Trends →</Link>
-          <Link href="/future-research-directions/" style={{ padding: "10px 20px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Future Research Directions</Link>
+      {/* External platforms */}
+      <section style={{ background: "#f5f6fa", padding: "40px 20px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "20px" }}>
+            Find Us On Other Platforms
+          </h2>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            {externalLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex", alignItems: "center", gap: "8px",
+                  padding: "10px 18px", background: "#fff",
+                  border: "1px solid #dde2ef", borderRadius: "8px",
+                  textDecoration: "none", color: "#1a2a6c",
+                  fontSize: "0.88rem", fontWeight: 600,
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                }}
+              >
+                <span style={{ fontSize: "1.1rem" }}>{l.icon}</span>
+                {l.label}
+                <span style={{ fontSize: "0.7rem", color: "#888" }}>↗</span>
+              </a>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* WP content */}
-        {page && (
-          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
-        )}
+      {/* Quick nav to research resources */}
+      <section style={{ maxWidth: "1100px", margin: "0 auto", padding: "36px 20px" }}>
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "14px" }}>Related Resources</h3>
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+          {[
+            { label: "Essays", href: "/essays/" },
+            { label: "Examples", href: "/examples/" },
+            { label: "Dissertation Titles", href: "/title/" },
+            { label: "Dissertation Topics", href: "/topic/" },
+            { label: "Sample Works", href: "/our-sample-works/" },
+            { label: "Referencing Styles", href: "/referencing-and-citation-manual-of-styles/" },
+          ].map((l) => (
+            <Link key={l.href} href={l.href} style={{ padding: "8px 16px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontSize: "0.85rem", fontWeight: 600 }}>{l.label}</Link>
+          ))}
+        </div>
       </section>
 
       {/* CTA */}

@@ -92,6 +92,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Site verification placeholders — add actual codes when available */}
         {/* <meta name="google-site-verification" content="YOUR_CODE" /> */}
+        {/* Font Awesome — required for library proxied content icons */}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossOrigin="anonymous" />
       </head>
       <body style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <TopBar />
@@ -124,6 +126,81 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initTabs);
   else initTabs();
+})();
+
+// WP content post-processing: hide filter, style meta box, style tags, hide Share This
+(function(){
+  function processWPContent(){
+    // 1. Hide FILTER BY sidebar column
+    document.querySelectorAll('.wp-content *').forEach(function(el){
+      if(el.children.length===0 && el.textContent && el.textContent.trim().toUpperCase().includes('FILTER BY')){
+        var node=el;
+        while(node && node.parentElement){
+          node=node.parentElement;
+          if(node.classList && node.classList.contains('elementor-column')){
+            node.style.setProperty('display','none','important');
+            break;
+          }
+        }
+      }
+    });
+
+    // 2. Find the meta info section (contains "Info:" heading) — walk up to its top-level inner-section
+    var metaSection=null;
+    document.querySelectorAll('.wp-content .elementor-heading-title').forEach(function(el){
+      if(!metaSection && el.textContent && el.textContent.trim().startsWith('Info:')){
+        var node=el;
+        // Walk up to find the highest elementor-inner-section ancestor (the whole meta block)
+        var found=null;
+        while(node && node.parentElement){
+          node=node.parentElement;
+          if(node.classList && node.classList.contains('elementor-inner-section')) found=node;
+          // Stop at the top-level elementor element
+          if(node.classList && node.classList.contains('elementor') && !node.classList.contains('elementor-element')) break;
+        }
+        if(found) metaSection=found;
+      }
+    });
+    if(metaSection){
+      metaSection.style.cssText='background:#f5f7fb;border:1px solid #dde2ef;border-radius:8px;padding:14px 18px;margin-bottom:1.4em;display:block;';
+    }
+
+    // 3. Process all heading titles: hide "Share this:", style tag pills
+    var afterTagged=false;
+    document.querySelectorAll('.wp-content .elementor-heading-title').forEach(function(el){
+      var t=(el.textContent||'').trim();
+
+      // Hide "Share this:" and everything after it in same widget-wrap
+      if(t.toLowerCase().startsWith('share this')){
+        var node=el;
+        while(node && node.parentElement){
+          node=node.parentElement;
+          if(node.classList && node.classList.contains('elementor-widget')){
+            node.style.setProperty('display','none','important');
+            var sib=node.nextElementSibling;
+            while(sib){ sib.style.setProperty('display','none','important'); sib=sib.nextElementSibling; }
+            break;
+          }
+        }
+        afterTagged=false;
+        return;
+      }
+
+      // Mark that we are now after "Tagged:"
+      if(t.toLowerCase().startsWith('tagged')){
+        afterTagged=true;
+        return;
+      }
+
+      // Style spans that come after Tagged: as dark navy pills
+      if(afterTagged && t && !t.startsWith('Info:') && !t.startsWith('Published:')){
+        el.style.cssText='display:inline-block;padding:3px 14px;background:#1a2a6c;color:#fff;border-radius:4px;font-size:0.82rem;font-weight:600;line-height:1.8;margin:2px 3px 0 0;';
+        afterTagged=false; // reset after first pill (one tag per block)
+      }
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',processWPContent);
+  else processWPContent();
 })();
         `}} />
 

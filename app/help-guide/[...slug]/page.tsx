@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import CTASidebar from "@/components/ui/CTASidebar";
+import { fetchProxiedPage } from "@/lib/api/proxyPage";
+
+export const revalidate = 3600;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -12,71 +15,87 @@ function slugToTitle(slug: string): string {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const title = slugToTitle(slug[slug.length - 1]);
+  const path = `/help-guide/${slug.join("/")}/`;
+  const proxied = await fetchProxiedPage(path);
+  const title = proxied?.title || slugToTitle(slug[slug.length - 1]);
   return {
-    title: `${title} — Help Guide | Tutors India`,
-    description: `Academic help guide on ${title}. Expert advice and guidance for Masters and PhD students from Tutors India.`,
+    title: `${title} | Tutors India`,
+    description: `${title} — Academic writing guidance from Tutors India's PhD-qualified experts.`,
+    robots: { index: false, follow: false },
+    alternates: { canonical: `https://tutorsindia.com${path}` },
   };
 }
 
 export default async function HelpGuideSlugPage({ params }: Props) {
   const { slug } = await params;
-  const title = slugToTitle(slug[slug.length - 1]);
-  const breadcrumbPath = ["", "help-guide", ...slug];
+  const path = `/help-guide/${slug.join("/")}/`;
+  const proxied = await fetchProxiedPage(path);
+
+  if (!proxied) notFound();
+
+  const title = proxied.title || slugToTitle(slug[slug.length - 1]);
+  const crumbs = [
+    { label: "Home", href: "/" },
+    { label: "Help Guide", href: "/help-guide/" },
+    ...slug.map((segment, i) => ({
+      label: slugToTitle(segment),
+      href: `/help-guide/${slug.slice(0, i + 1).join("/")}/`,
+    })),
+  ];
 
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
-            {breadcrumbPath.map((segment, i) => {
-              const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
-              const label = i === 0 ? "Home" : slugToTitle(segment);
-              const isLast = i === breadcrumbPath.length - 1;
-              return (
-                <span key={i}>
-                  {isLast ? label : <Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link>}
-                  {!isLast && " / "}
-                </span>
-              );
-            })}
+      {/* Hero */}
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px", display: "flex", flexWrap: "wrap", gap: "4px" }}>
+            {crumbs.map((crumb, i) => (
+              <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                {i < crumbs.length - 1 ? (
+                  <><Link href={crumb.href} style={{ color: "#a0b8e0" }}>{crumb.label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>
+                ) : (
+                  <span style={{ color: "#fff" }}>{crumb.label}</span>
+                )}
+              </span>
+            ))}
           </div>
-          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "2rem", marginBottom: "12px" }}>{title}</h1>
-          <p style={{ color: "#c5d5f0" }}>Help Guide for Academic Writers</p>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}>
+            {title}
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "0.9rem" }}>Help Guide — Academic Writing Guidance</p>
         </div>
       </section>
 
-      <section style={{ maxWidth: "1200px", margin: "60px auto", padding: "0 20px", display: "grid", gridTemplateColumns: "2fr 1fr", gap: "40px", alignItems: "start" }} className="guide-layout">
-        <article>
-          <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "12px", padding: "32px" }}>
-            <h2 style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--navy)", marginBottom: "16px" }}>{title}</h2>
-            <p style={{ color: "var(--text-mid)", lineHeight: 1.8, marginBottom: "16px" }}>
-              This guide provides comprehensive information and guidance on {title.toLowerCase()}. Our academic experts at Tutors India have prepared this guide to help Masters and PhD students navigate the complexities of academic writing and research.
+      {/* Proxied content */}
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "40px 20px" }}>
+        {proxied.content && proxied.content.trim().length > 100 ? (
+          <div
+            className="library-content"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{ __html: proxied.content }}
+          />
+        ) : (
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "32px" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px" }}>
+              Guidance on <strong>{title}</strong> is available on the live Tutors India website.
             </p>
-            <p style={{ color: "var(--text-mid)", lineHeight: 1.8, marginBottom: "16px" }}>
-              Whether you are just starting out or looking for advanced guidance, this resource will provide you with the knowledge and tools needed to succeed in your academic journey.
-            </p>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--navy)", margin: "24px 0 12px" }}>Key Points to Remember</h3>
-            <ul style={{ paddingLeft: "20px", color: "var(--text-mid)", lineHeight: 1.9 }}>
-              <li>Always follow your institution&apos;s specific guidelines and requirements</li>
-              <li>Ensure all sources are properly cited and referenced</li>
-              <li>Maintain academic integrity throughout your work</li>
-              <li>Seek guidance from your supervisor when in doubt</li>
-              <li>Allow adequate time for revisions and proofreading</li>
-            </ul>
-            <div style={{ background: "var(--light-blue)", border: "1px solid var(--border)", borderRadius: "8px", padding: "20px", marginTop: "24px" }}>
-              <p style={{ fontWeight: 600, color: "var(--navy)", marginBottom: "8px" }}>Need personalised help?</p>
-              <p style={{ fontSize: "0.9rem", color: "var(--text-mid)", marginBottom: "12px" }}>
-                Our team of PhD-qualified experts can provide personalised guidance and support for your specific academic requirements.
-              </p>
-              <Link href="/contact-us/" style={{ padding: "8px 20px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontSize: "0.88rem", fontWeight: 600 }}>Get Expert Help</Link>
+            <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
+              <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
+              <Link href="/help-guide/" style={{ padding: "10px 24px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600 }}>← Help Guide</Link>
             </div>
           </div>
-        </article>
-        <CTASidebar />
-      </section>
+        )}
+      </div>
 
-      <style>{`@media(max-width:768px){.guide-layout{grid-template-columns:1fr!important;}}`}</style>
+      {/* CTA */}
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Writing Help?</h2>
+        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
+          <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
+        </div>
+      </section>
     </>
   );
 }

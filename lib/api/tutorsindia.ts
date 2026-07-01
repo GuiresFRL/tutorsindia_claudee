@@ -78,6 +78,31 @@ export async function getTIChildSlugs(parentId: number): Promise<string[]> {
   } catch { return []; }
 }
 
+/** Fetch a single WP post by slug (for individual article pages) */
+export async function getTIPostBySlug(slug: string): Promise<TIPage | null> {
+  try {
+    const res = await fetch(
+      `${TI_API}/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`,
+      FETCH_OPTS
+    );
+    if (!res.ok) return null;
+    const posts: TIPage[] = await res.json();
+    return posts[0] ?? null;
+  } catch { return null; }
+}
+
+/** Fetch WP posts by category ID, latest first */
+export async function getTIPostsByCategory(categoryId: number, perPage = 20): Promise<TIPage[]> {
+  try {
+    const res = await fetch(
+      `${TI_API}/posts?categories=${categoryId}&per_page=${perPage}&status=publish&orderby=date&order=desc&_embed`,
+      FETCH_OPTS
+    );
+    if (!res.ok) return [];
+    return res.json();
+  } catch { return []; }
+}
+
 /* ── Helpers ── */
 
 export function getTIFeaturedImage(page: TIPage): string | null {
