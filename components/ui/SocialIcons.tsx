@@ -1,6 +1,7 @@
+import type { ReactElement } from "react";
 import { siteInfo } from "@/lib/data/site";
 
-type Social = { label: string; href: string; color: string; Icon: () => JSX.Element };
+type Social = { label: string; href: string; color: string; Icon: () => ReactElement };
 
 const SOCIALS: Social[] = [
   {
