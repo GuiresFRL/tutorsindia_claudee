@@ -4,6 +4,7 @@ import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCallButton from "@/components/ui/FloatingCallButton";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const siteUrl = "https://tutorsindia.com";
 
@@ -101,6 +102,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Floating call button — above WhatsApp */}
         <FloatingCallButton />
+
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
 
         {/* Elementor tabs initializer */}
         <script dangerouslySetInnerHTML={{ __html: `
