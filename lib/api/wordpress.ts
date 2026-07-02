@@ -181,8 +181,9 @@ export function getFeaturedImageAlt(post: WPPost): string {
   return post._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || post.title.rendered;
 }
 
-export function getAuthorName(post: WPPost): string {
-  return post._embedded?.author?.[0]?.name ?? "Tutors India";
+export function getAuthorName(_post: WPPost): string {
+  // All content is published under the Tutors India brand.
+  return "Tutors India";
 }
 
 export function getCategories(post: WPPost): string[] {

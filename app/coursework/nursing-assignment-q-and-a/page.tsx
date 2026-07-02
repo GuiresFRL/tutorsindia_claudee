@@ -71,7 +71,7 @@ export default function NursingQAPage() {
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>
             <span style={{ color: "#a0b8e0" }}> / </span>
-            <Link href="/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework</Link>
+            <Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework</Link>
             <span style={{ color: "#a0b8e0" }}> / </span>
             <span style={{ color: "#fff" }}>Nursing Assignment Q and A</span>
           </div>

@@ -95,7 +95,7 @@ export default async function CourseworkSlugPage({ params }: Props) {
             </p>
             <div style={{ display: "flex", gap: "12px", marginTop: "20px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-              <Link href="/coursework-writing/" style={{ padding: "10px 24px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600 }}>← Coursework</Link>
+              <Link href="/our-services/coursework-writing/" style={{ padding: "10px 24px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600 }}>← Coursework</Link>
             </div>
           </div>
         )}

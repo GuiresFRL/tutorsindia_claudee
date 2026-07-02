@@ -103,11 +103,11 @@ export default function FullDissertationPage() {
               </p>
               <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <Link href="/order-now/" style={{ padding: "12px 30px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-                <a href="https://www.tutorsindia.com/wp-content/uploads/2021/11/Master-Dissertation.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
+                <a href="/docs/master-dissertation-brochure.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
               </div>
             </div>
             <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "190px" }} className="hero-badge">
-              <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+              <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
               <div style={{ fontSize: "1.3rem", fontWeight: 700, color: "#f9c74f" }}>8,000+</div>
               <div style={{ fontSize: "0.78rem", color: "#c5d5f0" }}>Dissertations<br />Completed</div>
               <div style={{ fontSize: "0.72rem", color: "#a0b8e0", marginTop: "8px" }}>7,000 – 20,000 words<br />Chapter-by-Chapter</div>
@@ -281,7 +281,7 @@ export default function FullDissertationPage() {
                 { icon: "🔁", title: "Unlimited Revisions", desc: "Free unlimited revisions even after project completion" },
                 { icon: "📚", title: "Peer-Reviewed Only", desc: "Only peer-reviewed articles from credible databases" },
                 { icon: "🛡️", title: "Plagiarism Report", desc: "0% plagiarism guaranteed with Turnitin certificate" },
-                { icon: "📞", title: "24/7 Support", desc: "Email, phone, Skype — round-the-clock support" },
+                { icon: "📞", title: "24/7 Support", desc: "Email, phone, WhatsApp — round-the-clock support" },
                 { icon: "✅", title: "100% Requirement Match", desc: "Exact match with your university guidelines and rubric" },
                 { icon: "⏱", title: "On-Time Delivery", desc: "95–98% on-time delivery, minor changes within 24 hours" },
                 { icon: "🔒", title: "Confidential", desc: "128-bit SSL, NDA-signed writers, unique project codes" },

@@ -9,7 +9,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-30",
     categories: ["Master's Statistical Analysis"],
-    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Statistical-Analysis-Thumbnail.webp",
+    featuredImage: "/images/blog/statistical-analysis.webp",
   },
   {
     id: "0b",
@@ -19,7 +19,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-27",
     categories: ["Master's Dissertation"],
-    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Dissertation-Thumbnail.webp",
+    featuredImage: "/images/blog/dissertation.webp",
   },
   {
     id: "0c",
@@ -29,7 +29,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-25",
     categories: ["Publication Support"],
-    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Publication-Support-Thumbnail-TI.webp",
+    featuredImage: "/images/blog/publication-support.webp",
   },
   {
     id: "0d",
@@ -39,7 +39,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-23",
     categories: ["Manuscript"],
-    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Journal-Rejection-Thumbnail-TI.webp",
+    featuredImage: "/images/blog/journal-rejection.webp",
   },
   {
     id: "1",
@@ -49,7 +49,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-20",
     categories: ["Essay Writing"],
-    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Essay-writing-Thumbnail-TI.webp",
+    featuredImage: "/images/blog/essay-writing.webp",
   },
   {
     id: "2",
@@ -59,7 +59,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-18",
     categories: ["Topic Selection"],
-    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Topic-Selection-Thumbnail-TI-1.webp",
+    featuredImage: "/images/blog/topic-selection.webp",
   },
   {
     id: "3",
@@ -69,7 +69,7 @@ export const blogPosts: Post[] = [
     content: "",
     date: "2026-06-16",
     categories: ["Masters Full Dissertation"],
-    featuredImage: "https://www.tutorsindia.com/blog/wp-content/uploads/2026/06/Dissertation-Thumbnail.webp",
+    featuredImage: "/images/blog/dissertation.webp",
   },
   {
     id: "4",

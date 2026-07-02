@@ -125,7 +125,7 @@ export const guarantees = [
   {
     icon: "💬",
     title: "Communicate with Your Writer",
-    description: "You can communicate directly with your writer via phone and Skype. You can also come directly to our office with a prior appointment so that we can discuss and clarify your doubts in order to have a seamless research writing experience.",
+    description: "You can communicate directly with your writer via phone and WhatsApp. You can also come directly to our office with a prior appointment so that we can discuss and clarify your doubts in order to have a seamless research writing experience.",
     href: "/our-process/",
   },
   {

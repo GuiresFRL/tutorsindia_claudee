@@ -96,7 +96,7 @@ export default function ResitDissertationPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.78rem", color: "#c5d5f0", lineHeight: 1.6 }}>Unlimited Revisions<br />Until You Pass</div>
           </div>
         </div>

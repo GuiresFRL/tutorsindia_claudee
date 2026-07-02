@@ -72,7 +72,7 @@ export default function AskAQuestionPage() {
                 Submit Question →
               </button>
               <p style={{ fontSize: "0.78rem", color: "#888", marginTop: "4px" }}>
-                By submitting you agree to our <Link href="/terms/" style={{ color: "#1a2a6c" }}>Terms of Service</Link>. We reply within 24 hours.
+                By submitting you agree to our <Link href="/terms-and-conditions/" style={{ color: "#1a2a6c" }}>Terms of Service</Link>. We reply within 24 hours.
               </p>
             </form>
           </div>

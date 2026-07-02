@@ -82,7 +82,7 @@ export default function PhDResearchProposalPage() {
             <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>Response within 30 minutes — Free Gantt Chart &amp; Ethical Form Included</p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <a href="https://www.tutorsindia.com/wp-content/uploads/2020/10/TI-Research-Proposal-1.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
+              <a href="/docs/phd-research-proposal-brochure.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "20px", textAlign: "center", minWidth: "170px" }} className="hero-badge">

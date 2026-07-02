@@ -155,7 +155,14 @@ export const navigation: NavItem[] = [
       { label: "Ask an Expert", href: "/ask-an-expert/" },
     ],
   },
-  { label: "Academy", href: "/academy/" },
+  {
+    label: "Academy",
+    href: "/academy/",
+    children: [
+      { label: "Academy Articles", href: "/academy/" },
+      { label: "Study Guide", href: "/help-guide/" },
+    ],
+  },
   { label: "Blog", href: "/blog/" },
   { label: "Contact Us", href: "/contact-us/" },
 ];

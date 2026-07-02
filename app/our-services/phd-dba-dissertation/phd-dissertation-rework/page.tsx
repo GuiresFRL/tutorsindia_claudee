@@ -77,7 +77,7 @@ export default function PhDDissertationReworkPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#f9c74f" }}>100%</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Success Rate<br />in Resit PhD</div>
           </div>

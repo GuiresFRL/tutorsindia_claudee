@@ -25,7 +25,7 @@ const guarantees = [
   { icon: "⏱", title: "On-Time Delivery", desc: "Minor changes within 24 hours, significant within 48 hours." },
   { icon: "🎓", title: "Subject Experts", desc: "Writers matched to your specific subject area and academic level." },
   { icon: "🔒", title: "Confidential", desc: "NDA-signed writers, unique project codes, 128-bit SSL encryption." },
-  { icon: "📞", title: "24/7 Support", desc: "Email, phone, Skype — always available." },
+  { icon: "📞", title: "24/7 Support", desc: "Email, phone, WhatsApp — always available." },
 ];
 
 export default function CourseworkAssignmentPage() {
@@ -47,7 +47,7 @@ export default function CourseworkAssignmentPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/assignment-writing.jpg" alt="Student working on academic assignment" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>10+</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Assignment<br />Types Covered</div>
           </div>

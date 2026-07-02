@@ -12,7 +12,7 @@ const subjects = [
 ];
 const faqs = [
   { q: "What online tutoring services do you offer?", a: "Tutoring services serve as a centre of learning assistance to students in order to support their academic courses. Our expert tutors provide one-to-one support across all subjects and levels — from undergraduate through to Masters, MBA, and PhD. We cover subject-specific tutoring, research methodology guidance, dissertation support, and exam preparation." },
-  { q: "How are tutoring sessions conducted?", a: "Sessions are conducted via video call (Zoom, Skype, Google Meet), email correspondence, or our CRM platform. You can choose your preferred mode of communication. Sessions can be scheduled at your convenience 24/7, and our tutors are available across all time zones." },
+  { q: "How are tutoring sessions conducted?", a: "Sessions are conducted via video call (Zoom, Google Meet), email correspondence, or our CRM platform. You can choose your preferred mode of communication. Sessions can be scheduled at your convenience 24/7, and our tutors are available across all time zones." },
   { q: "How do you match me with the right tutor?", a: "We carefully match you with a tutor based on your specific subject area, academic level, university guidelines, and any particular areas of difficulty. All our tutors hold PhD or Masters degrees from top UK and US universities and have minimum 5 years of teaching and research experience." },
   { q: "Can tutors help with my dissertation?", a: "Yes. Our tutors provide comprehensive dissertation support — from topic selection and proposal development through literature review, methodology, data analysis, and final writing. They can review chapter drafts, explain statistical concepts, help you understand feedback from supervisors, and prepare you for your viva voce." },
   { q: "How many sessions will I need?", a: "The number of sessions depends on your specific needs and academic goals. Some students need a single clarification session (1–2 hours), while others benefit from ongoing weekly support throughout their programme. We offer flexible scheduling so you can book as many or as few sessions as you need." },
@@ -28,14 +28,14 @@ export default function OnlineTutoringPage() {
             </div>
             <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>Online Tutoring Services</h1>
             <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>Tutoring services serve as a centre of learning assistance to students in order to support their academic courses. Our expert tutors provide one-to-one support across all subjects and levels — helping Masters, MBA, and PhD students build confidence, understand complex concepts, and achieve academic success.</p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "20px" }}>1-on-1 · All Subjects · All Levels · Zoom/Skype/Email · 24/7 Available</p>
+            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "20px" }}>1-on-1 · All Subjects · All Levels · Zoom/Meet/Email · 24/7 Available</p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
               <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/services/primary-secondary-research.webp" alt="Research and development planning" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>2,000+</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Expert Tutors<br />All Subjects<br />24/7 Available</div>
           </div>

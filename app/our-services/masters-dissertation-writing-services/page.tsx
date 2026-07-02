@@ -227,7 +227,7 @@ export default function MastersDissertationPage() {
                 <Link href="/order-now/" style={{ padding: "12px 30px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
                   Place an Order
                 </Link>
-                <a href="https://www.tutorsindia.com/wp-content/uploads/2021/11/Master-Dissertation.pdf" target="_blank" rel="noopener noreferrer"
+                <a href="/docs/master-dissertation-brochure.pdf" target="_blank" rel="noopener noreferrer"
                   style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
                   📄 Download Brochure
                 </a>
@@ -236,7 +236,7 @@ export default function MastersDissertationPage() {
 
             {/* Hero badge */}
             <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px 28px", textAlign: "center", minWidth: "190px" }} className="hero-badge">
-              <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+              <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
               <div style={{ fontSize: "0.82rem", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic<br />Writing &amp; Editing<br />Services Since 2001</div>
             </div>
           </div>

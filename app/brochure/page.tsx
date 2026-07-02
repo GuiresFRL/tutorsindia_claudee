@@ -10,53 +10,51 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://tutorsindia.com/brochure/" },
 };
 
-const BASE = "https://www.tutorsindia.com/wp-content/uploads";
-
 const brochures = [
   {
     title: "Best Doctoral Dissertation Writing Service",
-    img: `${BASE}/2024/08/Best-Doctoral-Dissertation-Writing-Service-scaled-1.webp`,
+    img: "/images/brochures/doctoral-dissertation.webp",
     pdf: null,
   },
   {
     title: "Economics and Finance Dissertation Writing Guidance",
-    img: `${BASE}/2024/08/Economics-and-Finance-Dissertation-Writing-Guidance-scaled-1.webp`,
+    img: "/images/brochures/economics-finance.webp",
     pdf: null,
   },
   {
     title: "Life Science Dissertation and Assignment Help",
-    img: `${BASE}/2024/08/Life-Science-dissertation-and-assignment-help-scaled-1.webp`,
+    img: "/images/brochures/life-science.webp",
     pdf: null,
   },
   {
     title: "Coursework Writing",
-    img: `${BASE}/2024/08/Coursework-Writing-1.webp`,
-    pdf: `${BASE}/2021/11/Coursework-Writing.pdf`,
+    img: "/images/brochures/coursework-writing.webp",
+    pdf: "/docs/coursework-writing-brochure.pdf",
   },
   {
     title: "Publication Support",
-    img: `${BASE}/2024/08/Publication-Support.webp`,
-    pdf: `${BASE}/2021/11/Publication-Support.pdf`,
+    img: "/images/brochures/publication-support.webp",
+    pdf: "/docs/publication-support-brochure.pdf",
   },
   {
     title: "Master Dissertation Writing Service",
-    img: `${BASE}/2024/08/Master-Dissertation-writing-service.webp`,
-    pdf: `${BASE}/2021/11/Master-Dissertation.pdf`,
+    img: "/images/brochures/master-dissertation.webp",
+    pdf: "/docs/master-dissertation-brochure.pdf",
   },
   {
     title: "Development",
-    img: `${BASE}/2024/08/Development-1.webp`,
-    pdf: `${BASE}/2021/11/Development.pdf`,
+    img: "/images/brochures/development.webp",
+    pdf: "/docs/development-brochure.pdf",
   },
   {
     title: "Editing Services",
-    img: `${BASE}/2024/08/Editing-Services-2.webp`,
-    pdf: `${BASE}/2021/11/Editing-Services.pdf`,
+    img: "/images/brochures/editing-services.webp",
+    pdf: "/docs/editing-services-brochure.pdf",
   },
   {
     title: "PhD / DBA Dissertation",
-    img: `${BASE}/2024/08/PHD-Dissertation.webp`,
-    pdf: `${BASE}/2021/11/PHD-Dissertation.pdf`,
+    img: "/images/brochures/phd-dissertation.webp",
+    pdf: "/docs/phd-dissertation-brochure.pdf",
   },
 ];
 

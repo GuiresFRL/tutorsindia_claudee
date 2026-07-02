@@ -101,12 +101,12 @@ export default function DissertationProposalPage() {
               </p>
               <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <Link href="/order-now/" style={{ padding: "12px 30px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-                <a href="https://www.tutorsindia.com/wp-content/uploads/2021/11/Master-Dissertation.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
+                <a href="/docs/master-dissertation-brochure.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
                 <Link href="/ask-an-expert/" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.3)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Ask an Expert</Link>
               </div>
             </div>
             <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px 28px", textAlign: "center", minWidth: "180px" }} className="hero-badge">
-              <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+              <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
               <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#f9c74f" }}>30 min</div>
               <div style={{ fontSize: "0.8rem", color: "#c5d5f0" }}>Response Time</div>
               <div style={{ fontSize: "0.72rem", color: "#a0b8e0", marginTop: "8px" }}>Free Gantt Chart<br />Free Ethical Form<br />Free Articles</div>

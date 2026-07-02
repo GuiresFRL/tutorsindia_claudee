@@ -19,7 +19,7 @@ const qualifications = [
 
 const selectionProcess = [
   "Rigorous academic qualification verification (PhD/Masters from accredited institutions)",
-  "Skype interview conducted to assess subject knowledge and communication",
+  "video interview conducted to assess subject knowledge and communication",
   "Written test to evaluate research and writing standards",
   "Sample work submission and portfolio review",
   "Background check and identity verification",
@@ -52,7 +52,7 @@ export default function OurWritersPage() {
               Some of our writers are trained at <strong>Harvard School, Oxford, London School of Business, and the University of Birmingham</strong>. Our team of 2000+ expertise spans subjects and countries including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia, and Ukraine.
             </p>
             <p style={{ color: "var(--text-mid)", lineHeight: 1.85, marginBottom: "24px" }}>
-              <strong>85% of our writers graduated from top UK universities</strong>. All writers are native English speakers with industry experience and educational degrees from international and top-ranked universities, cleared through our in-house screening process including Skype interview, written test, and NDA signing.
+              <strong>85% of our writers graduated from top UK universities</strong>. All writers are native English speakers with industry experience and educational degrees from international and top-ranked universities, cleared through our in-house screening process including video interview, written test, and NDA signing.
             </p>
 
             <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--navy)", marginBottom: "14px" }}>Writer Selection Process</h3>

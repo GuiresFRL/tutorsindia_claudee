@@ -11,19 +11,19 @@ const contactDetails = [
   { icon: "📞", title: "UK Office", value: "+44-1143520021", href: "tel:+441143520021", sub: "Sheffield / Manchester, UK" },
   { icon: "📞", title: "India Office", value: "+91 8754446690", href: "tel:+918754446690", sub: "Chennai, India" },
   { icon: "✉️", title: "Email", value: "info@tutorsindia.com", href: "mailto:info@tutorsindia.com", sub: "Response within 30 minutes" },
-  { icon: "💬", title: "Skype", value: "tutorsindia", href: "skype:tutorsindia?call", sub: "Available 24/7" },
+  { icon: "💬", title: "WhatsApp", value: "+91 8754446690", href: "https://wa.me/918754446690", sub: "Available 24/7" },
 ];
 
 const offices = [
-  { flag: "🇬🇧", country: "United Kingdom", address: "10 Park Place, Manchester M4 4EY" },
-  { flag: "🇺🇸", country: "United States", address: "Dallas, Texas, USA" },
-  { flag: "🇮🇳", country: "India", address: "10, Kutty Street, Nungambakkam, Chennai – 600034" },
+  { code: "UK", country: "United Kingdom", address: "10 Park Place, Manchester M4 4EY" },
+  { code: "US", country: "United States", address: "Dallas, Texas, USA" },
+  { code: "IN", country: "India", address: "10, Kutty Street, Nungambakkam, Chennai – 600034" },
 ];
 
 const faqs = [
   { q: "How quickly will I get a response?", a: "We respond to all enquiries within 30 minutes during business hours. For urgent requirements, please call our UK or India office directly." },
   { q: "How do I know my information is safe?", a: "All communications are protected with 128-bit SSL encryption. Your personal information and project details are never shared with third parties. All our writers sign NDAs before working on any project." },
-  { q: "Can I speak directly with my writer?", a: "Yes. Once your project is assigned, you can communicate directly with your writer via phone, email, or Skype. You will also have a dedicated project coordinator as your primary point of contact." },
+  { q: "Can I speak directly with my writer?", a: "Yes. Once your project is assigned, you can communicate directly with your writer via phone, email, or WhatsApp. You will also have a dedicated project coordinator as your primary point of contact." },
   { q: "What information do I need to provide?", a: "Please provide your subject area, university, level of study (Masters/PhD), word count, deadline, and any specific guidelines from your university. The more detail you provide, the more accurate your quote will be." },
 ];
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.78rem", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic<br />Writing &amp; Editing<br />Since 2001</div>
           </div>
         </div>
@@ -79,8 +79,8 @@ export default function ContactPage() {
           <div style={{ marginTop: "28px" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--navy)", marginBottom: "14px" }}>Our Global Offices</h3>
             {offices.map((o) => (
-              <div key={o.country} style={{ display: "flex", gap: "12px", padding: "12px 0", borderBottom: "1px solid var(--border)" }}>
-                <span style={{ fontSize: "1.4rem" }}>{o.flag}</span>
+              <div key={o.country} style={{ display: "flex", gap: "12px", padding: "12px 0", borderBottom: "1px solid var(--border)", alignItems: "center" }}>
+                <span style={{ width: "34px", height: "34px", borderRadius: "50%", background: "var(--light-blue)", color: "var(--navy)", fontSize: "0.72rem", fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{o.code}</span>
                 <div>
                   <div style={{ fontWeight: 600, color: "var(--navy)", fontSize: "0.9rem" }}>{o.country}</div>
                   <div style={{ color: "var(--text-mid)", fontSize: "0.83rem" }}>{o.address}</div>
