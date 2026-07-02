@@ -6,8 +6,8 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const faqs = [
   {
-    question: "Why should I Choose Tutors India for Computer Science and Information technology services?",
-    answer: `Our native academic computer science and Information technology writers are skillful and experience in different subject's fields especially in this subject it ensured to understand your project well and delivered on time. With over 400+ academic writers endeavor to submit your PhD document that meets the terminology of the academic area but also it has the native linguistic command over technical terms. Thereby, it boosts opportunities to achieve high credits in your thesis and increasing the chances of acceptance by high impact factor journal.
+    q: "Why should I Choose Tutors India for Computer Science and Information technology services?",
+    a: `Our native academic computer science and Information technology writers are skillful and experience in different subject's fields especially in this subject it ensured to understand your project well and delivered on time. With over 400+ academic writers endeavor to submit your PhD document that meets the terminology of the academic area but also it has the native linguistic command over technical terms. Thereby, it boosts opportunities to achieve high credits in your thesis and increasing the chances of acceptance by high impact factor journal.
 
 Our computer science and information technology writing services uniqueness includes:
 • An original, fresh and 100% plagiarism free content.
@@ -16,8 +16,8 @@ Our computer science and information technology writing services uniqueness incl
 • On-Time delivery with no compromise on Quality.`,
   },
   {
-    question: "What kind of services do you offer?",
-    answer: `We offer an extensive variety of the following outstanding academic computer science and information technology supports for masters and PhD including
+    q: "What kind of services do you offer?",
+    a: `We offer an extensive variety of the following outstanding academic computer science and information technology supports for masters and PhD including
 
 For Masters and PhD: Abstracts writing, journal articles and manuscripts, literature reviews, research proposal, research methodology, textual/data analysis, statistical analysis, findings, results, and conclusions, referencing, and more.
 
@@ -26,20 +26,20 @@ In addition, tailor-made assignment, essay and manuscript support, conference pa
 If you need any other research writing support, please select "other" on our pricing order form and clearly outline what is required. We will call back you immediately, or you can contact UK toll-free 08081891062. Visit our contact page to see other countries contact information, so we will do our best to help you.`,
   },
   {
-    question: "What are the topics covered in Computer Science and Information Technology dissertation?",
-    answer: `We cover the wide range of Computer Science and Information Technology dissertation topics such as software programming and algorithm, hard work and network, information system, Data security, cyber-security, Data management system, data-driven robotic sampling, social networking, Virtual-reality system, wireless multimedia networks, cross-layer architecture for wireless networks, WiMAX (Next generation wireless system) wireless sensor networks, computer-based software engineering, software metrics, measurement and testing, software process and management and much more.`,
+    q: "What are the topics covered in Computer Science and Information Technology dissertation?",
+    a: `We cover the wide range of Computer Science and Information Technology dissertation topics such as software programming and algorithm, hard work and network, information system, Data security, cyber-security, Data management system, data-driven robotic sampling, social networking, Virtual-reality system, wireless multimedia networks, cross-layer architecture for wireless networks, WiMAX (Next generation wireless system) wireless sensor networks, computer-based software engineering, software metrics, measurement and testing, software process and management and much more.`,
   },
   {
-    question: "If I am not satisfied with your Computer Science and Information technology writing, how do you address the issues?",
-    answer: `At Tutors India, our first motto offers 100% customer satisfaction, so it is a very rare event. However, we provide the guarantee of the unlimited revisions*, so you need not worry about it.`,
+    q: "If I am not satisfied with your Computer Science and Information technology writing, how do you address the issues?",
+    a: `At Tutors India, our first motto offers 100% customer satisfaction, so it is a very rare event. However, we provide the guarantee of the unlimited revisions*, so you need not worry about it.`,
   },
   {
-    question: "What If I need some customization in the computer science and Information technology dissertation?",
-    answer: `Of course, we ready to help our clients. Our information technology and computer science service are completely flexible, and tailor made to the customer. Hence, if you can provide the areas of customization related to research area initially proposed, we could make amendments to the document.`,
+    q: "What If I need some customization in the computer science and Information technology dissertation?",
+    a: `Of course, we ready to help our clients. Our information technology and computer science service are completely flexible, and tailor made to the customer. Hence, if you can provide the areas of customization related to research area initially proposed, we could make amendments to the document.`,
   },
   {
-    question: "Can you show me sample work of academic Computer Science and Information technology?",
-    answer: `Yes, we have an uploaded some of the academic writing works samples. For more details, let talks with our academic writers.`,
+    q: "Can you show me sample work of academic Computer Science and Information technology?",
+    a: `Yes, we have an uploaded some of the academic writing works samples. For more details, let talks with our academic writers.`,
   },
 ];
 

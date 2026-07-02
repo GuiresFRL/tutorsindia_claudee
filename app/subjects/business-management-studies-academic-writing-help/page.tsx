@@ -6,8 +6,8 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const faqs = [
   {
-    question: "Why should I Choose Tutors India for Business and Management Studies writing services?",
-    answer: `Our native writers are astounding and experience in different subjects fields especially in the Business and Management Studies writing ensure to understand your project well and delivered on time. With over 400+ academic writers endeavor to submit your document that meets the terminology of the academic area but also it has the native linguistic command over Business and Management terms. Thereby, it boosts opportunities to achieve high credits in your dissertation and increasing the chances of acceptance by high impact factor journal.
+    q: "Why should I Choose Tutors India for Business and Management Studies writing services?",
+    a: `Our native writers are astounding and experience in different subjects fields especially in the Business and Management Studies writing ensure to understand your project well and delivered on time. With over 400+ academic writers endeavor to submit your document that meets the terminology of the academic area but also it has the native linguistic command over Business and Management terms. Thereby, it boosts opportunities to achieve high credits in your dissertation and increasing the chances of acceptance by high impact factor journal.
 
 Our Business and Management studies writing services uniqueness includes:
 • An original, fresh and 100% plagiarism free content.
@@ -16,8 +16,8 @@ Our Business and Management studies writing services uniqueness includes:
 • On-Time delivery with no compromise on Quality.`,
   },
   {
-    question: "What kind of services do you offer?",
-    answer: `We offer a wide variety of the following outstanding Business and Management studies supports including
+    q: "What kind of services do you offer?",
+    a: `We offer a wide variety of the following outstanding Business and Management studies supports including
 
 For Masters and PhD: Abstracts writing, journal articles and manuscripts, literature review writing, research proposal, research methodology, textual/data analysis, statistical analysis, findings, results, and conclusions, referencing, clinical study reports, protocols, Common technical documents, Data safety monitoring board (DSMB) manuals and more.
 
@@ -26,20 +26,20 @@ In addition, tailor-made assignment, essay and manuscript support, conference pa
 If you need any other research writing support, please select 'other' on our pricing order form and clearly outline what is required. We will call back you immediately, or you can contact UK toll-free 08081891062.`,
   },
   {
-    question: "What are the topics covered in Business and Management Studies writing?",
-    answer: `We covers the wide range of Business and Management writing topics such as technology and innovation management, human resource management, globalisation and strategy business, corporate social responsibility business, leadership and innovation business, global politics and global business, global strategy for business, management of international change, customer loyalty, employee retention, customer relationship management, stock market behaviour, project management, management strategy and global business strategy, MBA international management Strategy, Performance and brand management, Mergers and Acquisitions and more.`,
+    q: "What are the topics covered in Business and Management Studies writing?",
+    a: `We covers the wide range of Business and Management writing topics such as technology and innovation management, human resource management, globalisation and strategy business, corporate social responsibility business, leadership and innovation business, global politics and global business, global strategy for business, management of international change, customer loyalty, employee retention, customer relationship management, stock market behaviour, project management, management strategy and global business strategy, MBA international management Strategy, Performance and brand management, Mergers and Acquisitions and more.`,
   },
   {
-    question: "If I am not satisfied with your Business and Management writing, how do you address the issues?",
-    answer: `At Tutors India, our first motto offers 100% customer satisfaction, so it is a very rare event. However, we provide the guarantee of the unlimited revisions*, so you need not worry about it.`,
+    q: "If I am not satisfied with your Business and Management writing, how do you address the issues?",
+    a: `At Tutors India, our first motto offers 100% customer satisfaction, so it is a very rare event. However, we provide the guarantee of the unlimited revisions*, so you need not worry about it.`,
   },
   {
-    question: "What If I need some customization in the Business and Management writing?",
-    answer: `Of course, we ready to help our clients. Our service is completely flexible, and tailor made to the customer. Hence, if you can provide the areas of customization related to Business and Management research area initially proposed, we could make amendments in the medical writing manuscript.`,
+    q: "What If I need some customization in the Business and Management writing?",
+    a: `Of course, we ready to help our clients. Our service is completely flexible, and tailor made to the customer. Hence, if you can provide the areas of customization related to Business and Management research area initially proposed, we could make amendments in the medical writing manuscript.`,
   },
   {
-    question: "Can you show me sample work of Business and Management writing?",
-    answer: `Yes, we have an uploaded some of the Business and Management writing works samples. For more details, let talks with our academic writers.`,
+    q: "Can you show me sample work of Business and Management writing?",
+    a: `Yes, we have an uploaded some of the Business and Management writing works samples. For more details, let talks with our academic writers.`,
   },
 ];
 

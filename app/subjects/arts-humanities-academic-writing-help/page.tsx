@@ -6,8 +6,8 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const faqs = [
   {
-    question: "Why should I Choose Tutors India for Arts and Humanities writing services?",
-    answer: `Our native writers are skillful and experience in different subjects fields especially in the Arts and Humanities writing ensure to understand your project well and delivered on time. With over 400+ academic writers endeavor to submit your document that meets the terminology of the academic area but also it has the native linguistic command. Thereby, it boosts opportunities to achieve high credits in your dissertation and increasing the chances of acceptance by high impact factor journal.
+    q: "Why should I Choose Tutors India for Arts and Humanities writing services?",
+    a: `Our native writers are skillful and experience in different subjects fields especially in the Arts and Humanities writing ensure to understand your project well and delivered on time. With over 400+ academic writers endeavor to submit your document that meets the terminology of the academic area but also it has the native linguistic command. Thereby, it boosts opportunities to achieve high credits in your dissertation and increasing the chances of acceptance by high impact factor journal.
 
 Our Arts and Humanities writing services uniqueness includes:
 • An original, fresh and 100% plagiarism free content.
@@ -16,8 +16,8 @@ Our Arts and Humanities writing services uniqueness includes:
 • On-Time delivery with no compromise on Quality.`,
   },
   {
-    question: "What kind of services do you offer?",
-    answer: `We offer a wide variety of the following outstanding Arts and Humanities writing supports including
+    q: "What kind of services do you offer?",
+    a: `We offer a wide variety of the following outstanding Arts and Humanities writing supports including
 
 For Masters and PhD: Abstracts writing, journal articles and manuscripts, scientific and medical literature review writing, research proposal, research methodology, textual/data analysis, statistical analysis, findings, results and conclusions, referencing and more.
 
@@ -26,20 +26,20 @@ In addition, tailor-made assignment, essay and manuscript support, conference pa
 If you need any other research writing support, please select 'other' on our pricing order form and clearly outline what is required. We will call back you immediately, or you can contact UK toll-free 08081891062.`,
   },
   {
-    question: "What are the topics covered in Arts and Humanities dissertation?",
-    answer: `We covers the wide range of Arts and Humanities dissertation topics such as religious studies and theology, mass communication, philosophy, literature in English, Linguistics, History and international studies, fine and applied arts, creative arts, history and archeology, dramatic/performing arts, Arabic and Islamic Studies, Anthropology, Yoruba and Igbo linguistics, social-political and economics and more.`,
+    q: "What are the topics covered in Arts and Humanities dissertation?",
+    a: `We covers the wide range of Arts and Humanities dissertation topics such as religious studies and theology, mass communication, philosophy, literature in English, Linguistics, History and international studies, fine and applied arts, creative arts, history and archeology, dramatic/performing arts, Arabic and Islamic Studies, Anthropology, Yoruba and Igbo linguistics, social-political and economics and more.`,
   },
   {
-    question: "If I am not satisfied with your Arts and Humanities writing, how do you address the issues?",
-    answer: `At Tutors India, our first motto offers 100% customer satisfaction, so it is a very rare event. However, we provide the guarantee of the unlimited revisions*, so you need not worry about it.`,
+    q: "If I am not satisfied with your Arts and Humanities writing, how do you address the issues?",
+    a: `At Tutors India, our first motto offers 100% customer satisfaction, so it is a very rare event. However, we provide the guarantee of the unlimited revisions*, so you need not worry about it.`,
   },
   {
-    question: "What If I need some customization in the Arts and Humanities writing?",
-    answer: `Of course, we ready to help our clients. Our service is completely flexible, and tailor made to the customer. Hence, if you can provide the areas of customization related to research area initially proposed, we could make amendments to the document.`,
+    q: "What If I need some customization in the Arts and Humanities writing?",
+    a: `Of course, we ready to help our clients. Our service is completely flexible, and tailor made to the customer. Hence, if you can provide the areas of customization related to research area initially proposed, we could make amendments to the document.`,
   },
   {
-    question: "Can you show me sample work of Arts and Humanities writing?",
-    answer: `Yes, we have an uploaded some of the Arts and Humanities writing works samples. For more details, let talks with our academic writers.`,
+    q: "Can you show me sample work of Arts and Humanities writing?",
+    a: `Yes, we have an uploaded some of the Arts and Humanities writing works samples. For more details, let talks with our academic writers.`,
   },
 ];
 
