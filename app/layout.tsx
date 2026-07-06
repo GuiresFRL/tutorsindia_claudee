@@ -1,9 +1,25 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { Merriweather, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCallButton from "@/components/ui/FloatingCallButton";
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-merriweather",
+  display: "swap",
+});
+
+const sourceSans3 = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-source-sans",
+  display: "swap",
+});
 
 const siteUrl = "https://tutorsindia.com";
 
@@ -79,7 +95,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={`${merriweather.variable} ${sourceSans3.variable}`}>
       <head>
         {/* Prevent indexing until site is ready for launch */}
         <meta name="robots" content="noindex, nofollow" />
@@ -87,10 +103,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Charset & viewport */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Site verification placeholders — add actual codes when available */}
-        {/* <meta name="google-site-verification" content="YOUR_CODE" /> */}
-        {/* Font Awesome — required for library proxied content icons */}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossOrigin="anonymous" />
+        {/* Preload LCP hero image */}
+        <link rel="preload" as="image" href="/images/samples/assignment-writing.jpg" fetchPriority="high" />
+        {/* Font Awesome — preload only; actual load deferred via Script below */}
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" crossOrigin="anonymous" />
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -268,8 +284,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 })();
         `}} />
 
-        {/* Tawk.to Live Chat */}
-        <script dangerouslySetInnerHTML={{ __html: `
+        {/* Font Awesome — injected after page load to avoid render-blocking */}
+        <Script
+          id="font-awesome-loader"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: `
+(function(){
+  var l=document.createElement('link');
+  l.rel='stylesheet';l.crossOrigin='anonymous';
+  l.href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+  document.head.appendChild(l);
+})();
+          `}}
+        />
+        {/* Tawk.to Live Chat — deferred until page is interactive to avoid blocking LCP */}
+        <Script
+          id="tawk-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: `
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 Tawk_API.onLoad = function(){ Tawk_API.minimize(); };
 (function(){
@@ -280,7 +312,8 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
-        `}} />
+          `}}
+        />
 
         {/* WhatsApp floating button — bottom left */}
         <a

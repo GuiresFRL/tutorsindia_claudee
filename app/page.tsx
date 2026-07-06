@@ -82,7 +82,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: "12px", padding: "16px", textAlign: "center", maxWidth: "300px" }}>
-            <img src="/images/samples/assignment-writing.jpg" alt="Student writing a dissertation in a university library" style={{ width: "100%", height: "190px", objectFit: "cover", borderRadius: "8px", marginBottom: "12px" }} />
+            <img src="/images/samples/assignment-writing.jpg" alt="Student writing a dissertation in a university library" width={268} height={190} fetchPriority="high" style={{ width: "100%", height: "190px", objectFit: "cover", borderRadius: "8px", marginBottom: "12px" }} />
             <p style={{ fontSize: "13px", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic Writing &amp; Editing Services since 2001</p>
             <div style={{ marginTop: "12px", paddingTop: "12px", borderTop: "1px solid rgba(255,255,255,0.2)", fontSize: "0.8rem" }}>
               <div style={{ color: "#a0b8e0", marginBottom: "4px" }}>📞 <a href="tel:+441143520021" style={{ color: "#fff" }}>+44-1143520021</a></div>
@@ -279,6 +279,9 @@ export default function Home() {
                   <img
                     src={card.image}
                     alt={card.head}
+                    width={400}
+                    height={160}
+                    loading="lazy"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
                   <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,42,108,0.75) 0%, transparent 55%)" }} />
@@ -317,6 +320,9 @@ export default function Home() {
                     <img
                       src={post.featuredImage}
                       alt={post.title}
+                      width={400}
+                      height={180}
+                      loading="lazy"
                       style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }}
                     />
                   ) : (
