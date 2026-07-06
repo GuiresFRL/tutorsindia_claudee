@@ -103,8 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Charset & viewport */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Preload LCP hero image */}
-        <link rel="preload" as="image" href="/images/samples/assignment-writing.jpg" fetchPriority="high" />
+        {/* Preload LCP element — logo is the first painted image on every page */}
+        <link rel="preload" as="image" href="/tutorsindia-logo-hd.jpg" fetchPriority="high" />
         {/* Font Awesome — preload only; actual load deferred via Script below */}
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" crossOrigin="anonymous" />
         {/* JSON-LD Structured Data */}

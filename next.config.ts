@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Reduce unused JS — target modern browsers only (drops polyfills like Array.at, Object.fromEntries etc.)
+  experimental: {
+    optimizePackageImports: ["pdf-lib", "nodemailer"],
+  },
+  compiler: {
+    // Remove dead code in production
+    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
+  },
   async redirects() {
     return [
       // /title/title-[slug]/ → /title/[slug]/ (duplicate URL pattern on live site)

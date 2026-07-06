@@ -13,7 +13,10 @@ export default function Footer() {
           <img
             src="/tutorsindia-logo-hd.jpg"
             alt="Tutors India"
-            style={{ height: "64px", marginBottom: "14px" }}
+            width={64}
+            height={64}
+            loading="lazy"
+            style={{ height: "64px", width: "auto", marginBottom: "14px" }}
           />
           <p style={{ fontSize: "0.85rem", color: "#8fa5c8", lineHeight: 1.7, marginBottom: "16px" }}>
             Tutors India is a pioneer in providing complete academic guidance and direction since 2001. Trusted by {siteInfo.stats.scholars} scholars, students & entrepreneurs worldwide.

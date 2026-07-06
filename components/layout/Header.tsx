@@ -57,6 +57,9 @@ export default function Header() {
           <img
             src="/tutorsindia-logo-hd.jpg"
             alt="Tutors India — Trusted Academic Writing Services Since 2001"
+            width={62}
+            height={62}
+            fetchPriority="high"
             style={{ height: "62px", width: "auto", objectFit: "contain" }}
           />
         </Link>
