@@ -81,24 +81,34 @@ export default function TestimonialsSlider() {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", marginTop: "28px" }}>
         <button onClick={prev} aria-label="Previous" style={btnStyle}>‹</button>
 
-        {/* Dots */}
-        <div style={{ display: "flex", gap: "6px" }}>
+        {/* Dots — 44×44px touch target wrapping small visual dot */}
+        <div style={{ display: "flex", gap: "2px", alignItems: "center" }}>
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Go to testimonial ${i + 1}`}
               style={{
-                width: i === current ? "22px" : "8px",
-                height: "8px",
-                borderRadius: "4px",
-                background: i === current ? "#e87722" : "#cbd5e0",
+                minWidth: "44px",
+                height: "44px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "none",
                 border: "none",
                 cursor: "pointer",
                 padding: 0,
-                transition: "all 0.3s",
               }}
-            />
+            >
+              <span style={{
+                display: "block",
+                width: i === current ? "22px" : "8px",
+                height: "8px",
+                borderRadius: "4px",
+                background: i === current ? "var(--orange, #b85510)" : "#cbd5e0",
+                transition: "all 0.3s",
+              }} />
+            </button>
           ))}
         </div>
 
@@ -124,7 +134,7 @@ export default function TestimonialsSlider() {
 }
 
 const btnStyle: React.CSSProperties = {
-  width: "36px", height: "36px", borderRadius: "50%",
+  width: "44px", height: "44px", borderRadius: "50%",
   background: "#1a2a6c", color: "#fff", border: "none",
   fontSize: "1.3rem", lineHeight: 1, cursor: "pointer",
   display: "flex", alignItems: "center", justifyContent: "center",
