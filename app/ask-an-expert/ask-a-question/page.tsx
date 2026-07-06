@@ -1,16 +1,49 @@
+"use client";
+
 import Link from "next/link";
-import type { Metadata } from "next";
+import { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
-export const revalidate = 3600;
+const inputStyle: React.CSSProperties = {
+  width: "100%", padding: "10px 14px", border: "1.5px solid #dde2ef",
+  borderRadius: "6px", fontSize: "0.9rem", outline: "none",
+  boxSizing: "border-box", fontFamily: "inherit", color: "#222", background: "#fff",
+};
 
-export const metadata: Metadata = {
-  title: "Ask a Question — Free Expert Academic Answer in 24 Hours",
-  description: "Submit your academic question and receive a free expert answer within 24 hours from Tutors India's team of PhD-qualified specialists.",
-  
-  alternates: { canonical: "https://tutorsindia.com/ask-an-expert/ask-a-question/" },
+const labelStyle: React.CSSProperties = {
+  fontSize: "0.85rem", fontWeight: 600, color: "#374151",
+  display: "block", marginBottom: "6px",
 };
 
 export default function AskAQuestionPage() {
+  const router = useRouter();
+  const [form, setForm] = useState({ name: "", email: "", subject: "", question: "" });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const set = (k: keyof typeof form) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
+      setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+    try {
+      const res = await fetch("/api/ask-question", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.ok) throw new Error(json.error || "Failed");
+      router.push("/thank-you/");
+    } catch {
+      setError("Something went wrong. Please try again or contact us directly.");
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       {/* Hero */}
@@ -25,59 +58,84 @@ export default function AskAQuestionPage() {
             Ask Your Academic Question
           </h1>
           <p style={{ color: "#c5d5f0", fontSize: "0.97rem", maxWidth: "680px", marginBottom: "8px" }}>
-            Ask us your academic question here and you'll receive your free answer within 24 hours. It's that simple — any question, any topic, our team of experts have the solution to your problem.
+            Ask us your academic question here and you&apos;ll receive your free answer within 24 hours. Any question, any topic — our team of experts have the solution.
           </p>
           <p style={{ color: "#e87722", fontWeight: 700, fontSize: "1rem" }}>Free Answer in 24 Hours</p>
         </div>
       </section>
 
-      {/* Main content */}
+      {/* Main */}
       <section style={{ maxWidth: "960px", margin: "0 auto", padding: "44px 20px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr minmax(0, 340px)", gap: "32px", alignItems: "start" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr minmax(0,340px)", gap: "32px", alignItems: "start" }} className="ask-grid">
 
           {/* Form panel */}
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "32px", boxShadow: "0 2px 12px rgba(0,0,0,0.05)" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "20px" }}>
               Submit Your Question
             </h2>
-            <form action="https://tutorsindia.com/ask-an-expert/ask-a-question/" method="POST" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <div>
-                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "#374151", display: "block", marginBottom: "6px" }}>Your Name *</label>
-                <input name="name" required placeholder="Enter your full name" style={{ width: "100%", padding: "10px 14px", border: "1.5px solid #dde2ef", borderRadius: "6px", fontSize: "0.9rem", outline: "none", boxSizing: "border-box" }} />
+                <label style={labelStyle} htmlFor="aq-name">Your Name <span style={{ color: "#e87722" }}>*</span></label>
+                <input id="aq-name" required placeholder="Enter your full name" value={form.name} onChange={set("name")} style={inputStyle} />
               </div>
+
               <div>
-                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "#374151", display: "block", marginBottom: "6px" }}>Email Address *</label>
-                <input name="email" type="email" required placeholder="you@example.com" style={{ width: "100%", padding: "10px 14px", border: "1.5px solid #dde2ef", borderRadius: "6px", fontSize: "0.9rem", outline: "none", boxSizing: "border-box" }} />
+                <label style={labelStyle} htmlFor="aq-email">Email Address <span style={{ color: "#e87722" }}>*</span></label>
+                <input id="aq-email" type="email" required placeholder="you@example.com" value={form.email} onChange={set("email")} style={inputStyle} />
               </div>
+
               <div>
-                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "#374151", display: "block", marginBottom: "6px" }}>Subject / Topic *</label>
-                <select name="subject" required style={{ width: "100%", padding: "10px 14px", border: "1.5px solid #dde2ef", borderRadius: "6px", fontSize: "0.9rem", background: "#fff", outline: "none", boxSizing: "border-box" }}>
+                <label style={labelStyle} htmlFor="aq-subject">Subject / Topic <span style={{ color: "#e87722" }}>*</span></label>
+                <select id="aq-subject" required value={form.subject} onChange={set("subject")} style={inputStyle}>
                   <option value="">Select a subject</option>
-                  <option>Accounts</option>
-                  <option>Statistics</option>
-                  <option>Management</option>
-                  <option>Nursing</option>
-                  <option>Economics</option>
-                  <option>Psychology</option>
-                  <option>Marketing</option>
-                  <option>Philosophy</option>
-                  <option>Other</option>
+                  {["Accounts","Statistics","Management","Nursing","Economics","Psychology","Marketing","Philosophy","Other"].map((s) => (
+                    <option key={s}>{s}</option>
+                  ))}
                 </select>
               </div>
+
               <div>
-                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "#374151", display: "block", marginBottom: "6px" }}>Your Question *</label>
-                <textarea name="question" required rows={6} placeholder="Type your academic question here in as much detail as possible…" style={{ width: "100%", padding: "10px 14px", border: "1.5px solid #dde2ef", borderRadius: "6px", fontSize: "0.9rem", resize: "vertical", outline: "none", boxSizing: "border-box" }} />
+                <label style={labelStyle} htmlFor="aq-question">Your Question <span style={{ color: "#e87722" }}>*</span></label>
+                <textarea
+                  id="aq-question"
+                  required
+                  rows={6}
+                  placeholder="Type your academic question here in as much detail as possible…"
+                  value={form.question}
+                  onChange={set("question")}
+                  style={{ ...inputStyle, resize: "vertical", lineHeight: 1.6 }}
+                />
               </div>
-              <button type="submit" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", border: "none", borderRadius: "6px", fontWeight: 700, fontSize: "0.95rem", cursor: "pointer" }}>
-                Submit Question →
+
+              {error && (
+                <div style={{ background: "#fff0f0", border: "1px solid #fca5a5", borderRadius: "6px", padding: "10px 14px", color: "#b91c1c", fontSize: "0.88rem" }}>
+                  {error}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading}
+                style={{
+                  padding: "12px 28px", background: loading ? "#94a3b8" : "#e87722",
+                  color: "#fff", border: "none", borderRadius: "6px",
+                  fontWeight: 700, fontSize: "0.95rem",
+                  cursor: loading ? "not-allowed" : "pointer",
+                }}
+              >
+                {loading ? "Sending…" : "Submit Question →"}
               </button>
+
               <p style={{ fontSize: "0.78rem", color: "#888", marginTop: "4px" }}>
-                By submitting you agree to our <Link href="/terms-and-conditions/" style={{ color: "#1a2a6c" }}>Terms of Service</Link>. We reply within 24 hours.
+                By submitting you agree to our{" "}
+                <Link href="/terms-and-conditions/" style={{ color: "#1a2a6c" }}>Terms of Service</Link>.
+                {" "}We reply within 24 hours.
               </p>
             </form>
           </div>
 
-          {/* Sidebar info */}
+          {/* Sidebar */}
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <div style={{ background: "#f0f4ff", border: "1px solid #c7d4f5", borderRadius: "10px", padding: "20px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "12px" }}>How It Works</h3>
@@ -105,7 +163,7 @@ export default function AskAQuestionPage() {
 
             <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.9rem", color: "#1a2a6c", marginBottom: "10px" }}>Browse Existing Answers</h3>
-              <p style={{ fontSize: "0.82rem", color: "#666", marginBottom: "12px" }}>Your question may already be answered in our expert Q&A library.</p>
+              <p style={{ fontSize: "0.82rem", color: "#666", marginBottom: "12px" }}>Your question may already be answered in our expert Q&amp;A library.</p>
               <Link href="/ask-an-expert/" style={{ fontSize: "0.85rem", color: "#2563b0", fontWeight: 600 }}>← Browse All Q&amp;A</Link>
             </div>
           </div>
@@ -121,6 +179,8 @@ export default function AskAQuestionPage() {
           <Link href="/contact-us/" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
         </div>
       </section>
+
+      <style>{`@media(max-width:680px){.ask-grid{grid-template-columns:1fr!important;}}`}</style>
     </>
   );
 }
