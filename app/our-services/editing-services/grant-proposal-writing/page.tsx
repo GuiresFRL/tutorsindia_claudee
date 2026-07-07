@@ -9,9 +9,19 @@ const faqs = [
   { q: "Can you edit an existing grant proposal?", a: "Yes. We provide grant proposal editing services — reviewing your existing draft for clarity, logical flow, scientific rigour, compliance with funder guidelines, and compelling presentation of research value. We also ensure the proposal meets all word count and formatting requirements." },
   { q: "How do you ensure our proposal stands out to reviewers?", a: "We cannot guarantee I will express how pleased I am with how the resume turned out. We focus on clearly articulating the originality, significance, feasibility, and impact of the research. Our writers have extensive experience interpreting funder review criteria and crafting proposals that directly address what reviewers are looking for." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function GrantProposalPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

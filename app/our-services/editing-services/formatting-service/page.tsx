@@ -9,9 +9,19 @@ const faqs = [
   { q: "Do you also format figures and tables?", a: "Yes. All figures, tables, charts, and graphs are formatted to your target journal's or university's specific requirements — including captions, numbering, font sizes, borders, and resolution. We ensure all figures meet print-ready quality standards (typically 300 DPI for journal submission)." },
   { q: "How quickly can you complete formatting?", a: "Standard formatting for a dissertation or manuscript is typically completed within 24–48 hours. Complex documents with many figures, tables, and appendices may take 3–5 days. Express formatting is available for urgent submission deadlines." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function FormattingServicePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

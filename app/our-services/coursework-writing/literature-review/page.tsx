@@ -41,6 +41,15 @@ const faqs = [
   { q: "Can I provide feedback during the writing process?", a: "Yes. We share the literature review in drafts, allowing you to review each section and provide feedback. Our experts then incorporate your feedback before proceeding. This iterative process ensures the final literature review aligns perfectly with your supervisor's expectations and university requirements." },
   { q: "What if my supervisor requires changes to the literature review?", a: "We provide unlimited free revisions. If your supervisor requires any changes to the literature review, simply share their feedback and we will revise accordingly at no additional charge. Minor changes are completed within 24 working hours and significant revisions within 48 working hours." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Writing a literature review for a research paper is challenging and rigorous. Tutors India's service cultivates the tutors who excel in scholarly writing. They delivered my project and clarified my queries more than I expected. Thanks — looking forward to working with you again.", author: "Grace", avatar: "/images/testimonials/t10.jpg" },
@@ -59,6 +68,7 @@ const subjects = [
 export default function LiteratureReviewPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -52,6 +52,15 @@ const faqs = [
   { q: "How can I trust that the resit dissertation will meet academic standards?", a: "Tutors India conducts brainstorming sessions so you get opportunities to talk with our experts directly to understand their skill set and experience. We have been helping Master's and PhD researchers for more than 22 years and have helped complete 3,500+ PhDs and 8,000+ Masters dissertations. The company relies entirely on good word of mouth from satisfied clients." },
   { q: "Do you guarantee no plagiarism in the resit dissertation?", a: "Tutors India has provided top quality dissertation documents with no plagiarism. We never allow any dissertation to look average in quality. We maintain high quality and uniqueness in your resit dissertation by facilitating a comprehensive quality-checking department. All work is scanned using Turnitin before delivery and a plagiarism-free certificate is provided." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Tutors India helped me gain clarity on the direction my research proposal needed to go and provided me with more clarity in my work. The experts understood my difficulties in writing the research proposal and guided me accordingly. I wholeheartedly endorse Tutors India as a best and professional service.", author: "Glenn McLaughlin", location: "" },
@@ -73,6 +82,7 @@ const subjects = [
 export default function ResitDissertationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

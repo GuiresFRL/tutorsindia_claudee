@@ -125,6 +125,15 @@ const faqs = [
   { q: "Can dissertation topic selection improve job opportunities after graduation?", a: "Yes, choosing an industry-relevant dissertation topic can strengthen your professional profile, demonstrate specialised knowledge, and improve employment prospects. Our service is completely flexible to help you find the perfect balance between academic rigour and career relevance." },
   { q: "How do I know if my dissertation topic is researchable?", a: "A topic is considered researchable when there is enough academic literature, accessible data, clear objectives, and a realistic scope for analysis. Our experts conduct a feasibility assessment for every topic suggestion to ensure it can be completed within your deadline and word count." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Topic selection was extraordinary, my professor approved on the first go. Good. I will sure recommend the service to all my class mates.", author: "C S", location: "Sheffield, UK" },
@@ -146,6 +155,7 @@ const subjects = [
 export default function DissertationTopicPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

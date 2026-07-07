@@ -50,6 +50,15 @@ const faqs = [
   { q: "What if my guide/professor rejects the research proposal?", a: "Our service is completely flexible and tailor-made to the customer. If your supervisor rejects the proposal, please share the feedback and the areas they want changed. We can make amendments to the dissertation topics and proposal until it is fully accepted. This support is included as part of our unlimited revisions commitment." },
   { q: "Why is Tutors India required for your research proposal writing?", a: "Tutors India has dedicated researchers who undergo numerous in-depth research sessions before making research proposals. We put 10–15 professionals for survey purpose alone and also collect sample sizes of real customers based on product/services. Our writers are trained at institutions including Harvard, Oxford, and London Business School, and have minimum 5 years of research experience." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I was really struggling with my final semester master's degree, that's when I heard about Tutors India. They really guided me the whole way to produce research proposal just from the idea of a research title. The level of detail which went into creating the research proposal is astonishing. The technical concepts they advised for methodology were very advanced and algorithms used were state of the art.", author: "David Morrison", location: "" },
@@ -79,6 +88,7 @@ const relatedServices = [
 export default function DissertationProposalPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

@@ -18,9 +18,19 @@ const faqs = [
   { q: "Can you help design online surveys?", a: "Yes. We design and set up online surveys using SurveyMonkey, Google Forms, Qualtrics, LimeSurvey, and other platforms. We configure question logic, skip patterns, branching, and ensure the survey collects data in the optimal format for your statistical analysis (directly exportable to SPSS or Excel)." },
   { q: "What information do I need to provide to develop my research instrument?", a: "To develop your research instrument, please provide: your research questions and hypotheses, the constructs or variables you want to measure, your target population and sampling approach, any existing validated scales you want to adapt, your university's ethics requirements, and the intended analysis method (SPSS, R, etc.)." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function ToolDevelopmentPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -35,6 +35,15 @@ const faqs = [
   { q: "What PhD dissertation parts does Tutors India provide?", a: "We offer support for any individual chapter: Introduction, Statistical Analysis, Materials/Methods/Methodology, Literature Review, Findings or interpretation of statistical analysis, Conclusion, Discussion, or any other chapter. We also offer complete chapter-wise writing from start to finish." },
   { q: "Why do you provide free chapter drafts for all orders?", a: "We provide free chapter drafts after completing each chapter to ensure that our process flow is consistent. It helps researchers identify changes and give feedback to improve chapter-wise, making it easy to explain your work confidently to your supervisory committee. Feedback is immediately incorporated and changes made at no additional cost." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Availing services from Tutors India was perhaps the best decision in my PhD journey. The writers were patient and more than willing to answer all my queries. They improved the Literature review to a great extent! Thank you for extraordinary work!", author: "Alexander", location: "Algeria", avatar: "/images/testimonials/t16.jpg" },
@@ -52,6 +61,7 @@ const subjects = [
 export default function PhDDissertationPartPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

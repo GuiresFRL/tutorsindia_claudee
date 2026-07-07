@@ -32,6 +32,15 @@ const faqs = [
   { q: "Can you prepare me for online/virtual viva voce examinations?", a: "Yes. We provide preparation specifically tailored for both in-person and virtual viva voce examinations. This includes advice on technology setup, screen-sharing your presentation, maintaining eye contact through camera, managing nerves in a remote environment, and presenting your research effectively through a digital platform." },
   { q: "What subject areas do you support for PhD viva preparation?", a: "Our 2000+ expert writers cover all academic disciplines including Business Management, Finance, Engineering, Computer Science, Medicine, Healthcare, Law, Social Sciences, Arts & Humanities, Biological Sciences, Economics, Education, Journalism, Agriculture, Hospitality, and many more. We carefully match your viva preparation specialist to your specific research field." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "My PhD Defence viva was conducted successfully and I am now waiting for the formal notification from the University. Thank you once again for your support throughout the preparation process.", author: "Oliver", location: "Denmark", avatar: "/images/testimonials/t18.jpg" },
@@ -49,6 +58,7 @@ const subjects = [
 export default function PhDVivaVoicePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

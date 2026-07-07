@@ -41,6 +41,15 @@ const faqs = [
   { q: "How are revisions handled for critical reviews?", a: "We provide unlimited free revisions for any changes or feedback based on the original instructions. Minor changes are completed within 24 working hours and significant changes within 48 working hours. If your supervisor or tutor provides specific feedback after delivery, share it with us and we will revise the review accordingly at no additional charge." },
   { q: "Can you write a critical review of multiple sources?", a: "Yes, we can write critical reviews of single sources (individual article/book reviews) as well as comparative reviews of multiple sources. For literature-based research, we can critically evaluate and synthesise multiple sources within a specific topic area, identifying key themes, debates, methodological approaches, and research gaps across the reviewed literature." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Applied substantive literature writing services, pleased with results from Tutors India. Good quality work, adequate changes made in literature review of my research paper. Received polished and advance quality literature review. Highly satisfactory performance!", author: "Shawn Garcia", location: "UK", avatar: "/images/testimonials/t06.jpg" },
@@ -58,6 +67,7 @@ const subjects = [
 export default function CriticalReviewPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

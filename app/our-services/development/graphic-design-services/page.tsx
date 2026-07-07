@@ -17,9 +17,19 @@ const faqs = [
   { q: "What formats do you deliver graphic design files in?", a: "We deliver files in all required formats — print-ready PDF, high-resolution PNG and JPEG, editable Illustrator or InDesign files, and web-optimised formats. We always provide editable source files so you can make future modifications." },
   { q: "Can you create graphics for my dissertation or thesis?", a: "Yes. We create professional figures, diagrams, conceptual frameworks, research model illustrations, and infographics specifically for dissertation and thesis submissions. All graphics meet the quality standards and resolution requirements of UK, US, and Australian universities." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function GraphicDesignPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

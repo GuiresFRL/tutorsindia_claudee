@@ -25,6 +25,15 @@ const faqs = [
   { q: "Do you provide interpretation alongside the statistical output?", a: "Yes. All statistical analysis is accompanied by clear written interpretation aligned to your research objectives and hypotheses. We explain what the results mean in the context of your study and, for Advanced and Premium tiers, compare findings with published literature." },
   { q: "How quickly can you complete statistical analysis?", a: "We offer a 4–6 hour express service for urgent statistical analysis requests. Standard analysis is completed within 24–48 hours. Complex analyses (SEM, longitudinal analysis, advanced econometrics) may take 3–5 days. Contact us immediately with your deadline for an accurate timeline." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Tutors India is highly recommended! I was able to complete my doctoral studies because of their statistical analysis ability. Throughout the process, they were meticulous, prompt, and enthusiastic. Without their assistance, I would not have been able to complete the statistical analyses.", author: "Divit", avatar: "/images/testimonials/Divit.jpg" },
@@ -35,6 +44,7 @@ const testimonials = [
 export default function StatisticalServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

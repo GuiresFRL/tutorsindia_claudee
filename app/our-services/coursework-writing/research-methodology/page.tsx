@@ -48,6 +48,15 @@ const faqs = [
   { q: "What software do you use for data analysis?", a: "We use SPSS, SPSS AMOS, R, STATA, SAS, E-Views, Minitab, Epi-Info, and Excel for quantitative analysis. For qualitative analysis we use NVIVO, Atlas-ti, MAXQDA, and Wordstat. All software outputs are shared as appendix material with screenshots documenting the analytical process." },
   { q: "Can you help if my supervisor has rejected my methodology?", a: "Yes. If your supervisor has rejected your methodology chapter, please share their specific feedback and we will comprehensively revise and strengthen the methodology. We provide a point-by-point response to all supervisor comments and unlimited revisions until the chapter is fully accepted. This is included at no additional charge." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "It was hard to write the research methodology for my research proposal. Tutors India helped me in drafting research methodology and it was the most life-changing experience I ever had. The work they provided was amazing and valuable. Thank you team.", author: "Chitaksh", avatar: "/images/testimonials/t21.jpg" },
@@ -64,6 +73,7 @@ const subjects = [
 export default function ResearchMethodologyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

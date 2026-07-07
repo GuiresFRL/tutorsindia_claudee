@@ -35,6 +35,15 @@ const faqs = [
   { q: "Is there any possibility of plagiarism in my UG dissertation?", a: "No, we give 100% guarantee of 0% plagiarism on your dissertation document. All our excellent writers are experienced in writing plagiarism-free content. We use internationally accepted premium Turnitin to check all work. At Tutors India, we provide a plagiarism-free dissertation paper report to ensure that your dissertation document is unique." },
   { q: "How much do you charge for undergraduate dissertation revisions?", a: "We provide unlimited revisions to your undergraduate dissertation at free of cost. We do not charge even a penny for any number of revisions since we are committed to 100% customer satisfaction. Our commitment continues until you are completely satisfied with the work delivered." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Unbelievable! I would say the writer followed all of my specifications and produced a fantastic dissertation. What I particularly enjoy is that no one thinks that my dissertation was not authored by me. Thanks.", author: "Dr. Olivia W. Carter, MD, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -54,6 +63,7 @@ const subjects = [
 export default function UGDissertationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

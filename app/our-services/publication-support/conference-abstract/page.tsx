@@ -14,10 +14,20 @@ const faqs = [
   { q: "How quickly can you deliver a conference abstract?", a: "Standard conference abstract delivery is within 24–48 hours. Express delivery within a few hours is available for urgent submission deadlines. Contact us immediately with your submission deadline." },
   { q: "Do you help with the full paper after the abstract is accepted?", a: "Yes. Tutors India provides end-to-end conference paper support — from abstract writing through to the full paper, PowerPoint presentation, and speaker notes. Once your abstract is accepted, we can develop the complete conference paper to the conference's author guidelines." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 export default function ConferenceAbstractPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

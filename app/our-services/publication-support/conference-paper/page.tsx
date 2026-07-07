@@ -23,6 +23,15 @@ const faqs = [
   { q: "How quickly can you write a conference paper?", a: "Timeline depends on the paper length and complexity. A standard 6–8 page conference paper typically takes 5–7 days. Extended abstracts can be completed within 24–48 hours. Contact us with your submission deadline for an accurate assessment." },
   { q: "Do you help with the presentation as well as the paper?", a: "Yes. We offer a complete conference package including the full paper, extended abstract, PowerPoint presentation slides, speaker notes, and Q&A preparation. Each element is tailored to your specific conference format and time allocation." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Pursuing masters in mechatronics, I wanted to present a conference paper for my final year project. It was difficult to start with the abstract. I can tell that it is one of the best sites for writing conference papers. They submitted my work within a limited period of time and also taught me to improve my writing.", author: "Arnav", avatar: "/images/testimonials/t22.jpg" },
@@ -33,6 +42,7 @@ const testimonials = [
 export default function ConferencePaperPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -9,9 +9,19 @@ const faqs = [
   { q: "Do you follow scientific reporting guidelines?", a: "Yes. We ensure compliance with all major scientific reporting guidelines including CONSORT (for randomised controlled trials), STROBE (for observational studies), PRISMA (for systematic reviews and meta-analyses), CARE (for case reports), STARD (for diagnostic accuracy studies), and ARRIVE (for animal research)." },
   { q: "How quickly can you complete scientific editing?", a: "Standard scientific editing for a journal manuscript (3,000–5,000 words) is typically completed within 2–5 days. Longer documents or comprehensive technical editing may take up to 7 days. Express service is available for urgent journal submission deadlines." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function ScientificEditingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -10,9 +10,19 @@ const faqs = [
   { q: "Do you translate to and from all languages?", a: "We support translation between English and all major world languages including French, German, Spanish, Italian, Portuguese, Dutch, Russian, Japanese, Chinese, Arabic, Korean, Turkish, Polish, and Swedish. Contact us to confirm availability for your specific language pair." },
   { q: "How do you ensure translation quality?", a: "All translations are performed by native speakers of the target language who are also academic subject matter experts. Every translated document is reviewed by a second translator for accuracy. We also offer back-translation verification for critical research documents to ensure accuracy." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function TranslationServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

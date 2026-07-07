@@ -38,6 +38,15 @@ const faqs = [
   { q: "How quickly can I get my reflective report?", a: "After receiving your task, timelines are discussed with our writers. High-quality reflective reports are available on an urgent basis with on-time delivery guaranteed. Minor changes are completed within 24 working hours and significant changes within 48 working hours. Contact us immediately with your deadline for an accurate timeline." },
   { q: "Do you provide unlimited revisions for reflective reports?", a: "Yes, unlimited free revisions are offered for any changes or feedback based on the original instructions. Slight changes typically require one day; substantial changes require up to one week maximum. No refunds are provided, but extensive revision options are available to ensure you are completely satisfied with the final work." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I'm grateful to the team who guided me all the way through for completing my assignment work in financial regulation. It was excellent — they provided me with high quality technical content and my assignment was submitted on time. The academic writing service was more than I expected.", author: "Divyansh", avatar: "/images/testimonials/t20.jpg" },
@@ -55,6 +64,7 @@ const subjects = [
 export default function ReflectiveReportPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

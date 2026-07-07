@@ -37,6 +37,15 @@ const faqs = [
   { q: "What if my paper is rejected for language errors?", a: "We are totally confident in our editing service. We will be happy to re-edit your document for free in case your paper is rejected by your journal for English language errors that our editors previously edited. This free re-edit guarantee does not cover material added to the paper after our final editing was completed." },
   { q: "Do you provide a certificate of language editing?", a: "Yes. We allow you to submit a certificate of language editing along with the final draft of your paper to your journal to prove that your manuscript has been edited by a native English-speaking editor. Our certificate proves your paper is already edited for English language — a step closer to publication. However, not every paper earns a certificate; every document is considered individually." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I approached Tutors India for the second time to have my paper edited. I'm quite impressed with the editing quality and want to use Tutors India's services in the future. The editor performed an excellent job, and the crew that assisted me throughout the editing process was quite helpful.", author: "Dr. Henrik J. Olofsson, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -54,6 +63,7 @@ const subjects = [
 export default function LanguageEditingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -47,6 +47,15 @@ const faqs = [
   { q: "Which citation styles do you support?", a: "We support all major citation styles including Harvard, APA (7th Edition), MLA, Chicago, Vancouver, OSCOLA (for law), Turabian, IEEE, and any other university-specific style. Simply specify your required referencing style when ordering and all references will be formatted accordingly." },
   { q: "How quickly can you collect references?", a: "Standard reference collection (10–30 sources) is delivered within 24–48 hours. Larger collections (50+ sources) may take 3–5 days depending on the breadth of the topic. Urgent delivery is available. Contact us with your requirements for an accurate timeline." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Tutors India has expanded its academic services and provided me with solid reference collection that I am looking for. They restlessly worked for gathering references for my research work all over the world which are of great value. The best experience you can imagine!", author: "Ishir", avatar: "/images/testimonials/t18.jpg" },
@@ -64,6 +73,7 @@ const subjects = [
 export default function ReferencesCollectionPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

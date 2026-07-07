@@ -35,6 +35,15 @@ const faqs = [
   { q: "Is my personal and academic information secure?", a: "Absolutely. We maintain strict confidentiality and data protection measures for all clients. Your personal information, project details, and communication remain secure throughout the process. We never share your data with third parties. Your privacy is always protected with 128-bit SSL encryption and NDA-signed writers." },
   { q: "Do you offer revisions if changes are required?", a: "Yes, we provide unlimited revision support to ensure your essay meets your expectations. If any modifications are required based on the original instructions, our team will address them promptly. Minor changes are completed within 24 working hours and significant changes within 48 working hours. Student satisfaction is our priority." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Whether you believe it or not, I am completely delighted with the essay you wrote for me. I received a wonderful grade, and I am now certain that your promises are true. Tutors India, thank you.", author: "Dr. Declan O'Connell, MD, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -53,6 +62,7 @@ const subjects = [
 export default function EssayWritingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

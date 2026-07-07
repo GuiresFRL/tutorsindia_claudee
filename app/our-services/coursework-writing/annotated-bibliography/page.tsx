@@ -67,6 +67,15 @@ const faqs = [
   { q: "Do you provide sample annotated bibliographies?", a: "Yes, we share some of our annotated bibliography sample works so it is easy for students to analyse the style and quality of our work. This helps you understand exactly what you will receive before placing your order. Contact us or visit our sample works page to review examples." },
   { q: "What subject areas do you cover for annotated bibliography?", a: "We cover all academic subjects including Psychology, English Essays, Marketing, Chemistry, Science, Public Health, Performance Management, Social Work, Accounting, Human Resource Management, and Law (including case law, legislation, textbooks, and journals). Our 2000+ expert team covers every major academic discipline." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Availing services from Tutors India was perhaps the best decision in my academic journey. The writers were patient and more than willing to answer all my queries. They improved the literature review to a great extent! Thank you for extraordinary work!", author: "Alexander", location: "Algeria", avatar: "/images/testimonials/t16.jpg" },
@@ -83,6 +92,7 @@ const subjects = [
 export default function AnnotatedBibliographyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

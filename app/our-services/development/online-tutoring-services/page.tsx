@@ -17,9 +17,19 @@ const faqs = [
   { q: "Can tutors help with my dissertation?", a: "Yes. Our tutors provide comprehensive dissertation support — from topic selection and proposal development through literature review, methodology, data analysis, and final writing. They can review chapter drafts, explain statistical concepts, help you understand feedback from supervisors, and prepare you for your viva voce." },
   { q: "How many sessions will I need?", a: "The number of sessions depends on your specific needs and academic goals. Some students need a single clarification session (1–2 hours), while others benefit from ongoing weekly support throughout their programme. We offer flexible scheduling so you can book as many or as few sessions as you need." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function OnlineTutoringPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

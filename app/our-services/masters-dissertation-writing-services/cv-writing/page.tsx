@@ -31,6 +31,15 @@ const faqs = [
   { q: "Is my information on CV being confidential?", a: "Yes, we keep all your information confidential without a doubt. All documents are accessed only by writers who have signed NDAs with Tutors India, and your financial information is protected by 128-bit SSL encryption. If you feel troubled sharing information, we can send only the sample CV template that suits your needs to start the process." },
   { q: "Can I select my own CV writer from Tutors India?", a: "If you have already used Tutors India's CV writing service, you may request the same writer you worked with originally. It is important to check with our service providers for writer availability to ensure the timeline can be met. We also work for urgent delivery — cost may vary based on turnaround requirements." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I can't express how pleased I am with how the resume turned out. I used to worry that no one would hire me when I looked at my résumé, but now that I've changed it, I'm much more confident in applying for jobs.", author: "Dr. Mikael Sundström, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -49,6 +58,7 @@ const subjects = [
 export default function CVWritingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

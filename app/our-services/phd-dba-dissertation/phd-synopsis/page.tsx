@@ -36,6 +36,15 @@ const faqs = [
   { q: "What subject areas do you cover for PhD Synopsis writing?", a: "Services span broad areas of research including employee engagement, customer behaviour, project management, knowledge management, international marketing, performance management, strategic management, international business, MBA specialisations (HR, Finance, Economics, Operations), healthcare, engineering, social sciences, computer science, politics, art, and statistics." },
   { q: "What information is included in a PhD synopsis?", a: "The synopsis comprises: introduction (title, background of study, objectives), problem statement (literature review), hypothesis, scope and limitation, research methodology, location, cost estimation, and time frame. We follow your specific university guidelines for the exact structure required." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const subjects = [
   "Arts & Humanities", "Biological Sciences", "Business & Management Studies", "Marketing & Communication",
@@ -47,6 +56,7 @@ const subjects = [
 export default function PhDSynopsisPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

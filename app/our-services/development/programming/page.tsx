@@ -18,6 +18,15 @@ const faqs = [
   { q: "How do you ensure the code is plagiarism-free?", a: "All code is written from scratch by our developers. We use industry-standard plagiarism detection for code (MOSS, JPlag) to verify originality. No code templates or recycled solutions are used. Every project is unique and custom-developed for your specific requirements." },
   { q: "Can you fix or debug existing code?", a: "Yes. We offer code review, debugging, optimisation, and refactoring services. Simply share your existing code along with the error messages or performance issues, and our developers will diagnose and fix the problems." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 const testimonials = [
   { quote: "Tutors India helped me with writing my dissertation in Python coding and I am very much satisfied with the protocol that they provided. Your expertise and professionalism is extraordinary. It is such a pleasure to work with Tutors India.", author: "Liam", avatar: "/images/testimonials/t17.jpg" },
   { quote: "Thank Tutors India for the wonderful job in helping me develop my algorithm in computer programming. Everyone was professional, excellent and hard working. Thanks to them, I was able to achieve my goal on time.", author: "Harrison", avatar: "/images/testimonials/t16.jpg" },
@@ -26,6 +35,7 @@ const testimonials = [
 export default function ProgrammingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

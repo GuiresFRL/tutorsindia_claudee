@@ -297,23 +297,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 })();
           `}}
         />
-        {/* Tawk.to Live Chat — deferred until page is interactive to avoid blocking LCP */}
-        <Script
-          id="tawk-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: `
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-Tawk_API.onLoad = function(){ Tawk_API.minimize(); };
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/679b32f93a842732607721d7/1iir3u863';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-          `}}
-        />
 
         {/* WhatsApp floating button — bottom left */}
         <a

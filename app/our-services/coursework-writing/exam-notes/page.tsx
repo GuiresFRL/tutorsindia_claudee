@@ -30,6 +30,15 @@ const faqs = [
   { q: "How quickly can you deliver exam notes?", a: "Exam notes can be delivered quickly depending on the scope. Single topic notes can be ready within 24–48 hours. Full module revision guides may take 3–5 days. Contact us immediately with your exam date for an accurate timeline. Urgent delivery is available." },
   { q: "Are the exam notes plagiarism-free?", a: "Yes. All exam notes are written from scratch using credible academic sources and are scanned using Turnitin before delivery. Less than 5% plagiarism is guaranteed. The notes are written in your own words and paraphrased appropriately so they can be used as legitimate study aids." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Best experience you can imagine. When my exam was nearing, I ran out of notes and was helpless. Contacted Tutors India for assistance and got my notes completed on time and simultaneously learnt many things. For an international student, getting work done without travelling makes the whole experience incredible.", author: "Bhavin", avatar: "/images/testimonials/t22.jpg" },
@@ -46,6 +55,7 @@ const subjects = [
 export default function ExamNotesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

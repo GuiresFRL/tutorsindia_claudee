@@ -17,9 +17,19 @@ const faqs = [
   { q: "Do you provide source code with the project?", a: "Yes. All software development projects include full source code, documentation, deployment guides, and technical specifications. All code is original and developed specifically for your project. NDA-signed developers ensure complete confidentiality." },
   { q: "Can you scale the software after initial delivery?", a: "Yes. We engineer scalable and high-performing software solutions to meet the challenges of our clients. Our lean approach ensures niche features can be added or removed with ease, which is not possible with off-the-shelf software solutions. The solution syncs well with business operations and can be scaled quickly." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function SoftwareDevelopmentPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

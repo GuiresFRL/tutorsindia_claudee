@@ -36,6 +36,15 @@ const faqs = [
   { q: "What specific sections does a PhD research plan include?", a: "A comprehensive PhD research plan includes: (1) Specific Aims — scientific questions, goals, objectives, hypothesis; (2) Background and Significance — literature context and justification; (3) Preliminary Studies — any pilot work conducted; (4) Research Design and Methods — detailed methodology, sample, tools, and analysis. Additional sections include timeline, infrastructure requirements, and references." },
   { q: "Can the research plan be used as a basis for my full research proposal?", a: "The PhD research plan provides valuable starting guidelines to kick-start your dissertation writing. While the plan serves as a foundation, a full research proposal has additional university-specific requirements. We offer a separate PhD Research Proposal service that builds comprehensively on the research plan, expanding each section to meet your university's full proposal requirements." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "The attention to detail was incredible. It felt like an expert academic partner guiding me throughout the entire research planning process. I couldn't have started my PhD without this support.", author: "Layla Al Mansoori", avatar: "/images/testimonials/layla-al-mansoori.webp" },
@@ -53,6 +62,7 @@ const subjects = [
 export default function PhDResearchPlanPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

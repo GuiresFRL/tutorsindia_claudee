@@ -23,10 +23,20 @@ const faqs = [
   { q: "Do you help with Masters and PhD engineering theses?", a: "Yes. We provide comprehensive support for Masters and PhD engineering dissertations and theses — from topic selection and literature review through methodology, experimental design, results, discussion, and conclusions. Our engineering experts have experience at both Masters and doctoral level." },
   { q: "How do you handle complex engineering calculations?", a: "Our engineering writers hold Masters or PhD degrees in the relevant engineering discipline. They are capable of describing, explaining, and presenting complex engineering calculations, simulations, and mathematical derivations in clear academic writing aligned to your university's formatting requirements." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 export default function EngineeringResearchPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

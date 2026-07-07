@@ -17,9 +17,19 @@ const faqs = [
   { q: "Do you provide ongoing website maintenance?", a: "Yes. We provide ongoing website maintenance, hosting support, security updates, performance optimisation, content updates, and feature additions. We offer flexible maintenance packages to keep your website running smoothly after delivery." },
   { q: "How long does it take to build a website?", a: "Timeline depends on complexity. A simple corporate website takes 1–2 weeks. E-commerce sites typically take 3–6 weeks. Complex web applications may take 2–3 months. Contact us with your specific requirements for an accurate project timeline and cost estimate." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function WebSolutionsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

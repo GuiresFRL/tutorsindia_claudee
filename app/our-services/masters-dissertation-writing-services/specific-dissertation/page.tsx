@@ -58,6 +58,15 @@ const faqs = [
   { q: "How can I be sure my specific dissertation will be accepted?", a: "At Tutors India, we have been helping all sorts of research from PhD scholars to Masters-level research work for more than 22 years. We have helped complete 3,500+ PhDs and 8,000+ Masters dissertations. We provide unlimited revisions on whatever we commit, and our team works with you until your supervisor is satisfied." },
   { q: "If I am not satisfied with my dissertation, will it be replaced?", a: "If you are not satisfied with the work being done, we appreciate you specifying/providing us directional comments and feedback, so we can check with our expertise and provide justification for the same. We provide unlimited revisions on whatever we commit, completely free of charge." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const subjects = [
   "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
@@ -70,6 +79,7 @@ const subjects = [
 export default function SpecificDissertationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

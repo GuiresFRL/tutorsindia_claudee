@@ -17,9 +17,19 @@ const faqs = [
   { q: "How long does it take to complete an animation project?", a: "Timeline depends on the complexity and length of the animation. A simple 3D model takes 2–5 days. Architectural flythroughs typically take 1–2 weeks. Full animation productions take 3–6 weeks. Contact us with your specific requirements for an accurate timeline." },
   { q: "Do you deliver editable project files?", a: "Yes. We deliver all editable source files (3ds Max, Maya, Blender project files) along with the final rendered outputs in your required format (MP4, AVI, MOV, PNG sequences). You retain full ownership of all delivered assets." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function AnimationServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -40,6 +40,15 @@ const faqs = [
   { q: "How long will it take to complete a PhD Academic presentation?", a: "The timeline depends on the presentation length, features, and graphic needs. Standard presentation design takes 48–72 hours. Express 24-hour delivery is available for urgent committee submission deadlines. Contact us with your deadline for an immediate feasibility assessment." },
   { q: "Will you provide revisions for my PhD presentation?", a: "At Tutors India, we provide unlimited revisions until you get 100% satisfaction. Simply share your feedback and our designers will implement changes promptly. Work is shared in draft form allowing for reviewer feedback before final delivery — amendments are made as per your request at no additional cost." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I was blown away by the ease and speed with which I was able to place my order. The presentation was excellent and helped me impress my doctoral committee. This is a service I will definitely use again!", author: "Dr. Yelena P. Orlov, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -56,6 +65,7 @@ const subjects = [
 export default function PhDPresentationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

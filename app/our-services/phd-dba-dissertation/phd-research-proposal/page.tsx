@@ -45,6 +45,15 @@ const faqs = [
   { q: "What if my guide/professor rejects the research proposal?", a: "If your supervisor or professor rejects the proposal, please share their specific feedback and requirements for revision. We will comprehensively revise the proposal addressing every point of feedback. Our service is completely flexible and we work until your proposal is accepted by your supervisor." },
   { q: "Why is Tutors India the right choice for PhD research proposal writing?", a: "Tutors India has dedicated researchers who undergo numerous in-depth research sessions before developing research proposals. We put 10–15 professionals into the research and survey process alone. Our writers have experience in research methodology, industry experience, and educational degrees from international top-ranked universities in India, the US, and the UK. We have helped 3,500+ PhD candidates since 2001." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Tutors India gathered enormous data for my research work on complexity in consumer problem. It helped me complete my research work faster. I am overwhelmed by their quality and speed of service. I would recommend Tutors India to any research scholar who finds it challenging to write a research proposal.", author: "Divij", avatar: "/images/testimonials/t18.jpg" },
@@ -63,6 +72,7 @@ const subjects = [
 export default function PhDResearchProposalPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

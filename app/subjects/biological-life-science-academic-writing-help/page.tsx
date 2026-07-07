@@ -43,6 +43,16 @@ If you need any other research writing support, please select 'other' on our pri
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
+
 const testimonials = [
   {
     quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.",
@@ -128,6 +138,7 @@ const subjects = [
 export default function BiologicalLifeScienceWritingPage() {
   return (
     <main style={{ color: "#222" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1a2a6c 0%, #2d3a5e 100%)", color: "#fff", padding: "60px 20px 40px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 40, flexWrap: "wrap" }}>
@@ -189,10 +200,7 @@ export default function BiologicalLifeScienceWritingPage() {
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "Merriweather, serif", fontWeight: 800, color: "#1a2a6c", marginBottom: 16, fontSize: "clamp(1.1rem,2.5vw,1.5rem)" }}>Biological &amp; Life Science Writing from qualified Expert</h2>
           <p style={{ fontSize: 16, lineHeight: 1.8, color: "#444", marginBottom: 20 }}>
-            Writing a biology and life science writing can be stressful, specifically when your objective is to obtain a good grade. Yet, for many students obtaining an A is less a matter while &apos;figuring out&apos; what the professor &apos;wants&apos; is more matters.
-          </p>
-          <p style={{ fontSize: 16, lineHeight: 1.8, color: "#444", marginBottom: 20 }}>
-            Since the biology and life science is a vast subject having so many theories and models &amp; techniques; it might prove as cumbersome to students. This writing needs wide extensive study involving econometric books, magazines, references which should be translated into a well laid out dissertation writing with heading, subheading, introduction, body, conclusion enumerating valid points of research.
+            Biological and life science research combines experimental rigour with structured scientific writing. Whether your study follows a systematic review protocol (PRISMA), a randomised controlled trial (CONSORT), or a laboratory-based empirical design, your dissertation must meet the methodological standards of high-impact journals indexed on PubMed, Web of Science, and Scopus. Our specialist writers apply Vancouver, APA, or Harvard referencing — whichever your institution requires — and are proficient in data analysis tools including SPSS, R, and GraphPad Prism.
           </p>
           <h3 style={{ fontFamily: "Merriweather, serif", fontWeight: 700, color: "#1a2a6c", marginBottom: 10 }}>We use subject-specific language, exemplary presentation that demonstrates clear, logical, imaginative, creative &amp; Original</h3>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: "#555", marginBottom: 20 }}>

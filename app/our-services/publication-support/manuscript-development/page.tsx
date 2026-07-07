@@ -29,6 +29,15 @@ const faqs = [
   { q: "How do you ensure the manuscript meets journal standards?", a: "Our editors are native English speakers with industry experience and educational degrees from international and top-ranked universities. They are familiar with the specific requirements of major journals across Medicine, Engineering, Business, Social Sciences, and Life Sciences." },
   { q: "What is the turnaround time for manuscript editing?", a: "Standard proofreading and language editing is completed within 24–48 hours. Technical editing and rewriting typically takes 3–7 days depending on the length and complexity. Express services are available. Contact us with your submission deadline for an accurate timeline." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "This is my first time writing a manuscript for an international publication. Thank you so much for helping me revise my work, Tutors India. My work has now been accepted by a prestigious international publication Q1 in the subject of education.", author: "Daksha", avatar: "/images/testimonials/Daksha.jpg" },
@@ -41,6 +50,7 @@ const subjects = ["Medicine & Health", "Biological Sciences", "Engineering & Tec
 export default function ManuscriptDevelopmentPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

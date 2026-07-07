@@ -17,9 +17,19 @@ const faqs = [
   { q: "Do you also provide language editing alongside technical editing?", a: "Yes. Our premium technical editing service includes both technical and language editing — ensuring your manuscript is both technically sound and linguistically polished. This comprehensive service is the most appropriate for journal submissions and dissertation final drafts." },
   { q: "How quickly can you complete technical editing?", a: "Standard technical editing is completed within 3–7 days depending on document length and complexity. Express service is available for urgent deadlines. Contact us with your submission deadline for an accurate timeline assessment." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function TechnicalEditingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

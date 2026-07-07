@@ -56,6 +56,15 @@ const faqs = [
   { q: "Can I see client sample work of poster presentation?", a: "We do not show client sample presentations because they are confidential. However, we do show our own sample presentations, which are available on our Sample Work page and are purely done by our expert designers. These give you a clear indication of the quality and style of work we produce." },
   { q: "Will you do revisions for my poster presentation?", a: "Our expertise strives to produce work that meets your requirements from the first draft. At Tutors India, we provide unlimited revisions until you get 100% satisfaction. Simply share your feedback and our designers will implement changes promptly. Work is shared in draft form allowing for reviewer feedback before final delivery." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I was blown away by the ease and speed with which I was able to place my order, as well as the speed with which it was sent and arrived. The fabric poster was excellent. This is a service I will definitely use again!", author: "Dr. Yelena P. Orlov, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -77,6 +86,7 @@ const subjects = [
 export default function PosterPresentationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

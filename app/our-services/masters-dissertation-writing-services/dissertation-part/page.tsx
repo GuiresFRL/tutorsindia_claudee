@@ -43,6 +43,15 @@ const faqs = [
   { q: "I have heard stories about unqualified people writing dissertations. How do you ensure quality?", a: "Tutors India conducts brainstorming sessions so you get opportunities to talk with our experts directly — to understand their skill set and experience — before you decide to take the services. This company relies entirely on good word of mouth from clients who have experienced our service firsthand." },
   { q: "Why do you provide free drafts for all orders?", a: "We provide the Masters Part dissertation free draft after completing each chapter or dissertation part to ensure that our process flow is consistent. It helps students identify changes and give feedback to improve chapter-wise, so it is easy to explain to your committee through oral examination. Get back suggestions and instantly make changes." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const subjects = [
   "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
@@ -55,6 +64,7 @@ const subjects = [
 export default function DissertationPartPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

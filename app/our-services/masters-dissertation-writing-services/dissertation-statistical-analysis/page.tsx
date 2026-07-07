@@ -45,6 +45,15 @@ const faqs = [
   { q: "How quickly can you complete a statistical analysis?", a: "We offer express turnaround for urgent analysis — typically within 4–6 hours for simple analyses. Standard analysis is delivered within 24–48 hours. More complex analyses (SEM, meta-analysis, multi-level modelling, longitudinal analysis) may take 3–5 days. Contact us immediately for an accurate timeline based on your data." },
   { q: "Will you provide the SPSS data file and output?", a: "Yes. We deliver the complete SPSS (.sav) data file, syntax file (.sps), output file (.spv), and tables/figures formatted for your dissertation. Screenshots of all software output are also provided as appendix material. For qualitative analysis, NVIVO/Atlas-ti project files are shared along with coding framework and theme development documentation." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I was low and lacked confidence in writing. After lots of hard work they made progress and completed my dissertation. The complete work was beyond my expectation. Thank you!", author: "Sara", location: "" },
@@ -65,6 +74,7 @@ const subjects = [
 export default function StatisticalAnalysisPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

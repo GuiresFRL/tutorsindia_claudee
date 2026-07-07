@@ -48,6 +48,15 @@ const faqs = [
   { q: "Is there any possibility of plagiarism in my complete dissertation paper?", a: "No, we give 100% guarantee of 0% plagiarism report on your dissertation document. All our excellent writers are experienced in writing plagiarism-free content. Further, we use our internationally accepted premium Turnitin tool (plagiarism detection tool) to check all work. At Tutors India, we provide a plagiarism free dissertation paper report to ensure that your dissertation document is unique." },
   { q: "How much do you charge for master's dissertation revisions?", a: "We are committed to giving unlimited revisions to your dissertation full masters papers at free of cost. We do not charge even a penny for any number of revisions since we are committed to 100% customer satisfaction guarantee." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Thank you for the draft. I read the article and it has come out well.", author: "Finn", location: "UK" },
@@ -78,6 +87,7 @@ const relatedServices = [
 export default function FullDissertationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

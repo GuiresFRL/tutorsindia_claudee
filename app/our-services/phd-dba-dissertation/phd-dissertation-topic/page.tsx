@@ -28,6 +28,15 @@ const faqs = [
   { q: "Can I use my PhD dissertation topic and outline as a research proposal?", a: "The outline and dissertation topics that we provide are valuable starting guidelines to kick-start your dissertation writing. They serve as guidelines only — not as a complete research proposal, which has university-specific requirements. We offer a separate PhD Research Proposal service that builds comprehensively on the selected topic." },
   { q: "What if my guide/professor rejects the PhD topic and outline?", a: "The service we provide is completely flexible. We can tailor-make or customise your delivered topics based on the research area and supervisor feedback provided initially. Simply share the rejection feedback and we will revise the topics accordingly at no additional charge." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Tutors India provides me with a great deal of flexibility in terms of choosing courses and research areas. The specialists assisted me in choosing a unique and significant research topic, as well as moving on to the next stage of my research.", author: "N.M.", location: "US", avatar: "/images/testimonials/user-profile.png" },
@@ -46,6 +55,7 @@ const subjects = [
 export default function PhDDissertationTopicPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

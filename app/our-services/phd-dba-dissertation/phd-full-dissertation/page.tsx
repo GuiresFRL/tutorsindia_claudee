@@ -34,6 +34,15 @@ const faqs = [
   { q: "Is there any possibility of plagiarism in my PhD dissertation?", a: "No, we give 100% guarantee of 0% plagiarism on your PhD dissertation document. All work is checked using internationally accepted premium Turnitin before delivery. We provide a plagiarism-free dissertation report to ensure your document is unique. Our writing process involves thorough brainstorming and original research — not copy-pasting." },
   { q: "How much do you charge for PhD dissertation revisions?", a: "We provide unlimited revisions completely free of cost. We do not charge even a penny for any number of revisions since we are committed to 100% customer satisfaction. Our commitment continues until you achieve a satisfactory grade, including resit support." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I have defended my research few days ago and scored a very good grade. Thank you for all your support and guidance throughout the dissertation journey.", author: "Bryan", location: "Australia", avatar: "/images/testimonials/t15.jpg" },
@@ -55,6 +64,7 @@ const subjects = [
 export default function PhDFullDissertationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

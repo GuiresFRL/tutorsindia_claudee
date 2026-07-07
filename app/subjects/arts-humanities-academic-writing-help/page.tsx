@@ -43,6 +43,16 @@ If you need any other research writing support, please select 'other' on our pri
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
+
 const testimonials = [
   {
     quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.",
@@ -118,6 +128,7 @@ const databases = [
 export default function ArtsHumanitiesWritingPage() {
   return (
     <main style={{ color: "#222" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1a2a6c 0%, #2d3a5e 100%)", color: "#fff", padding: "60px 20px 40px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 40, flexWrap: "wrap" }}>
@@ -178,7 +189,7 @@ export default function ArtsHumanitiesWritingPage() {
       <section style={{ padding: "50px 20px", background: "#f8f9fb" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{ fontSize: 16, lineHeight: 1.8, color: "#444", marginBottom: 20 }}>
-            Since the arts &amp; humanities is a vast subject having so many theories and models &amp; techniques; it might prove as cumbersome to students. This writing needs wide extensive study involving econometric books, magazines, references which should be translated into a well laid out dissertation writing with heading, subheading, introduction, body, conclusion enumerating valid points of research. So as to make the writing work a professional one, it is better to hire professional legal writers. Dissertation writing service provided by us covers all the contents of the study.
+            Arts and Humanities dissertations demand rigorous engagement with primary sources — from archival manuscripts and literary texts to cultural artefacts and philosophical treatises. Your work must demonstrate mastery of interpretive frameworks such as hermeneutics, discourse analysis, and critical theory, while following the precise citation conventions (Chicago/Turabian, MLA, or MHRA) demanded by your institution. Our specialists draw on databases including JSTOR, Project MUSE, MLA International Bibliography, and PhilPapers to anchor your argument in the most current scholarly conversation.
           </p>
           <h3 style={{ fontFamily: "Merriweather, serif", fontWeight: 700, color: "#1a2a6c", marginBottom: 10 }}>We use subject-specific language, exemplary presentation that demonstrates clear, logical, imaginative, creative &amp; Original</h3>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: "#555", marginBottom: 20 }}>

@@ -23,6 +23,15 @@ const faqs = [
   { q: "Do you write regulatory documents?", a: "Yes. Our regulatory medical writers are experienced with ICH-GCP guidelines and can write clinical study reports (CSRs), clinical overviews, summaries of clinical efficacy and safety, investigator brochures, and regulatory submission documents for pharmaceutical and biotech companies." },
   { q: "Is patient confidentiality maintained in case reports?", a: "Absolutely. All clinical case reports are handled with full HIPAA/GDPR awareness and patient anonymisation. Patient identifiers are removed and cases are presented following CARE reporting guidelines. We also ensure ethical compliance documentation is included where required by the target journal." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Worked with Tutors India approaching a medical writer for my research paper in multiple chronic conditions. They are truly exceptional. Diligent, enthusiastic, with great attention to detail. They combined broad scientific knowledge and technical skills to produce documents of great quality delivered on time.", author: "Heidi", avatar: "/images/testimonials/t19.jpg" },
@@ -33,6 +42,7 @@ const testimonials = [
 export default function MedicalWritingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -29,6 +29,15 @@ const faqs = [
   { q: "What information do I need to provide for PhD coursework writing?", a: "To match exactly with your requirement, please provide: (i) complete coursework brief or instructions, (ii) university guidelines, (iii) rubric and marking criteria, (iv) word count and deadline, (v) any feedback or instructions from your supervisor, and (vi) any reference materials you have already collected. The more detail you provide, the more accurately we can match your requirements." },
   { q: "Is the coursework plagiarism-free?", a: "Yes, all doctoral coursework is written from scratch and checked using Turnitin before delivery. We guarantee less than 5% plagiarism and provide a plagiarism-free certificate on request. Our high-quality research writing process ensures your coursework is written after thorough brainstorming sessions with our team of professional researchers — not copy-pasted." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Statistical signal processing and its applications in sensor arrays were the focus of my study. The knowledge I gained during my PhD studies, as well as the research methods I learnt, are priceless to me. I am grateful to Tutors India for guiding me through my research project and teaching me research paper writing strategies.", author: "Charles", avatar: "/images/testimonials/Advik.jpg" },
@@ -47,6 +56,7 @@ const subjects = [
 export default function PhDCourseworkPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

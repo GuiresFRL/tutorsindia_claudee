@@ -35,6 +35,16 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
+
 const testimonials = [
   {
     quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.",
@@ -131,6 +141,7 @@ const dataSources = [
 export default function EconomicsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── Hero ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="eco-hero-inner">
@@ -175,7 +186,7 @@ export default function EconomicsPage() {
           Writing an economic paper can be stressful, specifically when your objective is to obtain a good grade. Yet, for many students obtaining an A is less a matter while &lsquo;figuring out&rsquo; what the professor &lsquo;wants&rsquo; is more matters. Economics addresses quantitative questions about employment, prices, demand/supply, growth rates, and trade as well as qualitative ones. Students need familiarity with theories and microeconomic/macroeconomic models, which presents challenges especially for working students.
         </p>
         <p style={{ color: "#555", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "14px" }}>
-          Since the econometric is a vast subject having so many theories, models &amp; techniques; it might prove as cumbersome to students. This writing needs wide extensive study involving econometric books, magazines, references which should be translated into a well laid out dissertation writing with heading, subheading, introduction, body, conclusion enumerating valid points of research.
+          Economics and finance dissertations require familiarity with empirical modelling tools (STATA, E-Views, R), large datasets from sources such as OECD, World Bank, and IMF eLibrary, and citation conventions ranging from the Harvard scheme to the style used in the American Economic Review. Whether your study is micro or macro, theoretical or applied, our econometricians structure your dissertation around a clear research question, defensible methodology, and rigorous interpretation of results.
         </p>
         <p style={{ color: "#555", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "14px" }}>
           We use subject-specific language, exemplary presentation that demonstrates clear, logical, imaginative, creative &amp; original work — we demonstrate exceptional ability in the appropriate use of the relevant literature, theory, methodologies, practices, tools, etc.

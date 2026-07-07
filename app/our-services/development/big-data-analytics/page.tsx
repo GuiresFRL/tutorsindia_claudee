@@ -11,6 +11,15 @@ const faqs = [
   { q: "Can you analyse large datasets for dissertation research?", a: "Yes. We can handle large datasets from various sources — structured, unstructured, and semi-structured data. We manage data cleaning, preprocessing, feature engineering, model training, evaluation, and result interpretation, presenting findings in a format suitable for your dissertation chapter." },
   { q: "What industries do you cover for big data analytics?", a: "We serve healthcare, financial services, retail, manufacturing, education, telecommunications, logistics, and many other industries. Our analytical team brings in-depth knowledge and domain expertise across a broad spectrum of industries, ensuring context-appropriate analysis and interpretation." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 const testimonials = [
   { quote: "I would like to express my satisfaction on the co-operation regarding the data collection of big data analysis of my project. The experts and the technical team did a very professional job. Well done and I hope we can continue to grow together.", author: "Faiyaz", avatar: "/images/testimonials/t18.jpg" },
   { quote: "Tutors India was not only easy to work with, but her communication was also excellent. I was badly struggling to complete my project in big data analytics since I am new to the statistics field. They met every deadline.", author: "Isabella", avatar: "/images/testimonials/t09.jpg" },
@@ -19,6 +28,7 @@ const testimonials = [
 export default function BigDataAnalyticsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

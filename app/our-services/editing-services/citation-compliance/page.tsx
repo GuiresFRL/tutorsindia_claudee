@@ -20,9 +20,19 @@ const faqs = [
   { q: "Can you format my dissertation references to my university's specific style?", a: "Yes. Every university has slightly different interpretations of standard citation styles. We review your university's specific referencing guide and ensure your references comply with their exact requirements — including how to cite specific source types (websites, legislation, grey literature, etc.)." },
   { q: "How quickly can you complete citation compliance?", a: "Standard citation checking and formatting for a dissertation (100 references) is typically completed within 24–48 hours. Larger documents or complex conversion between styles may take 3–5 days. Express service is available for urgent submission deadlines." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function CitationCompliancePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

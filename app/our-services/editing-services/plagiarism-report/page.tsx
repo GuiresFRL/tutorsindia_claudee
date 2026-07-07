@@ -9,9 +9,19 @@ const faqs = [
   { q: "Do you provide a plagiarism-free certificate?", a: "Yes. We issue a plagiarism-free certificate with every order that passes our scanning threshold. This certificate confirms your document has been checked using Turnitin and meets publication or submission standards. You can submit this certificate alongside your paper to your journal or university." },
   { q: "How quickly do you provide plagiarism reports?", a: "Standard plagiarism reports are delivered within 24 hours. Express reports can be provided within a few hours for urgent submissions. Contact us with your deadline for an immediate assessment." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 export default function PlagiarismReportPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -43,6 +43,16 @@ If you need any other research writing support, please select "other" on our pri
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
+
 const testimonials = [
   {
     quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.",
@@ -122,6 +132,7 @@ const tools = [
 export default function ComputerScienceITWritingPage() {
   return (
     <main style={{ color: "#222" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1a2a6c 0%, #2d3a5e 100%)", color: "#fff", padding: "60px 20px 40px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 40, flexWrap: "wrap" }}>
@@ -181,6 +192,9 @@ export default function ComputerScienceITWritingPage() {
       {/* About */}
       <section style={{ padding: "50px 20px", background: "#f8f9fb" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 15, lineHeight: 1.8, color: "#555", marginBottom: 20 }}>
+            Computer science and information technology dissertations sit at the intersection of theoretical rigour and applied problem-solving. Whether you are developing a novel algorithm, evaluating a machine-learning model, conducting a systematic literature review of cybersecurity frameworks, or building a distributed system, your work must meet the standards of peer-reviewed venues indexed in IEEE Xplore and the ACM Digital Library. Our writers are proficient in both LaTeX and MS Word thesis templates, and cover the full stack — from formal methods and software architecture to data engineering, cloud computing, and AI/ML research — with IEEE citation format applied throughout.
+          </p>
           <h3 style={{ fontFamily: "Merriweather, serif", fontWeight: 700, color: "#1a2a6c", marginBottom: 10 }}>We use subject-specific language, exemplary presentation that demonstrates clear, logical, imaginative, creative &amp; Original</h3>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: "#555", marginBottom: 24 }}>
             We demonstrate advances the state of the art, literature survey, uses new or advanced techniques, has elements of theory, &amp; experiment.

@@ -25,10 +25,20 @@ const faqs = [
   { q: "Do you provide documentation alongside the code?", a: "Yes. All code deliveries include comprehensive documentation — algorithm description, implementation guide, code comments, test cases, results and screenshots, and a technical report suitable for academic submission. We ensure the documentation meets your university's and journal's requirements." },
   { q: "How do you handle project confidentiality?", a: "All projects are assigned unique reference codes. Code and documentation are accessed only by developers who have signed NDAs with Tutors India. Your financial information is protected by 128-bit SSL encryption. We never share your project with third parties." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 export default function CodingAlgorithmPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

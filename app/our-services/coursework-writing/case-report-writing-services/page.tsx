@@ -65,6 +65,15 @@ const faqs = [
   { q: "Can you write a case report on a specific company?", a: "Yes. We write business case studies on specific companies, industries, or scenarios as required by your university. We research the company thoroughly using credible academic and industry sources and apply appropriate frameworks (SWOT, PESTLE, Porter's Five Forces) to produce a comprehensive analysis." },
   { q: "Do you offer revisions for case reports?", a: "Yes, we provide unlimited free revisions for any changes required based on the original instructions. Minor changes are completed within 24 working hours and significant changes within 48 working hours. If your tutor or supervisor provides specific feedback, share it with us and we will revise accordingly at no additional charge." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Express sincere gratitude to the team of Tutors India for guiding me to complete my case report. They prepared the case report for my research proposal and also guided me with thorough instructions. The support is fantastic!", author: "Audrey", avatar: "/images/testimonials/t07.jpg" },
@@ -81,6 +90,7 @@ const subjects = [
 export default function CaseReportPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

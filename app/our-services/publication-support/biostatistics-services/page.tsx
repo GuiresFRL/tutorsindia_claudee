@@ -25,6 +25,15 @@ const faqs = [
   { q: "Which software do you use for biostatistics?", a: "We use SPSS, R, SAS, STATA, Epi-Info, RevMan (for systematic reviews/meta-analysis), OpenBUGS (for Bayesian analysis), and Mplus (for structural equation modelling). We select the most appropriate tool based on your research design, regulatory requirements, and journal preferences." },
   { q: "Do you write the statistical methods section for manuscripts?", a: "Yes. We write complete statistical methods sections and results sections for clinical and epidemiological manuscripts, following journal-specific requirements and reporting guidelines (CONSORT for RCTs, STROBE for observational studies, PRISMA for systematic reviews, etc.)." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Tutors India team is very knowledgeable and great to work with. I've worked with them on biostatistical projects and their insights were invaluable for creating effective clinical study evaluation plans. I would highly recommend them to anyone seeking statistical support. Thank you!", author: "Jivika", location: "Albania", avatar: "/images/testimonials/Saisha.jpg" },
@@ -35,6 +44,7 @@ const testimonials = [
 export default function BiostatisticsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

@@ -23,10 +23,20 @@ const faqs = [
   { q: "Do you cover emerging areas like AI and Blockchain?", a: "Yes. Our CS writers are up-to-date with the latest developments in AI/ML, deep learning, blockchain, edge computing, quantum computing, federated learning, and other emerging areas. We write research papers that position your work within the current state of the art." },
   { q: "How do you ensure technical accuracy in CS papers?", a: "Our CS research writers hold PhD or Masters degrees in Computer Science, Software Engineering, or related fields from top universities. They verify all technical claims, algorithm descriptions, complexity analyses, and experimental methodologies before submission. All work undergoes peer review by a subject matter expert." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 export default function ComputerSciencePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>
