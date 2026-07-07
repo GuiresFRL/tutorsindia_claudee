@@ -1,135 +1,69 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/data/blog";
 
 const BASE = "https://tutorsindia.com";
-const now = new Date().toISOString();
+const ORIGINAL_SITEMAP = "https://www.tutorsindia.com/sitemap.xml";
 
-function url(path: string, priority: number, changefreq: MetadataRoute.Sitemap[number]["changeFrequency"]): MetadataRoute.Sitemap[number] {
-  return { url: `${BASE}${path}`, lastModified: now, changeFrequency: changefreq, priority };
-}
+export const revalidate = 86400; // re-fetch once per day
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages: MetadataRoute.Sitemap = [
-    url("/", 1.0, "daily"),
-    url("/about-us/", 0.8, "monthly"),
-    url("/our-services/", 0.9, "weekly"),
-    url("/our-process/", 0.7, "monthly"),
-    url("/our-writers/", 0.7, "monthly"),
-    url("/our-quality-procedures/", 0.7, "monthly"),
-    url("/guarantees/", 0.8, "monthly"),
-    url("/testimonials/", 0.7, "monthly"),
-    url("/faq/", 0.8, "monthly"),
-    url("/pricing/", 0.8, "monthly"),
-    url("/contact-us/", 0.9, "monthly"),
-    url("/blog/", 0.9, "daily"),
-    url("/free-resources/", 0.7, "monthly"),
-    url("/our-sample-works/", 0.8, "monthly"),
-    url("/our-sample-works/dissertation-samples/", 0.7, "monthly"),
-    url("/our-sample-works/essay-writing-samples/", 0.7, "monthly"),
-    url("/library/", 0.7, "weekly"),
-    url("/help-guide/", 0.7, "weekly"),
-    url("/ask-an-expert/", 0.7, "weekly"),
-    url("/referencing-and-citation-manual-of-styles/", 0.7, "monthly"),
-    url("/title/", 0.6, "monthly"),
-    url("/topic/", 0.6, "monthly"),
-    url("/essays/", 0.6, "monthly"),
-    url("/academy/", 0.7, "weekly"),
-    url("/insights/", 0.7, "weekly"),
-    url("/subjects/", 0.7, "monthly"),
-    url("/assignment-directory/", 0.7, "monthly"),
-    url("/privacy-policy/", 0.4, "yearly"),
-    url("/terms-and-conditions/", 0.4, "yearly"),
-    url("/coursework-assignment/", 0.7, "monthly"),
-    url("/recent-trends/", 0.5, "weekly"),
-    // Services — Dissertation
-    url("/our-services/masters-dissertation-writing-services/", 0.9, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/full-dissertation/", 0.8, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/dissertation-proposal/", 0.8, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/dissertation-part/", 0.8, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/dissertation-topic/", 0.8, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/", 0.8, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/cv-writing/", 0.7, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/ug-dissertation/", 0.7, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/resit-dissertation/", 0.7, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/specific-dissertation/", 0.7, "monthly"),
-    url("/our-services/masters-dissertation-writing-services/poster-presentation/", 0.7, "monthly"),
-    // PhD
-    url("/our-services/phd-dba-dissertation/", 0.9, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-full-dissertation/", 0.8, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-research-proposal/", 0.8, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-dissertation-part/", 0.8, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-dissertation-topic/", 0.7, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-synopsis/", 0.7, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-viva-voice/", 0.7, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-presentation/", 0.7, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-research-plan/", 0.7, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-dissertation-rework/", 0.7, "monthly"),
-    url("/our-services/phd-dba-dissertation/phd-coursework/", 0.7, "monthly"),
-    // Coursework
-    url("/our-services/coursework-writing/", 0.8, "monthly"),
-    url("/our-services/coursework-writing/essay-writing-services/", 0.8, "monthly"),
-    url("/our-services/coursework-writing/assignment-writing-services/", 0.8, "monthly"),
-    url("/our-services/coursework-writing/literature-review/", 0.7, "monthly"),
-    url("/our-services/coursework-writing/research-methodology/", 0.7, "monthly"),
-    url("/our-services/coursework-writing/reflective-report/", 0.7, "monthly"),
-    url("/our-services/coursework-writing/annotated-bibliography/", 0.7, "monthly"),
-    url("/our-services/coursework-writing/case-report-writing-services/", 0.7, "monthly"),
-    url("/our-services/coursework-writing/critical-review/", 0.7, "monthly"),
-    url("/our-services/coursework-writing/references-collection-services/", 0.7, "monthly"),
-    url("/our-services/coursework-writing/exam-notes/", 0.6, "monthly"),
-    // Editing
-    url("/our-services/editing-services/", 0.8, "monthly"),
-    url("/our-services/editing-services/language-editing/", 0.7, "monthly"),
-    url("/our-services/editing-services/scientific-editing-services/", 0.7, "monthly"),
-    url("/our-services/editing-services/formatting-service/", 0.7, "monthly"),
-    url("/our-services/editing-services/plagiarism-report/", 0.7, "monthly"),
-    url("/our-services/editing-services/translation-services/", 0.7, "monthly"),
-    url("/our-services/editing-services/transcription-services/", 0.7, "monthly"),
-    url("/our-services/editing-services/citation-compliance/", 0.7, "monthly"),
-    url("/our-services/editing-services/technical-editing/", 0.7, "monthly"),
-    url("/our-services/editing-services/grant-proposal-writing/", 0.7, "monthly"),
-    url("/our-services/editing-services/peer-review-submissions/", 0.7, "monthly"),
-    // Publication
-    url("/our-services/publication-support/", 0.8, "monthly"),
-    url("/our-services/publication-support/manuscript-development/", 0.7, "monthly"),
-    url("/our-services/publication-support/medical-writing/", 0.7, "monthly"),
-    url("/our-services/publication-support/statistical-services/", 0.7, "monthly"),
-    url("/our-services/publication-support/biostatistics-services/", 0.7, "monthly"),
-    url("/our-services/publication-support/conference-paper/", 0.7, "monthly"),
-    url("/our-services/publication-support/conference-abstract/", 0.7, "monthly"),
-    url("/our-services/publication-support/engineering-research/", 0.7, "monthly"),
-    url("/our-services/publication-support/computer-science-engineering-cse-and-it/", 0.7, "monthly"),
-    url("/our-services/publication-support/text-book-writing/", 0.7, "monthly"),
-    url("/our-services/publication-support/manuscript-qualitative-textual-analysis/", 0.7, "monthly"),
-    // Development
-    url("/our-services/development/", 0.7, "monthly"),
-    url("/our-services/development/coding-and-algorithm/", 0.7, "monthly"),
-    url("/our-services/development/software-development/", 0.7, "monthly"),
-    url("/our-services/development/big-data-analytics/", 0.7, "monthly"),
-    url("/our-services/development/programming/", 0.7, "monthly"),
-    url("/our-services/development/web-solutions/", 0.6, "monthly"),
-    url("/our-services/development/animation-services/", 0.6, "monthly"),
-    url("/our-services/development/graphic-design-services/", 0.6, "monthly"),
-    url("/our-services/development/online-tutoring-services/", 0.6, "monthly"),
-    url("/our-services/development/e-learning-content-development/", 0.6, "monthly"),
-    url("/our-services/development/tool-development/", 0.6, "monthly"),
-    // Subjects
-    url("/subjects/business-management-studies-academic-writing-help/", 0.7, "monthly"),
-    url("/subjects/engineering-technology-academic-writing/", 0.7, "monthly"),
-    url("/subjects/economics-finance-academic-writing-help/", 0.7, "monthly"),
-    url("/subjects/medicine-health-science-academic-writing/", 0.7, "monthly"),
-    url("/subjects/computer-science-information-technology-academic-writing/", 0.7, "monthly"),
-    url("/subjects/biological-life-science-academic-writing-help/", 0.7, "monthly"),
-    url("/subjects/academic-law-ug-masters-phd-writing-help/", 0.7, "monthly"),
-    url("/subjects/arts-humanities-academic-writing-help/", 0.7, "monthly"),
-  ];
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  try {
+    const res = await fetch(ORIGINAL_SITEMAP, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        Accept: "application/xml,text/xml,*/*",
+      },
+      next: { revalidate: 86400 },
+    });
 
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${BASE}/blog/${post.slug}/`,
-    lastModified: new Date(post.date).toISOString(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+    if (!res.ok) throw new Error(`Sitemap fetch failed: ${res.status}`);
 
-  return [...staticPages, ...blogPages];
+    const xml = await res.text();
+
+    // Extract all <loc> URLs
+    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) =>
+      m[1].trim()
+    );
+
+    // Extract lastmod per URL if present
+    const entries = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => {
+      const block = m[1];
+      const locMatch = block.match(/<loc>([^<]+)<\/loc>/);
+      const lastmodMatch = block.match(/<lastmod>([^<]+)<\/lastmod>/);
+      const priorityMatch = block.match(/<priority>([^<]+)<\/priority>/);
+      const changefreqMatch = block.match(/<changefreq>([^<]+)<\/changefreq>/);
+      return {
+        loc: locMatch ? locMatch[1].trim() : "",
+        lastmod: lastmodMatch ? lastmodMatch[1].trim() : new Date().toISOString(),
+        priority: priorityMatch ? parseFloat(priorityMatch[1]) : 0.6,
+        changefreq: changefreqMatch
+          ? (changefreqMatch[1].trim() as MetadataRoute.Sitemap[number]["changeFrequency"])
+          : ("monthly" as const),
+      };
+    });
+
+    // Rewrite www.tutorsindia.com → tutorsindia.com
+    const mapped: MetadataRoute.Sitemap = entries
+      .filter((e) => e.loc)
+      .map((e) => ({
+        url: e.loc.replace(/^https?:\/\/(?:www\.)?tutorsindia\.com/, BASE),
+        lastModified: e.lastmod,
+        changeFrequency: e.changefreq,
+        priority: e.priority,
+      }));
+
+    // Deduplicate by URL
+    const seen = new Set<string>();
+    const deduped = mapped.filter((e) => {
+      if (seen.has(e.url)) return false;
+      seen.add(e.url);
+      return true;
+    });
+
+    return deduped;
+  } catch (err) {
+    console.error("sitemap.ts: failed to fetch original sitemap", err);
+    // Fallback — return just the homepage so build never fails
+    return [{ url: BASE + "/", lastModified: new Date().toISOString(), priority: 1.0 }];
+  }
 }
