@@ -53,15 +53,12 @@ function removeStyles(html: string): string {
   return html.replace(/<style[\s\S]*?<\/style>/gi, '');
 }
 
-/** Handle background-image sections:
- *  - If content is trivially small (only <br> spacers) → remove entirely
- *  - If content has real text → keep section but strip the background-image style
- */
+/** Remove purely decorative sections that contain only <br> spacers and no real content */
 function removeDecorativeSections(html: string): string {
   let result = html;
   const openTagRe = /<div\s+class="section mcb-section[^"]*"[^>]*>/g;
   let match: RegExpExecArray | null;
-  const actions: Array<{ block: string; replace: string }> = [];
+  const toRemove: string[] = [];
 
   while ((match = openTagRe.exec(result)) !== null) {
     const openTag = match[0];
@@ -80,20 +77,16 @@ function removeDecorativeSections(html: string): string {
     }
     const block = result.slice(start, cursor);
 
-    // Check if section has actual content
+    // Only remove if purely decorative (no real text content)
     const textContent = block.replace(/<br\s*\/?>/gi, '').replace(/<[^>]+>/g, '').trim();
     if (textContent.length < 50) {
-      // Purely decorative spacer → remove entirely
-      actions.push({ block, replace: '' });
-    } else {
-      // Has real content → strip only the background-image from the opening tag style
-      const cleanedOpenTag = openTag.replace(/background-image:[^;]*(;|(?="))/g, '');
-      actions.push({ block, replace: block.replace(openTag, cleanedOpenTag) });
+      toRemove.push(block);
     }
+    // Sections with real content: keep entirely as-is, background-image and all
   }
 
-  for (const { block, replace } of actions) {
-    result = result.replace(block, replace);
+  for (const block of toRemove) {
+    result = result.replace(block, '');
   }
   return result;
 }
@@ -125,6 +118,34 @@ function removePageFooter(html: string): string {
 export interface ProxiedPage {
   title: string;
   content: string;
+  cssLinks: string[];
+}
+
+/** CSS files that should never be proxied (handled by layout or irrelevant) */
+const CSS_BLOCKLIST = [
+  'font-awesome',
+  'fonts.googleapis.com',
+  'use.fontawesome.com',
+  'maxcdn.bootstrapcdn.com',
+  'jplayer',
+  'jquery.ui',
+  'the-post-grid',
+  'flaticon_the_post_grid',
+  'animations.min.css',
+];
+
+function extractCssLinks(html: string): string[] {
+  const links: string[] = [];
+  const re = /<link[^>]+rel=["']stylesheet["'][^>]*>/gi;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    const hrefMatch = m[0].match(/href=["']([^"']+)["']/);
+    if (!hrefMatch) continue;
+    const href = hrefMatch[1];
+    if (CSS_BLOCKLIST.some(b => href.includes(b))) continue;
+    links.push(href);
+  }
+  return links;
 }
 
 export async function fetchProxiedLibraryPage(path: string): Promise<ProxiedPage | null> {
@@ -145,9 +166,12 @@ export async function fetchProxiedLibraryPage(path: string): Promise<ProxiedPage
       ? titleMatch[1].replace(/\s*[|\-–]\s*Tutors\s*India.*/i, '').trim()
       : '';
 
+    // Extract stylesheet links from <head>
+    const cssLinks = extractCssLinks(html);
+
     // Extract entry-content
     const entryContent = extractDivByClass(html, 'entry-content');
-    if (!entryContent) return { title, content: '' };
+    if (!entryContent) return { title, content: '', cssLinks };
 
     let content = entryContent;
 
@@ -156,9 +180,8 @@ export async function fetchProxiedLibraryPage(path: string): Promise<ProxiedPage
     content = removeDivsByClass(content, 'rightsideidebg');
     content = removeDivsByClass(content, 'ppc-menu');
 
-    // Strip scripts and styles (they reference live CDN / jQuery etc)
+    // Strip scripts only — keep inline <style> blocks for Elementor
     content = removeScripts(content);
-    content = removeStyles(content);
 
     // Remove purely decorative background-image sections with only br spacers
     content = removeDecorativeSections(content);
@@ -175,7 +198,7 @@ export async function fetchProxiedLibraryPage(path: string): Promise<ProxiedPage
     // Rewrite URLs
     content = rewriteUrls(content);
 
-    return { title, content };
+    return { title, content, cssLinks };
   } catch {
     return null;
   }
