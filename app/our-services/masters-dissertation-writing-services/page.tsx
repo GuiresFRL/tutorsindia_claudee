@@ -143,46 +143,51 @@ export default function MastersDissertationPage() {
 
       {/* Post Graduate / Why Tutors India */}
       <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "10px" }}>
-          Post Graduate / Master&apos;s Dissertation Writing Service
-        </h2>
-        <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "6px" }}>
-          Assistance for Tutoring and Writing Services exclusively for the UK and Australian Universities –
-        </p>
-        <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "32px" }}>
-          You will be Amazed with the quality of your dissertation
-        </p>
+        <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "32px 36px", marginBottom: "32px", borderLeft: "5px solid #1a2a6c" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "8px" }}>
+            Post Graduate / Master&apos;s Dissertation Writing Service
+          </h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "4px" }}>
+            Assistance for Tutoring and Writing Services exclusively for the UK and Australian Universities –
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+            You will be Amazed with the quality of your dissertation
+          </p>
+        </div>
 
-        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
-          Why Tutors India for Master&apos;s Dissertation Writing Services?
-        </h3>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
-          The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their dissertation successfully.
-        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "20px", marginBottom: "32px" }}>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #1a2a6c" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Why Tutors India for Master&apos;s Dissertation Writing Services?
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their dissertation successfully.
+            </p>
+          </div>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              UK Master&apos;s Dissertation at Tutors India helps to complete your degree successfully
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              We just not provide writing assistance but also Tutoring — we tutor you at every stage on how we proceeded with the dissertation along with the keywords strategy used.
+            </p>
+          </div>
+        </div>
 
-        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
-          UK Master&apos;s Dissertation at Tutors India helps to complete your degree successfully
-        </h3>
-
-        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px", marginTop: "24px" }}>
-          We just not provide writing assistance but also Tutoring
-        </h3>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
-          Therefore, given that dissertation plays a significant role in completing the UK university degree, at Tutors India, we offer both tutoring and writing services. We just do not provide you writing assistance but also tutor you at every stage on how we proceeded with the dissertation along with the keywords strategy used.
-        </p>
-
-        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
-          A Trusted Dissertation Writing Service at Tutors India
-        </h3>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "16px" }}>
-          Tutors India has skilled and talented professional UK writers who work with your UK Master&apos;s and MBA projects and assist you at all the stages of your UK MBA dissertation writing either online or email based. They assist you 24/7 and provide evidence that we deliver what exactly you expect. This is one of the highlights of our services which remains unmatched by our competitors across the world.
-        </p>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "16px" }}>
-          Our team of UK dissertation writing experts consists of experienced professionals who are holding at least a Master&apos;s degree and also Ph.D. holders from the prestigious universities from the UK, US, and Australia, who can help you in writing any dissertation whether it is science or management or computer science or Engineering or environmental science. Our experts write your UK Master&apos;s and MBA dissertation/ projects (exclusively for the UK universities MBA dissertation writing service (UK MBA, ME, M.Sc., M.S., MPH, MPhil) without plagiarism and set in innovative ideas. Our unique approach has helped hundreds of scholars to complete and submit their UK MBA and Master&apos;s dissertation across the global successfully.
-        </p>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "0" }}>
-          Tutors India has in-house internal committee consists of UK and US based Ph.D. holders for writing and as research advisors, postdoctoral fellows and M.D holding Ph.D. with rich experience in research. Some of our writers are trained at Harvard School, Oxford, London School of Business, and the University of Birmingham.
-        </p>
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "28px 32px" }}>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "14px" }}>
+            A Trusted Dissertation Writing Service at Tutors India
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            Tutors India has skilled and talented professional UK writers who work with your UK Master&apos;s and MBA projects and assist you at all the stages of your UK MBA dissertation writing either online or email based. They assist you 24/7 and provide evidence that we deliver what exactly you expect. This is one of the highlights of our services which remains unmatched by our competitors across the world.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            Our team of UK dissertation writing experts consists of experienced professionals who are holding at least a Master&apos;s degree and also Ph.D. holders from the prestigious universities from the UK, US, and Australia, who can help you in writing any dissertation whether it is science or management or computer science or Engineering or environmental science. Our experts write your UK Master&apos;s and MBA dissertation/ projects (exclusively for the UK universities MBA dissertation writing service (UK MBA, ME, M.Sc., M.S., MPH, MPhil) without plagiarism and set in innovative ideas. Our unique approach has helped hundreds of scholars to complete and submit their UK MBA and Master&apos;s dissertation across the global successfully.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, margin: 0 }}>
+            Tutors India has in-house internal committee consists of UK and US based Ph.D. holders for writing and as research advisors, postdoctoral fellows and M.D holding Ph.D. with rich experience in research. Some of our writers are trained at Harvard School, Oxford, London School of Business, and the University of Birmingham.
+          </p>
+        </div>
       </section>
 
       {/* Our UK Dissertation Services */}
