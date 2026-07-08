@@ -62,8 +62,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section style={{ background: "linear-gradient(135deg, var(--navy) 0%, #2563b0 100%)", color: "#fff", padding: "80px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <p style={{ fontSize: "0.85rem", color: "#a0b8e0", marginBottom: "8px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
               Trusted Since 2001 · UK · US · Australia
             </p>
@@ -80,17 +79,7 @@ export default function Home() {
                 View Our Process
               </Link>
             </div>
-          </div>
-          <div style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: "12px", padding: "16px", textAlign: "center", maxWidth: "300px" }}>
-            <img src="/images/samples/assignment-writing.jpg" alt="Student writing a dissertation in a university library" width={268} height={190} fetchPriority="high" style={{ width: "100%", height: "190px", objectFit: "cover", borderRadius: "8px", marginBottom: "12px" }} />
-            <p style={{ fontSize: "13px", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic Writing &amp; Editing Services since 2001</p>
-            <div style={{ marginTop: "12px", paddingTop: "12px", borderTop: "1px solid rgba(255,255,255,0.2)", fontSize: "0.8rem" }}>
-              <div style={{ color: "#a0b8e0", marginBottom: "4px" }}>📞 <a href="tel:+441143520021" style={{ color: "#fff" }}>+44-1143520021</a></div>
-              <div style={{ color: "#a0b8e0" }}>📞 <a href="tel:+918754446690" style={{ color: "#fff" }}>+91 8754446690</a></div>
-            </div>
-          </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-inner>div:last-child{display:none}}`}</style>
       </section>
 
       {/* STATS BAR */}
