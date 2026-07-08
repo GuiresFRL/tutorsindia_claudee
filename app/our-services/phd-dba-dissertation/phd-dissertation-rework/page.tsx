@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
   title: "PhD Dissertation Rework / Resubmission Writing Help UK",
@@ -166,24 +167,7 @@ export default function PhDDissertationReworkPage() {
         </div>
 
         {/* Testimonials */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What Our Clients Say</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
-            {testimonials.map((t, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div>
-                <p style={{ color: "#555", fontSize: "0.84rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "12px" }}>{t.quote}</p>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <img src={t.avatar} alt={t.author} style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" />
-                  <div>
-                    <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.84rem" }}>{t.author}</div>
-                    {t.location && <div style={{ fontSize: "0.72rem", color: "#888" }}>{t.location}</div>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <TestimonialSlider testimonials={testimonials} />
 
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>

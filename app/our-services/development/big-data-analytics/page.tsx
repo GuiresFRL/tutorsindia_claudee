@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = { title: "Big Data Analytics Services | Hadoop, Spark, ML", description: "Expert Big Data Analytics Services. Predictive Analytics, Time Series, Machine Learning, Hadoop, Hive, Spark. Tutors India." };
 const models = ["Predictive Analytics","Time Series (Moving Average, ARIMA)","Linear & Non-linear Regression","Logistic Regression","Classification Models","Clustering (K-means, DBSCAN)","Neural Networks & Deep Learning","Random Forest & Ensemble Methods","Support Vector Machines","Natural Language Processing","Recommendation Systems","Anomaly Detection"];
 const tools = ["Apache Hadoop","Apache Hive","Apache Spark","Python (Pandas, NumPy, Scikit-learn)","R & R Studio","TensorFlow / PyTorch","Tableau / Power BI","SQL / NoSQL Databases","Kafka","Airflow","Databricks","AWS EMR"];
@@ -61,12 +62,7 @@ export default function BigDataAnalyticsPage() {
             {tools.map(t => (<div key={t} style={{ display: "flex", gap: "8px", padding: "5px 0", borderBottom: "1px solid #dde2ef", fontSize: "0.82rem", color: "#555" }}><span style={{ color: "#e87722", fontWeight: 700 }}>→</span> {t}</div>))}
           </div>
         </div>
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What Our Clients Say</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "16px" }} className="three-col-grid">
-            {testimonials.map((t, i) => (<div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}><div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div><p style={{ color: "#555", fontSize: "0.84rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "12px" }}>{t.quote}</p><div style={{ display: "flex", alignItems: "center", gap: "10px" }}><img src={t.avatar} alt={t.author} style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" /><div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.84rem" }}>{t.author}</div></div></div>))}
-          </div>
-        </div>
+        <TestimonialSlider testimonials={testimonials} />
         <div style={{ marginBottom: "28px" }}><h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2><FaqAccordion faqs={faqs} /></div>
       </section>
       <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>

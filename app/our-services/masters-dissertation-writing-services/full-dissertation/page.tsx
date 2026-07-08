@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-import { useState } from "react";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const dissertationStructure = [
   { title: "Abstract", desc: "We write abstract for your master's dissertation which would approximately contain 250 to 350 words. We complete the abstract after the full dissertation has been written that includes a brief summary of introduction or background, objectives, boundaries, methodology, the results of the dissertation research, main conclusion that you arrive, and recommendations." },
@@ -59,30 +59,7 @@ const qaBoxes = [
   { img: "/images/qa/Customer-Interaction.png", title: "Customer Interaction", desc: "We interact with the customer at every stage in terms of amendments, query and delivery.", href: "/contact-us/" },
 ];
 
-function TestimonialSlider({ items }: { items: typeof testimonials }) {
-  const [cur, setCur] = useState(0);
-  const prev = () => setCur(i => (i === 0 ? items.length - 1 : i - 1));
-  const next = () => setCur(i => (i === items.length - 1 ? 0 : i + 1));
-  const t = items[cur];
-  return (
-    <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "32px", textAlign: "center" }}>Voice of Our Customer</h2>
-        <div style={{ position: "relative", maxWidth: "760px", margin: "0 auto", background: "#fff", borderRadius: "12px", padding: "40px 56px", boxShadow: "0 4px 20px rgba(26,42,108,0.1)", minHeight: "160px", textAlign: "center" }}>
-          <p style={{ color: "#444", fontSize: "0.98rem", lineHeight: 1.8, fontStyle: "italic", marginBottom: "20px" }}>&ldquo;{t.quote}&rdquo;</p>
-          <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.9rem" }}>— {t.name}</div>
-          <button onClick={prev} aria-label="Previous" style={{ position: "absolute", left: "-20px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "#1a2a6c", color: "#fff", border: "none", cursor: "pointer", fontSize: "1.2rem", display: "flex", alignItems: "center", justifyContent: "center" }}>‹</button>
-          <button onClick={next} aria-label="Next" style={{ position: "absolute", right: "-20px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "#1a2a6c", color: "#fff", border: "none", cursor: "pointer", fontSize: "1.2rem", display: "flex", alignItems: "center", justifyContent: "center" }}>›</button>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center", gap: "8px", marginTop: "20px" }}>
-          {items.map((_, i) => (
-            <button key={i} onClick={() => setCur(i)} aria-label={`Slide ${i + 1}`} style={{ width: "10px", height: "10px", borderRadius: "50%", border: "none", cursor: "pointer", background: i === cur ? "#1a2a6c" : "#c5d5f0", padding: 0 }} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 export default function FullDissertationPage() {
   return (
@@ -303,7 +280,7 @@ export default function FullDissertationPage() {
       </section>
 
       {/* Testimonials */}
-      <TestimonialSlider items={testimonials} />
+      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name || t.author || "" }))} />
 
       {/* Related Services */}
       <section style={{ background: "#f0f4ff", padding: "40px 20px" }}>

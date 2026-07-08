@@ -294,7 +294,6 @@ export default function ArtsHumanitiesWritingPage() {
             What Our Arts &amp; Humanities Students Say
           </h2>
           <TestimonialSlider testimonials={testimonials} />
-        </div>
       </section>
 
       {/* FAQs */}

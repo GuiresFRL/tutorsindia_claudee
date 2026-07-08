@@ -303,7 +303,6 @@ export default function ComputerScienceITWritingPage() {
             What Our Computer Science &amp; IT Students Say
           </h2>
           <TestimonialSlider testimonials={testimonials} />
-        </div>
       </section>
 
       {/* FAQs */}

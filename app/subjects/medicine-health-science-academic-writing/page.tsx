@@ -289,7 +289,6 @@ export default function MedicinePage() {
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>What Our Clients Say</h2>
         <div style={{ marginBottom: "48px" }}>
           <TestimonialSlider testimonials={testimonials} />
-        </div>
 
         {/* ── FAQ ── */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { serviceCategories } from "@/lib/data/services";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
   title: "Publication Support Services | Manuscript, Medical Writing, Biostatistics",
@@ -167,20 +168,7 @@ export default function PublicationSupportPage() {
         <style>{`@media(max-width:900px){.process-four-grid{grid-template-columns:repeat(3,1fr)!important;}} @media(max-width:600px){.process-four-grid{grid-template-columns:1fr 1fr!important;}}`}</style>
 
         {/* Testimonials */}
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>Client Voice</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px", marginBottom: "40px" }} className="three-col-grid">
-          {testimonials.map((t, i) => (
-            <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
-              <div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div>
-              <p style={{ color: "#555", fontSize: "0.85rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "14px" }}>{t.quote}</p>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <img src={t.avatar} alt={t.author} style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" />
-                <div>
-                  <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.85rem" }}>{t.author}</div>
-                  {t.location && <div style={{ fontSize: "0.74rem", color: "#888" }}>{t.location}</div>}
-                </div>
-              </div>
-            </div>
+        <TestimonialSlider testimonials={testimonials} />
           ))}
         </div>
 
