@@ -200,8 +200,6 @@ export default function AboutPage() {
 
         {/* Testimonials */}
         <TestimonialSlider testimonials={testimonials} />
-          ))}
-        </div>
       </section>
 
       <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>

@@ -6,33 +6,33 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const faqs = [
   {
-    question: "What do I need to provide For the Initial Dissertation Statistics consultation? Why?",
-    answer:
+    q: "What do I need to provide For the Initial Dissertation Statistics consultation? Why?",
+    a:
       "Adequate research study information is required through our customary CRM after payment confirmation. This is essential for the statistician's decision-making on the appropriate statistical analyses to be carried out for your dissertation.",
   },
   {
-    question: "What are the statistical software tools used by Tutors India Statisticians?",
-    answer:
+    q: "What are the statistical software tools used by Tutors India Statisticians?",
+    a:
       "Our statisticians have expertise in SPSS, STATA, SAS, R, E-views and additional tools to handle all types of quantitative and qualitative analyses.",
   },
   {
-    question: "Are you familiar with dissertation statistics?",
-    answer:
+    q: "Are you familiar with dissertation statistics?",
+    a:
       "Since 2011, Tutors India is the trusted mentors for the master's student in offering various Dissertations writing support. We offer statistics, biostatistics, data compiling, recoding, analysis, interpretation, table presentation, and quality analysis for dissertations.",
   },
   {
-    question: "What are the qualifications of statistician and what are they do?",
-    answer:
+    q: "What are the qualifications of statistician and what are they do?",
+    a:
       "Our statisticians have 10+ years of senior experience with PhD and Master's qualifications. They handle complex projects including cluster analysis and structural equation modeling, and have the ability to explain statistical work clearly to clients.",
   },
   {
-    question: "I am a master's student. Can you help me to give a Tutor for the Dissertation Statistics service?",
-    answer:
+    q: "I am a master's student. Can you help me to give a Tutor for the Dissertation Statistics service?",
+    a:
       "Yes, tutoring sessions are available separate from writing services. You will get an opportunity to discuss the process with our experts to complete your dissertation with accurate findings.",
   },
   {
-    question: "On which are the areas you provide Dissertation statistics services?",
-    answer:
+    q: "On which are the areas you provide Dissertation statistics services?",
+    a:
       "We cover a wide range: Business Management, Finance, Operations Management, Supply Chain & Logistics, Human Resources, Psychology, History, Geography, Engineering, Healthcare, Economics, Computer Science, English, Literature, Epidemiology, Nursing, Medical, Public Health, Life Science, and Nutrition. Additional subjects are available upon inquiry.",
   },
 ];

@@ -310,6 +310,7 @@ export default function BiologicalLifeScienceWritingPage() {
             What Our Biological &amp; Life Science Students Say
           </h2>
           <TestimonialSlider testimonials={testimonials} />
+        </div>
       </section>
 
       {/* FAQs */}

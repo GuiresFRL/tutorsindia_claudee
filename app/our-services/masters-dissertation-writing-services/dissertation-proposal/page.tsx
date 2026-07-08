@@ -356,7 +356,7 @@ export default function DissertationProposalPage() {
       </section>
 
       {/* Testimonials Slider */}
-      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name || t.author || "" }))} />
+      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name }))} />
 
       {/* Related Services */}
       <section style={{ background: "#f0f4ff", padding: "48px 20px" }}>

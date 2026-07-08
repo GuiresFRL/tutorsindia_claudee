@@ -6,34 +6,28 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const faqs = [
   {
-    question: "Why we need to choose Tutors India for poster presentation services for my master's dissertation?",
-    answer:
-      "We have a large team of experts where we has a separate professional and dedicated graphical designer department are in designing the attractive posters presentation for your masters scientific projects. In addition, we have capability to do maximum number of poster presentation or complex designs posters with ease.",
+    q: "Why we need to choose Tutors India for poster presentation services for my master's dissertation?",
+    a:       "We have a large team of experts where we has a separate professional and dedicated graphical designer department are in designing the attractive posters presentation for your masters scientific projects. In addition, we have capability to do maximum number of poster presentation or complex designs posters with ease.",
   },
   {
-    question: "Can you create research poster power point template for my master dissertation?",
-    answer:
-      "At Tutors India, we ready to offer the easy to use and fully customizable Masters Poster presentation template for your dissertation so you can use and customize the template based on their choice of color, text, graphics and images. Otherwise, send it back to your information to get the premium quality, affordable, attractive colors posters presentation for your master's Dissertation project.",
+    q: "Can you create research poster power point template for my master dissertation?",
+    a:       "At Tutors India, we ready to offer the easy to use and fully customizable Masters Poster presentation template for your dissertation so you can use and customize the template based on their choice of color, text, graphics and images. Otherwise, send it back to your information to get the premium quality, affordable, attractive colors posters presentation for your master's Dissertation project.",
   },
   {
-    question: "What are the sections present in the Tutors India Academic and Scientific poster presentation?",
-    answer:
-      "These are the below section usually present in the post presentation or any customization needed, we ready to tailor-made post presentation help. Our posters typically include: Title, Collaborators & their institutional affiliations, Abstract, Background, Literature review, Research questions or objectives, Materials/process/methods or approach, Results/conclusion, Future directions, Acknowledgement, References, and Contact information.",
+    q: "What are the sections present in the Tutors India Academic and Scientific poster presentation?",
+    a:       "These are the below section usually present in the post presentation or any customization needed, we ready to tailor-made post presentation help. Our posters typically include: Title, Collaborators & their institutional affiliations, Abstract, Background, Literature review, Research questions or objectives, Materials/process/methods or approach, Results/conclusion, Future directions, Acknowledgement, References, and Contact information.",
   },
   {
-    question: "How long will it take to complete Academic poster presentation?",
-    answer:
-      "Time line depends on the post presentation length, features and any other graphic needs. We also do urgent delivery based on your research project nature.",
+    q: "How long will it take to complete Academic poster presentation?",
+    a:       "Time line depends on the post presentation length, features and any other graphic needs. We also do urgent delivery based on your research project nature.",
   },
   {
-    question: "Can I see Client samples work of poster presentation?",
-    answer:
-      "No, we do not show you the client's sample presentation because it is confidential rather than that we show our sample presentation, which is available here and purely done by our experts. Feel free to look at our Sample work.",
+    q: "Can I see Client samples work of poster presentation?",
+    a:       "No, we do not show you the client's sample presentation because it is confidential rather than that we show our sample presentation, which is available here and purely done by our experts. Feel free to look at our Sample work.",
   },
   {
-    question: "Will do revision for my poster presentation?",
-    answer:
-      "Our expertise work has striven to work hard our work is never revised. At tutors India, we provide the unlimited revision until our customer gets 100% satisfaction.",
+    q: "Will do revision for my poster presentation?",
+    a:       "Our expertise work has striven to work hard our work is never revised. At tutors India, we provide the unlimited revision until our customer gets 100% satisfaction.",
   },
 ];
 

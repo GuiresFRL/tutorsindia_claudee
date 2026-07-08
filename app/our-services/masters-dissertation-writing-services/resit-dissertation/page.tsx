@@ -6,30 +6,24 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const resitFaqs = [
   {
-    question:
-      "What Information that I need to provide while ordering for resit dissertation writing services?",
-    answer:
-      "To match exactly with your requirement, we required your i) marking criteria, ii) University guidelines, iii) professor feedback, iv) dissertation structure guidelines from the University v) complete dissertation that you had submitted to the University vi) data sheet used for the analysis vii) research proposal and any other information that you wanted to share. We accept orders from a wide range of subjects which include Business Management, finance, operation management, supply chain and logistics management, entrepreneurial management, human resource management, psychology, history, geography, engineering, healthcare, Economics, Computer Science, English, Literature, Engineering, Epidemiology, nursing, medical, Public Health, Life Science, and Nutrition.",
+    q:       "What Information that I need to provide while ordering for resit dissertation writing services?",
+    a:       "To match exactly with your requirement, we required your i) marking criteria, ii) University guidelines, iii) professor feedback, iv) dissertation structure guidelines from the University v) complete dissertation that you had submitted to the University vi) data sheet used for the analysis vii) research proposal and any other information that you wanted to share. We accept orders from a wide range of subjects which include Business Management, finance, operation management, supply chain and logistics management, entrepreneurial management, human resource management, psychology, history, geography, engineering, healthcare, Economics, Computer Science, English, Literature, Engineering, Epidemiology, nursing, medical, Public Health, Life Science, and Nutrition.",
   },
   {
-    question: "What if my resit dissertation gets rejected?",
-    answer:
-      "This is unlikely to happen at Tutors India, for the following reasons: (a) we offer our services to our clients with complete justification – if you wanted to reject the work, there is a need for proof to show the reasons based on the client's perceptions. Since the communication was made between client and Tutors India. (b) Secondly, we provide unlimited revisions to support our client for the commitment we had made initially.",
+    q: "What if my resit dissertation gets rejected?",
+    a:       "This is unlikely to happen at Tutors India, for the following reasons: (a) we offer our services to our clients with complete justification – if you wanted to reject the work, there is a need for proof to show the reasons based on the client's perceptions. Since the communication was made between client and Tutors India. (b) Secondly, we provide unlimited revisions to support our client for the commitment we had made initially.",
   },
   {
-    question: "How quickly you can complete my resit dissertation?",
-    answer:
-      "Even though, it is a tedious task, our writers can complete resit dissertation with careful way from the introduction to references within short period. We understand the importance of your future so our writer gives the full attention, who is help to write a rewrite dissertation with 100% successful manner. For Urgent delivery, you can contact us for more details.",
+    q: "How quickly you can complete my resit dissertation?",
+    a:       "Even though, it is a tedious task, our writers can complete resit dissertation with careful way from the introduction to references within short period. We understand the importance of your future so our writer gives the full attention, who is help to write a rewrite dissertation with 100% successful manner. For Urgent delivery, you can contact us for more details.",
   },
   {
-    question: "How can I trust Tutors India get approved my resit dissertation?",
-    answer:
-      "Yes, we have also heard many stories as well. Tutor India has conduct brainstorming session so you will get opportunities to talk with our expertise directly as to understand their skill set and experience then you will decide whether you need to take the services or not. Further, this company relies on good word of mouth from many clients. You click to see the client's voice section understand our client's view about Tutors India.",
+    q: "How can I trust Tutors India get approved my resit dissertation?",
+    a:       "Yes, we have also heard many stories as well. Tutor India has conduct brainstorming session so you will get opportunities to talk with our expertise directly as to understand their skill set and experience then you will decide whether you need to take the services or not. Further, this company relies on good word of mouth from many clients. You click to see the client's voice section understand our client's view about Tutors India.",
   },
   {
-    question: "How do you tackle the plagiarism issues in resit dissertation?",
-    answer:
-      "Tutors India has provided the Top quality dissertation document with no plagiarism. We never allow its dissertation to look average quality. We maintain the high quality and unique in your resit dissertation writing by facilitating comprehensive quality-checking department. All our writers are mixed of seniors and fresher academicians who follow the stringent guidelines to give plagiarism free resit content. All the writers are senior academicians who exhibit professional ethics to the utmost level. Topping it, the writing department is equipped with advanced anti plagiarism software to eliminate any possibility for plagiarism.",
+    q: "How do you tackle the plagiarism issues in resit dissertation?",
+    a:       "Tutors India has provided the Top quality dissertation document with no plagiarism. We never allow its dissertation to look average quality. We maintain the high quality and unique in your resit dissertation writing by facilitating comprehensive quality-checking department. All our writers are mixed of seniors and fresher academicians who follow the stringent guidelines to give plagiarism free resit content. All the writers are senior academicians who exhibit professional ethics to the utmost level. Topping it, the writing department is equipped with advanced anti plagiarism software to eliminate any possibility for plagiarism.",
   },
 ];
 

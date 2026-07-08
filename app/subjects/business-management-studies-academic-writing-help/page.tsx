@@ -304,6 +304,7 @@ export default function BusinessManagementWritingPage() {
             What Our Business &amp; Management Students Say
           </h2>
           <TestimonialSlider testimonials={testimonials} />
+        </div>
       </section>
 
       {/* FAQs */}

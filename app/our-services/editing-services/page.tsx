@@ -150,8 +150,6 @@ export default function EditingServicesPage() {
 
         {/* Testimonials */}
         <TestimonialSlider testimonials={testimonials} />
-          ))}
-        </div>
 
         {/* Subject Areas */}
         <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>

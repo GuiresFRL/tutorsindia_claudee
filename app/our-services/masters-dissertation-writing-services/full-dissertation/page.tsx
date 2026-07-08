@@ -280,7 +280,7 @@ export default function FullDissertationPage() {
       </section>
 
       {/* Testimonials */}
-      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name || t.author || "" }))} />
+      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name }))} />
 
       {/* Related Services */}
       <section style={{ background: "#f0f4ff", padding: "40px 20px" }}>

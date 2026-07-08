@@ -6,30 +6,30 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 const partFaqs = [
   {
-    question: "On which are the areas you provide Masters part-dissertation writing services?",
-    answer:
+    q: "On which are the areas you provide Masters part-dissertation writing services?",
+    a:
       "We accept orders from a wide range of subjects which include Business Management, finance, operation management, supply chain and logistics management, entrepreneurial management, human resource management, psychology, history, geography, engineering, healthcare, Economics, Computer Science, English, Literature, Engineering, Epidemiology, nursing, medical, Public Health, Life Science, and Nutrition. If your topic or field of interest is not listed above, kindly contact us to know more about the dissertation writing services, dissertation writing tips, dissertation and thesis writing help. To match exactly with your requirement, we required your i) marking criteria, ii) University guidelines, iii) professor feedback, iv) dissertation structure guidelines from the University v) complete dissertation that you had submitted to the University vi) data sheet used for the analysis vii) research proposal and any other information that you wanted to share.",
   },
   {
-    question:
+    q:
       "Is my Masters Part Dissertation writing document met the University guidelines and high academic standard?",
-    answer:
+    a:
       "Of Course, Tutors India writers are very specific in following all the UK, US, Australia and other Universities guidelines as well as meet the high academic standards in writing the best dissertation. We ensure that your Masters Dissertation part followed with recent university guidelines because of our expertise is always up-to-date with the universities guidelines.",
   },
   {
-    question: "What Masters Dissertation part Does Tutors India Provide?",
-    answer:
+    q: "What Masters Dissertation part Does Tutors India Provide?",
+    a:
       "If you are looking to avail our services only to write Master's dissertation part, then we offer an introduction, statistical analysis, materials or methods/methodology, literature review, findings or interpretation of your statistical analysis and conclusion or dissertation part services. Alternatively, Get the Dissertation chapter wise writing services from our Domain expertise.",
   },
   {
-    question:
+    q:
       "I have heard many sad stories about unqualified people being assigning to write Masters dissertation writing services. Is it true?",
-    answer:
+    a:
       "Yes, we have also heard many stories as well. Tutor India has conduct brainstorming session so you will get opportunities to talk with our expertise directly as to understand their skill set and experience then you will decide whether you need to take the services or not. Further, this company relies on good word of mouth from many clients. You click to see the client's voice section understand our client's view about Tutors India.",
   },
   {
-    question: "Why do you Provide Masters part dissertation free drafts for all orders?",
-    answer:
+    q: "Why do you Provide Masters part dissertation free drafts for all orders?",
+    a:
       "We provide the Masters Part dissertation free draft after completing each chapter or dissertation part to ensure that our process flow is consistent. It helps the students to identify the changes and give the feedback to improve chapter wise, so it is easy to explain to your committee quickly through oral. Get back suggestion and instantly can change it.",
   },
 ];

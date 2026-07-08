@@ -321,7 +321,7 @@ export default function MastersDissertationPage() {
       </section>
 
       {/* Testimonials Slider */}
-      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name || t.author || "" }))} />
+      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name }))} />
 
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
