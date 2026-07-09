@@ -4,108 +4,131 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Doctorate Research Proposal Writing Help",
-  description: "PhD Doctorate Research Proposal Writing Service by qualified US & UK researchers. Free Gantt chart, ethical form, executive summary. Unlimited revisions.",
+  title: "Ph.D. Doctorate Research Proposal Writing Help | Tutors India",
+  description: "Are you struggling to write a research proposal? All your Ph.D. Research Proposals are written by qualified and experienced researchers from the US & UK.",
 };
-
-const proposalStructure = [
-  { n: "01", title: "Dissertation Proposal Title / Working Title", desc: "Although tentative, at Tutors India we use a precise working title to ensure acceptance. The title conveys the ideas of your investigation, orients readers to the topic, indicates the type of study you will conduct, the target population, and the geographical location." },
-  { n: "02", title: "Introduction to the Topic", desc: "Brief description of the topic, research questions, and research objectives. Provides necessary background information, an overview of existing literature, and a general scope of the research. The section should engage readers and provide a sense of the overall research." },
-  { n: "03", title: "Aim and Overall Objectives / Hypotheses", desc: "A description of what the research wants to achieve. Includes a clear statement of research objectives, the questions the researcher seeks to answer or the hypothesis. Also includes original contributions of your study, with a detailed account of points summarised in the introduction, and rationale." },
-  { n: "04", title: "Literature, Context & Background", desc: "Provides insights on: (a) studies conducted previously in your research field (b) familiarity with major themes (c) theories scholars use to analyse primary sources (d) gaps identified in the literature (e) further investigations you intend to pursue (f) best methodologies for the study." },
-  { n: "05", title: "The Detailed Research Methodology", desc: "Essential to a successful research proposal. Includes overall methodological approach, research design, strategy (qualitative or quantitative), research philosophy, target area, population, sample size, primary or secondary data collection, ethical considerations, pilot study, validity, reliability, and statistical analysis." },
-  { n: "06", title: "Potential Outcomes / Significance of the Study", desc: "Discusses expected methodological and substantial outcomes, including theoretical contributions based on the proposed methodology and existing knowledge. Details the usefulness or benefits of the study, both for the research community and the outside world." },
-  { n: "07", title: "Summary & Conclusion", desc: "An overview of the research proposal summarised in a paragraph. Includes a brief description of the relevant chapters: Introduction, Statement of the Problem, Literature Review, Research Objectives, Research Methodology, Scope and Limitations, and Potential Outcome / Significance of the Study." },
-  { n: "08", title: "Timeline / Gantt Chart", desc: "Deliverables with start and finish dates (GANTT Chart). Includes a schedule with anticipated completion dates for specific parts of the dissertation, demonstrating whether the researcher has the capability to deliver the project as per institutional requirements." },
-  { n: "09", title: "References", desc: "Work cited or sources referenced in the dissertation research proposal. Includes peer-reviewed scholarly articles, textbooks, newspaper articles, and annual reports from ProQuest, Emerald, IEEE, Web of Science, Academic Complete, SciDirect, JSTOR, Elsevier." },
-  { n: "10", title: "Bibliography & Appendices", desc: "Works that were read but not cited. Informs readers about various sources that form the basis for the proposed study and methodology. Appendices may include experiment diagrams, questionnaires, permissions for human subject testing, ethical forms, and reflections." },
-];
-
-const serviceTiers = [
-  { tier: "Basic", color: "#2563b0", desc: "Descriptive approach with reasonable research area identification and evidence of critical evaluation attempts.", includes: ["Appropriate academic sources", "Research area identification", "Basic critical evaluation", "Initial aims and objectives", "Standard referencing"] },
-  { tier: "Advanced", color: "#1a2a6c", desc: "Identifies clear research gaps with aims and research questions using a wide range of sources.", includes: ["Wide range of sources", "Clear research gap identification", "Defined aims & research questions", "Strong academic writing", "Methodology overview"] },
-  { tier: "Premium", color: "#e87722", desc: "Seminal research engagement with latest resources, thoroughly justified gaps, excellent critical analysis (upgradable option).", includes: ["Seminal research engagement", "Solid justified research gap", "Excellent critical analysis", "Latest resources used", "Upgradable to publication quality"] },
-];
-
-const freeDeliverables = [
-  "Executive summary / abstract",
-  "Free research articles used in writing",
-  "Gantt chart with milestone schedule",
-  "Ethical form filling",
-  "University template formatting",
-  "Reflective log or diary",
-  "Free tutoring sessions",
-  "SPSS output in Appendix (if applicable)",
-];
 
 const faqs = [
-  { q: "On which areas you provide dissertation proposal writing services?", a: "At Tutors India, we provide PhD/DBA dissertation proposal in broad areas of research. Namely, employee engagement dissertations, customer buying behavior dissertation, project management dissertation, knowledge management dissertation, International marketing, performance management, strategic management and business policy, management of technology, international business, total quality management, public relation theories dissertation and many more. We also offer topics for various subjects such as MBA in HR, HRM, Finance, Economics, Operations, Nursing, medical, geographic, accounting, history, sociology, English, Music, advertising, fashion, tourism, architecture, computer science, politics, art, statistics." },
-  { q: "Time plan to complete My PhD dissertation research proposal?", a: "Time plan will designed based on the type of the research projects, research study and client's requirement. Then, you will get your Time line to complete dissertation research proposal." },
-  { q: "What Information that I need to provide while ordering for PhD dissertation proposal topic?", a: "To match exactly with your requirement, we required a title that you had already selected, scope, target country, industry experience and feasibility of data collection, if any. Moreover, any other information that our writer should know also can be provided from your end." },
-  { q: "What if I require some customization in the research proposal we deliver?", a: "Our service is completely flexible and tailor made to the customer. Hence, if you can provide the areas of customization related to research area initially proposed, we can make amendments in the dissertation research proposal." },
-  { q: "What if my guide/professor rejects the research proposal?", a: "The service we provide is completely flexible. Hence, we can tailor-made or customize your delivered research proposal based on the research area provided initially. Simply provide your modifications and we will deliver you according to the requirement." },
-  { q: "Why Tutorsindia is required for my PhD research proposal writing?", a: "The answer is very simple; Tutors India has included with number of dedicated researchers who undergoes numerous in-depth research session before making some quantity of research proposal. This includes put 10-15 professionals for survey purpose and the sample size of real customers are collected based on product/services." },
+  {
+    q: "On which areas you provide dissertation proposal writing services?",
+    a: "At Tutors India, we provide PhD/DBA dissertation proposal in broad areas of research such as employee engagement dissertations, customer buying behavior dissertation, project management dissertation, knowledge management dissertation, International marketing, performance management, strategic management and business policy, management of technology, international business, total quality management, public relation theories dissertation and many more. We also offer topics for various subjects such as MBA in HR, HRM, Finance, Economics, Operations, Nursing, medical, geographic, accounting, history, sociology, English, Music, advertising, fashion, tourism, architecture, computer science, politics, art, statistics.",
+  },
+  {
+    q: "Time plan to complete My PhD dissertation research proposal?",
+    a: "Time plan will designed based on the type of the research projects, research study and client's requirement.",
+  },
+  {
+    q: "What Information that I need to provide while ordering for PhD dissertation proposal topic?",
+    a: "To match exactly with your requirement, we required a title that you had already selected, scope, target country, industry experience and feasibility of data collection, if any. And any other information that our writer should know also can be provided from your end.",
+  },
+  {
+    q: "What if I require some customization in the research proposal we deliver?",
+    a: "Our service is completely flexible and tailor made to the customer. Hence, if you can provide the areas of customization related to research area initially proposed, we can make amendments in the research proposal.",
+  },
+  {
+    q: "What if my guide/professor rejects the research proposal?",
+    a: "The service we provide is completely flexible. Hence, we can tailor-made or customize your delivered research proposal based on the research area provided initially. Simply provide your modifications and we will deliver you according to the requirement.",
+  },
+  {
+    q: "Why Tutorsindia is required for my PhD research proposal writing?",
+    a: "The answer is very simple; Tutors India has included with number of dedicated researchers who undergoes numerous in-depth research session involving 10-15 professionals who conduct surveys, analysis and deep study to fulfil the requirement of your PhD research proposal.",
+  },
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(f => ({
-    "@type": "Question",
-    "name": f.q,
-    "acceptedAnswer": { "@type": "Answer", "text": f.a },
-  }))
-};
 
 const testimonials = [
-  { quote: "Tutors India gathered enormous data for my research work on complexity in consumer problem. It helped me complete my research work faster.", author: "Divij", avatar: "/images/testimonials/t18.jpg" },
+  {
+    quote: "Tutors India gathered enormous data for my research work on complexity in consumer problem. It helped me complete my research work faster. I am overwhelmed by their quality and speed of service. I would recommend Tutors India to any research scholar who finds it challenging to write a research proposal.",
+    author: "Divij",
+    location: "UK",
+    avatar: "/images/testimonials/t14.jpg",
+  },
 ];
 
-const subjects = [
-  "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
-  "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
-  "Biological & Life Science", "Economics & Administration", "Humanities & Social Science",
-  "Law", "Medicine & Health", "Education & Training", "Journalism & Media",
-  "Agriculture & Forestry", "Computer Science & IT", "Hospitality, Leisure & Sports",
+const proposalComponents = [
+  {
+    title: "Dissertation Proposal Title or A Working Title",
+    desc: "This is although tentative but at tutors India we use precise working even at this stage to ensure its acceptance. The title would convey the ideas of your investigation, orient your readers to the topic, indicate the type of study you will conduct, population you target and geographical location.",
+  },
+  {
+    title: "An Introduction to the Topic",
+    desc: "A Brief description of the topic, research questions, and research objectives. The section would provide necessary background information and provides readers with some sense of overall research including general territory, broad foundation (existing literature), the general scope, overview of the sections and finally should engage the readers",
+  },
+  {
+    title: "Aim and Overall Objective / Hypotheses",
+    desc: "A clear statement of the research objectives, questions that researcher seeks to answer or the hypothesis and original contributions. Describes what the research aims to accomplish including research objectives, questions and hypotheses with original contributions to the field.",
+  },
+  {
+    title: "Literature, Context, background",
+    desc: "This should provide some insights on (a) studies that have been conducted previously in your research field (b) familiarity with major themes, (c) the range of theories scholars use to analyse their primary sources (d) gaps identified in the literature (e) further investigations you intend to pursue as part of the research and (f) best methodologies.",
+  },
+  {
+    title: "The detailed research methodology",
+    desc: "The section is essential to the best research proposal. This section includes the overall methodological approach, Research design, strategy, qualitative or quantitative, research philosophy, target area, population, sample size, primary or secondary data collection, ethical consideration, pilot study, validity, reliability, & statistical analysis.",
+  },
+  {
+    title: "Potential Outcomes / Significance of the study",
+    desc: "Discusses methodological and substantial outcomes with theoretical contributions and usefulness to both research communities and external stakeholders. Details expected results, theoretical contributions, and study benefits including significance of the study.",
+  },
+  {
+    title: "Summary & Conclusion",
+    desc: "An overview of the research proposal summarized in a paragraph including introduction, problem statement, literature review, objectives, methodology, and expected outcomes.",
+  },
+  {
+    title: "Timeline",
+    desc: "Description and deliverables with the start and finish dates [GANTT Chart]. The section will include a schedule with anticipated completion dates for a specific part of the dissertation.",
+  },
+  {
+    title: "References",
+    desc: "Work Cited, or sources cited (in-text) or list of sources cited while writing dissertation research proposal. This will include peer-reviewed scholarly articles, textbooks, newspaper articles, annual reports, obtained from various database including Web of Science, ProQuest, Google Scholar, Business Source Complete.",
+  },
+  {
+    title: "Bibliography & Appendices",
+    desc: "Lists that have read but not actually cited will also be included. The section will inform the readers about various sources that also form the basis for the proposed study and methodology. Appendices for the research proposal may include experiment diagrams, questionnaire, permission for human subject testing, ethical forms, and reflection",
+  },
+];
+
+const deliverables = [
+  "Proper context and delimited boundary conditions",
+  "Cite landmark studies",
+  "Accurately present theoretical framework & empirical contribution",
+  "Stay focused on research question",
+  "Develop coherent & persuasive argument",
+  "Clear sense of direction",
+  "Clear citation in APA or specific style",
 ];
 
 export default function PhDResearchProposalPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
-            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
-              <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}
-              <Link href="/our-services/phd-dba-dissertation/" style={{ color: "#a0b8e0" }}>PhD / DBA Dissertation</Link>{" / "}
-              <span style={{ color: "#fff" }}>PhD Research Proposal</span>
-            </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>
-              Ph.D. Doctorate Research Proposal Writing Help
-            </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              Are you struggling to write a PhD research proposal or struck with an idea but lack research experience? Our qualified and experienced researchers from the US &amp; UK write all PhD Research Proposals with perfection based on University guidelines and specifications.
-            </p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>Response within 30 minutes — Free Gantt Chart &amp; Ethical Form Included</p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <a href="/docs/phd-research-proposal-brochure.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
-            </div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}
+            <Link href="/our-services/phd-dba-dissertation/" style={{ color: "#a0b8e0" }}>PhD / DBA Dissertation</Link>{" / "}
+            <span style={{ color: "#fff" }}>PhD Research Proposal</span>
           </div>
-          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "20px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/images/services/phd-research-proposal.png" alt="PhD Research Proposal" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} loading="lazy" />
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>3,500+ PhDs<br />Helped Since 2001<br />Unlimited Revisions</div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.3, marginBottom: "16px" }}>
+            Ph.D. Doctorate Research Proposal Writing Help
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "8px" }}>
+            Are you struggling to write a research proposal or struck with an idea but lack research experience or thought to complete the work? Alternatively, you have an idea but do not know how to make professional doctorate research proposal to impress your supervisor or according to the UK Ph.D. research proposal university guidelines?
+          </p>
+          <p style={{ color: "#f9c74f", fontSize: "1.05rem", fontWeight: 700, marginBottom: "20px" }}>
+            Then You've Certainly Reached the Right place
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
       </section>
 
       {/* ── STATS BAR ── */}
       <div style={{ background: "#12214a", padding: "16px 20px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "3,500+", l: "PhDs Helped" }, { n: "2,000+", l: "Expert Writers" }, { n: "30 min", l: "Response" }, { n: "Free", l: "Gantt Chart" }, { n: "Unlimited", l: "Revisions" }, { n: "< 5%", l: "Plagiarism" }].map(s => (
+          {[{ n: "3500+", l: "PhD Scholars Helped" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response Time" }, { n: "24/7", l: "Support" }].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
               <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
               <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
@@ -114,140 +137,142 @@ export default function PhDResearchProposalPage() {
         </div>
       </div>
 
-      {/* ── MAIN CONTENT ── */}
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
 
-        {/* Intro */}
+        {/* Main Intro */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Doctorate Dissertation Research Proposal Writing</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>All your Ph.D. Research Proposals are written by qualified and experienced researchers from the US &amp; UK</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            The most demanding &amp; daunting task of the dissertation writing is the research proposal. At Tutors India, we offer research proposal writing service, where you can relax and remain stress-free given that work being handled by an experienced researcher. Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.
+            The most demanding &amp; daunting task of the dissertation writing is the research proposal. At Tutors India, we offer research proposal writing service, where you can relax and remain stress-free given that work being handled by an experienced researcher.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            An essential requirement and preliminary activity for Ph.D. admission both international and nationally are having a good and convincing Ph.D. research proposal. Although this is an important task but undertaking such activity is a challenging and cumbersome process for any researcher who have little or no prior experience in the academic arena.
-          </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Understanding this challenging task, our experts at Tutors India who have vast experience in both theoretical and industrial knowledge will help you to write your PhD-level research proposal. Our Dissertation Research Proposals demonstrate the ability to communicate complex ideas critically, concisely, and clearly. We justify and plan a research project and show how your research projects contribute to existing research.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px", marginTop: "16px" }} className="three-col-grid">
-            {[
-              { icon: "🔬", title: "Primary or Secondary Research", desc: "We deliver proposals using primary or secondary research. Primary research is recommended for originality and original contribution to knowledge." },
-              { icon: "📐", title: "Qualitative, Quantitative or Triangulation", desc: "Our subject matter experts advise on choosing the right methodology based on research questions and problem statement identified." },
-              { icon: "📊", title: "Specific Dissertation Types", desc: "Services include business plans, systematic reviews, and meta-analyses as part of your PhD dissertation requirements." },
-            ].map(item => (
-              <div key={item.title} style={{ background: "#f5f6fa", borderRadius: "8px", padding: "16px", border: "1px solid #dde2ef" }}>
-                <div style={{ fontSize: "1.5rem", marginBottom: "6px" }}>{item.icon}</div>
-                <div style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "5px" }}>{item.title}</div>
-                <div style={{ fontSize: "0.79rem", color: "#666", lineHeight: 1.55 }}>{item.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Free Includes Banner */}
-        <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "22px", marginBottom: "28px" }}>
-          <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "8px" }}>Writing a PhD Research Proposal is Simply Easy &amp; Straightforward</h3>
-          <p style={{ color: "#c5d5f0", fontSize: "0.87rem", lineHeight: 1.7, marginBottom: "14px" }}>Along with the research proposal content, we provide the following completely free of cost:</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "8px" }} className="four-col-grid">
-            {freeDeliverables.map(item => (
-              <div key={item} style={{ display: "flex", gap: "6px", fontSize: "0.81rem", color: "#c5d5f0", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
-                <span style={{ color: "#f9c74f", fontWeight: 700, flexShrink: 0 }}>✓</span> {item}
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Service Tiers */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Service Tiers for PhD Research Proposal</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Three levels of PhD research proposal writing based on your requirements</p>
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>PhD Research Proposal Writing Service Tiers</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
-            {serviceTiers.map(t => (
-              <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>
-                <div style={{ background: t.color, color: "#fff", padding: "14px 18px" }}>
-                  <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div>
-                </div>
-                <div style={{ padding: "16px" }}>
-                  <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, marginBottom: "12px" }}>{t.desc}</p>
-                  <ul style={{ listStyle: "none", padding: 0 }}>
-                    {t.includes.map(i => (
-                      <li key={i} style={{ display: "flex", gap: "6px", fontSize: "0.78rem", color: "#555", padding: "4px 0", borderBottom: "1px solid #f0f2fa" }}>
-                        <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {i}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Proposal Structure */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>PhD Dissertation Research Proposal Structure</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>We follow specific university guidelines across the United States, United Kingdom, Australia, and other institutions. Our PhD research proposal consists of:</p>
-          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden" }}>
-            {proposalStructure.map((item, i) => (
-              <div key={item.n} style={{ padding: "16px 22px", borderBottom: i < proposalStructure.length - 1 ? "1px solid #f0f2fa" : "none", display: "flex", gap: "16px", alignItems: "flex-start" }}>
-                <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "50%", width: "32px", height: "32px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.72rem", fontWeight: 700, flexShrink: 0 }}>{item.n}</div>
-                <div>
-                  <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{item.title}</h3>
-                  <p style={{ fontSize: "0.84rem", color: "#666", lineHeight: 1.65 }}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* QA Boxes */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Our Quality Assurance Process</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" }}>
             {[
-              { img: "/images/qa/Quality-Assurance.png", title: "Quality Assurance", desc: "We ensure quality at every stage and the process.", href: "/guarantees/" },
-              { img: "/images/qa/Plagiarism-Report.png", title: "Plagiarism Report", desc: "We deliver the document after scanning for plagiarism.", href: "/guarantees/" },
-              { img: "/images/qa/Customer-Interaction.png", title: "Customer Interaction", desc: "We interact with you at every stage for amendments, queries and delivery.", href: "/contact-us/" },
-            ].map(box => (
-              <Link key={box.title} href={box.href} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", overflow: "hidden", textAlign: "center", display: "block" }}>
-                <img src={box.img} alt={box.title} style={{ width: "100%", height: "100px", objectFit: "contain", padding: "10px", background: "#f5f6fa" }} loading="lazy" />
-                <div style={{ padding: "10px" }}>
-                  <div style={{ fontSize: "0.83rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "3px" }}>{box.title}</div>
-                  <div style={{ fontSize: "0.74rem", color: "#666", lineHeight: 1.4 }}>{box.desc}</div>
+              { tier: "Basic", color: "#e0e7ff", border: "#b0bfff", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
+              { tier: "Advanced", color: "#fff3e0", border: "#ffd0a0", desc: "Wide range of sources, a clear identification of research gap in the literature along with aim and research questions" },
+              { tier: "Premium", color: "#e8f5e9", border: "#a5d6a7", desc: "Refers to a wide range of seminal research with throughout engagement using latest resources. A solid gap would be identified based on the current literature & justified thoroughly & Excellent critical analysis would be shown (upgradable)" },
+            ].map(t => (
+              <div key={t.tier} style={{ background: t.color, border: `1px solid ${t.border}`, borderRadius: "10px", padding: "20px" }}>
+                <div style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "1.05rem", color: "#1a2a6c", marginBottom: "10px" }}>{t.tier}</div>
+                <p style={{ fontSize: "0.85rem", color: "#444", lineHeight: 1.7 }}>{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Proposal Structure Components */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Ph.D. Research Proposal Structure</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "18px" }} className="two-col-grid">
+            {proposalComponents.map((c, i) => (
+              <div key={c.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px", display: "flex", gap: "14px" }}>
+                <div style={{ width: "34px", height: "34px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0, marginTop: "2px" }}>{i + 1}</div>
+                <div>
+                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{c.title}</h3>
+                  <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{c.desc}</p>
                 </div>
-              </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* What We Deliver */}
+        <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What We Deliver</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "12px" }} className="two-col-grid">
+            {deliverables.map(d => (
+              <div key={d} style={{ background: "#fff", border: "1px solid #f5d9bb", borderRadius: "8px", padding: "14px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
+                <div style={{ width: "26px", height: "26px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0 }}>✓</div>
+                <span style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.6 }}>{d}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* How Does It Work */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>How Does it work?</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" }} className="three-col-grid">
+            {[
+              { n: "1", text: "After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work." },
+              { n: "2", text: "Once the process is done, in case there are any queries, we ensure to ask during the initial stage of your work and send you the outline proposed for writing secondary data collection based dissertation." },
+              { n: "3", text: "Once the outline along with the chapterization plan is approved, we will dispatch the work in chapters, and update you on the progress of your work. Our exclusive coordinators would get in touch with you to clarify any queries." },
+              { n: "4", text: "You can also pay in installments and work will be started as soon as receive the payments." },
+              { n: "5", text: "We deliver your work as per the schedule fixed and agreed or even before the schedule." },
+            ].map(s => (
+              <div key={s.n} style={{ background: "#f8f9ff", borderRadius: "10px", padding: "18px", border: "1px solid #dde2ef", display: "flex", gap: "12px" }}>
+                <div style={{ width: "32px", height: "32px", background: "#1a2a6c", borderRadius: "50%", color: "#fff", fontWeight: 700, fontSize: "0.85rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{s.n}</div>
+                <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, margin: 0 }}>{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Other Services */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Other Services</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+            At an additional cost, we also offer:
+          </p>
+          <ul style={{ paddingLeft: "20px", margin: 0 }}>
+            {["Semi-structured interview questions and questionnaire development", "Primary data collection for dissertations"].map(s => (
+              <li key={s} style={{ color: "#555", fontSize: "0.92rem", lineHeight: 1.8, marginBottom: "4px" }}>{s}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Guarantees */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Why Choose Tutors India for PhD Research Proposal Writing</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {[
+              { t: "A complete secure & Confidential Service", d: "We offer 100% confidentiality of client's personal details, payment details, project works, and copyrights of research works. We ensure following for the conditionality, security & privacy: 1) All your projects are given unique reference codes 2) Documents are accessed only writers who signed NDA with Tutors India 3) Your financial information is protected b 128-bit secure socket layer (SSL) encryption." },
+              { t: "Fully Referenced", d: "Our dissertation work is fully referenced with latest articles and textbooks. We refer only peer-reviewed sources such as scholarly articles and textbook to select the topic. We refer database including Web of Science, ProQuest, Google Scholar, Business Source Complete, and latest newspapers articles such as Economic Times, Forbes, The Wall Street, The Economics to identify the industrial problem." },
+              { t: "Our Guarantees", d: "(1) Unlimited Revision for the work being committed. (2) We ensure on-time delivery (3) We support 24/7. (4) Our word count committed does not include references and bibliography & help you to locate the sources cited (5) Ensure three-level quality check including Technical QC, Editor QC and final check against the requirement (6) Confidentiality of the information (7) Plagiarism free work – less than 5% percent. (8) Only experienced and subject specific writers will be allotted." },
+              { t: "Plagiarism Free Work", d: "We are aware of the consequences of plagiarism. Hence, topic selection is completely plagiarism Free. Our work is scanned against online sources in a similar way like WriteCheck or Turnitin. We wanted to ensure that our clients i.e., researchers and students are not finding any issues with regards to plagiarism and so we issue plagiarism-free certificate*. Our streamlined and high-quality research writing process ensures your dissertation is not just copy-pasted, but written only after brainstorming sessions with our team of professional researchers." },
+              { t: "On Time", d: "Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Further any delay in the delivery can be raised at customersupport@tutorsindia.com" },
+              { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Testimonials */}
-        <TestimonialSlider testimonials={testimonials} />
-
-        {/* FAQ */}
         <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Voice of Our customer</h2>
+          <TestimonialSlider testimonials={testimonials} />
+        </div>
+
+        {/* FAQs */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Frequently Asked Questions</h2>
           <FaqAccordion faqs={faqs} />
         </div>
 
-        {/* Subject Areas */}
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>2000+ Experts Across Subjects &amp; Countries</h2>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px" }}>USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {subjects.map(s => (
-              <span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>
-            ))}
+        {/* CTA */}
+        <div style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", borderRadius: "12px", padding: "36px 28px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#fff", marginBottom: "10px" }}>Order Now</h2>
+          <p style={{ color: "#c5d5f0", marginBottom: "20px", fontSize: "0.95rem" }}>Get your PhD Research Proposal written by qualified UK &amp; US researchers today</p>
+          <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "13px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "13px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
+
       </section>
 
-      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get Your PhD Research Proposal Written by Experts</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Response within 30 minutes · Free Gantt Chart · Free Ethical Form · Unlimited Revisions</p>
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
-        </div>
-      </section>
+      <style>{`
+        @media(max-width:900px){.three-col-grid{grid-template-columns:1fr 1fr!important;}}
+        @media(max-width:600px){.three-col-grid,.two-col-grid{grid-template-columns:1fr!important;}}
+      `}</style>
     </>
   );
 }
