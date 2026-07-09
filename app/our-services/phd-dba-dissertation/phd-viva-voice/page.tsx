@@ -4,91 +4,144 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD / DBA Defense Viva-Voce Examination Training Help",
-  description: "PhD / DBA Defense preparation & Public Viva-Voce Examination Training. World-class professional viva-voce training. Overcome viva fear. Tutors India.",
+  title: "PhD Viva Voce Presentation Services | DBA Powerpoint Poster PPT Help UK | Tutors India",
+  description: "Are you worried of how to face your Ph.D. viva-voce in front of your supervisor & doctoral committee? Tutors India offers world-class professional viva-voce training for your success.",
 };
-
-const vivaPreparation = [
-  { icon: "🎤", title: "Panelist Introduction & Self-Presentation", desc: "Train how to introduce yourself and your research confidently to the examination panel. Learn the right tone, pace, and structure for your opening statement before committee examination." },
-  { icon: "📋", title: "Review Institutional Viva Policies", desc: "Comprehensive review of your institution's specific viva voce examination policies, procedures, and expectations. Understand what the committee is looking for in your defence." },
-  { icon: "❓", title: "Anticipated Questions Generation", desc: "Generate anticipated questions based on thorough re-examination of your thesis. Our experts identify every potential weakness or question point that examiners are likely to raise." },
-  { icon: "🔍", title: "Identify & Document Potential Errors", desc: "Identify and document any potential errors, inconsistencies, or weaknesses in your thesis before the examination. Prepare robust responses and corrections for each identified issue." },
-  { icon: "💬", title: "Coach Topic Explanation & Research Conclusions", desc: "Systematic coaching on how to explain your topic, justify your methodology, defend your findings, and present your conclusions clearly and confidently to a non-specialist audience." },
-  { icon: "🛡️", title: "Defence of Thesis Details & Omissions", desc: "Prepare comprehensive defences for every aspect of your thesis including methodological choices, analytical decisions, literature selection, and any acknowledged limitations or omissions." },
-  { icon: "🔭", title: "Discuss Future Research Enhancements", desc: "Prepare articulate responses about future research directions, how your work can be extended, what you would do differently, and how your research contributes to the broader academic field." },
-  { icon: "📊", title: "Statistical Analysis Defence", desc: "Specific preparation to defend your statistical choices, analysis methods, results interpretation, and any limitations of your quantitative or qualitative analytical approach." },
-];
-
-const serviceTiers = [
-  { tier: "Basic", color: "#2563b0", desc: "Descriptive approach with reasonable research identification and evidence of critical evaluation attempts.", includes: ["Thesis review and gap identification", "Key questions preparation", "Basic defence strategies", "Self-introduction coaching"] },
-  { tier: "Advanced", color: "#1a2a6c", desc: "Clear research gaps, defined aims, structured research questions with comprehensive question preparation.", includes: ["All Basic features", "Comprehensive questions list", "Methodological defence", "Critical analysis coaching"] },
-  { tier: "Premium", color: "#e87722", desc: "Seminal resources, thorough gap analysis, excellent critical analysis with full mock viva session included.", includes: ["All Advanced features", "Full mock viva session", "Video-recorded feedback", "Post-viva revision support"] },
-];
 
 const faqs = [
-  { q: "What is a PhD viva voce examination?", a: "The viva-voce examination is the final representation of your research degree — it defines your thesis documentation and is your opportunity to defend your doctoral research before an examination panel. It typically lasts 1–3 hours and involves both internal and external examiners who will question every aspect of your research, methodology, findings, and conclusions." },
-  { q: "How does Tutors India prepare me for my PhD viva?", a: "We provide comprehensive viva preparation including: review of your thesis to identify potential weaknesses, generation of anticipated examiner questions based on your specific research, coaching on how to explain your topic and defend your methodology, preparation of responses for each likely question, mock viva sessions, and specific preparation to defend your statistical choices and analytical decisions." },
-  { q: "How long does viva preparation training take?", a: "The timeline depends on the complexity of your thesis and your current level of preparation. Typically, comprehensive viva preparation takes 5–10 working days. Express preparation is available for urgent examination dates. Contact us with your viva date for an immediate assessment of what is achievable within your timeline." },
-  { q: "What if I fail my viva voce examination?", a: "Our viva preparation aims to comprehensively prepare you for every question and scenario. If you face a viva failure or receive major corrections, we provide continued support to help you address the committee's feedback. We prepare point-by-point responses to examiner comments and help you prepare for resubmission and any second viva." },
-  { q: "Can you prepare me for online/virtual viva voce examinations?", a: "Yes. We provide preparation specifically tailored for both in-person and virtual viva voce examinations. This includes advice on technology setup, screen-sharing your presentation, maintaining eye contact through camera, managing nerves in a remote environment, and presenting your research effectively through a digital platform." },
-  { q: "What subject areas do you support for PhD viva preparation?", a: "Our 2000+ expert writers cover all academic disciplines including Business Management, Finance, Engineering, Computer Science, Medicine, Healthcare, Law, Social Sciences, Arts & Humanities, Biological Sciences, Economics, Education, Journalism, Agriculture, Hospitality, and many more. We carefully match your viva preparation specialist to your specific research field." },
+  {
+    q: "Why Should I Hire Tutors India for PhD Viva voce preparation?",
+    a: "At Tutor India, we prepare the potential viva voce examination format that fulfill the purpose i.e., it demonstrate the thesis of your work so one can verbally communicate on the professional way with ease.",
+  },
+  {
+    q: "Whether you will prepare viva voce for all subjects/Topics?",
+    a: "Sure, we will prepare the PhD viva voce for all subjects/Topics include Business Management, Economics, Computer Science, English, Literature, Engineering, Epidemiology, Public Health, Life Science, Nutrition, etc.",
+  },
+  {
+    q: "Can I send Suggestion for Tutors India to prepare Viva voce based on my Supervisor Instruction?",
+    a: "We understand that your Supervisor play a key role in developing a plan for your viva voce examination preparation. We warmly welcome to accept the feedback and suggestion to prepare the topic based on our client's requirement.",
+  },
+  {
+    q: "Can you explain the purpose of my viva voce?",
+    a: "Sure, our writers explain briefly the purpose of the viva so the students get the good knowledge of the field since they get the confidence in attending the viva voce examination by either normal or video conference.",
+  },
+  {
+    q: "What are the costs Tutors India charges for the PhD Viva voce?",
+    a: "We completely strategized the cost based on the client's requirement such as basic, advanced and premium.",
+  },
+  {
+    q: "I am PhD Students. I want to look Sample work for the Viva voce. Will you send me sample?",
+    a: "Yes. We will send you two or three viva voce of the sample work specific to your Topic.",
+  },
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(f => ({
-    "@type": "Question",
-    "name": f.q,
-    "acceptedAnswer": { "@type": "Answer", "text": f.a },
-  }))
-};
 
 const testimonials = [
-  { quote: "My PhD Defence viva was conducted successfully and I am now waiting for the formal notification from the University. Thank you once again for your support throughout the preparation process.", author: "Oliver", location: "Denmark", avatar: "/images/testimonials/t18.jpg" },
-  { quote: "I have defended my research few days ago and scored a very good. The viva preparation sessions were absolutely invaluable — I felt completely confident walking into the examination room.", author: "Bryan", location: "Australia", avatar: "/images/testimonials/t15.jpg" },
-  { quote: "Please thank the respected professor Ma'am for a brilliant discussion. Ever since she came onto the project things have been moving in the most ideal manner. My heartfelt thanks for all her time and effort in preparing me for the viva.", author: "Jesse Ryder", location: "New Zealand", avatar: "/images/testimonials/t21.jpg" },
+  {
+    quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.",
+    author: "Amelia Brooks",
+    location: "UK",
+    avatar: "/images/testimonials/t15.jpg",
+  },
+  {
+    quote: "I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.",
+    author: "Oliver Bennett",
+    location: "UK",
+    avatar: "/images/testimonials/t13.jpg",
+  },
+  {
+    quote: "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout.",
+    author: "Layla Al Mansoori",
+    avatar: "/images/testimonials/t16.jpg",
+  },
+  {
+    quote: "My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.",
+    author: "Hassan Al Falasi",
+    location: "UAE",
+    avatar: "/images/testimonials/t17.jpg",
+  },
+  {
+    quote: "I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.",
+    author: "Charlotte Reed",
+    location: "UK",
+    avatar: "/images/testimonials/t18.jpg",
+  },
+  {
+    quote: "The team handled everything professionally from start to finish. Timely updates, quick responses, and excellent academic quality — exactly what students need during stressful deadlines.",
+    author: "Zain Al Hashmi",
+    location: "UAE",
+    avatar: "/images/testimonials/t19.jpg",
+  },
+];
+
+const defenseFeatures = [
+  "Train you how to compliment the viva-voce panel and introduce yourself",
+  "Help you check your institution's policies and practices",
+  "Prepare possible lists of questions by re-reading your thesis and staying current with research",
+  "Identify mistakes in the thesis that examiners might comment on",
+  "Coach explaining your research topic, SWOT analysis, conclusions, and recommendations",
+  "Coach confirming thesis details and content not included",
+  "Teach discussing future enhancements in your work",
+  "Illustrate the thesis represents your original work",
+  "Demonstrate verbal defense understanding",
+  "Estimate engagement with original research and analysis",
+  "Ensure thesis meets degree submission standards",
+  "Help modify and enhance written work based on examiner feedback",
+];
+
+const editingTiers = [
+  { feature: "Typographical errors", premium: true, advanced: true, standard: true },
+  { feature: "Punctuation", premium: true, advanced: true, standard: true },
+  { feature: "Grammar", premium: true, advanced: true, standard: true },
+  { feature: "Sentence construction", premium: true, advanced: true, standard: false },
+  { feature: "Terminology/reference check", premium: true, advanced: true, standard: false },
+  { feature: "Logic, relevance and clarity", premium: true, advanced: true, standard: false },
+  { feature: "Word choice", premium: true, advanced: true, standard: false },
+  { feature: "Journal formatting", premium: true, advanced: true, standard: false },
+  { feature: "Cover letter", premium: true, advanced: false, standard: false },
+  { feature: "Tutors India certificate", premium: "On request", advanced: false, standard: false },
 ];
 
 const subjects = [
-  "Arts & Humanities", "Biological Sciences", "Business & Management Studies", "Marketing & Communication",
-  "Engineering & Technology", "Natural Sciences & Mathematics", "Biological & Life Science", "Economics & Administration",
-  "Humanities & Social Science", "Law", "Medicine & Health", "Education & Training",
-  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT", "Hospitality, Leisure & Sports",
+  "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
+  "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
+  "Biological & Life science", "Economics & Administration", "Humanities & Social Science",
+  "Law", "Medicine & Health", "Education & Training",
+  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT",
+  "Hospitality, Leisure & Sports",
 ];
 
 export default function PhDVivaVoicePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
-            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}<Link href="/our-services/phd-dba-dissertation/" style={{ color: "#a0b8e0" }}>PhD / DBA</Link>{" / "}<span style={{ color: "#fff" }}>PhD Viva Voice</span>
-            </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>
-              A Ph.D. / DBA Defense Preparation or Public Viva-Voce Examination Training Help
-            </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              Are you worried about how to face your PhD viva-voce in front of your supervisor &amp; doctoral committee? Are you not sure how to overcome the viva-voce fear? Then You've Certainly Reached the Right Place!
-            </p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>Tutors India offers world-class professional viva-voce training for your success and perfection.</p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
-            </div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}
+            <Link href="/our-services/phd-dba-dissertation/" style={{ color: "#a0b8e0" }}>PhD / DBA Dissertation</Link>{" / "}
+            <span style={{ color: "#fff" }}>PhD Viva Voice</span>
           </div>
-          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>Mock Viva Sessions<br />Question Preparation<br />Defence Coaching</div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.3, marginBottom: "16px" }}>
+            A Ph.D. / DBA Defense preparation or Public Viva-Voce Examination Training Help
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "8px" }}>
+            Are you worried of how to face your Ph.D. viva-voce in front of your supervisor &amp; doctoral committee? Are you not sure of how to overcome the viva-voce fear?
+          </p>
+          <p style={{ color: "#f9c74f", fontSize: "1.05rem", fontWeight: 700, marginBottom: "20px" }}>
+            Then You've Certainly Reached the Right Place! Tutors India offers world-class professional viva-voce training for your success.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
       </section>
 
+      {/* ── STATS BAR ── */}
       <div style={{ background: "#12214a", padding: "16px 20px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "2,000+", l: "Expert Trainers" }, { n: "3,500+", l: "PhDs Helped" }, { n: "Mock Viva", l: "Sessions" }, { n: "Unlimited", l: "Practice" }, { n: "All Fields", l: "Covered" }, { n: "30 min", l: "Response" }].map(s => (
+          {[{ n: "2000+", l: "Expert Writers" }, { n: "5000+", l: "PhD Dissertations" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response Time" }, { n: "24/7", l: "Support" }].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
               <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
               <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
@@ -98,95 +151,225 @@ export default function PhDVivaVoicePage() {
       </div>
 
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
+
+        {/* Training from PhD Experts */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>PhD Viva Voce Preparation &amp; Training Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            The viva-voce examination is the final representation of your research degree that defines your thesis documentation. Tutors India provides comprehensive viva-voce training conducted by qualified researchers from the US and UK with expertise in research methodology and international university credentials.
-          </p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A Ph.D. Viva Voice Training from our Ph.D. Experts</h2>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Our viva preparation goes beyond simple question lists. We systematically review your thesis, identify every potential weakness or question point, prepare robust responses, and conduct mock viva sessions to build your confidence. Draft speeches are provided for client review with iterative feedback and amendments at every stage.
+            Ph.D. Viva Voice Training from qualified and experienced researchers from the US &amp; UK. Our PhD dissertation writers have experience in research methodology, specific domain experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. You can have one-on-one coaching with a writer, statistician, research methodologist and editor.
           </p>
         </div>
 
-        {/* Viva Preparation Features */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Comprehensive Viva Preparation Training</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>World-class professional viva-voce training covering every aspect of your PhD defence</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "16px" }} className="four-col-grid">
-            {vivaPreparation.map(v => (
-              <div key={v.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{v.icon}</div>
-                <h3 style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{v.title}</h3>
-                <p style={{ fontSize: "0.78rem", color: "#666", lineHeight: 1.6 }}>{v.desc}</p>
+        {/* Viva Voce Examination Service */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Viva Voce Examination Service</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            The viva-voce examination is the final representation of your research degree. It is the oral examination, where you will get a chance to discuss your work with experts. It demonstrates your capability to attend academic research discussions and confirms there is no plagiarism in your work.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }} className="two-col-grid">
+            <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "8px" }}>Primary or secondary research</h3>
+              <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.7, margin: 0 }}>We deliver dissertation research proposal that utilized either primary or secondary research or using secondary research only. If you have given a choice of primary or secondary, we would strongly recommend primary than secondary, as it offers some insights on the originality. Although its time consuming, it is worth contributing something unknown to the research repository.</p>
+            </div>
+            <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "8px" }}>Qualitative or Quantitative or triangulation</h3>
+              <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.7, margin: 0 }}>We completely aware that courses vary in terms of research methodologies. Hence our subject matter expertise would advise choosing the right methodology based on the research questions and problem statement that you had identified, or they would enable to identify the right one for you.</p>
+            </div>
+            <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "8px" }}>Specific Dissertation</h3>
+              <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.7, margin: 0 }}>Our dissertation proposal writing services also include economic research, operational research, coding &amp; algorithm, software development, programming, systematic review, meta-analysis as part of your dissertation requirement.</p>
+            </div>
+            <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "8px" }}>Best spoke Training – Power Presentation for Viva Voice</h3>
+              <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.7, margin: 0 }}>Our Poster Presentation services encourage clarity, creativity, and ability to stand on its own as a clear, logical presentation of your work using power point service.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Defense / Viva voice Preparation Help */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Defense / Viva voice Preparation Help</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            Tutors India ensures to add enough additional values as much as possible for the presentation to be successful. It ensures that the scholar gets best high grades.
+          </p>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Our Defense / Viva voice Preparation Service is Simply easy &amp; Straightforward</h3>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            You will get the reply within 30 minutes which would enable to place your order quickly without any delay in submissions. We would also provide possible questions along with the solutions that may arise during the presentation.
+          </p>
+        </div>
+
+        {/* Service Tiers */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>What Services do we offer under viva voce?</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
+            {[
+              { tier: "Basic", color: "#e0e7ff", border: "#b0bfff", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
+              { tier: "Advanced", color: "#fff3e0", border: "#ffd0a0", desc: "Wide range of sources, a clear identification of research gap in the literature along with aim and research questions" },
+              { tier: "Premium", color: "#e8f5e9", border: "#a5d6a7", desc: "Refers to a wide range of seminal research with throughout engagement using latest resources. A solid gap would be identified based on the current literature & justified thoroughly & Excellent critical analysis would be shown (upgradable)" },
+            ].map(t => (
+              <div key={t.tier} style={{ background: t.color, border: `1px solid ${t.border}`, borderRadius: "10px", padding: "20px" }}>
+                <div style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "1.05rem", color: "#1a2a6c", marginBottom: "10px" }}>{t.tier}</div>
+                <p style={{ fontSize: "0.85rem", color: "#444", lineHeight: 1.7 }}>{t.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Service Tiers */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Service Tiers for Viva Preparation</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
-            {serviceTiers.map(t => (
-              <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>
-                <div style={{ background: t.color, color: "#fff", padding: "14px 18px" }}><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div></div>
-                <div style={{ padding: "16px" }}>
-                  <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, marginBottom: "12px" }}>{t.desc}</p>
-                  <ul style={{ listStyle: "none", padding: 0 }}>
-                    {t.includes.map(i => (<li key={i} style={{ display: "flex", gap: "6px", fontSize: "0.78rem", color: "#555", padding: "4px 0", borderBottom: "1px solid #f0f2fa" }}><span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {i}</li>))}
-                  </ul>
+        {/* Free Deliverables */}
+        <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our Free deliverables while you order for defense preparation service UK</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            When you order our defense preparation service, we provide possible questions that may arise during viva voce along with solutions. You will also receive training materials, question lists tailored to your thesis, and guidance on how to handle unexpected questions from the examination panel.
+          </p>
+        </div>
+
+        {/* Defense Preparation Features */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Ph.D. / DBA Defense Preparation Features</h2>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "16px" }}>We follow according to the specific university guidelines across the United States, United Kingdom, Australia, and other Asian Universities.</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "12px" }} className="two-col-grid">
+            {defenseFeatures.map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: "12px", background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "14px", alignItems: "flex-start" }}>
+                <div style={{ width: "28px", height: "28px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.78rem", flexShrink: 0, marginTop: "1px" }}>{i + 1}</div>
+                <p style={{ fontSize: "0.86rem", color: "#555", lineHeight: 1.65, margin: 0 }}>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* How Does it work */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Defense Preparation Service – How Does it work?</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" }} className="three-col-grid">
+            {[
+              { n: "1", text: "After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work." },
+              { n: "2", text: "Once the process is done, in case there are any queries, we ensure to ask during the initial stage of your work and send you the outline proposed." },
+              { n: "3", text: "Once the outline along with the chapterization plan is approved, we will dispatch the work in chapters, and update you on the progress of your work. Our exclusive coordinators would get in touch with you to clarify any queries." },
+              { n: "4", text: "You can also pay in installments and work will be started as soon as receive the payments." },
+              { n: "5", text: "We deliver your work as per the schedule fixed and agreed or even before the schedule." },
+            ].map(s => (
+              <div key={s.n} style={{ background: "#fff", borderRadius: "10px", padding: "18px", border: "1px solid #dde2ef", display: "flex", gap: "12px" }}>
+                <div style={{ width: "32px", height: "32px", background: "#1a2a6c", borderRadius: "50%", color: "#fff", fontWeight: 700, fontSize: "0.85rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{s.n}</div>
+                <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, margin: 0 }}>{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Viva-voce needs to convince */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Viva-voce needs to convince the Supervisory committee</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+            Our experts at Tutors India who have vast experience in both theoretical and industrial knowledge will help you prepare and convince your supervisory committee. We write complete PhD dissertation viva-voce preparation from the introduction to the final defense.
+          </p>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Our Defense presentation Service is exclusive</h3>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            as we do not just provide chapter-wise dissertation writing service, but the rather clear explanation and justification for the choice.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {[
+              { t: "Sample Work", d: "Check the sample PhD viva voce preparation from our expert writers" },
+              { t: "Quality Assurance", d: "We ensure quality at every stage and the process." },
+              { t: "Plagiarism Report", d: "We deliver the document after scanning for plagiarism" },
+              { t: "Customer Interaction", d: "We interact with the customer at every stage in terms of amendments, query and delivery." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "12px" }}>
+                <div style={{ width: "32px", height: "32px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0, marginTop: "2px" }}>✓</div>
+                <div>
+                  <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
+                  <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Process + Guarantees */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", marginBottom: "28px" }} className="two-col-grid">
-          <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "24px" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "14px" }}>Viva Preparation Process</h3>
-            {["Thesis review and weakness identification", "Generate 50–100 anticipated examiner questions", "Prepare detailed responses to each question", "Coach on self-introduction and presentation", "Mock viva session with feedback", "Identify and prepare for methodological challenges", "Prepare responses for limitations and omissions", "Statistical analysis defence preparation", "Future research directions coaching", "Final confidence-building session"].map((step, i) => (
-              <div key={i} style={{ display: "flex", gap: "10px", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.82rem", color: "#c5d5f0" }}>
-                <span style={{ background: "#e87722", color: "#fff", borderRadius: "50%", width: "20px", height: "20px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.65rem", fontWeight: 700, flexShrink: 0 }}>{i + 1}</span>
-                {step}
+        {/* Editing Tiers Table */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px", overflowX: "auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Editing Service Tiers</h2>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
+            <thead>
+              <tr style={{ background: "#1a2a6c", color: "#fff" }}>
+                <th style={{ padding: "12px 16px", textAlign: "left" }}>Feature</th>
+                <th style={{ padding: "12px 16px", textAlign: "center" }}>Premium Editing</th>
+                <th style={{ padding: "12px 16px", textAlign: "center" }}>Advanced Editing</th>
+                <th style={{ padding: "12px 16px", textAlign: "center" }}>Standard Proofread</th>
+              </tr>
+            </thead>
+            <tbody>
+              {editingTiers.map((row, i) => (
+                <tr key={row.feature} style={{ background: i % 2 === 0 ? "#f8f9ff" : "#fff" }}>
+                  <td style={{ padding: "10px 16px", color: "#333", fontWeight: 500 }}>{row.feature}</td>
+                  <td style={{ padding: "10px 16px", textAlign: "center", color: row.premium === true ? "#1a9e3f" : row.premium === "On request" ? "#e87722" : "#ccc" }}>
+                    {row.premium === true ? "✓" : row.premium === "On request" ? "On request" : "—"}
+                  </td>
+                  <td style={{ padding: "10px 16px", textAlign: "center", color: row.advanced ? "#1a9e3f" : "#ccc" }}>{row.advanced ? "✓" : "—"}</td>
+                  <td style={{ padding: "10px 16px", textAlign: "center", color: row.standard ? "#1a9e3f" : "#ccc" }}>{row.standard ? "✓" : "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Guarantees */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Why Choose Tutors India: Defense preparation Service features</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {[
+              { t: "A complete secure & Confidential Service", d: "We offer 100% confidentiality of client's personal details, payment details, project works, and copyrights of research works. We ensure following for the conditionality, security & privacy: 1) All your projects are given unique reference codes 2) Documents are accessed only writers who signed NDA with Tutors India 3) Your financial information is protected b 128-bit secure socket layer (SSL) encryption." },
+              { t: "Fully Referenced", d: "Our dissertation work is fully referenced with latest articles and textbooks. We refer only peer-reviewed sources such as scholarly articles and textbook to select the topic. We refer database including Web of Science, ProQuest, Google Scholar, Business Source Complete, and latest newspapers articles such as Economic Times, Forbes, The Wall Street, The Economics to identify the industrial problem." },
+              { t: "Our Guarantees", d: "(1) Unlimited Revision for the work being committed. (2) We ensure on-time delivery (3) We support 24/7. (4) Our word count committed does not include references and bibliography & help you to locate the sources cited (5) Ensure three-level quality check including Technical QC, Editor QC and final check against the requirement (6) Confidentiality of the information (7) Plagiarism free work – less than 5% percent. (8) Only experienced and subject specific writers will be allotted." },
+              { t: "Plagiarism Free Work", d: "We are aware of the consequences of plagiarism. Hence, topic selection is completely plagiarism Free. Our work is scanned against online sources in a similar way like WriteCheck or Turnitin. We wanted to ensure that our clients i.e., researchers and students are not finding any issues with regards to plagiarism and so we issue plagiarism-free certificate*. Our streamlined and high-quality research writing process ensures your dissertation is not just copy-pasted, but written only after brainstorming sessions with our team of professional researchers." },
+              { t: "On Time", d: "Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours." },
+              { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}
           </div>
-          <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px", border: "1px solid #dde2ef" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Our Guarantees</h3>
-            {["Unlimited revision of preparation materials", "On-time delivery of all training materials", "24/7 customer support", "Three-level quality check", "100% confidentiality", "Subject-specific PhD-qualified trainers", "Draft responses reviewed and revised", "30-minute response guarantee"].map((g, i) => (
-              <div key={i} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid #dde2ef", fontSize: "0.83rem", color: "#555" }}>
-                <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span> {g}
-              </div>
+        </div>
+
+        {/* Subject Expertise */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Specialized Subject Matter Expertise across the globe</h2>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            {subjects.map(s => (
+              <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>
             ))}
           </div>
         </div>
 
         {/* Testimonials */}
-        <TestimonialSlider testimonials={testimonials} />
-
-        {/* FAQ */}
         <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Voice of Our customer</h2>
+          <TestimonialSlider testimonials={testimonials} />
+        </div>
+
+        {/* FAQs */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Frequently Asked Questions</h2>
           <FaqAccordion faqs={faqs} />
         </div>
 
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px", fontWeight: 600 }}>2000+ Experts — USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {subjects.map(s => (<span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>))}
+        {/* CTA */}
+        <div style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", borderRadius: "12px", padding: "36px 28px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#fff", marginBottom: "10px" }}>Order Now</h2>
+          <p style={{ color: "#c5d5f0", marginBottom: "20px", fontSize: "0.95rem" }}>Get your PhD Viva Voce preparation from qualified experts from the US &amp; UK today</p>
+          <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "13px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "13px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
+
       </section>
 
-      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Pass Your PhD Viva with Confidence</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Mock Viva Sessions · 50–100 Questions Prepared · Unlimited Practice · All Subjects</p>
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
-        </div>
-      </section>
+      <style>{`
+        @media(max-width:900px){.three-col-grid{grid-template-columns:1fr 1fr!important;}}
+        @media(max-width:600px){.three-col-grid,.two-col-grid{grid-template-columns:1fr!important;}}
+      `}</style>
     </>
   );
 }
