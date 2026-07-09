@@ -4,36 +4,37 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Doctorate Full Dissertation Writing Services",
-  description: "PhD Doctorate Full Dissertation Writing Consultation Services — Abstract to Conclusion. Expert PhD-qualified writers from UK & US. 3,500+ PhDs completed. Unlimited revisions.",
+  title: "PhD Doctorate Full Dissertation Writing Consultation Services",
+  description: "PhD Doctorate Full Dissertation Writing Consultation Services. Qualified researchers from US & UK. 5000+ PhD Thesis completed. Unlimited revisions. 0% plagiarism.",
 };
 
 const dissertationComponents = [
-  { n: "01", title: "Abstract", desc: "Approximately 250–350 words written after the full dissertation is complete. Includes brief summary of introduction/background, objectives, boundaries, methodology, results of the research, main conclusion, and recommendations." },
-  { n: "02", title: "Acknowledgement", desc: "Brief statement ensuring appropriate acknowledgement of those who gave direct assistance. Includes declaration of original work, plagiarism compliance, word count statement, and confirmation that the dissertation passed through plagiarism software." },
-  { n: "03", title: "Table of Contents", desc: "Lists chapter headings, appendices, references with page numbers. Separate lists for figures, tables, and abbreviations. Created using Microsoft Word indexing and style functions." },
-  { n: "04", title: "Introduction", desc: "Brief description of the topic, research questions, and research objectives. Provides necessary background information, broad foundation from existing literature, general scope, overview of sections, and engages the readers." },
-  { n: "05", title: "Literature, Context & Background", desc: "Covers: (a) studies conducted previously in your research field (b) familiarity with major themes (c) theories scholars use to analyse primary sources (d) gaps identified in the literature (e) further investigations intended (f) best methodologies for the study." },
-  { n: "06", title: "Research Methodology", desc: "Essential section including overall methodological approach, research design, strategy (qualitative or quantitative), research philosophy, target area, population, sample size, primary or secondary data collection, ethical considerations, pilot study, validity, reliability, and statistical analysis." },
-  { n: "07", title: "Results / Findings / Data Analysis", desc: "Findings presented as tables and figures with interpretation. Quantitative: descriptive statistics, regression, hypothesis testing, SEM. Qualitative: content, textual, case study analysis. Tools: SPSS, R, SAS, STATA, Minitab, SPSS AMOS." },
-  { n: "08", title: "Discussion, Summary & Conclusion", desc: "Three sections: Discussion compares and contrasts findings with published literature aligned to research questions. The heart of the dissertation requiring analytics and critical thinking. Summary overview followed by conclusion with main findings and recommendations." },
-  { n: "09", title: "References / Bibliography", desc: "Work cited or sources cited (in-text) from ProQuest, Emerald, IEEE, Web of Science, Academic Complete, SciDirect, JSTOR, Elsevier. Harvard, APA, Chicago, Vancouver, Turabian styles. Bibliography also included." },
-  { n: "10", title: "Appendices", desc: "Experiment diagrams, questionnaires, permissions for human subject testing, ethical forms, raw data, SPSS/SAS/R output files, interview transcripts, and reflection materials." },
-  { n: "11", title: "Dissertation Formatting", desc: "Full compliance check: word count, paper size, margin settings, line spacing, page numbering, fonts, alignment, front cover, chapter headings, citation format, academic style, ethics documentation, and assessment report." },
+  { n: "01", title: "Abstract", desc: "We write abstract for your PhD dissertation which would approximately contain 250 to 350 words. We complete the abstract after the full dissertation has been written that includes a brief summary of introduction or background, objectives, boundaries, methodology, the results of the dissertation research, main conclusion that you arrive, and recommendations." },
+  { n: "02", title: "Acknowledgement", desc: "A brief statement that ensures the following – we ensure to comment about family and friends at a minimum level while more concentration will be given on those who have given direct assistance. Further, the section will also provide assurance that the dissertation is own, evidence at your findings, a declaration to show the work complies with University regulation on plagiarism and a statement of the word count. Apart, a copy of the report appended in Loss-leaf format showing that the dissertation is passed through plagiarism software." },
+  { n: "03", title: "Table of Content", desc: "The section will list the chapter headings, appendices, references along with the page numbers. Apart, there would be a separate list for lists of figures, tables, and abbreviations. We use Microsoft Word to create lists using the indexing and style functions." },
+  { n: "04", title: "Full Dissertation Title", desc: "A precise Title as approved by the University. The title would convey the ideas of your investigation, orient your readers to the topic, indicate the type of study you will conduct, population you target and geographical location." },
+  { n: "05", title: "An Introduction to the Topic", desc: "A Brief description of the topic, research questions, and research objectives. The section would provide necessary background information and provides readers with some sense of overall research including general territory, broad foundation (existing literature), the general scope, overview of the sections and finally should engage the readers." },
+  { n: "06", title: "Aim and Overall Objective / Hypotheses", desc: "A description what research want to achieve from carrying out this research. The section includes a clear statement of the research objectives, questions that researcher seeks to answer or the hypothesis. The section also includes original contributions of your study, with a detailed account of the points summarized in the introduction, and rationale." },
+  { n: "07", title: "Literature, Context, background", desc: "This should provide some insights on (a) studies that have been conducted previously in your research field (b) familiarity with major themes, (c) the range of theories scholars use to analyse their primary sources (d) gaps identified in the literature (e) further investigations you intend to pursue as part of this dissertation and (f) best methodologies." },
+  { n: "08", title: "The detailed research methodology", desc: "The section is essential to the good dissertation. This section includes the overall methodological approach, Research design, strategy, qualitative or quantitative, research philosophy, target area, population, sample size, primary or secondary data collection, ethical consideration, pilot study, validity, reliability, & statistical analysis." },
+  { n: "09", title: "Results / Findings / Data Analysis", desc: "The chapter presents the findings of the study in the form of tables & figures along with the interpretation. Depending on the choice of research methodology, the page will have a detailed quantitative models, hypothesis testing, showing some basic descriptive statistics including mean, SD, regression. Or a qualitative analysis dealing with content or textual or case study description. We use SPSS / R / SAS / STATA / Minitab for analysis." },
+  { n: "10", title: "Discussion, Summary & Conclusion", desc: "In this chapter, we introduce three section viz., discussion, summary, and conclusion. The discussion chapter compares and contrasts the findings of previously published authors in line with the research questions. Since this is the heart of the dissertation, we ensure to develop analytics and critical thinking with reference to theoretical arguments grounded in the literature review. The other section would be just summary followed by the conclusion of main findings and recommendations." },
+  { n: "11", title: "References", desc: "Work Cited, or sources cited (in-text) or list of sources cited while writing dissertation. This will include peer-reviewed scholarly articles, textbooks, newspaper articles, annual reports, obtained from various database including ProQuest, Emerald, IEEE, Web of Science, Academic Complete, SciDirect, JSTOR, Elsevier." },
+  { n: "12", title: "Bibliography & Appendices", desc: "Lists that have read but not actually cited will also be included. The section will inform the readers about various sources that also form the basis for the proposed study and methodology. Appendices for the dissertation may include experiment diagrams, questionnaire, permission for human subject testing, ethical forms, and reflection." },
 ];
 
 const serviceTiers = [
-  { tier: "Basic", color: "#2563b0", desc: "Developed based on relevant sources, a reasonable attempt at finding an area that warrants research and evidence of an attempt to provide critical evaluation — mainly descriptive.", includes: ["Relevant academic sources", "Research gap attempt", "Basic critical evaluation", "Standard structure", "Proper referencing"] },
-  { tier: "Advanced", color: "#1a2a6c", desc: "Wide range of sources, a clear identification of research gap in the literature along with aim and research questions.", includes: ["Wide range of sources", "Clear research gap", "Defined aims & research questions", "Strong academic writing", "Advanced analysis"] },
-  { tier: "Premium", color: "#e87722", desc: "Wide range of seminal research with thorough engagement using latest resources. A solid gap identified and justified thoroughly. Excellent critical analysis shown (upgradable to publication standard).", includes: ["Seminal research", "Solid justified gap", "Excellent critical analysis", "Latest resources", "Upgradable to publication"] },
+  { tier: "Basic", color: "#2563b0", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive.", includes: ["Relevant academic sources", "Research gap attempt", "Basic critical evaluation", "Standard structure", "Proper referencing"] },
+  { tier: "Advanced", color: "#1a2a6c", desc: "Wide range of sources, a clear identification of research gap in the literature along with aim and research questions", includes: ["Wide range of sources", "Clear research gap", "Defined aims & research questions", "Strong academic writing", "Advanced analysis"] },
+  { tier: "Premium", color: "#e87722", desc: "Refers to a wide range of seminal research with throughout engagement using latest resources. A solid gap would be identified based on the current literature & justified thoroughly & Excellent critical analysis would be shown (upgradable)", includes: ["Seminal research", "Solid justified gap", "Excellent critical analysis", "Latest resources", "Upgradable to publication"] },
 ];
 
 const faqs = [
-  { q: "On which subject areas do you provide PhD full dissertation writing services?", a: "We accept orders from Business Management (HR, operations, finance, digitalisation, technology, marketing), Economics, Computer Science, English, Literature, Engineering (all fields), Epidemiology, Public Health, Life Science, Nutrition, and all other academic disciplines. If your subject is not listed, please contact us to confirm availability." },
-  { q: "Are all assigned writers qualified to write PhD dissertations?", a: "Yes. All our professional writers hold PhD or Masters degrees from top UK and US universities with additional research and industry experience. Some of our writers are trained at Harvard School, Oxford, London School of Business, and the University of Birmingham. Writers are selected through a stringent process including NDA signing." },
-  { q: "Is there any chance of my PhD dissertation getting bad feedback from the committee?", a: "In some cases, you may receive feedback because different committee members have different perspectives. Our writers address minor feedback within 24 hours and significant changes within 48 working hours. We work through unlimited free revisions until you are completely satisfied. Our experienced researchers understand the mindset and standards required by top UK, US, and Australian universities." },
-  { q: "Is there any possibility of plagiarism in my PhD dissertation?", a: "No, we give 100% guarantee of 0% plagiarism on your PhD dissertation document. All work is checked using internationally accepted premium Turnitin before delivery. We provide a plagiarism-free dissertation report to ensure your document is unique. Our writing process involves thorough brainstorming and original research — not copy-pasting." },
-  { q: "How much do you charge for PhD dissertation revisions?", a: "We provide unlimited revisions completely free of cost. We do not charge even a penny for any number of revisions since we are committed to 100% customer satisfaction. Our commitment continues until you achieve a satisfactory grade, including resit support." },
+  { q: "On which areas you provide resit dissertation writing services?", a: "We accept orders from a wide range of subjects which include Business Management, finance, operation management, supply chain and logistics management, entrepreneurial management, human resource management, psychology, history, geography, engineering, healthcare, Economics, Computer Science, English, Literature, Engineering, Epidemiology, nursing, medical, Public Health, Life Science, and Nutrition." },
+  { q: "What Information that I need to provide while ordering?", a: "It purely depends on the level of service that you undertake. However, in general, to match with your requirement, we PhD dissertation topic, PhD research proposal, manuscripts, data that you had already collected, choice of research design and method." },
+  { q: "Is there any chance of my PhD dissertation getting bad feedback from the committee?", a: "In general, each member of the committee is check and reviews the work within 6 weeks and offer feedback. Our writers are having ability to understand the professor's needs so change the minor feedback and suggestion within 24 hours and major feedback within 48 working hours." },
+  { q: "Is there any possibility of plagiarism in my PhD dissertation?", a: "No, we give 100% guarantee of 0% plagiarism on your PhD dissertation document. All our excellent writers are experienced in writing the plagiarism free content. Tutors India provides a plagiarism free dissertation paper report to all its clients." },
+  { q: "How much do you charge for PhD dissertation revisions?", a: "We are committed to give unlimited revisions to your dissertation full papers at free of cost, so we do not charge even a penny from you for any number of revisions." },
 ];
 const faqSchema = {
   "@context": "https://schema.org",
@@ -46,12 +47,11 @@ const faqSchema = {
 };
 
 const testimonials = [
-  { quote: "I have defended my research few days ago and scored a very good grade. Thank you for all your support and guidance throughout the dissertation journey.", author: "Bryan", location: "Australia", avatar: "/images/testimonials/t15.jpg" },
-  { quote: "My thesis accepted… thank you for your support. The team was professional and delivered exactly what I needed within the deadline.", author: "Nicholas", location: "Australia", avatar: "/images/testimonials/t13.jpg" },
-  { quote: "Thank you for your help & support. My PhD Defence viva was conducted successfully and I am now waiting for formal notification from the University. Thank you once again.", author: "Oliver", location: "Denmark", avatar: "/images/testimonials/t18.jpg" },
-  { quote: "Please thank the respected professor Ma'am for a brilliant discussion. Ever since she came onto the project, things have been moving in the most ideal manner. My heartfelt thanks for all her time and effort.", author: "Jesse Ryder", location: "New Zealand", avatar: "/images/testimonials/t21.jpg" },
-  { quote: "Availing services from Tutors India was perhaps the best decision in my PhD journey. The writers were patient and more than willing to answer all my queries. They improved the Literature review to a great extent! Thank you for extraordinary work!", author: "Alexander", location: "Algeria", avatar: "/images/testimonials/t16.jpg" },
-  { quote: "I contacted Tutors India for formulating the problem statement, which they did extremely well. The professionals then guided me with the framework and the methodology. They even helped me publish a research paper in support of my thesis. Great work!", author: "Farhan", location: "Japan", avatar: "/images/testimonials/t20.jpg" },
+  { quote: "I used to use another service, but I usually received poorly written papers and overpaid for it. I received a superb dissertation from you.", author: "C S", location: "Sheffield, UK", avatar: "/images/testimonials/t16.jpg" },
+  { quote: "My friend recommended that I use your service just when I was about to give up. I'm now a PhD holder, and I'm overjoyed about it.", author: "Ishani", avatar: "/images/testimonials/t04.jpg" },
+  { quote: "Dissertation writing was way more difficult in the higher studies. I made the right choice when I ordered my paper from Tutors India.", author: "Olivia", location: "UK", avatar: "/images/testimonials/t21.jpg" },
+  { quote: "Great service for non-native English writing authors! It helps me to formulate my ideas in more clear and straight forward way. Delivered in time and for very reasonable price.", author: "Ryan", avatar: "/images/testimonials/t13.jpg" },
+  { quote: "The dissertation presented by you for the project is truly commendable. Completed the project well on time. I will definitely refer to my friends.", author: "Aryaman", avatar: "/images/testimonials/t15.jpg" },
 ];
 
 const subjects = [
@@ -66,36 +66,44 @@ export default function PhDFullDissertationPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>
             <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}<Link href="/our-services/phd-dba-dissertation/" style={{ color: "#a0b8e0" }}>PhD / DBA</Link>{" / "}<span style={{ color: "#fff" }}>PhD Full Dissertation</span>
+              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+              <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}
+              <Link href="/our-services/phd-dba-dissertation/" style={{ color: "#a0b8e0" }}>PhD / DBA</Link>{" / "}
+              <span style={{ color: "#fff" }}>PhD Full Dissertation</span>
             </div>
             <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>
               PhD Doctorate Full Dissertation Writing Consultation Services
             </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              Are you looking for an expert writer of your specific subject for your PhD dissertation writing — completely from Abstract writing to Conclusion section with the high research quality? Your PhD Dissertation is written by qualified and experienced researchers from the US &amp; UK.
+            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "6px" }}>
+              Dissertation Writing Full is Simply easy &amp; Straightforward
             </p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>Then You've Certainly Reached the Right place</p>
+            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>
+              Then You've Certainly Reached the Right place
+            </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
               <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
-            <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>3,500+</div>
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>PhDs Completed<br />Since 2001</div>
+            <img src="/images/samples/dissertation-samples.webp" alt="PhD Full Dissertation Writing" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
+            <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>5,000+</div>
+            <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>PhD Thesis Completed</div>
           </div>
         </div>
         <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
       </section>
 
+      {/* ── STATS BAR ── */}
       <div style={{ background: "#12214a", padding: "16px 20px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "3,500+", l: "PhDs Helped" }, { n: "2,000+", l: "Expert Writers" }, { n: "PhD Qualified", l: "All Writers" }, { n: "0%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response" }].map(s => (
+          {[{ n: "5,000+", l: "PhD Thesis Done" }, { n: "2,000+", l: "Expert Writers" }, { n: "PhD Qualified", l: "All Writers" }, { n: "0%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response" }].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
               <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
               <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
@@ -104,20 +112,39 @@ export default function PhDFullDissertationPage() {
         </div>
       </div>
 
+      {/* ── MAIN CONTENT ── */}
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
+
+        {/* Qualified Researchers */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>PhD Doctorate Full Dissertation Writing Service</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Your Dissertation is written by qualified and experienced researchers from the US &amp; UK</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            We understand the importance of a doctoral dissertation as it represents the cumulative experience of one's entire educational experience. At Tutors India, we develop the entire dissertation right from introduction to recommendations, offering holistic and comprehensive support and working with you until successful completion of your viva voce.
+            Our dissertation writers have experience in research methodology, specific domain experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. You can have one-on-one coaching with a writer, statistician, research methodologist and editor.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            Full Dissertation writing services and thesis writing services at Tutors India are handled and written by the style, design, and format of an ideal dissertation required by the UK, Australia, and the US universities.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Our team consists of PhD holders, postdoctoral fellows, MD-holding PhDs, statisticians, biostatisticians, copy editors, and project coordinators. Writers have experience in research methodology, specific domain experience, and educational degrees from top universities including Harvard School, Oxford, London School of Business, and the University of Birmingham.
+            At Tutors India, in a very short time will help you refocus and prepare significant progress on your PhD Thesis. Till now we have completed more than 5000 PhD Thesis report and also supported for publication.
           </p>
         </div>
 
+        {/* Dissertation Type & Methodology */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Dissertation Type &amp; Choice of Research Methodology</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            We offer dissertation by research and dissertation by Translation / commentary (Title page, abstract, acknowledgement, content page, introduction, commentary (literature review, translation commentary and conclusion), and references. The dissertation will also have references and appendix includes source text and translated text.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            Our writers are proficient in handling dissertation with qualitative (e.g. interview guide design or semi-structured, focus group, observation, case study), quantitative (e.g. survey) or triangulation choice of methodology (e.g. mixed choice).
+          </p>
+        </div>
+
+        {/* Service Tiers */}
         <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Service Tiers for PhD Full Dissertation</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px", marginBottom: "28px" }} className="three-col-grid">
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>What Services do we offer under PhD doctorate Full dissertation?</h2>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Three levels of PhD full dissertation writing services based on your requirements</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
             {serviceTiers.map(t => (
               <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>
                 <div style={{ background: t.color, color: "#fff", padding: "14px 18px" }}><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div></div>
@@ -132,9 +159,24 @@ export default function PhDFullDissertationPage() {
           </div>
         </div>
 
+        {/* How Does It Work */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>How Does it work?</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work. Once the process is done, in case there are any queries, we ensure to ask during the initial stage of your work and send you the outline proposed for writing secondary data collection based dissertation.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            Once the outline along with the chapterization plan is approved, we will dispatch the work in chapters, and update you on the progress of your work. Our exclusive coordinators would get in touch with you to clarify any queries. You can also pay in installments and work will be started as soon as receive the payments.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            We deliver your work as per the schedule fixed and agreed or even before the schedule.
+          </p>
+        </div>
+
+        {/* Full Dissertation Features */}
         <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>A Full PhD Dissertation Features — All Components</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>We follow specific university guidelines across the United States, United Kingdom, Australia, and other institutions.</p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>A Full Dissertation Features</h2>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>We follow according to the specific university guidelines across the United States, United Kingdom, Australia, and other Asian Universities.</p>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden" }}>
             {dissertationComponents.map((ch, i) => (
               <div key={ch.n} style={{ padding: "16px 22px", borderBottom: i < dissertationComponents.length - 1 ? "1px solid #f0f2fa" : "none", display: "flex", gap: "16px", alignItems: "flex-start" }}>
@@ -148,10 +190,11 @@ export default function PhDFullDissertationPage() {
           </div>
         </div>
 
+        {/* Free Deliverables + Guarantees */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", marginBottom: "28px" }} className="two-col-grid">
           <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "24px" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "14px" }}>Free Deliverables with Your PhD Dissertation</h3>
-            {["Abstract or Executive Summary", "Redrawn Graphs & Tables", "Statistical / textual analysis of data", "SPSS / software screenshots", "Free tutoring sessions on the work", "SPSS output in Appendix", "Free research articles used in writing", "Questionnaire or interview guide"].map(item => (
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "14px" }}>Free Offers along with your Full PhD Dissertation Writing Services</h3>
+            {["Abstract or Executive Summary", "Graphs & Tables (redrawn)", "Statistical analysis or textual analysis", "SPSS/other software screenshots", "Free Tutoring on the work", "SPSS output in Appendix"].map(item => (
               <div key={item} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.83rem", color: "#c5d5f0" }}>
                 <span style={{ color: "#f9c74f", fontWeight: 700, flexShrink: 0 }}>✓</span> {item}
               </div>
@@ -159,38 +202,76 @@ export default function PhDFullDissertationPage() {
           </div>
           <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px", border: "1px solid #dde2ef" }}>
             <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Our Guarantees</h3>
-            {["Unlimited revisions for committed work", "On-time delivery guaranteed", "24/7 customer support", "Three-level quality check", "100% confidentiality — NDA-signed writers", "0% plagiarism — Turnitin verified", "Subject-specific PhD-qualified writers", "Chapter-by-chapter delivery"].map((g, i) => (
-              <div key={i} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid #dde2ef", fontSize: "0.83rem", color: "#555" }}>
-                <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span> {g}
+            {[
+              "(1) Unlimited Revision for the work being committed.",
+              "(2) We ensure on-time delivery",
+              "(3) We support 24/7.",
+              "(4) Our word count committed does not include references and bibliography & help you to locate the sources cited",
+              "(5) Ensure three-level quality check including Technical QC, Editor QC and final check against the requirement",
+              "(6) Confidentiality of the information",
+              "(7) Plagiarism free work – less than 5% percent.",
+              "(8) Only experienced and subject specific writers will be allotted.",
+            ].map((g, i) => (
+              <div key={i} style={{ padding: "5px 0", borderBottom: "1px solid #dde2ef", fontSize: "0.82rem", color: "#555" }}>{g}</div>
+            ))}
+          </div>
+        </div>
+
+        {/* Why Choose */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Why Choose Tutors India: PhD Full Dissertation Writing &amp; Support Service features</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px" }} className="two-col-grid">
+            {[
+              { title: "A complete secure & Confidential Service", desc: "We offer 100% confidentiality of client's personal details, payment details, project works, and copyrights of research works. We ensure following for the conditionality, security & privacy: 1) All your projects are given unique reference codes 2) Documents are accessed only writers who signed NDA with Tutors India 3) Your financial information is protected b 128-bit secure socket layer (SSL) encryption." },
+              { title: "Fully Referenced", desc: "Our dissertation work is fully referenced with latest articles and textbooks. We refer only peer-reviewed sources such as scholarly articles and textbook to select the topic. We refer database including Web of Science, ProQuest, Google Scholar, Business Source Complete, and latest newspapers articles such as Economic Times, Forbes, The Wall Street, The Economics to identify the industrial problem." },
+              { title: "Plagiarism Free Work", desc: "We are aware of the consequences of plagiarism. Hence, topic selection is completely plagiarism Free. Our work is scanned against online sources in a similar way like WriteCheck or Turnitin. We wanted to ensure that our clients i.e., researchers and students are not finding any issues with regards to plagiarism and so we issue plagiarism-free certificate*. Our streamlined and high-quality research writing process ensures your dissertation is not just copy-pasted, but written only after brainstorming sessions with our team of professional researchers." },
+              { title: "On Time", desc: "Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Further any delay in the delivery can be raised at customersupport@tutorsindia.com" },
+              { title: "Experienced Writers", desc: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement. You can be very sure about the quality of the work since expert writer is identified as per International Research Experience." },
+            ].map(f => (
+              <div key={f.title} style={{ background: "#f8f9ff", borderRadius: "10px", padding: "18px", border: "1px solid #e0e4f0" }}>
+                <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.title}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65 }}>{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <TestimonialSlider testimonials={testimonials} />
+        {/* Testimonials */}
+        <div style={{ marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Voice of Our customer</h2>
+          <TestimonialSlider testimonials={testimonials} />
+        </div>
 
+        {/* FAQ */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>
           <FaqAccordion faqs={faqs} />
         </div>
 
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>2000+ Experts Across Subjects &amp; Countries</h2>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px" }}>USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine</p>
+        {/* Subject Areas */}
+        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Your coursework is written by your choice of Subject Matter Expertise</h2>
+          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
             {subjects.map(s => (<span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>))}
           </div>
         </div>
+
       </section>
 
       <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
         <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get Your PhD Full Dissertation Written by Experts</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Response within 30 minutes · 0% Plagiarism · Unlimited Revisions · Viva Support</p>
+        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Response within 30 minutes · 0% Plagiarism · Unlimited Revisions · Publication Support</p>
         <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
         </div>
       </section>
+
+      <style>{`
+        @media(max-width:900px){.three-col-grid{grid-template-columns:1fr 1fr!important;}}
+        @media(max-width:600px){.three-col-grid,.two-col-grid{grid-template-columns:1fr!important;}}
+      `}</style>
     </>
   );
 }
