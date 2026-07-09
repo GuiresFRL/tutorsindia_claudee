@@ -1,369 +1,334 @@
-"use client";
 import Link from "next/link";
+import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
-const essayFeatures = [
-  { no: "1", title: "Research-Based Writing", desc: "All essays are built on extensive academic research using credible scholarly sources, journals, and online databases. We conduct thorough source analysis and note-making before writing begins." },
-  { no: "2", title: "Critical Analysis & Argumentation", desc: "Our experts provide essays that reflect deep critical thinking, evidence-based arguments, and structured discussions aligned with your university's postgraduate assessment criteria." },
-  { no: "3", title: "Proper Academic Referencing", desc: "We follow all major citation styles — Harvard, APA, MLA, OSCOLA, Chicago — and draw on scholarly journals, online databases, and books to ensure correct citation in every order." },
-  { no: "4", title: "Plagiarism-Free Originality", desc: "Every essay is written from scratch, scanned for plagiarism before delivery, and supported by credible scholarly sources. We maintain strict anti-plagiarism policies across all work." },
-];
-
-const includedItems = [
-  { title: "Introduction", desc: "Clear statement of the topic, research objectives, and scope of the essay." },
-  { title: "Main Body", desc: "Logically organised body paragraphs supported by critical thinking and evidence-based arguments." },
-  { title: "Conclusion", desc: "Concise summary of essay findings, analysis outcomes, and key takeaways." },
-  { title: "Bibliography", desc: "Prepared and formatted according to your university's referencing guidelines." },
-];
-
-const serviceTiers = [
-  {
-    tier: "Basic",
-    color: "#2563b0",
-    title: "Foundational Essay Support",
-    desc: "Essays constructed from quality academic sources, showing knowledge on the topic and basic critical analysis.",
-    includes: [
-      "Topic selection (3 options based on area of interest)",
-      "1,000-word structured essay",
-      "Academic research & referencing",
-      "Introduction, body, and conclusion",
-      "Plagiarism-free content",
-    ],
-  },
-  {
-    tier: "Advanced",
-    color: "#1a2a6c",
-    title: "Research-Driven Essay Writing",
-    desc: "Extensive research and literature review with identification of core issues and strong analysis to university standards.",
-    includes: [
-      "1 focused topic",
-      "Extensive literature review",
-      "Research gap identification",
-      "Evidence-based critical analysis",
-      "Formatted bibliography",
-      "Unlimited revisions",
-    ],
-  },
-  {
-    tier: "Premium",
-    color: "#e87722",
-    title: "Expert Academic Writing",
-    desc: "Comprehensive academic writing with complex critical analysis, evidence-based arguments, and full quality assurance.",
-    includes: [
-      "Full research methodology",
-      "Complex critical analysis",
-      "Industry-specific insights (MBA)",
-      "Detailed argumentative structure",
-      "Plagiarism report included",
-      "Priority delivery & revisions",
-    ],
-  },
-];
-
-const guarantees = [
-  {
-    icon: "🔒",
-    title: "Complete Confidentiality",
-    points: [
-      "All academic/personal information kept fully confidential",
-      "Work and documents managed in total privacy",
-      "Confidentiality maintained from initial stages to final submission",
-    ],
-  },
-  {
-    icon: "📌",
-    title: "Proper Referencing",
-    points: [
-      "Citation styles followed as per university guidelines",
-      "Drawn from scholarly journals, databases, and books",
-      "Correct citation style ensured across all orders",
-    ],
-  },
-  {
-    icon: "✅",
-    title: "Plagiarism-Free Content",
-    points: [
-      "All orders written entirely from scratch",
-      "Final draft scanned for plagiarism before submission",
-      "Supported by credible scholarly sources",
-    ],
-  },
-  {
-    icon: "⏱",
-    title: "Timely Delivery",
-    points: [
-      "Orders delivered well within the agreed deadline",
-      "Constant updates on order progress",
-      "Quick responses to all queries raised",
-    ],
-  },
-  {
-    icon: "👨‍🎓",
-    title: "Experienced Writers",
-    points: [
-      "Writers with proven academic expertise",
-      "Relevant subject knowledge across all disciplines",
-      "Content customised to your specific topic and level",
-    ],
-  },
-  {
-    icon: "🔄",
-    title: "Unlimited Revisions",
-    points: [
-      "100% custom-written, plagiarism-free papers",
-      "Unlimited revision service provided",
-      "Modifications addressed based on original instructions",
-    ],
-  },
-];
+export const metadata: Metadata = {
+  title: "Custom Essay Writing Services for Academic Success in the UK and UAE | Tutors India",
+  description: "Are you finding it difficult to cope with your essay deadlines, research assignments, and academic pressures at your university? Tutors India provides expert academic writing assistance for Master's or MBA degree students in the UK or UAE.",
+};
 
 const faqs = [
-  { q: "What does your MBA Essay Writing Service include?", a: "Our service covers every stage of essay development, from topic selection and research to writing, editing, and proofreading. We ensure that each essay is tailored to your university requirements and assessment criteria. Proper formatting and referencing are also included. The final document is delivered ready for submission." },
-  { q: "Are the essays customized according to my requirements?", a: "Yes, every essay is written exclusively for your academic needs. Our writers follow your instructions, university guidelines, and marking rubrics to create relevant content. We also consider your preferred reference style and specific objectives. This ensures a personalised and high-quality academic solution." },
-  { q: "How do you ensure originality in MBA essays?", a: "All essays are developed from scratch using credible academic sources and independent research. We follow strict plagiarism-free writing practices and avoid recycled content. Each assignment is reviewed for originality before delivery. This helps maintain academic integrity and university compliance." },
-  { q: "Can you handle urgent MBA essay deadlines?", a: "Yes, we provide support for both standard and urgent deadlines. Our academic experts work efficiently to deliver quality essays within the required timeframe. Even for short deadlines, we maintain high standards of research and writing. Timely delivery remains one of our top priorities." },
-  { q: "Is my personal and academic information secure?", a: "Absolutely. We maintain strict confidentiality and data protection measures for all clients. Your personal information, project details, and communication remain secure throughout the process. We never share your data with third parties. Your privacy is always protected." },
-  { q: "Do you offer revisions if changes are required?", a: "Yes, we provide revision support to ensure your essay meets your expectations. If any modifications are required based on the original instructions, our team will address them promptly. We aim to deliver work that aligns with your academic requirements. Student satisfaction is our priority." },
+  {
+    q: "What does your MBA Essay Writing Service include?",
+    a: "Our service covers every stage of essay development, from topic selection and research to writing, editing, and proofreading. We ensure that each essay is tailored to your university requirements and assessment criteria. Proper formatting and referencing are also included. The final document is delivered ready for submission.",
+  },
+  {
+    q: "Are the essays customized according to my requirements?",
+    a: "Yes, every essay is written exclusively for your academic needs. Our writers follow your instructions, university guidelines, and marking rubrics to create relevant content. We also consider your preferred reference style and specific objectives. This ensures a personalized and high-quality academic solution.",
+  },
+  {
+    q: "How do you ensure originality in MBA essays?",
+    a: "All essays are developed from scratch using credible academic sources and independent research. We follow strict plagiarism-free writing practices and avoid recycled content. Each assignment is reviewed for originality before delivery. This helps maintain academic integrity and university compliance.",
+  },
+  {
+    q: "Can you handle urgent MBA essay deadlines?",
+    a: "Yes, we provide support for both standard and urgent deadlines. Our academic experts work efficiently to deliver quality essays within the required timeframe. Even for short deadlines, we maintain high standards of research and writing. Timely delivery remains one of our top priorities.",
+  },
+  {
+    q: "Is my personal and academic information secure?",
+    a: "Absolutely. We maintain strict confidentiality and data protection measures for all clients. Your personal information, project details, and communication remain secure throughout the process. We never share your data with third parties. Your privacy is always protected.",
+  },
+  {
+    q: "Do you offer revisions if changes are required?",
+    a: "Yes, we provide revision support to ensure your essay meets your expectations. If any modifications are required based on the original instructions, our team will address them promptly. We aim to deliver work that aligns with your academic requirements. Student satisfaction is our priority.",
+  },
+];
+
+const testimonials = [
+  {
+    quote: "Whether you believe it or not, I am completely delighted with the essay you wrote for me. I received a wonderful grade, and I am now certain that your promises are true. Tutors India, thank you.",
+    author: "Dr. Declan O'Connell, MD, PhD",
+    avatar: "/images/testimonials/t1.jpg",
+  },
+  {
+    quote: "I have tried a few essay writing services but the others do not operate on the same level as Tutors India. This company provides not only great writing but great service. I love how easy it is to order essays and manage my files on their website. Thank you Tutors India for your excellent services. Great job!",
+    author: "Eeshan",
+    avatar: "/images/testimonials/t2.jpg",
+  },
+  {
+    quote: "Excellent writing service with translation and editing. I want to thank the writers as without their hard work, it would have been really difficult to quickly get my essay completed. It was a pleasure to work with them. I appreciate their professionalism and thank them for the perfect services offered to me. I look forward for working with Tutors India for all my future assignments.",
+    author: "Anay",
+    location: "US",
+    avatar: "/images/testimonials/t3.jpg",
+  },
 ];
 
 const subjects = [
   "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
   "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
-  "Biological & Life Science", "Economics & Administration", "Humanities & Social Science",
-  "Law", "Medicine & Health", "Education & Training", "Journalism & Media",
-  "Agriculture & Forestry", "Computer Science & IT", "Hospitality, Leisure & Sports",
+  "Biological & Life science", "Economics & Administration", "Humanities & Social Science",
+  "Law", "Medicine & Health", "Education & Training",
+  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT",
+  "Hospitality, Leisure & Sports",
 ];
-
-const essayProcess = [
-  { step: "1", label: "Share Your Requirements", desc: "Provide your essay topic, university guidelines, word count, deadline, and any specific instructions or marking rubrics." },
-  { step: "2", label: "Research & Planning", desc: "Our expert conducts thorough academic research, evaluates sources, identifies research gaps, and creates a structured outline." },
-  { step: "3", label: "Writing & Drafting", desc: "Your essay is written from scratch with critical analysis, well-supported arguments, and proper academic referencing." },
-  { step: "4", label: "Editing & Delivery", desc: "The draft is proofread, plagiarism-checked, and formatted before being delivered to you well within the deadline." },
-];
-
-const relatedServices = [
-  { label: "Annotated Bibliography", href: "/our-services/coursework-writing/annotated-bibliography/" },
-  { label: "Reflective Report", href: "/our-services/coursework-writing/reflective-report/" },
-  { label: "Critical Review", href: "/our-services/coursework-writing/critical-review/" },
-  { label: "Report Writing", href: "/our-services/coursework-writing/report-writing/" },
-  { label: "Assignment Writing", href: "/our-services/coursework-writing/assignment-writing/" },
-  { label: "Literature Review", href: "/our-services/coursework-writing/literature-review/" },
-];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map(f => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
 
 export default function EssayWritingServicesPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-
-      {/* Hero */}
+      {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
-            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}
             <Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}
             <span style={{ color: "#fff" }}>Essay Writing Services</span>
           </div>
-          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.3, marginBottom: "16px" }}>
             Custom Essay Writing Services for Academic Success in the UK and UAE
           </h1>
-          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "800px", lineHeight: 1.8, marginBottom: "28px" }}>
-            Are you finding it difficult to cope with your essay deadlines, research assignments, and academic pressures at your university? Tutors India provides expert academic writing assistance to help students studying for Master&apos;s or MBA degree courses in the UK or UAE — high quality, original essays written in beautiful British English.
+          <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
+            Are you finding it difficult to cope with your essay deadlines, research assignments, and academic pressures at your university? If so, then consider turning to Tutors India, which provides expert academic writing assistance to help students who are studying for a Master's or MBA degree course in the UK or UAE.
           </p>
-          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Place an Order</Link>
-            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Reach Our Experts</Link>
+          <p style={{ color: "#f9c74f", fontSize: "1.05rem", fontWeight: 700, marginBottom: "20px" }}>
+            This is the time to approach us at Tutors India and get professional help with essay writing tailored to meet your needs as a student in UK &amp; UAE. Our essays are carefully researched and critically analyzed with credible academic sources and arguments.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
       </section>
 
-      {/* Intro + Key Features */}
-      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "12px" }}>
-          Supporting Master&apos;s Students with Research-Based Academic Writing
-        </h2>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "10px" }}>
-          Master&apos;s degree level essays require high-level research skills and critical analysis. Our postgraduate assistance ensures your essays are in line with the required standards set by UK and UAE universities. We apply a structured method which includes extensive research, source analysis, note-making, outline creation, composition, and editing.
-        </p>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "36px" }}>
-          Our academic writing help is offered across many subject areas including psychology, marketing, accounting, public health, human resource management, science, social work, and business management — from undergraduate through to MBA and PhD level. We provide essays that reflect subject proficiency, critical analysis skills, logical structure, and sound argumentation.
-        </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "24px" }}>
-          {essayFeatures.map(f => (
-            <div key={f.no} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
-              <div style={{ width: "40px", height: "40px", background: "#1a2a6c", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "1.1rem", marginBottom: "14px" }}>{f.no}</div>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{f.title}</h3>
-              <p style={{ color: "#555", fontSize: "0.92rem", lineHeight: 1.7 }}>{f.desc}</p>
+      {/* ── STATS BAR ── */}
+      <div style={{ background: "#12214a", padding: "16px 20px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
+          {[{ n: "2000+", l: "Expert Writers" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response Time" }, { n: "24/7", l: "Support" }].map(s => (
+            <div key={s.l} style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
+              <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* What's Included */}
-      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
-            Perfectly Structured Essays Designed to Meet University Criteria
-          </h2>
-          <p style={{ color: "#555", marginBottom: "32px" }}>
-            Every essay we deliver has been written with university assessment criteria in mind — well researched, thoroughly evaluated, and supported by reliable academic sources with consistent postgraduate-level citation.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: "20px", marginBottom: "32px" }}>
-            {includedItems.map(item => (
-              <div key={item.title} style={{ background: "#fff", borderRadius: "10px", padding: "20px 24px", borderTop: "4px solid #1a2a6c" }}>
-                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{item.title}</h3>
-                <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p style={{ color: "#444", lineHeight: 1.8 }}>
-            In addition to being able to write an academic essay well, analytical discussion, deep research, critical thinking, and a proper academic structure are required to create an excellent one. Our experts use credible scholarly references while composing essays across business, healthcare, engineering, management, and social science disciplines.
+      <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
+
+        {/* Supporting Master's Students */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Supporting master's Students with Research-Based Academic Writing Support</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            Master's degree level essays need high-level research skills and analysis as well. Our postgraduate-level assistance ensures essays meet university standards through expert research, critical analysis, and academic rigor tailored specifically for your course requirements.
           </p>
         </div>
-      </section>
 
-      {/* Service Tiers */}
-      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", textAlign: "center", marginBottom: "8px" }}>
-          Structure of Our Essay Writing Services
-        </h2>
-        <p style={{ textAlign: "center", color: "#555", marginBottom: "36px" }}>
-          Choose the level of support that matches your academic needs and submission timeline.
-        </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "24px" }}>
-          {serviceTiers.map(t => (
-            <div key={t.tier} style={{ background: "#fff", borderRadius: "12px", overflow: "hidden", boxShadow: "0 2px 12px rgba(26,42,108,0.08)" }}>
-              <div style={{ background: t.color, color: "#fff", padding: "18px 24px" }}>
-                <div style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "1px", opacity: 0.8, marginBottom: "4px" }}>{t.tier.toUpperCase()}</div>
-                <div style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700 }}>{t.title}</div>
-              </div>
-              <div style={{ padding: "20px 24px" }}>
-                <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "16px" }}>{t.desc}</p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {t.includes.map(item => (
-                    <li key={item} style={{ display: "flex", gap: "8px", alignItems: "flex-start", color: "#444", fontSize: "0.88rem", marginBottom: "6px" }}>
-                      <span style={{ color: t.color, fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div style={{ textAlign: "center", marginTop: "32px" }}>
-          <Link href="/order-now/" style={{ padding: "12px 36px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
-            Our Essay Writing Process
-          </h2>
-          <p style={{ color: "#555", marginBottom: "32px" }}>
-            Provide us with all the information concerning your essay, and we will conduct the research, write, and review it for you.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: "20px" }}>
-            {essayProcess.map(p => (
-              <div key={p.step} style={{ background: "#fff", borderRadius: "10px", padding: "24px" }}>
-                <div style={{ width: "44px", height: "44px", background: "#e87722", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "1.1rem", marginBottom: "14px" }}>{p.step}</div>
-                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "6px" }}>{p.label}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7 }}>{p.desc}</p>
+        {/* Perfectly Structured Essays */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Perfectly Structured Essays Designed to Meet University Criteria</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            {[
+              "Has been written with the university assessment criteria in mind",
+              "A well thought out and evaluated piece of work",
+              "Supported by reliable academic sources",
+              "Proper citations have been made",
+              "Consistent with the academic level of postgraduate studies",
+            ].map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: "12px", alignItems: "center", background: "#fff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px" }}>
+                <div style={{ width: "26px", height: "26px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.8rem", flexShrink: 0 }}>✓</div>
+                <span style={{ fontSize: "0.88rem", color: "#555" }}>{item}</span>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Guarantees */}
-      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
-          Essay Writing Services that Guarantee Your Academic Success
-        </h2>
-        <p style={{ color: "#555", marginBottom: "32px" }}>
-          We are recognised by students seeking the best essay writing help in the UK and UAE for quality-focused, research-driven academic assistance.
-        </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "20px" }}>
-          {guarantees.map(g => (
-            <div key={g.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px 24px" }}>
-              <div style={{ display: "flex", gap: "12px", alignItems: "center", marginBottom: "12px" }}>
-                <span style={{ fontSize: "1.5rem" }}>{g.icon}</span>
-                <span style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.95rem" }}>{g.title}</span>
-              </div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                {g.points.map(pt => (
-                  <li key={pt} style={{ display: "flex", gap: "8px", alignItems: "flex-start", color: "#555", fontSize: "0.87rem", marginBottom: "6px" }}>
-                    <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span>{pt}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Subject Areas */}
-      <section style={{ background: "#1a2a6c", color: "#fff", padding: "48px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", marginBottom: "8px" }}>
-            Academic Excellence with Global Expertise Across All Disciplines
-          </h2>
-          <p style={{ color: "#a0b8e0", marginBottom: "28px" }}>
-            With 2,000+ academic writers worldwide, we provide expert essay writing assistance across Arts, Literature, Science, Engineering, Medicine, and much more — all with knowledge tailored to your specific subject area and university standards.
+        {/* UK Essay Writing Service */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>UK Essay Writing Service Tailored to Every Academic Level</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+            Our essay writing service follows a structured methodology including extensive research, sources analysis, note-making, outline creation, composition and editing. Services span psychology, marketing, accounting, and other disciplines across undergraduate through PhD levels.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Best Essay Writing Services in UK – For Excellence in Academic Essays</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            In addition to being able to write an academic essay well, other things are also required. Writing requirements include analytical discussion, deep research, critical thinking, and proper academic structure using credible scholarly references.
+          </p>
+        </div>
+
+        {/* Service Tiers */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>What Services Do We Offer Under Our Essay Writing Service?</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
+            {[
+              { tier: "Basic", color: "#e0e7ff", border: "#b0bfff", desc: "Essays constructed out of quality academic sources, showing knowledge on the topic and basic critical analysis." },
+              { tier: "Advanced", color: "#fff3e0", border: "#ffd0a0", desc: "Extensive research and literature with identification of the core issues and good analysis according to university standards." },
+              { tier: "Premium", color: "#e8f5e9", border: "#a5d6a7", desc: "Conscientious academic writing includes complex critical analysis and evidence-based arguments." },
+            ].map(t => (
+              <div key={t.tier} style={{ background: t.color, border: `1px solid ${t.border}`, borderRadius: "10px", padding: "20px" }}>
+                <div style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "1.05rem", color: "#1a2a6c", marginBottom: "10px" }}>{t.tier}</div>
+                <p style={{ fontSize: "0.85rem", color: "#444", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* MBA + UAE sections */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Strategic Academic Support for MBA Students</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+            Our MBA Essay Writing Services in UK for academic writing assistance for MBA students help them exhibit strategic thinking. Services emphasize management theories and industry-based insights for business-focused coursework. Our experts help students connect theoretical frameworks with real-world business scenarios to meet the high expectations of MBA programmes.
+          </p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Academic Writing Support for Students in the UAE</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            Share your academic requirements, university guidelines, and deadlines with us for customized essay assistance. Our team of experienced academic writers is ready to support students in the UAE with research-based, properly referenced essays that meet international university standards.
+          </p>
+        </div>
+
+        {/* What You Will Receive + Process */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Where Knowledge of Your Subject Meets Academic Success</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+            We offer custom essays based on research to suit all your subject-specific requirements through experienced academic professionals. With 2,000+ academic writers all around the world, we provide expertise in fields like Arts, Literature, Science, Engineering, Medicine, and much more.
+          </p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>What You Will Receive from Us for Your Essay Writing Assistance</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+            Students receive academically oriented material that is well-researched through the use of credible scholarly sources, correct citations, structured argumentation, analysis, and quality control.
+          </p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our Essay Writing Process</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            Provide us with all the information concerning your essay, and we will conduct the research, write your essay, and review your essay. Postgraduate academic assistance from us is intended to assist students in handling the intricacies of university expectations through structured research and essay development.
+          </p>
+        </div>
+
+        {/* Service Feature Cards */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>What Services Do We Offer Under Our Essay Writing Service?</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {[
+              { t: "Custom Written Essays", d: "Enjoy custom-made research papers that are written exclusively keeping in mind your university guidelines." },
+              { t: "Quality Guarantee", d: "All essays are checked for their quality so that you receive an error-free paper." },
+              { t: "Originality Reports", d: "All your papers are checked for plagiarism to ensure that they are delivered only after they pass all checks." },
+              { t: "Student Assistance", d: "Maintain constant communication with our academic experts at any stage of the assignment." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px", display: "flex", gap: "12px" }}>
+                <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0, marginTop: "2px" }}>✓</div>
+                <div>
+                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                  <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Essay Structure */}
+        <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Structure of Our Essay Writing Services – What Is Included in Your Essay?</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            {[
+              "Introduction – stating the topic and objectives of the paper",
+              "Essay's main body which is organized with the help of critical thinking and substantiated by evidence",
+              "Conclusion containing the summary of the essay findings",
+              "Bibliography prepared and formatted according to university guidelines",
+            ].map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: "12px", background: "#fff", border: "1px solid #f5d9bb", borderRadius: "8px", padding: "14px", alignItems: "flex-start" }}>
+                <div style={{ width: "28px", height: "28px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.78rem", flexShrink: 0, marginTop: "1px" }}>{i + 1}</div>
+                <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.65, margin: 0 }}>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Plagiarism + Professional Writing */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Original Essays Free of Plagiarism Based on Academic Sources</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+            We are proud of having strict anti-plagiarism policies. All the essays we write are written based on academic sources and cited appropriately. Each assignment is reviewed for originality before delivery, maintaining academic integrity and university compliance.
+          </p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Essays Professionally Written Based on Research and Criticism</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+            We provide academic writing help that will enable students to come up with essays that have research-based arguments and discussions and proper structure and integrity.
+          </p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Why Choose our Essay Writing Services UAE?</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            Our services include research help, academic editing, plagiarism checker services, and student guidance. We are recognized for quality-focused academic assistance with availability of qualified writers, guarantee of quality, revisions, and customized assistance at the academic level.
+          </p>
+        </div>
+
+        {/* Key Features List */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Essay Writing Services that Guarantee Your Academic Success!</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "10px" }} className="two-col-grid">
+            {[
+              "100% custom-written, plagiarism-free papers.",
+              "Unlimited revision service provided.",
+              "Academic writing assistance.",
+              "All orders are written from scratch.",
+              "The final draft is scanned for plagiarism and then submitted to you.",
+              "Supported by credible scholarly sources.",
+              "We deliver our orders well within time.",
+              "Constant updates about the progress of the order.",
+              "Quick responses to the questions/queries raised.",
+              "MBA Essay Writing Service in UAE uses experienced professional writers.",
+              "They possess the relevant expertise and knowledge.",
+              "Customized according to your topic.",
+            ].map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: "10px", alignItems: "flex-start", background: "#fff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "10px 14px" }}>
+                <div style={{ width: "22px", height: "22px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.75rem", flexShrink: 0, marginTop: "1px" }}>✓</div>
+                <span style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.55 }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Guarantees */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Our Guarantees</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {[
+              { t: "Complete Confidentiality", d: "All your academic/personal information is kept completely confidential. Your work and documents are managed in total confidentiality. Total confidentiality is ensured from the initial stages until final submission." },
+              { t: "Proper Referencing", d: "Citation styles are followed as per required guidelines of universities. We rely on scholarly journals, online databases, and books and ensure correct citation style in all orders." },
+              { t: "Plagiarism-Free Content", d: "We follow strict anti-plagiarism policies. All essays are written based on academic sources and cited appropriately, reviewed for originality before delivery to maintain academic integrity." },
+              { t: "Timely Delivery", d: "We deliver our orders well within time. Even for urgent deadlines, we maintain high standards of research and writing. Timely delivery remains one of our top priorities." },
+              { t: "Experienced Writers", d: "MBA Essay Writing Service in UAE uses experienced professional writers who possess the relevant expertise and knowledge, customized according to your topic and university requirements." },
+              { t: "Unlimited Revisions", d: "We provide revision support to ensure your essay meets your expectations. If any modifications are required based on the original instructions, our team will address them promptly." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Subject Expertise */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Academic Excellence with the Benefit of Global Expertise in Various Subjects</h2>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>Tutors India has the capability to cater to many different subjects in the academic world. With 2,000+ academic writers all around the world, we can provide expertise in fields like Arts, Literature, Science, Engineering, Medicine, and much more.</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {subjects.map(s => (
-              <span key={s} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem" }}>{s}</span>
-            ))}
-          </div>
-          <Link href="/our-writers/" style={{ color: "#f9c74f", fontWeight: 600, fontSize: "0.95rem" }}>Meet Our Writers →</Link>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
-          Frequently Asked Questions
-        </h2>
-        <FaqAccordion faqs={faqs} />
-      </section>
-
-      {/* Related Services */}
-      <section style={{ background: "#f0f4ff", padding: "48px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", color: "#1a2a6c", marginBottom: "20px" }}>Related Coursework Services</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-            {relatedServices.map(s => (
-              <Link key={s.label} href={s.href} style={{ padding: "10px 22px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "5px", color: "#1a2a6c", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>{s.label}</Link>
+              <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>
             ))}
           </div>
         </div>
+
+        {/* Testimonials */}
+        <div style={{ marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Voice of Our customer</h2>
+          <TestimonialSlider testimonials={testimonials} />
+        </div>
+
+        {/* FAQs */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Frequently Asked Questions</h2>
+          <FaqAccordion faqs={faqs} />
+        </div>
+
+        {/* CTA */}
+        <div style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", borderRadius: "12px", padding: "36px 28px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#fff", marginBottom: "10px" }}>Get Expert Essay Writing Support Today</h2>
+          <p style={{ color: "#c5d5f0", marginBottom: "20px", fontSize: "0.95rem" }}>Professional essay writing assistance for Master's and MBA students in the UK &amp; UAE</p>
+          <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "13px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "13px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
+          </div>
+        </div>
+
       </section>
 
-      {/* CTA */}
-      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
-          Get Expert Essay Writing Support Today
-        </h2>
-        <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
-          Need assistance with a challenging essay, complex research topic, or approaching deadline? Share your academic requirements and we&apos;ll deliver a high-quality, original essay tailored to your university standards.
-        </p>
-        <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 36px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 36px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
-        </div>
-      </section>
+      <style>{`
+        @media(max-width:900px){.three-col-grid{grid-template-columns:1fr 1fr!important;}}
+        @media(max-width:600px){.three-col-grid,.two-col-grid{grid-template-columns:1fr!important;}}
+      `}</style>
     </>
   );
 }
