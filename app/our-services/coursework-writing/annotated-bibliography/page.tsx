@@ -4,128 +4,118 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "UK Annotated Bibliography Writing Services",
-  description: "UK Annotated Bibliography Writing Help. Summary, Critical Evaluation, and Mixed annotations. APA, MLA, Chicago. 8000+ annotated bibliographies completed. Tutors India.",
+  title: "The UK Annotated Bibliography Writing Help | Tutors India",
+  description: "UK Annotated Bibliography Writing Help at Tutors India compiles the literature for the purpose of an extended research project that showcases the mastery of the relevant background including contextual, critical & theoretical evidence of a wide range of reading.",
 };
-
-const annotationTypes = [
-  {
-    icon: "📄",
-    title: "Summary Annotation",
-    desc: "Summarises source content providing argument overview without judgment. Two kinds exist:",
-    subtypes: [
-      { name: "Informative", desc: "Summarises the content — what the source says." },
-      { name: "Indicative", desc: "Provides real information about the questions or issues addressed by the source." },
-    ],
-  },
-  {
-    icon: "🔍",
-    title: "Critical Evaluation",
-    desc: "Evaluates work critically, showing differences and current usage. Includes two phases:",
-    subtypes: [
-      { name: "Initial Appraisal", desc: "Author, publication date, edition, publisher, journal title — establishes authority and relevance." },
-      { name: "Content Appraisal", desc: "Audience, methodology, objectives, reasoning, reliability, validity, and your personal conclusion." },
-    ],
-  },
-  {
-    icon: "🔀",
-    title: "Mixed Annotation",
-    desc: "Combination of Summary and Critical Evaluation — provides both an overview of the source content and your critical assessment of its value, quality, and relevance to your research.",
-    subtypes: [],
-  },
-];
-
-const deliverables = [
-  "Bibliography content formatted per appropriate citation style (APA, MLA, Chicago)",
-  "Explanation showing thorough source understanding (~150 words per source)",
-  "Author qualification and authority critique",
-  "Critical commentary on usefulness, effectiveness, and worth",
-  "Author's point of view and bias assessment",
-  "Relevance, quality, and accuracy evaluation",
-  "Scope and limitations of the source identified",
-  "Plagiarism-free certificate on request",
-];
-
-const citationStyles = [
-  { style: "APA", full: "American Psychological Association", used: "Psychology, Education, Social Sciences" },
-  { style: "MLA", full: "Modern Language Association", used: "Humanities, Literature, Languages" },
-  { style: "Chicago", full: "Chicago Manual of Style", used: "History, Arts, Business" },
-  { style: "Harvard", full: "Harvard Referencing", used: "UK Universities — most common" },
-  { style: "Vancouver", full: "Vancouver System", used: "Medicine, Health Sciences" },
-];
-
-const qaBoxes = [
-  { img: "/images/qa/Quality-Assurance.png", title: "Quality Assurance", desc: "We ensure quality at every stage and the process.", href: "/guarantees/" },
-  { img: "/images/qa/Plagiarism-Report.png", title: "Plagiarism Report", desc: "We deliver the document after scanning for plagiarism.", href: "/guarantees/" },
-  { img: "/images/qa/Customer-Interaction.png", title: "Customer Interaction", desc: "We interact with you at every stage for amendments, queries and delivery.", href: "/contact-us/" },
-];
 
 const faqs = [
-  { q: "Why choose Tutors India for Annotated Bibliography services?", a: "Tutors India provides excellent service for all your academic Annotated Bibliography requirements. Our writers are highly experienced and professional in developing plagiarism-free and high-quality manuscripts. We have successfully completed around 8,000 annotated bibliographies and are pioneers in handling different types of annotated bibliography writing. Our experts are assigned based on your specific subject area and referencing style requirements." },
-  { q: "Can the quality of the annotated bibliography be guaranteed?", a: "Yes, our annotated bibliography papers are guaranteed with exemplary writing structure, correct vocabulary, originality in the description, and precise citations. All work undergoes a three-level quality check (Technical QC, Editor QC, final requirement verification) before delivery. Less than 5% plagiarism is guaranteed and a plagiarism-free certificate is provided on request." },
-  { q: "Where are your writers located?", a: "We have PhD and Masters brilliant writers from both the USA and UK. All of our writers have worked as professors in various UK, US, Australian and other top Asian universities. They have specific domain expertise and are assigned based on your subject area. Writers are selected through a stringent process including signing of non-disclosure and confidentiality agreements." },
-  { q: "Can you meet tight deadlines for annotated bibliography?", a: "At Tutors India, we work with a systematic process. After getting the dissertation or bibliography task, we discuss the timeline with our writers and can offer the annotated bibliography listed in alphabetical order within your required timeframe. Minor changes are completed within 24 working hours and significant changes within 48 working hours." },
-  { q: "Do you provide sample annotated bibliographies?", a: "Yes, we share some of our annotated bibliography sample works so it is easy for students to analyse the style and quality of our work. This helps you understand exactly what you will receive before placing your order. Contact us or visit our sample works page to review examples." },
-  { q: "What subject areas do you cover for annotated bibliography?", a: "We cover all academic subjects including Psychology, English Essays, Marketing, Chemistry, Science, Public Health, Performance Management, Social Work, Accounting, Human Resource Management, and Law (including case law, legislation, textbooks, and journals). Our 2000+ expert team covers every major academic discipline." },
+  {
+    q: "Why should I consider Tutors India for writing my Annotated Bibliography services?",
+    a: "Tutors India provides excellent service for all your academic Annotated Bibliography requirements. Our writers are highly experienced and professional in developing plagiarism free and high-quality manuscript. We provide well-cited and complete documents within the rules and guidelines in your stipulated time.",
+  },
+  {
+    q: "Can you guarantee to produce quality Annotated Bibliography papers?",
+    a: "Yes, our annotated bibliography papers are guarantee with exemplary writing structure, correct vocabulary, originality in the description and precise citations. With such a structured process, you assured to get high-quality annotated bibliography outputs.",
+  },
+  {
+    q: "Where is Tutors India writers located?",
+    a: "We have Ph.D. and Masters brilliant writer from both the USA and UK. All of our writers have worked as professors in various UK, the US, Australian and other top Asian universities.",
+  },
+  {
+    q: "How do I know I will receive my Annotated Bibliography work within the deadline?",
+    a: "At Tutors India, we work with the systematic process follow. Undoubtedly, we keep uprate with our work progress level regularly through OUR Customized CRM or via Email. It is very rare case that there will be a delay so we will inform you the same in the advance.",
+  },
+  {
+    q: "How quickly can I Get my Annotated bibliography?",
+    a: "After getting the Dissertation Task, we will talk with our writers to set the timeline but even we are ready to offer the Annotated bibliography that would listed in an alphabetical order. We ensure that our dissertation writers will delivered the task on Time.",
+  },
+  {
+    q: "Can I look some of samples of your Annotated bibliography writing style?",
+    a: "Sure, we share some of the Annotated bibliography sample works so it is easy for students to analyze of style and quality of our works.",
+  },
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(f => ({
-    "@type": "Question",
-    "name": f.q,
-    "acceptedAnswer": { "@type": "Answer", "text": f.a },
-  }))
-};
 
 const testimonials = [
-  { quote: "Availing services from Tutors India was perhaps the best decision in my academic journey. The writers were patient and more than willing to answer all my queries. They improved the literature review to a great extent! Thank you for extraordinary work!", author: "Alexander", location: "Algeria", avatar: "/images/testimonials/t16.jpg" },
-  { quote: "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout.", author: "Layla Al Mansoori", avatar: "/images/testimonials/layla-al-mansoori.webp" },
-  { quote: "I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.", author: "Charlotte Reed", location: "UK", avatar: "/images/testimonials/charlotte-reed.webp" },
+  {
+    quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.",
+    author: "Amelia Brooks",
+    location: "UK",
+    avatar: "/images/testimonials/t15.jpg",
+  },
+  {
+    quote: "I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.",
+    author: "Oliver Bennett",
+    location: "UK",
+    avatar: "/images/testimonials/t13.jpg",
+  },
+  {
+    quote: "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout.",
+    author: "Layla Al Mansoori",
+    avatar: "/images/testimonials/t16.jpg",
+  },
+  {
+    quote: "My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.",
+    author: "Hassan Al Falasi",
+    location: "UAE",
+    avatar: "/images/testimonials/t17.jpg",
+  },
+  {
+    quote: "I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.",
+    author: "Charlotte Reed",
+    location: "UK",
+    avatar: "/images/testimonials/t18.jpg",
+  },
+  {
+    quote: "The team handled everything professionally from start to finish. Timely updates, quick responses, and excellent academic quality — exactly what students need during stressful deadlines.",
+    author: "Zain Al Hashmi",
+    location: "UAE",
+    avatar: "/images/testimonials/t19.jpg",
+  },
 ];
 
 const subjects = [
-  "Arts & Humanities", "Biological Sciences", "Business & Management Studies", "Marketing & Communication",
-  "Engineering & Technology", "Natural Sciences & Mathematics", "Biological & Life Science", "Economics & Administration",
-  "Law", "Medicine & Health", "Education & Training", "Computer Science & IT", "Hospitality, Leisure & Sports",
+  "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
+  "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
+  "Biological & Life science", "Economics & Administration", "Humanities & Social Science",
+  "Law", "Medicine & Health", "Education & Training",
+  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT",
+  "Hospitality, Leisure & Sports",
 ];
 
 export default function AnnotatedBibliographyPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
-            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}<Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}<span style={{ color: "#fff" }}>Annotated Bibliography</span>
-            </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>
-              The UK Annotated Bibliography Writing Help
-            </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              Tutors India offers annotated bibliography writing that compiles literature for extended research projects, showcasing mastery of background including contextual, critical, and theoretical evidence. Written in British English with accurate comprehensive referencing per university requirements.
-            </p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>8,000+ Annotated Bibliographies Completed Successfully</p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <a href="/docs/master-dissertation-brochure.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
-            </div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}
+            <Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}
+            <span style={{ color: "#fff" }}>Annotated Bibliography</span>
           </div>
-          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/images/samples/assignment-writing.jpg" alt="Student working on academic assignment" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
-            <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>8,000+</div>
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Annotated Bibliographies<br />Completed</div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.3, marginBottom: "16px" }}>
+            The UK Annotated Bibliography Writing Help
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "12px" }}>
+            UK Annotated Bibliography Writing Help at Tutors India compiles the literature for the purpose of an extended research project that showcases the mastery of the relevant background including contextual, critical &amp; theoretical evidence of a wide range of reading.
+          </p>
+          <p style={{ color: "#f9c74f", fontSize: "1.05rem", fontWeight: 700, marginBottom: "20px" }}>
+            Our Annotated Bibliography writers have experience in research methodology, specific domain experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
       </section>
 
+      {/* ── STATS BAR ── */}
       <div style={{ background: "#12214a", padding: "16px 20px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "8,000+", l: "Completed" }, { n: "2,000+", l: "Expert Writers" }, { n: "APA · MLA · Chicago", l: "Citation Styles" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response" }].map(s => (
+          {[{ n: "2000+", l: "Expert Writers" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response Time" }, { n: "24/7", l: "Support" }].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
+              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
               <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
             </div>
           ))}
@@ -134,125 +124,165 @@ export default function AnnotatedBibliographyPage() {
 
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
 
-        {/* Intro */}
+        {/* What is an Annotated Bibliography */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>
-            UK Annotated Bibliography Writing Service — Central to the Research Process
-          </h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>What is an Annotated Bibliography?</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            Annotated bibliography requires defining the scope, determining if bibliography is independent or part-research, developing sub-questions from the main research question, and deciding on source types (journal articles, academic books, policy statements, government reports). The annotation informs the reader about source relevance, quality, accuracy — using descriptive and critical expressions.
+            An annotated bibliography is a compilation of literature for extended research projects listed in alphabetical order. It showcases mastery of the relevant background including contextual, critical &amp; theoretical evidence of a wide range of reading.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Our UK Annotated Bibliography Writing Service only chooses materials that are highly relevant to the topic. It demonstrates succinct writing, critical analysis, and information literacy. The service maintains a strict plagiarism policy, writing in original words with clear references for quotations. We ensure logical organisation, smooth transitions, professional formatting, no mechanical errors, and appropriate subject-specific vocabulary.
+            Writing an annotated bibliography is a daunting task requiring multiple phases: defining the scope of your project, determining if it is independent work or a component of a dissertation, developing sub-questions from your main research query, and selecting appropriate source types before writing begins. Skipping any of these steps would significantly affect the quality of work.
           </p>
         </div>
 
-        {/* 3 Annotation Types */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Three Main Annotation Types We Provide</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Choose the annotation approach that best meets your university's requirements</p>
+        {/* Types of Annotations */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>What are the Types of Annotations?</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
-            {annotationTypes.map(a => (
-              <div key={a.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "22px" }}>
-                <div style={{ fontSize: "2rem", marginBottom: "10px" }}>{a.icon}</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>{a.title}</h3>
-                <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, marginBottom: "12px" }}>{a.desc}</p>
-                {a.subtypes.map(sub => (
-                  <div key={sub.name} style={{ background: "#f5f6fa", borderRadius: "6px", padding: "10px 12px", marginBottom: "6px" }}>
-                    <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "3px" }}>{sub.name}</div>
-                    <div style={{ fontSize: "0.78rem", color: "#666" }}>{sub.desc}</div>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Deliverables + Citation Styles */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", marginBottom: "28px" }} className="two-col-grid">
-          <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "24px" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "14px" }}>What We Deliver with Your Annotated Bibliography</h3>
-            {deliverables.map(item => (
-              <div key={item} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.83rem", color: "#c5d5f0" }}>
-                <span style={{ color: "#f9c74f", fontWeight: 700, flexShrink: 0 }}>✓</span> {item}
-              </div>
-            ))}
-          </div>
-          <div>
-            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Citation Format Support</h3>
-            {citationStyles.map(c => (
-              <div key={c.style} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px", marginBottom: "8px", display: "flex", gap: "12px", alignItems: "center" }}>
-                <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "6px", padding: "6px 10px", fontSize: "0.82rem", fontWeight: 700, flexShrink: 0 }}>{c.style}</div>
-                <div>
-                  <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "#1a2a6c" }}>{c.full}</div>
-                  <div style={{ fontSize: "0.75rem", color: "#888" }}>{c.used}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* QA Boxes */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px", marginBottom: "28px" }}>
-          {qaBoxes.map(box => (
-            <Link key={box.title} href={box.href} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", overflow: "hidden", textAlign: "center", display: "block" }}>
-              <img src={box.img} alt={box.title} style={{ width: "100%", height: "100px", objectFit: "contain", padding: "10px", background: "#f5f6fa" }} loading="lazy" />
-              <div style={{ padding: "10px" }}>
-                <div style={{ fontSize: "0.83rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "3px" }}>{box.title}</div>
-                <div style={{ fontSize: "0.74rem", color: "#666", lineHeight: 1.4 }}>{box.desc}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Guarantees row */}
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "22px", marginBottom: "28px", border: "1px solid #dde2ef" }}>
-          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Why Choose Tutors India: Our Service Features</h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "12px" }} className="four-col-grid">
             {[
-              { icon: "🎓", t: "Qualified Researchers", d: "PhD & Masters holders from top UK and US universities" },
-              { icon: "🔁", t: "Unlimited Revisions", d: "Free revisions even after project completion" },
-              { icon: "📚", t: "Peer-Reviewed Only", d: "Only peer-reviewed articles from credible databases" },
-              { icon: "🛡️", t: "Plagiarism Report", d: "0–5% plagiarism guaranteed with Turnitin certificate" },
-              { icon: "📞", t: "24/7 Support", d: "Email, phone, WhatsApp — round-the-clock support" },
-              { icon: "✅", t: "100% Requirement Match", d: "Exact match with your university guidelines and rubric" },
-              { icon: "⏱", t: "On-Time Delivery", d: "Minor changes within 24 hours" },
-              { icon: "🔒", t: "Confidential", d: "128-bit SSL, NDA-signed writers" },
-            ].map(g => (
-              <div key={g.t} style={{ background: "#fff", borderRadius: "8px", padding: "14px", border: "1px solid #dde2ef", textAlign: "center" }}>
-                <div style={{ fontSize: "1.6rem", marginBottom: "6px" }}>{g.icon}</div>
-                <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{g.t}</div>
-                <div style={{ fontSize: "0.72rem", color: "#666", lineHeight: 1.4 }}>{g.d}</div>
+              {
+                title: "Summary",
+                color: "#e0e7ff", border: "#b0bfff",
+                desc: "Summarize the content of the source in order to provide an overview of the argument but without judging the work. Includes informative and indicative varieties.",
+              },
+              {
+                title: "Critical Evaluation",
+                color: "#fff3e0", border: "#ffd0a0",
+                desc: "Just does not summarize but rather evaluate every part of the work critically and show how the work is different and its use in currently proposed a topic. Includes initial appraisal and content appraisal components examining methodology, reliability, and validity.",
+              },
+              {
+                title: "Mixed",
+                color: "#e8f5e9", border: "#a5d6a7",
+                desc: "Combination of Summary and Critical Evaluation. This type provides both an overview of the argument and a critical assessment of the work's usefulness and limitations.",
+              },
+            ].map(t => (
+              <div key={t.title} style={{ background: t.color, border: `1px solid ${t.border}`, borderRadius: "10px", padding: "20px" }}>
+                <div style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{t.title}</div>
+                <p style={{ fontSize: "0.85rem", color: "#444", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Citation Formats */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Citation Formats Supported</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+            Our annotated bibliography writing service supports all major citation formats as required by your university. We ensure annotations include an explanation to show that you have read and understood the source thoroughly and critically comment on the usefulness, effectiveness, and worth of the work.
+          </p>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            {["American Psychological Association (APA)", "Modern Language Association (MLA)", "Chicago style"].map(f => (
+              <div key={f} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "8px", padding: "12px 20px", display: "flex", gap: "10px", alignItems: "center" }}>
+                <div style={{ width: "24px", height: "24px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.75rem", flexShrink: 0 }}>✓</div>
+                <span style={{ fontSize: "0.88rem", color: "#1a2a6c", fontWeight: 600 }}>{f}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* How to Write + What We Offer */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>How to Write an Annotated Bibliography</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+            Writing an annotated bibliography requires a systematic approach. Before you begin, you need to define your project scope, determine whether the annotated bibliography is independent work or part of a dissertation, develop sub-questions from your main research query, and select appropriate source types.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "18px" }}>
+            {[
+              "Define project scope",
+              "Determine if independent or dissertation component",
+              "Develop sub-questions from main research query",
+              "Select appropriate source types",
+            ].map((step, i) => (
+              <div key={i} style={{ display: "flex", gap: "12px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px", alignItems: "center" }}>
+                <div style={{ width: "28px", height: "28px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.8rem", flexShrink: 0 }}>{i + 1}</div>
+                <span style={{ fontSize: "0.88rem", color: "#555" }}>{step}</span>
+              </div>
+            ))}
+          </div>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>What Tutors India Offers</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            At Tutors India, we provide high-quality critical Annotated Bibliography writing in British English, with accurate referencing and work by qualified researchers from US &amp; UK universities. Our annotated bibliographies are compiled literature listings in alphabetical order. We handle scope definition, source selection, and development of sub-questions before writing begins — ensuring a thorough and academically sound output.
+          </p>
+        </div>
+
+        {/* How Does It Work */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>How Does it work?</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" }} className="three-col-grid">
+            {[
+              { n: "1", text: "After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work." },
+              { n: "2", text: "Once the process is done, in case there are any queries, we ensure to ask during the initial stage of your work and send you the outline proposed." },
+              { n: "3", text: "Once the outline along with the chapterization plan is approved, we will dispatch the work in chapters, and update you on the progress of your work. Our exclusive coordinators would get in touch with you to clarify any queries." },
+              { n: "4", text: "You can also pay in installments and work will be started as soon as receive the payments." },
+              { n: "5", text: "We deliver your work as per the schedule fixed and agreed or even before the schedule." },
+            ].map(s => (
+              <div key={s.n} style={{ background: "#f8f9ff", borderRadius: "10px", padding: "18px", border: "1px solid #dde2ef", display: "flex", gap: "12px" }}>
+                <div style={{ width: "32px", height: "32px", background: "#1a2a6c", borderRadius: "50%", color: "#fff", fontWeight: 700, fontSize: "0.85rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{s.n}</div>
+                <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, margin: 0 }}>{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Guarantees */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Why Choose Tutors India for Annotated Bibliography Writing?</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {[
+              { t: "A complete secure & Confidential Service", d: "We offer 100% confidentiality of client's personal details, payment details, project works, and copyrights of research works. We ensure following for the conditionality, security & privacy: 1) All your projects are given unique reference codes 2) Documents are accessed only writers who signed NDA with Tutors India 3) Your financial information is protected b 128-bit secure socket layer (SSL) encryption." },
+              { t: "Fully Referenced", d: "Our dissertation work is fully referenced with latest articles and textbooks. We refer only peer-reviewed sources such as scholarly articles and textbook to select the topic. We refer database including Web of Science, ProQuest, Google Scholar, Business Source Complete, and latest newspapers articles such as Economic Times, Forbes, The Wall Street, The Economics to identify the industrial problem." },
+              { t: "Our Guarantees", d: "(1) Unlimited Revision for the work being committed. (2) We ensure on-time delivery (3) We support 24/7. (4) Our word count committed does not include references and bibliography & help you to locate the sources cited (5) Ensure three-level quality check including Technical QC, Editor QC and final check against the requirement (6) Confidentiality of the information (7) Plagiarism free work – less than 5% percent. (8) Only experienced and subject specific writers will be allotted." },
+              { t: "Plagiarism Free Work", d: "We are aware of the consequences of plagiarism. Hence, annotated bibliography writing is completely plagiarism Free. Our work is scanned against online sources in a similar way like WriteCheck or Turnitin. We wanted to ensure that our clients i.e., researchers and students are not finding any issues with regards to plagiarism and so we issue plagiarism-free certificate*." },
+              { t: "On Time", d: "Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours." },
+              { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Subject Expertise */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Specialized Subject Matter Expertise across the globe</h2>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            {subjects.map(s => (
+              <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>
             ))}
           </div>
         </div>
 
         {/* Testimonials */}
-        <TestimonialSlider testimonials={testimonials} />
-
-        {/* FAQ */}
         <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Voice of Our customer</h2>
+          <TestimonialSlider testimonials={testimonials} />
+        </div>
+
+        {/* FAQs */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Frequently Asked Questions</h2>
           <FaqAccordion faqs={faqs} />
         </div>
 
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px", fontWeight: 600 }}>2000+ Experts — USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {subjects.map(s => (<span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>))}
+        {/* CTA */}
+        <div style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", borderRadius: "12px", padding: "36px 28px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#fff", marginBottom: "10px" }}>Order Now</h2>
+          <p style={{ color: "#c5d5f0", marginBottom: "20px", fontSize: "0.95rem" }}>Get expert Annotated Bibliography writing help from qualified US &amp; UK researchers today</p>
+          <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "13px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "13px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
+
       </section>
 
-      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get Your Annotated Bibliography Written by Experts</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>8,000+ Completed · APA · MLA · Chicago · Harvard · Unlimited Revisions</p>
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
-        </div>
-      </section>
+      <style>{`
+        @media(max-width:900px){.three-col-grid{grid-template-columns:1fr 1fr!important;}}
+        @media(max-width:600px){.three-col-grid,.two-col-grid{grid-template-columns:1fr!important;}}
+      `}</style>
     </>
   );
 }
