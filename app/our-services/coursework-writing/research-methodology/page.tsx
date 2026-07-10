@@ -4,201 +4,355 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Research Methodology Writing Services UK",
-  description: "Expert Research Methodology Writing for Masters, MBA and PhD dissertations. Qualitative, Quantitative and Mixed methods. SPSS, NVIVO, STATA. Tutors India.",
+  title: "The UK Post-graduate & Doctorate Research Methodology Writing Help | Tutors India",
+  description: "Expert UK Dissertation Research Methodology writing by qualified researchers from the US & UK. Qualitative, Quantitative and Mixed Methods. Tutors India.",
 };
-
-const methodologyTypes = [
-  { icon: "📊", title: "Quantitative Research", desc: "Survey design, statistical analysis, hypothesis testing, regression, SEM. Software: SPSS, R, STATA, SAS, Minitab, E-Views. Descriptive and inferential statistics fully covered." },
-  { icon: "💬", title: "Qualitative Research", desc: "Interviews, focus groups, ethnography, thematic analysis, content analysis, grounded theory. Software: NVIVO, Atlas-ti, MAXQDA. Full coding framework and theme development." },
-  { icon: "🔀", title: "Mixed Methods / Triangulation", desc: "Combination of qualitative and quantitative approaches. Methodological justification, integration of data sources, and combined findings presentation." },
-  { icon: "📋", title: "Systematic Review Methodology", desc: "PRISMA protocol development, database search strategy, inclusion/exclusion criteria, quality assessment, data extraction, and synthesis." },
-  { icon: "🔍", title: "Action Research", desc: "Cyclical research processes, participatory action research, practitioner research. Common in education, healthcare, and organisational settings." },
-  { icon: "📖", title: "Secondary / Library-Based", desc: "Secondary data analysis, archival research, document analysis. Sources: ONS, World Bank, Eurostat, NHS Digital, OECD, published datasets." },
-];
-
-const methodologyComponents = [
-  { n: "01", title: "Research Philosophy", desc: "Epistemological and ontological positioning — Positivism, Interpretivism, Critical Realism, Pragmatism. Justification of the philosophical stance adopted for your specific research questions." },
-  { n: "02", title: "Research Approach", desc: "Inductive vs. deductive reasoning, abductive approach. How your chosen approach aligns with your research questions and philosophical stance." },
-  { n: "03", title: "Research Design", desc: "Exploratory, descriptive, explanatory, or evaluative design. Case study, survey, experimental, longitudinal, or cross-sectional design with full justification." },
-  { n: "04", title: "Research Strategy", desc: "Survey, case study, experiment, action research, grounded theory, ethnography, archival research — with rationale for the chosen strategy." },
-  { n: "05", title: "Time Horizon", desc: "Cross-sectional (one point in time) vs. longitudinal (extended period) research. Justification based on research questions and feasibility." },
-  { n: "06", title: "Data Collection Methods", desc: "Primary: questionnaires, interviews, observation, focus groups. Secondary: existing datasets, published research, official statistics." },
-  { n: "07", title: "Sampling Strategy", desc: "Probability sampling (random, stratified, systematic, cluster) vs. non-probability (purposive, snowball, convenience). Sample size determination and justification." },
-  { n: "08", title: "Data Analysis Approach", desc: "Statistical analysis plan (quantitative) or analytical framework (qualitative). Tools: SPSS, R, STATA, NVIVO, Atlas-ti. Validity and reliability measures." },
-  { n: "09", title: "Ethical Considerations", desc: "Informed consent, data protection (GDPR), confidentiality, anonymity, participant wellbeing, ethical approval process, and institutional ethics compliance." },
-  { n: "10", title: "Limitations & Delimitations", desc: "Research boundaries, acknowledged limitations of the chosen methodology, potential biases, and how limitations are mitigated." },
-];
-
-const serviceTiers = [
-  { tier: "Basic", color: "#2563b0", desc: "Sound methodology with appropriate design, clear research questions, and standard justification of methods chosen.", includes: ["Appropriate research design", "Clear research questions", "Standard justification", "Ethical considerations", "Basic sampling rationale"] },
-  { tier: "Advanced", color: "#1a2a6c", desc: "Comprehensive methodology with wide philosophical justification, clear gap identification, detailed sampling, and data analysis plan.", includes: ["Full philosophical justification", "Clear research gap", "Detailed sampling strategy", "Data analysis plan", "Validity & reliability section"] },
-  { tier: "Premium", color: "#e87722", desc: "Seminal research methodology with excellent critical analysis, thorough justification at every level, and primary data collection support.", includes: ["Seminal research engagement", "Excellent critical justification", "Primary data support", "Full analysis framework", "Upgradable quality"] },
-];
-
-const softwareTools = [
-  "SPSS", "SPSS AMOS", "R", "STATA", "SAS", "E-Views", "Minitab",
-  "NVIVO", "Atlas-ti", "MAXQDA", "Excel", "Epi-Info",
-];
 
 const faqs = [
-  { q: "Why is research methodology so important in a dissertation?", a: "Determining an appropriate research methodology is an important element of any master's dissertation. Our writers have acquired both theoretical and practical skills on respective elements to be included in any methodology chapter. A well-justified methodology demonstrates rigour, credibility, and appropriateness of your research approach — directly impacting your dissertation grade." },
-  { q: "How do you select the right methodology for my research?", a: "Our subject matter experts assess your research questions, the nature of your topic, your university's requirements, and the practical feasibility of data collection before recommending and justifying a methodology. We consider the philosophical stance, research approach, design, strategy, data collection methods, and analysis tools that best fit your specific study." },
-  { q: "Can you write the methodology for qualitative and quantitative research?", a: "Yes. We cover all research approaches including purely qualitative (NVIVO, Atlas-ti, thematic analysis), purely quantitative (SPSS, R, STATA, statistical analysis), and mixed methods (combining both). Our statisticians and qualitative researchers hold PhD and Masters degrees with 10+ years of experience in their respective methodological areas." },
-  { q: "Do you help with the actual data collection as well?", a: "We provide advice on data collection design and can help develop data collection instruments (questionnaires, interview guides, observation frameworks). For primary data collection itself, we can assist at an additional cost. Secondary data sourcing is also supported through our reference and data collection services." },
-  { q: "What software do you use for data analysis?", a: "We use SPSS, SPSS AMOS, R, STATA, SAS, E-Views, Minitab, Epi-Info, and Excel for quantitative analysis. For qualitative analysis we use NVIVO, Atlas-ti, MAXQDA, and Wordstat. All software outputs are shared as appendix material with screenshots documenting the analytical process." },
-  { q: "Can you help if my supervisor has rejected my methodology?", a: "Yes. If your supervisor has rejected your methodology chapter, please share their specific feedback and we will comprehensively revise and strengthen the methodology. We provide a point-by-point response to all supervisor comments and unlimited revisions until the chapter is fully accepted. This is included at no additional charge." },
+  {
+    q: "How do you ensure that the research methodology meets the requisite academic standard?",
+    a: "When you order for research methodology from us, it is not simple matter to maintain the academic standard but for every order we manage the standards carefully so select the qualified writers from the large numbers ensure to achieve high standards.",
+  },
+  {
+    q: "Who will write my research methodology or dissertation full?",
+    a: "Your research methodology paper will write by qualified and professional academic chapters who specialize in your field of discipline. For each order, we carefully select the white color academic writer.",
+  },
+  {
+    q: "Why should I consider taking Tutors India for my research methodology writing services?",
+    a: "We have an exceptional professional team to deliver excellent research methodology chapter with qualified, experienced writers, plagiarism-free work, best pricing, and subject-specific expertise from international universities.",
+  },
+  {
+    q: "How will you select a writer to work on my essay or dissertation?",
+    a: "Since we have more than 400+ academic writers, our project coordinators are carefully scrutinize these proposals and typically assign the qualified writers with the suitable educational background and academic credentials.",
+  },
+  {
+    q: "How quickly can you provide research methodology?",
+    a: "Turnaround depends on requirements; please contact us via our UK toll-free number or contact page for specific timelines, or review our customized pricing plans.",
+  },
+  {
+    q: "How can I place an order?",
+    a: "Complete our simple order form and submit your requirement we will you call you back or alternatively feel free to contact in our UK toll free number 08081891062.",
+  },
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(f => ({
-    "@type": "Question",
-    "name": f.q,
-    "acceptedAnswer": { "@type": "Answer", "text": f.a },
-  }))
-};
 
 const testimonials = [
-  { quote: "It was hard to write the research methodology for my research proposal. Tutors India helped me in drafting research methodology and it was the most life-changing experience I ever had. The work they provided was amazing and valuable. Thank you team.", author: "Chitaksh", avatar: "/images/testimonials/t21.jpg" },
-  { quote: "Found Tutors India for writing my research methodology in data science, when I desperately needed help. Their team was very friendly and showed a genuine interest in my academic progress and prospects. The document they provided was of high quality — many thanks to the team.", author: "Leo", avatar: "/images/testimonials/t14.jpg" },
-  { quote: "I have gone through the Research Methodology chapter. Seems quite good. Good work done. The supervisor was satisfied with the methodological approach chosen and justified.", author: "Xander", location: "Germany", avatar: "/images/testimonials/t19.jpg" },
+  { quote: "Best experience you can imagine. Contacted Tutors India for research methodology writing and got my chapter completed on time. The methodology was exactly aligned with my research questions and university guidelines.", author: "Bhavin", avatar: "/images/testimonials/t22.jpg" },
+  { quote: "I'm grateful to the team who guided me all the way through for completing my research methodology. It was excellent — they provided me with high quality academic content and my dissertation was submitted on time.", author: "Divyansh", avatar: "/images/testimonials/t20.jpg" },
+  { quote: "What impressed me most was how personalised the support felt. They didn't just write the chapter — they understood my research question and built a methodology that genuinely supported my study.", author: "Khalid Al Nuaimi", avatar: "/images/testimonials/t17.jpg" },
+  { quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.", author: "Amelia Brooks", location: "UK", avatar: "/images/testimonials/t15.jpg" },
+  { quote: "I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.", author: "Oliver Bennett", location: "UK", avatar: "/images/testimonials/t13.jpg" },
 ];
 
 const subjects = [
-  "Business & Management", "Psychology & Behavioural Science", "Medicine & Health", "Nursing & Clinical Practice",
-  "Engineering & Technology", "Computer Science & IT", "Social Sciences", "Education & Training",
-  "Economics & Finance", "Law", "Biological Sciences", "Natural Sciences",
+  "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
+  "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
+  "Biological & Life Science", "Economics & Administration", "Humanities & Social Science",
+  "Law", "Medicine & Health", "Education & Training",
+  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT",
+  "Hospitality, Leisure & Sports",
+];
+
+const methodologies = [
+  "Qualitative Research", "Grounded Theory Designs", "Narrative Research",
+  "Observation", "Documentary Analysis", "Interviews", "Focus Groups",
+  "Visual Data Approaches", "Quantitative Methods", "Experimental Design",
+  "Correlational Design", "Survey Design", "Mixed Methods", "Action Research",
+];
+
+const orderProcess = [
+  { title: "We Identify Your Writer", desc: "In order to get our service, you need to first fill out the form with your information in a comprehensive manner." },
+  { title: "Reference Number", desc: "Upon receiving your Enquiry form, we assign you a reference number. You can know the status of your paper anytime by sending us an email or tracking through CRM." },
+  { title: "Acknowledgment", desc: "Once you have paid for your order you will receive an acknowledgement from us. The writing process here with us begins within couple of days after receiving your order." },
+  { title: "Edit & Proofreading", desc: "Once we receive an order from our writer, we ensure to proofread the document." },
+  { title: "We Check Requirement", desc: "Once your research methodology is completed we check for spelling, grammar, content, focus, sources quality against the client requirement." },
+  { title: "Plagiarism Assurance", desc: "Once your research methodology is completed it is checked for plagiarism with anti-plagiarism software before the delivery." },
+  { title: "Free Appendices / Resources", desc: "We ensure not only to deliver your work but also additional reference materials will be shared via zip file through google drive or drop box." },
+  { title: "Download Your Order", desc: "You can download your order through our CRM and reminder will be sent through email & SMS. Additional copy will be mailed." },
+  { title: "Request for Amendment", desc: "If you required any changes, you can always come back to us, we are ready to unlimited revisions for the concept being committed." },
+  { title: "Researcher Makes the Changes", desc: "The document will be shared to our writer and once the work is completed, we will share you the complete work through email or you can download the order." },
+];
+
+const guarantees = [
+  {
+    t: "A complete secure & Confidential Service",
+    d: "All your projects are given unique reference codes with restricted access. Documents are accessed only by writers who signed NDA with Tutors India. Your financial information is protected by 128-bit secure socket layer (SSL) encryption.",
+  },
+  {
+    t: "Fully Referenced",
+    d: "Our dissertation work is fully referenced with latest articles and textbooks. We refer only peer reviewed sources such as scholarly articles and textbooks. Database sources include Web of Science, ProQuest, and Google Scholar.",
+  },
+  {
+    t: "Our Guarantees",
+    d: "(1) Unlimited Revision for the work being committed. (2) We ensure on-time delivery (3) We support 24/7. (4) Our word count committed does not include references and bibliography (5) Ensure three-level quality check (6) Confidentiality of the information (7) Plagiarism free work – less than 5% percent. (8) Only experienced and subject specific writers will be allotted.",
+  },
+  {
+    t: "Plagiarism Free Work",
+    d: "Our work is scanned against online sources in a similar way like WriteCheck or Turnitin. We are aware of the consequences of plagiarism. Hence, research methodology writing is completely plagiarism free, where we ensure to acknowledge the authors of all publication. We issue plagiarism-free certificates.",
+  },
+  {
+    t: "On Time",
+    d: "Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours.",
+  },
+  {
+    t: "Experienced Writers",
+    d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. Selection follows stringent vetting including non-disclosure agreements.",
+  },
 ];
 
 export default function ResearchMethodologyPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
-            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}<Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}<span style={{ color: "#fff" }}>Research Methodology</span>
-            </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>
-              Research Methodology Writing Services for UK Dissertations
-            </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              Determining an appropriate research methodology is an important element of any master's or doctoral dissertation. Our writers have acquired both theoretical and practical skills on respective elements to be included in any methodology — covering qualitative, quantitative, and mixed methods approaches across all disciplines.
-            </p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>SPSS · R · STATA · NVIVO · Atlas-ti · All Methodological Approaches</p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
-            </div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}
+            <span style={{ color: "#fff" }}>Research Methodology</span>
           </div>
-          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/images/samples/assignment-writing.jpg" alt="Student working on academic assignment" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>Qualitative<br />Quantitative<br />Mixed Methods</div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
+            The UK Post-graduate &amp; Doctorate Research Methodology Writing Help
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "16px" }}>
+            Are you looking for an expert writer who can guide in writing the research methodology in a systematic way? We provide detailed blueprints for research approaches, data collection methods, and ethical considerations.
+          </p>
+          <p style={{ color: "#f9c74f", fontSize: "1.1rem", fontFamily: "Merriweather,serif", fontWeight: 700, marginBottom: "28px" }}>
+            Your UK Dissertation Research Methodologies are written by qualified and experienced researchers from the US &amp; UK
+          </p>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
       </section>
 
-      <div style={{ background: "#12214a", padding: "16px 20px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "6 Approaches", l: "Covered" }, { n: "12 Software", l: "Tools" }, { n: "PhD Qualified", l: "Statisticians" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response" }].map(s => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
-              <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
+      {/* Intro cards */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "32px 36px", marginBottom: "32px", borderLeft: "5px solid #1a2a6c" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.35rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            UK Dissertation Research Methodology Writing Service – A Detailed Blueprint to carry out your Research
+          </h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px" }}>
+            Determining an appropriate research methodology is crucial for master&apos;s dissertations. Though this section comprises only 15% of the dissertation&apos;s weight, universities require students to demonstrate application of learned methods and techniques. This chapter typically appears as Chapter III, following the literature review and preceding data analysis. Professors expect a reflective, critical account rather than a merely descriptive one.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px" }}>
+            The complete process spans from theoretical foundations through data collection to analysis, presenting solutions for investigated problems. Methodologies refer to the overall approach to the research process, from the theoretical underpinning to the collection and analysis of data.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+            Many master&apos;s and doctorate students find this chapter challenging due to its comprehensive scope. Tutors India&apos;s research methodology experts help leverage critical approaches for quality, professional methodologies.
+          </p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "20px", marginBottom: "32px" }}>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #1a2a6c" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              UK Dissertation Research Methodology Service – Theoretical and Practical Overview
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              Whether collecting data for theoretical development like grounded theory or qualitative approaches, or testing hypotheses through quantitative methods, Tutors India provides extensive support. The service ensures validity testing, ethical considerations, and reliability inclusion as fundamental components.
+            </p>
+          </div>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Our UK Dissertation Research Methodology Writing Service Help
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              Our specific UK Research Methodology writing demonstrates the succinct writing, critical analysis, and justification for the choice of methods chosen. Our professional writers have completed around 10,000 research methodologies while following university guidelines.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "28px 32px" }}>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "14px" }}>
+            UK Research Methodology Service Help for different Type of Dissertation and designed specific to Subjects
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            Awareness of disciplinary differences is essential; methodology structures vary significantly between management, healthcare, and economics. Tutors India provides subject-specific consultation and writing services leveraging expert domain knowledge.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            The organization references extensive textbooks relevant to specializations, including works by Saunders et al., Bryman, Yin, Collis and Hussey, and others.
+          </p>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            UK Research Methodology Writing Service is Simply easy &amp; Straightforward
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, margin: 0 }}>
+            The ordering process remains confidential and straightforward. Just send us your topic along with the deadline and see the results that are far justified and mark the success of your research methodology.
+          </p>
+        </div>
+      </section>
+
+      {/* Service Tiers */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px", textAlign: "center" }}>
+            What Services do we offer under UK Research Methodology Writing Service?
+          </h2>
+          <p style={{ color: "#555", textAlign: "center", marginBottom: "32px", lineHeight: 1.7 }}>
+            Three service tiers accommodate different needs: Basic, Quantitative, and Quantitative + Qualitative with grounded theory approaches.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(270px,1fr))", gap: "20px", marginBottom: "32px" }}>
+            {[
+              { tier: "Basic", color: "#1a2a6c", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
+              { tier: "Quantitative", color: "#e87722", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
+              { tier: "Quantitative + Qualitative with grounded theory", color: "#2563b0", desc: "Refers to a wide range of seminal research with throughout engagement using latest resources. A solid gap would be identified based on the current literature & justified thoroughly & Excellent critical analysis would be shown (upgradable)." },
+            ].map(t => (
+              <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
+                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", borderLeft: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Two possible ways would occur while ordering for dissertation research methodology
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "10px" }}>
+              <strong>Already Completed Part:</strong> When students have finished other sections including statistical analysis, literature review with identified gaps, introduction with research objectives and questions, they need only the methodology chapter. Information required includes target area, population, sampling methods chosen, sample size, and study conduct descriptions.
+            </p>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              <strong>Not Yet Started:</strong> For contemporary work, required information includes proposed research questions, objectives, identified gaps, target population, sample size targets, country, industry details, and data collection feasibility assessments. Existing research proposals suffice as starting points.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology types + deliverables */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          UK Dissertation Research Methodology Service – Theoretical and Practical Overview
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+          Research methodology begins with research question formulation alongside sampling decisions — whether probabilistic or non-probabilistic. This continues through measurement via surveys and scaling, then research design selection (experimental or quasi-experimental), concluding with statistical analysis, interpretation, and organised presentation of findings.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "24px" }}>
+          The RM section typically begins with research design and philosophy overviews, explaining design justifications, sampling method rationale, and data source validation for both primary and secondary sources.
+        </p>
+
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "16px" }}>
+          Offered Methodologies
+        </h3>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "40px" }}>
+          {methodologies.map(m => (
+            <span key={m} style={{ background: "#f0f4ff", border: "1px solid #c5d0e8", color: "#1a2a6c", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem", fontWeight: 600 }}>{m}</span>
+          ))}
+        </div>
+
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.35rem", color: "#1a2a6c", marginBottom: "10px" }}>
+          What We deliver while your order for UK Research Methodology writing
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+          Deliverables exceed expectations, providing proper context, boundary condition delimitation, appropriate theory application, and learning outcome alignment. The organisation ensures three-level quality checks: Technical QC, Editor QC, and final requirement verification.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+          UK Research Methodology Writing needs to convince the supervisor. Our complete research methodology contains three essential elements: &quot;retell, relate &amp; reflect.&quot; This approach builds supervisor confidence in proposed methods.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: "16px" }}>
+          {[
+            { n: "1", t: "Your Research Methodology", d: "Our custom UK Research Methodology writing service is exclusive. We provide more than basic writing — clear explanation and justification for the choice of methods chosen." },
+            { n: "2", t: "Quality Assurance", d: "Three-level quality checks: Technical QC, Editor QC, and final requirement verification against client specifications." },
+            { n: "3", t: "Plagiarism Report", d: "All research methodology chapters are scanned using anti-plagiarism software before delivery. Less than 5% plagiarism guaranteed with a plagiarism-free certificate." },
+            { n: "4", t: "Customer Interaction", d: "Our exclusive coordinators get in touch with you to clarify any queries throughout the process. Clear communication between you and the assigned writer." },
+          ].map(f => (
+            <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+              </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
-        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Expert Research Methodology Writing Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            We are completely aware that there is a way and difference in the methodology section being written for management and healthcare or economics. Every discipline has its structure of methodologies and therefore Tutors India provides consultation and writing services for your research methodology using our subject matter expertise.
+      {/* Subject Expertise */}
+      <section style={{ background: "#1a2a6c", color: "#fff", padding: "48px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", marginBottom: "8px" }}>
+            Specialized Subject Matter Expertise across the globe
+          </h2>
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "10px" }}>
+            We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            We offer a wide range of dissertation research methodology writing services — either being qualitative methods, quantitative research methods, a combination of both, or critical and action-oriented. Our writers are well experienced in handling any methodology across the discipline, with specific software skills and theoretical knowledge grounded in the research methods literature.
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "28px" }}>
+            Your UK Dissertation Research Methodology is written by your choice of Subject Matter Expertise. Over 2,000 experts handle subjects across arts, sciences, engineering, and medicine.
           </p>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Research Methodology Types We Cover</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
-            {methodologyTypes.map(m => (
-              <div key={m.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
-                <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{m.icon}</div>
-                <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{m.title}</h3>
-                <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65 }}>{m.desc}</p>
-              </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "28px" }}>
+            {subjects.map(s => (
+              <span key={s} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem" }}>{s}</span>
             ))}
           </div>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Research Methodology Chapter Components</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Comprehensive coverage of all methodology chapter sections</p>
-          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden" }}>
-            {methodologyComponents.map((item, i) => (
-              <div key={item.n} style={{ padding: "14px 20px", borderBottom: i < methodologyComponents.length - 1 ? "1px solid #f0f2fa" : "none", display: "flex", gap: "14px", alignItems: "flex-start" }}>
-                <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "50%", width: "30px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.68rem", fontWeight: 700, flexShrink: 0 }}>{item.n}</div>
-                <div>
-                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "3px" }}>{item.title}</h3>
-                  <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.6 }}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Statistical &amp; Qualitative Software We Use</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {softwareTools.map(tool => (
-              <span key={tool} style={{ padding: "6px 14px", background: "#fff", border: "2px solid #1a2a6c", borderRadius: "20px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 600 }}>{tool}</span>
-            ))}
-          </div>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Service Tiers</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
-            {serviceTiers.map(t => (
-              <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>
-                <div style={{ background: t.color, color: "#fff", padding: "14px 18px" }}><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div></div>
-                <div style={{ padding: "16px" }}>
-                  <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, marginBottom: "12px" }}>{t.desc}</p>
-                  <ul style={{ listStyle: "none", padding: 0 }}>
-                    {t.includes.map(i => (<li key={i} style={{ display: "flex", gap: "6px", fontSize: "0.78rem", color: "#555", padding: "4px 0", borderBottom: "1px solid #f0f2fa" }}><span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {i}</li>))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <TestimonialSlider testimonials={testimonials} />
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>
-          <FaqAccordion faqs={faqs} />
-        </div>
-
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px", fontWeight: 600 }}>Subject-specific methodology experts across all disciplines</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {subjects.map(s => (<span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>))}
-          </div>
+          <Link href="/our-writers/" style={{ color: "#f9c74f", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Meet Our Writers →</Link>
         </div>
       </section>
 
-      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get Your Research Methodology Written by Experts</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>All Approaches · SPSS · R · NVIVO · Unlimited Revisions · Response in 30 min</p>
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
+      {/* Why Choose — Guarantee Cards */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          Why Choose Tutors India: Research Methodology Writing features
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+          Qualified researchers, unlimited revision, only peer-reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
+          {guarantees.map(f => (
+            <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
+              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Order Process */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+            How Does it work?
+          </h2>
+          <p style={{ color: "#555", marginBottom: "8px" }}>Have a look at what makes us the best in the business</p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+            After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work. Once the process is done, in case there are any queries, we ensure to ask during the initial stage of your work and send you the outline proposed. Once the outline is approved, we will dispatch the work and update you on the progress. Our exclusive coordinators would get in touch with you to clarify any queries.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "20px" }}>
+            {orderProcess.map((p, i) => (
+              <div key={p.title} style={{ background: "#fff", borderRadius: "10px", padding: "20px 24px" }}>
+                <div style={{ width: "36px", height: "36px", background: "#e87722", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.95rem", marginBottom: "12px" }}>{i + 1}</div>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "6px" }}>{p.title}</h3>
+                <p style={{ color: "#555", fontSize: "0.86rem", lineHeight: 1.7, margin: 0 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+            Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
+          Frequently Asked Questions
+        </h2>
+        <FaqAccordion faqs={faqs} />
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialSlider testimonials={testimonials} />
+
+      {/* CTA */}
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
+          Order Now
+        </h2>
+        <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
+          Get expert Research Methodology writing assistance from qualified US &amp; UK researchers. Confidential, plagiarism-free, and delivered on time.
+        </p>
+        <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/order-now/" style={{ padding: "12px 36px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+          <Link href="/contact-us/" style={{ padding: "12px 36px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
         </div>
       </section>
     </>
