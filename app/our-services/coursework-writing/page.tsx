@@ -189,11 +189,17 @@ export default function CourseworkWritingPage() {
             <span style={{ color: "#fff" }}>Coursework Writing</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.3, marginBottom: "16px" }}>
-            Coursework Writing &amp; Editing Service
+            Are you struggling with your UK Master&apos;s M.Sc., M.Phil, MA, M.Ed. and MBA, DBA PhD coursework writing ?
           </h1>
           <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "8px" }}>
-            Are you struggling with your UK Master's M.Sc., M.Phil, MA, M.Ed. and MBA, DBA PhD coursework writing?
+            Tutors India offers you the excellent custom writing services by professional expert writers of UK.
           </p>
+          <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "16px" }}>
+            We make difference in terms of deadline and overall grade
+          </p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.1rem,2.5vw,1.5rem)", lineHeight: 1.3, color: "#f9c74f", marginBottom: "12px" }}>
+            Coursework Writing &amp; Editing Service
+          </h2>
           <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "8px" }}>
             Assistance for Coursework Writing and Editing Services exclusively for the the US, UK and Australian Universities.
           </p>
@@ -207,28 +213,21 @@ export default function CourseworkWritingPage() {
         </div>
       </section>
 
-      {/* ── STATS BAR ── */}
-      <div style={{ background: "#12214a", padding: "16px 20px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "2000+", l: "Expert Writers" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response Time" }, { n: "24/7", l: "Support" }].map(s => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
-              <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
 
         {/* Why Tutors India */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Why Tutors India for Coursework Writing Services</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Why Tutors India for Coursework writing services?</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
             The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their coursework successfully.
           </p>
+        </div>
+
+        {/* UK Master's & PhD Coursework */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>UK Master&apos;s &amp; PhD Coursework at Tutors India Exclusive Coursework Writing Services for the UK &amp; Australian Universities</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            UK Master's or your postgraduate degree should not be taken lightly as this decides your career further. A survey of 85 universities in the UK revealed that where more than half of the universities reported that 60 percent of the assessment is coursework while one in five reported 80 percent.
+            UK Master&apos;s or your postgraduate degree should not be taken lightly as this decides your career further. A survey of 85 universities in the UK revealed that where more than half of the universities reported that 60 percent of the assessment is coursework while one in five reported 80 percent.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
             At Tutors India, we write your coursework that would guarantee your grade.
