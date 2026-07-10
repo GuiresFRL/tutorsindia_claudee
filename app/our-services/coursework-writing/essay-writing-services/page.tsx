@@ -91,18 +91,6 @@ export default function EssayWritingServicesPage() {
         </div>
       </section>
 
-      {/* ── STATS BAR ── */}
-      <div style={{ background: "#12214a", padding: "16px 20px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "2000+", l: "Expert Writers" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response Time" }, { n: "24/7", l: "Support" }].map(s => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
-              <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
 
         {/* Supporting Master's Students */}
@@ -161,6 +149,41 @@ export default function EssayWritingServicesPage() {
           </div>
         </div>
 
+        {/* Service Tier Comparison Table */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px", overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
+            <thead>
+              <tr style={{ background: "#1a2a6c", color: "#fff" }}>
+                <th style={{ padding: "12px 16px", textAlign: "left", fontWeight: 700 }}>Feature</th>
+                <th style={{ padding: "12px 16px", textAlign: "center", fontWeight: 700 }}>Basic</th>
+                <th style={{ padding: "12px 16px", textAlign: "center", fontWeight: 700 }}>Advanced</th>
+                <th style={{ padding: "12px 16px", textAlign: "center", fontWeight: 700 }}>Extended</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { feature: "Number of Topics (Topic Selection based on area of interest)", basic: "3 Topics", advanced: "1 Topic", extended: "1 Topic" },
+                { feature: "Word Count", basic: "1000 words", advanced: "1000 words", extended: "" },
+                { feature: "Objectives", basic: "✓", advanced: "✓", extended: "✓" },
+                { feature: "Literature Review", basic: "✓", advanced: "✓", extended: "✓" },
+                { feature: "Research Gap", basic: "✓", advanced: "✓", extended: "✓" },
+                { feature: "Expected Contribution", basic: "✓", advanced: "✓", extended: "✓" },
+                { feature: "Research Methodology", basic: "✓", advanced: "✓", extended: "✓" },
+                { feature: "Data Analysis Guidelines", basic: "✓", advanced: "✓", extended: "✓" },
+                { feature: "References Lists", basic: "✓", advanced: "✓", extended: "✓" },
+                { feature: "Bibliography (Additional Reading)", basic: "✓", advanced: "✓", extended: "✓" },
+              ].map((row, i) => (
+                <tr key={i} style={{ background: i % 2 === 0 ? "#f8f9ff" : "#fff", borderBottom: "1px solid #dde2ef" }}>
+                  <td style={{ padding: "10px 16px", color: "#333", fontWeight: 500 }}>{row.feature}</td>
+                  <td style={{ padding: "10px 16px", textAlign: "center", color: "#555" }}>{row.basic}</td>
+                  <td style={{ padding: "10px 16px", textAlign: "center", color: "#555" }}>{row.advanced}</td>
+                  <td style={{ padding: "10px 16px", textAlign: "center", color: "#555" }}>{row.extended}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         {/* MBA + UAE sections */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Strategic Academic Support for MBA Students</h2>
@@ -176,53 +199,50 @@ export default function EssayWritingServicesPage() {
         {/* What You Will Receive + Process */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Where Knowledge of Your Subject Meets Academic Success</h2>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#e87722", marginBottom: "10px" }}>Your Trusted Partner in Academic Excellence</h3>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
             We offer custom essays based on research to suit all your subject-specific requirements through experienced academic professionals. With 2,000+ academic writers all around the world, we provide expertise in fields like Arts, Literature, Science, Engineering, Medicine, and much more.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>What You Will Receive from Us for Your Essay Writing Assistance</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
-            Students receive academically oriented material that is well-researched through the use of credible scholarly sources, correct citations, structured argumentation, analysis, and quality control.
+            Students will be offered academically oriented material that is well-researched through the use of credible scholarly sources, correct citations, structured argumentation, analysis, and quality control.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our Essay Writing Process</h2>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#e87722", marginBottom: "10px" }}>Discover Our Process</h3>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Provide us with all the information concerning your essay, and we will conduct the research, write your essay, and review your essay. Postgraduate academic assistance from us is intended to assist students in handling the intricacies of university expectations through structured research and essay development.
+            Provide us with all the information concerning your essay, and we will conduct the research, write your essay, and review your essay in the process. Postgraduate academic assistance from us is intended to assist students in handling the intricacies of university expectations by means of structured research and essay development.
           </p>
-        </div>
-
-        {/* Service Feature Cards */}
-        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>What Services Do We Offer Under Our Essay Writing Service?</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
-            {[
-              { t: "Custom Written Essays", d: "Enjoy custom-made research papers that are written exclusively keeping in mind your university guidelines." },
-              { t: "Quality Guarantee", d: "All essays are checked for their quality so that you receive an error-free paper." },
-              { t: "Originality Reports", d: "All your papers are checked for plagiarism to ensure that they are delivered only after they pass all checks." },
-              { t: "Student Assistance", d: "Maintain constant communication with our academic experts at any stage of the assignment." },
-            ].map(f => (
-              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px", display: "flex", gap: "12px" }}>
-                <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0, marginTop: "2px" }}>✓</div>
-                <div>
-                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
-                  <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Essay Structure */}
         <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Structure of Our Essay Writing Services – What Is Included in Your Essay?</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Structure of Our Essay Writing Services</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>What Is Included in Your Essay?</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
               "Introduction – stating the topic and objectives of the paper",
               "Essay's main body which is organized with the help of critical thinking and substantiated by evidence",
               "Conclusion containing the summary of the essay findings",
               "Bibliography prepared and formatted according to university guidelines",
+              "Essay Written Based on Academic Research and Critical Thinking",
             ].map((item, i) => (
               <div key={i} style={{ display: "flex", gap: "12px", background: "#fff", border: "1px solid #f5d9bb", borderRadius: "8px", padding: "14px", alignItems: "flex-start" }}>
                 <div style={{ width: "28px", height: "28px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.78rem", flexShrink: 0, marginTop: "1px" }}>{i + 1}</div>
                 <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.65, margin: 0 }}>{item}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Feature quality cards */}
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", margin: "20px 0 12px" }}>Essay Written Based on Academic Research and Critical Thinking</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "14px" }} className="two-col-grid">
+            {[
+              { t: "Well-Structured Academic Essays", d: "Every essay is developed with a clear introduction, logically organized body paragraphs, a concise conclusion, and a properly formatted bibliography that aligns with your university's academic and referencing guidelines." },
+              { t: "Research-Driven and Critically Developed Content", d: "Our essays are based on extensive academic research, credible scholarly sources, and critical analysis to present well-supported arguments, demonstrate subject knowledge, and meet the required learning outcomes." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#fff", border: "1px solid #f5d9bb", borderRadius: "10px", padding: "18px" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}
           </div>
@@ -239,9 +259,25 @@ export default function EssayWritingServicesPage() {
             We provide academic writing help that will enable students to come up with essays that have research-based arguments and discussions and proper structure and integrity.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Why Choose our Essay Writing Services UAE?</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Our services include research help, academic editing, plagiarism checker services, and student guidance. We are recognized for quality-focused academic assistance with availability of qualified writers, guarantee of quality, revisions, and customized assistance at the academic level.
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+            Apart from academic writing, we provide a wide variety of other quality-focused services which consist of research help, academic editing, plagiarism checker services, and student guidance throughout the entire process. Our Essay Writing Services in UAE come along with such perks as availability of qualified writers, guarantee of quality, revisions, and customized assistance at the academic level.
           </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {[
+              { t: "Custom Written Essays", d: "Enjoy custom-made research papers that are written exclusively keeping in mind your university guidelines." },
+              { t: "Quality Guarantee", d: "All essays are checked for their quality so that you receive an error-free paper." },
+              { t: "Originality Reports", d: "All your papers are checked for plagiarism to ensure that they are delivered only after they pass all checks." },
+              { t: "Student Assistance", d: "Maintain constant communication with our academic experts at any stage of the assignment." },
+            ].map(f => (
+              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px", display: "flex", gap: "12px" }}>
+                <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0, marginTop: "2px" }}>✓</div>
+                <div>
+                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                  <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Key Features List */}
