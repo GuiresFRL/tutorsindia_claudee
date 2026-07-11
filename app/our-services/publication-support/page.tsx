@@ -1,197 +1,331 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { serviceCategories } from "@/lib/data/services";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Publication Support Services | Manuscript, Medical Writing, Biostatistics",
-  description: "Publication Support Services — Manuscript Development, Conference Papers, Medical Writing, Biostatistics, Statistical Services. Expert UK & US writers. Tutors India.",
+  title: "Publication Support | Manuscript Editing, Formatting & Journal Submission | Tutors India",
+  description: "Technical editing, proofreading, rewriting, addressing review comments and formatting for journal publication. US & UK writers. Tutors India Publication Support.",
 };
 
-const cat = serviceCategories.find(c => c.slug === "publication-support")!;
-
-const processSteps = [
-  { n: "01", title: "Fill Enquiry Form", img: "/images/process/step-1.jpg", desc: "Submit your requirements with comprehensive information." },
-  { n: "02", title: "Reference Number", img: "/images/process/step-2.jpg", desc: "Receive a reference number to track your paper status via CRM." },
-  { n: "03", title: "Acknowledgment", img: "/images/process/step-3.jpg", desc: "Acknowledgment sent once payment received. Writing begins within days." },
-  { n: "04", title: "Writer Assigned", img: "/images/process/step-4.jpg", desc: "Expert writer with passion for research assigned to your project." },
-  { n: "05", title: "Edit & Proofreading", img: "/images/process/step-5.jpg", desc: "We ensure to proofread the document once received from our writer." },
-  { n: "06", title: "Requirements Check", img: "/images/process/step-6.jpg", desc: "Checked for spelling, grammar, content, focus, sources quality against client requirements." },
-  { n: "07", title: "Plagiarism Assurance", img: "/images/process/step-7.jpg", desc: "Checked with anti-plagiarism software before the delivery." },
-  { n: "08", title: "Free Appendices", img: "/images/process/step-8.jpg", desc: "Additional reference materials shared via Google Drive or Dropbox." },
-  { n: "09", title: "Download Your Order", img: "/images/process/step-9.jpg", desc: "Download through CRM with email & SMS reminders." },
-  { n: "10", title: "Request Amendment", img: "/images/process/step-10.jpg", desc: "Contact us at guidance@tutorsindia.com for any changes needed." },
-  { n: "11", title: "Unlimited Revisions", img: "/images/process/step-11.jpg", desc: "Unlimited revision support for the concept being committed." },
-  { n: "12", title: "Changes Implemented", img: "/images/process/step-12.jpg", desc: "Document shared to writer and complete work sent through email or CRM." },
-];
-
-const features = [
-  { icon: "🛡️", title: "Plagiarism Free", desc: "Work scanned against online sources using WriteCheck or Turnitin. Less than 5% or 0% guaranteed with Turnitin certificate." },
-  { icon: "✨", title: "Uniqueness", desc: "Every work is unique. We provide only custom manuscript writing by Subject Matter Experts who justify how each work is unique." },
-  { icon: "📚", title: "Fully Referenced", desc: "Fully referenced with latest peer-reviewed articles, textbooks, online sources. We comply with Harvard, APA, Chicago, Vancouver, Turabian." },
-  { icon: "✅", title: "100% Requirement Match", desc: "We match your requirement 100% — experts understand the topic and analyse feasibility before working on the manuscript." },
-  { icon: "⏱", title: "On Time", desc: "Minor changes within 24 working hours; significant changes within 48 working hours. Emails acknowledged within 30 minutes." },
-  { icon: "🔁", title: "Unlimited Revisions", desc: "Unlimited revisions as per initial commitment — completely free of cost, even after project completion." },
-];
-
 const testimonials = [
-  { quote: "I used to use another service, but I usually received poorly written papers and overpaid for it. I made my decision after discovering your service and receiving a superb dissertation from you. Thank you very much.", author: "C S", location: "Sheffield, UK", avatar: "/images/testimonials/user-profile.png" },
-  { quote: "My friend recommended that I use your service just when I was about to give up on my dissertation. I'm now a PhD holder, and I'm overjoyed about it. Thank you for your help.", author: "Ishani", avatar: "/images/testimonials/Sahana.jpg" },
-  { quote: "Great service for non-native English writing authors! Tutors India's dissertation writing service helps me to formulate my ideas in more clear and straightforward way and to eliminate common grammatical errors.", author: "Ryan", avatar: "/images/testimonials/t21.jpg" },
+  { quote: "Best experience you can imagine. Contacted Tutors India for manuscript support and got my paper published successfully. The team understood the journal guidelines perfectly.", author: "Bhavin", avatar: "/images/testimonials/t22.jpg" },
+  { quote: "I'm grateful to the team who guided me all the way through for completing my journal paper. It was excellent — they provided me with high quality technical content and my paper was submitted on time.", author: "Divyansh", avatar: "/images/testimonials/t20.jpg" },
+  { quote: "What impressed me most was how personalised the support felt. They didn't just edit the work — they understood my research and helped me present findings that the journal accepted.", author: "Khalid Al Nuaimi", avatar: "/images/testimonials/t17.jpg" },
+  { quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.", author: "Amelia Brooks", location: "UK", avatar: "/images/testimonials/t15.jpg" },
+  { quote: "I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.", author: "Oliver Bennett", location: "UK", avatar: "/images/testimonials/t13.jpg" },
+];
+
+const services = [
+  { slug: "manuscript-development", title: "Manuscript Development", desc: "Rewrite your manuscript based on the reviewer's comments with convincing rationale for decisions." },
+  { slug: "conference-paper", title: "Conference Paper", desc: "Addresses seminar presentation requirements where performance and effectiveness of presentation matters." },
+  { slug: "text-book-writing", title: "Text Book Writing", desc: "Addresses the enormous demand for the ideal textbook to recommend for students." },
+  { slug: "manuscript-qualitative-textual-analysis", title: "Manuscript Statistics", desc: "Requires patience and precise data for medical, engineering, or management fields." },
+  { slug: "conference-abstract", title: "Conference Abstract", desc: "Provides a brief description of your concept for academic conferences establishing topic uniqueness." },
+  { slug: "medical-writing", title: "Medical Writing", desc: "Assists when students find scientific medical manuscript challenging to write and submit." },
+  { slug: "biostatistics-services", title: "Biostatistics Services", desc: "Concentrates on statistical techniques to address problems in health-related fields." },
+  { slug: "computer-science-engineering-cse-and-it", title: "Computer Science Engineering", desc: "Draws foundation from a wide variety of disciplines including computer engineering." },
+  { slug: "engineering-research", title: "Engineering Research", desc: "Helps refocus and prepare significant progress on engineering theses and research papers." },
+  { slug: "statistical-services", title: "Statistical Services", desc: "Our team provides in-depth knowledge and domain expertise across a broad spectrum of industries." },
 ];
 
 const subjects = [
-  "Arts & Humanities", "Biological Sciences", "Business & Management Studies", "Marketing & Communication",
-  "Engineering & Technology", "Natural Sciences & Mathematics", "Biological & Life Science", "Economics & Administration",
-  "Humanities & Social Science", "Law", "Medicine & Health", "Education & Training",
-  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT", "Hospitality, Leisure & Sports",
+  "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
+  "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
+  "Economics & Administration", "Humanities & Social Science", "Law",
+  "Medicine & Health", "Education & Training", "Journalism & Media",
+  "Agriculture & Forestry", "Computer Science & IT", "Hospitality, Leisure & Sports",
+];
+
+const guarantees = [
+  { t: "Plagiarism Free Work", d: "Our work is completely plagiarism free by scanning against online sources in a similar way like WriteCheck or Turnitin. We issue a plagiarism-free certificate with every delivery." },
+  { t: "Uniqueness", d: "We provide only custom master's dissertation writing services written by Subject Matter Experts. Every paper is original and tailored to your specific research requirements." },
+  { t: "Fully Referenced", d: "We use latest peer-reviewed research articles complying 100% with all university-based referencing guidelines including Harvard, APA, Vancouver, Chicago and more." },
+  { t: "100% Requirement Match", d: "Experts analyze the feasibility before working on the dissertation with checks on each chapter to ensure 100% match with your specific requirements." },
+  { t: "On Time", d: "We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours." },
+  { t: "Word Count Committed", d: "We ensure exact word count as per your university regulations excluding appendices and references. Your committed word count is always delivered in full." },
+  { t: "Quality Assurance", d: "We implement stringent quality check at every stage, verifying subject matter, language, formatting, referencing, and plagiarism before delivery." },
+  { t: "Unlimited revisions", d: "We provide unlimited revisions as per the initial commitment that are completely free of cost. Your satisfaction is our commitment." },
+  { t: "Affordable", d: "We offer world-class quality at affordable rates with constant pricing regardless of country or subject. Invest in your career with confidence." },
+];
+
+const orderProcess = [
+  { title: "We Identify Your Writer", desc: "In order to get our service, you need to first fill out the form with your information in a comprehensive manner." },
+  { title: "Reference Number", desc: "Upon receiving your Enquiry form, we assign you a reference number. You can know the status of your paper anytime by sending us an email or tracking through CRM." },
+  { title: "Acknowledgment", desc: "Once you have paid for your order you will receive an acknowledgement from us. The writing process here with us begins within couple of days after receiving your order." },
+  { title: "We Check Requirement", desc: "Once your manuscript is completed we check for spelling, grammar, content, focus, sources quality against the client requirement." },
+  { title: "Edit & Proofreading", desc: "Once we receive an order from our writer, we ensure to comprehensively review and proofread the document." },
+  { title: "We Identify Your Writer", desc: "We match qualified and passionate research-focused experts to your manuscript subject and journal requirements." },
+  { title: "Plagiarism Assurance", desc: "Once your manuscript is completed it is checked for plagiarism with anti-plagiarism software before the delivery." },
+  { title: "Free Appendices / Resources", desc: "We ensure not only to deliver your work but also additional reference materials will be shared via zip file through google drive or drop box." },
+  { title: "Download Your Order", desc: "You can download your order through our CRM and reminder will be sent through email & SMS. Additional copy will be mailed." },
+  { title: "Researcher Makes the Changes", desc: "The document will be shared to our writer and once the work is completed, we will share you the complete work through email or you can download the order." },
+  { title: "Unlimited Revisions", desc: "We offer unlimited revision support for accepted concepts. Come back to us anytime within the revision period." },
+  { title: "Request for Amendment", desc: "If you required any changes, you can always come back to us through email contact for ongoing revisions." },
 ];
 
 export default function PublicationSupportPage() {
-  const half = Math.ceil(cat.services.length / 2);
   return (
     <>
+      {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
-            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}<span style={{ color: "#fff" }}>Publication Support</span>
-            </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.2rem)", lineHeight: 1.3, marginBottom: "14px" }}>
-              Are you looking to edit, redraw, rewrite, format your manuscript according to the journal specific guidelines?
-            </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              Then You have reached the right place. We make a difference in terms of deadline and quality. A good manuscript writing and journal article writing not only requires high quality research but also should be able to present your findings and conclusion precisely with adherence to extensive journal guidelines.
-            </p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "22px" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
-            </div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <span style={{ color: "#fff" }}>Publication Support</span>
           </div>
-          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/images/samples/publication-research.jpg" alt="Academic editing and research support" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
-            <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>2,00,000+</div>
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Scholars Served<br />Since 2001</div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.6rem)", marginBottom: "18px", lineHeight: 1.3 }}>
+            Publication Support
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "16px" }}>
+            Are you looking to edit, redraw, rewrite, format your manuscript according to the journal specific guidelines?
+          </p>
+          <p style={{ color: "#f9c74f", fontSize: "1.1rem", fontFamily: "Merriweather,serif", fontWeight: 700, marginBottom: "16px" }}>
+            Then You have reached the right place
+          </p>
+          <p style={{ color: "#c5d5f0", fontSize: "1rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "28px" }}>
+            We make difference in terms of deadline and quality. We assist with Technical Editing, proofreading, rewriting, addressing review comments, and formatting.
+          </p>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
       </section>
 
-      <div style={{ background: "#12214a", padding: "16px 20px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "2,000+", l: "Expert Writers" }, { n: "22+", l: "Years Experience" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "24/7", l: "Support" }, { n: "30 min", l: "Response" }].map(s => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
-              <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      {/* Intro cards */}
       <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        {/* Intro */}
-        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "36px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A Trusted Journal &amp; Publication Support Service</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }} className="two-col-grid">
-            <div>
-              <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-                The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build great confidence to submit their publication successfully. A subject matter expert from Tutors India would provide extensive support to write a manuscript — very well representing the research content, avoiding lapses in logic, highlighting important information, and ensuring perfect, error-free, and standard language.
-              </p>
-              <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-                Our team consists of experienced professionals holding at least a Master&apos;s degree and also Ph.D. holders from prestigious universities from the UK, US, and Australia. Some of our writers are trained at Harvard School, Oxford, London School of Business, and the University of Birmingham.
-              </p>
-            </div>
-            <div>
-              <img src="/images/services/primary-secondary-research.webp" alt="Publication Support" style={{ width: "100%", borderRadius: "8px", objectFit: "cover" }} loading="lazy" />
-            </div>
+        <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "32px 36px", marginBottom: "32px", borderLeft: "5px solid #1a2a6c" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.35rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            Why Tutors India for Publication support?
+          </h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px" }}>
+            The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their publication successfully.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+            You will be Amazed with the in-depth research carried to complete your manuscript. A subject matter expertise from Tutors India would provide extensive support to write a manuscript. We just not provide Journal assistance but also end-to-end support.
+          </p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "20px", marginBottom: "32px" }}>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #1a2a6c" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Journal Support at Tutors India helps to publish Your manuscript successfully
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              A good manuscript writing and Journal article writing not only requires a high quality research but also should be able to present your findings and conclusion precisely with adherence to extensive journal guidelines.
+            </p>
+          </div>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              A Trusted Journal Support Service
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              We are available 24/7 with evidence that we deliver what exactly you expect. A subject matter expertise from Tutors India would provide extensive support to prevent lapses in logic and ensure perfect, error-free and standard language.
+            </p>
           </div>
         </div>
 
-        {/* Services listing */}
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>What Services Do We Offer Under Publication Support?</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "24px" }}>Comprehensive manuscript and publication support across all academic and scientific disciplines</p>
-        <div style={{ background: "#fff", borderRadius: "12px", border: "1px solid #dde2ef", padding: "28px", marginBottom: "36px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0" }} className="service-two-col">
-            <div style={{ paddingRight: "20px" }}>
-              {cat.services.slice(0, half).map(svc => (
-                <div key={svc.href} style={{ padding: "16px 0", borderBottom: "1px solid #f0f2fa" }}>
-                  <Link href={svc.href}><h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "#2563b0", marginBottom: "5px" }}>{svc.title}</h3></Link>
-                  <p style={{ fontSize: "0.84rem", color: "#666", lineHeight: 1.6, marginBottom: "6px" }}>{svc.description}</p>
-                  <Link href={svc.href} style={{ fontSize: "0.82rem", color: "#e87722", fontWeight: 600 }}>Learn More →</Link>
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "28px 32px" }}>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "14px" }}>
+            A Journal Support Service features that helps to get the grade
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            We provide comprehensive support from selection of PhD level dissertation topic through literature review, statistical analysis using specialized software (SPSS, R, SAS, STATA), and final proofreading.
+          </p>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            Our Journal Support Service feature
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, margin: 0 }}>
+            We aim at building great confidence to submit their journal successfully. Our US &amp; UK writers carry in-depth research and subject matter expertise to deliver your manuscript to the highest standard.
+          </p>
+        </div>
+      </section>
+
+      {/* Journal Support Services grid */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px", textAlign: "center" }}>
+            Our Journal Support Service features
+          </h2>
+          <p style={{ color: "#555", textAlign: "center", marginBottom: "32px", lineHeight: 1.7 }}>
+            Ten specialised services from manuscript development through statistical analysis — end-to-end publication support.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(270px,1fr))", gap: "20px" }}>
+            {services.map((s, i) => (
+              <Link key={s.slug} href={`/our-services/publication-support/${s.slug}/`} style={{ textDecoration: "none" }}>
+                <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${i % 3 === 0 ? "#1a2a6c" : i % 3 === 1 ? "#e87722" : "#2563b0"}`, height: "100%", cursor: "pointer", transition: "box-shadow 0.2s" }}>
+                  <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{s.title}</h3>
+                  <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
                 </div>
-              ))}
-            </div>
-            <div style={{ paddingLeft: "20px", borderLeft: "1px solid #dde2ef" }}>
-              {cat.services.slice(half).map(svc => (
-                <div key={svc.href} style={{ padding: "16px 0", borderBottom: "1px solid #f0f2fa" }}>
-                  <Link href={svc.href}><h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "#2563b0", marginBottom: "5px" }}>{svc.title}</h3></Link>
-                  <p style={{ fontSize: "0.84rem", color: "#666", lineHeight: 1.6, marginBottom: "6px" }}>{svc.description}</p>
-                  <Link href={svc.href} style={{ fontSize: "0.82rem", color: "#e87722", fontWeight: 600 }}>Learn More →</Link>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div style={{ background: "#fff8f0", borderLeft: "4px solid #e87722", padding: "12px 16px", borderRadius: "0 6px 6px 0", marginTop: "18px", fontSize: "0.86rem", color: "#555" }}>
-            <strong style={{ color: "#e87722" }}>Note:</strong> {cat.note}
-          </div>
-        </div>
-
-        {/* Features */}
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>Publication Support Service Features</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px", marginBottom: "40px" }} className="three-col-grid">
-          {features.map(f => (
-            <div key={f.title} style={{ background: "#fff", borderRadius: "10px", padding: "22px", border: "1px solid #dde2ef" }}>
-              <div style={{ fontSize: "2rem", marginBottom: "10px" }}>{f.icon}</div>
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "7px" }}>{f.title}</h3>
-              <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65 }}>{f.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Order Process */}
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Order Process — What Makes Us the Best</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "20px" }}>Systematic 12-step process from enquiry to delivery</p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "16px", marginBottom: "40px" }} className="process-four-grid">
-          {processSteps.map(step => (
-            <div key={step.n} style={{ background: "#fff", borderRadius: "10px", border: "1px solid #dde2ef", overflow: "hidden", textAlign: "center" }}>
-              <div style={{ background: "#1a2a6c", padding: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <img src={step.img} alt={step.title} style={{ width: "48px", height: "48px", objectFit: "contain", filter: "brightness(0) invert(1)" }} loading="lazy" />
-              </div>
-              <div style={{ padding: "12px" }}>
-                <div style={{ fontSize: "0.7rem", color: "#e87722", fontWeight: 700, letterSpacing: "0.06em", marginBottom: "3px" }}>STEP {step.n}</div>
-                <h4 style={{ fontSize: "0.84rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "5px" }}>{step.title}</h4>
-                <p style={{ fontSize: "0.74rem", color: "#666", lineHeight: 1.5 }}>{step.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <style>{`@media(max-width:900px){.process-four-grid{grid-template-columns:repeat(3,1fr)!important;}} @media(max-width:600px){.process-four-grid{grid-template-columns:1fr 1fr!important;}}`}</style>
-
-        {/* Testimonials */}
-        <TestimonialSlider testimonials={testimonials} />
-
-        {/* Subject Areas */}
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>2000+ Experts Across Subjects &amp; Countries</h2>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px" }}>USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {subjects.map(s => (<span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>))}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Invest in Your Career — Place Your Order Today</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Join 2,00,000+ scholars. Response within 30 minutes · Unlimited Revisions · Plagiarism-Free</p>
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
+      {/* Methodologies + Questionnaire + Free Features */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          What You Expect when you order Journal Writing Service
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+          We Share references sourced for your Journal Paper in the form of PDFs, questionnaire or interview guide*, formatting, referencing, and appendices at free of costs.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "24px", marginBottom: "40px" }}>
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #1a2a6c" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Your Choice of quantitative or qualitative or Triangulation methodologies
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              Choice of data collection depends on the research design (quantitative or qualitative design). We support Interviews, questionnaires, and secondary sources across all research designs.
+            </p>
+          </div>
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Development of Questionnaire or Interview questions
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              At Tutors India, we assist you in developing questionnaire – Open ended, closed ended, Objective questionnaire, structured and unstructured questionnaire, focus group guide, interview guide for all your research work.
+            </p>
+          </div>
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #2563b0" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Get your Primary research Completed at an additional cost
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              Tutors India has exclusive custom data collection services to gather useful information in various domains, including telephone interviews, market surveys, and focus group discussion sessions.
+            </p>
+          </div>
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #1a2a6c" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Get some of our Service features at Free of Costs
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              References sourced for your Journal Paper in the form of PDFs, questionnaires, interview guides, formatting, referencing, and appendices are provided at free of costs.
+            </p>
+          </div>
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Appendices or additional work at Free of Costs
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              We help you in a broad range of services from the selection of a dissertation topic to complete your PhD dissertation successfully. Free review and proofreading throughout the process.
+            </p>
+          </div>
+          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #2563b0" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Development of Questionnaire or Interview at a Free of costs
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              We develop questionnaire using scales, questions for interview guide, and focus group discussion at no additional cost with every journal paper order.
+            </p>
+          </div>
         </div>
       </section>
 
-      <style>{`
-        @media(max-width:768px){.service-two-col{grid-template-columns:1fr!important;} .two-col-grid{grid-template-columns:1fr!important;}}
-      `}</style>
+      {/* Subject Expertise */}
+      <section style={{ background: "#1a2a6c", color: "#fff", padding: "48px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", marginBottom: "8px" }}>
+            Your Journal is written by your choice of Subject Matter Expertise
+          </h2>
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "10px" }}>
+            We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)
+          </p>
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "28px" }}>
+            Experienced Writers with a minimum degree of Master&apos;s with research experience. Our US &amp; UK writers aim at inculcating knowledge within students and build great confidence to submit their journal successfully.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "28px" }}>
+            {subjects.map(s => (
+              <span key={s} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem" }}>{s}</span>
+            ))}
+          </div>
+          <Link href="/our-writers/" style={{ color: "#f9c74f", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Meet Our Writers →</Link>
+        </div>
+      </section>
+
+      {/* Guarantee Cards */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          Our Master&apos;s Dissertation Writing Service Features
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+          As well as your order, you will also get the following additional features as part of our publication support service.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "24px" }}>
+          {guarantees.map(f => (
+            <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
+              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Additional Features */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
+            Our Additional Features
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #1a2a6c" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>Authenticated References</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+                Fully referenced and cited academically using style guides like Harvard and Chicago. All sources are peer-reviewed and authenticated.
+              </p>
+            </div>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>Plagiarism Free</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+                We guarantee less than 5 or 0 percent of plagiarism with comprehensive editing. Every manuscript is scanned before delivery.
+              </p>
+            </div>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #2563b0" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>Unlimited Revision Support with Quality Check &amp; Assurance</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+                We offer unlimited revisions absolutely free of cost with participatory research approach. Quality checks at every stage of the process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Order Process */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          Order Process
+        </h2>
+        <p style={{ color: "#555", marginBottom: "32px" }}>Have a look at what makes us the best in the business</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "20px" }}>
+          {orderProcess.map((p, i) => (
+            <div key={i} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px 24px" }}>
+              <div style={{ width: "36px", height: "36px", background: "#e87722", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.95rem", marginBottom: "12px" }}>{i + 1}</div>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "6px" }}>{p.title}</h3>
+              <p style={{ color: "#555", fontSize: "0.86rem", lineHeight: 1.7, margin: 0 }}>{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialSlider testimonials={testimonials} />
+
+      {/* CTA */}
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
+          Invest in your Career
+        </h2>
+        <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
+          Get expert Publication Support from qualified US &amp; UK researchers. Technical editing, proofreading, rewriting, addressing review comments, and formatting — all under one roof.
+        </p>
+        <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/order-now/" style={{ padding: "12px 36px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+          <Link href="/contact-us/" style={{ padding: "12px 36px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
+        </div>
+      </section>
     </>
   );
 }
