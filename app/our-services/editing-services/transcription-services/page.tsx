@@ -110,6 +110,16 @@ export default function TranscriptionServicesPage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Ms. Claire Morrison</strong> — Senior Academic Transcription Specialist &middot; Verbatim, clean-read &amp; timestamped transcription expert &middot; 11+ years in research audio processing
+          </p>
+        </div>
+      </div>
+
       {/* Transcription Service intro */}
       <section style={{ padding: "3rem 1rem", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -392,6 +402,21 @@ export default function TranscriptionServicesPage() {
       </section>
 
       {/* FAQs */}
+      {/* Transcription Types Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Transcription Formats &amp; Types We Deliver</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            Not all transcription is the same. Our team offers several specialist formats to match your research methodology and output requirements. Verbatim transcription captures every word, filler, and pause — essential for discourse analysis. Intelligent verbatim removes fillers for clarity while preserving meaning. Timestamped transcription links every segment back to your audio file for easy verification. Multi-speaker transcription identifies and labels individual voices — critical for focus groups and interview research.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['Verbatim', 'Intelligent Verbatim', 'Clean Read', 'Timestamped', 'Multi-Speaker', 'Focus Groups', 'Interview Research', 'Legal Transcription'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "3rem 1rem", background: "#f0f4ff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Merriweather',serif", color: "#1a2a6c", fontSize: "clamp(1.2rem,2.5vw,1.7rem)", marginBottom: "1.5rem" }}>

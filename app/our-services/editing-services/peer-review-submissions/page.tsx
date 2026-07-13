@@ -86,6 +86,16 @@ export default function PeerReviewSubmissionsPage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Dr. Mark Harrison, MSc</strong> — Peer Review &amp; Manuscript Submission Expert &middot; 200+ journal submissions supported &middot; 14+ years in academic publishing
+          </p>
+        </div>
+      </div>
+
       {/* Intro bullets */}
       <section style={{ background: '#fff', padding: '3rem 1rem' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -323,6 +333,21 @@ export default function PeerReviewSubmissionsPage() {
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333' }}>
             Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement. You can be very sure about the quality of the work since expert writer is identified as per International Research Experience
           </p>
+        </div>
+      </section>
+
+      {/* Documents We Prepare Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Submission Documents We Prepare for You</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            Peer review is not just about the manuscript — it involves a range of supporting documents that influence an editor&apos;s decision. Our specialists prepare professional cover letters that highlight your study&apos;s novelty, point-by-point rebuttal letters that address every reviewer comment with clarity, revision summaries, and appeal letters when decisions need to be contested.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['Journal Cover Letters', 'Reviewer Rebuttal Letters', 'Point-by-Point Responses', 'Revision Summaries', 'Editor Appeal Letters', 'Highlights Documents', 'Graphical Abstracts'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
         </div>
       </section>
 

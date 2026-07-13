@@ -99,6 +99,16 @@ export default function PlagiarismReportPage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Dr. Robert Evans, PhD</strong> — Academic Integrity &amp; Plagiarism Analysis Specialist &middot; Turnitin &amp; iThenticate certified reviewer &middot; 13+ years in research compliance
+          </p>
+        </div>
+      </div>
+
       {/* Intro */}
       <section style={{ padding: "3rem 1rem", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -455,6 +465,21 @@ export default function PlagiarismReportPage() {
       </section>
 
       {/* FAQs */}
+      {/* Detection Tools Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Plagiarism Detection Tools &amp; Similarity Thresholds We Work To</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            We use industry-leading plagiarism detection tools including Turnitin, iThenticate, and Copyscape to generate detailed similarity reports for your manuscript or dissertation. Our editors then help you reduce the similarity index through precise paraphrasing, correct citation placement, and quotation restructuring — without altering the meaning of your research. Most UK universities require similarity below 10–15%; US institutions typically require below 20%. We tailor our report and guidance to your institution&apos;s exact threshold.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['Turnitin', 'iThenticate', 'Copyscape', 'PlagScan', 'Unicheck', 'WriteCheck'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "3rem 1rem", background: "#f0f4ff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Merriweather',serif", color: "#1a2a6c", fontSize: "clamp(1.2rem,2.5vw,1.7rem)", marginBottom: "1.5rem" }}>

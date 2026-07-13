@@ -110,6 +110,16 @@ export default function TranslationServicesPage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Dr. Priya Nair, PhD</strong> — Certified Academic Translation Lead &middot; ISO 17100 compliant &middot; 40+ language pairs &middot; 17+ years in academic &amp; technical translation
+          </p>
+        </div>
+      </div>
+
       {/* Translation Service intro */}
       <section style={{ padding: "3rem 1rem", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -379,6 +389,21 @@ export default function TranslationServicesPage() {
       </section>
 
       {/* FAQs */}
+      {/* Languages & Standards Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Languages &amp; Translation Standards We Operate To</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            Our certified academic translators work across 40+ language pairs, with all translations carried out by native-speaking subject-matter experts — never automated tools. We comply with ISO 17100 translation quality standards, offer certified translations for official academic submissions and visa applications, and provide academic back-translation for clinical research where source accuracy must be verified. Each translation is reviewed by a second specialist before delivery.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['English ↔ Arabic', 'English ↔ French', 'English ↔ German', 'English ↔ Spanish', 'English ↔ Chinese', 'English ↔ Japanese', 'English ↔ Portuguese', '40+ Languages'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "3rem 1rem", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Merriweather',serif", color: "#1a2a6c", fontSize: "clamp(1.2rem,2.5vw,1.7rem)", marginBottom: "1.5rem" }}>

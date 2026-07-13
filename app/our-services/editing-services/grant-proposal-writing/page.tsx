@@ -86,6 +86,16 @@ export default function GrantProposalWritingPage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Dr. James Thornton, PhD</strong> — Research Grant Writing Specialist &middot; Former NIH &amp; Wellcome Trust reviewer &middot; 12+ years in grant proposal development
+          </p>
+        </div>
+      </div>
+
       {/* Intro bullets */}
       <section style={{ background: '#fff', padding: '3rem 1rem' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -303,6 +313,21 @@ export default function GrantProposalWritingPage() {
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333' }}>
             Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement. You can be very sure about the quality of the work since expert writer is identified as per International Research Experience
           </p>
+        </div>
+      </section>
+
+      {/* Funding Bodies Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Funding Bodies &amp; Grant Schemes We Support</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            Our grant proposal editors have hands-on experience preparing winning applications for the world&apos;s leading research funding bodies. We help you craft compelling Specific Aims, Research Strategy, Significance &amp; Innovation sections, and budget justifications tailored to each funder&apos;s priorities. From NIH R01 applications to UKRI project grants — we know what reviewers look for.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['NIH (USA)', 'Wellcome Trust', 'NIHR (UK)', 'EPSRC', 'MRC', 'Horizon Europe', 'Gates Foundation', 'UKRI', 'NSF', 'ERC'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
         </div>
       </section>
 

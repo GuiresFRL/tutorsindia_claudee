@@ -92,6 +92,16 @@ export default function ScientificEditingPage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Dr. Sarah Mitchell, PhD</strong> — Clinical &amp; Scientific Editing Lead &middot; AMWA &amp; ISMPP Certified &middot; 15+ years in biomedical manuscript editing
+          </p>
+        </div>
+      </div>
+
       {/* Intro bullets */}
       <section style={{ background: '#fff', padding: '3rem 1rem' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -328,6 +338,21 @@ export default function ScientificEditingPage() {
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333' }}>
             Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement. You can be very sure about the quality of the work since expert writer is identified as per International Research Experience
           </p>
+        </div>
+      </section>
+
+      {/* Reporting Guidelines Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Reporting Guidelines &amp; Target Journals We Support</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            Our scientific editors are trained in the full suite of international reporting standards. Clinical trial manuscripts follow CONSORT, observational studies follow STROBE, systematic reviews and meta-analyses follow PRISMA, and evidence quality assessments use the GRADE framework. We prepare manuscripts to meet submission requirements of high-impact journals including <em>The Lancet</em>, <em>NEJM</em>, <em>JAMA</em>, <em>BMJ</em>, <em>Nature Medicine</em>, and <em>PLOS ONE</em>.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['CONSORT', 'STROBE', 'PRISMA', 'GRADE', 'ARRIVE', 'EQUATOR', 'CARE', 'TREND'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
         </div>
       </section>
 

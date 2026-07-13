@@ -98,6 +98,16 @@ export default function FormattingServicePage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Prof. Linda Chen</strong> — Senior Typesetting &amp; Formatting Specialist &middot; APA, MLA, Chicago &amp; Vancouver certified &middot; 18+ years in academic publishing
+          </p>
+        </div>
+      </div>
+
       {/* Intro bullets */}
       <section style={{ background: '#fff', padding: '3rem 1rem' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -344,6 +354,21 @@ export default function FormattingServicePage() {
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333' }}>
             Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement. You can be very sure about the quality of the work since expert writer is identified as per International Research Experience
           </p>
+        </div>
+      </section>
+
+      {/* Style Guides Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Style Guides &amp; Standards We Specialise In</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            Our formatting team has deep expertise across every major academic and scientific style guide. Whether your submission requires APA 7th Edition for social science journals, the numbered Vancouver system for biomedical manuscripts, Chicago 17th for humanities, or IEEE for engineering — we handle it all with precision and zero submission errors.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['APA 7th Edition', 'MLA 9th Edition', 'Chicago 17th', 'Turabian 9th', 'Vancouver', 'IEEE', 'Harvard', 'AMA', 'ACS', 'OSCOLA'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
         </div>
       </section>
 

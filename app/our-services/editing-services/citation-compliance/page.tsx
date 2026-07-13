@@ -106,6 +106,16 @@ export default function CitationCompliancePage() {
         </div>
       </section>
 
+      {/* Author Byline */}
+      <div style={{ background: '#1a2a6c', padding: '0.65rem 1rem', borderTop: '2px solid #e87722' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
+          <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
+            <strong style={{ color: '#fff' }}>Reviewed by Prof. Anita Patel</strong> — Citation Standards &amp; Reference Compliance Lead &middot; APA, Vancouver, IEEE &amp; Harvard specialist &middot; 16+ years in academic reference management
+          </p>
+        </div>
+      </div>
+
       {/* Service intro */}
       <section style={{ padding: "3rem 1rem", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -441,6 +451,21 @@ export default function CitationCompliancePage() {
             Frequently Asked Questions
           </h2>
           <FaqAccordion faqs={faqs} />
+        </div>
+      </section>
+
+      {/* Reference Styles Unique Section */}
+      <section style={{ background: '#f0f4ff', padding: '2.5rem 1rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ color: '#1a2a6c', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem' }}>Citation Styles &amp; Reference Systems We Handle</h2>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: '1.25rem' }}>
+            Incorrect citations are one of the most common reasons journals reject manuscripts at the desk review stage. Our citation compliance team handles every major reference system with zero-error accuracy — from APA 7th for psychology and social science, to OSCOLA for legal research, to ACS for chemistry. We also correct in-text citations, reference list formatting, and DOI linking to match your target journal&apos;s exact author guidelines.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            {['APA 7th', 'MLA 9th', 'Vancouver', 'IEEE', 'Harvard', 'Chicago', 'AMA', 'ACS', 'OSCOLA', 'MHRA', 'Turabian'].map((s) => (
+              <span key={s} style={{ background: '#1a2a6c', color: '#fff', padding: '0.35rem 0.9rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 600 }}>{s}</span>
+            ))}
+          </div>
         </div>
       </section>
 
