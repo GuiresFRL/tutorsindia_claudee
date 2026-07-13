@@ -35,18 +35,18 @@ const faqs = [
 ];
 
 const testimonials = [
-  { author: 'K S, US, Boston', text: 'Thank you Tutors India for giving me wonderful topic selection, it got approved and further from research proposal to citation, I need a same support.' },
-  { author: 'Amelia Brooks, UK', text: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable." },
-  { author: 'Oliver Bennett, UK', text: 'I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.' },
-  { author: 'Layla Al Mansoori', text: "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout." },
-  { author: 'Hassan Al Falasi, UAE', text: 'My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.' },
-  { author: 'Charlotte Reed, UK', text: 'I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.' },
-  { author: 'Zain Al Hashmi, UAE', text: 'The team handled everything professionally from start to finish. Timely updates, quick responses, and excellent academic quality — exactly what students need during stressful deadlines.' },
-  { author: 'Willow', text: 'The formatting service of Tutors India is good. The quality of work and service I got was really good. Great work with formatting and editing! They always pay attention to detail. I will definitely recommend this to my colleagues.' },
-  { author: 'Alex', text: "Tutors India has been a part of our company for over ten years. They are always kind and helpful, giving high-quality formatting with a quick and dependable technique that can be relied upon to be completed on schedule. They've helped us meet some pretty tight deadlines." },
-  { author: 'Thomas', text: 'Only a few days before a critical deadline, I contacted Tutors India for their technical editing services. It simply took them a few hours to get back to me with an estimate. When I discussed our deadlines, the experts went above and beyond to complete it in under 48 hours.' },
-  { author: 'David Morrison', text: "I was really struggling with my final semester master's degree, that's when I heard about Tutors India. They really guided me the whole way to produce research proposal just from the idea of a research title. Would definitely recommend Tutors India to anyone who is struggling to complete their research work." },
-  { author: 'Glenn McLaughlin', text: 'Tutors India helped me gain clarity on the direction my research proposal needed to go and provided me with more clarity in my work. I wholeheartedly endorse Tutors India as a best and professional service, as someone you can rely on completing your research works.' },
+  { author: 'K S, US, Boston', quote: 'Thank you Tutors India for giving me wonderful topic selection, it got approved and further from research proposal to citation, I need a same support.' },
+  { author: 'Amelia Brooks, UK', quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable." },
+  { author: 'Oliver Bennett, UK', quote: 'I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.' },
+  { author: 'Layla Al Mansoori', quote: "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout." },
+  { author: 'Hassan Al Falasi, UAE', quote: 'My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.' },
+  { author: 'Charlotte Reed, UK', quote: 'I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.' },
+  { author: 'Zain Al Hashmi, UAE', quote: 'The team handled everything professionally from start to finish. Timely updates, quick responses, and excellent academic quality — exactly what students need during stressful deadlines.' },
+  { author: 'Willow', quote: 'The formatting service of Tutors India is good. The quality of work and service I got was really good. Great work with formatting and editing! They always pay attention to detail. I will definitely recommend this to my colleagues.' },
+  { author: 'Alex', quote: "Tutors India has been a part of our company for over ten years. They are always kind and helpful, giving high-quality formatting with a quick and dependable technique that can be relied upon to be completed on schedule. They've helped us meet some pretty tight deadlines." },
+  { author: 'Thomas', quote: 'Only a few days before a critical deadline, I contacted Tutors India for their technical editing services. It simply took them a few hours to get back to me with an estimate. When I discussed our deadlines, the experts went above and beyond to complete it in under 48 hours.' },
+  { author: 'David Morrison', quote: "I was really struggling with my final semester master's degree, that's when I heard about Tutors India. They really guided me the whole way to produce research proposal just from the idea of a research title. Would definitely recommend Tutors India to anyone who is struggling to complete their research work." },
+  { author: 'Glenn McLaughlin', quote: 'Tutors India helped me gain clarity on the direction my research proposal needed to go and provided me with more clarity in my work. I wholeheartedly endorse Tutors India as a best and professional service, as someone you can rely on completing your research works.' },
 ];
 
 export default function FormattingServicePage() {

@@ -35,12 +35,12 @@ const faqs = [
 ];
 
 const testimonials = [
-  { author: 'George', text: 'Tutors India is stretching out their services to help those seeking peer-review for the manuscript. With a team of one, they provided copyright form and separate cover letter with excellent readability and grammar usage. They also send out for re-review and help publish the manuscript. Thank you for all your help.' },
-  { author: 'Isabella', text: 'The submission procedure was simple. Likewise, the peer review procedure was straightforward and completed on time. I really appreciate their taking the time to include a brief profile of the authors. I would recommend Tutors India for case report publication.' },
-  { author: 'Atharva', text: 'Under tight deadlines and with high expectations, Tutors India was a pleasure to work with, on a high profile scientific peer-review process. The experts were professional, conscientious and thoroughly competent. Ultimately, a top guide to peer review your manuscript. Great services!' },
-  { author: 'Amelia Brooks, UK', text: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable." },
-  { author: 'Oliver Bennett, UK', text: 'I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.' },
-  { author: 'Charlotte Reed, UK', text: 'I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.' },
+  { author: 'George', quote: 'Tutors India is stretching out their services to help those seeking peer-review for the manuscript. With a team of one, they provided copyright form and separate cover letter with excellent readability and grammar usage. They also send out for re-review and help publish the manuscript. Thank you for all your help.' },
+  { author: 'Isabella', quote: 'The submission procedure was simple. Likewise, the peer review procedure was straightforward and completed on time. I really appreciate their taking the time to include a brief profile of the authors. I would recommend Tutors India for case report publication.' },
+  { author: 'Atharva', quote: 'Under tight deadlines and with high expectations, Tutors India was a pleasure to work with, on a high profile scientific peer-review process. The experts were professional, conscientious and thoroughly competent. Ultimately, a top guide to peer review your manuscript. Great services!' },
+  { author: 'Amelia Brooks, UK', quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable." },
+  { author: 'Oliver Bennett, UK', quote: 'I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.' },
+  { author: 'Charlotte Reed, UK', quote: 'I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.' },
 ];
 
 export default function PeerReviewSubmissionsPage() {

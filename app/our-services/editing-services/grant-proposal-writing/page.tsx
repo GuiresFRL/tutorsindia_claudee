@@ -35,12 +35,12 @@ const faqs = [
 ];
 
 const testimonials = [
-  { author: 'William', text: "I can't enough thanks to Tutors India for their help in grant proposal writing. They gave me a breadth and depth of knowledge that has enriched my PhD research. They also directed me refining my skills and to manage competing deadlines in my own research of grant proposal writing." },
-  { author: 'Joe', text: 'Your efforts considerably improved my position, allowing me to achieve my aim. I appreciate the way you walked me through the Master Proposal writing process. Thank you so much for making this possible. Without you, I would not have been able to accomplish this!' },
-  { author: 'Amelia Brooks, UK', text: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable." },
-  { author: 'Oliver Bennett, UK', text: 'I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.' },
-  { author: 'Hassan Al Falasi, UAE', text: 'My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.' },
-  { author: 'Charlotte Reed, UK', text: 'I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.' },
+  { author: 'William', quote: "I can't enough thanks to Tutors India for their help in grant proposal writing. They gave me a breadth and depth of knowledge that has enriched my PhD research. They also directed me refining my skills and to manage competing deadlines in my own research of grant proposal writing." },
+  { author: 'Joe', quote: 'Your efforts considerably improved my position, allowing me to achieve my aim. I appreciate the way you walked me through the Master Proposal writing process. Thank you so much for making this possible. Without you, I would not have been able to accomplish this!' },
+  { author: 'Amelia Brooks, UK', quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable." },
+  { author: 'Oliver Bennett, UK', quote: 'I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.' },
+  { author: 'Hassan Al Falasi, UAE', quote: 'My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.' },
+  { author: 'Charlotte Reed, UK', quote: 'I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.' },
 ];
 
 export default function GrantProposalWritingPage() {
