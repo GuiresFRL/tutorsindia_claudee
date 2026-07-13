@@ -91,7 +91,7 @@ export default function GrantProposalWritingPage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Dr. James Thornton, PhD</strong> — Research Grant Writing Specialist &middot; Former NIH &amp; Wellcome Trust reviewer &middot; 12+ years in grant proposal development
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Grant Writing Team</strong> — Research Grant Proposal Specialists &middot; NIH, Wellcome Trust &amp; NIHR application experts &middot; 20+ years in grant development
           </p>
         </div>
       </div>

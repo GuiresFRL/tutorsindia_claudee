@@ -104,7 +104,7 @@ export default function PlagiarismReportPage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Dr. Robert Evans, PhD</strong> — Academic Integrity &amp; Plagiarism Analysis Specialist &middot; Turnitin &amp; iThenticate certified reviewer &middot; 13+ years in research compliance
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Academic Integrity Team</strong> — Plagiarism Analysis &amp; Compliance Specialists &middot; Turnitin &amp; iThenticate certified reviewers &middot; 20+ years in research compliance
           </p>
         </div>
       </div>

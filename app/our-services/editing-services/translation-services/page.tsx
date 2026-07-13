@@ -115,7 +115,7 @@ export default function TranslationServicesPage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Dr. Priya Nair, PhD</strong> — Certified Academic Translation Lead &middot; ISO 17100 compliant &middot; 40+ language pairs &middot; 17+ years in academic &amp; technical translation
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Translation Team</strong> — ISO 17100 Certified Academic Translators &middot; 40+ language pairs &middot; Native-speaker subject matter experts &middot; 20+ years in academic translation
           </p>
         </div>
       </div>

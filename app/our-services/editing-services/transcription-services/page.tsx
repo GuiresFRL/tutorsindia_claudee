@@ -115,7 +115,7 @@ export default function TranscriptionServicesPage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Ms. Claire Morrison</strong> — Senior Academic Transcription Specialist &middot; Verbatim, clean-read &amp; timestamped transcription expert &middot; 11+ years in research audio processing
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Transcription Team</strong> — Academic Audio &amp; Transcription Specialists &middot; Verbatim, timestamped &amp; multi-speaker experts &middot; 20+ years in research transcription
           </p>
         </div>
       </div>

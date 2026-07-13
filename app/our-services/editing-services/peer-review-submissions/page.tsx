@@ -91,7 +91,7 @@ export default function PeerReviewSubmissionsPage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Dr. Mark Harrison, MSc</strong> — Peer Review &amp; Manuscript Submission Expert &middot; 200+ journal submissions supported &middot; 14+ years in academic publishing
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Peer Review Team</strong> — Journal Submission &amp; Rebuttal Specialists &middot; 500+ peer review submissions supported &middot; 20+ years in academic publishing
           </p>
         </div>
       </div>

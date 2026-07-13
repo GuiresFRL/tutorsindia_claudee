@@ -97,7 +97,7 @@ export default function ScientificEditingPage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Dr. Sarah Mitchell, PhD</strong> — Clinical &amp; Scientific Editing Lead &middot; AMWA &amp; ISMPP Certified &middot; 15+ years in biomedical manuscript editing
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Scientific Editing Team</strong> — Clinical &amp; Biomedical Manuscript Specialists &middot; AMWA &amp; ISMPP Certified Editors &middot; 20+ years in scientific publishing
           </p>
         </div>
       </div>

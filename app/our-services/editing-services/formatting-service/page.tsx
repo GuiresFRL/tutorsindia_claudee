@@ -103,7 +103,7 @@ export default function FormattingServicePage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Prof. Linda Chen</strong> — Senior Typesetting &amp; Formatting Specialist &middot; APA, MLA, Chicago &amp; Vancouver certified &middot; 18+ years in academic publishing
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Senior Editorial Team</strong> — Formatting &amp; Typesetting Specialists &middot; APA, MLA, Chicago &amp; Vancouver certified &middot; 20+ years in academic publishing
           </p>
         </div>
       </div>

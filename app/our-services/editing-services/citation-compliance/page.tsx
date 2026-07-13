@@ -111,7 +111,7 @@ export default function CitationCompliancePage() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
           <span style={{ color: '#f9c74f', fontSize: '1.1rem' }}>✍</span>
           <p style={{ color: '#e2e8f8', fontSize: '0.8rem', margin: 0 }}>
-            <strong style={{ color: '#fff' }}>Reviewed by Prof. Anita Patel</strong> — Citation Standards &amp; Reference Compliance Lead &middot; APA, Vancouver, IEEE &amp; Harvard specialist &middot; 16+ years in academic reference management
+            <strong style={{ color: '#fff' }}>Reviewed by the Tutors India Citation Team</strong> — Reference &amp; Citation Compliance Specialists &middot; APA, Vancouver, IEEE &amp; Harvard experts &middot; 20+ years in academic reference management
           </p>
         </div>
       </div>
