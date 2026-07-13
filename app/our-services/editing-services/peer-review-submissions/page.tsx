@@ -9,28 +9,28 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What Types of Peer review Do You?',
-    answer: 'We offer comprehensive peer review services including: commentary on the claims stated in the study, commentary on the experimental design, text clarity evaluation, effective feedback on paper organization, English language editing, evaluation of scientific logic and hypothesis support, suggestions for altering text to stay within word count limits, and a final edit after you have made the changes as prescribed by your reviewers. We also offer Selection of Journal, Peer review, Editing and Formatting, Referencing, and Structuring services.',
+    q: 'What Types of Peer review Do You?',
+    a: 'We offer comprehensive peer review services including: commentary on the claims stated in the study, commentary on the experimental design, text clarity evaluation, effective feedback on paper organization, English language editing, evaluation of scientific logic and hypothesis support, suggestions for altering text to stay within word count limits, and a final edit after you have made the changes as prescribed by your reviewers. We also offer Selection of Journal, Peer review, Editing and Formatting, Referencing, and Structuring services.',
   },
   {
-    question: 'Why should I give any details and instructions to my order?',
-    answer: 'Providing details and instructions helps us allocate the right expert reviewer for your paper. After the order is confirmed, we allocate a special team to scrutinize the work. A PhD expert in your field will make necessary criticism pertaining to the organization, content, work and experimental design of your paper. Our exclusive coordinators get in touch with you to clarify any queries, ensuring the review is tailored to your specific needs.',
+    q: 'Why should I give any details and instructions to my order?',
+    a: 'Providing details and instructions helps us allocate the right expert reviewer for your paper. After the order is confirmed, we allocate a special team to scrutinize the work. A PhD expert in your field will make necessary criticism pertaining to the organization, content, work and experimental design of your paper. Our exclusive coordinators get in touch with you to clarify any queries, ensuring the review is tailored to your specific needs.',
   },
   {
-    question: 'Who Are Tutors india Professionals for writing the peer review ?',
-    answer: 'Our team of professionals having masters, PhDs and post-doctorates in relevant subject matter expertise supported by graphic designers and copy-editors, are not only proficient in writing but are passionate about liaising with diverse range of local and international clients. Our editors are native English speakers and professors from reputed Universities. Peer review and Pre Submission help is provided by qualified and experienced researchers from the US & UK.',
+    q: 'Who Are Tutors india Professionals for writing the peer review ?',
+    a: 'Our team of professionals having masters, PhDs and post-doctorates in relevant subject matter expertise supported by graphic designers and copy-editors, are not only proficient in writing but are passionate about liaising with diverse range of local and international clients. Our editors are native English speakers and professors from reputed Universities. Peer review and Pre Submission help is provided by qualified and experienced researchers from the US & UK.',
   },
   {
-    question: 'How About Samples of Your Work?',
-    answer: 'You can check the sample topic selection from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
+    q: 'How About Samples of Your Work?',
+    a: 'You can check the sample topic selection from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
   },
   {
-    question: 'How do you meet high academic standards?',
-    answer: 'We ensure quality at every stage and the process. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement. The chances of your paper getting published solely depend on the selection of peer reviewer for your paper. We eliminate various factors that might hinder the publication of your paper by asking an unbiased expertise to judge and give views on the same before you submit the paper to a journal. Separate editors and managing editors are assigned the task of editing your paper for any language or grammatical errors.',
+    q: 'How do you meet high academic standards?',
+    a: 'We ensure quality at every stage and the process. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement. The chances of your paper getting published solely depend on the selection of peer reviewer for your paper. We eliminate various factors that might hinder the publication of your paper by asking an unbiased expertise to judge and give views on the same before you submit the paper to a journal. Separate editors and managing editors are assigned the task of editing your paper for any language or grammatical errors.',
   },
   {
-    question: 'What is the Time plan to complete your peer reviews?',
-    answer: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
+    q: 'What is the Time plan to complete your peer reviews?',
+    a: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
   },
 ];
 
@@ -62,8 +62,8 @@ export default function PeerReviewSubmissionsPage() {
             '@type': 'FAQPage',
             mainEntity: faqs.map((f) => ({
               '@type': 'Question',
-              name: f.question,
-              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
             })),
           }),
         }}

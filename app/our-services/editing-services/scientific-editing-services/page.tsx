@@ -9,28 +9,28 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'On which areas you provide Scientific Editing services ?',
-    answer: 'We provide scientific editing services across all academic and research areas including Management, Finance & Economics, Social Science, Engineering, Technology, Life Science, Medicine, Arts & Literature / Linguistics, and more. Our team of 5000+ formatters across subjects and countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia & Ukraine) can handle scientific editing requirements for any discipline.',
+    q: 'On which areas you provide Scientific Editing services ?',
+    a: 'We provide scientific editing services across all academic and research areas including Management, Finance & Economics, Social Science, Engineering, Technology, Life Science, Medicine, Arts & Literature / Linguistics, and more. Our team of 5000+ formatters across subjects and countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia & Ukraine) can handle scientific editing requirements for any discipline.',
   },
   {
-    question: 'What Editing Services Does Tutors india Provide?',
-    answer: 'Tutors India offers complete editing services for the complete manuscript, dissertation, assignment, publications, etc. Our professional language editors make sure that your research work and assignments are thoroughly checked for no language errors before your submission. We provide two variations or levels of paper editing, proofreading. You can have your paper edited in either American or British English, and our formatting service will help you to modify your document according to your journal\'s guidelines.',
+    q: 'What Editing Services Does Tutors india Provide?',
+    a: 'Tutors India offers complete editing services for the complete manuscript, dissertation, assignment, publications, etc. Our professional language editors make sure that your research work and assignments are thoroughly checked for no language errors before your submission. We provide two variations or levels of paper editing, proofreading. You can have your paper edited in either American or British English, and our formatting service will help you to modify your document according to your journal\'s guidelines.',
   },
   {
-    question: 'Who Are Tutors india Professional Scientific Editors?',
-    answer: 'Our editors are native English speakers and trained American Association of Medical Writers (AMWA) or international Society for Medical Publication Professionals (ISMPP). Our team of professionals having masters, PhDs and post-doctorates in pharmacology and life sciences supported by graphic designers and copy-editors, are not only proficient in writing but are passionate about liaising with diverse range of local and international clients, internal and external stakeholders including authors and key opinion leaders across therapeutic areas.',
+    q: 'Who Are Tutors india Professional Scientific Editors?',
+    a: 'Our editors are native English speakers and trained American Association of Medical Writers (AMWA) or international Society for Medical Publication Professionals (ISMPP). Our team of professionals having masters, PhDs and post-doctorates in pharmacology and life sciences supported by graphic designers and copy-editors, are not only proficient in writing but are passionate about liaising with diverse range of local and international clients, internal and external stakeholders including authors and key opinion leaders across therapeutic areas.',
   },
   {
-    question: 'How About Some Samples of Your Work?',
-    answer: 'You can check the sample topic selection from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
+    q: 'How About Some Samples of Your Work?',
+    a: 'You can check the sample topic selection from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
   },
   {
-    question: 'what is the Time plan to complete your Scientific editing',
-    answer: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
+    q: 'what is the Time plan to complete your Scientific editing',
+    a: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
   },
   {
-    question: 'How do you meet high academic standards?',
-    answer: 'We ensure quality at every stage and the process. We are totally confident on our dissertation & manuscript editing service that would be a fruitful reward for you to get a step further closer to the publishing of your paper. We would be happy to re-edit your document for free, in case your paper is rejected by your journal for English language errors which our editors have edited before. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement.',
+    q: 'How do you meet high academic standards?',
+    a: 'We ensure quality at every stage and the process. We are totally confident on our dissertation & manuscript editing service that would be a fruitful reward for you to get a step further closer to the publishing of your paper. We would be happy to re-edit your document for free, in case your paper is rejected by your journal for English language errors which our editors have edited before. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement.',
   },
 ];
 
@@ -68,8 +68,8 @@ export default function ScientificEditingPage() {
             '@type': 'FAQPage',
             mainEntity: faqs.map((f) => ({
               '@type': 'Question',
-              name: f.question,
-              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
             })),
           }),
         }}

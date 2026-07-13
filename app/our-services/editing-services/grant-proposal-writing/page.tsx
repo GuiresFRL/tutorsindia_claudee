@@ -9,28 +9,28 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'On which areas you provide resit dissertation writing services?',
-    answer: 'We provide grant proposal editing and writing services across all academic and research areas including Management, Finance & Economics, Social Science, Engineering, Technology, Life Science, Medicine, Arts & Literature / Linguistics, and more. Our team of 2000+ experts across subjects and countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia & Ukraine) can handle grant proposal requirements for any discipline.',
+    q: 'On which areas you provide resit dissertation writing services?',
+    a: 'We provide grant proposal editing and writing services across all academic and research areas including Management, Finance & Economics, Social Science, Engineering, Technology, Life Science, Medicine, Arts & Literature / Linguistics, and more. Our team of 2000+ experts across subjects and countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia & Ukraine) can handle grant proposal requirements for any discipline.',
   },
   {
-    question: 'What grand proposal Editing Services Does Tutors india Provide?',
-    answer: 'Tutors India offers complete grant proposal editing and rewriting services. We rewrite a complete document and ensure: text plagiarism correction, citation and reference inclusion, copy and paste correction, word change, metaphor, idea, and reasoning style corrections. We correct all errors and infelicities in grammar, syntax, and usage. We rewrite any wordy or convoluted patch, verify and revise any facts that are incorrect, and query or fix faulty organization and gaps in logic.',
+    q: 'What grand proposal Editing Services Does Tutors india Provide?',
+    a: 'Tutors India offers complete grant proposal editing and rewriting services. We rewrite a complete document and ensure: text plagiarism correction, citation and reference inclusion, copy and paste correction, word change, metaphor, idea, and reasoning style corrections. We correct all errors and infelicities in grammar, syntax, and usage. We rewrite any wordy or convoluted patch, verify and revise any facts that are incorrect, and query or fix faulty organization and gaps in logic.',
   },
   {
-    question: 'Who Are Tutors india Professional grand proposal Editors?',
-    answer: 'All your grant proposals are copyedited and proofread by qualified and experienced researchers from the US & UK. Our grant proposal editors are native English speakers, with industry experience, and educational degrees from international and top-ranked universities from the US, and the UK. Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.',
+    q: 'Who Are Tutors india Professional grand proposal Editors?',
+    a: 'All your grant proposals are copyedited and proofread by qualified and experienced researchers from the US & UK. Our grant proposal editors are native English speakers, with industry experience, and educational degrees from international and top-ranked universities from the US, and the UK. Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.',
   },
   {
-    question: 'How About Some Samples of Your Work?',
-    answer: 'You can check the sample topic selection from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
+    q: 'How About Some Samples of Your Work?',
+    a: 'You can check the sample topic selection from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
   },
   {
-    question: 'what is the Time plan to complete your grand proposal editing?',
-    answer: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
+    q: 'what is the Time plan to complete your grand proposal editing?',
+    a: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
   },
   {
-    question: 'How do you meet high academic standards?',
-    answer: 'We ensure quality at every stage and the process. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement. We avoid over-reliance of single source [Not more than 1%]. Our rewriting correction services does not allow Wikipedia, Blog and other unauthenticated sources for academic writing. We ensure that the source identified is scholarly (peer-reviewed) journal articles or textbook.',
+    q: 'How do you meet high academic standards?',
+    a: 'We ensure quality at every stage and the process. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement. We avoid over-reliance of single source [Not more than 1%]. Our rewriting correction services does not allow Wikipedia, Blog and other unauthenticated sources for academic writing. We ensure that the source identified is scholarly (peer-reviewed) journal articles or textbook.',
   },
 ];
 
@@ -62,8 +62,8 @@ export default function GrantProposalWritingPage() {
             '@type': 'FAQPage',
             mainEntity: faqs.map((f) => ({
               '@type': 'Question',
-              name: f.question,
-              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
             })),
           }),
         }}

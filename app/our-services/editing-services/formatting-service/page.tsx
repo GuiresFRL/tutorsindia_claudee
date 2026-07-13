@@ -9,28 +9,28 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'On which areas you will provide Formatting services.?',
-    answer: 'We provide formatting services across all academic and research areas including Management, Finance & Economics, Social Science, Engineering, Technology, Life Science, Medicine, Arts & Literature / Linguistics, and more. Our team of 2000+ experts across subjects and countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia & Ukraine) can handle formatting requirements for any discipline.',
+    q: 'On which areas you will provide Formatting services.?',
+    a: 'We provide formatting services across all academic and research areas including Management, Finance & Economics, Social Science, Engineering, Technology, Life Science, Medicine, Arts & Literature / Linguistics, and more. Our team of 2000+ experts across subjects and countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia & Ukraine) can handle formatting requirements for any discipline.',
   },
   {
-    question: 'What Formatting Services Do Tutors India Provide?',
-    answer: 'Tutors India provides comprehensive formatting and typesetting services including: title page, frontispiece, copyright page, dedication, acknowledgments, preface, table of contents, list of tables, list of figures, list of appendices, lists of abbreviations, list of acronyms, list of symbols, and abstract. We also handle typefaces, margins, white space, pagination, line spacing, and order of sections. We follow style manuals including APA, MLA, Turabian, and The Chicago Manual of Style.',
+    q: 'What Formatting Services Do Tutors India Provide?',
+    a: 'Tutors India provides comprehensive formatting and typesetting services including: title page, frontispiece, copyright page, dedication, acknowledgments, preface, table of contents, list of tables, list of figures, list of appendices, lists of abbreviations, list of acronyms, list of symbols, and abstract. We also handle typefaces, margins, white space, pagination, line spacing, and order of sections. We follow style manuals including APA, MLA, Turabian, and The Chicago Manual of Style.',
   },
   {
-    question: 'Who Are Tutors India Professional Editors?',
-    answer: 'Tutors India provides the formatting team with translators, experienced editors and quality managers with extensive years of experience. Our translation experts also have the expertise in subject specific translation proficiency. Tutors India provides citation compliance team with researchers, formatters, typesetters, experienced editors and quality managers with extensive years of experience. Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.',
+    q: 'Who Are Tutors India Professional Editors?',
+    a: 'Tutors India provides the formatting team with translators, experienced editors and quality managers with extensive years of experience. Our translation experts also have the expertise in subject specific translation proficiency. Tutors India provides citation compliance team with researchers, formatters, typesetters, experienced editors and quality managers with extensive years of experience. Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.',
   },
   {
-    question: 'How About Some Samples of Your Work?',
-    answer: 'You can check the sample from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
+    q: 'How About Some Samples of Your Work?',
+    a: 'You can check the sample from our expert writers on our website. We ensure quality at every stage and the process. We deliver the document after scanning for plagiarism and provide a plagiarism report. We interact with the customer at every stage in terms of amendments, query and delivery.',
   },
   {
-    question: 'What is the Time plan to complete your Formatting services',
-    answer: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
+    q: 'What is the Time plan to complete your Formatting services',
+    a: 'You will get the reply within 30 minutes which would enable you to place your order quickly without any delay in submissions. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours. Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery.',
   },
   {
-    question: 'How do you meet high academic standards?',
-    answer: 'We ensure quality at every stage and the process. We follow the choice of a style manual, including American Psychological Association (APA), MLA, Turabian, The University of Chicago Press (The Chicago manual of style) and others. We guarantee for the structure of the manuscript, dissertation & grant proposals. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement. Our work is scanned against online sources in a similar way like WriteCheck or Turnitin.',
+    q: 'How do you meet high academic standards?',
+    a: 'We ensure quality at every stage and the process. We follow the choice of a style manual, including American Psychological Association (APA), MLA, Turabian, The University of Chicago Press (The Chicago manual of style) and others. We guarantee for the structure of the manuscript, dissertation & grant proposals. We ensure three-level quality check including Technical QC, Editor QC and final check against the requirement. Our work is scanned against online sources in a similar way like WriteCheck or Turnitin.',
   },
 ];
 
@@ -74,8 +74,8 @@ export default function FormattingServicePage() {
             '@type': 'FAQPage',
             mainEntity: faqs.map((f) => ({
               '@type': 'Question',
-              name: f.question,
-              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
             })),
           }),
         }}
