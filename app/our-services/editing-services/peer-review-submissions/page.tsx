@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import FaqAccordion from '@/components/ui/FaqAccordion';
 import TestimonialSlider from '@/components/ui/TestimonialSlider';
 
@@ -71,7 +71,7 @@ export default function PeerReviewSubmissionsPage() {
 
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)', color: '#fff', padding: '4rem 1rem 3rem' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h1 style={{ fontSize: 'clamp(1.5rem,4vw,2.5rem)', fontWeight: 800, marginBottom: '1.25rem', lineHeight: 1.2 }}>
             Peer review and Pre Submission help
           </h1>
@@ -79,7 +79,7 @@ export default function PeerReviewSubmissionsPage() {
             Are you seeking journal support to publish your paper in a high-impact journal? Then&apos; You&apos;ve reached the right place
           </p>
           <p style={{ fontStyle: 'italic', opacity: 0.85, marginBottom: '2rem' }}>Then You&apos;ve Certainly Reached the Right place</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
             <a href="/contact" style={{ background: '#e87722', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>Place an Order</a>
             <a href="/brochure" style={{ background: 'transparent', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem', border: '2px solid #fff' }}>Brochure</a>
           </div>

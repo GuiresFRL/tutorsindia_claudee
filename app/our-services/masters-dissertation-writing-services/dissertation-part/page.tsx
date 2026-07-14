@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
@@ -201,7 +201,6 @@ export default function DissertationPartPage() {
           background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)",
           color: "#fff",
           padding: "72px 24px 60px",
-          textAlign: "center",
         }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto" }}>

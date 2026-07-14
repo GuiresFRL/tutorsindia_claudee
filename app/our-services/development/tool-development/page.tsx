@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
@@ -106,7 +106,7 @@ export default function ToolDevelopmentPage() {
       `}</style>
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", padding: "4rem 1rem 3rem", color: "#fff", textAlign: "center" }}>
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", padding: "4rem 1rem 3rem", color: "#fff" }}>
         <div className="hero-inner">
           <span className="hero-badge">Tool Development</span>
           <h1 style={{ fontSize: "clamp(1.5rem,3.5vw,2.4rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1rem" }}>
@@ -121,7 +121,7 @@ export default function ToolDevelopmentPage() {
           <p style={{ fontSize: ".95rem", opacity: 0.85, marginBottom: "2rem" }}>
             Tutors at Tutors India has capability and skills to design questionnaire, interview or focus group guide
           </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-start", flexWrap: "wrap" }}>
             <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".75rem 2rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none" }}>
               Place an Order
             </Link>

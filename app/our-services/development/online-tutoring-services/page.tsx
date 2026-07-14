@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
@@ -100,7 +100,7 @@ export default function OnlineTutoringServicesPage() {
       `}</style>
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", padding: "4rem 1rem 3rem", color: "#fff", textAlign: "center" }}>
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", padding: "4rem 1rem 3rem", color: "#fff" }}>
         <div className="hero-inner">
           <span className="hero-badge">Online Tutoring Services</span>
           <h1 style={{ fontSize: "clamp(1.6rem,4vw,2.6rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1rem" }}>
@@ -112,7 +112,7 @@ export default function OnlineTutoringServicesPage() {
           <p style={{ fontSize: "1rem", opacity: 0.85, marginBottom: "2rem" }}>
             Online Tutoring is done by the qualified and experienced experts including retired professionals, adjuncts, real time faculties and professors across the world
           </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-start", flexWrap: "wrap" }}>
             <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".75rem 2rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none" }}>
               Order Now
             </Link>
