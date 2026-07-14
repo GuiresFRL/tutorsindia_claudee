@@ -11,27 +11,27 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "I am an academic student very much scared about plagiarism. How can you help me in assignment writing?",
-    a: "Tutors India guarantees plagiarism-free work – less than 5% percent. We use anti-plagiarism software to scan every assignment before delivery and provide a plagiarism-free certificate with your submission.",
+    a: "Tutors India, we have a brilliant statisticians hold advanced Masters and PhD degrees with 10+ years of experience and also have a wide range of statistical analysis experience. They will give the complete and concise manuscript statistics reporting based on well-developed plan. AT Tutors India, Clients will get the high quality and timely deliverables without a doubt.",
   },
   {
     q: "Are you genuine assignment writing services UK service provider?",
-    a: "Yes, Tutors India has been a trusted mentor for students since 2011, offering various dissertation and assignment writing support. We provide manuscript topic matching exactly with your requirement, key research areas within your scope, and target country and industry experience.",
+    a: "To provide manuscript statistics topic and match exactly with your requirement, provide key research interested areas within your scope, target country, industry experience and feasibility of data collection, if any. In addition, any other information that our writer should know also can be provided from your end.",
   },
   {
     q: "What quality of work you give to us for assignment writing?",
-    a: "We conduct three-level quality checks on every assignment. Our well-experienced writers are capable of handling all formats, referencing styles, and subject-specific requirements to the highest academic standards.",
+    a: "Our well-experienced statisticians are capable of SPSS, STATA, SAS, R, E-views and many more.",
   },
   {
     q: "Can I Get assignment writing samples?",
-    a: "Yes, we upload some of the sample assignment works at Tutors India that are written by our expertise. Since 2011, Tutors India is the trusted mentor for students in offering various assignment writing support.",
+    a: "Since 2011, Tutors India is the trusted mentors for the student in offering various Dissertations writing support. At Tutors India, we assist both statistics and biostatistics. The Manuscript Statistical data analysis is the most significant step in any Dissertation or thesis. We are excellent in offering the data compiling and recoding, statistical data analysis help and interpretation of statistical output. In additional, we offer the Presentation of table's manuscript statistical data analysis as well as figures, Quality analysis help and many more.",
   },
   {
     q: "Can I talk directly to the assignment writers?",
-    a: "Our exclusive coordinators will get in touch with you throughout the process to clarify any queries. We ensure clear communication between you and the assigned writer for the best possible outcome.",
+    a: "Apart from researchers, we assist the biostatical analysis services for the masters and PhD dissertation students or research paper so we strongly encourage getting help from our highly talented and experiencing statistician.",
   },
   {
     q: "What would be the price that you charge for assignment writing services?",
-    a: "Our pricing depends on the level of study, word count, subject area, and deadline. We offer competitive and affordable prices. Please fill out the enquiry form and our team will get back to you with a customised quote within 30 minutes.",
+    a: "Yes, we upload some of the manuscript statistics sample works at tutors india is written by our expertise.",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function AssignmentWritingServicesPage() {
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
             UK Professional help with assignments
           </h1>
-          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "16px" }}>
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "12px" }}>
             Are you looking for a high-quality critical assignment writing Services that ensure distinction?
           </p>
           <p style={{ color: "#f9c74f", fontSize: "1.1rem", fontFamily: "Merriweather,serif", fontWeight: 700, marginBottom: "28px" }}>
@@ -123,17 +123,17 @@ export default function AssignmentWritingServicesPage() {
         </div>
       </section>
 
-      {/* Intro cards */}
+      {/* Intro */}
       <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
         <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "32px 36px", marginBottom: "32px", borderLeft: "5px solid #1a2a6c" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.35rem", color: "#1a2a6c", marginBottom: "10px" }}>
             Your assignment is written by qualified and experienced British assignment writers and researchers from the US and the UK
           </h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px" }}>
-            Our Assignment writers have experience in specific domain experience, aware of theories of learning and educational degrees from international and top-ranked universities from India, the US, and the UK.
+            UK Assignment Writing Help at Tutors India match your study needs across a broad range of subjects. Your Assignment would demonstrate all learning outcomes for that unit and showcase intellectual debate, critical analysis, evidence of original thought and generation of new ideas.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
-            We match your study needs across various subjects with qualified writers who understand your university guidelines and specifications.
+            Our Assignment writers have experience in specific domain experience, aware of theories of learning and educational degrees from international and top-ranked universities from India, the US, and the UK.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ export default function AssignmentWritingServicesPage() {
               Assignment Writing Service
             </h3>
             <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
-              Assignments prepare students comprehensively to understand the subject matter deeply. Tutors India helps you avoid plagiarism issues while producing work of the highest academic standard.
+              Assignments are given to students in order to prepare them for certain topics comprehensively with deep knowledge and understanding. Tutors at Tutors India work seriously with your assignments and assist you in all stages either online or email-based.
             </p>
           </div>
           <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #e87722" }}>
@@ -183,7 +183,7 @@ export default function AssignmentWritingServicesPage() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(270px,1fr))", gap: "20px" }}>
             {[
-              { tier: "Basic", color: "#1a2a6c", desc: "Developed based on relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
+              { tier: "Basic", color: "#1a2a6c", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
               { tier: "Advanced", color: "#e87722", desc: "Wide range of sources, a clear identification of research gap in the literature along with aim and research questions." },
               { tier: "Premium", color: "#2563b0", desc: "Refers to a wide range of seminal research with throughout engagement using latest resources. A solid gap would be identified based on the current literature & justified thoroughly & Excellent critical analysis would be shown (upgradable)." },
             ].map(t => (
@@ -202,7 +202,7 @@ export default function AssignmentWritingServicesPage() {
           Wide Range of Topics – UK Assignment Writing
         </h2>
         <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
-          We handle a wide range of assignments including business, nursing, law, and many other fields. Our team covers Management, Finance &amp; Economics, Social Science, Engineering, Technology, Computer Science, Life Science, Medicine, Arts &amp; Literature/Linguistics and more.
+          We handle a wide range of assignments, including OPM, HRM, Technology, Teacher Training, Sustainable Customer Value, Marketing Management, Research Methodology, Resit, Rural Leadership, Information System Projects, OB, Nursing, Marketing Communication, Change Management, TQM, IBE, CB, Innovation, Service Excellence, HRPD, Case Study, Financial Plan, Business Plan, Market Research Plan, English, Education, Economics, Corporate Strategy, Law, Reflective Writing, Medicine, Business Research, Maths, Statistics, ELT, Biology, Chemistry, Physics, Tourism, Service Quality, Public Health Epidemiology, Dentistry, Psychology, Religion, Spiritual Studies, and many more.
         </p>
 
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.35rem", color: "#1a2a6c", marginBottom: "10px" }}>
@@ -213,16 +213,16 @@ export default function AssignmentWritingServicesPage() {
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: "16px", marginBottom: "40px" }}>
           {[
-            { n: "1", t: "Introduction", d: "A compelling introduction that sets the context, states the aim, and outlines the structure of the assignment clearly." },
-            { n: "2", t: "Body", d: "A well-structured body with arguments, analysis, and evidence drawn from peer-reviewed sources, aligned to your university guidelines." },
-            { n: "3", t: "Conclusion", d: "A concise conclusion that summarises the findings, reinforces the argument, and addresses the assignment question directly." },
-            { n: "4", t: "References", d: "Fully referenced using the required citation style (Harvard, APA, Vancouver, etc.) with only peer-reviewed sources." },
+            { n: "1", t: "Introduction", d: "Orientation to topic & Brief statement of the main topic" },
+            { n: "2", t: "Body", d: "Topic Sentence A, B, and C" },
+            { n: "3", t: "Conclusion", d: "Restatement or summary" },
+            { n: "4", t: "Reference list", d: "" },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
               <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
               <div>
                 <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
-                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+                {f.d && <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>}
               </div>
             </div>
           ))}
@@ -232,10 +232,10 @@ export default function AssignmentWritingServicesPage() {
           What We deliver while your order for UK Assignment writing
         </h3>
         <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
-          Our custom UK Assignment writing service is exclusive. We do not just provide an essay, but rather clear explanation and justification for the content written. We deliver more than your expectation with proper context and citations.
+          Our custom UK Assignment writing service is exclusive. We do not just provide an essay, but rather clear explanation and justification for the content written.
         </p>
         <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
-          Our deliverables include executive summaries or abstracts, edited references and supporting articles, SPSS data sheets and outputs (if applicable), refined questionnaires or semi-structured interview questions, and additional materials such as reflective logs or diaries.
+          We deliver more than your expectation – ensure to provider the proper context, delimit the boundary condition, cite landmark studies, accurately present the theoretical framework &amp; empirical contribution, stay focused on the research question, develop a coherent &amp; persuasive argument, a clear sense of direction, clear citation, APA or any other specific style.
         </p>
       </section>
 
