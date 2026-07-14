@@ -8,32 +8,32 @@ const faqs = [
   {
     q: "What do I need to provide For the Initial Dissertation Statistics consultation? Why?",
     a:
-      "Adequate research study information is required through our customary CRM after payment confirmation. This is essential for the statistician's decision-making on the appropriate statistical analyses to be carried out for your dissertation.",
+      "Tutors India experts will ask you to provide adequate information about your research study during the initial consultation, or you send the information through our customized CRM (Login Credential gave) ID after payment process confirmed. Without your research study, it is very difficult for the statisticians to make decisions on the statistical analyses.",
   },
   {
     q: "What are the statistical software tools used by Tutors India Statisticians?",
     a:
-      "Our statisticians have expertise in SPSS, STATA, SAS, R, E-views and additional tools to handle all types of quantitative and qualitative analyses.",
+      "Our well-experienced statisticians are capable of SPSS, STATA, SAS, R, E-views and many more.",
   },
   {
     q: "Are you familiar with dissertation statistics?",
     a:
-      "Since 2011, Tutors India is the trusted mentors for the master's student in offering various Dissertations writing support. We offer statistics, biostatistics, data compiling, recoding, analysis, interpretation, table presentation, and quality analysis for dissertations.",
+      "Since 2011, Tutors India is the trusted mentors for the master's student in offering various Dissertations writing support. At Tutors India, we assist both statistics and biostatistics. Statistical data analysis is the most important step in any Dissertation or thesis. We are excellent in offering the data compiling and recoding, statistical data analysis help and interpretation of statistical output. In additional, we offer the Presentation of tables master's statistical data analysis as well as figures, Quality analysis help and many more.",
   },
   {
-    q: "What are the qualifications of statistician and what are they do?",
+    q: "What are the qualifications of statistician and what are they do.",
     a:
-      "Our statisticians have 10+ years of senior experience with PhD and Master's qualifications. They handle complex projects including cluster analysis and structural equation modeling, and have the ability to explain statistical work clearly to clients.",
+      "We have 10+years of experience senior's statistician oversees all projects from UK, the US and other abroad countries offers Dissertation statistics services to masters and doctoral students as well as work for real corporate projects. Their qualification is PhD and masters so can their having ability to handle complex project that involve cluster analysis and structural equation modeling. Our consultant have years of experience in doing the statistical work so easily explain to clients in a way that can easily understand.",
   },
   {
     q: "I am a master's student. Can you help me to give a Tutor for the Dissertation Statistics service?",
     a:
-      "Yes, tutoring sessions are available separate from writing services. You will get an opportunity to discuss the process with our experts to complete your dissertation with accurate findings.",
+      "Yes. You are welcome to get Dissertation Statistics Tutoring apart from writing. We offer some sessions to understand what are the process so you will get the chance to talk with the expertise to complete dissertation with best and accurate finding or data analysis outcome.",
   },
   {
     q: "On which are the areas you provide Dissertation statistics services?",
     a:
-      "We cover a wide range: Business Management, Finance, Operations Management, Supply Chain & Logistics, Human Resources, Psychology, History, Geography, Engineering, Healthcare, Economics, Computer Science, English, Literature, Epidemiology, Nursing, Medical, Public Health, Life Science, and Nutrition. Additional subjects are available upon inquiry.",
+      "We accept orders from a wide range of subjects, which include Business Management, finance, operation management, supply chain and logistics management, entrepreneurial management, human resource management, psychology, history, geography, engineering, healthcare, Economics, Computer Science, English, Literature, Engineering, Epidemiology, nursing, medical, Public Health, Life Science, and Nutrition. If your topic or field of interest is not listed above, kindly contact us to know more about the dissertation writing services, dissertation writing tips, dissertation and thesis writing help",
   },
 ];
 
@@ -219,6 +219,9 @@ export default function DissertationStatisticalAnalysisPage() {
         }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
+          <p style={{ fontSize: "1rem", opacity: 0.85, marginBottom: 10, textTransform: "uppercase", letterSpacing: "0.08em" }}>
+            Dissertation statistical analysis
+          </p>
           <h1
             style={{
               fontFamily: "Merriweather, serif",
@@ -231,7 +234,7 @@ export default function DissertationStatisticalAnalysisPage() {
             The UK Master&apos;s Dissertation Textual (Qualitative) &amp; Statistical (Quantitative) Analysis Help
           </h1>
           <p style={{ fontSize: "1.1rem", lineHeight: 1.8, maxWidth: 760, margin: "0 auto 12px", opacity: 0.95 }}>
-            Then You&apos;ve Certainly Reached the Right Place! Tutors India, a hub for dissertation qualitative and quantitative analysis Services
+            Are you not familiar with statistical &amp; content analysis tools? You have data but does not how to recode it? Then You&apos;ve Certainly Reached the Right Place! Tutors India, a hub for dissertation qualitative and quantitative analysis Services
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.75, maxWidth: 740, margin: "0 auto 28px", opacity: 0.9 }}>
             Your dissertation Textual &amp; Statistical Analysis are done by the qualified and experienced Statisticians from the US &amp; UK
@@ -253,6 +256,20 @@ export default function DissertationStatisticalAnalysisPage() {
           </Link>
         </div>
       </section>
+
+      {/* Author byline */}
+      <div
+        style={{
+          background: "#1a2a6c",
+          color: "rgba(255,255,255,0.82)",
+          padding: "10px 24px",
+          textAlign: "center",
+          fontSize: "0.82rem",
+          letterSpacing: "0.02em",
+        }}
+      >
+        Reviewed by the <strong style={{ color: "#f9c74f" }}>Tutors India Statistical Analysis Team</strong> — SPSS, SAS, R &amp; STATA Certified Statisticians · PhD &amp; Master&apos;s qualified · 10+ years of dissertation research experience
+      </div>
 
       {/* Team intro */}
       <section style={{ background: "#f8f9fc", padding: "52px 24px" }}>
@@ -458,8 +475,30 @@ export default function DissertationStatisticalAnalysisPage() {
         </div>
       </section>
 
-      {/* Convince committee */}
+      {/* Statistical Software Tools */}
       <section style={{ padding: "52px 24px", background: "#fff" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h2
+            style={{
+              fontFamily: "Merriweather, serif",
+              fontSize: "1.4rem",
+              color: "#1a2a6c",
+              marginBottom: 16,
+            }}
+          >
+            Statistical &amp; Qualitative Analysis Software Tools
+          </h2>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444", marginBottom: 12 }}>
+            Quantitative (Statistical) Analysis: SPSS, SAS, Excel, R, STATA, Minitab, SPSS AMOS, SYSTAT, Epi-Info, E-Views
+          </p>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444" }}>
+            Qualitative (Textual) Analysis: Atlas-ti, MAXQDA, Nvivo, Wordstat, T-lab, TextPack
+          </p>
+        </div>
+      </section>
+
+      {/* Convince committee */}
+      <section style={{ background: "#f8f9fc", padding: "52px 24px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2
             style={{
