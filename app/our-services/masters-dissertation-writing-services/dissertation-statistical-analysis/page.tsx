@@ -7,33 +7,27 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 const faqs = [
   {
     q: "What do I need to provide For the Initial Dissertation Statistics consultation? Why?",
-    a:
-      "Tutors India experts will ask you to provide adequate information about your research study during the initial consultation, or you send the information through our customized CRM (Login Credential gave) ID after payment process confirmed. Without your research study, it is very difficult for the statisticians to make decisions on the statistical analyses.",
+    a: "Tutors India experts will ask you to provide adequate information about your research study during the initial consultation, or you send the information through our customized CRM (Login Credential gave) ID after payment process confirmed. Without your research study, it is very difficult for the statisticians to make decisions on the statistical analyses.",
   },
   {
     q: "What are the statistical software tools used by Tutors India Statisticians?",
-    a:
-      "Our well-experienced statisticians are capable of SPSS, STATA, SAS, R, E-views and many more.",
+    a: "Our well-experienced statisticians are capable of SPSS, STATA, SAS, R, E-views and many more.",
   },
   {
     q: "Are you familiar with dissertation statistics?",
-    a:
-      "Since 2011, Tutors India is the trusted mentors for the master's student in offering various Dissertations writing support. At Tutors India, we assist both statistics and biostatistics. Statistical data analysis is the most important step in any Dissertation or thesis. We are excellent in offering the data compiling and recoding, statistical data analysis help and interpretation of statistical output. In additional, we offer the Presentation of tables master's statistical data analysis as well as figures, Quality analysis help and many more.",
+    a: "Since 2011, Tutors India is the trusted mentors for the master's student in offering various Dissertations writing support. At Tutors India, we assist both statistics and biostatistics. Statistical data analysis is the most important step in any Dissertation or thesis. We are excellent in offering the data compiling and recoding, statistical data analysis help and interpretation of statistical output. In additional, we offer the Presentation of tables master's statistical data analysis as well as figures, Quality analysis help and many more.",
   },
   {
     q: "What are the qualifications of statistician and what are they do.",
-    a:
-      "We have 10+years of experience senior's statistician oversees all projects from UK, the US and other abroad countries offers Dissertation statistics services to masters and doctoral students as well as work for real corporate projects. Their qualification is PhD and masters so can their having ability to handle complex project that involve cluster analysis and structural equation modeling. Our consultant have years of experience in doing the statistical work so easily explain to clients in a way that can easily understand.",
+    a: "We have 10+years of experience senior's statistician oversees all projects from UK, the US and other abroad countries offers Dissertation statistics services to masters and doctoral students as well as work for real corporate projects. Their qualification is PhD and masters so can their having ability to handle complex project that involve cluster analysis and structural equation modeling. Our consultant have years of experience in doing the statistical work so easily explain to clients in a way that can easily understand.",
   },
   {
     q: "I am a master's student. Can you help me to give a Tutor for the Dissertation Statistics service?",
-    a:
-      "Yes. You are welcome to get Dissertation Statistics Tutoring apart from writing. We offer some sessions to understand what are the process so you will get the chance to talk with the expertise to complete dissertation with best and accurate finding or data analysis outcome.",
+    a: "Yes. You are welcome to get Dissertation Statistics Tutoring apart from writing. We offer some sessions to understand what are the process so you will get the chance to talk with the expertise to complete dissertation with best and accurate finding or data analysis outcome.",
   },
   {
     q: "On which are the areas you provide Dissertation statistics services?",
-    a:
-      "We accept orders from a wide range of subjects, which include Business Management, finance, operation management, supply chain and logistics management, entrepreneurial management, human resource management, psychology, history, geography, engineering, healthcare, Economics, Computer Science, English, Literature, Engineering, Epidemiology, nursing, medical, Public Health, Life Science, and Nutrition. If your topic or field of interest is not listed above, kindly contact us to know more about the dissertation writing services, dissertation writing tips, dissertation and thesis writing help",
+    a: "We accept orders from a wide range of subjects, which include Business Management, finance, operation management, supply chain and logistics management, entrepreneurial management, human resource management, psychology, history, geography, engineering, healthcare, Economics, Computer Science, English, Literature, Engineering, Epidemiology, nursing, medical, Public Health, Life Science, and Nutrition. If your topic or field of interest is not listed above, kindly contact us to know more about the dissertation writing services, dissertation writing tips, dissertation and thesis writing help",
   },
 ];
 
@@ -47,25 +41,21 @@ const testimonials = [
     quote:
       "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.",
     author: "Amelia Brooks, UK",
-    role: "Big Data Analytics",
   },
   {
     quote:
       "I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.",
     author: "Oliver Bennett, UK",
-    role: "Big Data Analytics",
   },
   {
     quote:
       "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout.",
     author: "Layla Al Mansoori",
-    role: "Essay Writing and Assignment Writing",
   },
   {
     quote:
       "My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.",
     author: "Hassan Al Falasi, UAE",
-    role: "Essay Writing and Assignment Writing",
   },
   {
     quote:
@@ -94,70 +84,56 @@ const testimonials = [
   },
 ];
 
-const analysisFeatures = [
-  {
-    title: "Data Compiling and Recoding",
-    body: "Excel data entry format creation, SPSS export with labeling, normality checking, missing data detection, and outlier analysis.",
-  },
-  {
-    title: "Dissertation Statistical Data Analysis Help",
-    body: "Descriptive statistics (mean, standard deviation, range), reliability of composite scores, hypothesis testing with appropriate statistical tools.",
-  },
-  {
-    title: "Dissertation Interpretation of Statistical Output",
-    body: "Relevant data interpretation only, complete output understanding support, and meaningful commentary tied to your research objectives.",
-  },
-  {
-    title: "Presentation of Tables and Figures",
-    body: "Journal format presentation of results, quantitative and qualitative commentary, and professionally formatted tables and figures.",
-  },
-  {
-    title: "Qualitative Dissertation Analysis Help",
-    body: "NVIVO software analysis, thematic analysis approach, content analysis, and other qualitative methodologies.",
-  },
-  {
-    title: "Our Express Dissertation Statistical & Text Analysis Service",
-    body: "4-6 hours turnaround solution available. Software expertise: SPSS, SAS, STATA, R, Excel, Epi-Info, E-Views.",
-  },
-  {
-    title: "Chapter by Chapter Delivery Process",
-    body: "Full client control over drafts at every stage. Unlike other companies, we do not charge any additional costs for this structure.",
-  },
-  {
-    title: "Statistics Homework & Assignment Help",
-    body: "Statistical homework problem solving, statistics coursework and classwork support, and concept understanding guidance from expert statisticians.",
-  },
-];
-
 const serviceTiers = [
   {
     tier: "Basic",
     color: "#2563b0",
-    desc: "Statistical Analysis based on raw data with basic interpretation without literature discussion.",
-    includes: [
-      "Statistical Analysis based on raw data",
-      "Basic interpretation without literature discussion",
-    ],
+    desc: "Only Statistical Analysis based on the raw data shared. We analyse the data using appropriate statistical tools and just paste the output and write the basic interpretation without any discussion against the literature review",
   },
   {
     tier: "Advanced",
     color: "#1a2a6c",
-    desc: "Appropriate statistical tools with manuscript formatting and interpretation with literature comparison.",
-    includes: [
-      "Appropriate statistical tools",
-      "Manuscript formatting",
-      "Interpretation with literature comparison",
-    ],
+    desc: "We analyse the given data using appropriate statistical tools and format the tables according to the manuscript style with logical sense. We write the interpretation of the statistics conducted along with the discussion by comparing and contrasting the previous studies conducted as presented in your Chapter II (Literature Review).",
   },
   {
     tier: "Premium",
     color: "#e87722",
-    desc: "Data collection services included with reliability/validity checks for quantitative and qualitative rigor assessment.",
-    includes: [
-      "Data collection services included",
-      "Reliability/validity checks",
-      "Quantitative and qualitative rigor assessment",
-    ],
+    desc: "In addition to the advanced features, we also undertake data collection services under premium. We also check for reliability, and validity for quantitative while rigor and trustworthiness including peer debriefing and support, member checking, negative case analysis and auditing for qualitative textual analysis",
+  },
+];
+
+const analysisFeatures = [
+  {
+    title: "Data Compiling and Recoding",
+    body: "Creating data entry format in excel, exporting data into SPSS or any software, labelling, checking for normality, missing data, data entry errors, outliers checking using appropriate analysis.",
+  },
+  {
+    title: "Dissertation Statistical Data Analysis Help",
+    body: "Although there are several ways of analysing data, usual format starts with descriptive statistics (mean, standard deviation, minimum, maximum, range, standard error of the mean, confidence interval) of the socio-demographic variables (age, sex, occupation, income, marital status) and followed by the reliability of the composite scores. Further, the data analysis is focused on hypothesis testing using appropriate statistical tools",
+  },
+  {
+    title: "Dissertation Interpretation of Statistical Output",
+    body: "The output provided in any software will be exhaustive, and it is not necessary to interpret all the numbers. At Tutors India, we interpret the data that are relevant to the thesis and make sure you completely understand the output.",
+  },
+  {
+    title: "Presentation of Tables and Figures",
+    body: "At Tutors India, the presentation of statistical output for the Masters Statistical Data analysis and Ph.D. thesis data analysis follows the journal format and apply appropriate interpretation not only based on numbers (quantitative expression) but also qualitatively including commenting your research methodology strength and Limitations.",
+  },
+  {
+    title: "Qualitative Dissertation Analysis Help",
+    body: "Avail our qualitative text analysis service in which, we assist in analysing your textual data using NVIVO software and also through Thematic analysis approach.",
+  },
+  {
+    title: "Our Express Dissertation Statistical & Text Analysis Service",
+    body: "Find the solution within 4-6 hours' quick turnaround solution. Tutors India has expertise in handling software like SPSS, SPSS AMOS, SAS, SYSTAT, R, STATA, Epi-Info, E-Views, Excel, etc.",
+  },
+  {
+    title: "Chapter by Chapter Delivery Process",
+    body: "This is to ensure that clients have full control over the delivery and can look at the drafts of different sections. Unlike other companies, we do not charge any costs for such structure as we ensure client satisfaction at every stage of the work.",
+  },
+  {
+    title: "Statistics Homework & Assignment Help",
+    body: "Apart from data analysis using statistical tools, our statistician guides you in solving your statistical homework problems, Statistics coursework, Statistics class work, Mathematics conference paper, Statistics conference paper, Statistical questions, and answers.",
   },
 ];
 
@@ -206,6 +182,17 @@ const subjects = [
   "Hospitality, Leisure & Sports",
 ];
 
+const consultationSteps = [
+  "After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements.",
+  "Our team will get back to you with initial queries for clarifications and provide an outline of the proposed analysis.",
+  "We will dispatch the work in the draft, and update you on the progress.",
+  "You can reach us through your exclusive coordinator for any clarifications.",
+  "Additional payment may be required for primary data collection if applicable.",
+  "Excel data sheet will be placed in Appendix for full transparency.",
+  "Installment payment options are available.",
+  "Final delivery is made per agreed schedule or earlier.",
+];
+
 export default function DissertationStatisticalAnalysisPage() {
   return (
     <div style={{ fontFamily: "Georgia, serif", color: "#222" }}>
@@ -219,7 +206,7 @@ export default function DissertationStatisticalAnalysisPage() {
         }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <p style={{ fontSize: "1rem", opacity: 0.85, marginBottom: 10, textTransform: "uppercase", letterSpacing: "0.08em" }}>
+          <p style={{ fontSize: "1rem", opacity: 0.8, marginBottom: 10, textTransform: "uppercase", letterSpacing: "0.08em" }}>
             Dissertation statistical analysis
           </p>
           <h1
@@ -234,7 +221,10 @@ export default function DissertationStatisticalAnalysisPage() {
             The UK Master&apos;s Dissertation Textual (Qualitative) &amp; Statistical (Quantitative) Analysis Help
           </h1>
           <p style={{ fontSize: "1.1rem", lineHeight: 1.8, maxWidth: 760, margin: "0 auto 12px", opacity: 0.95 }}>
-            Are you not familiar with statistical &amp; content analysis tools? You have data but does not how to recode it? Then You&apos;ve Certainly Reached the Right Place! Tutors India, a hub for dissertation qualitative and quantitative analysis Services
+            Are you not familiar with statistical &amp; content analysis tools? You have data but does not how to recode it? Do you have a problem in analysing your hypothesis?
+          </p>
+          <p style={{ fontSize: "1rem", lineHeight: 1.75, maxWidth: 740, margin: "0 auto 12px", opacity: 0.9 }}>
+            Then You&apos;ve Certainly Reached the Right Place! Tutors India, a hub for dissertation qualitative and quantitative analysis Services
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.75, maxWidth: 740, margin: "0 auto 28px", opacity: 0.9 }}>
             Your dissertation Textual &amp; Statistical Analysis are done by the qualified and experienced Statisticians from the US &amp; UK
@@ -271,17 +261,10 @@ export default function DissertationStatisticalAnalysisPage() {
         Reviewed by the <strong style={{ color: "#f9c74f" }}>Tutors India Statistical Analysis Team</strong> — SPSS, SAS, R &amp; STATA Certified Statisticians · PhD &amp; Master&apos;s qualified · 10+ years of dissertation research experience
       </div>
 
-      {/* Team intro */}
+      {/* Core intro */}
       <section style={{ background: "#f8f9fc", padding: "52px 24px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <h2
-            style={{
-              fontFamily: "Merriweather, serif",
-              fontSize: "1.55rem",
-              color: "#1a2a6c",
-              marginBottom: 16,
-            }}
-          >
+          <h2 style={{ fontFamily: "Merriweather, serif", fontSize: "1.55rem", color: "#1a2a6c", marginBottom: 16 }}>
             We provide support for all your dissertation analysis
           </h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444", maxWidth: 780, margin: "0 auto 16px" }}>
@@ -308,7 +291,7 @@ export default function DissertationStatisticalAnalysisPage() {
         </div>
       </section>
 
-      {/* Scope + Guarantee callouts */}
+      {/* Scope callouts */}
       <section style={{ padding: "52px 24px", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))", gap: 20 }}>
@@ -328,12 +311,7 @@ export default function DissertationStatisticalAnalysisPage() {
             ].map((c) => (
               <div
                 key={c.heading}
-                style={{
-                  background: "#f8f9fc",
-                  borderRadius: 8,
-                  padding: "22px 20px",
-                  borderTop: "4px solid #2563b0",
-                }}
+                style={{ background: "#f8f9fc", borderRadius: 8, padding: "22px 20px", borderTop: "4px solid #2563b0" }}
               >
                 <h3 style={{ fontFamily: "Merriweather, serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: 10 }}>
                   {c.heading}
@@ -359,39 +337,17 @@ export default function DissertationStatisticalAnalysisPage() {
           >
             What Services do we offer under Specific Type of Dissertation?
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 20 }}>
             {serviceTiers.map((t) => (
               <div
                 key={t.tier}
-                style={{
-                  background: "#fff",
-                  border: `2px solid ${t.color}`,
-                  borderRadius: 10,
-                  overflow: "hidden",
-                }}
+                style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: 10, overflow: "hidden" }}
               >
                 <div style={{ background: t.color, color: "#fff", padding: "14px 18px" }}>
                   <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div>
                 </div>
-                <div style={{ padding: "16px" }}>
-                  <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.65, marginBottom: 12 }}>{t.desc}</p>
-                  <ul style={{ listStyle: "none", padding: 0 }}>
-                    {t.includes.map((item) => (
-                      <li
-                        key={item}
-                        style={{
-                          display: "flex",
-                          gap: 6,
-                          fontSize: "0.8rem",
-                          color: "#555",
-                          padding: "4px 0",
-                          borderBottom: "1px solid #f0f2fa",
-                        }}
-                      >
-                        <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {item}
-                      </li>
-                    ))}
-                  </ul>
+                <div style={{ padding: "18px 16px" }}>
+                  <p style={{ fontSize: "0.88rem", color: "#444", lineHeight: 1.75 }}>{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -399,41 +355,36 @@ export default function DissertationStatisticalAnalysisPage() {
         </div>
       </section>
 
-      {/* Deliverables + How it works */}
+      {/* Deliverables */}
       <section style={{ padding: "52px 24px", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h2
-            style={{
-              fontFamily: "Merriweather, serif",
-              fontSize: "1.55rem",
-              color: "#1a2a6c",
-              marginBottom: 16,
-            }}
-          >
+          <h2 style={{ fontFamily: "Merriweather, serif", fontSize: "1.55rem", color: "#1a2a6c", marginBottom: 16 }}>
             Our Deliverables While You Order Statistical Help for Master&apos;s Dissertation Service UK
           </h2>
-          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444", marginBottom: 28 }}>
-            Our deliverables include executive summary/abstract, SPSS data sheet and output, questionnaire or semi-structured interview questions, and any other information we have used to complete the analysis.
-          </p>
-
-          <h2
-            style={{
-              fontFamily: "Merriweather, serif",
-              fontSize: "1.4rem",
-              color: "#1a2a6c",
-              marginBottom: 14,
-            }}
-          >
-            How Does Statistical Consultation Work?
-          </h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444" }}>
-            The process involves order confirmation, team allocation, requirement scrutiny, initial consultation, outline approval, draft delivery with progress updates, and final delivery per the agreed schedule.
+            You will get the reply within 30 minutes which would enable to place your order quickly without any delay in submissions. We would provide executive summary /abstract, SPSS data sheet and output, questionnaire or semi-structured interview questions and any other information that have used to develop dissertation statistical report.
           </p>
         </div>
       </section>
 
-      {/* Analysis Features Grid */}
+      {/* How consultation works */}
       <section style={{ background: "#f8f9fc", padding: "52px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather, serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: 20 }}>
+            How Does Statistical Consultation Work?
+          </h2>
+          <ol style={{ paddingLeft: 20, margin: 0 }}>
+            {consultationSteps.map((step, i) => (
+              <li key={i} style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444", marginBottom: 10 }}>
+                {step}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Analysis Features Grid */}
+      <section style={{ padding: "52px 24px", background: "#fff" }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
           <h2
             style={{
@@ -451,21 +402,14 @@ export default function DissertationStatisticalAnalysisPage() {
               <div
                 key={f.title}
                 style={{
-                  background: "#fff",
+                  background: "#f8f9fc",
                   borderRadius: 8,
                   padding: "22px 20px",
                   borderTop: "4px solid #2563b0",
                   boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
                 }}
               >
-                <h4
-                  style={{
-                    fontFamily: "Merriweather, serif",
-                    fontSize: "0.97rem",
-                    color: "#1a2a6c",
-                    marginBottom: 10,
-                  }}
-                >
+                <h4 style={{ fontFamily: "Merriweather, serif", fontSize: "0.97rem", color: "#1a2a6c", marginBottom: 10 }}>
                   {f.title}
                 </h4>
                 <p style={{ fontSize: "0.92rem", lineHeight: 1.75, color: "#555" }}>{f.body}</p>
@@ -476,16 +420,9 @@ export default function DissertationStatisticalAnalysisPage() {
       </section>
 
       {/* Statistical Software Tools */}
-      <section style={{ padding: "52px 24px", background: "#fff" }}>
+      <section style={{ background: "#f8f9fc", padding: "52px 24px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h2
-            style={{
-              fontFamily: "Merriweather, serif",
-              fontSize: "1.4rem",
-              color: "#1a2a6c",
-              marginBottom: 16,
-            }}
-          >
+          <h2 style={{ fontFamily: "Merriweather, serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: 16 }}>
             Statistical &amp; Qualitative Analysis Software Tools
           </h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444", marginBottom: 12 }}>
@@ -498,20 +435,13 @@ export default function DissertationStatisticalAnalysisPage() {
       </section>
 
       {/* Convince committee */}
-      <section style={{ background: "#f8f9fc", padding: "52px 24px" }}>
+      <section style={{ padding: "52px 24px", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h2
-            style={{
-              fontFamily: "Merriweather, serif",
-              fontSize: "1.4rem",
-              color: "#1a2a6c",
-              marginBottom: 14,
-            }}
-          >
+          <h2 style={{ fontFamily: "Merriweather, serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: 16 }}>
             Master&apos;s Dissertation Part or Chapter Need to Convince the Supervisory Committee
           </h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444" }}>
-            Covers: introduction, literature review, problem statement, research questions, hypothesis development, research design, statistical analysis, data entry/screening, interpretation, discussion, results, recommendations, and conclusion.
+            identification of topic, reviewing the literature or literature review, problem statement, research question(s) and research hypothesis development, research design (sampling, measures, procedures and data collection), statistical analysis, (data analysis preparation, data entry and screening, interpretation), discussion, results, recommendation and conclusion.
           </p>
         </div>
       </section>
@@ -579,12 +509,7 @@ export default function DissertationStatisticalAnalysisPage() {
             {guarantees.map((g) => (
               <div
                 key={g.title}
-                style={{
-                  background: "#f8f9fc",
-                  borderRadius: 8,
-                  padding: "22px 20px",
-                  borderTop: "4px solid #e87722",
-                }}
+                style={{ background: "#f8f9fc", borderRadius: 8, padding: "22px 20px", borderTop: "4px solid #e87722" }}
               >
                 <h4 style={{ fontFamily: "Merriweather, serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: 10 }}>
                   {g.title}
