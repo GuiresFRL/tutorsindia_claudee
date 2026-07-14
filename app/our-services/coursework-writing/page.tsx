@@ -32,6 +32,75 @@ const testimonials = [
     avatar: "/images/testimonials/t17.jpg",
   },
   {
+    quote: "I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.",
+    author: "Charlotte Reed",
+    location: "UK",
+    avatar: "/images/testimonials/t1.jpg",
+  },
+  {
+    quote: "The team handled everything professionally from start to finish. Timely updates, quick responses, and excellent academic quality — exactly what students need during stressful deadlines.",
+    author: "Zain Al Hashmi",
+    location: "UAE",
+    avatar: "/images/testimonials/t2.jpg",
+  },
+  {
+    quote: "I was amazed at how naturally the content matched my writing style and university standards. It felt authentic, polished, and academically strong.",
+    author: "Emily Carter",
+    avatar: "/images/testimonials/t3.jpg",
+  },
+  {
+    quote: "This service saved me during one of the most stressful phases of my academic journey. Reliable, professional, and genuinely supportive throughout the process.",
+    author: "Noora Al Zaabi",
+    location: "UAE",
+    avatar: "/images/testimonials/t4.jpg",
+  },
+  {
+    quote: "The final work looked so refined and well-structured that even my mentor appreciated the improvement immediately. Highly recommended for serious academic support.",
+    author: "George Whitmore",
+    location: "UK",
+    avatar: "/images/testimonials/t7.jpg",
+  },
+  {
+    quote: "What impressed me most was how personalized the support felt. They didn't just complete the work — they understood my goals and helped me present them better.",
+    author: "Khalid Al Nuaimi",
+    avatar: "/images/testimonials/t8.jpg",
+  },
+  {
+    quote: "I was really struggling with my final semester master's degree, that's when I heard about Tutors India. They really guided me the whole way to produce research proposal just from the idea of a research title. The level of detail which went into creating the research proposal is astonishing. The technical concepts they advised for methodology were very advanced and algorithms used were state of the art. Would definitely recommend Tutors India to anyone who is struggling to complete their research work.",
+    author: "David Morrison",
+    avatar: "/images/testimonials/t9.jpg",
+  },
+  {
+    quote: "Tutors India helped me gain clarity on the direction my research proposal needed to go and provided me with more clarity in my work. The experts understand my difficulties in writing the research proposal and guided me accordingly. Even without having an in-depth background in the topic I'm able to understand the key aspects and was given the focus to the right place. I wholeheartedly endorse Tutors India as a best and professional service, as someone you can rely on completing your research works.",
+    author: "Glenn McLaughlin",
+    avatar: "/images/testimonials/t10.jpg",
+  },
+  {
+    quote: "First and foremost, I want to express my gratitude for your writer's assistance and effort in developing this research technique for my research paper. It would be difficult to accomplish this assignment on deadline without your assistance and that of your writer. In fact, I believe that this legal subject is rather challenging for me, and that starting to create this law paper without your writer's assistance would be extremely difficult.",
+    author: "Hunter W. Lindström, JD, PhD",
+    avatar: "/images/testimonials/t11.jpg",
+  },
+  {
+    quote: "Even though my professor refused to extend my deadline, I needed to find an assignment assistance provider, and I'm glad I found Tutors India. They responded quickly, and I received an exceptionally well-written paper before the deadline.",
+    author: "Dr. Logan C. Sinclair, PhD",
+    avatar: "/images/testimonials/t12.jpg",
+  },
+  {
+    quote: "I can say that it was a pleasant experience in which Tutors India displayed flexibility in adapting to our needs and presented an exceptional report that met all of our expectations. Personally, I appreciated the team's prompt follow-up, and we will undoubtedly contact them if additional research assistance is required.",
+    author: "Connor J. Gallagher, MPhil",
+    avatar: "/images/testimonials/t14.jpg",
+  },
+  {
+    quote: "Tutors India provides me with a great deal of flexibility in terms of choosing courses and research areas. The specialists assisted me in choosing a unique and significant research topic, as well as moving on to the next stage of my research.",
+    author: "N.M. (U.S)",
+    avatar: "/images/testimonials/t1.jpg",
+  },
+  {
+    quote: "Whether you believe it or not, I am completely delighted with the essay you wrote for me. I received a wonderful grade, and I am now certain that your promises are true. Tutors India, thank you.",
+    author: "Dr. Declan O'Connell, MD, PhD",
+    avatar: "/images/testimonials/t2.jpg",
+  },
+  {
     quote: "Good job by Tutors India on drafting my coursework. I had a lot of clarity about the process as it was kept very transparent throughout. There was no delay with their response and my coursework was delivered within the requested time. The review was very good. I will definitely come back with more requests.",
     author: "Jenifer Williams",
     location: "Japan",
@@ -42,6 +111,31 @@ const testimonials = [
     author: "Gatik",
     location: "Andorra",
     avatar: "/images/testimonials/t6.jpg",
+  },
+  {
+    quote: "Great job on my paper, you guys saved my bacon I scored an A. I will need you again for a paper for my Pharmco class, I'll be in touch",
+    author: "N.M. (U.S)",
+    avatar: "/images/testimonials/t3.jpg",
+  },
+  {
+    quote: "Topic selection was extraordinary, my professor approved on the first go. Good. I will sure recommend the service to all my class mates",
+    author: "C S, Sheffield, UK",
+    avatar: "/images/testimonials/t4.jpg",
+  },
+  {
+    quote: "4 times my research topic is rejected so I contact tutors India, recommend by one of my friend, thank you so much tutors India such an impressive topic selection. I revert back for my further chapter writing support.",
+    author: "B A, London, UK",
+    avatar: "/images/testimonials/t7.jpg",
+  },
+  {
+    quote: "The way you explained the topic was really good. In fact, I was little stunned with the team especially the 'Dr.' has full capability and skills to explain all my queries. Initially I had little hesitation to approach, but after speaking to them, I gained 100% confidence. I recommend speaking to the experts, they will certainly clarify all your queries.",
+    author: "F M, Michigan, US",
+    avatar: "/images/testimonials/t8.jpg",
+  },
+  {
+    quote: "Thank you Tutors India for giving me wonderful topic selection, it got approved and further from research proposal to citation, I need a same support.",
+    author: "K S, US, Boston",
+    avatar: "/images/testimonials/t9.jpg",
   },
 ];
 
@@ -99,18 +193,18 @@ const services = [
 ];
 
 const orderSteps = [
-  { n: "1", title: "We Identify Your Writer", desc: "In order to get our service, you need to first fill out the form with your information in a comprehensive manner." },
+  { n: "1", title: "We identify Your writer", desc: "In order to get our service, you need to first fill out the form with your information in a comprehensive manner." },
   { n: "2", title: "Reference Number", desc: "Upon receiving your Enquiry form, we assign you a reference number. You can know the status of your paper anytime by sending us an email or tracking through CRM" },
   { n: "3", title: "Acknowledgment", desc: "Once you have paid for your order you will receive an acknowledgement from us. The writing process here with us begins within couple of days* after receiving your order" },
-  { n: "4", title: "We Check Requirement", desc: "Once your dissertation is completed we check for spelling, grammar, content, focus, sources quality against the client requirement." },
-  { n: "5", title: "Edit & Proofreading", desc: "Once we receive an order from our writer, we ensure to proofread the document." },
-  { n: "6", title: "Expert Writers", desc: "At Tutors India we are equipped with writers who have passion towards research and associated with writing all their lives." },
+  { n: "4", title: "We check requirement", desc: "Once your dissertation is completed we check for spelling, grammar, content, focus, sources quality against the client requirement." },
+  { n: "5", title: "Edit & proofreading", desc: "Once we receive an order from our writer, we ensure to proofread the document." },
+  { n: "6", title: "We identify Your writer", desc: "At Tutors India we are equipped with writers who have passion towards research and associated with writing all their lives." },
   { n: "7", title: "Plagiarism Assurance", desc: "Once your dissertation is completed it is checked for plagiarism with anti-plagiarism software before the delivery." },
   { n: "8", title: "Free Appendices / Resources", desc: "We ensure not only to deliver your work but also additional reference materials will be shared via zip file through google drive or drop box." },
-  { n: "9", title: "Download Your Order", desc: "You can download your order through our CRM and reminder will be sent through email & SMS. Additional copy will be mailed." },
-  { n: "10", title: "Researcher Makes Changes", desc: "The document will be shared to our writer or programmer and once the work is completed, we will share you the complete work through email or you can download the order" },
-  { n: "11", title: "Unlimited Revisions", desc: "Since we deliver the research work, and there is a possibility that research can be viewed in different direction, we offer unlimited revision support for the concept being accepted." },
-  { n: "12", title: "Request for Amendment", desc: "If you required any changes, you can always come back to us, we are ready to unlimited revisions for the concept being committed. Comments can be shared through guidance@tutorsindia.com" },
+  { n: "9", title: "Download your Order", desc: "You can download your order through our CRM and reminder will be sent through email & SMS. Additional copy will be mailed." },
+  { n: "10", title: "Researcher makes the changes", desc: "The document will be shared to our writer or programmer and once the work is completed, we will share you the complete work through email or you can download the order" },
+  { n: "11", title: "Unlimited revisions", desc: "Since we deliver the research work, and there is a possibility that research can be viewed in different direction, we offer unlimited revision support for the concept being accepted." },
+  { n: "12", title: "Request for amendment", desc: "If you required any changes, you can always come back to us, we are ready to unlimited revisions for the concept being committed. Comments can be shared through guidance@tutorsindia.com" },
 ];
 
 const features = [
@@ -143,15 +237,15 @@ const features = [
     d: "We have stringent quality check and quality assurance process in every stage of your masters dissertation so that the final output is devoid of errors. Our experts understand your initial requirement, compare and cross verify the final output to meet the standards. We ensure your document is checked for subject matter, language, formatting, referencing, plagiarism and overall requirement.",
   },
   {
-    t: "Unlimited Revisions",
-    d: "We firmly believe that every researcher has different perception and we respect your feedback and comments to improve the research quality. So we provide unlimited revisions as per the initial commitment which is completely free of cost even after the project is completed. Our free revisions are bundled with your Masters dissertation writing as per the initial commitment.",
+    t: "Unlimited revisions",
+    d: "We firmly believe that every researcher has different perception and we respect your feedback and comments to improve the research quality. So we provide unlimited revisions as per the initial commitment which is completely free of cost even after the project is completed*. Our free revisions are bundled with your Masters dissertation writing as per the initial commitment.",
   },
   {
     t: "Affordable",
     d: "We strive to provide the masters dissertation writing services with world-class quality at affordable rates. Our experts are globally available who would work as per your currency rates and timings. So you can save costs in writing your Masters dissertation since our rates are nominal, student-friendly and exclusively in your currency. Our rates are constant irrespective of country, subject and quality as we provide only high-quality works.",
   },
   {
-    t: "Experienced Writers",
+    t: "Experienced Writers with a minimum degree of Master's with research experience",
     d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.",
   },
 ];
@@ -172,7 +266,7 @@ const freeServices = [
   { t: "Literature Review", d: "We help you in a broad range of services from the selection of a dissertation topic to complete your master's dissertation successfully with the expected grade. UK MBA thesis topics are selected based on your area of interest, research gap, and feasibility of data collection." },
   { t: "Exam Notes", d: "We help you in a broad range of services from the selection of a dissertation topic to complete your master's dissertation successfully with the expected grade. UK MBA thesis topics are selected based on your area of interest, research gap, and feasibility of data collection." },
   { t: "Essay Writing", d: "We help you in a broad range of services from the selection of a dissertation topic to complete your master's dissertation successfully with the expected grade. UK MBA thesis topics are selected based on your area of interest, research gap, and feasibility of data collection. We make you strong in your dissertation by dealing with all the questions" },
-  { t: "Annotated Bibliography", d: "An essay is a piece of logical flowing, continuous, paragraphed text usually uninterrupted by headings and subheadings. Thus, writing an essay is always challenging." },
+  { t: "Annotated Bibilography", d: "An essay is a piece of logical flowing, continuous, paragraphed text usually uninterrupted by headings and subheadings. Thus, writing an essay is always challenging." },
   { t: "Reflective Report", d: "We help you in a broad range of services from the selection of a dissertation topic to complete your master's dissertation successfully with the expected grade. UK MBA thesis topics are selected based on your area of interest, research gap, and feasibility of data collection. We make you strong in your dissertation by dealing with all the questions that you have in your mind." },
   { t: "Case Report Writing", d: "We help you in a broad range of services from the selection of a dissertation topic to complete your master's dissertation successfully with the expected grade. UK MBA thesis topics are selected based on your area of interest, research gap, and feasibility of data collection." },
 ];
@@ -227,10 +321,10 @@ export default function CourseworkWritingPage() {
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>UK Master&apos;s &amp; PhD Coursework at Tutors India Exclusive Coursework Writing Services for the UK &amp; Australian Universities</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            UK Master&apos;s or your postgraduate degree should not be taken lightly as this decides your career further. A survey of 85 universities in the UK revealed that where more than half of the universities reported that 60 percent of the assessment is coursework while one in five reported 80 percent.
+            UK Master&apos;s or your postgraduate degree should not be taken lightly as this decides your career further. A survey of 85 universities in the UK revealed that where more than half of the universities reported that 60 percent of the assessment is coursework while one in five reported 80 percent. A coursework includes different writing activities that includes, assignment writing, book report writing, annotated bibliography, and dissertation writing. The purpose of the coursework in different universities across the US, the US and Australian universities is to enhance the student&apos;s knowledge and their skills However, due to busy schedule life of UK, it would be challenging to submit the coursework on time.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            At Tutors India, we write your coursework that would guarantee your grade.
+            At Tutors India, we write your coursework that would gurantee your grade.
           </p>
         </div>
 
@@ -242,26 +336,26 @@ export default function CourseworkWritingPage() {
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A Trusted the UK Coursework Writing Service at Tutors India</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            Tutors India has skilled and talented professional UK writers who work with your UK Master's and MBA coursework and assist you at all the stages of your UK MBA coursework writing either online or email based. We assist you 24/7 and provide evidence that we deliver what exactly you expect.
+            Tutors India has skilled and talented professional UK writers who work with your UK Master&apos;s and MBA coursework and assist you at all the stages of your UK MBA coursework writing either online or email based. We assist you 24/7 and provide evidence that we deliver what exactly you expect. This is one of the highlights of our services which remains unmatched by our competitors across the world.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            Our team of UK coursework writing experts consists of experienced professionals who are holding at least a Master's degree and also Ph.D. holders from the prestigious universities from the UK, US, and Australia, who can help you in writing any coursework whether it is science or management or computer science or Engineering or environmental science.
+            Our team of UK coursework writing experts consists of experienced professionals who are holding at least a Master&apos;s degree and also Ph.D. holders from the prestigious universities from the UK, US, and Australia, who can help you in writing any coursework whether it is science or management or computer science or Engineering or environmental science.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            Our experts write your UK Master's and MBA coursework writing (exclusively for the UK universities MBA dissertation writing service (UK MBA, ME, M.Sc., M.S., MPH, MPhil) without plagiarism and set in innovative ideas.
+            Our experts write your UK Master&apos;s and MBA coursework writing (exclusively for the UK universities MBA dissertation writing service (UK MBA, ME, M.Sc., M.S., MPH, MPhil) without plagiarism and set in innovative ideas.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            Our unique approach has helped hundreds of scholars to complete and submit their UK MBA and Master's coursework across the global successfully.
+            Our unique approach has helped hundreds of scholars to complete and submit their UK MBA and Master&apos;s coursework across the global successfully.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Tutors India do not sell any paper but we consider every piece of work is unique and therefore we write from scratch based on the precise instructions you provide during the ordering process.
+            Tutors India do not sell any paper but we consider every piece of work is unique and therefore we write from scratch based on the precise instructions you provide during the ordering process. Thereby, you can feel relaxed that you are going to get help
           </p>
         </div>
 
         {/* Service Cards */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Our PhD Coursework Services</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Note: Tutors India has skilled and talented professional UK writers who work with your UK Master's and MBA coursework and assist you at all the stages of your UK MBA coursework writing either online or email based.</p>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Note: Tutors India has skilled and talented professional UK writers who work with your UK Master&apos;s and MBA coursework and assist you at all the stages of your UK MBA coursework writing either online or email based.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
             {services.map((s, i) => (
               <Link key={s.title} href={s.href} style={{ textDecoration: "none" }}>
@@ -279,8 +373,16 @@ export default function CourseworkWritingPage() {
           </div>
         </div>
 
-        {/* Wide Range of Services */}
+        {/* UK Coursework Writing Service feature */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>UK Coursework Writing Service feature</h2>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their coursework sucessfully..
+          </p>
+        </div>
+
+        {/* Wide Range of Services */}
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Wide Range of Services &amp; Types of Coursework</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
             We help you in a broad range of services and subjects. We ensure that the students approaching Tutors India UK for coursework writing, we identify writers who are well versed in particular subject including chemistry, criminology, mathematics, statistics, management, physics, sociology, biology, law, geography, social science, nursing, medicine, arts and literature, computer science, software programming, information technology, graphics, animation 3D drawing, CAD, construction etc.
@@ -291,17 +393,17 @@ export default function CourseworkWritingPage() {
         </div>
 
         {/* Primary Principles */}
-        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Coursework Writing - Primary Principles</h2>
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Coursework writing - Primary Principles</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
-            Although defining a coursework writing structure is challenging, as it depends on the multiple factors, but it has got some standard writing on a topic such as general introduction, main body and conclusion. However, developing a financial analysis on a company would be more challenging than writing a coursework on a generic topic.
+            Although defining a coursework writing structure is challenging, as it depends on the multiple factors, but it has got some standard writing on a topic such as general introduction, main body and conclusion. However, developing a financial analysis on a company would be more challenging than writing a coursework on a generic topic. Our coursework writing services UK follow certain principles that includes:
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             {[
               "The coursework writing is critical",
               "Researched in extensive depth",
               "Follow logical structure therefore easy to read and follow",
-              "Structured by separate title, sub-title and bullet points",
+              "Structued by separate title, sub-title and bullet points",
               "Keep the reader interested in the style and topic",
             ].map((p, i) => (
               <div key={i} style={{ display: "flex", gap: "12px", alignItems: "center", background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px" }}>
@@ -313,11 +415,28 @@ export default function CourseworkWritingPage() {
         </div>
 
         {/* Coursework Writing According to University Style */}
-        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Coursework Writing According to University Style</h2>
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Coursework writing according to Your University Style</h2>
           <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
             Our coursework writing services are for students pursuing their higher education degree in the Australia, Canada, UK, USA and UAE. Students across the world, prefer Tutors India UK as the most trustable coursework writing as we offer coursework writing according to the University style.
           </p>
+        </div>
+
+        {/* What You Expect */}
+        <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>What You Expect when you order Coursework Writing Service</h2>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#e87722", marginBottom: "16px" }}>Get some of our Service features at Free of Costs</h3>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+            We Share references sourced for your dissertation in the form of PDFs, questionnaire or interview guide and primary research output without data at free of costs
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "14px" }} className="two-col-grid">
+            {freeServices.map(f => (
+              <div key={f.t} style={{ background: "#fff", border: "1px solid #f5d9bb", borderRadius: "8px", padding: "16px" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Service Features */}
@@ -337,16 +456,12 @@ export default function CourseworkWritingPage() {
           </p>
         </div>
 
-        {/* Free Services */}
-        <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>What You Expect When You Order Coursework Writing Service</h2>
-          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#e87722", marginBottom: "16px" }}>Get some of our Service features at Free of Costs</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
-            We Share references sourced for your dissertation in the form of PDFs, questionnaire or interview guide and primary research output without data at free of costs.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "14px" }} className="two-col-grid">
-            {freeServices.map(f => (
-              <div key={f.t} style={{ background: "#fff", border: "1px solid #f5d9bb", borderRadius: "8px", padding: "16px" }}>
+        {/* Key Features */}
+        <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Our Coursework Writing &amp; Editing Service Features</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
+            {features.map(f => (
+              <div key={f.t} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
                 <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
@@ -354,14 +469,17 @@ export default function CourseworkWritingPage() {
           </div>
         </div>
 
-        {/* Key Features */}
+        {/* As well as your order */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>UK Coursework Writing Service Features</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
-            {features.map(f => (
-              <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
-                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>As well as your order , you will also get the following</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            {[
+              "Your Dissertation is written by your choice of Subject Matter Expertise",
+              "We have a team of 2000+ expertise across the subjects & countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia & Ukraine)",
+            ].map((p, i) => (
+              <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start", background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px" }}>
+                <div style={{ width: "26px", height: "26px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.8rem", flexShrink: 0 }}>✓</div>
+                <span style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.65 }}>{p}</span>
               </div>
             ))}
           </div>
@@ -369,7 +487,7 @@ export default function CourseworkWritingPage() {
 
         {/* Additional Features */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Additional Features</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Our Additional Features</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
             <div>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Authenticated References</h3>
@@ -380,7 +498,7 @@ export default function CourseworkWritingPage() {
             <div>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Plagiarism Free</h3>
               <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "8px", fontSize: "0.9rem" }}>We ensure that the document is less than 5 or 0 percent of plagiarism. We correct all errors and infelicities in grammar, syntax, and usage. Rewrite any wordy or convoluted patch. Ask for or supply definitions of terms likely to be new to readers. Verify and revise any facts that are incorrect. Query or fix faulty organization and gaps in logic.</p>
-              <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "8px", fontSize: "0.9rem" }}>We edit or rewrite your complete Master's / Postgraduate dissertation and manuscript to ensure that your writing does represent your own assertions and abilities. Paraphrase the content using our own words. We re-read the original article, summarize, digest and explain through our own words.</p>
+              <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "8px", fontSize: "0.9rem" }}>We edit or rewrite your complete Master&apos;s / Postgraduate dissertation and manuscript to ensure that your writing does represent your own assertions and abilities. Paraphrase the content using our own words. We re-read the original article, summarize, digest and explain through our own words.</p>
               <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>We do this with much effort where the focus on content researched by different authors on the same topic and evaluate its limitations and strengths of their argument and rewrite the complete passage.</p>
             </div>
             <div>
@@ -393,7 +511,8 @@ export default function CourseworkWritingPage() {
 
         {/* Order Process */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>How to Order – 12-Step Process</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Order Process</h2>
+          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Have a look at what makes us the best in the business</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" }} className="three-col-grid">
             {orderSteps.map(s => (
               <div key={s.n} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "16px", display: "flex", gap: "12px" }}>
@@ -426,8 +545,8 @@ export default function CourseworkWritingPage() {
 
         {/* CTA */}
         <div style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", borderRadius: "12px", padding: "36px 28px", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#fff", marginBottom: "10px" }}>Order Now</h2>
-          <p style={{ color: "#c5d5f0", marginBottom: "20px", fontSize: "0.95rem" }}>Get expert coursework writing help from qualified UK &amp; US writers today</p>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#fff", marginBottom: "10px" }}>Invest in your Career</h2>
+          <p style={{ color: "#c5d5f0", marginBottom: "20px", fontSize: "0.95rem" }}>Place Your Order Today</p>
           <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "13px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
             <Link href="/contact-us/" style={{ padding: "13px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
