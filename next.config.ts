@@ -46,9 +46,10 @@ const nextConfig: NextConfig = {
         source: "/wp-content/:path*",
         destination: "https://www.tutorsindia.com/wp-content/:path*",
       },
+      // Blog images from guires.info — proxied to avoid hotlink protection
       {
         source: "/blog/wp-content/:path*",
-        destination: "https://www.tutorsindia.com/blog/wp-content/:path*",
+        destination: "https://guires.info/blog/wp-content/:path*",
       },
     ];
   },

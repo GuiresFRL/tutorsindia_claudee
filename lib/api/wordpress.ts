@@ -170,11 +170,17 @@ export async function getAllPostSlugs(): Promise<string[]> {
 
 /* ── Helper utilities ── */
 
+function proxyBlogImage(url: string | null | undefined): string | null {
+  if (!url) return null;
+  return url.replace("https://guires.info/blog/wp-content/", "/blog/wp-content/");
+}
+
 export function getFeaturedImage(post: WPPost): string | null {
   const media = post._embedded?.["wp:featuredmedia"]?.[0];
   if (!media) return null;
   const s = media.media_details?.sizes;
-  return s?.medium_large?.source_url ?? s?.medium?.source_url ?? s?.full?.source_url ?? media.source_url ?? null;
+  const raw = s?.medium_large?.source_url ?? s?.medium?.source_url ?? s?.full?.source_url ?? media.source_url ?? null;
+  return proxyBlogImage(raw);
 }
 
 export function getFeaturedImageAlt(post: WPPost): string {
