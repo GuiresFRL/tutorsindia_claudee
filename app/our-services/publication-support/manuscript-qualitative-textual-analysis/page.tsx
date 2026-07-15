@@ -157,7 +157,7 @@ export default function ManuscriptQualitativeTextualAnalysisPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               A substantial manuscript needs to have
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.8, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.8, margin: 0 }}>
               Ample Literature review, Appropriate Citations, Clear Introduction, Enough Research questions, Adequate Samples, Tables and Figures, Standard Methodology, Precise statistical analysis and Techniques, Clear Discussion concepts.
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function ManuscriptQualitativeTextualAnalysisPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Our Express Manuscript Statistical &amp; Text Analysis Service
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Find the solution within 4-6 hours&apos; quick turnaround solution. Tutors India has expertise in handling software like SPSS, SPSS AMOS, SAS, SYSTAT, R, STATA, Epi-Info, E-Views, Excel, etc.
             </p>
           </div>
@@ -204,7 +204,7 @@ export default function ManuscriptQualitativeTextualAnalysisPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
@@ -223,7 +223,7 @@ export default function ManuscriptQualitativeTextualAnalysisPage() {
           {features.map((f, i) => (
             <div key={f} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "16px 20px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
               <div style={{ width: "30px", height: "30px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.82rem", flexShrink: 0 }}>{i + 1}</div>
-              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.88rem", lineHeight: 1.5, paddingTop: "3px" }}>{f}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5, paddingTop: "3px" }}>{f}</span>
             </div>
           ))}
         </div>
@@ -233,7 +233,7 @@ export default function ManuscriptQualitativeTextualAnalysisPage() {
         </h2>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "48px" }}>
           {software.map(s => (
-            <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0e8", color: "#1a2a6c", padding: "7px 18px", borderRadius: "20px", fontSize: "0.88rem", fontWeight: 700 }}>{s}</span>
+            <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0e8", color: "#1a2a6c", padding: "7px 18px", borderRadius: "20px", fontSize: "0.94rem", fontWeight: 700 }}>{s}</span>
           ))}
         </div>
 
@@ -250,9 +250,9 @@ export default function ManuscriptQualitativeTextualAnalysisPage() {
             { n: "6", t: "SPSS Output in Appendix", d: "SPSS output pasted in Appendix as part of the free deliverables with every order." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.6, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -302,7 +302,7 @@ export default function ManuscriptQualitativeTextualAnalysisPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>

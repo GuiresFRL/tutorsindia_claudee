@@ -82,7 +82,7 @@ export default function ContactPage() {
               <div key={o.country} style={{ display: "flex", gap: "12px", padding: "12px 0", borderBottom: "1px solid var(--border)", alignItems: "center" }}>
                 <span style={{ width: "34px", height: "34px", borderRadius: "50%", background: "var(--light-blue)", color: "var(--navy)", fontSize: "0.72rem", fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{o.code}</span>
                 <div>
-                  <div style={{ fontWeight: 600, color: "var(--navy)", fontSize: "0.9rem" }}>{o.country}</div>
+                  <div style={{ fontWeight: 600, color: "var(--navy)", fontSize: "0.96rem" }}>{o.country}</div>
                   <div style={{ color: "var(--text-mid)", fontSize: "0.83rem" }}>{o.address}</div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 </li>
               ))}
             </ul>
-            <Link href="/order-now/" style={{ display: "inline-block", marginTop: "14px", padding: "9px 22px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.88rem" }}>
+            <Link href="/order-now/" style={{ display: "inline-block", marginTop: "14px", padding: "9px 22px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.94rem" }}>
               Order Now Directly →
             </Link>
           </div>
@@ -114,7 +114,7 @@ export default function ContactPage() {
         {/* Right: Form */}
         <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "12px", padding: "32px", boxShadow: "0 4px 16px rgba(0,0,0,0.05)" }}>
           <h2 style={{ fontSize: "1.3rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>Send Us Your Enquiry</h2>
-          <p style={{ color: "var(--text-mid)", fontSize: "0.88rem", marginBottom: "22px" }}>Fill in the form below and receive a free, customised quote within 30 minutes.</p>
+          <p style={{ color: "var(--text-mid)", fontSize: "0.94rem", marginBottom: "22px" }}>Fill in the form below and receive a free, customised quote within 30 minutes.</p>
           <ContactForm />
         </div>
       </section>
@@ -126,7 +126,7 @@ export default function ContactPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }} className="two-col-grid">
             {faqs.map((faq) => (
               <div key={faq.q} style={{ background: "#fff", borderRadius: "10px", padding: "20px", border: "1px solid var(--border)" }}>
-                <h4 style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px" }}>{faq.q}</h4>
+                <h4 style={{ fontSize: "0.96rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px" }}>{faq.q}</h4>
                 <p style={{ fontSize: "0.84rem", color: "var(--text-mid)", lineHeight: 1.65 }}>{faq.a}</p>
               </div>
             ))}

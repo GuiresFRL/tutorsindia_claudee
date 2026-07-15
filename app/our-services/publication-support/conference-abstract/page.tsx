@@ -296,13 +296,13 @@ export default function ConferenceAbstractPage() {
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }} className="two-col-grid">
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, marginBottom: "14px" }}>A complete secure &amp; Confidential Service</h2>
-            <p style={{ color: "#c5d5f0", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#c5d5f0", lineHeight: 1.8, fontSize: "0.96rem" }}>
               100% confidentiality of client's personal details, payment details, project works, and copyrights of research works. Documents accessed only by NDA-signed writers; 128-bit SSL encryption protects financial information.
             </p>
           </div>
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, marginBottom: "14px" }}>Fully Referenced</h2>
-            <p style={{ color: "#c5d5f0", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#c5d5f0", lineHeight: 1.8, fontSize: "0.96rem" }}>
               Our dissertation work is fully referenced with latest articles and textbooks. Only peer-reviewed sources used; databases include Web of Science and ProQuest.
             </p>
           </div>
@@ -327,7 +327,7 @@ export default function ConferenceAbstractPage() {
             ].map((g) => (
               <div key={g.title} style={{ background: "#fff", border: "1px solid #c5d5f0", borderRadius: "10px", padding: "20px", textAlign: "center" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{g.icon}</div>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.88rem" }}>{g.title}</div>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.94rem" }}>{g.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#555", lineHeight: 1.6 }}>{g.desc}</div>
               </div>
             ))}

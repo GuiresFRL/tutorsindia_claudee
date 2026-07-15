@@ -32,8 +32,8 @@ export default async function LatestResearchTrendsPage() {
             Stay up to date with the latest emerging research directions, methodologies, and innovations across all academic disciplines.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/future-research-directions/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Future Research Directions</Link>
-            <Link href="/topic/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Dissertation Topics</Link>
+            <Link href="/future-research-directions/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Future Research Directions</Link>
+            <Link href="/topic/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Dissertation Topics</Link>
           </div>
         </div>
       </section>

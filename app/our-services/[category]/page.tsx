@@ -122,7 +122,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
               ))}
             </div>
           </div>
-          <div style={{ background: "#fffbe6", borderLeft: "4px solid var(--orange)", padding: "14px 18px", borderRadius: "0 6px 6px 0", marginTop: "20px", fontSize: "0.88rem", color: "#555" }}>
+          <div style={{ background: "#fffbe6", borderLeft: "4px solid var(--orange)", padding: "14px 18px", borderRadius: "0 6px 6px 0", marginTop: "20px", fontSize: "0.94rem", color: "#555" }}>
             <strong style={{ color: "var(--orange-dark)" }}>Note:</strong> {cat.note}
           </div>
         </div>
@@ -163,7 +163,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
                 "Formatting and referencing included",
                 "Appendices at no additional cost",
               ].map((item) => (
-                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.88rem", color: "var(--text-mid)" }}>
+                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.94rem", color: "var(--text-mid)" }}>
                   <span style={{ color: "var(--orange)", fontWeight: 700 }}>✓</span> {item}
                 </li>
               ))}
@@ -181,7 +181,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
                 "NDA-signed and background-checked",
                 "24/7 availability across all time zones",
               ].map((item) => (
-                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.88rem", color: "#c5d5f0" }}>
+                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.94rem", color: "#c5d5f0" }}>
                   <span style={{ color: "#f9c74f" }}>→</span> {item}
                 </li>
               ))}

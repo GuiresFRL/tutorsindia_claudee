@@ -112,7 +112,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Journal Support at Tutors India helps to publish Your manuscript successfully
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               A good manuscript writing and Journal article writing not only requires a high quality research but also should be able to present your findings and conclusion precisely with adherence to extensive journal guidelines.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               A Trusted Journal Support Service
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               We are available 24/7 with evidence that we deliver what exactly you expect. A subject matter expertise from Tutors India would provide extensive support to prevent lapses in logic and ensure perfect, error-free and standard language.
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function PublicationSupportPage() {
               <Link key={s.slug} href={`/our-services/publication-support/${s.slug}/`} style={{ textDecoration: "none" }}>
                 <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${i % 3 === 0 ? "#1a2a6c" : i % 3 === 1 ? "#e87722" : "#2563b0"}`, height: "100%", cursor: "pointer", transition: "box-shadow 0.2s" }}>
                   <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{s.title}</h3>
-                  <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
+                  <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
                 </div>
               </Link>
             ))}
@@ -178,7 +178,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Your Choice of quantitative or qualitative or Triangulation methodologies
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               Choice of data collection depends on the research design (quantitative or qualitative design). We support Interviews, questionnaires, and secondary sources across all research designs.
             </p>
           </div>
@@ -186,7 +186,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Development of Questionnaire or Interview questions
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               At Tutors India, we assist you in developing questionnaire – Open ended, closed ended, Objective questionnaire, structured and unstructured questionnaire, focus group guide, interview guide for all your research work.
             </p>
           </div>
@@ -194,7 +194,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Get your Primary research Completed at an additional cost
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               Tutors India has exclusive custom data collection services to gather useful information in various domains, including telephone interviews, market surveys, and focus group discussion sessions.
             </p>
           </div>
@@ -202,7 +202,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Get some of our Service features at Free of Costs
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               References sourced for your Journal Paper in the form of PDFs, questionnaires, interview guides, formatting, referencing, and appendices are provided at free of costs.
             </p>
           </div>
@@ -210,7 +210,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Appendices or additional work at Free of Costs
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               We help you in a broad range of services from the selection of a dissertation topic to complete your PhD dissertation successfully. Free review and proofreading throughout the process.
             </p>
           </div>
@@ -218,7 +218,7 @@ export default function PublicationSupportPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Development of Questionnaire or Interview at a Free of costs
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               We develop questionnaire using scales, questions for interview guide, and focus group discussion at no additional cost with every journal paper order.
             </p>
           </div>
@@ -258,7 +258,7 @@ export default function PublicationSupportPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -273,19 +273,19 @@ export default function PublicationSupportPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
             <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #1a2a6c" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>Authenticated References</h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
                 Fully referenced and cited academically using style guides like Harvard and Chicago. All sources are peer-reviewed and authenticated.
               </p>
             </div>
             <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>Plagiarism Free</h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
                 We guarantee less than 5 or 0 percent of plagiarism with comprehensive editing. Every manuscript is scanned before delivery.
               </p>
             </div>
             <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #2563b0" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>Unlimited Revision Support with Quality Check &amp; Assurance</h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
                 We offer unlimited revisions absolutely free of cost with participatory research approach. Quality checks at every stage of the process.
               </p>
             </div>

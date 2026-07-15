@@ -135,7 +135,7 @@ export default function PhDResearchPlanPage() {
         {/* Writer Qualifications */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Your Dissertation Research Plan is written by qualified and experienced researchers from the US &amp; UK</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Our PhD dissertation writers have experience in research methodology, specific domain experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. You can have one-on-one coaching with a writer, statistician, research methodologist and editor.
           </p>
         </div>
@@ -143,10 +143,10 @@ export default function PhDResearchPlanPage() {
         {/* PhD & DBA Research Planning Overview */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>PhD &amp; DBA Research Planning Overview</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
             Obtaining a successfully PhD Degree is time consuming process as it would take a minimum of 3 years to maximum 6-8 years. Yet timeline depends on the various factors including supervisor, scope of the topic, methodology chosen (e.g. data collection) and university regulations. Therefore, there is a need to develop a PhD research plan with realistic goals that can be achieved in the given timeframe within the first year after registration. However, PhD Student / scholar must remember that the goal of the project and the work plan /schedule should be aligned between the PhD student and PhD supervisor (s).
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             PhD Research plan should be approximately 5-10 pages. At Tutors India we help to develop the research plan that would consists of research task, content oriented framework, time frame and scope of research work. We help you to present the research plan to the supervisor, followed by defended to an examination board and finally to the doctoral committee to the department.
           </p>
         </div>
@@ -157,23 +157,23 @@ export default function PhDResearchPlanPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px", marginBottom: "18px" }} className="two-col-grid">
             <div style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>Primary or Secondary Research</h3>
-              <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.7, margin: 0 }}>We deliver dissertation research proposal that utilized either primary or secondary research or using secondary research only. If you have given a choice of primary or secondary, we would strongly recommend primary than secondary, as it offers some insights on the originality. Although its time consuming, it is worth contributing something unknown to the research repository.</p>
+              <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.7, margin: 0 }}>We deliver dissertation research proposal that utilized either primary or secondary research or using secondary research only. If you have given a choice of primary or secondary, we would strongly recommend primary than secondary, as it offers some insights on the originality. Although its time consuming, it is worth contributing something unknown to the research repository.</p>
             </div>
             <div style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>Qualitative or Quantitative</h3>
-              <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.7, margin: 0 }}>We completely aware that courses vary in terms of research methodologies. Hence our subject matter expertise would advise choosing the right methodology based on the research questions and problem statement that you had identified, or they would enable to identify the right one for you.</p>
+              <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.7, margin: 0 }}>We completely aware that courses vary in terms of research methodologies. Hence our subject matter expertise would advise choosing the right methodology based on the research questions and problem statement that you had identified, or they would enable to identify the right one for you.</p>
             </div>
           </div>
           <div style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontWeight: 700, fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>Specific Dissertation Support</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.7, margin: 0 }}>Our dissertation proposal writing services also include economic research, operational research, coding &amp; algorithm, software development, programming, systematic review, meta-analysis as part of your dissertation requirement.</p>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.7, margin: 0 }}>Our dissertation proposal writing services also include economic research, operational research, coding &amp; algorithm, software development, programming, systematic review, meta-analysis as part of your dissertation requirement.</p>
           </div>
         </div>
 
         {/* Company Capability Statement */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>By Leveraging Tutors India Capability and Research Skills, ensure your career success</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             At Tutors India, in a very short time will help you refocus and prepare significant progress on your PhD Thesis. Till now we have completed more than 5000 PhD Thesis report and also supported for publication. We are at par than other PhD thesis writing services! We help you in writing your PhD dissertations and thesis by putting our top professional writers and researchers into work for you. When you are done with your degree or masters then you may have to write your dissertation or thesis to submit it successfully in order to get your PhD. We truly understand the importance of PhD dissertations and PhD thesis that is the essential paper for your doctorate as without completing the dissertation one cannot be a PhD holder. We have PhD and Master's holders in our batch of professionals who can guide you step by step in writing your PhD paper successfully. We not only spend time in piece of writing but also make sure that you can defend your paper without any problems. Right from selecting dissertation topic to phase of writing and understanding, our PhD professionals who are research advisors, post-doctoral fellows and M.D holding PhD with rich experience in research will guide you all the way to complete and defend your PhD dissertations successfully. You can be now confident as some of our writers are trained at Harvard School, London School of Business, and University of Birmingham.
           </p>
         </div>
@@ -181,14 +181,14 @@ export default function PhDResearchPlanPage() {
         {/* Professional Dissertation Writing */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>The Professional PhD Doctorate Dissertation Research Planning</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our Dissertation writing demonstrates the ability to communicate complex ideas critically, concisely, and clearly. Our professional dissertation writers have completed around 5000 PhD Dissertation successfully. We match your research interest along with the current state of knowledge and any recent debates. We format a research plan for your particular subject. Since it forms part of the assessment of your PhD application, we take utmost care to complete the proposal.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
             If you are unsure of what to do, avail our full or complete thesis writing.
           </p>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>PhD Research Plan is Simply easy &amp; Straightforward</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Our thesis and dissertation writing help guarantees that your dissertation is confidential, and so you do not have to worry about it. Just send us your dissertation topic along with the deadline and see the results that are far justified and mark the success of your dissertation.
           </p>
         </div>
@@ -213,13 +213,13 @@ export default function PhDResearchPlanPage() {
         {/* A Research Plan Covers */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>A PhD Doctorate Dissertation Research Planning Features</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "16px" }}>We follow according to the specific university guidelines across the United States, United Kingdom, Australia, and other Asian Universities.</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "16px" }}>We follow according to the specific university guidelines across the United States, United Kingdom, Australia, and other Asian Universities.</p>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>A research plan covers</h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {researchPlanComponents.map((item, i) => (
               <div key={i} style={{ display: "flex", gap: "14px", background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "14px" }}>
                 <div style={{ width: "30px", height: "30px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.82rem", flexShrink: 0, marginTop: "2px" }}>{i + 1}</div>
-                <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.7, margin: 0 }}>{item}</p>
+                <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.7, margin: 0 }}>{item}</p>
               </div>
             ))}
           </div>
@@ -228,7 +228,7 @@ export default function PhDResearchPlanPage() {
         {/* Committee Requirements */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>PhD Doctorate Dissertation Research Planning need to convince the Supervisory committee</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             We write complete PhD dissertation research plan from the introduction to recommendations including time planning. Though it looks very simple, it is a tedious task to complete each and every step. The steps involved in such tedious task. Namely identification of topic, reviewing the literature or literature review, problem statement, research question(s) and research hypothesis development, research design (sampling, measures, procedures and data collection), statistical analysis, (data analysis preparation, data entry and screening, interpretation), discussion, results, recommendation and conclusion.
           </p>
         </div>
@@ -236,15 +236,15 @@ export default function PhDResearchPlanPage() {
         {/* Deliverables */}
         <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our deliverables while you order custom PhD Doctorate Dissertation Research Planning Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
             Full Dissertation writing services from Tutors India research writing services is simply easy and straightforward. You will get the reply within 30 minutes which would enable to place your order quickly without any delay in submissions. We would provide executive summary /abstract, free articles used for writing the full dissertation, SPSS data sheet and output, questionnaire or semi-structured interview questions and any other information that we have used to write the dissertation such as reflective log or diary.
           </p>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>What We deliver while your order for PhD Research Planning</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
             We deliver more than your expectation – ensure to provider the proper context, delimit the boundary condition, cite landmark studies, accurately present the theoretical framework &amp; empirical contribution, stay focused on the research question, develop a coherent &amp; persuasive argument, a clear sense of direction, clear citation, APA or any other specific style.
           </p>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Free Offers along with your Master's part or chapter-wise Dissertation Writing Services</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             We deliver more than your expectation – Abstract or Executive Summary, Graphs &amp; Tables (redrawn), statistical analysis or textual analysis of data, SPSS / other software screen shots to ensure the process that we had carried out for doing the analyses Free Tutoring for the work being carried out – to speak confidently with your program supervisors &amp; SPSS output in Appendix.
           </p>
         </div>
@@ -252,7 +252,7 @@ export default function PhDResearchPlanPage() {
         {/* Service Distinctiveness */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our custom PhD Doctorate Dissertation Research Planning service is exclusive</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
             as we do not just provide dissertation writing service, but the rather clear explanation and justification for the choice.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
@@ -265,7 +265,7 @@ export default function PhDResearchPlanPage() {
               <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "12px" }}>
                 <div style={{ width: "32px", height: "32px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0, marginTop: "2px" }}>✓</div>
                 <div>
-                  <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
+                  <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
                   <p style={{ fontSize: "0.83rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
                 </div>
               </div>
@@ -322,7 +322,7 @@ export default function PhDResearchPlanPage() {
         {/* Guarantees */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Why Choose Tutors India: PhD Doctorate Dissertation Research Planning Service features</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Qualified researchers, unlimited revision, only peer-reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>Qualified researchers, unlimited revision, only peer-reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
             {[
               { t: "A complete secure & Confidential Service", d: "We offer 100% confidentiality of client's personal details, payment details, project works, and copyrights of research works. We ensure following for the conditionality, security & privacy: 1) All your projects are given unique reference codes 2) Documents are accessed only writers who signed NDA with Tutors India 3) Your financial information is protected b 128-bit secure socket layer (SSL) encryption." },
@@ -333,7 +333,7 @@ export default function PhDResearchPlanPage() {
               { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement. You can be very sure about the quality of the work since expert writer is identified as per International Research Experience" },
             ].map(f => (
               <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}
@@ -343,8 +343,8 @@ export default function PhDResearchPlanPage() {
         {/* Subject Expertise */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Your academic PowerPoint presentation is written by your choice of Subject Matter Expertise</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "8px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>Tutors India has capability and skills to handle subjects across the field. We chose qualified and experienced subject specific expertise while you order your Ph.D. or Master's dissertation. We have more than 2000+ expertise working across the world who can handle arts, literature, sciences, engineering or medicine.</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "8px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "14px" }}>Tutors India has capability and skills to handle subjects across the field. We chose qualified and experienced subject specific expertise while you order your Ph.D. or Master's dissertation. We have more than 2000+ expertise working across the world who can handle arts, literature, sciences, engineering or medicine.</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {subjects.map(s => (
               <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>

@@ -130,7 +130,7 @@ export default function CitationCompliancePage() {
           </p>
           <div className="four-col-grid">
             {citationStyles.map((s) => (
-              <div key={s} style={{ background: "#f0f4ff", borderRadius: 6, padding: "0.6rem 1rem", color: "#1a2a6c", fontWeight: 600, fontSize: "0.9rem", textAlign: "center" }}>{s}</div>
+              <div key={s} style={{ background: "#f0f4ff", borderRadius: 6, padding: "0.6rem 1rem", color: "#1a2a6c", fontWeight: 600, fontSize: "0.96rem", textAlign: "center" }}>{s}</div>
             ))}
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function CitationCompliancePage() {
           </p>
           <div className="four-col-grid">
             {subjectAreas.map((s) => (
-              <div key={s} style={{ background: "#f0f4ff", borderRadius: 6, padding: "0.75rem 1rem", color: "#1a2a6c", fontWeight: 500, fontSize: "0.9rem" }}>{s}</div>
+              <div key={s} style={{ background: "#f0f4ff", borderRadius: 6, padding: "0.75rem 1rem", color: "#1a2a6c", fontWeight: 500, fontSize: "0.96rem" }}>{s}</div>
             ))}
           </div>
           <div style={{ marginTop: "1.5rem" }}>

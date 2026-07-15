@@ -105,7 +105,7 @@ export default async function AcademyPage({ searchParams }: Props) {
               {activeCategory ? `No guides in "${activeCategory}"` : "Academy resources coming soon"}
             </h2>
             {activeCategory && (
-              <Link href="/academy/" style={{ display: "inline-block", marginTop: "10px", padding: "9px 22px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.88rem" }}>
+              <Link href="/academy/" style={{ display: "inline-block", marginTop: "10px", padding: "9px 22px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.94rem" }}>
                 View All Resources
               </Link>
             )}
@@ -208,8 +208,8 @@ export default async function AcademyPage({ searchParams }: Props) {
             </p>
           </div>
           <div className="blog-cta-buttons">
-            <Link href="/order-now/" style={{ padding: "10px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem", whiteSpace: "nowrap", display: "inline-block" }}>Order Now</Link>
-            <Link href="/contact-us/" style={{ padding: "10px 22px", border: "2px solid rgba(255,255,255,0.45)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem", whiteSpace: "nowrap", display: "inline-block" }}>Contact Us</Link>
+            <Link href="/order-now/" style={{ padding: "10px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem", whiteSpace: "nowrap", display: "inline-block" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "10px 22px", border: "2px solid rgba(255,255,255,0.45)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem", whiteSpace: "nowrap", display: "inline-block" }}>Contact Us</Link>
           </div>
         </div>
       </section>

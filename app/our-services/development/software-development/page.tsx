@@ -122,7 +122,7 @@ export default function SoftwareDevelopmentPage() {
           ].map((item) => (
             <li key={item} style={{ display: "flex", gap: "10px", background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px" }}>
               <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span>
-              <span style={{ fontSize: "0.9rem", color: "#444", lineHeight: 1.6 }}>{item}</span>
+              <span style={{ fontSize: "0.96rem", color: "#444", lineHeight: 1.6 }}>{item}</span>
             </li>
           ))}
         </ul>
@@ -175,7 +175,7 @@ export default function SoftwareDevelopmentPage() {
           ].map((t) => (
             <div key={t.tier} style={{ background: t.tier === "Advanced" ? "#1a2a6c" : "#fff", color: t.tier === "Advanced" ? "#fff" : "#333", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
               <div style={{ fontSize: "1.1rem", fontWeight: 800, color: t.tier === "Advanced" ? "#f9c74f" : "#e87722", marginBottom: "16px" }}>{t.tier}</div>
-              <p style={{ fontSize: "0.88rem", lineHeight: 1.7, color: t.tier === "Advanced" ? "#c5d5f0" : "#555" }}>{t.desc}</p>
+              <p style={{ fontSize: "0.94rem", lineHeight: 1.7, color: t.tier === "Advanced" ? "#c5d5f0" : "#555" }}>{t.desc}</p>
             </div>
           ))}
         </div>
@@ -199,7 +199,7 @@ export default function SoftwareDevelopmentPage() {
             ].map((item) => (
               <li key={item} style={{ display: "flex", gap: "10px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px" }}>
                 <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span>
-                <span style={{ fontSize: "0.9rem", color: "#444", lineHeight: 1.6 }}>{item}</span>
+                <span style={{ fontSize: "0.96rem", color: "#444", lineHeight: 1.6 }}>{item}</span>
               </li>
             ))}
           </ul>
@@ -291,7 +291,7 @@ export default function SoftwareDevelopmentPage() {
       <section style={{ background: "#1a2a6c", color: "#fff", padding: "56px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, marginBottom: "20px", textAlign: "center" }}>Why Choose Tutors India: software development Service features</h2>
-          <p style={{ color: "#a0b8e0", lineHeight: 1.8, textAlign: "center", marginBottom: "28px", fontSize: "0.9rem" }}>
+          <p style={{ color: "#a0b8e0", lineHeight: 1.8, textAlign: "center", marginBottom: "28px", fontSize: "0.96rem" }}>
             Qualified researchers, research methodology expertise, well experienced coders, developers, programmers capable of handling various software and many more, only peer-reviewed articles, Tutoring and clarification, Tables and Interpretation with proper formatting for print-ready analysis, plagiarism report, 24/7 support, timely Support, 100% match with the requirement and on time delivery.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "16px" }} className="four-col-grid">
@@ -321,13 +321,13 @@ export default function SoftwareDevelopmentPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "28px" }} className="two-col-grid">
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A complete secure &amp; Confidential Service</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               We offer 100% confidentiality of client&apos;s personal details, payment details, project works, and copyrights of research works. We ensure following for the conditionality, security &amp; privacy: 1) All your projects are given unique reference codes 2) Documents are accessed only writers who signed NDA with Tutors India 3) Your financial information is protected by 128-bit secure socket layer (SSL) encryption.
             </p>
           </div>
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Fully Referenced</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               Our dissertation work is fully referenced with latest articles and textbooks. We refer only peer-reviewed sources such as scholarly articles and textbook to select the topic. We refer database including Web of Science, ProQuest, Google Scholar, Business Source Complete, and latest newspapers articles such as Economic Times, Forbes, The Wall Street, The Economics to identify the industrial problem.
             </p>
           </div>
@@ -351,7 +351,7 @@ export default function SoftwareDevelopmentPage() {
             ].map((g) => (
               <div key={g.title} style={{ background: "#fff", border: "1px solid #c5d5f0", borderRadius: "10px", padding: "20px", textAlign: "center" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{g.icon}</div>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.88rem" }}>{g.title}</div>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.94rem" }}>{g.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#555", lineHeight: 1.6 }}>{g.desc}</div>
               </div>
             ))}

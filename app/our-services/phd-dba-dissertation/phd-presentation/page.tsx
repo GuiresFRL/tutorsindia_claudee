@@ -143,10 +143,10 @@ export default function PhDPresentationPage() {
         {/* Academic & Scientific Posters */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Academic &amp; Scientific Posters are done by the UK Poster experts</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Scientific &amp; Academic Poster presentation is academically sound, highlight the context of your work through maps, photographs, your methods and results in the forms of charts, tables, graphs and photographs.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             We offer poster presentation service to the students to support dissertation, assignment or any other research.
           </p>
         </div>
@@ -154,13 +154,13 @@ export default function PhDPresentationPage() {
         {/* At Tutors India we assist for poster preparation */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>At Tutors India, we assist for poster preparation</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Presenting an effective poster presentation is a significant phase in your major research paper as it is an advertisement of your hard work.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Poster presentations need to be self-explanatory or theme based to relate to the research subject or it's just an illustrated abstract.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             The presentation needs to create a critical discussion among colleagues and your professors.
           </p>
         </div>
@@ -168,35 +168,35 @@ export default function PhDPresentationPage() {
         {/* We make an impact */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>We make an impact through our exclusive power point presentation service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>Producing effective presentations is significant for a Ph.D. submission to be successful.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>An excellent presentation creates a high impact on your efforts in front of your internal or external committee.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>Tutors India develops world class PowerPoint presentations for Ph.D. scholars, especially for Viva Voce / Interim report presentation.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>We can help you to translate your 200-250 pages of the thesis into one single and effective PowerPoint presentation.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>PowerPoint presentations can range from engineering PPT or Science Ph.D. thesis for Viva Voce interim submission.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>This will have a huge reference in your Ph.D. external and internal committee reports.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>Our academic writers have the capability to write and design a good PPT.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>Our team ensures that the content is readable from about 10 feet away, the title is short and draws interest to the readers, restricted word count, clear text and to the point, with more of bullets, numbering, and headlines, and effective use of graphs, fonts, colors and clear layout.</p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>The power point also includes your name, institutional affiliation and acknowledgment.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>Producing effective presentations is significant for a Ph.D. submission to be successful.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>An excellent presentation creates a high impact on your efforts in front of your internal or external committee.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>Tutors India develops world class PowerPoint presentations for Ph.D. scholars, especially for Viva Voce / Interim report presentation.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>We can help you to translate your 200-250 pages of the thesis into one single and effective PowerPoint presentation.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>PowerPoint presentations can range from engineering PPT or Science Ph.D. thesis for Viva Voce interim submission.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>This will have a huge reference in your Ph.D. external and internal committee reports.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>Our academic writers have the capability to write and design a good PPT.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>Our team ensures that the content is readable from about 10 feet away, the title is short and draws interest to the readers, restricted word count, clear text and to the point, with more of bullets, numbering, and headlines, and effective use of graphs, fonts, colors and clear layout.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>The power point also includes your name, institutional affiliation and acknowledgment.</p>
         </div>
 
         {/* Best spoke PowerPoint + Academic Help + Straightforward */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Best spoke PowerPoint – Power Presentation for Academic Conferences</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
             Our Poster Presentation services encourage clarity, creativity, and ability to stand on its own as a clear, logical presentation of your work, without any explanation from you.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Academic PowerPoint Presentation Help the UK</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Tutors India ensures to add enough additional values as much as possible for the poster presentation to be successful.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
             It ensures that the scholar gets best high grades.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Our Academic &amp; Scientific Power Point Presentation Service is Simply easy &amp; Straightforward</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our poster presentation help guarantees that the poster designed (Poster designing service, Presentation writing service) would capable of exchanging ideas between the audience and the presenter.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             All our posters are rechecked for plagiarism and linguistic mistakes, thus ensure that our work is unique and matchless.
           </p>
         </div>
@@ -242,18 +242,18 @@ export default function PhDPresentationPage() {
         {/* Our PowerPoint Presentation Service + How does it work + Poster Presentation Service */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Our PowerPoint Presentation Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
             We focus on clarity of content, create visual interest and accessibility.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Academic PowerPoint Presentation Service – How does it work</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             We will share you the work in drafts of speech or writing, along with your poster services.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
             By this way, you will get an opportunity to review the poster and share your feedback, where our UK writers will do the amendment as per your request.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Our Poster Presentation Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             We focus on clarity of content, create visual interest and accessibility.
           </p>
         </div>
@@ -261,7 +261,7 @@ export default function PhDPresentationPage() {
         {/* Poster Content */}
         <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Our Free deliverables while you order for academic power point presentation service UK</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "1rem" }}>
             Specific sources, models, graphs, charts, images, referencing with required style, plagiarism scanning, and unlimited revisions.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "12px" }} className="three-col-grid">
@@ -323,7 +323,7 @@ export default function PhDPresentationPage() {
         {/* Guarantees */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Why Choose Tutors India: Scientific &amp; Academic Poster Presentation Service features</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "1rem" }}>
             We follow according to the specific university guidelines across the United States, United Kingdom, Australia, and other Asian Universities.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
@@ -336,7 +336,7 @@ export default function PhDPresentationPage() {
               { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
             ].map(f => (
               <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}
@@ -346,7 +346,7 @@ export default function PhDPresentationPage() {
         {/* Subject Expertise */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Your academic PowerPoint presentation is written by your choice of Subject Matter Expertise</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>Specialized Subject Matter Expertise across the globe</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "14px" }}>Specialized Subject Matter Expertise across the globe</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {subjects.map(s => (
               <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>

@@ -579,7 +579,7 @@ export default function DissertationPartPage() {
                 >
                   {card.title}
                 </h4>
-                <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "#555" }}>{card.body}</p>
+                <p style={{ fontSize: "0.96rem", lineHeight: 1.7, color: "#555" }}>{card.body}</p>
               </div>
             ))}
           </div>
@@ -680,7 +680,7 @@ export default function DissertationPartPage() {
                   border: "1px solid rgba(255,255,255,0.3)",
                   borderRadius: 20,
                   padding: "6px 16px",
-                  fontSize: "0.88rem",
+                  fontSize: "0.94rem",
                 }}
               >
                 {s}

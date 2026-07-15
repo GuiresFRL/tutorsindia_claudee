@@ -79,7 +79,7 @@ export default function QualityProceduresPage() {
             <div key={s.num} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "28px", position: "relative" }}>
               <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "#e8f0ff", fontFamily: "Merriweather,serif", marginBottom: "8px" }}>{s.num}</div>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{s.title}</h3>
-              <p style={{ fontSize: "0.9rem", color: "#555", lineHeight: 1.7 }}>{s.desc}</p>
+              <p style={{ fontSize: "0.96rem", color: "#555", lineHeight: 1.7 }}>{s.desc}</p>
             </div>
           ))}
         </div>
@@ -115,7 +115,7 @@ export default function QualityProceduresPage() {
 
         <div style={{ background: "#f0f4ff", borderRadius: "10px", padding: "32px", textAlign: "center" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>Ready to Experience Our Quality?</h2>
-          <p style={{ color: "#555", marginBottom: "20px", fontSize: "0.9rem" }}>Place your order today and see why over 200,000 scholars trust Tutors India.</p>
+          <p style={{ color: "#555", marginBottom: "20px", fontSize: "0.96rem" }}>Place your order today and see why over 200,000 scholars trust Tutors India.</p>
           <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
             <Link href="/guarantees/" style={{ padding: "10px 24px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600 }}>Our Guarantees</Link>
@@ -126,7 +126,7 @@ export default function QualityProceduresPage() {
 
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

@@ -152,7 +152,7 @@ export default function ExamNotesPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Your Exam Notes is written by qualified and experienced researchers from the US &amp; UK
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our Exam Notes writers have experience in specific domain experience, aware of theories of learning and educational degrees from international and top-ranked universities from India, the US, and the UK.
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function ExamNotesPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Our UK Exam Notes Writing Service
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our specific UK Exam Notes writing demonstrates the succinct writing, critical analysis, and information literacy.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function ExamNotesPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
@@ -222,7 +222,7 @@ export default function ExamNotesPage() {
           {features.map(f => (
             <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
               <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>{f.icon}</span>
-              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.88rem", lineHeight: 1.5 }}>{f.title}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5 }}>{f.title}</span>
             </div>
           ))}
         </div>
@@ -240,9 +240,9 @@ export default function ExamNotesPage() {
             { n: "3", t: "Customer Interaction", d: "Our exclusive coordinators would get in touch with you to clarify any queries throughout the process." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -271,7 +271,7 @@ export default function ExamNotesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Get Some of Our Service Features at Free of Costs
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 We Share references sourced for your exam notes in the form of PDFs, questionnaire or interview guide and primary research output without data at free of costs.
               </p>
             </div>
@@ -279,7 +279,7 @@ export default function ExamNotesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Summarizing into Distilled Keywords &amp; Phrases
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 Our team summarize notes into distilled keywords and phrases, create visual aids like charts and mind maps for key concepts, prepare revision notes and past exam paper summaries, targeting specific models, theories, and frameworks.
               </p>
             </div>
@@ -287,7 +287,7 @@ export default function ExamNotesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Our Exam Notes Writing Service is Exclusive
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 We do not just provide notes, but rather clear explanation and justification for the content written. Our exam notes writing service is simply easy and straightforward. You will get the reply within 30 minutes.
               </p>
             </div>
@@ -328,7 +328,7 @@ export default function ExamNotesPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -353,7 +353,7 @@ export default function ExamNotesPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
           </p>
         </div>

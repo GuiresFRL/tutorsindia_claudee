@@ -30,8 +30,8 @@ export default async function EssaysPage() {
             Browse essay samples written by our expert academics to demonstrate proper structure, research methods, and citation styles. Use them as a learning aid for your studies.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Get Essay Help</Link>
-            <Link href="/our-sample-works/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>View Sample Works</Link>
+            <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Get Essay Help</Link>
+            <Link href="/our-sample-works/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>View Sample Works</Link>
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default async function EssaysPage() {
                   <div style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "8px" }}>
                     <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>📄</span>
                     <h3
-                      style={{ fontFamily: "Merriweather,serif", fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }}
+                      style={{ fontFamily: "Merriweather,serif", fontSize: "0.94rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }}
                       dangerouslySetInnerHTML={{ __html: s.title.rendered }}
                     />
                   </div>
@@ -94,11 +94,11 @@ export default async function EssaysPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px" }}>
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "6px" }}>Essay Writing Service</h2>
-            <p style={{ color: "#555", fontSize: "0.9rem", maxWidth: "560px" }}>Need a custom essay? Our expert writers craft original, plagiarism-free essays tailored to your subject, level, and deadline.</p>
+            <p style={{ color: "#555", fontSize: "0.96rem", maxWidth: "560px" }}>Need a custom essay? Our expert writers craft original, plagiarism-free essays tailored to your subject, level, and deadline.</p>
           </div>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/our-services/coursework-writing/essay-writing-services/" style={{ padding: "11px 24px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Essay Writing Service</Link>
-            <Link href="/order-now/" style={{ padding: "11px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Order Now</Link>
+            <Link href="/our-services/coursework-writing/essay-writing-services/" style={{ padding: "11px 24px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Essay Writing Service</Link>
+            <Link href="/order-now/" style={{ padding: "11px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Order Now</Link>
           </div>
         </div>
       </section>

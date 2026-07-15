@@ -59,7 +59,7 @@ export default function AskAnExpertPage() {
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", color: "#1a2a6c", marginBottom: "8px" }}>
           Browse by Subject
         </h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px" }}>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px" }}>
           Select a subject to browse expert answers in that area
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "18px" }}>

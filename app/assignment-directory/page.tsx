@@ -152,7 +152,7 @@ export default function AssignmentDirectoryPage() {
             </Link>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))", gap: "10px" }}>
               {cat.services.map((s) => (
-                <Link key={s.href} href={s.href} style={{ padding: "10px 14px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "6px", fontSize: "0.88rem", color: "#333", textDecoration: "none", display: "block" }}>
+                <Link key={s.href} href={s.href} style={{ padding: "10px 14px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "6px", fontSize: "0.94rem", color: "#333", textDecoration: "none", display: "block" }}>
                   {s.label}
                 </Link>
               ))}
@@ -173,7 +173,7 @@ export default function AssignmentDirectoryPage() {
 
         <div style={{ background: "#f0f4ff", borderRadius: "10px", padding: "32px", textAlign: "center", marginTop: "32px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>Can't Find What You Need?</h2>
-          <p style={{ color: "#555", marginBottom: "20px", fontSize: "0.9rem" }}>Contact us — we support a wide range of academic tasks across all levels and disciplines.</p>
+          <p style={{ color: "#555", marginBottom: "20px", fontSize: "0.96rem" }}>Contact us — we support a wide range of academic tasks across all levels and disciplines.</p>
           <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
             <Link href="/contact-us/" style={{ padding: "10px 24px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
@@ -183,7 +183,7 @@ export default function AssignmentDirectoryPage() {
 
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

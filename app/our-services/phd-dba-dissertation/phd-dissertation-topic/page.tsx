@@ -126,7 +126,7 @@ export default function PhDDissertationTopicPage() {
         {/* We Select Ph.D. level Topic */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>We Select Ph.D. level Topic for your UK dissertation</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Are you looking for unique, innovative &amp; convincing Ph.D. dissertation topic based on the strong research gap substantiated with the latest review? Would you like to assess feasibility of the proposed research topic or want to conduct some brainstorming session about your PhD dissertation topic selection?
           </p>
         </div>
@@ -169,10 +169,10 @@ export default function PhDDissertationTopicPage() {
         {/* Special Offer */}
         <div style={{ background: "linear-gradient(135deg,#e87722 0%,#f0a040 100%)", borderRadius: "12px", padding: "24px 28px", marginBottom: "28px", color: "#fff" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, marginBottom: "12px" }}>Special Offer</h2>
-          <p style={{ fontSize: "0.94rem", lineHeight: 1.8, marginBottom: "8px" }}>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, marginBottom: "8px" }}>
             <strong>Free:</strong> Order a dissertation proposal, receive complimentary dissertation topic &amp; outline – Use Promo code: <strong>PHDTOPICPROP</strong>
           </p>
-          <p style={{ fontSize: "0.94rem", lineHeight: 1.8 }}>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8 }}>
             <strong>Discounts:</strong> Purchase proposal and get equivalent amount discounted on full dissertation – Promo Code: <strong>PHDPROPDISS</strong>
           </p>
         </div>
@@ -199,7 +199,7 @@ export default function PhDDissertationTopicPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" }} className="three-col-grid">
             {deliverables.map(d => (
               <div key={d} style={{ background: "#fff", border: "1px solid #f5d9bb", borderRadius: "10px", padding: "16px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
-                <div style={{ width: "28px", height: "28px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>✓</div>
+                <div style={{ width: "28px", height: "28px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>✓</div>
                 <span style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.6 }}>{d}</span>
               </div>
             ))}
@@ -237,7 +237,7 @@ export default function PhDDissertationTopicPage() {
               },
             ].map(f => (
               <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}

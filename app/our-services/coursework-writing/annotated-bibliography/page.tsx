@@ -119,7 +119,7 @@ export default function AnnotatedBibliographyPage() {
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Your Annotated Bibliography is written by qualified and experienced researchers from the US &amp; UK</h2>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#e87722", marginBottom: "10px" }}>Our Annotated Bibliography writers have experience in research methodology</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Our Annotated Bibliography writers have experience in research methodology, specific domain experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. The team has the capability to deliver a brief and a reflective note about each item around 150 words.
           </p>
         </div>
@@ -127,14 +127,14 @@ export default function AnnotatedBibliographyPage() {
         {/* Central to Research Process */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>UK Annotated Bibliography Writing Service – Central to the Research Process</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "1rem" }}>
             Annotated Bibliography accounts all the research being done on a given topic that would be listed in alphabetical order. Depending on the requirement, it either goes to large part of the dissertation, or it may be an independent piece of work. However, writing an annotated bibliography is a daunting task as before your start this part of the research, you need to undertake several activities. Firstly, you need to define the scope of work which would in turn help to identify what to include and exclude. Secondly, you need to see whether bibliography is part of research or independent piece of research? Thirdly, you need to develop sub-questions based on your main research questions. Fourthly, you should decide on whether you required journal articles or academic books or policy statement or government reports to write your annotated bibliography. Therefore, the student needs to step into all phases and skipping any step would significantly affect the quality of work.
           </p>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#e87722", marginBottom: "10px" }}>Tutors India specialized in undertaking Annotated Bibliography Services</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Tutors India specialized in undertaking Annotated Bibliography Services, as being a pioneer in doing a literature review, you can be assured of high-quality work in AB service as well. We ensure that the annotation would inform the reader of the relevance, quality of the sources, accuracy and more importantly we use both descriptive and critical expressions while writing AB for you.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             At Tutors India, we follow strict plagiarism policy while writing an annotated bibliography for university and post-graduate level work. To ensure plagiarism free work, we write the work using own words /sentence and offer clear references for any quotations or substantial borrowings of facts or ideas. We provide an Annotated Bibliography writing for Psychology, English Essays writing, and Marketing Annotated Bibliography, chemistry Annotated Bibliography, science Annotated Bibliography, Public health Annotated Bibliography, performance management Annotated Bibliography, social work Annotated Bibliography, accounting, human resource management Annotated Bibliography and others. For if we need to write law-related AB, then our writers would look in a wide range of the law collections including case law, legislation, textbooks, journals, Halsbury&apos;s law of England, FINDit database, LexisLibrary, Westlaw, Lawtel, and Europa. We write Annotated Bibliography from a GCSE level Annotated Bibliography to a Ph.D. level model, at affordable rates including planning, statistical analysis, proofreading and critiquing.
           </p>
         </div>
@@ -172,7 +172,7 @@ export default function AnnotatedBibliographyPage() {
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our UK Annotated Bibliography Writing Service only chose materials that are highly relevant to the topic</h2>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#e87722", marginBottom: "10px" }}>Our specific UK Annotated Bibliography writing demonstrates the succinct writing</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Our Annotated Bibliography writing help guarantees that your Annotated Bibliography is confidential, and so you do not have to worry about it. Just send us your topic along with the deadline and see the results that are far justified and mark the success of your Annotated Bibliography.
           </p>
         </div>
@@ -181,7 +181,7 @@ export default function AnnotatedBibliographyPage() {
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>UK Annotated Bibliography Writing follows specific rubric scale</h2>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#e87722", marginBottom: "10px" }}>Our Annotated Bibliography writing demonstrates the ability to communicate complex ideas</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Our Annotated Bibliography writing demonstrates the ability to communicate complex ideas critically, concisely, and clearly.
           </p>
         </div>
@@ -190,14 +190,14 @@ export default function AnnotatedBibliographyPage() {
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Annotated Bibliography Writing Service is Simply easy &amp; Straightforward</h2>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#e87722", marginBottom: "12px" }}>Annotated Bibliography Writing Service is Simply easy &amp; Straightforward</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "1rem" }}>
             Our annotated bibliography writing service supports all major citation formats as required by your university. We ensure annotations include an explanation to show that you have read and understood the source thoroughly and critically comment on the usefulness, effectiveness, and worth of the work.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
             {["American Psychological Association (APA)", "Modern Language Association (MLA)", "Chicago"].map(f => (
               <div key={f} style={{ background: "#fff", border: "1px solid #c5d0ea", borderRadius: "8px", padding: "12px 20px", display: "flex", gap: "10px", alignItems: "center" }}>
                 <div style={{ width: "24px", height: "24px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.75rem", flexShrink: 0 }}>✓</div>
-                <span style={{ fontSize: "0.88rem", color: "#1a2a6c", fontWeight: 600 }}>{f}</span>
+                <span style={{ fontSize: "0.94rem", color: "#1a2a6c", fontWeight: 600 }}>{f}</span>
               </div>
             ))}
           </div>
@@ -223,7 +223,7 @@ export default function AnnotatedBibliographyPage() {
         {/* Specialized Subject Matter Expertise */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Specialized Subject Matter Expertise across the globe</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "14px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {subjects.map(s => (
               <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>
@@ -244,7 +244,7 @@ export default function AnnotatedBibliographyPage() {
             ].map((item, i) => (
               <div key={i} style={{ display: "flex", gap: "12px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "8px", padding: "12px 16px", alignItems: "center" }}>
                 <div style={{ width: "26px", height: "26px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.8rem", flexShrink: 0 }}>✓</div>
-                <span style={{ fontSize: "0.88rem", color: "#555" }}>{item}</span>
+                <span style={{ fontSize: "0.94rem", color: "#555" }}>{item}</span>
               </div>
             ))}
           </div>
@@ -282,7 +282,7 @@ export default function AnnotatedBibliographyPage() {
               { t: "Plagiarism Free", d: "All annotated bibliographies are written using own words, scanned against Turnitin/WriteCheck, and delivered with a plagiarism-free certificate." },
             ].map(f => (
               <div key={f.t} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}
@@ -292,7 +292,7 @@ export default function AnnotatedBibliographyPage() {
         {/* Needs to convince the supervisor */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>UK Annotated Bibliography Writing needs to convince the supervisor</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             We write a complete Annotated Bibliography including time planning. Though it looks very simple, it is a tedious task to complete each and every step.
           </p>
         </div>
@@ -300,7 +300,7 @@ export default function AnnotatedBibliographyPage() {
         {/* What We deliver */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>What We deliver while your order for UK Annotated Bibliography writing</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             We deliver more than your expectation – ensure to provider the proper context, delimit the boundary condition, cite landmark studies, accurately present the theoretical framework &amp; empirical contribution, stay focused on the research question, develop a coherent &amp; persuasive argument, a clear sense of direction, clear citation, APA or any other specific style.
           </p>
         </div>
@@ -308,7 +308,7 @@ export default function AnnotatedBibliographyPage() {
         {/* Our custom service is exclusive */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our custom UK Annotated Bibliography writing service is exclusive</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             as we do not just provide chapter-wise dissertation writing service, but the rather clear explanation and justification for the choice.
           </p>
         </div>
@@ -316,7 +316,7 @@ export default function AnnotatedBibliographyPage() {
         {/* Why Choose Tutors India */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Why Choose Tutors India: Annotated Bibliography Writing features</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "1rem" }}>
             Qualified researchers, unlimited revision, only peer-reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.
           </p>
 
@@ -331,7 +331,7 @@ export default function AnnotatedBibliographyPage() {
               { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
             ].map(f => (
               <div key={f.t} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}
@@ -347,7 +347,7 @@ export default function AnnotatedBibliographyPage() {
         {/* Subject Matter Expertise by choice */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Your Annotated Bibliography is written by your choice of Subject Matter Expertise</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "14px" }}>We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {subjects.map(s => (
               <span key={s} style={{ background: "#fff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>

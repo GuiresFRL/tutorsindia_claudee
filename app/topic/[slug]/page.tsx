@@ -65,7 +65,7 @@ export default async function TopicDetailPage({ params }: Props) {
 
         {/* Nav */}
         <div style={{ marginTop: "36px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-          <Link href="/topic/" style={{ fontSize: "0.88rem", color: "#2563b0", fontWeight: 600 }}>← All Dissertation Topics</Link>
+          <Link href="/topic/" style={{ fontSize: "0.94rem", color: "#2563b0", fontWeight: 600 }}>← All Dissertation Topics</Link>
           <div style={{ display: "flex", gap: "10px" }}>
             <Link href="/order-now/" style={{ padding: "9px 20px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.87rem" }}>Order Now</Link>
             <Link href="/contact-us/" style={{ padding: "9px 20px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600, fontSize: "0.87rem" }}>Contact Us</Link>

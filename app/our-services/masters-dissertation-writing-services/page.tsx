@@ -127,7 +127,7 @@ export default function MastersDissertationPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Why Tutors India for Master&apos;s Dissertation Writing Services?
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their dissertation successfully.
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function MastersDissertationPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               UK Master&apos;s Dissertation at Tutors India helps to complete your degree successfully
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               We just not provide writing assistance but also Tutoring — we tutor you at every stage on how we proceeded with the dissertation along with the keywords strategy used.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function MastersDissertationPage() {
             {services.map(s => (
               <Link key={s.title} href={s.href} style={{ background: "#fff", borderRadius: "10px", padding: "24px", textDecoration: "none", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: "4px solid #1a2a6c", display: "block" }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{s.title}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7 }}>{s.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7 }}>{s.desc}</p>
               </Link>
             ))}
           </div>
@@ -193,7 +193,7 @@ export default function MastersDissertationPage() {
           {features.map(f => (
             <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
               <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>{f.icon}</span>
-              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.88rem", lineHeight: 1.5 }}>{f.title}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5 }}>{f.title}</span>
             </div>
           ))}
         </div>
@@ -224,7 +224,7 @@ export default function MastersDissertationPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Get Some of Our Service Features at Free of Costs
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 We Share references sourced for your dissertation in the form of PDFs, questionnaire or interview guide and primary research output without data at free of costs.
               </p>
             </div>
@@ -232,7 +232,7 @@ export default function MastersDissertationPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Get your Primary Research Completed at an Additional Cost
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 Tutors India has exclusive custom data collection services to gather useful information in various domains. We make sure the research work needs to be ethical with primary data, needs to be original with novelty. The choice of research method to use depends on many factors, such as the number of respondents, data collection time frame, and the characteristics of the population under investigation.
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function MastersDissertationPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Appendices or Additional Work at Free of Costs
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 The dissertation writing not only involves the collection of data required for the analysis but also involves additional material to support the findings. Appendix involves supportive materials that includes data, audio, video, hi-resolution images. We will help you to provide those supplementary materials as free and present in the order in which they are introduced in the text (Appendix A, Appendix B, etc.).
               </p>
             </div>
@@ -248,7 +248,7 @@ export default function MastersDissertationPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Development of Questionnaire or Interview Questions
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 At Tutors India, we assist you in developing questionnaire — Open ended, closed ended, Objective questionnaire, structured and unstructured questionnaire, focus group guide, interview guide for all your research work. Response categories of questionnaire include Use of Likert Scale, Category proliferation, Ranking, etc.
               </p>
             </div>
@@ -273,7 +273,7 @@ export default function MastersDissertationPage() {
               <span key={s} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem" }}>{s}</span>
             ))}
           </div>
-          <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "20px" }}>
+          <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "20px" }}>
             As well as your order, you will also get the following
           </p>
           <Link href="/our-writers/" style={{ color: "#f9c74f", fontWeight: 600, fontSize: "0.95rem" }}>Meet Our Writers →</Link>
@@ -289,7 +289,7 @@ export default function MastersDissertationPage() {
           {additionalFeatures.map(f => (
             <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.title}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7 }}>{f.desc}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7 }}>{f.desc}</p>
             </div>
           ))}
         </div>
@@ -314,7 +314,7 @@ export default function MastersDissertationPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Since we deliver the research work, and there is a possibility that research can be viewed in different direction, we offer unlimited revision support for the concept being accepted.
           </p>
         </div>

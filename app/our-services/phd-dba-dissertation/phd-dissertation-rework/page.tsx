@@ -175,7 +175,7 @@ export default function PhDDissertationReworkPage() {
         {/* Qualified Writers */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Your Resit Dissertation is written by qualified and experienced researchers from the UK</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our dissertation writers have experience in handling students who faced rejection for their dissertation. Our dissertation team consists of a subject-specific writer with industry experience, statisticians, research methodology expertise, editors and proofreaders with educational degrees from international and top-ranked universities from India, the US, and the UK.
           </p>
         </div>
@@ -183,11 +183,11 @@ export default function PhDDissertationReworkPage() {
         {/* Resitting intro */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Resitting or resubmitting the UK Master's Dissertation</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Resitting a master's dissertation with perfection is not an easy task. Even excellent students need to resit their dissertations for various inevitable reasons. It puts a lot of pressure on the scholars as the dissertation is the prime factor in deciding their future. The most common cause for resitting dissertation is that the research is not sufficiently comprehensive or valid.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px", marginTop: "18px" }}>Tutors India for your Ph.D. dissertation resubmission or rework help</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Doing a dissertation Resit requires a thorough understanding of your previous research work done and the subsequent feedback that was given for that work. Tutors India is a legitimate Dissertation service for students who want to do a Dissertation Rework based on the specific University Guidelines.
           </p>
         </div>
@@ -205,11 +205,11 @@ export default function PhDDissertationReworkPage() {
         {/* Complete Resit + Straightforward */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Complete Resit Ph.D. Dissertation rewriting Help UK</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "16px", fontSize: "1rem" }}>
             Tutors India ensures to add enough additional values as much as possible for the resit dissertation to be successful. It ensures that the scholar gets best high grades. We confirm that the value addition is comprehensive and chapter wise, and each stage is handled with utmost care.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>PhD Resit Dissertation Writing is Simply easy &amp; Straightforward</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Our thesis and dissertation writing help guarantees that your dissertation is confidential, and so you do not have to worry about it. Just send us your original dissertation along with any support materials, the list of references, the feedback for the changes or supervisor comments, your comments if any, and finally the deadline for submission.
           </p>
         </div>
@@ -304,10 +304,10 @@ export default function PhDDissertationReworkPage() {
         {/* Deliverables */}
         <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Deliverables</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             UK Resit Dissertation writing services from Tutors India research writing services is simply easy and straightforward. You will get the reply within 30 minutes which would enable to place your order quickly without any delay in submissions. We would provide executive summary /abstract, free articles used for writing the full dissertation, SPSS data sheet and output, questionnaire or semi-structured interview questions and any other information that we have used to write the dissertation such as reflective log or diary.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem", marginTop: "12px" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem", marginTop: "12px" }}>
             We deliver more than your expectation –Abstract or Executive Summary, Graphs &amp; Tables (redrawn), statistical analysis or textual analysis of data, SPSS / other software screen shots to ensure the process that we had carried out for doing the analyses Free Tutoring for the work being carried out – to speak confidently with your program supervisors &amp; SPSS output in Appendix.
           </p>
         </div>
@@ -343,7 +343,7 @@ export default function PhDDissertationReworkPage() {
               { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
             ].map(f => (
               <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}

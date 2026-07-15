@@ -182,7 +182,7 @@ export default function DissertationProposalPage() {
                 <div style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700 }}>{t.title}</div>
               </div>
               <div style={{ padding: "20px 24px" }}>
-                <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>{t.desc}</p>
               </div>
             </div>
           ))}
@@ -191,7 +191,7 @@ export default function DissertationProposalPage() {
         {/* Editing Types */}
         <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "16px" }}>Type of Editing</h3>
         <div style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.94rem" }}>
             <thead>
               <tr style={{ background: "#1a2a6c", color: "#fff" }}>
                 {editingTypes.map(e => (
@@ -371,7 +371,7 @@ export default function DissertationProposalPage() {
               { label: "Statistical Analysis", href: "/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/" },
               { label: "CV Writing", href: "/our-services/masters-dissertation-writing-services/cv-writing/" },
             ].map(s => (
-              <Link key={s.label} href={s.href} style={{ padding: "10px 22px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "5px", color: "#1a2a6c", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>{s.label}</Link>
+              <Link key={s.label} href={s.href} style={{ padding: "10px 22px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "5px", color: "#1a2a6c", fontWeight: 600, fontSize: "0.96rem", textDecoration: "none" }}>{s.label}</Link>
             ))}
           </div>
         </div>

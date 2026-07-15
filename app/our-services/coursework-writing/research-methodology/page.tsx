@@ -149,7 +149,7 @@ export default function ResearchMethodologyPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               UK Dissertation Research Methodology Service – Theoretical and Practical Overview
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Whether collecting data for theoretical development like grounded theory or qualitative approaches, or testing hypotheses through quantitative methods, Tutors India provides extensive support. The service ensures validity testing, ethical considerations, and reliability inclusion as fundamental components.
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function ResearchMethodologyPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Our UK Dissertation Research Methodology Writing Service Help
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our specific UK Research Methodology writing demonstrates the succinct writing, critical analysis, and justification for the choice of methods chosen. Our professional writers have completed around 10,000 research methodologies while following university guidelines.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function ResearchMethodologyPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
@@ -208,10 +208,10 @@ export default function ResearchMethodologyPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Two possible ways would occur while ordering for dissertation research methodology
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "10px" }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, marginBottom: "10px" }}>
               <strong>Already Completed Part:</strong> When students have finished other sections including statistical analysis, literature review with identified gaps, introduction with research objectives and questions, they need only the methodology chapter. Information required includes target area, population, sampling methods chosen, sample size, and study conduct descriptions.
             </p>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               <strong>Not Yet Started:</strong> For contemporary work, required information includes proposed research questions, objectives, identified gaps, target population, sample size targets, country, industry details, and data collection feasibility assessments. Existing research proposals suffice as starting points.
             </p>
           </div>
@@ -257,9 +257,9 @@ export default function ResearchMethodologyPage() {
             { n: "4", t: "Customer Interaction", d: "Our exclusive coordinators get in touch with you to clarify any queries throughout the process. Clear communication between you and the assigned writer." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -300,7 +300,7 @@ export default function ResearchMethodologyPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -325,7 +325,7 @@ export default function ResearchMethodologyPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
           </p>
         </div>

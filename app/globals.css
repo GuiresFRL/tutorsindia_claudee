@@ -552,9 +552,9 @@ select { font-family: inherit; }
 .library-content h2 { font-size: 1.15rem; }
 .library-content h3 { font-size: 1.02rem; }
 .library-content h4 { font-size: 0.93rem; }
-.library-content p { margin-bottom: 0.9em; text-align: justify; }
+.library-content p { margin-bottom: 0.9em; text-align: justify; font-size: calc(0.97rem + 1px); }
 .library-content ul,.library-content ol { padding-left: 1.5em; margin-bottom: 1em; }
-.library-content li { margin-bottom: 0.35em; }
+.library-content li { margin-bottom: 0.35em; font-size: calc(0.97rem + 1px); }
 .library-content b,.library-content strong { font-weight: 700; }
 .library-content a { color: #2563b0; }
 .library-content a:hover { color: #e87722; }
@@ -596,12 +596,12 @@ select { font-family: inherit; }
    Q&A ANSWER CONTENT
 ───────────────────────────── */
 .qa-answer { font-family: 'Source Sans 3', sans-serif; font-size: 0.97rem; line-height: 1.8; color: #333; }
-.qa-answer p { margin-bottom: 1em; }
+.qa-answer p { margin-bottom: 1em; font-size: calc(0.97rem + 1px); }
 .qa-answer h3 { font-family: 'Merriweather', serif; font-size: 1rem; color: #1a2a6c; margin: 1.4em 0 0.5em; font-weight: 700; }
 .qa-answer strong { font-weight: 700; color: #222; }
 .qa-answer em { font-style: italic; color: #555; background: #f5f7fb; padding: 1px 4px; border-radius: 3px; }
 .qa-answer ul, .qa-answer ol { padding-left: 1.4em; margin-bottom: 1em; }
-.qa-answer li { margin-bottom: 0.4em; line-height: 1.65; }
+.qa-answer li { margin-bottom: 0.4em; line-height: 1.65; font-size: calc(0.97rem + 1px); }
 
 /* ─────────────────────────────
    WP / ELEMENTOR CONTENT
@@ -629,10 +629,10 @@ select { font-family: inherit; }
 .wp-content h2 { font-size: 1.35rem; border-bottom: 2px solid #e87722; padding-bottom: 6px; }
 .wp-content h3 { font-size: 1.1rem; }
 .wp-content h4 { font-size: 1rem; }
-.wp-content p  { margin-bottom: 1em; }
+.wp-content p  { margin-bottom: 1em; font-size: calc(1rem + 1px); }
 .wp-content ul,
 .wp-content ol { margin: 0.5em 0 1em 1.4em; }
-.wp-content li { margin-bottom: 0.3em; }
+.wp-content li { margin-bottom: 0.3em; font-size: calc(1rem + 1px); }
 .wp-content a  { color: #2563b0; text-decoration: underline; }
 .wp-content a:hover { color: #e87722; }
 .wp-content strong, .wp-content b { font-weight: 700; }
@@ -752,7 +752,7 @@ select { font-family: inherit; }
 /* Elementor icon list (bullet lists) */
 .wp-content .elementor-icon-list-items { list-style: none; margin: 0; padding: 0; }
 .wp-content .elementor-icon-list-item { display: flex; align-items: flex-start; gap: 8px; padding: 4px 0; border-bottom: 1px solid #f0f2fa; }
-.wp-content .elementor-icon-list-item-text { font-size: 0.93rem; color: #333; }
+.wp-content .elementor-icon-list-item-text { font-size: calc(0.93rem + 1px); color: #333; }
 
 /* Elementor button */
 .wp-content .elementor-button {

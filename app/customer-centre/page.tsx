@@ -50,7 +50,7 @@ export default function CustomerCentrePage() {
 
         {/* Support Options */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", textAlign: "center" }}>Get Support</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px", textAlign: "center" }}>Multiple ways to reach our support team — response guaranteed within 30 minutes</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px", textAlign: "center" }}>Multiple ways to reach our support team — response guaranteed within 30 minutes</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "20px", marginBottom: "48px" }} className="two-col-grid">
           {supportOptions.map(opt => (
             <div key={opt.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "24px" }}>
@@ -59,18 +59,18 @@ export default function CustomerCentrePage() {
               <p style={{ fontSize: "0.84rem", color: "#666", lineHeight: 1.65, marginBottom: "12px" }}>{opt.desc}</p>
               {opt.ukPhone && (
                 <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                  <a href={`tel:${opt.ukPhone.replace(/[^+\d]/g, "")}`} style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c" }}>🇬🇧 {opt.ukPhone}</a>
-                  <a href={`tel:${opt.indiaPhone?.replace(/[^+\d]/g, "")}`} style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c" }}>🇮🇳 {opt.indiaPhone}</a>
+                  <a href={`tel:${opt.ukPhone.replace(/[^+\d]/g, "")}`} style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c" }}>🇬🇧 {opt.ukPhone}</a>
+                  <a href={`tel:${opt.indiaPhone?.replace(/[^+\d]/g, "")}`} style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c" }}>🇮🇳 {opt.indiaPhone}</a>
                 </div>
               )}
               {opt.email && (
                 <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                  <a href={`mailto:${opt.email}`} style={{ fontSize: "0.9rem", fontWeight: 700, color: "#e87722" }}>{opt.email}</a>
+                  <a href={`mailto:${opt.email}`} style={{ fontSize: "0.96rem", fontWeight: 700, color: "#e87722" }}>{opt.email}</a>
                   <a href={`mailto:${opt.feedback}`} style={{ fontSize: "0.82rem", color: "#666" }}>{opt.feedback}</a>
                 </div>
               )}
-              {opt.whatsapp && <a href={`https://wa.me/${opt.whatsapp.replace(/[^+\d]/g, "")}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.9rem", fontWeight: 700, color: "#25d366" }}>{opt.whatsapp}</a>}
-              {opt.action && <span style={{ fontSize: "0.9rem", color: "#666" }}>{opt.action}</span>}
+              {opt.whatsapp && <a href={`https://wa.me/${opt.whatsapp.replace(/[^+\d]/g, "")}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.96rem", fontWeight: 700, color: "#25d366" }}>{opt.whatsapp}</a>}
+              {opt.action && <span style={{ fontSize: "0.96rem", color: "#666" }}>{opt.action}</span>}
             </div>
           ))}
         </div>

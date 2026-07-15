@@ -135,7 +135,7 @@ export default function CriticalReviewPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Your critical review is written by qualified and experienced researchers from the US &amp; UK
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from the US, UK &amp; India.
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function CriticalReviewPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               UK/ the US Critical Review Writing Service
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our specific Critical Review writing demonstrates an objective, selective, balanced and insightfully critical approach to the contents of the article and include references to research issues including rationale, methodology and findings.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function CriticalReviewPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
@@ -205,7 +205,7 @@ export default function CriticalReviewPage() {
           {features.map(f => (
             <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
               <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>{f.icon}</span>
-              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.88rem", lineHeight: 1.5 }}>{f.title}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5 }}>{f.title}</span>
             </div>
           ))}
         </div>
@@ -224,9 +224,9 @@ export default function CriticalReviewPage() {
             { n: "4", t: "Conclusion", d: "Summarises the main points of the critique and provides an overall assessment of the value of the reviewed work." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function CriticalReviewPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Free Tutoring
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 Free Tutoring for the work being carried out – to speak confidently with your program supervisors. We deliver more than your expectation.
               </p>
             </div>
@@ -260,7 +260,7 @@ export default function CriticalReviewPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Our Deliverables
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 Executive Summary / Abstract, free articles used for writing the dissertation, SPSS data sheet and output, questionnaire or semi-structured interview questions and reflective log or diary used during research.
               </p>
             </div>
@@ -268,7 +268,7 @@ export default function CriticalReviewPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Our Critical Review Service is Exclusive
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 We do not just provide a critical review, but rather clear explanation and justification for the content written. Critical Review writing services from Tutors India is simply easy and straightforward. You will get the reply within 30 minutes.
               </p>
             </div>
@@ -309,7 +309,7 @@ export default function CriticalReviewPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -334,7 +334,7 @@ export default function CriticalReviewPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Track Your Report through our customized CRM — You need not check email frequently rather your report is safe on our customizable CRM and you can download later at any point of time by using your unique username and password.
           </p>
         </div>

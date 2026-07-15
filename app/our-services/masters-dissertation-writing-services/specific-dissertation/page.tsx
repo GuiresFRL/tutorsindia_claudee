@@ -142,7 +142,7 @@ export default function SpecificDissertationPage() {
               We write complete master&apos;s dissertation from the introduction to recommendations. Although it looks simple, but in practical, it&apos;s a tedious task to complete each and every step.
             </p>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "6px" }}>Specialized Subject Matter Expertise across the globe</h3>
-            <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>
               We offer topic Selection for Management, Social Science, Engineering, Technology, Life Science, Medical, Arts &amp; Literature / Linguistics, and much more.
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function SpecificDissertationPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
               Master&apos;s Specific Dissertation need to convince the Supervisory committee
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               We have an expertise to handle any types of dissertation from the introduction to recommendations. Though it looks very simple, it is a tedious task to complete each and every step. The steps involved: identification of topic, reviewing the literature, problem statement, research question(s) and research hypothesis development, research design, statistical analysis, discussion, results, recommendation and conclusion.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function SpecificDissertationPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
               We have Chapter by Chapter Delivery Process and Deadline
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               This is to ensure that clients have full control over the delivery and can look at the drafts of different sections. Unlike other companies, we do not charge any costs for such structure as we ensure client satisfaction at every stage of the work.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function SpecificDissertationPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
               Free Offers along with your Full Master&apos;s Specific Dissertation Writing Services
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
               We deliver more than your expectation – Abstract or Executive Summary, Graphs &amp; Tables (redrawn), statistical analysis or textual analysis of data, SPSS / other software screen shots to ensure the process that we had carried out for doing the analyses. Free Tutoring for the work being carried out – to speak confidently with your program supervisors &amp; SPSS output in Appendix.
             </p>
           </div>
@@ -294,7 +294,7 @@ export default function SpecificDissertationPage() {
               { label: "Statistical Analysis", href: "/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/" },
               { label: "CV Writing", href: "/our-services/masters-dissertation-writing-services/cv-writing/" },
             ].map(s => (
-              <Link key={s.label} href={s.href} style={{ padding: "10px 22px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "5px", color: "#1a2a6c", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>{s.label}</Link>
+              <Link key={s.label} href={s.href} style={{ padding: "10px 22px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "5px", color: "#1a2a6c", fontWeight: 600, fontSize: "0.96rem", textDecoration: "none" }}>{s.label}</Link>
             ))}
           </div>
         </div>

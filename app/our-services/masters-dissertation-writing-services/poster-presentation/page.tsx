@@ -296,7 +296,7 @@ export default function PosterPresentationPage() {
                 <h3 style={{ fontFamily: "Merriweather, serif", fontSize: "0.97rem", color: "#1a2a6c", marginBottom: 10 }}>
                   {c.title}
                 </h3>
-                <p style={{ fontSize: "0.9rem", lineHeight: 1.75, color: "#555" }}>{c.body}</p>
+                <p style={{ fontSize: "0.96rem", lineHeight: 1.75, color: "#555" }}>{c.body}</p>
               </div>
             ))}
           </div>
@@ -428,7 +428,7 @@ export default function PosterPresentationPage() {
             </h3>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))", gap: 10 }}>
               {posterSections.map((s) => (
-                <div key={s} style={{ display: "flex", gap: 8, alignItems: "flex-start", fontSize: "0.88rem", opacity: 0.92 }}>
+                <div key={s} style={{ display: "flex", gap: 8, alignItems: "flex-start", fontSize: "0.94rem", opacity: 0.92 }}>
                   <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {s}
                 </div>
               ))}
@@ -544,7 +544,7 @@ export default function PosterPresentationPage() {
                   border: "1px solid rgba(255,255,255,0.3)",
                   borderRadius: 20,
                   padding: "6px 16px",
-                  fontSize: "0.88rem",
+                  fontSize: "0.94rem",
                 }}
               >
                 {s}

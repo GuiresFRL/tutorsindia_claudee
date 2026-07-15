@@ -145,19 +145,19 @@ export default function PhDCourseworkPage() {
         {/* Ph.D. & DBA Coursework Writing, Editing & rewriting Service */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Ph.D. &amp; DBA Coursework Writing, Editing &amp; rewriting Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Custom PhD &amp; DBA coursework is written by qualified and experienced researchers from the US &amp; UK
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our editors are native English speakers, with industry experience, and educational degrees from international and top-ranked universities from the US, and the UK.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Every program focuses on a different skill-set involving evaluative and analytical potential of student and assess their ability with strict rubric scale and marking criteria. Especially, coursework is mandatory for any Ph.D. and every scholar need to undergo such process for a minimum period of one semester or six months.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             No doubt, every coursework requires a lot of effort in terms of studying, comprehending, and writing. Moreover, it is time-consuming and to meet the deadlines of submission is the most worrisome factor.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Hence, as a perfect alternative Tutors India coursework help comes handy to deal with crunch submission period.
           </p>
         </div>
@@ -165,10 +165,10 @@ export default function PhDCourseworkPage() {
         {/* Ph.D. dissertation Coursework according to your university guidelines */}
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Ph.D. dissertation Coursework according to your university guidelines</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             At Tutors India, we have a team of experts who are familiar and experience in handling various coursework's relevant to Ph.D. Research. Whether you pursue practice-based PhD, PhD by published works or integrated PhD or collaborative degree, we have expertise who have a capability to handle any type of coursework.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Is your coursework is about statistical analysis through SPSS or any other software, econometrics, specific subject related work, research paper writing, conference and seminar paper publication, abstract writing, identifying relevant sources, question and answer sessions, research methodology, Ph.D. essay writing, Ph.D. case report writing, reflective report or critical review of a journal article or any other course work that you required help.
           </p>
         </div>
@@ -176,10 +176,10 @@ export default function PhDCourseworkPage() {
         {/* A UK Ph.D. & DBA Coursework Writers */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A UK Ph.D. &amp; DBA Coursework Writers have capability &amp; Skills to write on any given complex topic</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our Ph.D. coursework demonstrates the ability to communicate complex ideas critically, concisely, and clearly. Our writers write a truly convincing high-quality coursework of any given topic, regardless of your research area and the methodology you choose.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             You will get the reply within 30 minutes which would enable to place your order quickly without any delay in submissions.
           </p>
         </div>
@@ -204,7 +204,7 @@ export default function PhDCourseworkPage() {
         {/* What Services do we offer */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>What Services do we offer under Ph.D. &amp; DBA Coursework Writing Service?</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>
             We offer topic Selection for Management, Social Science, Engineering, Technology, Life Science, Medical, Arts &amp; Literature / Linguistics, and much more
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "18px" }} className="two-col-grid">
@@ -223,7 +223,7 @@ export default function PhDCourseworkPage() {
         {/* Subject Specialization */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Your coursework is written by your choice of Subject Matter Expertise</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>Specialized Subject Matter Expertise across the globe</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "14px" }}>Specialized Subject Matter Expertise across the globe</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {subjects.map(s => (
               <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>
@@ -234,7 +234,7 @@ export default function PhDCourseworkPage() {
         {/* Deliverables */}
         <div style={{ background: "#fff8f0", border: "1px solid #f5d9bb", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Our deliverables while you order custom written PhD coursework writing service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
             We deliver more than your expectation –Abstract or Executive Summary, Graphs &amp; Tables (redrawn), statistical analysis or textual analysis of data, SPSS / other software screen shots to ensure the process that we had carried out for doing the analyses Free Tutoring for the work being carried out – to speak confidently with your program supervisors &amp; SPSS output in Appendix.
           </p>
           <ul style={{ margin: 0, paddingLeft: "20px" }}>
@@ -268,15 +268,15 @@ export default function PhDCourseworkPage() {
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Ph.D. &amp; DBA Coursework Writing Service Features</h2>
 
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Coursework needs to convince the Supervisory committee</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Understanding this challenging task, our experts at Tutors India who have vast experience in both theoretical and industrial knowledge will help you to write your Ph.D. level coursework.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "20px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "20px", fontSize: "1rem" }}>
             Our team comprised of Ph.D. and Master's in subject matter expertise (both theoretically and industrial experience) along with language editors and statisticians who will able to handle your coursework writing services.
           </p>
 
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Our custom PhD coursework writing &amp; editing service is exclusive</h3>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "20px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "20px", fontSize: "1rem" }}>
             Your custom PhD coursework writing &amp; editing service is exclusive as we do not just provide coursework writing service, but the rather clear explanation and justification for the choice
           </p>
 
@@ -291,14 +291,14 @@ export default function PhDCourseworkPage() {
               { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
             ].map(f => (
               <div key={f.t} style={{ background: "#f8f9ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <h4 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h4>
+                <h4 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h4>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             ))}
           </div>
 
           <div style={{ background: "#f0f4ff", borderRadius: "10px", padding: "18px", border: "1px solid #dde2ef" }}>
-            <h4 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Track Your Report through our customized CRM</h4>
+            <h4 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px" }}>Track Your Report through our customized CRM</h4>
             <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.7, margin: 0 }}>
               We have in-house expertise, consists of Ph.D. Scholars and post-doctoral fellows and MD holding Ph.D. scholars with rich experience from various universities, who can guide you throughout your research. We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine). In Tutors India, we have been helping all sort of research from Ph.D. scholars to master level research work for more than 10 years; we also helped to complete 3,500(+) Ph.D.'s
             </p>
@@ -311,7 +311,7 @@ export default function PhDCourseworkPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" }} className="three-col-grid">
             {deliverables.map(d => (
               <div key={d} style={{ background: "#fff", border: "1px solid #f5d9bb", borderRadius: "10px", padding: "16px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
-                <div style={{ width: "28px", height: "28px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>✓</div>
+                <div style={{ width: "28px", height: "28px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>✓</div>
                 <span style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.6 }}>{d}</span>
               </div>
             ))}

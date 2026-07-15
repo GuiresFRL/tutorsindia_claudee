@@ -180,7 +180,7 @@ export default function EngineeringPage() {
             <div key={c.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column" }}>
               <img src={c.img} alt={c.title} style={{ width: "100%", height: "130px", objectFit: "cover" }} />
               <div style={{ padding: "14px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
-                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px", lineHeight: 1.4 }}>{c.title}</h3>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.94rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px", lineHeight: 1.4 }}>{c.title}</h3>
                 <p style={{ fontSize: "0.79rem", color: "#666", lineHeight: 1.6, marginBottom: "10px", flexGrow: 1 }}>{c.desc}</p>
                 <Link href={c.href} style={{ fontSize: "0.8rem", color: "#e87722", fontWeight: 600 }}>View More →</Link>
               </div>
@@ -199,25 +199,25 @@ export default function EngineeringPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "48px" }} className="two-col-grid">
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Research Methods</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               Research methods are critical aspects of engineering research as they enable addressing an engineering challenge in a systematic manner, evaluating background literature, adhering to ethics, and documentation strategies. In general the methodology chapter includes analytical works, computer simulation, and experimental works. We help you describe the method used to carry out your dissertation including application of advanced mathematics and formulation or computer simulation using software including computational fluid dynamics and finite element analysis.
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Experimental Work</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               We help to write the experimental work to describe how results were obtained including the approach, facilities, validations, range of measurements, computer simulation, and sufficient detail on the proposed theory or a descriptive model to clearly understand the physical assumptions related to a theory or model (analytical). We use a wide range of tools and technologies in power electronics, power system, advanced communication technology, antennas &amp; propagation, robotics, signal processing, embedded system, industrial electronics, VLSI, LabVIEW, MATLAB, ANSYS, and more.
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Engineering Specializations Covered</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               Electrical, Mechanical, Civil (structural, architectural), Environmental Engineering, Geotechnical Engineering, Computer, Architectural, Bio-engineering, Biomedical, Project Management, Chemical Engineering, Electronics, Aerospace, Automotive, Robotics, Microelectronic, Material Science, Agricultural Engineering, Paper Engineering, Engineering Management, Industrial, Systems, Manufacturing, Petroleum, Nanotechnology, and more.
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Free while you order dissertation</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75, marginBottom: "10px" }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75, marginBottom: "10px" }}>
               We help to develop questionnaire or interview guide at free of cost while you order for dissertation. We also provide free:
             </p>
             <ul style={{ paddingLeft: "18px", fontSize: "0.85rem", color: "#555", lineHeight: 1.9 }}>

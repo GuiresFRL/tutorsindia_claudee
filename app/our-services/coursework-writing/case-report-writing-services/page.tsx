@@ -152,7 +152,7 @@ export default function CaseReportWritingServicesPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Your Report is written by qualified and experienced researchers from the US &amp; UK
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from the US, UK &amp; India.
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function CaseReportWritingServicesPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Reports are written with utmost care based on your specific university guidelines &amp; Specifications
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               We write case report from a GCSE level essay to a PhD level model, at an affordable rates including planning, statistical analysis, proofreading and critiquing.
             </p>
           </div>
@@ -196,7 +196,7 @@ export default function CaseReportWritingServicesPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
@@ -219,7 +219,7 @@ export default function CaseReportWritingServicesPage() {
           {features.map(f => (
             <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
               <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>{f.icon}</span>
-              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.88rem", lineHeight: 1.5 }}>{f.title}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5 }}>{f.title}</span>
             </div>
           ))}
         </div>
@@ -238,9 +238,9 @@ export default function CaseReportWritingServicesPage() {
             { n: "4", t: "Body", d: "May include Target Market Identification, Market Needs, Forms of IMC in use, Analysis of Case, Key Issues/Goals, Recommendations, Decision Criteria, Assumptions, Data Analysis, Preferred Alternative with rationale." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -269,7 +269,7 @@ export default function CaseReportWritingServicesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Free Tutoring
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 We deliver more than your expectation – Free Tutoring for the work being carried out – to speak confidently with your program supervisors.
               </p>
             </div>
@@ -277,7 +277,7 @@ export default function CaseReportWritingServicesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Our Deliverables
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 Essay writing services from Tutors India research writing services is simply easy and straightforward. You will get the reply within 30 minutes which would enable to place your order quickly without any delay in submissions. We would provide executive summary /abstract, free articles used for writing the part dissertation, SPSS data sheet and output, questionnaire or semi-structured interview questions and any other information that we have used to write the dissertation such as reflective log or diary.
               </p>
             </div>
@@ -285,7 +285,7 @@ export default function CaseReportWritingServicesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Our Report Writing Service is Exclusive
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 We do not just provide a report, but rather clear explanation and justification for the content written. Our UK Case Report writing help guarantees that your essay is confidential, and so you do not have to worry about it.
               </p>
             </div>
@@ -326,7 +326,7 @@ export default function CaseReportWritingServicesPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -351,7 +351,7 @@ export default function CaseReportWritingServicesPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
           </p>
         </div>

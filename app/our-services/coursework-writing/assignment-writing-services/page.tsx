@@ -142,7 +142,7 @@ export default function AssignmentWritingServicesPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Assignment Writing Service
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Assignments are given to students in order to prepare them for certain topics comprehensively with deep knowledge and understanding. Tutors at Tutors India work seriously with your assignments and assist you in all stages either online or email-based.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function AssignmentWritingServicesPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Assignments are written with utmost care based on your specific university guidelines &amp; Specifications
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               We take a careful approach to following institutional requirements without plagiarism and to communicating complex ideas critically and concisely.
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function AssignmentWritingServicesPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
@@ -219,9 +219,9 @@ export default function AssignmentWritingServicesPage() {
             { n: "4", t: "Reference list", d: "" },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 {f.d && <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>}
               </div>
             </div>
@@ -250,7 +250,7 @@ export default function AssignmentWritingServicesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Your Assignment / Quality Assurance
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 We provide your assignment along with sample work and conduct three-level quality checks to ensure every assignment meets the highest academic standard before delivery.
               </p>
             </div>
@@ -258,7 +258,7 @@ export default function AssignmentWritingServicesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Plagiarism Report
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 All assignments are scanned using anti-plagiarism software before delivery. Less than 5% plagiarism is guaranteed. A plagiarism-free certificate is included with your submission.
               </p>
             </div>
@@ -266,7 +266,7 @@ export default function AssignmentWritingServicesPage() {
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
                 Customer Interaction
               </h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
                 Our exclusive coordinators will get in touch with you to clarify any queries throughout the process. We ensure clear communication between you and the assigned writer.
               </p>
             </div>
@@ -307,7 +307,7 @@ export default function AssignmentWritingServicesPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -332,7 +332,7 @@ export default function AssignmentWritingServicesPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
           </p>
         </div>

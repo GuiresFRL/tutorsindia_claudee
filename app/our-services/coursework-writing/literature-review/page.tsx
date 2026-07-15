@@ -150,7 +150,7 @@ export default function LiteratureReviewPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Tutors India UK ensures your Literature Review is accepted by Supervisor committee – Check how we assist?
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Before writing, Tutors India helps find suitable models and organise sources chronologically. We develop exhaustive literature reviews from academic sources including journals and textbooks, creating research frameworks with a minimum of 80 references. All referencing is kept current and sources are shared with scholars.
             </p>
           </div>
@@ -158,7 +158,7 @@ export default function LiteratureReviewPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Our UK Dissertation Literature Review Writing demonstrates critical analysis
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our specific UK Literature Review writing demonstrates the succinct writing, critical analysis, and information literacy. Services include theoretical/conceptual foundations, variable identification, and methodology examination.
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function LiteratureReviewPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: "10px" }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, marginBottom: "10px" }}>{t.desc}</p>
                 <p style={{ color: "#888", fontSize: "0.82rem", lineHeight: 1.6, margin: 0, borderTop: "1px solid #eee", paddingTop: "10px" }}>{t.includes}</p>
               </div>
             ))}
@@ -229,7 +229,7 @@ export default function LiteratureReviewPage() {
           {features.map((f, i) => (
             <div key={f} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px", alignItems: "flex-start" }}>
               <div style={{ width: "32px", height: "32px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0 }}>{i + 1}</div>
-              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.9rem", lineHeight: 1.5, paddingTop: "4px" }}>{f}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.96rem", lineHeight: 1.5, paddingTop: "4px" }}>{f}</span>
             </div>
           ))}
         </div>
@@ -255,9 +255,9 @@ export default function LiteratureReviewPage() {
             { n: "4", t: "Plagiarism Report", d: "All literature reviews are scanned using anti-plagiarism software before delivery. Less than 5% plagiarism guaranteed with a plagiarism-free certificate." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function LiteratureReviewPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -323,7 +323,7 @@ export default function LiteratureReviewPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
           </p>
         </div>

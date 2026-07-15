@@ -255,10 +255,10 @@ export default function DissertationTopicPage() {
                 <div style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", fontWeight: 700 }}>{t.title}</div>
               </div>
               <div style={{ padding: "20px 24px" }}>
-                <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "16px" }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, marginBottom: "16px" }}>{t.desc}</p>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {t.includes.map(item => (
-                    <li key={item} style={{ display: "flex", gap: "8px", alignItems: "flex-start", color: "#444", fontSize: "0.88rem", marginBottom: "6px" }}>
+                    <li key={item} style={{ display: "flex", gap: "8px", alignItems: "flex-start", color: "#444", fontSize: "0.94rem", marginBottom: "6px" }}>
                       <span style={{ color: t.color, fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
                     </li>
                   ))}
@@ -293,7 +293,7 @@ export default function DissertationTopicPage() {
           {effectivePoints.map(p => (
             <div key={p.title} style={{ borderLeft: "4px solid #e87722", paddingLeft: "16px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "6px" }}>{p.title}</h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7 }}>{p.desc}</p>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>{p.desc}</p>
             </div>
           ))}
         </div>
@@ -399,7 +399,7 @@ export default function DissertationTopicPage() {
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", color: "#1a2a6c", marginBottom: "20px" }}>Related Services</h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
             {relatedServices.map(s => (
-              <Link key={s.label} href={s.href} style={{ padding: "10px 22px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "5px", color: "#1a2a6c", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>{s.label}</Link>
+              <Link key={s.label} href={s.href} style={{ padding: "10px 22px", background: "#fff", border: "1px solid #dde2ef", borderRadius: "5px", color: "#1a2a6c", fontWeight: 600, fontSize: "0.96rem", textDecoration: "none" }}>{s.label}</Link>
             ))}
           </div>
         </div>

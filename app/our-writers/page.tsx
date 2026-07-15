@@ -33,7 +33,7 @@ export default function OurWritersPage() {
     <>
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link> / Our Writers
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "2.2rem", marginBottom: "12px" }}>Our Writers</h1>
@@ -58,7 +58,7 @@ export default function OurWritersPage() {
             <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--navy)", marginBottom: "14px" }}>Writer Selection Process</h3>
             <ul style={{ listStyle: "none", padding: 0, marginBottom: "28px" }}>
               {selectionProcess.map((item) => (
-                <li key={item} style={{ display: "flex", gap: "10px", padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.88rem", color: "var(--text-mid)" }}>
+                <li key={item} style={{ display: "flex", gap: "10px", padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.94rem", color: "var(--text-mid)" }}>
                   <span style={{ color: "var(--orange)", fontWeight: 700, flexShrink: 0 }}>✓</span>
                   {item}
                 </li>
@@ -85,7 +85,7 @@ export default function OurWritersPage() {
                 { label: "UK University Graduates", value: "85%" },
                 { label: "Subjects Covered", value: "50+" },
               ].map((stat) => (
-                <div key={stat.label} style={{ display: "flex", justifyContent: "space-between", padding: "9px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.88rem" }}>
+                <div key={stat.label} style={{ display: "flex", justifyContent: "space-between", padding: "9px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.94rem" }}>
                   <span style={{ color: "#c5d5f0" }}>{stat.label}</span>
                   <span style={{ color: "#f9c74f", fontWeight: 700 }}>{stat.value}</span>
                 </div>

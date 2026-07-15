@@ -118,13 +118,13 @@ export default function AboutPage() {
           </div>
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Our Vision &amp; Mission</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
               Tutors India aspires to be the best research guidance provider in the world through its holistic approach irrespective of subjects, countries, and specializations.
             </p>
-            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
               To achieve this vision, Tutors India approaches each and every research work through a unique methodology after a lot of discussion between research expertise, professors, data management experts, industry professionals, and language &amp; technical editors. We develop the research work handling all subjects from various countries across the globe.
             </p>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
               We guide a wide range of researchers including Research Scholars, Professors and Heads of various departments in prestigious universities, Working Professionals, Entrepreneurs, Industrialists, and students.
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
             ].map(item => (
               <div key={item.title} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "8px" }}>{item.icon}</div>
-                <div style={{ fontSize: "0.88rem", fontWeight: 700, marginBottom: "5px" }}>{item.title}</div>
+                <div style={{ fontSize: "0.94rem", fontWeight: 700, marginBottom: "5px" }}>{item.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#c5d5f0", lineHeight: 1.55 }}>{item.desc}</div>
               </div>
             ))}
@@ -180,14 +180,14 @@ export default function AboutPage() {
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Our Service Categories</h2>
             {services.map(svc => (
-              <Link key={svc.href} href={svc.href} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.9rem", color: "#2563b0", fontWeight: 500 }}>
+              <Link key={svc.href} href={svc.href} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.96rem", color: "#2563b0", fontWeight: 500 }}>
                 <span style={{ color: "#e87722" }}>→</span> {svc.label}
               </Link>
             ))}
           </div>
           <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "28px", border: "1px solid #dde2ef" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Confidentiality &amp; Privacy</h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.75, marginBottom: "14px" }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.75, marginBottom: "14px" }}>
               Once you have placed an order with us, it&apos;s safe with us. We maintain the confidentiality that you expect. Your identity is never disclosed to third parties without your approval. Neither your friends nor your teachers would ever know that you have used our service.
             </p>
             {["NDA signed with all writers and editors", "Unique project reference codes assigned", "Data retained for 6 months only", "Copyright transferred to you after payment", "Research works never reused or resold", "128-bit SSL encryption on all transactions"].map(item => (

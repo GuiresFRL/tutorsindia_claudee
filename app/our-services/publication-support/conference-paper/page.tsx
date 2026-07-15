@@ -138,7 +138,7 @@ export default function ConferencePaperPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Tutors India ensures to prepare effective seminar &amp; conference Paper
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               As academic student, seminar presentation is one of the requirements where the performance in it and the effectiveness of the presentation matters. Key focus areas include manuscript importance, ethical research issues, adequately supported statements, appropriate conclusions with data evidence, reader-friendly content, avoiding excessive jargon, journal-style formatting, and content consistency.
             </p>
           </div>
@@ -146,7 +146,7 @@ export default function ConferencePaperPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Our service assures your paper acceptance
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our conference and seminar paper writing services assures that the paper is accepted in a specific journal. The STM writers possess extensive conference and seminar paper experience, including subject-specific writers, statisticians, research methodology specialists, and editors from top-ranked universities.
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function ConferencePaperPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: "10px" }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, marginBottom: "10px" }}>{t.desc}</p>
                 <p style={{ color: "#888", fontSize: "0.82rem", lineHeight: 1.6, margin: 0, borderTop: "1px solid #eee", paddingTop: "10px" }}>{t.includes}</p>
               </div>
             ))}
@@ -203,12 +203,12 @@ export default function ConferencePaperPage() {
                 { t: "Case Reports", d: "Unique patient or business scenarios presented in structured academic format." },
               ].map(m => (
                 <div key={m.t} style={{ background: "#f5f7ff", borderRadius: "8px", padding: "14px 16px" }}>
-                  <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.88rem", marginBottom: "4px" }}>{m.t}</div>
+                  <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.94rem", marginBottom: "4px" }}>{m.t}</div>
                   <div style={{ color: "#666", fontSize: "0.82rem", lineHeight: 1.5 }}>{m.d}</div>
                 </div>
               ))}
             </div>
-            <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, marginTop: "14px", margin: "14px 0 0 0" }}>
+            <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, marginTop: "14px", margin: "14px 0 0 0" }}>
               Standard structure includes: Abstract, Word limit, Cover letter, Title page, Clinical significance, Conflict of interest, Focus, Photos/illustration, Line Art/Figures, Tables/Figures.
             </p>
           </div>
@@ -249,9 +249,9 @@ export default function ConferencePaperPage() {
             { n: "6", t: "SPSS Output in Appendix", d: "SPSS output pasted in Appendix as part of the free deliverables with every order." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.6, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -302,7 +302,7 @@ export default function ConferencePaperPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>

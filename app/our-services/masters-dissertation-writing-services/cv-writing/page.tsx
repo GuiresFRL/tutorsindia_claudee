@@ -108,7 +108,7 @@ export default function CVWritingPage() {
         {/* Services Grid */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>What Services Do We Offer Under CV Writing?</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Complete professional career document services by certified UK and US specialists</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>Complete professional career document services by certified UK and US specialists</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "18px" }} className="two-col-grid">
             {cvServices.map(svc => (
               <div key={svc.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "22px", position: "relative" }}>
@@ -126,7 +126,7 @@ export default function CVWritingPage() {
         {/* CV Includes */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>CV Writing Features — What We Include</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>An impressive resume needs to contain the right details, presented in the right way</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>An impressive resume needs to contain the right details, presented in the right way</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "16px" }} className="three-col-grid">
             {cvIncludes.map(item => (
               <div key={item.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>

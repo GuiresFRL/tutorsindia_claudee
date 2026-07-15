@@ -154,7 +154,7 @@ export default function ProgrammingPage() {
           ].map((t) => (
             <div key={t.tier} style={{ background: t.tier === "Advanced" ? "#1a2a6c" : "#fff", color: t.tier === "Advanced" ? "#fff" : "#333", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
               <div style={{ fontSize: "1.1rem", fontWeight: 800, color: t.tier === "Advanced" ? "#f9c74f" : "#e87722", marginBottom: "16px" }}>{t.tier}</div>
-              <p style={{ fontSize: "0.88rem", lineHeight: 1.7, color: t.tier === "Advanced" ? "#c5d5f0" : "#555" }}>{t.desc}</p>
+              <p style={{ fontSize: "0.94rem", lineHeight: 1.7, color: t.tier === "Advanced" ? "#c5d5f0" : "#555" }}>{t.desc}</p>
             </div>
           ))}
         </div>
@@ -188,7 +188,7 @@ export default function ProgrammingPage() {
       <section style={{ background: "#1a2a6c", color: "#fff", padding: "56px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, marginBottom: "32px", textAlign: "center" }}>How Does Coding, Algorithm &amp; Programming consultation work?</h2>
-          <p style={{ color: "#a0b8e0", lineHeight: 1.8, marginBottom: "28px", fontSize: "0.9rem" }}>
+          <p style={{ color: "#a0b8e0", lineHeight: 1.8, marginBottom: "28px", fontSize: "0.96rem" }}>
             We are completely aware that the dissertation or manuscript comes with a very tight deadline, and our team ensures to deliver the work on time along with the detailed report. The process is simple. After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work. Once the process is done, in case there are any queries, we ensure to ask during the initial stage of your work and send you the outline proposed manuscript analysis plan. Once the research analysis plan is approved, we will dispatch the work in the draft, and update you on the progress of your work. Our exclusive coordinators would get in touch with you to clarify any queries. For primary data collection, you need to pay an additional chart to offer this service. This would enable to show the proof of evidence of data collection to your university. We will paste the excel data sheet in Appendix, and this would be shared. You can also pay in installments and work will be started as soon as we receive the payments we deliver your work as per the schedule fixed and agreed or even before the schedule.
           </p>
         </div>
@@ -292,7 +292,7 @@ export default function ProgrammingPage() {
       <section style={{ background: "#1a2a6c", color: "#fff", padding: "56px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, marginBottom: "20px", textAlign: "center" }}>Why Choose Tutors India: Coding, Programming &amp; Algorithm development Service features</h2>
-          <p style={{ color: "#a0b8e0", lineHeight: 1.8, textAlign: "center", marginBottom: "28px", fontSize: "0.9rem" }}>
+          <p style={{ color: "#a0b8e0", lineHeight: 1.8, textAlign: "center", marginBottom: "28px", fontSize: "0.96rem" }}>
             Qualified researchers, research methodology expertise, well experienced coders, developers, programmers capable of handling various software and many more, only peer-reviewed articles, Tutoring and clarification, Tables and Interpretation with proper formatting for print-ready analysis, plagiarism report, 24/7 support, timely Support, 100% match with the requirement and on time delivery.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "16px" }} className="four-col-grid">
@@ -322,13 +322,13 @@ export default function ProgrammingPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "28px" }} className="two-col-grid">
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A complete secure &amp; Confidential Service</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               We offer 100% confidentiality of client&apos;s personal details, payment details, project works, and copyrights of research works. We ensure following for the conditionality, security &amp; privacy: 1) All your projects are given unique reference codes 2) Documents are accessed only writers who signed NDA with Tutors India 3) Your financial information is protected b 128-bit secure socket layer (SSL) encryption.
             </p>
           </div>
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Fully Referenced</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               Our dissertation work is fully referenced with latest articles and textbooks. We refer only peer-reviewed sources such as scholarly articles and textbook to select the topic. We refer database including Web of Science, ProQuest, Google Scholar, Business Source Complete, and latest newspapers articles such as Economic Times, Forbes, The Wall Street, The Economics to identify the industrial problem.
             </p>
           </div>
@@ -352,7 +352,7 @@ export default function ProgrammingPage() {
             ].map((g) => (
               <div key={g.title} style={{ background: "#fff", border: "1px solid #c5d5f0", borderRadius: "10px", padding: "20px", textAlign: "center" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{g.icon}</div>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.88rem" }}>{g.title}</div>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.94rem" }}>{g.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#555", lineHeight: 1.6 }}>{g.desc}</div>
               </div>
             ))}

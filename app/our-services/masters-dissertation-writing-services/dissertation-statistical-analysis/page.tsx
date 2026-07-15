@@ -346,7 +346,7 @@ export default function DissertationStatisticalAnalysisPage() {
                   <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div>
                 </div>
                 <div style={{ padding: "18px 16px" }}>
-                  <p style={{ fontSize: "0.88rem", color: "#444", lineHeight: 1.75 }}>{t.desc}</p>
+                  <p style={{ fontSize: "0.94rem", color: "#444", lineHeight: 1.75 }}>{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -480,7 +480,7 @@ export default function DissertationStatisticalAnalysisPage() {
                 <h4 style={{ fontFamily: "Merriweather, serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: 8 }}>
                   {card.title}
                 </h4>
-                <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "#555" }}>{card.body}</p>
+                <p style={{ fontSize: "0.96rem", lineHeight: 1.7, color: "#555" }}>{card.body}</p>
               </div>
             ))}
           </div>
@@ -556,7 +556,7 @@ export default function DissertationStatisticalAnalysisPage() {
                   border: "1px solid rgba(255,255,255,0.3)",
                   borderRadius: 20,
                   padding: "6px 16px",
-                  fontSize: "0.88rem",
+                  fontSize: "0.94rem",
                 }}
               >
                 {s}

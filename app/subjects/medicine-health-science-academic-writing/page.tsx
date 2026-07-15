@@ -195,7 +195,7 @@ export default function MedicinePage() {
             <div key={c.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column" }}>
               <img src={c.img} alt={c.title} style={{ width: "100%", height: "130px", objectFit: "cover" }} />
               <div style={{ padding: "14px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
-                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px", lineHeight: 1.4 }}>{c.title}</h3>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.94rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px", lineHeight: 1.4 }}>{c.title}</h3>
                 <p style={{ fontSize: "0.79rem", color: "#666", lineHeight: 1.6, marginBottom: "10px", flexGrow: 1 }}>{c.desc}</p>
                 <Link href={c.href} style={{ fontSize: "0.8rem", color: "#e87722", fontWeight: 600 }}>View More →</Link>
               </div>
@@ -224,25 +224,25 @@ export default function MedicinePage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "48px" }} className="two-col-grid">
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Your Choice of Primary or Secondary Research</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               We help you to collect primary and secondary data through library research, internet searches (for secondary), while for quantitative research through interviews with key informants, focus group discussion guide, questionnaire and observation. We justify the chosen methodology through theoretical justification rather than the argument of lack of time or financial resources as a reason for limiting research. The chosen methodology will be tailored to achieve the research question and substantiated with reference or argument to support how methodology is the most suitable for finding the solution to your research question.
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Your Choice of quantitative or qualitative or Triangulation methodologies</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               We help you to identify the right choice of research methodology for your medicine and health science dissertation, while the choice purely depends on the theoretical framework or a conceptual framework and the research question. We undertake a wide range of subjects, including cardiac, peripheral vascular, immunology, allergy, connective tissue, critical care, emergency medicine, geriatrics, gerontology, industrial medicine, haematology, infectious diseases, nutrition &amp; dietetics, orthopaedics, urology, nephrology, oncology, respiratory system, sport medicine, tropical medicine and many more.
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Development of Questionnaire or Interview questions</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               We help you in a broad range of services from the selection of a dissertation topic to complete your master&apos;s dissertation successfully with the expected grade. UK thesis topics are selected based on your area of interest, research gap, and feasibility of data collection. We make you strong in your dissertation by dealing with all the questions that you have in your mind. The process also entails data collection, statistical analysis and presentation in the format of your Institute.
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Free while you order dissertation</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75, marginBottom: "10px" }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75, marginBottom: "10px" }}>
               We help to develop questionnaire or interview guide at free of cost while you order for dissertation. We also provide:
             </p>
             <ul style={{ paddingLeft: "18px", fontSize: "0.85rem", color: "#555", lineHeight: 1.9 }}>

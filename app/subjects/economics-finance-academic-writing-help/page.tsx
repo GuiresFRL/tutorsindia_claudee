@@ -201,7 +201,7 @@ export default function EconomicsPage() {
             <div key={c.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column" }}>
               <img src={c.img} alt={c.title} style={{ width: "100%", height: "130px", objectFit: "cover" }} />
               <div style={{ padding: "14px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
-                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px", lineHeight: 1.4 }}>{c.title}</h3>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.94rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "8px", lineHeight: 1.4 }}>{c.title}</h3>
                 <p style={{ fontSize: "0.79rem", color: "#666", lineHeight: 1.6, marginBottom: "10px", flexGrow: 1 }}>{c.desc}</p>
                 <Link href={c.href} style={{ fontSize: "0.8rem", color: "#e87722", fontWeight: 600 }}>View More →</Link>
               </div>
@@ -230,7 +230,7 @@ export default function EconomicsPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "48px" }} className="two-col-grid">
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Your Choice of Primary or Secondary Research</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75, marginBottom: "12px" }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75, marginBottom: "12px" }}>
               We help you to collect primary and secondary data through library research, internet searches (for secondary), while for quantitative data — including data that can be measured such as hours spent working, income, years of schooling, or number of papers published.
             </p>
             <p style={{ fontSize: "0.83rem", color: "#777", fontWeight: 600, marginBottom: "8px" }}>Key Data Sources We Use:</p>
@@ -242,19 +242,19 @@ export default function EconomicsPage() {
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Your Choice of quantitative or qualitative or Triangulation methodologies</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               We help you to identify the right choice of theoretical modelling strategy that helps you to address the problem. Including a clear hypotheses, the statistical and econometric technique including the identification and justification (e.g. Linear or Probit regression analysis).
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Development of Questionnaire or Interview questions</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75 }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75 }}>
               We help you in a broad range of services from the selection of a dissertation topic to complete your master&apos;s dissertation successfully with the expected grade. UK MBA thesis topics are selected based on your area of interest, research gap, and feasibility of data collection. We make you strong in your dissertation by dealing with all the questions that you have in your mind.
             </p>
           </div>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Free while you order dissertation</h3>
-            <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.75, marginBottom: "10px" }}>
+            <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.75, marginBottom: "10px" }}>
               We help to develop questionnaire or interview guide at free of cost while you order for dissertation. We also provide free:
             </p>
             <ul style={{ paddingLeft: "18px", fontSize: "0.85rem", color: "#555", lineHeight: 1.9 }}>

@@ -209,7 +209,7 @@ export default async function QASlugPage({ params }: Props) {
     <>
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
             <Link href="/qa-forum/" style={{ color: "#a0b8e0" }}>Q&A Forum</Link>{" / "}
             <span style={{ color: "#fff" }}>{title}</span>

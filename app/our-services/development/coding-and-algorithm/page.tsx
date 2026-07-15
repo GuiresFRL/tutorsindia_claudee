@@ -280,7 +280,7 @@ export default function CodingAlgorithmPage() {
       <section style={{ background: "#1a2a6c", color: "#fff", padding: "56px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, marginBottom: "24px", textAlign: "center" }}>Why Choose Tutors India: Coding, Programming &amp; Algorithm development Service features</h2>
-          <p style={{ color: "#a0b8e0", lineHeight: 1.8, textAlign: "center", marginBottom: "28px", fontSize: "0.9rem" }}>
+          <p style={{ color: "#a0b8e0", lineHeight: 1.8, textAlign: "center", marginBottom: "28px", fontSize: "0.96rem" }}>
             Qualified researchers, research methodology expertise, well experienced coders, developers, programmers capable of handling various software and many more, unlimited revision, only peer-reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "16px" }} className="four-col-grid">
@@ -310,13 +310,13 @@ export default function CodingAlgorithmPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "28px" }} className="two-col-grid">
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A complete secure &amp; Confidential Service</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               100% confidentiality of client&apos;s personal details, payment details, project works, and copyrights of research works. Documents accessed only by writers with NDA agreements. Financial information protected by 128-bit SSL encryption.
             </p>
           </div>
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Fully Referenced</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               Our work references only peer-reviewed sources such as scholarly articles and textbooks to select the topic. We refer databases including Web of Science, ProQuest, Google Scholar, Business Source Complete.
             </p>
           </div>
@@ -341,7 +341,7 @@ export default function CodingAlgorithmPage() {
             ].map((g) => (
               <div key={g.title} style={{ background: "#fff", border: "1px solid #c5d5f0", borderRadius: "10px", padding: "20px", textAlign: "center" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{g.icon}</div>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.88rem" }}>{g.title}</div>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.94rem" }}>{g.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#555", lineHeight: 1.6 }}>{g.desc}</div>
               </div>
             ))}

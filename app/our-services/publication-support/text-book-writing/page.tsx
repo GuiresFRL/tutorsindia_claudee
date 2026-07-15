@@ -148,7 +148,7 @@ export default function TextBookWritingPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               Tutors India Difference in Textbook writing service
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Writing a textbook is not an easy task. Tutors India assists in developing textbooks with perfection and implementing ideas in creating quality content. We Write textbook with innovative ideas that would attract publishers and ensures that the textbooks have a significant international audience.
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function TextBookWritingPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               We Write text book with innovative ideas that would attract publishers
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Our expertise has capability to develop content, structure and organization, learning and teaching, language, textbook layout, pedagogical use of e-features. We ensure textbooks have a significant international audience.
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function TextBookWritingPage() {
             {services.map((s, i) => (
               <div key={s.t} style={{ background: "#fff", borderRadius: "10px", padding: "22px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${i % 3 === 0 ? "#1a2a6c" : i % 3 === 1 ? "#e87722" : "#2563b0"}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "8px" }}>{s.t}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{s.d}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{s.d}</p>
               </div>
             ))}
           </div>
@@ -207,7 +207,7 @@ export default function TextBookWritingPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: "10px" }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, marginBottom: "10px" }}>{t.desc}</p>
                 <p style={{ color: "#888", fontSize: "0.82rem", lineHeight: 1.6, margin: 0, borderTop: "1px solid #eee", paddingTop: "10px" }}>{t.includes}</p>
               </div>
             ))}
@@ -292,7 +292,7 @@ export default function TextBookWritingPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
@@ -317,7 +317,7 @@ export default function TextBookWritingPage() {
               </div>
             ))}
           </div>
-          <p style={{ color: "#555", fontSize: "0.88rem", marginTop: "24px", lineHeight: 1.7 }}>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
             Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
           </p>
         </div>

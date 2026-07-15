@@ -112,11 +112,11 @@ export default function OrderNowPage() {
           {/* What We Need */}
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>What Information Do We Need?</h2>
-            <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "16px", lineHeight: 1.65 }}>
+            <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "16px", lineHeight: 1.65 }}>
               To provide you with an accurate quote within 30 minutes and ensure we deliver exactly what you need, please have the following information ready when you contact us:
             </p>
             {whatWeNeed.map(item => (
-              <div key={item.item} style={{ display: "flex", gap: "10px", padding: "10px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.88rem", color: "#555" }}>
+              <div key={item.item} style={{ display: "flex", gap: "10px", padding: "10px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.94rem", color: "#555" }}>
                 <span style={{ fontSize: "1.1rem", flexShrink: 0 }}>{item.icon}</span>
                 {item.item}
               </div>
@@ -131,7 +131,7 @@ export default function OrderNowPage() {
 
         {/* Order Process */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", textAlign: "center" }}>Our Order Process — 6 Simple Steps</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px", textAlign: "center" }}>Transparent, straightforward, and designed around your success</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px", textAlign: "center" }}>Transparent, straightforward, and designed around your success</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px", marginBottom: "48px" }} className="three-col-grid">
           {processSteps.map(step => (
             <div key={step.n} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "22px" }}>
@@ -168,7 +168,7 @@ export default function OrderNowPage() {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "24px" }}>
-            <Link href="/our-services/" style={{ padding: "10px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>
+            <Link href="/our-services/" style={{ padding: "10px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>
               View All Services →
             </Link>
           </div>

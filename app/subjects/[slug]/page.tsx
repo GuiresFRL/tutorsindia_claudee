@@ -69,7 +69,7 @@ export default async function SubjectPage({ params }: Props) {
     <>
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link> / <Link href="/subjects/" style={{ color: "#a0b8e0" }}>Subjects</Link> / {subject.title}
           </div>
           <span style={{ fontSize: "3rem" }}>{subject.icon}</span>
@@ -91,7 +91,7 @@ export default async function SubjectPage({ params }: Props) {
             <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--navy)", marginBottom: "14px" }}>Services We Offer in {subject.title}</h3>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
               {subject.services.map((svc) => (
-                <div key={svc} style={{ display: "flex", gap: "8px", padding: "10px", background: "var(--gray)", borderRadius: "6px", fontSize: "0.88rem", color: "var(--text-mid)" }}>
+                <div key={svc} style={{ display: "flex", gap: "8px", padding: "10px", background: "var(--gray)", borderRadius: "6px", fontSize: "0.94rem", color: "var(--text-mid)" }}>
                   <span style={{ color: "var(--orange)", fontWeight: 700 }}>✓</span>
                   {svc}
                 </div>

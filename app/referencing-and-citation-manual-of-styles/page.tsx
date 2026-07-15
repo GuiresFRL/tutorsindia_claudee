@@ -125,7 +125,7 @@ export default async function ReferencingPage() {
 
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", textAlign: "center" }}>Major Citation Styles — Complete Guide</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "36px", textAlign: "center" }}>8 referencing systems with examples, disciplines, and key rules</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "36px", textAlign: "center" }}>8 referencing systems with examples, disciplines, and key rules</p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "48px" }}>
           {styles.map((s) => (

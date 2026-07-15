@@ -90,7 +90,7 @@ export default function SubjectsPage() {
             {[{ icon: "🎓", title: "Subject Experts Only", desc: "Writers assigned based on specific subject expertise and academic qualification" }, { icon: "🛡️", title: "Plagiarism Free", desc: "All work scanned using Turnitin. Less than 5% guaranteed with certificate" }, { icon: "🔁", title: "Unlimited Revisions", desc: "Free revisions until 100% satisfied — even after project completion" }, { icon: "⏱", title: "On-Time Delivery", desc: "Minor changes within 24 hours, significant changes within 48 hours" }, { icon: "📚", title: "Peer-Reviewed Sources", desc: "Only peer-reviewed academic sources from credible international databases" }, { icon: "🔒", title: "100% Confidential", desc: "NDA-signed writers, 128-bit SSL encryption, unique project codes" }, { icon: "📞", title: "24/7 Support", desc: "Email, phone, WhatsApp support across all time zones" }, { icon: "💷", title: "Affordable Pricing", desc: "Student-friendly rates in your currency with instalment options" }].map(f => (
               <div key={f.title} style={{ textAlign: "center", padding: "16px" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{f.icon}</div>
-                <div style={{ fontSize: "0.88rem", fontWeight: 700, marginBottom: "5px" }}>{f.title}</div>
+                <div style={{ fontSize: "0.94rem", fontWeight: 700, marginBottom: "5px" }}>{f.title}</div>
                 <div style={{ fontSize: "0.76rem", color: "#c5d5f0", lineHeight: 1.5 }}>{f.desc}</div>
               </div>
             ))}

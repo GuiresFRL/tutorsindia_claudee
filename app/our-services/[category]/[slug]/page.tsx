@@ -477,7 +477,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </h3>
                 <ul style={{ listStyle: "none", padding: 0 }}>
                   {content.features.map((f) => (
-                    <li key={f} style={{ display: "flex", gap: "10px", padding: "9px 0", borderBottom: "1px solid var(--border)", fontSize: "0.88rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
+                    <li key={f} style={{ display: "flex", gap: "10px", padding: "9px 0", borderBottom: "1px solid var(--border)", fontSize: "0.94rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
                       <span style={{ color: "var(--orange)", fontWeight: 700, flexShrink: 0 }}>✓</span>
                       {f}
                     </li>
@@ -504,7 +504,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               {guaranteeBadges.map((g) => (
                 <div key={g.title} style={{ background: "#fff", borderRadius: "8px", padding: "14px", border: "1px solid var(--border)" }}>
                   <div style={{ fontSize: "1.4rem", marginBottom: "4px" }}>{g.icon}</div>
-                  <div style={{ fontWeight: 700, color: "var(--navy)", fontSize: "0.88rem", marginBottom: "3px" }}>{g.title}</div>
+                  <div style={{ fontWeight: 700, color: "var(--navy)", fontSize: "0.94rem", marginBottom: "3px" }}>{g.title}</div>
                   <div style={{ fontSize: "0.78rem", color: "var(--text-mid)" }}>{g.desc}</div>
                 </div>
               ))}

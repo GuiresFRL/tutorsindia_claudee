@@ -130,7 +130,7 @@ export default function Home() {
           </p>
           <ul style={{ listStyle: "none", padding: 0, marginBottom: "24px" }}>
             {["Free 30-minute consultation", "Response within 30 minutes", "Chapter-by-chapter delivery", "Dedicated project coordinator"].map((item) => (
-              <li key={item} style={{ display: "flex", gap: "8px", padding: "6px 0", fontSize: "0.88rem", color: "#c5d5f0" }}>
+              <li key={item} style={{ display: "flex", gap: "8px", padding: "6px 0", fontSize: "0.94rem", color: "#c5d5f0" }}>
                 <span style={{ color: "#f9c74f" }}>→</span> {item}
               </li>
             ))}
@@ -164,16 +164,16 @@ export default function Home() {
                 {idx < processSteps.length - 1 && (
                   <div style={{ position: "absolute", right: "-24px", top: "50%", transform: "translateY(-50%)", color: "var(--border)", fontSize: "1.2rem", zIndex: 1 }} className="process-arrow">→</div>
                 )}
-                <div style={{ width: "44px", height: "44px", borderRadius: "50%", background: "var(--navy)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.9rem", margin: "0 auto 12px" }}>
+                <div style={{ width: "44px", height: "44px", borderRadius: "50%", background: "var(--navy)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.96rem", margin: "0 auto 12px" }}>
                   {step.n}
                 </div>
-                <h4 style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{step.title}</h4>
+                <h4 style={{ fontSize: "0.94rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{step.title}</h4>
                 <p style={{ fontSize: "0.78rem", color: "var(--text-mid)", lineHeight: 1.5 }}>{step.desc}</p>
               </div>
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "28px" }}>
-            <Link href="/our-process/" style={{ padding: "10px 28px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>
+            <Link href="/our-process/" style={{ padding: "10px 28px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>
               View Full Process →
             </Link>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
               Our Guarantees
             </Link>
           </div>
-          <blockquote style={{ borderLeft: "4px solid var(--orange)", padding: "14px 18px", background: "var(--gray)", borderRadius: "0 8px 8px 0", fontStyle: "italic", color: "var(--text-mid)", fontSize: "0.9rem" }}>
+          <blockquote style={{ borderLeft: "4px solid var(--orange)", padding: "14px 18px", background: "var(--gray)", borderRadius: "0 8px 8px 0", fontStyle: "italic", color: "var(--text-mid)", fontSize: "0.96rem" }}>
             &quot;Tutors India helped me gain clarity on the direction my research proposal needed to go and provided me with more clarity in my work. The experts understood my difficulties in writing the research proposal and guided me accordingly.&quot;
             <cite style={{ display: "block", marginTop: "10px", fontSize: "0.82rem", fontStyle: "normal", fontWeight: 600, color: "var(--navy)" }}>— Niamh McLaughlin</cite>
           </blockquote>
@@ -335,7 +335,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "32px" }}>
-            <Link href="/blog/" style={{ display: "inline-block", padding: "11px 30px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>
+            <Link href="/blog/" style={{ display: "inline-block", padding: "11px 30px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>
               View All Posts →
             </Link>
           </div>
@@ -349,7 +349,7 @@ export default function Home() {
         <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.88)", marginBottom: "10px" }}>
           Join 2,00,000+ scholars who have trusted Tutors India with their academic success since 2001.
         </p>
-        <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", marginBottom: "28px" }}>Response within 30 minutes · Unlimited Revisions · Plagiarism Free</p>
+        <p style={{ fontSize: "0.96rem", color: "rgba(255,255,255,0.7)", marginBottom: "28px" }}>Response within 30 minutes · Unlimited Revisions · Plagiarism Free</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "13px 36px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>
             Order Now

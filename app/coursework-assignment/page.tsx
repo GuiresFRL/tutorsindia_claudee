@@ -68,7 +68,7 @@ export default function CourseworkAssignmentPage() {
 
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", textAlign: "center" }}>Coursework &amp; Assignment Types We Cover</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px", textAlign: "center" }}>Expert academic writing across all coursework types for UK, US, and Australian universities</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px", textAlign: "center" }}>Expert academic writing across all coursework types for UK, US, and Australian universities</p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px", marginBottom: "48px" }} className="two-col-grid">
           {assignmentTypes.map(a => (
             <Link key={a.title} href={a.href} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px", display: "flex", gap: "14px", alignItems: "flex-start" }}>
@@ -86,7 +86,7 @@ export default function CourseworkAssignmentPage() {
           {guarantees.map(g => (
             <div key={g.title} style={{ background: "#f5f6fa", borderRadius: "10px", padding: "20px", border: "1px solid #dde2ef", textAlign: "center" }}>
               <div style={{ fontSize: "2rem", marginBottom: "8px" }}>{g.icon}</div>
-              <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "5px" }}>{g.title}</h3>
+              <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "5px" }}>{g.title}</h3>
               <p style={{ fontSize: "0.79rem", color: "#666", lineHeight: 1.55 }}>{g.desc}</p>
             </div>
           ))}

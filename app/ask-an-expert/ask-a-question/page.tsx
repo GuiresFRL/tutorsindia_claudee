@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 const inputStyle: React.CSSProperties = {
   width: "100%", padding: "10px 14px", border: "1.5px solid #dde2ef",
-  borderRadius: "6px", fontSize: "0.9rem", outline: "none",
+  borderRadius: "6px", fontSize: "0.96rem", outline: "none",
   boxSizing: "border-box", fontFamily: "inherit", color: "#222", background: "#fff",
 };
 
@@ -109,7 +109,7 @@ export default function AskAQuestionPage() {
               </div>
 
               {error && (
-                <div style={{ background: "#fff0f0", border: "1px solid #fca5a5", borderRadius: "6px", padding: "10px 14px", color: "#b91c1c", fontSize: "0.88rem" }}>
+                <div style={{ background: "#fff0f0", border: "1px solid #fca5a5", borderRadius: "6px", padding: "10px 14px", color: "#b91c1c", fontSize: "0.94rem" }}>
                   {error}
                 </div>
               )}
@@ -156,13 +156,13 @@ export default function AskAQuestionPage() {
               <p style={{ fontSize: "0.83rem", color: "#555", lineHeight: 1.6, marginBottom: "14px" }}>
                 For full dissertation, essay or research support, our PhD-qualified experts offer comprehensive personalised help.
               </p>
-              <Link href="/order-now/" style={{ display: "block", textAlign: "center", padding: "10px 20px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.88rem" }}>
+              <Link href="/order-now/" style={{ display: "block", textAlign: "center", padding: "10px 20px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.94rem" }}>
                 Order Full Service
               </Link>
             </div>
 
             <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.9rem", color: "#1a2a6c", marginBottom: "10px" }}>Browse Existing Answers</h3>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.96rem", color: "#1a2a6c", marginBottom: "10px" }}>Browse Existing Answers</h3>
               <p style={{ fontSize: "0.82rem", color: "#666", marginBottom: "12px" }}>Your question may already be answered in our expert Q&amp;A library.</p>
               <Link href="/ask-an-expert/" style={{ fontSize: "0.85rem", color: "#2563b0", fontWeight: 600 }}>← Browse All Q&amp;A</Link>
             </div>
@@ -173,7 +173,7 @@ export default function AskAQuestionPage() {
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "48px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Full Academic Writing Support?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "20px" }}>Our PhD-qualified experts provide comprehensive dissertation, essay and research support.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "20px" }}>Our PhD-qualified experts provide comprehensive dissertation, essay and research support.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 30px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

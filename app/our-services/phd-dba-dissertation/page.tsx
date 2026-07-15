@@ -179,21 +179,21 @@ export default function PhDDBADissertationPage() {
         {/* Why Tutors India */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Why Tutors India for MBA dissertation writing services?</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their dissertation successfully.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Therefore, given that dissertation plays a significant role in completing the UK university degree, at Tutors India, we offer both tutoring and writing services. We just do not provide you writing assistance but also tutoring you at every stage on how we proceeded with the dissertation.
           </p>
 
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px", marginTop: "20px" }}>A Trusted MBA Dissertation Writing Service at Tutors India</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Tutors India has skilled and talented professional UK writers who work with your UK MBA dissertations and assist you at all the stages of your UK / the USA MBA dissertation writing either online or email based. They assist you 24/7 and provide evidence that we deliver what exactly you expect. This is one of the highlights of our services which remains unmatched by our competitors across the world.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our team of UK dissertation writing experts consists of experienced professionals who are holding Ph.D. degree from the prestigious universities from the UK, US, and Australia, who can help you in writing any dissertation whether it is science or management or computer science or Engineering or environmental science. Our experts write your UK MBA &amp; DBA dissertation/ projects (exclusively for the UK / the USA/ Australian universities MBA dissertation writing service (UK MBA, USA MBA, Australian MBA, and others) without plagiarism and set in innovative ideas. Our unique approach has helped hundreds of scholars to complete and submit their MBA Dissertation across the global successfully.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Tutors India has in-house internal committee consists of UK and US based Ph.D. holders for writing and as research advisors, postdoctoral fellows and M.D holding Ph.D. with rich experience in research. Some of our writers are trained at Harvard School, Oxford, London School of Business, and the University of Birmingham.
           </p>
         </div>
@@ -218,7 +218,7 @@ export default function PhDDBADissertationPage() {
         {/* What You Expect */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>What You Expect when you order MBA / DBA Dissertation Writing Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
             Get some of our Service features at Free of Costs - We Share references sourced for your MBA dissertation in the form of PDFs, questionnaire or interview guide*, formatting, referencing, and appendices at free of costs
           </p>
         </div>
@@ -241,7 +241,7 @@ export default function PhDDBADissertationPage() {
         {cat && (
           <div style={{ marginBottom: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Our PhD Dissertation Services</h2>
-            <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Complete PhD / DBA dissertation support from topic selection to viva preparation</p>
+            <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>Complete PhD / DBA dissertation support from topic selection to viva preparation</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
               {cat.services.map(s => (
                 <Link key={s.href} href={s.href} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px", textDecoration: "none", display: "block" }}>
@@ -257,9 +257,9 @@ export default function PhDDBADissertationPage() {
         {/* Dissertation Writing Service Features */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>UK MBA Dissertation Service feature</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "6px", fontSize: "0.94rem" }}>The US &amp; UK writers at Tutors India aim at inculcating knowledge within MBA Scholars/ students and build a great confidence to submit their dissertation successfully.</p>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "6px", fontSize: "1rem" }}>The US &amp; UK writers at Tutors India aim at inculcating knowledge within MBA Scholars/ students and build a great confidence to submit their dissertation successfully.</p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px", marginTop: "16px" }}>A Dissertation Writing Service features that helps to get the grade</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
             We help you in a broad range of services from the selection of a dissertation topic to complete your master's dissertation successfully with the expected grade. UK MBA / or Ph.D. thesis topics are selected based on your area of interest, research gap, and feasibility of data collection. We make you strong in your dissertation by dealing with all the questions that you have in your mind. The process also entails data collection, statistical analysis and presentation in the format of your Institute. As a final process, the master's thesis is further put to review and proofreading to ensure that you get quality work.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Our Ph.D. / DBA Dissertation Writing &amp; Editing Service Features</h2>
@@ -292,7 +292,7 @@ export default function PhDDBADissertationPage() {
         {/* Subject Expertise */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Your Dissertation is written by your choice of Subject Matter Expertise</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "14px" }}>Specialized Subject Matter Expertise across the globe</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "14px" }}>Specialized Subject Matter Expertise across the globe</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {subjects.map(s => (
               <span key={s} style={{ background: "#f0f4ff", border: "1px solid #c5d0ea", borderRadius: "20px", padding: "6px 14px", fontSize: "0.82rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>

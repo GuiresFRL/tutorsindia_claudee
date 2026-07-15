@@ -345,7 +345,7 @@ export default function MedicalWritingPage() {
             ].map((g) => (
               <div key={g.title} style={{ background: "rgba(255,255,255,0.07)", borderRadius: "10px", padding: "20px" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{g.icon}</div>
-                <div style={{ fontWeight: 700, fontSize: "0.88rem", marginBottom: "6px" }}>{g.title}</div>
+                <div style={{ fontWeight: 700, fontSize: "0.94rem", marginBottom: "6px" }}>{g.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#a0b8e0", lineHeight: 1.6 }}>{g.desc}</div>
               </div>
             ))}
@@ -358,13 +358,13 @@ export default function MedicalWritingPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "28px" }} className="two-col-grid">
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A complete secure &amp; Confidential Service</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               100% confidentiality of client&apos;s personal details, payment details, project works, and copyrights of research works. Documents accessed only by NDA-signed writers; 128-bit SSL encryption protects financial information.
             </p>
           </div>
           <div style={{ background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px" }}>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Fully Referenced</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.9rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.96rem" }}>
               Our dissertation work is fully referenced with latest articles and textbooks. Only peer-reviewed sources used; databases include Web of Science and ProQuest.
             </p>
           </div>
@@ -389,7 +389,7 @@ export default function MedicalWritingPage() {
             ].map((g) => (
               <div key={g.title} style={{ background: "#fff", border: "1px solid #c5d5f0", borderRadius: "10px", padding: "20px", textAlign: "center" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{g.icon}</div>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.88rem" }}>{g.title}</div>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", fontSize: "0.94rem" }}>{g.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#555", lineHeight: 1.6 }}>{g.desc}</div>
               </div>
             ))}

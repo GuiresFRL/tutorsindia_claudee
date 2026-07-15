@@ -62,7 +62,7 @@ export default async function MarketingSlugPage({ params }: Props) {
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}>
             {title}
           </h1>
-          <p style={{ color: "#c5d5f0", fontSize: "0.9rem" }}>Marketing — Academic Sample Work</p>
+          <p style={{ color: "#c5d5f0", fontSize: "0.96rem" }}>Marketing — Academic Sample Work</p>
         </div>
       </section>
 
@@ -90,7 +90,7 @@ export default async function MarketingSlugPage({ params }: Props) {
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Marketing Assignment Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified marketing experts provide tailored support for dissertations, essays and assignments.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "18px" }}>Our PhD-qualified marketing experts provide tailored support for dissertations, essays and assignments.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

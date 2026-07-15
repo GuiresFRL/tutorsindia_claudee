@@ -110,7 +110,7 @@ export default function GuaranteesPage() {
     <>
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link> / Guarantees
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "2.2rem", marginBottom: "12px" }}>Our Guarantees</h1>
@@ -134,7 +134,7 @@ export default function GuaranteesPage() {
               </div>
               <ul style={{ listStyle: "none", padding: 0 }}>
                 {g.points.map((point) => (
-                  <li key={point} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid var(--border)", fontSize: "0.88rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
+                  <li key={point} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid var(--border)", fontSize: "0.94rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
                     <span style={{ color: "var(--orange)", fontWeight: 700, flexShrink: 0, marginTop: "2px" }}>✓</span>
                     {point}
                   </li>

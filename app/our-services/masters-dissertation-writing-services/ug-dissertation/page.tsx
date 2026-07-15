@@ -115,14 +115,14 @@ export default function UGDissertationPage() {
         {/* Intro */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Full Professional Undergraduate Dissertation Writing</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Undergraduate dissertations in UK and US universities represent an extended piece of writing, detailing your independent research and culminating your academic studies. A typical undergraduate dissertation is 8,000–10,000 words (exclusive of footnotes, references, and appendices). Universities employ plagiarism detection and the consequences for similarity issues can be severe.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             At Tutors India, part custom UG dissertation writing services are handled and written by the style, design, and format of an ideal dissertation required by the UK, Australia, and the US universities. We assist you to complete your dissertation covering: topic selection, research proposal writing, reflection journals, introduction, literature review, research methodology, presenting and discussing findings, research ethics, citations and referencing, and references along with the Appendices.
           </p>
           <div style={{ background: "#fff8f0", borderLeft: "4px solid #e87722", borderRadius: "0 8px 8px 0", padding: "14px 18px" }}>
-            <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7 }}>
               <strong style={{ color: "#1a2a6c" }}>The UK Complete (Full &amp; Chapter-wise) Professional UG Dissertation Writing.</strong> Our professional dissertation writers have completed around 5,000 UG Dissertations successfully. Just send us your dissertation topic along with the deadline and see results that are far justified and mark the success of your dissertation.
             </p>
           </div>
@@ -149,7 +149,7 @@ export default function UGDissertationPage() {
         {/* 12 Chapter Structure */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>A Full UG Dissertation Features — All Chapter Components</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>We follow specific university guidelines across the United States, United Kingdom, Australia, and other universities. Our UG dissertation structure consists of:</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>We follow specific university guidelines across the United States, United Kingdom, Australia, and other universities. Our UG dissertation structure consists of:</p>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden" }}>
             {chapters.map((ch, i) => (
               <div key={ch.n} style={{ padding: "16px 22px", borderBottom: i < chapters.length - 1 ? "1px solid #f0f2fa" : "none", display: "flex", gap: "16px", alignItems: "flex-start" }}>
@@ -166,7 +166,7 @@ export default function UGDissertationPage() {
         {/* Service Tiers */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>What Services Do We Offer?</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Three levels of UG dissertation writing services based on your academic needs</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>Three levels of UG dissertation writing services based on your academic needs</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
             {serviceTiers.map(t => (
               <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>

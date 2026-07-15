@@ -136,7 +136,7 @@ export default function ManuscriptDevelopmentPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               We attend the Reviewer&apos;s Comments
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               Tutors India manuscript development provide a convincing rationale for critical decisions. We rewrite your manuscript based on the reviewer&apos;s comments or improvise the manuscript before you submit to the journal. We ensure address inadequate review of literature, inappropriate citations, unclear introduction, ambiguous research questions, inadequately described sample, insufficient methodology, incompletely described measures, unclear statistical analysis, poor conceptualization of discussion, discussion that goes beyond the data shared, poor style of writing and excessive length.
             </p>
           </div>
@@ -144,7 +144,7 @@ export default function ManuscriptDevelopmentPage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
               We rewrite manuscript based on the Reviewer&apos;s comments, editorial and writing style
             </h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
               At Tutors India, we offer thought provoking suggestions for manuscript and ensure its acceptance in peer reviewed journal. Thereby you&apos;re assured for academic recognition, one of the metrics utilized for advancement along the academic ranks.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function ManuscriptDevelopmentPage() {
             ].map(t => (
               <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
                 <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
@@ -200,7 +200,7 @@ export default function ManuscriptDevelopmentPage() {
                 { t: "Case Reports", d: "Unique patient or business scenarios presented in structured academic format." },
               ].map(m => (
                 <div key={m.t} style={{ background: "#f5f7ff", borderRadius: "8px", padding: "14px 16px" }}>
-                  <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.88rem", marginBottom: "4px" }}>{m.t}</div>
+                  <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.94rem", marginBottom: "4px" }}>{m.t}</div>
                   <div style={{ color: "#666", fontSize: "0.82rem", lineHeight: 1.5 }}>{m.d}</div>
                 </div>
               ))}
@@ -242,9 +242,9 @@ export default function ManuscriptDevelopmentPage() {
             { n: "5", t: "Free Tutoring", d: "Free tutoring sessions for discussing your work with program supervisors or thesis committees." },
           ].map(f => (
             <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
-              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0 }}>{f.n}</div>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
               <div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{f.t}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.6, margin: 0 }}>{f.d}</p>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function ManuscriptDevelopmentPage() {
           {guarantees.map(f => (
             <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
-              <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
             </div>
           ))}
         </div>
