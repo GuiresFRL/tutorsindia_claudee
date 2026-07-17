@@ -4,7 +4,7 @@
  * using paginated requests (WP REST API caps at 100 per page).
  */
 
-const ACADEMY_API_BASE = "https://tutorsindia.com/academy/wp-json/wp/v2";
+const ACADEMY_API_BASE = "https://tutorsindia.net/academy/wp-json/wp/v2";
 
 export interface AcademyPost {
   id: number;
