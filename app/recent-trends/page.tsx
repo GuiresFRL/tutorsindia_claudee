@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Recent Academic Research Trends",
   description: "Stay updated with the latest academic writing trends, blog posts, and insights from Tutors India.",
   
-  alternates: { canonical: "https://tutorsindia.com/recent-trends/" },
+  alternates: { canonical: "https://www.tutorsindia.com/recent-trends/" },
 };
 
 export default function RecentTrendsPage() {

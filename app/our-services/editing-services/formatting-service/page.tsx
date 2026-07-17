@@ -5,7 +5,7 @@ import TestimonialSlider from '@/components/ui/TestimonialSlider';
 export const metadata: Metadata = {
   title: 'Thesis typesetting, Formatting services',
   description: 'Formatting & Typesetting Service for Journal, Dissertation & Grant Proposals',
-  alternates: { canonical: "https://tutorsindia.com/our-services/editing-services/formatting-service/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/formatting-service/" },
 };
 
 const faqs = [

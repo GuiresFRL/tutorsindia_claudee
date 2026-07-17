@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD Research Proposal Writing Help",
   description: "Are you struggling to write a research proposal? All your Ph.D. Research Proposals are written by qualified and experienced researchers from the US & UK.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-research-proposal/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-research-proposal/" },
 };
 
 const faqs = [

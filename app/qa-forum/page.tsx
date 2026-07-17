@@ -6,7 +6,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Q&A Forum — Expert Academic Answers",
   description: "Get answers to your academic questions from Tutors India's expert team. Statistical analysis, research methodology, nursing assignments, and more.",
-  alternates: { canonical: "https://tutorsindia.com/qa-forum/" },
+  alternates: { canonical: "https://www.tutorsindia.com/qa-forum/" },
 };
 
 const statisticsQuestions = [

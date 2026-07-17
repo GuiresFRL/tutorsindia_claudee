@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Expert Master's Complete Dissertation Writing Services",
   description: "Struggling with your Full Dissertation? Our services offer expert help from start to finish, ensuring your research meets academic standards.",
   keywords: "masters full dissertation writing services, masters full dissertation writing help, masters complete dissertation writing services, masters complete thesis writing help, masters dissertation writing help uk, masters dissertation writing support uk",
-  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/full-dissertation/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/full-dissertation/" },
 };
 
 const dissertationStructure = [

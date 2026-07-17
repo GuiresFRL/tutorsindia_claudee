@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Academic Poster Presentation Service",
   description: "Academic poster presentation service for conferences and dissertations. Professionally designed, print-ready research posters delivered on time by subject matter experts.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/poster-presentation/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/poster-presentation/" },
 };
 
 const faqs = [

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Guarantees — Plagiarism Free, On Time",
   description: "Tutors India guarantees: 100% plagiarism-free work, unlimited revisions, on-time delivery, subject matter expertise, complete confidentiality, and free research articles.",
-  alternates: { canonical: "https://tutorsindia.com/guarantees/" },
+  alternates: { canonical: "https://www.tutorsindia.com/guarantees/" },
 };
 
 const guarantees = [

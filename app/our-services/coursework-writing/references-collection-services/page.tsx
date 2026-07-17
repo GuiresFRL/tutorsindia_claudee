@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "UK Dissertation References Collection Service",
   description: "Professional UK Dissertation References Collection Service by qualified researchers from the US & UK. EMBASE, Emerald, ProQuest, EBSCOhost and 15+ databases. Tutors India.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/references-collection-services/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/references-collection-services/" },
 };
 
 const faqs = [

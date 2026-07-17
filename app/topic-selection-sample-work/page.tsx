@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Topic Selection Sample Work",
   description: "Browse topic selection sample work from Tutors India's PhD-qualified academic experts. Dissertation and research topic samples across all disciplines.",
   
-  alternates: { canonical: "https://tutorsindia.com/topic-selection-sample-work/" },
+  alternates: { canonical: "https://www.tutorsindia.com/topic-selection-sample-work/" },
 };
 
 export default async function TopicSelectionSampleWorkPage() {

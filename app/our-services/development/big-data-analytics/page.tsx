@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Big Data Analytics for Research",
   description: "Expert big data analytics support for academic dissertations and research projects. Hadoop, Spark, MongoDB, MapReduce, Apache Hive, Deep Learning & more. US & UK experts.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/development/big-data-analytics/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/big-data-analytics/" },
 };
 
 const faqs = [

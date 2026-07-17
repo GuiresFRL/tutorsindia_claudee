@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "2D, 3D & Multimedia Animation Services",
   description: "Expert 2D, 3D animation, CAD design, architectural rendering, mechanical engineering visuals and multimedia services for dissertations and academic projects.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/development/animation-services/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/animation-services/" },
 };
 
 const faqs = [

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Free University Essay Examples",
   description: "Browse free university essay examples across 50+ subjects. Expert-written samples demonstrating proper structure, research methods, and citation styles.",
   
-  alternates: { canonical: "https://tutorsindia.com/essays/" },
+  alternates: { canonical: "https://www.tutorsindia.com/essays/" },
 };
 
 export default async function EssaysPage() {

@@ -5,7 +5,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Academic Writing Help by Subject",
   description: "Expert academic writing support across all subjects — Law, Engineering, Economics, Medicine, Business, Arts, Biological Sciences, Computer Science. Tutors India.",
-  alternates: { canonical: "https://tutorsindia.com/subjects/" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/" },
 };
 
 const subjects = [

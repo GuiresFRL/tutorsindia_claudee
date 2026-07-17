@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Best Coursework writing Services by Experts",
   description: "Our Coursework writing services to help educators create engaging and informative course materials, optimized for diverse learning environments.",
   keywords: "coursework writing service, coursework writing services uk, best coursework writing service uk, law coursework writing service uk, cheap coursework writing services uk, coursework writing help, university coursework writing services, Coursework Writing Services, Coursework Writing Help",
-  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/" },
 };
 
 const testimonials = [

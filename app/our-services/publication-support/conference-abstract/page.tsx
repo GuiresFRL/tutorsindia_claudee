@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Conference Abstract Writing Services",
   description: "Tutors India provides professional abstract writing services with experienced researchers from the US and UK. Expert conference abstract writing for all disciplines.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/conference-abstract/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-abstract/" },
 };
 
 const faqs = [

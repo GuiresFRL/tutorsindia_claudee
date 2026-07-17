@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Professional CV Writing Service UK",
   description: "Professional CV, Personal Statement, Cover Letter & LinkedIn Profile Writing Service by UK certified specialists. Stand out to employers and land interviews.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/cv-writing/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/cv-writing/" },
 };
 
 const cvIncludes = [

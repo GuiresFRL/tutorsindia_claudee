@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Online Dissertation Tutoring Services",
   description: "Tutoring Service – Online Virtual Classes for All Your Academic Support. Qualified and experienced experts including retired professionals, adjuncts, real time faculties and professors across the world.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/development/online-tutoring-services/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/online-tutoring-services/" },
 };
 
 const faqs = [

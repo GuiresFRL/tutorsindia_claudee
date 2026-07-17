@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Coding and Algorithm Development Services for Research",
   description: "Get expert coding and algorithm development services for your software projects, from design to implementation.",
   keywords: "Algorithm Design and Development,Algorithm Development Services UK",
-  alternates: { canonical: "https://tutorsindia.com/our-services/development/coding-and-algorithm/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/coding-and-algorithm/" },
 };
 
 const faqs = [

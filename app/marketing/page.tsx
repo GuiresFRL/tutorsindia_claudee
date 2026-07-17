@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Marketing — Academic Samples & Insights",
   description: "Marketing academic sample works, essays and insights from Tutors India's PhD-qualified experts.",
   robots: { index: false, follow: false },
-  alternates: { canonical: "https://tutorsindia.com/marketing/" },
+  alternates: { canonical: "https://www.tutorsindia.com/marketing/" },
 };
 
 export default async function MarketingPage() {

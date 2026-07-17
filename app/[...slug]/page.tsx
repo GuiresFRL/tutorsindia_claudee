@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title}`,
     description: `${title} — Academic writing support from Tutors India.`,
     robots: { index: false, follow: false },
-    alternates: { canonical: `https://tutorsindia.com${path}` },
+    alternates: { canonical: `https://www.tutorsindia.com${path}` },
   };
 }
 
