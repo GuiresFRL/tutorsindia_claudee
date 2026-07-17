@@ -4,8 +4,10 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Manuscript Development Services | Tutors India",
-  description: "Professional manuscript development by qualified UK researchers. We rewrite, edit and format manuscripts based on reviewer comments for peer-reviewed journal acceptance. Tutors India.",
+  title: "Expert Manuscript Writing & Editing Services",
+  description: "Tutors India provides high quality manuscript development writing services & all kind of academic manuscript editing service & help for UK PhD & Masters students.",
+  keywords: "manuscript writing services, medical manuscript writing services, medical manuscript editing service, manuscript writing help, manuscript development services, manuscript editing services",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/manuscript-development/" },
 };
 
 const faqs = [

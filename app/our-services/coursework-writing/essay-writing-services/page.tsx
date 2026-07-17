@@ -4,8 +4,10 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Custom Essay Writing Services for Academic Success in the UK and UAE | Tutors India",
-  description: "Are you finding it difficult to cope with your essay deadlines, research assignments, and academic pressures at your university? Tutors India provides expert academic writing assistance for Master's or MBA degree students in the UK or UAE.",
+  title: "Expert Master’s Custom Essay Writing Services in UK, UAE",
+  description: "Get Master's Custom Essay Writing Services in UK & UAE for students facing low grades, deadline pressure, plagiarism, and urgent academic support.",
+  keywords: "Custom Essay Writing Services, Essay Writing Services in UK, MBA Essay Writing Services in UK, Academic Essay Writing Services in UK, Best Essay Writing Services in UK, Master's Essay Writing Services in UK, Essay Writing Support in UK, Essay Writing Help in UAE, MBA Essay Writing Help in UAE, Academic Essay Writing Help in UAE, Best Essay Writing Help in UAE, Master's Essay Writing Services in UAE, Master's Essay Writing Help in UAE.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/essay-writing-services/" },
 };
 
 const faqs = [

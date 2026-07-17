@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Best Coursework Writing Services by Experts | Tutors India",
-  description: "Are you struggling with your UK Master's M.Sc., M.Phil, MA, M.Ed. and MBA, DBA PhD coursework writing? Tutors India provides expert coursework writing and editing services for the US, UK and Australian Universities.",
+  title: "Best Coursework writing Services by Experts",
+  description: "Our Coursework writing services to help educators create engaging and informative course materials, optimized for diverse learning environments.",
+  keywords: "coursework writing service, coursework writing services uk, best coursework writing service uk, law coursework writing service uk, cheap coursework writing services uk, coursework writing help, university coursework writing services, Coursework Writing Services, Coursework Writing Help",
+  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/" },
 };
 
 const testimonials = [

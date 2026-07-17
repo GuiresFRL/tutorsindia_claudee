@@ -1,7 +1,14 @@
-"use client";
+import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Expert Master's Complete Dissertation Writing Services",
+  description: "Struggling with your Full Dissertation? Our services offer expert help from start to finish, ensuring your research meets academic standards.",
+  keywords: "masters full dissertation writing services, masters full dissertation writing help, masters complete dissertation writing services, masters complete thesis writing help, masters dissertation writing help uk, masters dissertation writing support uk",
+  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/full-dissertation/" },
+};
 
 const dissertationStructure = [
   { title: "Abstract", desc: "We write abstract for your master's dissertation which would approximately contain 250 to 350 words. We complete the abstract after the full dissertation has been written that includes a brief summary of introduction or background, objectives, boundaries, methodology, the results of the dissertation research, main conclusion that you arrive, and recommendations." },

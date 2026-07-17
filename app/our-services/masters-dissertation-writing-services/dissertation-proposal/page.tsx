@@ -1,7 +1,14 @@
-"use client";
+import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Master's Research Proposal Writing Services by Experts",
+  description: "Our expert writers offer research proposal writing services, ensuring your ideas are clearly communicated and aligned with academic.",
+  keywords: "masters research proposal writing help, masters dissertation proposal writing service, masters thesis proposal writing service, masters research proposal writing service, research proposal writing services in uk, masters research proposal writers in uk",
+  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-proposal/" },
+};
 
 const serviceTiers = [
   {

@@ -4,8 +4,10 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Coding & Algorithm Development Support for Engineering Dissertation & Manuscript",
-  description: "Expert coding, programming & algorithm development for IEEE projects, engineering dissertations and manuscripts. Java, MATLAB, NS2, Hadoop, CloudSim & more. US & UK experts.",
+  title: "Coding and Algorithm Development Services for Research",
+  description: "Get expert coding and algorithm development services for your software projects, from design to implementation.",
+  keywords: "Algorithm Design and Development,Algorithm Development Services UK",
+  alternates: { canonical: "https://tutorsindia.com/our-services/development/coding-and-algorithm/" },
 };
 
 const faqs = [

@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Publication Support | Manuscript Editing, Formatting & Journal Submission | Tutors India",
-  description: "Technical editing, proofreading, rewriting, addressing review comments and formatting for journal publication. US & UK writers. Tutors India Publication Support.",
+  title: "Research, Medical, and Scientific Publication Support Services",
+  description: "Research paper publication help. Our experts provide extensive support to write a manuscript journal selection, editing, formatting, & peer review.",
+  keywords: "publication help, publication services, paper publication services, journal publication assistance, article publication services, publication support services, best phd manuscript publication support services uk, best phd manuscript publication support services uae, research paper publishing services, academic journal publication services, medical publication support services, scientific journal publication services, research paper publication services in uae, paper publishing help,",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/" },
 };
 
 const testimonials = [

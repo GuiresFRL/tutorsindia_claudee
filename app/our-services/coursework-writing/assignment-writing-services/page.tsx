@@ -4,8 +4,10 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "UK Professional Help with Assignments | Tutors India",
-  description: "High-quality critical assignment writing services that ensure distinction. Qualified British assignment writers and researchers from the US and the UK. Tutors India.",
+  title: "Assignment Writing Service by Certified Writers",
+  description: "Our assignment writing service provides customized solutions for university students, ensuring high-quality work.",
+  keywords: "assignment writing service, assignment writing help, cheap assignment writing service, assignment help uk, assignment writers uk, assignment writing service uk, Assignment Writing Services, Assignment Writing Help, Assignment Writing Company",
+  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/assignment-writing-services/" },
 };
 
 const faqs = [

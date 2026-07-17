@@ -1,7 +1,14 @@
-"use client";
+import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Master's Dissertation Writing Services in UK, UAE",
+  description: "Tutors India has skilled and talented UK writers who work with your UK master's and MBA projects and assist you at all the stages of your dissertation writing.",
+  keywords: "masters dissertation writing services, masters thesis writing services, masters dissertation writing help, masters dissertation writing services in uk, masters thesis writing help, masters dissertation writing guide, masters dissertation writing assistance",
+  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/" },
+};
 
 const services = [
   { title: "Dissertation Topic Selection", desc: "At Tutors India, we offer thought-provoking suggestions for UK master's dissertation topics and titles that would mainly come from three principal sources.", href: "/our-services/masters-dissertation-writing-services/dissertation-topic/" },
