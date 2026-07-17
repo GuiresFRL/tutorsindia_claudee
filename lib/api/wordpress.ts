@@ -1,10 +1,10 @@
 /**
  * WordPress REST API client — Headless CMS integration.
- * Fetches ALL blog posts from WordPress at guires.info/blog
+ * Fetches ALL blog posts from WordPress at tutorsindia.net/blog
  * using paginated requests (WP REST API caps at 100 per page).
  */
 
-const WP_API_BASE = "https://guires.info/blog/wp-json/wp/v2";
+const WP_API_BASE = "https://tutorsindia.net/blog/wp-json/wp/v2";
 
 export interface WPPost {
   id: number;
@@ -172,7 +172,7 @@ export async function getAllPostSlugs(): Promise<string[]> {
 
 function proxyBlogImage(url: string | null | undefined): string | null {
   if (!url) return null;
-  return url.replace("https://guires.info/blog/wp-content/", "/blog/wp-content/");
+  return url.replace("https://tutorsindia.net/blog/wp-content/", "/blog/wp-content/");
 }
 
 export function getFeaturedImage(post: WPPost): string | null {
