@@ -34,7 +34,7 @@ export interface WPPost {
 }
 
 const FETCH_OPTS = {
-  next: { revalidate: 3600 },
+  cache: "no-store" as const,
   headers: { Accept: "application/json" },
 };
 
