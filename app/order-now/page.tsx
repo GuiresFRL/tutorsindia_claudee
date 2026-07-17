@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
   title: "Order Your Project",
@@ -82,31 +83,11 @@ export default function OrderNowPage() {
         {/* Contact Info + What We Need */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", marginBottom: "48px", alignItems: "start" }} className="two-col-grid">
 
-          {/* Contact Methods */}
+          {/* Contact Form */}
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>Contact Us to Place Your Order</h2>
-            {[
-              { flag: "🇬🇧", label: "UK Office", phone: "+44-1143520021", hours: "Mon–Sat 09:00–21:00 BST · Sun 10:00–18:00 BST", href: "tel:+441143520021" },
-              { flag: "🇮🇳", label: "India Office", phone: "+91 8754446690", hours: "Mon–Sat 09:00–21:00 IST · Sun 10:00–18:00 IST", href: "tel:+918754446690" },
-            ].map(office => (
-              <div key={office.label} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", marginBottom: "14px", display: "flex", gap: "14px", alignItems: "center" }}>
-                <span style={{ fontSize: "2rem" }}>{office.flag}</span>
-                <div>
-                  <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "2px" }}>{office.label}</div>
-                  <a href={office.href} style={{ fontSize: "1.05rem", fontWeight: 700, color: "#e87722", display: "block", marginBottom: "2px" }}>{office.phone}</a>
-                  <div style={{ fontSize: "0.76rem", color: "#888" }}>{office.hours}</div>
-                </div>
-              </div>
-            ))}
-            <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", marginBottom: "14px" }}>
-              <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>✉️ Email</div>
-              <a href="mailto:info@tutorsindia.com" style={{ fontSize: "1.05rem", fontWeight: 700, color: "#e87722" }}>info@tutorsindia.com</a>
-              <div style={{ fontSize: "0.76rem", color: "#888", marginTop: "2px" }}>Response within 30 minutes during business hours</div>
-            </div>
-            <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px" }}>
-              <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>💬 WhatsApp</div>
-              <a href="https://wa.me/918754446690" target="_blank" rel="noopener noreferrer" style={{ fontSize: "1.05rem", fontWeight: 700, color: "#25d366" }}>+91 8754446690</a>
-              <div style={{ fontSize: "0.76rem", color: "#888", marginTop: "2px" }}>Available for quick queries and order tracking</div>
+            <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
+              <ContactForm />
             </div>
           </div>
 
