@@ -33,8 +33,8 @@ export const siteInfo = {
     facebook: "https://www.facebook.com/TutorsIndia",
     twitter: "https://twitter.com/TutorsIndia",
     linkedin: "https://www.linkedin.com/company/tutors-india",
-    instagram: "https://www.instagram.com/tutorsindia/",
-    youtube: "https://www.youtube.com/c/TutorsIndia",
+    instagram: "https://www.instagram.com/tutors_india/",
+    youtube: "https://www.youtube.com/channel/UCM7QdIYgF7vWMhgMZuwyfrg/",
   },
 };
 
