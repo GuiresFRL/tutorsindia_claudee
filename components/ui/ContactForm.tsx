@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { COUNTRIES, flagEmoji } from "@/lib/data/countries";
 
 const SERVICES = [
   "Masters Dissertation Writing",
@@ -21,11 +22,6 @@ const SERVICES = [
   "Publication Support",
   "Coding & Programming",
   "Other",
-];
-
-const COUNTRIES = [
-  "United Kingdom", "United States", "Australia", "Canada", "India",
-  "UAE", "Singapore", "New Zealand", "Malaysia", "Other",
 ];
 
 const DEADLINES = [
@@ -66,15 +62,40 @@ const rowStyle: React.CSSProperties = {
   display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px",
 };
 
+const selectChevron =
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="%23667" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  );
+
+const selectStyle: React.CSSProperties = {
+  ...inputStyle,
+  appearance: "none",
+  WebkitAppearance: "none",
+  backgroundImage: `url("${selectChevron}")`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "right 14px center",
+  paddingRight: "36px",
+  cursor: "pointer",
+};
+
 export default function ContactForm() {
   const router = useRouter();
   const [form, setForm] = useState<FormData>(EMPTY);
+  const [phoneCode, setPhoneCode] = useState("+91");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const set = (k: keyof FormData) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
       setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value;
+    setForm((f) => ({ ...f, country: value }));
+    const match = COUNTRIES.find((c) => c.name === value);
+    if (match) setPhoneCode(match.dial);
+  };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -84,7 +105,7 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, phone: `${phoneCode} ${form.phone}` }),
       });
       const json = await res.json();
       if (!res.ok || !json.ok) throw new Error(json.error || "Failed");
@@ -114,13 +135,44 @@ export default function ContactForm() {
       <div style={rowStyle} className="form-row">
         <div>
           <label style={labelStyle} htmlFor="cf-phone">Phone / WhatsApp <span style={{ color: "#e87722" }}>*</span></label>
-          <input id="cf-phone" type="tel" required placeholder="+44 7700 000000" value={form.phone} onChange={set("phone")} style={inputStyle} />
+          <div style={{ display: "flex", alignItems: "stretch", border: "1px solid #dde2ef", borderRadius: "6px", overflow: "hidden", background: "#fff" }}>
+            <select
+              aria-label="Country code"
+              value={phoneCode}
+              onChange={(e) => setPhoneCode(e.target.value)}
+              style={{
+                ...selectStyle,
+                width: "112px",
+                flexShrink: 0,
+                border: "none",
+                borderRadius: 0,
+                paddingRight: "26px",
+                backgroundPosition: "right 8px center",
+                borderRight: "1px solid #dde2ef",
+              }}
+            >
+              {COUNTRIES.map((c) => (
+                <option key={c.iso2} value={c.dial}>{flagEmoji(c.iso2)} {c.dial}</option>
+              ))}
+            </select>
+            <input
+              id="cf-phone"
+              type="tel"
+              required
+              placeholder="7700 000000"
+              value={form.phone}
+              onChange={set("phone")}
+              style={{ ...inputStyle, border: "none", borderRadius: 0, flex: 1 }}
+            />
+          </div>
         </div>
         <div>
           <label style={labelStyle} htmlFor="cf-country">Country <span style={{ color: "#e87722" }}>*</span></label>
-          <select id="cf-country" required value={form.country} onChange={set("country")} style={inputStyle}>
+          <select id="cf-country" required value={form.country} onChange={handleCountryChange} style={selectStyle}>
             <option value="">Select country…</option>
-            {COUNTRIES.map((c) => <option key={c} value={c}>{c}</option>)}
+            {COUNTRIES.map((c) => (
+              <option key={c.iso2} value={c.name}>{flagEmoji(c.iso2)} {c.name}</option>
+            ))}
           </select>
         </div>
       </div>
@@ -128,7 +180,7 @@ export default function ContactForm() {
       {/* Row 3: Service */}
       <div>
         <label style={labelStyle} htmlFor="cf-service">Service Required <span style={{ color: "#e87722" }}>*</span></label>
-        <select id="cf-service" required value={form.service} onChange={set("service")} style={inputStyle}>
+        <select id="cf-service" required value={form.service} onChange={set("service")} style={selectStyle}>
           <option value="">Select a service…</option>
           {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
@@ -149,7 +201,7 @@ export default function ContactForm() {
       {/* Row 5: Deadline */}
       <div>
         <label style={labelStyle} htmlFor="cf-deadline">Deadline <span style={{ color: "#e87722" }}>*</span></label>
-        <select id="cf-deadline" required value={form.deadline} onChange={set("deadline")} style={inputStyle}>
+        <select id="cf-deadline" required value={form.deadline} onChange={set("deadline")} style={selectStyle}>
           <option value="">Select deadline…</option>
           {DEADLINES.map((d) => <option key={d} value={d}>{d}</option>)}
         </select>
