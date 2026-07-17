@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const title = slugToTitle(slug[slug.length - 1]);
   return {
-    title: `${title} — Ask an Expert | Tutors India`,
+    title: `${title} — Ask an Expert`,
     description: `Expert academic answer on: ${title}. Get guidance from Tutors India's PhD-qualified team.`,
   };
 }
@@ -28,7 +28,7 @@ export default async function AskExpertSlugPage({ params }: Props) {
     <>
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             {breadcrumbPath.map((segment, i) => {
               const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
               const label = i === 0 ? "Home" : slugToTitle(segment);

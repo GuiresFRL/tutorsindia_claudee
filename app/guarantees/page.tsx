@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Guarantees — Plagiarism Free, On-Time, Unlimited Revisions",
+  title: "Our Guarantees — Plagiarism Free, On Time",
   description: "Tutors India guarantees: 100% plagiarism-free work, unlimited revisions, on-time delivery, subject matter expertise, complete confidentiality, and free research articles.",
+  alternates: { canonical: "https://tutorsindia.com/guarantees/" },
 };
 
 const guarantees = [
@@ -52,16 +53,16 @@ const guarantees = [
       "Experts qualified from international universities including Birmingham, London Business School, Harvard",
       "2000+ experts across subjects & countries (USA, UK, Australia, Canada, New Zealand, Germany, France, Russia, Ukraine)",
       "Minimum degree requirement: Master's with research experience",
-      "All writers selected through stringent process including Skype interview, written test, and NDA signing",
+      "All writers selected through stringent process including video interview, written test, and NDA signing",
     ],
   },
   {
     icon: "💬",
     title: "Communicate with Your Writer",
     points: [
-      "Direct communication available with your writer via phone and Skype",
+      "Direct communication available with your writer via phone and WhatsApp",
       "You can come directly to our office with a prior appointment",
-      "Conference calls and Skype meetings arranged during critical periods",
+      "Conference calls and video meetings arranged during critical periods",
       "Customer support assists direct writer communication or message passing",
       "Exclusive coordinator contact for query clarification and delivery updates",
       "Messages forwarded immediately — check emails regularly for writer communications",
@@ -110,7 +111,7 @@ export default function GuaranteesPage() {
     <>
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link> / Guarantees
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "2.2rem", marginBottom: "12px" }}>Our Guarantees</h1>
@@ -134,7 +135,7 @@ export default function GuaranteesPage() {
               </div>
               <ul style={{ listStyle: "none", padding: 0 }}>
                 {g.points.map((point) => (
-                  <li key={point} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid var(--border)", fontSize: "0.88rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
+                  <li key={point} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid var(--border)", fontSize: "0.94rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
                     <span style={{ color: "var(--orange)", fontWeight: 700, flexShrink: 0, marginTop: "2px" }}>✓</span>
                     {point}
                   </li>

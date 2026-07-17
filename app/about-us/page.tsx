@@ -1,9 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "About Us — World's Reputed Academic Guidance Provider",
+  title: "About Us — Trusted Academic Guidance",
   description: "Tutors India is the world's reputed academic guidance provider since 2001, having guided more than 4,500 Ph.D. scholars and 10,500 Masters students across the globe.",
+  alternates: { canonical: "https://tutorsindia.com/about-us/" },
 };
 
 const stats = [
@@ -77,7 +79,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>22+</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Years of Academic<br />Excellence</div>
           </div>
@@ -117,13 +119,13 @@ export default function AboutPage() {
           </div>
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Our Vision &amp; Mission</h2>
-            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
               Tutors India aspires to be the best research guidance provider in the world through its holistic approach irrespective of subjects, countries, and specializations.
             </p>
-            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "0.94rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "14px", fontSize: "1rem" }}>
               To achieve this vision, Tutors India approaches each and every research work through a unique methodology after a lot of discussion between research expertise, professors, data management experts, industry professionals, and language &amp; technical editors. We develop the research work handling all subjects from various countries across the globe.
             </p>
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
+            <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
               We guide a wide range of researchers including Research Scholars, Professors and Heads of various departments in prestigious universities, Working Professionals, Entrepreneurs, Industrialists, and students.
             </p>
           </div>
@@ -155,7 +157,7 @@ export default function AboutPage() {
             ].map(item => (
               <div key={item.title} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "8px" }}>{item.icon}</div>
-                <div style={{ fontSize: "0.88rem", fontWeight: 700, marginBottom: "5px" }}>{item.title}</div>
+                <div style={{ fontSize: "0.94rem", fontWeight: 700, marginBottom: "5px" }}>{item.title}</div>
                 <div style={{ fontSize: "0.78rem", color: "#c5d5f0", lineHeight: 1.55 }}>{item.desc}</div>
               </div>
             ))}
@@ -179,14 +181,14 @@ export default function AboutPage() {
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Our Service Categories</h2>
             {services.map(svc => (
-              <Link key={svc.href} href={svc.href} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.9rem", color: "#2563b0", fontWeight: 500 }}>
+              <Link key={svc.href} href={svc.href} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.96rem", color: "#2563b0", fontWeight: 500 }}>
                 <span style={{ color: "#e87722" }}>→</span> {svc.label}
               </Link>
             ))}
           </div>
           <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "28px", border: "1px solid #dde2ef" }}>
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Confidentiality &amp; Privacy</h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.75, marginBottom: "14px" }}>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.75, marginBottom: "14px" }}>
               Once you have placed an order with us, it&apos;s safe with us. We maintain the confidentiality that you expect. Your identity is never disclosed to third parties without your approval. Neither your friends nor your teachers would ever know that you have used our service.
             </p>
             {["NDA signed with all writers and editors", "Unique project reference codes assigned", "Data retained for 6 months only", "Copyright transferred to you after payment", "Research works never reused or resold", "128-bit SSL encryption on all transactions"].map(item => (
@@ -198,22 +200,7 @@ export default function AboutPage() {
         </div>
 
         {/* Testimonials */}
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "24px", textAlign: "center" }}>What Our Clients Say</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }} className="three-col-grid">
-          {testimonials.map((t, i) => (
-            <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "22px" }}>
-              <div style={{ color: "#e87722", fontSize: "2.2rem", lineHeight: 1, marginBottom: "8px", fontFamily: "serif" }}>&ldquo;</div>
-              <p style={{ color: "#555", fontSize: "0.87rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "14px" }}>{t.quote}</p>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                {t.avatar ? <img src={t.avatar} alt={t.author} style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" /> : <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "#1a2a6c", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700 }}>{t.author.charAt(0)}</div>}
-                <div>
-                  <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.85rem" }}>{t.author}</div>
-                  {t.location && <div style={{ fontSize: "0.74rem", color: "#888" }}>{t.location}</div>}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <TestimonialSlider testimonials={testimonials} />
       </section>
 
       <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>

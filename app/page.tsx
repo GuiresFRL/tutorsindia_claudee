@@ -6,8 +6,9 @@ import { blogPosts } from "@/lib/data/blog";
 import { siteInfo } from "@/lib/data/site";
 
 export const metadata: Metadata = {
-  title: "Masters/MBA Dissertation Writing and Editing Services",
+  title: "Masters & MBA Dissertation Writing Services",
   description: "Tutors India provides expert Masters, MBA and PhD dissertation writing, editing, statistics and coding services. Trusted by 200,000+ scholars since 2001.",
+  alternates: { canonical: "https://tutorsindia.com/" },
 };
 
 const guarantees = [
@@ -28,19 +29,19 @@ const processSteps = [
 const sampleCards = [
   {
     head: "Dissertation Samples",
-    image: "https://www.tutorsindia.com/wp-content/uploads/2024/08/A-Dissertation-Writing-Service-features-that-helps-image.webp",
+    image: "/images/samples/dissertation-samples.webp",
     items: ["Topic Selection", "Research Proposal", "Literature Review", "Research Methodology", "Data Analysis", "Full Dissertation"],
     href: "/our-sample-works/dissertation-samples/",
   },
   {
     head: "Assignment Writing Samples",
-    image: "https://www.tutorsindia.com/wp-content/uploads/2021/08/Assignment-Writing.jpg",
+    image: "/images/samples/assignment-writing.jpg",
     items: ["Essay Writing", "Assignment Help", "Annotated Bibliography", "Reflective Report", "Case Studies"],
     href: "/our-sample-works/essay-writing-samples/",
   },
   {
     head: "Publication & Research Support",
-    image: "https://www.tutorsindia.com/wp-content/uploads/2021/10/Editing-Services.jpg",
+    image: "/images/samples/publication-research.jpg",
     items: ["Manuscript Development", "Medical Writing", "Engineering Research", "Conference Papers", "Biostatistics"],
     href: "/our-sample-works/",
   },
@@ -62,8 +63,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section style={{ background: "linear-gradient(135deg, var(--navy) 0%, #2563b0 100%)", color: "#fff", padding: "80px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <p style={{ fontSize: "0.85rem", color: "#a0b8e0", marginBottom: "8px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
               Trusted Since 2001 · UK · US · Australia
             </p>
@@ -80,17 +80,7 @@ export default function Home() {
                 View Our Process
               </Link>
             </div>
-          </div>
-          <div style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: "12px", padding: "28px 36px", textAlign: "center", minWidth: "200px" }}>
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "110px", height: "110px", objectFit: "contain", marginBottom: "12px" }} />
-            <p style={{ fontSize: "13px", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic<br />Writing &amp; Editing Services<br />since 2001</p>
-            <div style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid rgba(255,255,255,0.2)", fontSize: "0.8rem" }}>
-              <div style={{ color: "#a0b8e0", marginBottom: "4px" }}>📞 <a href="tel:+441143520021" style={{ color: "#fff" }}>+44-1143520021</a></div>
-              <div style={{ color: "#a0b8e0" }}>📞 <a href="tel:+918754446690" style={{ color: "#fff" }}>+91 8754446690</a></div>
-            </div>
-          </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-inner>div:last-child{display:none}}`}</style>
       </section>
 
       {/* STATS BAR */}
@@ -103,7 +93,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <style>{`@media(max-width:900px){.stats-grid{grid-template-columns:repeat(3,1fr)!important;}} @media(max-width:500px){.stats-grid{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
+        <style>{`@media(max-width:900px){.stats-grid{grid-template-columns:repeat(3,1fr)!important; padding-right:64px;}} @media(max-width:500px){.stats-grid{grid-template-columns:repeat(2,1fr)!important; padding-right:56px;}}`}</style>
       </section>
 
       {/* WHY + GET RESEARCH */}
@@ -141,7 +131,7 @@ export default function Home() {
           </p>
           <ul style={{ listStyle: "none", padding: 0, marginBottom: "24px" }}>
             {["Free 30-minute consultation", "Response within 30 minutes", "Chapter-by-chapter delivery", "Dedicated project coordinator"].map((item) => (
-              <li key={item} style={{ display: "flex", gap: "8px", padding: "6px 0", fontSize: "0.88rem", color: "#c5d5f0" }}>
+              <li key={item} style={{ display: "flex", gap: "8px", padding: "6px 0", fontSize: "0.94rem", color: "#c5d5f0" }}>
                 <span style={{ color: "#f9c74f" }}>→</span> {item}
               </li>
             ))}
@@ -175,16 +165,16 @@ export default function Home() {
                 {idx < processSteps.length - 1 && (
                   <div style={{ position: "absolute", right: "-24px", top: "50%", transform: "translateY(-50%)", color: "var(--border)", fontSize: "1.2rem", zIndex: 1 }} className="process-arrow">→</div>
                 )}
-                <div style={{ width: "44px", height: "44px", borderRadius: "50%", background: "var(--navy)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.9rem", margin: "0 auto 12px" }}>
+                <div style={{ width: "44px", height: "44px", borderRadius: "50%", background: "var(--navy)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.96rem", margin: "0 auto 12px" }}>
                   {step.n}
                 </div>
-                <h4 style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{step.title}</h4>
+                <h4 style={{ fontSize: "0.94rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{step.title}</h4>
                 <p style={{ fontSize: "0.78rem", color: "var(--text-mid)", lineHeight: 1.5 }}>{step.desc}</p>
               </div>
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "28px" }}>
-            <Link href="/our-process/" style={{ padding: "10px 28px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>
+            <Link href="/our-process/" style={{ padding: "10px 28px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>
               View Full Process →
             </Link>
           </div>
@@ -228,7 +218,7 @@ export default function Home() {
               Our Guarantees
             </Link>
           </div>
-          <blockquote style={{ borderLeft: "4px solid var(--orange)", padding: "14px 18px", background: "var(--gray)", borderRadius: "0 8px 8px 0", fontStyle: "italic", color: "var(--text-mid)", fontSize: "0.9rem" }}>
+          <blockquote style={{ borderLeft: "4px solid var(--orange)", padding: "14px 18px", background: "var(--gray)", borderRadius: "0 8px 8px 0", fontStyle: "italic", color: "var(--text-mid)", fontSize: "0.96rem" }}>
             &quot;Tutors India helped me gain clarity on the direction my research proposal needed to go and provided me with more clarity in my work. The experts understood my difficulties in writing the research proposal and guided me accordingly.&quot;
             <cite style={{ display: "block", marginTop: "10px", fontSize: "0.82rem", fontStyle: "normal", fontWeight: 600, color: "var(--navy)" }}>— Niamh McLaughlin</cite>
           </blockquote>
@@ -274,11 +264,14 @@ export default function Home() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }} className="sample-grid">
             {sampleCards.map((card) => (
-              <div key={card.head} style={{ background: "#fff", borderRadius: "10px", border: "1px solid var(--border)", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
-                <div style={{ position: "relative", height: "160px", overflow: "hidden", background: "#dde8f5" }}>
+              <div key={card.head} style={{ background: "#fff", borderRadius: "10px", border: "1px solid var(--border)", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column" }}>
+                <div style={{ position: "relative", height: "160px", overflow: "hidden", background: "#dde8f5", flexShrink: 0 }}>
                   <img
                     src={card.image}
                     alt={card.head}
+                    width={400}
+                    height={160}
+                    loading="lazy"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
                   <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,42,108,0.75) 0%, transparent 55%)" }} />
@@ -292,7 +285,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href={card.href} style={{ display: "block", textAlign: "center", padding: "11px", fontSize: "0.85rem", fontWeight: 600, color: "var(--blue)", borderTop: "1px solid var(--border)" }}>
+                <Link href={card.href} style={{ display: "block", textAlign: "center", padding: "11px", fontSize: "0.85rem", fontWeight: 600, color: "var(--blue)", borderTop: "1px solid var(--border)", marginTop: "auto" }}>
                   View Samples →
                 </Link>
               </div>
@@ -305,18 +298,21 @@ export default function Home() {
       {/* RECENT BLOG */}
       <section style={{ background: "var(--gray)", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px", flexWrap: "wrap", gap: "12px" }}>
-            <h2 style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--navy)" }}>Latest from Our Blog</h2>
-            <Link href="/blog/" style={{ color: "var(--blue)", fontWeight: 600, fontSize: "0.9rem" }}>View All Posts →</Link>
+          <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 36px" }}>
+            <h2 style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px" }}>Latest from Our Blog</h2>
+            <p style={{ color: "var(--text-mid)" }}>Expert guides on dissertation writing, research methodology &amp; academic success</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "24px" }} className="blog-grid">
             {recentPosts.map((post) => (
-              <article key={post.slug} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "10px", overflow: "hidden" }}>
+              <article key={post.slug} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "10px", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                 <Link href={`/blog/${post.slug}/`} style={{ display: "block", position: "relative", height: "180px", overflow: "hidden", background: "#dde8f5" }}>
                   {post.featuredImage ? (
                     <img
                       src={post.featuredImage}
                       alt={post.title}
+                      width={400}
+                      height={180}
+                      loading="lazy"
                       style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }}
                     />
                   ) : (
@@ -326,30 +322,37 @@ export default function Home() {
                     {post.categories[0]}
                   </div>
                 </Link>
-                <div style={{ padding: "18px" }}>
-                  <div style={{ fontSize: "0.76rem", color: "var(--text-light)", marginBottom: "7px" }}>{post.date}</div>
+                <div style={{ padding: "18px", display: "flex", flexDirection: "column", flex: 1 }}>
+                  <div style={{ fontSize: "0.76rem", color: "var(--text-light)", marginBottom: "7px" }}>
+                    {new Date(post.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                  </div>
                   <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px", lineHeight: 1.4 }}>
                     <Link href={`/blog/${post.slug}/`} style={{ color: "var(--navy)" }}>{post.title}</Link>
                   </h3>
                   <p style={{ fontSize: "0.84rem", color: "var(--text-mid)", marginBottom: "14px", lineHeight: 1.6 }}>{post.excerpt.slice(0, 100)}…</p>
-                  <Link href={`/blog/${post.slug}/`} style={{ color: "var(--blue)", fontWeight: 600, fontSize: "0.84rem" }}>Read More →</Link>
+                  <Link href={`/blog/${post.slug}/`} style={{ color: "var(--blue)", fontWeight: 600, fontSize: "0.84rem", marginTop: "auto" }}>Read More →</Link>
                 </div>
               </article>
             ))}
+          </div>
+          <div style={{ textAlign: "center", marginTop: "32px" }}>
+            <Link href="/blog/" style={{ display: "inline-block", padding: "11px 30px", border: "2px solid var(--navy)", color: "var(--navy)", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>
+              View All Posts →
+            </Link>
           </div>
           <style>{`@media(max-width:768px){.blog-grid{grid-template-columns:1fr 1fr!important;}} @media(max-width:500px){.blog-grid{grid-template-columns:1fr!important;}}`}</style>
         </div>
       </section>
 
       {/* CTA BANNER */}
-      <section style={{ background: "var(--orange)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
+      <section style={{ background: "linear-gradient(135deg, var(--navy) 0%, #2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
         <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 700, marginBottom: "12px" }}>Ready to Get Started?</h2>
         <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.88)", marginBottom: "10px" }}>
           Join 2,00,000+ scholars who have trusted Tutors India with their academic success since 2001.
         </p>
-        <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", marginBottom: "28px" }}>Response within 30 minutes · Unlimited Revisions · Plagiarism Free</p>
+        <p style={{ fontSize: "0.96rem", color: "rgba(255,255,255,0.7)", marginBottom: "28px" }}>Response within 30 minutes · Unlimited Revisions · Plagiarism Free</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "13px 36px", background: "#fff", color: "var(--orange)", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>
+          <Link href="/order-now/" style={{ padding: "13px 36px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>
             Order Now
           </Link>
           <Link href="/contact-us/" style={{ padding: "13px 36px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>

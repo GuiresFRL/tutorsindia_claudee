@@ -5,7 +5,7 @@ import { fetchProxiedLibraryPage } from "@/lib/api/proxyPage";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Library — Academic Essay & Dissertation Samples",
+  title: "Library — Essay & Dissertation Samples",
   description: "Browse Tutors India's academic library: essays, dissertations, proposals, methodologies, literature reviews, and manuscript templates across all subjects.",
   
   alternates: { canonical: "https://tutorsindia.com/library/" },
@@ -43,8 +43,8 @@ export default async function LibraryPage() {
             Browse our extensive collection of sample essays, dissertations, proposals, literature reviews, and methodologies across all academic disciplines.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/library/essay-index/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Browse Essays</Link>
-            <Link href="/library/dissertation-index/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Dissertations</Link>
+            <Link href="/library/essay-index/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Browse Essays</Link>
+            <Link href="/library/dissertation-index/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Dissertations</Link>
           </div>
         </div>
       </section>
@@ -52,7 +52,7 @@ export default async function LibraryPage() {
       {/* Section cards */}
       <section style={{ maxWidth: "1100px", margin: "0 auto", padding: "44px 20px" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", color: "#1a2a6c", marginBottom: "8px" }}>Library Sections</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px" }}>{sections.length} sections — click any card to browse samples</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px" }}>{sections.length} sections — click any card to browse samples</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "18px" }}>
           {sections.map((s) => (
             <Link key={s.href} href={s.href} style={{

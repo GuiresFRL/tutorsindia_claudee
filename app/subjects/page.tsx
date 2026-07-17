@@ -1,9 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Academic Writing by Subject | Law, Engineering, Medicine, Business",
+  title: "Academic Writing Help by Subject",
   description: "Expert academic writing support across all subjects — Law, Engineering, Economics, Medicine, Business, Arts, Biological Sciences, Computer Science. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/subjects/" },
 };
 
 const subjects = [
@@ -40,7 +42,7 @@ export default function SubjectsPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>2,000+</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Subject Experts<br />All Disciplines</div>
           </div>
@@ -86,29 +88,17 @@ export default function SubjectsPage() {
         <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "36px", marginBottom: "48px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, marginBottom: "16px", textAlign: "center" }}>Why Tutors India for Subject-Specific Academic Writing?</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "16px" }} className="four-col-grid">
-            {[{ icon: "🎓", title: "Subject Experts Only", desc: "Writers assigned based on specific subject expertise and academic qualification" }, { icon: "🛡️", title: "Plagiarism Free", desc: "All work scanned using Turnitin. Less than 5% guaranteed with certificate" }, { icon: "🔁", title: "Unlimited Revisions", desc: "Free revisions until 100% satisfied — even after project completion" }, { icon: "⏱", title: "On-Time Delivery", desc: "Minor changes within 24 hours, significant changes within 48 hours" }, { icon: "📚", title: "Peer-Reviewed Sources", desc: "Only peer-reviewed academic sources from credible international databases" }, { icon: "🔒", title: "100% Confidential", desc: "NDA-signed writers, 128-bit SSL encryption, unique project codes" }, { icon: "📞", title: "24/7 Support", desc: "Email, phone, Skype support across all time zones" }, { icon: "💷", title: "Affordable Pricing", desc: "Student-friendly rates in your currency with instalment options" }].map(f => (
+            {[{ icon: "🎓", title: "Subject Experts Only", desc: "Writers assigned based on specific subject expertise and academic qualification" }, { icon: "🛡️", title: "Plagiarism Free", desc: "All work scanned using Turnitin. Less than 5% guaranteed with certificate" }, { icon: "🔁", title: "Unlimited Revisions", desc: "Free revisions until 100% satisfied — even after project completion" }, { icon: "⏱", title: "On-Time Delivery", desc: "Minor changes within 24 hours, significant changes within 48 hours" }, { icon: "📚", title: "Peer-Reviewed Sources", desc: "Only peer-reviewed academic sources from credible international databases" }, { icon: "🔒", title: "100% Confidential", desc: "NDA-signed writers, 128-bit SSL encryption, unique project codes" }, { icon: "📞", title: "24/7 Support", desc: "Email, phone, WhatsApp support across all time zones" }, { icon: "💷", title: "Affordable Pricing", desc: "Student-friendly rates in your currency with instalment options" }].map(f => (
               <div key={f.title} style={{ textAlign: "center", padding: "16px" }}>
                 <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{f.icon}</div>
-                <div style={{ fontSize: "0.88rem", fontWeight: 700, marginBottom: "5px" }}>{f.title}</div>
+                <div style={{ fontSize: "0.94rem", fontWeight: 700, marginBottom: "5px" }}>{f.title}</div>
                 <div style={{ fontSize: "0.76rem", color: "#c5d5f0", lineHeight: 1.5 }}>{f.desc}</div>
               </div>
             ))}
           </div>
         </div>
 
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px", textAlign: "center" }}>What Our Clients Say</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px", marginBottom: "48px" }} className="three-col-grid">
-          {testimonials.map((t, i) => (
-            <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "22px" }}>
-              <div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "8px", fontFamily: "serif" }}>&ldquo;</div>
-              <p style={{ color: "#555", fontSize: "0.87rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "14px" }}>{t.quote}</p>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <img src={t.avatar} alt={t.author} style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" />
-                <div><div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.85rem" }}>{t.author}</div><div style={{ fontSize: "0.74rem", color: "#888" }}>{t.location}</div></div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <TestimonialSlider testimonials={testimonials} />
       </section>
 
       <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>

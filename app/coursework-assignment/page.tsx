@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Coursework & Assignment Help | Masters, MBA, PhD",
+  title: "Coursework & Assignment Help",
   description: "Expert coursework and assignment writing help for Masters, MBA and PhD students. Essays, reports, case studies, literature reviews, research methodology and more. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/coursework-assignment/" },
 };
 
 const assignmentTypes = [
@@ -25,7 +26,7 @@ const guarantees = [
   { icon: "⏱", title: "On-Time Delivery", desc: "Minor changes within 24 hours, significant within 48 hours." },
   { icon: "🎓", title: "Subject Experts", desc: "Writers matched to your specific subject area and academic level." },
   { icon: "🔒", title: "Confidential", desc: "NDA-signed writers, unique project codes, 128-bit SSL encryption." },
-  { icon: "📞", title: "24/7 Support", desc: "Email, phone, Skype — always available." },
+  { icon: "📞", title: "24/7 Support", desc: "Email, phone, WhatsApp — always available." },
 ];
 
 export default function CourseworkAssignmentPage() {
@@ -47,7 +48,7 @@ export default function CourseworkAssignmentPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/assignment-writing.jpg" alt="Student working on academic assignment" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>10+</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Assignment<br />Types Covered</div>
           </div>
@@ -68,7 +69,7 @@ export default function CourseworkAssignmentPage() {
 
       <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", textAlign: "center" }}>Coursework &amp; Assignment Types We Cover</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px", textAlign: "center" }}>Expert academic writing across all coursework types for UK, US, and Australian universities</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px", textAlign: "center" }}>Expert academic writing across all coursework types for UK, US, and Australian universities</p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px", marginBottom: "48px" }} className="two-col-grid">
           {assignmentTypes.map(a => (
             <Link key={a.title} href={a.href} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px", display: "flex", gap: "14px", alignItems: "flex-start" }}>
@@ -86,7 +87,7 @@ export default function CourseworkAssignmentPage() {
           {guarantees.map(g => (
             <div key={g.title} style={{ background: "#f5f6fa", borderRadius: "10px", padding: "20px", border: "1px solid #dde2ef", textAlign: "center" }}>
               <div style={{ fontSize: "2rem", marginBottom: "8px" }}>{g.icon}</div>
-              <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "5px" }}>{g.title}</h3>
+              <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "5px" }}>{g.title}</h3>
               <p style={{ fontSize: "0.79rem", color: "#666", lineHeight: 1.55 }}>{g.desc}</p>
             </div>
           ))}

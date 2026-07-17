@@ -1,10 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "UK Undergraduate Bachelor's Dissertation Writing Service",
+  title: "UK Undergraduate Dissertation Writing",
   description: "The UK Undergraduate / Bachelor's Complete or Part Dissertation Writing Service. 5000+ UG dissertations completed. Expert writers from UK & US universities.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/ug-dissertation/" },
 };
 
 const chapters = [
@@ -35,6 +37,15 @@ const faqs = [
   { q: "Is there any possibility of plagiarism in my UG dissertation?", a: "No, we give 100% guarantee of 0% plagiarism on your dissertation document. All our excellent writers are experienced in writing plagiarism-free content. We use internationally accepted premium Turnitin to check all work. At Tutors India, we provide a plagiarism-free dissertation paper report to ensure that your dissertation document is unique." },
   { q: "How much do you charge for undergraduate dissertation revisions?", a: "We provide unlimited revisions to your undergraduate dissertation at free of cost. We do not charge even a penny for any number of revisions since we are committed to 100% customer satisfaction. Our commitment continues until you are completely satisfied with the work delivered." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "Unbelievable! I would say the writer followed all of my specifications and produced a fantastic dissertation. What I particularly enjoy is that no one thinks that my dissertation was not authored by me. Thanks.", author: "Dr. Olivia W. Carter, MD, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -54,6 +65,7 @@ const subjects = [
 export default function UGDissertationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
@@ -73,12 +85,12 @@ export default function UGDissertationPage() {
             <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>Then You've Certainly Reached the Right place</p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <a href="https://www.tutorsindia.com/wp-content/uploads/2020/11/TI-UG-DISSERTATION-FINAL.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
+              <a href="/docs/ug-dissertation-brochure.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
               <Link href="/ask-an-expert/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.3)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Ask an Expert</Link>
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>5,000+</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>UG Dissertations<br />Completed</div>
           </div>
@@ -104,14 +116,14 @@ export default function UGDissertationPage() {
         {/* Intro */}
         <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Full Professional Undergraduate Dissertation Writing</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Undergraduate dissertations in UK and US universities represent an extended piece of writing, detailing your independent research and culminating your academic studies. A typical undergraduate dissertation is 8,000–10,000 words (exclusive of footnotes, references, and appendices). Universities employ plagiarism detection and the consequences for similarity issues can be severe.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             At Tutors India, part custom UG dissertation writing services are handled and written by the style, design, and format of an ideal dissertation required by the UK, Australia, and the US universities. We assist you to complete your dissertation covering: topic selection, research proposal writing, reflection journals, introduction, literature review, research methodology, presenting and discussing findings, research ethics, citations and referencing, and references along with the Appendices.
           </p>
           <div style={{ background: "#fff8f0", borderLeft: "4px solid #e87722", borderRadius: "0 8px 8px 0", padding: "14px 18px" }}>
-            <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.7 }}>
+            <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7 }}>
               <strong style={{ color: "#1a2a6c" }}>The UK Complete (Full &amp; Chapter-wise) Professional UG Dissertation Writing.</strong> Our professional dissertation writers have completed around 5,000 UG Dissertations successfully. Just send us your dissertation topic along with the deadline and see results that are far justified and mark the success of your dissertation.
             </p>
           </div>
@@ -138,7 +150,7 @@ export default function UGDissertationPage() {
         {/* 12 Chapter Structure */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>A Full UG Dissertation Features — All Chapter Components</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>We follow specific university guidelines across the United States, United Kingdom, Australia, and other universities. Our UG dissertation structure consists of:</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>We follow specific university guidelines across the United States, United Kingdom, Australia, and other universities. Our UG dissertation structure consists of:</p>
           <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden" }}>
             {chapters.map((ch, i) => (
               <div key={ch.n} style={{ padding: "16px 22px", borderBottom: i < chapters.length - 1 ? "1px solid #f0f2fa" : "none", display: "flex", gap: "16px", alignItems: "flex-start" }}>
@@ -155,7 +167,7 @@ export default function UGDissertationPage() {
         {/* Service Tiers */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>What Services Do We Offer?</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Three levels of UG dissertation writing services based on your academic needs</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>Three levels of UG dissertation writing services based on your academic needs</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
             {serviceTiers.map(t => (
               <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>
@@ -198,24 +210,7 @@ export default function UGDissertationPage() {
         </div>
 
         {/* Testimonials */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What Our Clients Say</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
-            {testimonials.map((t, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
-                <div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div>
-                <p style={{ color: "#555", fontSize: "0.87rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "14px" }}>{t.quote}</p>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <img src={t.avatar} alt={t.author} style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" />
-                  <div>
-                    <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.85rem" }}>{t.author}</div>
-                    {t.location && <div style={{ fontSize: "0.74rem", color: "#888" }}>{t.location}</div>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <TestimonialSlider testimonials={testimonials} />
 
         {/* FAQ */}
         <div style={{ marginBottom: "28px" }}>

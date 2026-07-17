@@ -129,7 +129,7 @@ export default function FreeResourcesPage() {
               <Link href={g.href} style={{ textDecoration: "none" }}>
                 <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", color: "#1a2a6c", marginBottom: "10px" }}>{g.title}</h2>
               </Link>
-              <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.7, marginBottom: "16px" }}>{g.desc}</p>
+              <p style={{ fontSize: "0.94rem", color: "#555", lineHeight: 1.7, marginBottom: "16px" }}>{g.desc}</p>
               <ul style={{ paddingLeft: "0", listStyle: "none", display: "flex", flexDirection: "column", gap: "6px" }}>
                 {g.links.map((l) => (
                   <li key={l.href}>
@@ -143,7 +143,7 @@ export default function FreeResourcesPage() {
 
         <div style={{ background: "#f0f4ff", borderRadius: "10px", padding: "32px", textAlign: "center", marginTop: "48px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>Need Personalised Academic Support?</h2>
-          <p style={{ color: "#555", marginBottom: "20px", fontSize: "0.9rem" }}>Our expert team provides tailored help for dissertations, coursework, publications, and more.</p>
+          <p style={{ color: "#555", marginBottom: "20px", fontSize: "0.96rem" }}>Our expert team provides tailored help for dissertations, coursework, publications, and more.</p>
           <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
             <Link href="/contact-us/" style={{ padding: "10px 24px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
@@ -153,7 +153,7 @@ export default function FreeResourcesPage() {
 
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

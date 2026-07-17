@@ -1,10 +1,10 @@
 /**
  * WordPress REST API client — Headless CMS integration.
- * Fetches ALL blog posts from WordPress at guires.info/blog
+ * Fetches ALL blog posts from WordPress at tutorsindia.net/blog
  * using paginated requests (WP REST API caps at 100 per page).
  */
 
-const WP_API_BASE = "https://guires.info/blog/wp-json/wp/v2";
+const WP_API_BASE = "https://tutorsindia.net/blog/wp-json/wp/v2";
 
 export interface WPPost {
   id: number;
@@ -34,7 +34,7 @@ export interface WPPost {
 }
 
 const FETCH_OPTS = {
-  next: { revalidate: 3600 },
+  cache: "no-store" as const,
   headers: { Accept: "application/json" },
 };
 
@@ -170,19 +170,26 @@ export async function getAllPostSlugs(): Promise<string[]> {
 
 /* ── Helper utilities ── */
 
+function proxyBlogImage(url: string | null | undefined): string | null {
+  if (!url) return null;
+  return url.replace("https://tutorsindia.net/blog/wp-content/", "/blog/wp-content/");
+}
+
 export function getFeaturedImage(post: WPPost): string | null {
   const media = post._embedded?.["wp:featuredmedia"]?.[0];
   if (!media) return null;
   const s = media.media_details?.sizes;
-  return s?.medium_large?.source_url ?? s?.medium?.source_url ?? s?.full?.source_url ?? media.source_url ?? null;
+  const raw = s?.medium_large?.source_url ?? s?.medium?.source_url ?? s?.full?.source_url ?? media.source_url ?? null;
+  return proxyBlogImage(raw);
 }
 
 export function getFeaturedImageAlt(post: WPPost): string {
   return post._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || post.title.rendered;
 }
 
-export function getAuthorName(post: WPPost): string {
-  return post._embedded?.author?.[0]?.name ?? "Tutors India";
+export function getAuthorName(_post: WPPost): string {
+  // All content is published under the Tutors India brand.
+  return "Tutors India";
 }
 
 export function getCategories(post: WPPost): string[] {

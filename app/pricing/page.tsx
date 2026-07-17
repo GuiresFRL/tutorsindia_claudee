@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pricing — Academic Writing Services",
   description: "Transparent pricing for Masters dissertation, PhD dissertation, statistical analysis, manuscript writing and editing services. Competitive student-friendly rates. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/pricing/" },
 };
 
 const ugPgPricing = [
@@ -75,7 +76,7 @@ export default function PricingPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>GBP · USD · AED<br />INR · AUD<br />All Currencies</div>
           </div>
         </div>
@@ -88,16 +89,16 @@ export default function PricingPage() {
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>
           Masters / Postgraduate Services
         </h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "20px" }}>UG &amp; PG level dissertation, assignment and research support</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "20px" }}>UG &amp; PG level dissertation, assignment and research support</p>
         <div style={{ background: "#fff", borderRadius: "12px", border: "1px solid #dde2ef", overflow: "hidden", marginBottom: "40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", background: "#1a2a6c", color: "#fff", padding: "14px 20px" }}>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700 }}>Service</div>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700 }}>Details</div>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700, textAlign: "right" }}>Starting Price</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700 }}>Service</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700 }}>Details</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700, textAlign: "right" }}>Starting Price</div>
           </div>
           {ugPgPricing.map((row, i) => (
             <div key={row.service} style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", padding: "14px 20px", borderBottom: i < ugPgPricing.length - 1 ? "1px solid #f0f2fa" : "none", background: i % 2 === 0 ? "#fff" : "#f9f9ff", alignItems: "center" }}>
-              <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1a2a6c" }}>{row.service}</div>
+              <div style={{ fontSize: "0.94rem", fontWeight: 600, color: "#1a2a6c" }}>{row.service}</div>
               <div style={{ fontSize: "0.82rem", color: "#666" }}>{row.detail}</div>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#e87722", textAlign: "right", whiteSpace: "nowrap" }}>{row.price}</div>
             </div>
@@ -106,16 +107,16 @@ export default function PricingPage() {
 
         {/* PhD Pricing */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>PhD / DBA Services</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "20px" }}>Doctoral level dissertation, research, and academic support</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "20px" }}>Doctoral level dissertation, research, and academic support</p>
         <div style={{ background: "#fff", borderRadius: "12px", border: "1px solid #dde2ef", overflow: "hidden", marginBottom: "40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", background: "#2563b0", color: "#fff", padding: "14px 20px" }}>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700 }}>Service</div>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700 }}>Details</div>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700, textAlign: "right" }}>Starting Price</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700 }}>Service</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700 }}>Details</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700, textAlign: "right" }}>Starting Price</div>
           </div>
           {phdPricing.map((row, i) => (
             <div key={row.service} style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", padding: "14px 20px", borderBottom: i < phdPricing.length - 1 ? "1px solid #f0f2fa" : "none", background: i % 2 === 0 ? "#fff" : "#f9f9ff", alignItems: "center" }}>
-              <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1a2a6c" }}>{row.service}</div>
+              <div style={{ fontSize: "0.94rem", fontWeight: 600, color: "#1a2a6c" }}>{row.service}</div>
               <div style={{ fontSize: "0.82rem", color: "#666" }}>{row.detail}</div>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#e87722", textAlign: "right", whiteSpace: "nowrap" }}>{row.price}</div>
             </div>
@@ -124,16 +125,16 @@ export default function PricingPage() {
 
         {/* Publication Pricing */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Publication &amp; Editing Services</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "20px" }}>Manuscript writing, editing, statistical analysis, and publication support</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "20px" }}>Manuscript writing, editing, statistical analysis, and publication support</p>
         <div style={{ background: "#fff", borderRadius: "12px", border: "1px solid #dde2ef", overflow: "hidden", marginBottom: "48px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", background: "#059669", color: "#fff", padding: "14px 20px" }}>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700 }}>Service</div>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700 }}>Details</div>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700, textAlign: "right" }}>Starting Price</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700 }}>Service</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700 }}>Details</div>
+            <div style={{ fontSize: "0.94rem", fontWeight: 700, textAlign: "right" }}>Starting Price</div>
           </div>
           {publicationPricing.map((row, i) => (
             <div key={row.service} style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", padding: "14px 20px", borderBottom: i < publicationPricing.length - 1 ? "1px solid #f0f2fa" : "none", background: i % 2 === 0 ? "#fff" : "#f9f9ff", alignItems: "center" }}>
-              <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1a2a6c" }}>{row.service}</div>
+              <div style={{ fontSize: "0.94rem", fontWeight: 600, color: "#1a2a6c" }}>{row.service}</div>
               <div style={{ fontSize: "0.82rem", color: "#666" }}>{row.detail}</div>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#e87722", textAlign: "right", whiteSpace: "nowrap" }}>{row.price}</div>
             </div>

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const proxied = await fetchProxiedPage(`/our-sample-works/${slug}/`);
   const title = proxied?.title || slugToTitle(slug);
   return {
-    title: `${title} — Sample Works | Tutors India`,
+    title: `${title} — Sample Works`,
     description: `View our ${title.toLowerCase()} sample work. Tutors India provides high-quality academic writing examples for reference and guidance.`,
     
     alternates: { canonical: `https://tutorsindia.com/our-sample-works/${slug}/` },
@@ -47,7 +47,7 @@ export default async function SampleWorkPage({ params }: Props) {
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}>
             {title}
           </h1>
-          <p style={{ color: "#c5d5f0", fontSize: "0.9rem" }}>Academic Sample Work — For Reference Purposes</p>
+          <p style={{ color: "#c5d5f0", fontSize: "0.96rem" }}>Academic Sample Work — For Reference Purposes</p>
         </div>
       </section>
 
@@ -78,7 +78,7 @@ export default async function SampleWorkPage({ params }: Props) {
 
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

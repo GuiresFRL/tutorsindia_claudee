@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 export const metadata: Metadata = {
   title: "FAQ — Frequently Asked Questions",
   description: "Get answers to frequently asked questions about Tutors India's academic writing, dissertation, statistical analysis and editing services.",
+  alternates: { canonical: "https://tutorsindia.com/faq/" },
 };
 
 const faqSections = [
@@ -35,7 +36,7 @@ const faqSections = [
       { q: "What services does Tutors India provide?", a: "Tutors India provides: Masters Dissertation Writing (topic, proposal, full dissertation, part dissertation, resit, statistical analysis, poster presentation, UG dissertation, CV writing); PhD/DBA Dissertation Writing; Coursework Writing (essays, assignments, annotated bibliography, reflective reports, literature review, research methodology); Publication Support (manuscript development, conference papers, medical writing, biostatistics, statistical services); Development (coding, software, big data, animation, web solutions, e-learning); Editing Services (language editing, technical editing, plagiarism reports, transcription, translation, citation compliance, formatting, scientific editing, grant proposals, peer review)." },
       { q: "How do I know if the assigned writer is qualified?", a: "All our writers hold PhD or Masters degrees from top UK and US universities including Harvard School, Oxford, London School of Business, and the University of Birmingham. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreements. We identify the perfect Subject Matter Expert (SME) according to your subject and area. You can be very sure about the quality since expert writers are identified as per international research experience." },
       { q: "What is the quality assurance process?", a: "We have a three-level quality check process: (1) Technical QC — subject matter expert reviews the technical accuracy, methodology, and academic content; (2) Editor QC — language and grammar editor reviews for writing quality, clarity, and style; (3) Final check against requirements — the completed work is verified against your original brief, university guidelines, and marking rubric before delivery. Additionally, all work is scanned for plagiarism using Turnitin." },
-      { q: "Can I communicate directly with my writer?", a: "Yes. You can communicate directly with your writer via phone and Skype. You can also come directly to our office with a prior appointment so that we can discuss and clarify your doubts. We assign dedicated coordinators for each project who serve as your primary point of contact and facilitate direct communication with writers when needed." },
+      { q: "Can I communicate directly with my writer?", a: "Yes. You can communicate directly with your writer via phone and WhatsApp. You can also come directly to our office with a prior appointment so that we can discuss and clarify your doubts. We assign dedicated coordinators for each project who serve as your primary point of contact and facilitate direct communication with writers when needed." },
     ],
   },
   {
@@ -60,9 +61,20 @@ const faqSections = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqSections.flatMap(s => s.faqs).map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>
@@ -74,7 +86,7 @@ export default function FAQPage() {
             <p style={{ color: "#a0b8e0", fontSize: "0.92rem", lineHeight: 1.7, maxWidth: "650px" }}>Find answers to the most common questions about our academic writing, dissertation support, statistical analysis, and editing services. Can&apos;t find your answer? Contact us and we&apos;ll respond within 30 minutes.</p>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>30 min<br />Response Time<br />24/7 Support</div>
           </div>
         </div>

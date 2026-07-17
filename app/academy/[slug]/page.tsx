@@ -17,7 +17,7 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export const revalidate = 3600;
+export const revalidate = 0;
 
 export async function generateStaticParams() {
   const slugs = await getAllAcademySlugs();
@@ -27,13 +27,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getAcademyPostBySlug(slug);
-  if (!post) return { title: "Guide Not Found | Tutors India Academy" };
+  if (!post) return { title: "Guide Not Found — Academy" };
 
   const image       = getAcademyFeaturedImage(post);
   const description = stripAcademyHtml(post.excerpt.rendered, 160);
 
   return {
-    title: `${stripAcademyHtml(post.title.rendered, 70)} | Tutors India Academy`,
+    title: `${stripAcademyHtml(post.title.rendered, 70)} — Academy`,
     description,
     
     alternates: { canonical: `https://tutorsindia.com/academy/${slug}/` },
@@ -145,7 +145,7 @@ export default async function AcademyPostPage({ params }: Props) {
 
         {/* Navigation row */}
         <div style={{ marginTop: "28px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-          <Link href="/academy/" style={{ fontSize: "0.88rem", color: "#2563b0", fontWeight: 600 }}>
+          <Link href="/academy/" style={{ fontSize: "0.94rem", color: "#2563b0", fontWeight: 600 }}>
             ← Back to Academy
           </Link>
           <div style={{ display: "flex", gap: "10px" }}>
@@ -180,7 +180,7 @@ export default async function AcademyPostPage({ params }: Props) {
                         <span style={{ fontSize: "0.7rem", background: "#e8f0fb", color: "#2563b0", padding: "2px 8px", borderRadius: "8px", fontWeight: 600, display: "inline-block", marginBottom: "6px" }}>{rCats[0]}</span>
                       )}
                       <div style={{ fontSize: "0.76rem", color: "#888", marginBottom: "5px" }}>{formatAcademyDate(rp.date)}</div>
-                      <div style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: rp.title.rendered }} />
+                      <div style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: rp.title.rendered }} />
                       <div style={{ fontSize: "0.82rem", color: "#e87722", fontWeight: 600, marginTop: "8px" }}>Read Guide →</div>
                     </div>
                   </Link>

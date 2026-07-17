@@ -19,9 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { subject: subjectSlug, question: questionSlug } = await params;
   const item = getQAItem(subjectSlug, questionSlug);
   const subject = getSubject(subjectSlug);
-  if (!item || !subject) return { title: "Ask an Expert | Tutors India" };
+  if (!item || !subject) return { title: "Ask an Expert" };
   return {
-    title: `${item.question} | Tutors India`,
+    title: `${item.question}`,
     description: `Expert answer: ${item.question} — Free academic Q&A from Tutors India's PhD-qualified specialists.`,
     
     alternates: { canonical: `https://tutorsindia.com/ask-an-expert/${subjectSlug}/${questionSlug}/` },
@@ -93,7 +93,7 @@ export default async function QAPage({ params }: Props) {
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px", paddingBottom: "16px", borderBottom: "1px solid #eee" }}>
                 <div style={{ width: "36px", height: "36px", background: "#1a2a6c", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "1rem" }}>🎓</div>
                 <div>
-                  <p style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.88rem", margin: 0 }}>Tutors India Expert</p>
+                  <p style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.94rem", margin: 0 }}>Tutors India Expert</p>
                   <p style={{ color: "#888", fontSize: "0.75rem", margin: 0 }}>PhD-Qualified Specialist</p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default async function QAPage({ params }: Props) {
             <div style={{ background: "#fff7ed", border: "1px solid #fed7a0", borderRadius: "10px", padding: "20px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.92rem", color: "#b45309", marginBottom: "10px" }}>Have a Question?</h3>
               <p style={{ fontSize: "0.82rem", color: "#555", lineHeight: 1.6, marginBottom: "14px" }}>Submit your academic question and receive a free expert answer within 24 hours.</p>
-              <Link href="/ask-an-expert/ask-a-question/" style={{ display: "block", textAlign: "center", padding: "10px 16px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.88rem" }}>
+              <Link href="/ask-an-expert/ask-a-question/" style={{ display: "block", textAlign: "center", padding: "10px 16px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.94rem" }}>
                 Ask a Question Free
               </Link>
             </div>
@@ -134,13 +134,13 @@ export default async function QAPage({ params }: Props) {
             <div style={{ background: "#f0f4ff", border: "1px solid #c7d4f5", borderRadius: "10px", padding: "20px" }}>
               <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.92rem", color: "#1a2a6c", marginBottom: "10px" }}>Need More Help?</h3>
               <p style={{ fontSize: "0.82rem", color: "#555", lineHeight: 1.6, marginBottom: "14px" }}>For full dissertation or essay support, our PhD experts provide comprehensive personalised assistance.</p>
-              <Link href="/order-now/" style={{ display: "block", textAlign: "center", padding: "10px 16px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.88rem" }}>
+              <Link href="/order-now/" style={{ display: "block", textAlign: "center", padding: "10px 16px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.94rem" }}>
                 Order Full Service
               </Link>
             </div>
 
             <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.9rem", color: "#1a2a6c", marginBottom: "12px" }}>More {subject.title} Q&amp;A</h3>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.96rem", color: "#1a2a6c", marginBottom: "12px" }}>More {subject.title} Q&amp;A</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                 {subject.items.filter((i) => i.slug !== questionSlug).slice(0, 5).map((i) => (
                   <Link key={i.slug} href={`/ask-an-expert/${subject.slug}/${i.slug}/`} style={{ fontSize: "0.82rem", color: "#2563b0", lineHeight: 1.4 }}>
@@ -159,7 +159,7 @@ export default async function QAPage({ params }: Props) {
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "48px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Writing Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "20px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "20px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 30px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

@@ -5,7 +5,7 @@ import { getTIChildPages } from "@/lib/api/tutorsindia";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Dissertation Titles — Free Topic Ideas by Subject",
+  title: "Free Dissertation Titles by Subject",
   description: "Browse hundreds of free dissertation title ideas across all subjects — Business, Engineering, Computer Science, Biology, Law, and more. Updated regularly.",
   
   alternates: { canonical: "https://tutorsindia.com/title/" },
@@ -56,7 +56,7 @@ export default async function TitlePage() {
             <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.05rem", color: "#1a2a6c", marginBottom: "4px" }}>Also Browse Dissertation Topics</h3>
             <p style={{ fontSize: "0.86rem", color: "#666" }}>Looking for broader research topics instead of specific titles?</p>
           </div>
-          <Link href="/topic/" style={{ padding: "10px 22px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem", whiteSpace: "nowrap" }}>
+          <Link href="/topic/" style={{ padding: "10px 22px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem", whiteSpace: "nowrap" }}>
             Dissertation Topics →
           </Link>
         </div>

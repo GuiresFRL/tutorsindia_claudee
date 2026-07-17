@@ -4,7 +4,7 @@
  * using paginated requests (WP REST API caps at 100 per page).
  */
 
-const ACADEMY_API_BASE = "https://tutorsindia.com/academy/wp-json/wp/v2";
+const ACADEMY_API_BASE = "https://tutorsindia.net/academy/wp-json/wp/v2";
 
 export interface AcademyPost {
   id: number;
@@ -34,7 +34,7 @@ export interface AcademyPost {
 }
 
 const FETCH_OPTS = {
-  next: { revalidate: 3600 },
+  cache: "no-store" as const,
   headers: { Accept: "application/json" },
 };
 
@@ -186,8 +186,9 @@ export function getAcademyImageAlt(post: AcademyPost): string {
   return post._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || post.title.rendered;
 }
 
-export function getAcademyAuthor(post: AcademyPost): string {
-  return post._embedded?.author?.[0]?.name ?? "Tutors India";
+export function getAcademyAuthor(_post: AcademyPost): string {
+  // All content is published under the Tutors India brand.
+  return "Tutors India";
 }
 
 export function getAcademyCategories(post: AcademyPost): string[] {

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const svc = cat?.services.find((s) => s.href.includes(`/${slug}/`));
   if (!svc) return {};
   return {
-    title: `${svc.title} | Tutors India`,
+    title: `${svc.title}`,
     description: svc.description,
   };
 }
@@ -397,7 +397,7 @@ const guaranteeBadges = [
   { icon: "⏱", title: "On-Time Delivery", desc: "95–98% on-time, minor changes in 24 hours" },
   { icon: "🎓", title: "Expert Writers", desc: "PhD/Masters qualified, NDA-signed writers" },
   { icon: "🔒", title: "Confidential", desc: "128-bit SSL, unique project codes, NDA protection" },
-  { icon: "📞", title: "24/7 Support", desc: "Email, phone, Skype, direct writer contact" },
+  { icon: "📞", title: "24/7 Support", desc: "Email, phone, WhatsApp, direct writer contact" },
 ];
 
 export default async function ServiceDetailPage({ params }: Props) {
@@ -436,7 +436,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.78rem", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic<br />Writing &amp; Editing<br />Since 2001</div>
           </div>
         </div>
@@ -477,7 +477,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </h3>
                 <ul style={{ listStyle: "none", padding: 0 }}>
                   {content.features.map((f) => (
-                    <li key={f} style={{ display: "flex", gap: "10px", padding: "9px 0", borderBottom: "1px solid var(--border)", fontSize: "0.88rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
+                    <li key={f} style={{ display: "flex", gap: "10px", padding: "9px 0", borderBottom: "1px solid var(--border)", fontSize: "0.94rem", color: "var(--text-mid)", lineHeight: 1.5 }}>
                       <span style={{ color: "var(--orange)", fontWeight: 700, flexShrink: 0 }}>✓</span>
                       {f}
                     </li>
@@ -504,7 +504,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               {guaranteeBadges.map((g) => (
                 <div key={g.title} style={{ background: "#fff", borderRadius: "8px", padding: "14px", border: "1px solid var(--border)" }}>
                   <div style={{ fontSize: "1.4rem", marginBottom: "4px" }}>{g.icon}</div>
-                  <div style={{ fontWeight: 700, color: "var(--navy)", fontSize: "0.88rem", marginBottom: "3px" }}>{g.title}</div>
+                  <div style={{ fontWeight: 700, color: "var(--navy)", fontSize: "0.94rem", marginBottom: "3px" }}>{g.title}</div>
                   <div style={{ fontSize: "0.78rem", color: "var(--text-mid)" }}>{g.desc}</div>
                 </div>
               ))}
@@ -578,7 +578,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               "Unlimited free revisions",
               "95–98% on-time delivery rate",
               "100% confidential & NDA-signed",
-              "24/7 email, phone & Skype support",
+              "24/7 email, phone & WhatsApp support",
             ].map((item) => (
               <div key={item} style={{ display: "flex", gap: "8px", padding: "7px 0", borderBottom: "1px solid var(--border)", fontSize: "0.82rem", color: "var(--text-mid)" }}>
                 <span style={{ color: "var(--orange)", fontWeight: 700, flexShrink: 0 }}>✓</span>
@@ -610,13 +610,13 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* CTA Banner */}
-      <section style={{ background: "var(--orange)", color: "#fff", padding: "48px 20px", textAlign: "center" }}>
+      <section style={{ background: "linear-gradient(135deg, var(--navy) 0%, #2563b0 100%)", color: "#fff", padding: "48px 20px", textAlign: "center" }}>
         <h2 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "10px" }}>Ready to Get Started?</h2>
         <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.85)", marginBottom: "24px", maxWidth: "600px", margin: "0 auto 24px" }}>
           Join 2,00,000+ scholars who have trusted Tutors India with their academic success since 2001. Response within 30 minutes.
         </p>
         <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "var(--orange)", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>
+          <Link href="/order-now/" style={{ padding: "12px 32px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>
             Order Now
           </Link>
           <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>

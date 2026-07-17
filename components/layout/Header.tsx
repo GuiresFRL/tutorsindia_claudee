@@ -9,6 +9,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openNav, setOpenNav] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [mobileMegaExpanded, setMobileMegaExpanded] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const headerRef = useRef<HTMLElement>(null);
 
@@ -57,6 +58,9 @@ export default function Header() {
           <img
             src="/tutorsindia-logo-hd.jpg"
             alt="Tutors India — Trusted Academic Writing Services Since 2001"
+            width={62}
+            height={62}
+            fetchPriority="high"
             style={{ height: "62px", width: "auto", objectFit: "contain" }}
           />
         </Link>
@@ -66,7 +70,7 @@ export default function Header() {
           <ul style={{ display: "flex", gap: "2px", alignItems: "center", listStyle: "none", margin: 0, padding: 0 }}>
             {navigation.map((item) => (
               <NavEntry
-                key={item.href}
+                key={item.label}
                 item={item}
                 open={openNav === item.href}
                 onOpen={() => openMenu(item.href)}
@@ -111,7 +115,11 @@ export default function Header() {
           </Link>
           <button
             className="hdr-hamburger"
-            onClick={() => setMobileOpen((v) => !v)}
+            onClick={() => {
+              setMobileOpen((v) => !v);
+              setMobileExpanded(null);
+              setMobileMegaExpanded(null);
+            }}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
             style={{
@@ -136,7 +144,7 @@ export default function Header() {
       >
         <div style={{ maxWidth: "1260px", margin: "0 auto", padding: "16px 20px", maxHeight: "80vh", overflowY: "auto" }}>
           {navigation.map((item) => (
-            <div key={item.href} style={{ borderBottom: "1px solid #eef0f8" }}>
+            <div key={item.label} style={{ borderBottom: "1px solid #eef0f8" }}>
               {/* Top-level mobile item */}
               <div
                 style={{
@@ -155,7 +163,10 @@ export default function Header() {
                 </Link>
                 {(item.children || item.megaColumns) && (
                   <button
-                    onClick={() => setMobileExpanded(mobileExpanded === item.href ? null : item.href)}
+                    onClick={() => {
+                      setMobileExpanded(mobileExpanded === item.href ? null : item.href);
+                      setMobileMegaExpanded(null);
+                    }}
                     aria-label="Expand"
                     style={{
                       background: "none",
@@ -176,7 +187,7 @@ export default function Header() {
                 <div style={{ paddingBottom: "8px" }}>
                   {item.children.map((child) => (
                     <Link
-                      key={child.href}
+                      key={child.label}
                       href={child.href}
                       onClick={() => setMobileOpen(false)}
                       style={{
@@ -193,47 +204,77 @@ export default function Header() {
                 </div>
               )}
 
-              {/* Mobile: mega menu columns */}
+              {/* Mobile: mega menu columns — each category is its own accordion */}
               {mobileExpanded === item.href && item.megaColumns && (
                 <div style={{ paddingBottom: "8px" }}>
-                  {item.megaColumns.map((col) => (
-                    <div key={col.href}>
-                      <Link
-                        href={col.href}
-                        onClick={() => setMobileOpen(false)}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "6px",
-                          padding: "8px 12px",
-                          fontWeight: 700,
-                          fontSize: "13px",
-                          color: "#1a2a6c",
-                          background: "#f0f4ff",
-                          borderRadius: "4px",
-                          margin: "4px 0 2px",
-                        }}
-                      >
-                        <span>{col.icon}</span> {col.category}
-                      </Link>
-                      {col.items.map((sub) => (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          onClick={() => setMobileOpen(false)}
+                  {item.megaColumns.map((col) => {
+                    const megaKey = `${item.href}::${col.category}`;
+                    const isCatOpen = mobileMegaExpanded === megaKey;
+                    return (
+                      <div key={col.category}>
+                        <div
                           style={{
-                            display: "block",
-                            padding: "5px 24px",
-                            fontSize: "12.5px",
-                            color: "#555",
-                            borderBottom: "1px solid #f4f4f8",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: "6px",
+                            background: "#f0f4ff",
+                            borderRadius: "4px",
+                            margin: "4px 0 2px",
                           }}
                         >
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
+                          <Link
+                            href={col.href}
+                            onClick={() => setMobileOpen(false)}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "6px",
+                              flex: 1,
+                              padding: "8px 12px",
+                              fontWeight: 700,
+                              fontSize: "13px",
+                              color: "#1a2a6c",
+                            }}
+                          >
+                            <span>{col.icon}</span> {col.category}
+                          </Link>
+                          <button
+                            onClick={() => setMobileMegaExpanded(isCatOpen ? null : megaKey)}
+                            aria-label={isCatOpen ? `Collapse ${col.category}` : `Expand ${col.category}`}
+                            aria-expanded={isCatOpen}
+                            style={{
+                              background: "none",
+                              border: "none",
+                              cursor: "pointer",
+                              color: "#1a2a6c",
+                              fontSize: "16px",
+                              padding: "8px 12px",
+                              lineHeight: 1,
+                            }}
+                          >
+                            {isCatOpen ? "−" : "+"}
+                          </button>
+                        </div>
+                        {isCatOpen && col.items.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            onClick={() => setMobileOpen(false)}
+                            style={{
+                              display: "block",
+                              padding: "5px 24px",
+                              fontSize: "12.5px",
+                              color: "#555",
+                              borderBottom: "1px solid #f4f4f8",
+                            }}
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -308,7 +349,7 @@ function NavEntry({
 
   return (
     <li
-      style={{ position: "relative" }}
+      style={{ position: hasMega ? "static" : "relative" }}
       onMouseEnter={onOpen}
       onMouseLeave={onClose}
     >
@@ -344,8 +385,10 @@ function NavEntry({
           onMouseEnter={onKeepOpen}
           onMouseLeave={onClose}
           style={{
-            position: "fixed",
-            top: "106px", // topbar(38) + header(68)
+            // Anchored to the sticky <header> (its containing block), so the
+            // panel always hugs the header bottom — scrolled or not.
+            position: "absolute",
+            top: "100%",
             left: 0,
             right: 0,
             background: "#fff",
@@ -377,7 +420,7 @@ function NavEntry({
           }}>
             {item.megaColumns!.map((col, colIdx) => (
               <div
-                key={col.href}
+                key={col.category}
                 style={{
                   borderRight: colIdx < item.megaColumns!.length - 1 ? "1px solid #eef0f8" : "none",
                   padding: "0 16px",
@@ -406,7 +449,7 @@ function NavEntry({
                 {/* Sub-items */}
                 {col.items.map((sub) => (
                   <Link
-                    key={sub.href}
+                    key={sub.label}
                     href={sub.href}
                     onClick={onSelect}
                     className="mega-sub-link"
@@ -449,7 +492,7 @@ function NavEntry({
         >
           {item.children!.map((child) => (
             <Link
-              key={child.href}
+              key={child.label}
               href={child.href}
               onClick={onSelect}
               className="dropdown-link"

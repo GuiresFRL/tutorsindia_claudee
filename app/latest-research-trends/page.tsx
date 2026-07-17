@@ -5,7 +5,7 @@ import { getTIPageById, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutors
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Latest Research Trends — Emerging Academic Topics",
+  title: "Latest Research Trends by Subject",
   description: "Stay current with the latest research trends across all academic disciplines. Expert insights into emerging methodologies, innovations, and research directions.",
   
   alternates: { canonical: "https://tutorsindia.com/latest-research-trends/" },
@@ -32,8 +32,8 @@ export default async function LatestResearchTrendsPage() {
             Stay up to date with the latest emerging research directions, methodologies, and innovations across all academic disciplines.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/future-research-directions/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Future Research Directions</Link>
-            <Link href="/topic/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Dissertation Topics</Link>
+            <Link href="/future-research-directions/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Future Research Directions</Link>
+            <Link href="/topic/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Dissertation Topics</Link>
           </div>
         </div>
       </section>

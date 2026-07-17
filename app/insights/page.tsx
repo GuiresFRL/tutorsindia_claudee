@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Insights — Academic News, Research Trends & Resources",
+  title: "Insights — Academic News & Trends",
   description: "Stay updated with the latest academic research trends, industry innovations, news, and educational resources from Tutors India.",
   
   alternates: { canonical: "https://tutorsindia.com/insights/" },
@@ -166,8 +166,8 @@ export default function InsightsPage() {
             Academic research trends, industry news, case studies, practical resources, and expert guides for students and researchers worldwide.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/latest-research-trends/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Research Trends</Link>
-            <Link href="/blog/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Read Our Blog</Link>
+            <Link href="/latest-research-trends/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Research Trends</Link>
+            <Link href="/blog/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Read Our Blog</Link>
           </div>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function InsightsPage() {
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", color: "#1a2a6c", marginBottom: "8px" }}>
           All Insights & Resources
         </h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px" }}>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px" }}>
           {insightCards.length} sections available — click any card to explore
         </p>
 
@@ -223,7 +223,7 @@ export default function InsightsPage() {
                   padding: "10px 18px", background: "#fff",
                   border: "1px solid #dde2ef", borderRadius: "8px",
                   textDecoration: "none", color: "#1a2a6c",
-                  fontSize: "0.88rem", fontWeight: 600,
+                  fontSize: "0.94rem", fontWeight: 600,
                   boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
                 }}
               >

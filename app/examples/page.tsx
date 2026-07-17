@@ -5,7 +5,7 @@ import { getTIChildPages, stripTIHtml } from "@/lib/api/tutorsindia";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Examples — Free Academic Writing Examples by Subject",
+  title: "Free Academic Writing Examples",
   description: "Browse free academic writing examples across all major subjects. Expert-written samples demonstrating proper structure, methodology, and referencing.",
   
   alternates: { canonical: "https://tutorsindia.com/examples/" },
@@ -30,8 +30,8 @@ export default async function ExamplesPage() {
             Browse free academic writing examples written by our expert academics. Use them as a learning aid to understand proper academic structure, referencing, and methodology.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Get Writing Help</Link>
-            <Link href="/essays/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Browse Essays</Link>
+            <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Get Writing Help</Link>
+            <Link href="/essays/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Browse Essays</Link>
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default async function ExamplesPage() {
                   <div style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "8px" }}>
                     <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>📚</span>
                     <h3
-                      style={{ fontFamily: "Merriweather,serif", fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }}
+                      style={{ fontFamily: "Merriweather,serif", fontSize: "0.94rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }}
                       dangerouslySetInnerHTML={{ __html: s.title.rendered }}
                     />
                   </div>

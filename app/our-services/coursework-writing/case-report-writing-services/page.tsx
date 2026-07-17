@@ -1,259 +1,385 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "UK Case Report Writing Services | Medical, Business, Legal",
-  description: "The US / UK Report Writing Service. Medical/Nursing case reports, Business case studies, Legal case reports. Expert UK & US writers. Plagiarism-free. Tutors India.",
+  title: "The US / UK Case Report Writing Services",
+  description: "UK Case Report Writing at Tutors India will be strictly in British English, strictly follow university requirement including Citation and formatting. Our team of US & British Writers guarantees your grade.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/case-report-writing-services/" },
 };
 
-const reportTypes = [
-  {
-    icon: "🏥",
-    title: "Medical / Nursing Case Report",
-    desc: "Clinical case reports documenting patient presentation, diagnosis, treatment, and outcomes. Written to medical journal standards with full ethical compliance and HIPAA-aware anonymisation.",
-    points: ["Patient background and presenting complaint", "Clinical examination and investigation findings", "Diagnosis and differential diagnosis", "Treatment plan and management", "Outcomes and follow-up", "Discussion and learning points", "Full clinical referencing (Vancouver, AMA)"],
-  },
-  {
-    icon: "💼",
-    title: "Business Case Study",
-    desc: "Company-specific or scenario-based business case studies. SWOT analysis, strategic evaluation, market analysis, financial review and recommendations presented academically.",
-    points: ["Executive Summary", "Company/situation background", "Market Analysis and environment", "Key Issues identification", "SWOT, PESTLE, Porter's Five Forces", "Decision Criteria and Data Analysis", "Strategic Recommendations"],
-  },
-  {
-    icon: "⚖️",
-    title: "Legal Case Report",
-    desc: "Legal case analysis covering statute law, case law, legislation, legal argument, and judicial reasoning. Written to academic legal standards with full OSCOLA or Harvard (Legal) referencing.",
-    points: ["Case background and facts", "Legal issues and questions raised", "Applicable statutes and case law", "Judicial reasoning and analysis", "Critique and evaluation", "Implications and recommendations", "Full legal referencing (OSCOLA)"],
-  },
-  {
-    icon: "🔬",
-    title: "Scientific / Research Case Report",
-    desc: "Scientific case reports for engineering, life science, and research-based programmes. Covers methodology, data collection, findings and analysis with appropriate statistical presentation.",
-    points: ["Introduction and background", "Methodology and data collection", "Results and data analysis", "Discussion of findings", "Conclusions and recommendations", "References and appendices", "Statistical output (SPSS/R/STATA)"],
-  },
-];
-
-const reportStructure = [
-  { n: "01", title: "Cover Page", desc: "Title, author name, institution, module/course name, date, and word count as required by your university guidelines." },
-  { n: "02", title: "Executive Summary / Abstract", desc: "Concise overview of the case, key issues, methodology, findings, and recommendations — typically 150–300 words." },
-  { n: "03", title: "Introduction", desc: "Background context of the case, purpose of the report, scope, and structure of the document." },
-  { n: "04", title: "Body / Main Analysis", desc: "Market analysis, key issues identification, SWOT/PESTLE (for business) or clinical examination/diagnosis (for medical), data analysis, and findings." },
-  { n: "05", title: "Decision Criteria & Data Analysis", desc: "Evaluation of options, criteria used for decisions, quantitative and qualitative data analysis, statistical outputs where applicable." },
-  { n: "06", title: "Recommendations", desc: "Actionable, evidence-based recommendations clearly linked to the analysis, prioritised and supported by academic literature." },
-  { n: "07", title: "Conclusion", desc: "Summary of key findings, limitations of the report, and implications for practice, policy, or future research." },
-  { n: "08", title: "References & Appendices", desc: "Full reference list in your required citation style (Harvard, APA, Vancouver, OSCOLA). Appendices include raw data, interview transcripts, and supporting materials." },
-];
-
-const serviceTiers = [
-  { tier: "Basic", color: "#2563b0", desc: "Developed based on relevant sources, reasonable attempt at finding an area that warrants research — evidence of critical evaluation but mainly descriptive.", includes: ["Relevant academic sources", "Case background", "Basic critical evaluation", "Standard referencing", "Executive summary"] },
-  { tier: "Advanced", color: "#1a2a6c", desc: "Wide range of sources, clear identification of core issues and research gaps with aims, research questions, and strong analysis.", includes: ["Wide range of sources", "Core issues identification", "Clear research gap", "Strong critical analysis", "Recommendations section"] },
-  { tier: "Premium", color: "#e87722", desc: "Wide range of seminal research with thorough engagement using latest resources. Solid gap identified and justified. Excellent critical analysis (upgradable).", includes: ["Seminal research", "Solid justified gap", "Excellent critical analysis", "Full data analysis", "Upgradable quality"] },
-];
-
-const qaBoxes = [
-  { img: "/images/qa/Quality-Assurance.png", title: "Quality Assurance", desc: "We ensure quality at every stage and the process.", href: "/guarantees/" },
-  { img: "/images/qa/Plagiarism-Report.png", title: "Plagiarism Report", desc: "We deliver the document after scanning for plagiarism.", href: "/guarantees/" },
-  { img: "/images/qa/Customer-Interaction.png", title: "Customer Interaction", desc: "We interact with you at every stage for amendments, queries and delivery.", href: "/contact-us/" },
-];
-
 const faqs = [
-  { q: "What types of case reports does Tutors India write?", a: "We write medical/nursing case reports, business case studies (company-specific or scenario-based), legal case reports, and scientific/research case reports. Our 2000+ expert writers cover all academic disciplines and case study types required by UK, US, and Australian universities." },
-  { q: "What information do I need to provide when ordering a case report?", a: "To match exactly with your requirement, we need: the case scenario or company/patient details, university guidelines and assessment criteria, marking rubric, word count, deadline, and any specific sections or questions the case report should address. The more detail you provide, the more accurately we can tailor the report." },
-  { q: "Do you write medical case reports for nursing students?", a: "Yes, we have specialist medical and nursing writers who are experienced in writing clinical case reports to medical journal standards. All clinical information is handled with full ethical awareness and patient anonymisation. We reference using Vancouver, AMA, and other medical citation styles as required." },
-  { q: "How do you ensure the case report is plagiarism-free?", a: "All case reports are written from scratch and scanned using Turnitin before delivery. We guarantee less than 5% plagiarism and provide a plagiarism-free certificate. Our writing process involves thorough research and original analysis — not copy-pasting of existing case studies." },
-  { q: "Can you write a case report on a specific company?", a: "Yes. We write business case studies on specific companies, industries, or scenarios as required by your university. We research the company thoroughly using credible academic and industry sources and apply appropriate frameworks (SWOT, PESTLE, Porter's Five Forces) to produce a comprehensive analysis." },
-  { q: "Do you offer revisions for case reports?", a: "Yes, we provide unlimited free revisions for any changes required based on the original instructions. Minor changes are completed within 24 working hours and significant changes within 48 working hours. If your tutor or supervisor provides specific feedback, share it with us and we will revise accordingly at no additional charge." },
+  {
+    q: "What Tutors India will deliver along with the Case report writing services: Service description?",
+    a: "You need to specify the particular service that you are looking for whether, you required summary or critical evaluation or mixed. When you order for case report writing service, we provide 100-250 words.",
+  },
+  {
+    q: "What Tutors India will deliver along with the Case report writing services: Service description?",
+    a: "After the order confirmed, we allocate the special team to scrutinize the work in terms of availability necessary requirements that would be essential to complete 5o ask during the initial stage of your work to send the requirement.",
+  },
+  {
+    q: "Why Tutors India is better in case report writing compare to others.",
+    a: "We are included more competitive advantage that we implement like highly experience and skillful writers, 100% plagiarism free work, on-time delivery, affordable prices, brainstorming sessions*, and many more that why we are stand as the outstanding case service provider in the US, UK and Australian countries compare to other academic service providers.",
+  },
+  {
+    q: "Who will write my case report writing?",
+    a: "We have a team of brilliant expertise who will write case report writing on any topic or subjects. Our writers are passionate and talented in working any essays by submit their case report writing work with more professional way. Our writers are highly qualified and trained in the academic writing field so know how to write your case report-writing, critical review, reflective report, dissertation, and research essays and terms paper on any topic.",
+  },
+  {
+    q: "How quickly can I Get my case report?",
+    a: "After getting the Topic of your case report, we will talk with our writers to set the timeline. Even, we are ready to offer the high quality of Case report on urgent basis. We ensure that our essay papers will delivered on Time.",
+  },
+  {
+    q: "Can I get some of samples of case report writing?",
+    a: "Yes, we share some of the sample case report writing works so it is easy for students to analyze of our quality of our works.",
+  },
 ];
 
 const testimonials = [
-  { quote: "Express sincere gratitude to the team of Tutors India for guiding me to complete my case report. They prepared the case report for my research proposal and also guided me with thorough instructions. The support is fantastic!", author: "Audrey", avatar: "/images/testimonials/t07.jpg" },
-  { quote: "The submission procedure was simple. The peer review procedure was straightforward and completed on time. I really appreciate their taking the time to include a brief profile of the authors. I would recommend Tutors India for case report publication.", author: "Isabella", avatar: "/images/testimonials/user8.jpg" },
-  { quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.", author: "Amelia Brooks", location: "UK", avatar: "/images/testimonials/amelia-brooks.webp" },
+  { quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.", author: "Amelia Brooks", location: "UK", avatar: "/images/testimonials/t15.jpg" },
+  { quote: "I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.", author: "Oliver Bennett", location: "UK", avatar: "/images/testimonials/t13.jpg" },
+  { quote: "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout.", author: "Layla Al Mansoori", avatar: "/images/testimonials/t16.jpg" },
+  { quote: "My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.", author: "Hassan Al Falasi", location: "UAE", avatar: "/images/testimonials/t17.jpg" },
+  { quote: "I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.", author: "Charlotte Reed", location: "UK", avatar: "/images/testimonials/t18.jpg" },
+  { quote: "The team handled everything professionally from start to finish. Timely updates, quick responses, and excellent academic quality — exactly what students need during stressful deadlines.", author: "Zain Al Hashmi", location: "UAE", avatar: "/images/testimonials/t19.jpg" },
+  { quote: "I express my sincere gratitude to the team of Tutors India for guiding me to complete my case report. They prepared the case report for my research proposal and also guided me with thorough instructions. The support is fantastic!", author: "Audrey", avatar: "/images/testimonials/t15.jpg" },
+  { quote: "The submission procedure was simple. Likewise, the peer review procedure was straightforward and completed on time. I really appreciate their taking the time to include a brief profile of the authors. I would recommend Tutors India for case report publication.", author: "Isabella", avatar: "/images/testimonials/t16.jpg" },
 ];
 
 const subjects = [
-  "Medicine & Health", "Nursing & Clinical Practice", "Business & Management", "Law & Legal Studies",
-  "Engineering & Technology", "Biological Sciences", "Psychology", "Social Work",
-  "Education & Training", "Marketing & Communication", "Computer Science & IT", "Economics & Finance",
+  "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
+  "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
+  "Biological & Life science", "Economics & Administration", "Humanities & Social Science",
+  "Law", "Medicine & Health", "Education & Training",
+  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT",
+  "Hospitality, Leisure & Sports",
 ];
 
-export default function CaseReportPage() {
+const features = [
+  { icon: "📄", title: "Plagiarism Free Work" },
+  { icon: "✨", title: "Uniqueness" },
+  { icon: "📚", title: "Fully Referenced" },
+  { icon: "🎯", title: "100% Requirement Match" },
+  { icon: "⏱", title: "On Time" },
+  { icon: "📝", title: "Word Count Committed" },
+  { icon: "✅", title: "Quality Assurance" },
+  { icon: "🔄", title: "Unlimited Revisions" },
+  { icon: "💰", title: "Affordable" },
+  { icon: "👨‍🎓", title: "Experienced Writers with a minimum degree of Master's with research experience" },
+];
+
+const orderProcess = [
+  { title: "We Identify Your Writer", desc: "In order to get our service, you need to first fill out the form with your information in a comprehensive manner." },
+  { title: "Reference Number", desc: "Upon receiving your Enquiry form, we assign you a reference number. You can know the status of your paper anytime by sending us an email or tracking through CRM." },
+  { title: "Acknowledgment", desc: "Once you have paid for your order you will receive an acknowledgement from us. The writing process here with us begins within couple of days after receiving your order." },
+  { title: "Edit & Proofreading", desc: "Once we receive an order from our writer, we ensure to proofread the document." },
+  { title: "We Check Requirement", desc: "Once your case report is completed we check for spelling, grammar, content, focus, sources quality against the client requirement." },
+  { title: "Plagiarism Assurance", desc: "Once your case report is completed it is checked for plagiarism with anti-plagiarism software before the delivery." },
+  { title: "Free Appendices / Resources", desc: "We ensure not only to deliver your work but also additional reference materials will be shared via zip file through google drive or drop box." },
+  { title: "Download Your Order", desc: "You can download your order through our CRM and reminder will be sent through email & SMS. Additional copy will be mailed." },
+  { title: "Request for Amendment", desc: "If you required any changes, you can always come back to us, we are ready to unlimited revisions for the concept being committed. Comments can be shared through guidance@tutorsindia.com." },
+  { title: "Researcher Makes the Changes", desc: "The document will be shared to our writer and once the work is completed, we will share you the complete work through email or you can download the order." },
+];
+
+const guarantees = [
+  {
+    t: "A complete secure & Confidential Service",
+    d: "We offer 100% confidentiality of client's personal details, payment details, project works, copyrights of research works.",
+  },
+  {
+    t: "Fully Referenced",
+    d: "Our dissertation proposal work is fully referenced with latest articles and textbooks. We refer only peer reviewed sources such as scholarly articles and textbook to write the research proposal. Further, we also read latest news papers articles such as Economic Times, Forbes, The Economics etc to identify the industrial problem.",
+  },
+  {
+    t: "Our Guarantees",
+    d: "Word Count Committed: Word count does not include references and bibliography and we help you to locate the sources cited. Quality Check: We have stringent quality checking process. Unlimited revisions: We provide unlimited revisions as per the initial commitment.",
+  },
+  {
+    t: "Plagiarism Free Work",
+    d: "We are aware of the consequences of plagiarism. Hence, research proposal is completely plagiarism free, where we ensure to acknowledge the authors of all publication, and re-write in our own words, if there is a necessity to quote an author ad verbatim, then we use quotation marks and italics to indicate the same.",
+  },
+  {
+    t: "On Time",
+    d: "Our work is delivered on specified time. Our specific changes to the delivered work within 45 days of delivery. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours.",
+  },
+  {
+    t: "Experienced Writers",
+    d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK.",
+  },
+];
+
+export default function CaseReportWritingServicesPage() {
   return (
     <>
+      {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
-            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}<Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}<span style={{ color: "#fff" }}>Case Report Writing</span>
-            </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>
-              The US / UK Case Report Writing Service
-            </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              UK Report Writing at Tutors India will be strictly in British English, following university requirements including citation and formatting. Our team of US &amp; British Writers guarantees your grade across medical, business, legal, and scientific case reports.
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}
+            <span style={{ color: "#fff" }}>Case Report Writing Services</span>
+          </div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
+            The US / UK Report Writing Service
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "16px" }}>
+            UK Report Writing at Tutors India will be strictly in British English, strictly follow university requirement including Citation and formatting. Our team of US &amp; British Writers guarantees your grade.
+          </p>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Contact Us</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro cards + trust paragraph */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "32px 36px", marginBottom: "32px", borderLeft: "5px solid #1a2a6c" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "8px" }}>
+            UK/ the US Reflective Report Writing Writing Service
+          </h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "4px" }}>
+            Our specific UK essay writing demonstrates the ability to communicate complex ideas critically, concisely, and clearly..
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+            You will be Amazed with the quality of your Case Report
+          </p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "20px", marginBottom: "32px" }}>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #1a2a6c" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Your Report is written by qualified and experienced researchers from the US &amp; UK
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
+              Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from the US, UK &amp; India.
             </p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>Medical · Nursing · Business · Legal · Scientific Case Reports</p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
-            </div>
           </div>
-          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>Medical · Business<br />Legal · Scientific<br />All Case Types</div>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Reports are written with utmost care based on your specific university guidelines &amp; Specifications
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
+              We write case report from a GCSE level essay to a PhD level model, at an affordable rates including planning, statistical analysis, proofreading and critiquing.
+            </p>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
+
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "28px 32px" }}>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "14px" }}>
+            Report Writing Service
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            A case study design provides an opportunity to collect research data from various sources while utilizing different data collection techniques to take advantage of multiple sources of evidence. According to Yin, a rigorous research design is essential to guide a researcher throughout a study. Case study researchers explore, describe, and depict a setting, an individual, or a situation. Our team of expertise has a capability to handle any type of case study such as medical /nursing (case report), business case study (specific company) or scenario based.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, margin: 0 }}>
+            UK Report Writing specific is Simply easy &amp; Straightforward — Our UK Case Report writing help guarantees that your essay is confidential, and so you do not have to worry about it. Just send us your essay topic along with the deadline and see the results that are far justified and mark the success of your case report.
+          </p>
+        </div>
       </section>
 
-      <div style={{ background: "#12214a", padding: "16px 20px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "2,000+", l: "Expert Writers" }, { n: "4 Types", l: "Case Reports" }, { n: "British English", l: "Standard" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response" }].map(s => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
-              <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
-        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Expert Case Report &amp; Case Study Writing Service</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            A case study design provides an opportunity to collect research data from various sources while utilizing different data collection techniques to take advantage of multiple sources of evidence. Tutors India offers full management, legal, medical and clinical case report services — handling medical/nursing (case report), business case study (specific company) or scenario-based cases, and legal case reports.
+      {/* Service Tiers */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px", textAlign: "center" }}>
+            What Services do we offer under Report Writing?
+          </h2>
+          <p style={{ color: "#555", textAlign: "center", marginBottom: "32px", lineHeight: 1.7 }}>
+            We write complete essay from the introduction to recommendations. Although it looks simple, but in practical, it&apos;s a tedious task to complete each and every step.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Our reports are written with utmost care based on your specific university guidelines &amp; specifications. All case reports are written strictly in British English following university citation and formatting requirements. Writers are selected based on their specific domain expertise — medical writers for nursing case reports, business experts for company case studies, legal specialists for law case reports.
-          </p>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Case Report Types We Cover</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Expert writers for every type of academic case report</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }} className="two-col-grid">
-            {reportTypes.map(r => (
-              <div key={r.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "22px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
-                  <span style={{ fontSize: "2rem" }}>{r.icon}</span>
-                  <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#1a2a6c" }}>{r.title}</h3>
-                </div>
-                <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.7, marginBottom: "12px" }}>{r.desc}</p>
-                <ul style={{ listStyle: "none", padding: 0 }}>
-                  {r.points.map(p => (
-                    <li key={p} style={{ display: "flex", gap: "7px", fontSize: "0.8rem", color: "#555", padding: "4px 0", borderBottom: "1px solid #f0f2fa" }}>
-                      <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {p}
-                    </li>
-                  ))}
-                </ul>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(270px,1fr))", gap: "20px" }}>
+            {[
+              { tier: "Basic", color: "#1a2a6c", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
+              { tier: "Advanced", color: "#e87722", desc: "Wide range of sources, a clear identification of research gap in the literature along with aim and research questions." },
+              { tier: "Premium", color: "#2563b0", desc: "Refers to a wide range of seminal research with throughout engagement using latest resources. A solid gap would be identified based on the current literature & justified thoroughly & Excellent critical analysis would be shown (upgradable)." },
+            ].map(t => (
+              <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Case Report Structure</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>We follow specific university guidelines across the United States, United Kingdom, Australia, and other institutions</p>
-          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden" }}>
-            {reportStructure.map((item, i) => (
-              <div key={item.n} style={{ padding: "14px 20px", borderBottom: i < reportStructure.length - 1 ? "1px solid #f0f2fa" : "none", display: "flex", gap: "14px", alignItems: "flex-start" }}>
-                <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "50%", width: "30px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.68rem", fontWeight: 700, flexShrink: 0 }}>{item.n}</div>
-                <div>
-                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "3px" }}>{item.title}</h3>
-                  <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.6 }}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Service Tiers</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
-            {serviceTiers.map(t => (
-              <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>
-                <div style={{ background: t.color, color: "#fff", padding: "14px 18px" }}><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div></div>
-                <div style={{ padding: "16px" }}>
-                  <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, marginBottom: "12px" }}>{t.desc}</p>
-                  <ul style={{ listStyle: "none", padding: 0 }}>
-                    {t.includes.map(i => (<li key={i} style={{ display: "flex", gap: "6px", fontSize: "0.78rem", color: "#555", padding: "4px 0", borderBottom: "1px solid #f0f2fa" }}><span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {i}</li>))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", marginBottom: "28px" }} className="two-col-grid">
-          <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "24px" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "14px" }}>Free Deliverables with Every Order</h3>
-            {["Executive summary / abstract", "Free research articles used in writing", "SPSS data sheets and output", "Questionnaire or semi-structured interview guide", "Redrawn graphs, tables, and figures", "Free tutoring sessions on the work", "Plagiarism report (Turnitin)", "Appendices at no additional cost"].map(item => (
-              <div key={item} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.83rem", color: "#c5d5f0" }}>
-                <span style={{ color: "#f9c74f", fontWeight: 700, flexShrink: 0 }}>✓</span> {item}
-              </div>
-            ))}
-          </div>
-          <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px", border: "1px solid #dde2ef" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Our Guarantees</h3>
-            {["Unlimited revisions for committed work", "On-time delivery guaranteed", "24/7 customer support", "Three-level quality check", "100% confidentiality — NDA-signed writers", "Plagiarism free — less than 5%", "Domain-specific expert writers", "British English standard throughout"].map((g, i) => (
-              <div key={i} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid #dde2ef", fontSize: "0.83rem", color: "#555" }}>
-                <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span> {g}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px", marginBottom: "28px" }}>
-          {qaBoxes.map(box => (
-            <Link key={box.title} href={box.href} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", overflow: "hidden", textAlign: "center", display: "block" }}>
-              <img src={box.img} alt={box.title} style={{ width: "100%", height: "100px", objectFit: "contain", padding: "10px", background: "#f5f6fa" }} loading="lazy" />
-              <div style={{ padding: "10px" }}>
-                <div style={{ fontSize: "0.83rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "3px" }}>{box.title}</div>
-                <div style={{ fontSize: "0.74rem", color: "#666", lineHeight: 1.4 }}>{box.desc}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What Our Clients Say</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "16px" }} className="three-col-grid">
-            {testimonials.map((t, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div>
-                <p style={{ color: "#555", fontSize: "0.84rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "12px" }}>{t.quote}</p>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <img src={t.avatar} alt={t.author} style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" />
-                  <div>
-                    <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.84rem" }}>{t.author}</div>
-                    {t.location && <div style={{ fontSize: "0.72rem", color: "#888" }}>{t.location}</div>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>
-          <FaqAccordion faqs={faqs} />
-        </div>
-
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px", fontWeight: 600 }}>2000+ Experts — USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {subjects.map(s => (<span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>))}
           </div>
         </div>
       </section>
 
-      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get Your Case Report Written by Domain Experts</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Medical · Business · Legal · Scientific · Response in 30 min · Unlimited Revisions</p>
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
+      {/* Service Features */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          UK Report Writing Service Feature
+        </h2>
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "8px", fontWeight: 400 }}>
+          A Report Writing Service features that helps to get the grade
+        </h3>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+          Qualified researchers, unlimited revision, only peer reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: "16px", marginBottom: "48px" }}>
+          {features.map(f => (
+            <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
+              <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>{f.icon}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5 }}>{f.title}</span>
+            </div>
+          ))}
+        </div>
+
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
+          Our Report Writing Services Is Well Structured
+        </h3>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "20px" }}>
+          Our report writing services is well structured covering all essential components of a comprehensive case report.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "16px", marginBottom: "32px" }}>
+          {[
+            { n: "1", t: "Cover Page", d: "Include student names and student Ids." },
+            { n: "2", t: "Executive Summary", d: "If appropriate – should be written last to focus on key points/findings." },
+            { n: "3", t: "Introduction", d: "Current Situation Analysis and pertinent Background including a synopsis of the relevant information from the case analysis tool short form." },
+            { n: "4", t: "Body", d: "May include Target Market Identification, Market Needs, Forms of IMC in use, Analysis of Case, Key Issues/Goals, Recommendations, Decision Criteria, Assumptions, Data Analysis, Preferred Alternative with rationale." },
+          ].map(f => (
+            <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
+              <div>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
+          Reflective Report Writing need to convince the Supervisory committee
+        </h3>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+          We also offer specific essay from the introduction to recommendations. Further, we offer an expository essay, persuasive essay, descriptive essay and narrative essays. Though it looks very simple, it is a tedious task to complete each and every step.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+          <strong>Justification/Predicted Outcome:</strong> It is important that all guesstimates or creative ideas be founded upon some marketing rationale and a solid understanding of the metrics related to the target market and anticipated financial changes/impact. Using target market analysis and education estimation of population, $, and units is appropriate. If you are not confident in your ability to do so…PLEASE FEEL FREE TO DISCUSS "HOW TO" as a team with the professor well in advance of your submission.
+        </p>
+      </section>
+
+      {/* Free Offers + Deliverables */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "28px" }}>
+            Free Offers along with your Reflective Report Writing Services
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
+                Free Tutoring
+              </h3>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
+                We deliver more than your expectation – Free Tutoring for the work being carried out – to speak confidently with your program supervisors.
+              </p>
+            </div>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #1a2a6c" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
+                Our Deliverables
+              </h3>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
+                Essay writing services from Tutors India research writing services is simply easy and straightforward. You will get the reply within 30 minutes which would enable to place your order quickly without any delay in submissions. We would provide executive summary /abstract, free articles used for writing the part dissertation, SPSS data sheet and output, questionnaire or semi-structured interview questions and any other information that we have used to write the dissertation such as reflective log or diary.
+              </p>
+            </div>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #2563b0" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
+                Our Report Writing Service is Exclusive
+              </h3>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
+                We do not just provide a report, but rather clear explanation and justification for the content written. Our UK Case Report writing help guarantees that your essay is confidential, and so you do not have to worry about it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Subject Expertise */}
+      <section style={{ background: "#1a2a6c", color: "#fff", padding: "48px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", marginBottom: "8px" }}>
+            Specialized Subject Matter Expertise across the globe
+          </h2>
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "10px" }}>
+            We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)
+          </p>
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "28px" }}>
+            We offer topic Selection for Management, Social Science, Engineering, Technology, Life Science, Medical, Arts &amp; Literature / Linguistics, and many more.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "28px" }}>
+            {subjects.map(s => (
+              <span key={s} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem" }}>{s}</span>
+            ))}
+          </div>
+          <Link href="/our-writers/" style={{ color: "#f9c74f", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Meet Our Writers →</Link>
+        </div>
+      </section>
+
+      {/* Why Choose — Guarantee Cards */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          Why Choose Tutors India: Report Writing Service features
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+          Qualified researchers, unlimited revision, only peer reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
+          {guarantees.map(f => (
+            <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Order Process */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+            How Does it work?
+          </h2>
+          <p style={{ color: "#555", marginBottom: "8px" }}>Have a look at what makes us the best in the business</p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+            After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work. Once the process is done, in case there are any queries, we ensure to ask during the initial stage of your work and send you the outline proposed for writing secondary data collection based dissertation. Once the outline along with the chapterization plan is approved, we will dispatch the work in chapters, and update you on the progress of your work. Our exclusive coordinators would get in touch with you to clarify any queries. You can also pay in instalments and work will be started as soon as receive the payments. We deliver your work as per the schedule fixed and agreed or even before the schedule.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "20px" }}>
+            {orderProcess.map((p, i) => (
+              <div key={p.title} style={{ background: "#fff", borderRadius: "10px", padding: "20px 24px" }}>
+                <div style={{ width: "36px", height: "36px", background: "#e87722", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.95rem", marginBottom: "12px" }}>{i + 1}</div>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "6px" }}>{p.title}</h3>
+                <p style={{ color: "#555", fontSize: "0.86rem", lineHeight: 1.7, margin: 0 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
+            Track Your Report through our customized CRM — You need not check your email frequently rather your report is safe on our customizable CRM and you can download at any point of time by using your unique username and password.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
+          Frequently Asked Questions
+        </h2>
+        <FaqAccordion faqs={faqs} />
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialSlider testimonials={testimonials} />
+
+      {/* CTA */}
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
+          Place Your Order Today
+        </h2>
+        <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
+          Get expert case report writing assistance from qualified US &amp; UK researchers. Confidential, plagiarism-free, and delivered on time.
+        </p>
+        <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/order-now/" style={{ padding: "12px 36px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+          <Link href="/contact-us/" style={{ padding: "12px 36px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
         </div>
       </section>
     </>

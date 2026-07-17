@@ -17,7 +17,7 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export const revalidate = 3600;
+export const revalidate = 0;
 
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();
@@ -27,13 +27,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  if (!post) return { title: "Post Not Found | Tutors India" };
+  if (!post) return { title: "Post Not Found" };
 
   const image = getFeaturedImage(post);
   const description = stripHtml(post.excerpt.rendered, 160);
 
   return {
-    title: `${stripHtml(post.title.rendered, 70)} | Tutors India Blog`,
+    title: `${stripHtml(post.title.rendered, 70)} — Blog`,
     description,
     
     alternates: { canonical: `https://tutorsindia.com/blog/${slug}/` },
@@ -148,14 +148,14 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Back + share row */}
         <div style={{ marginTop: "32px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-          <Link href="/blog/" style={{ fontSize: "0.88rem", color: "#2563b0", fontWeight: 600 }}>
+          <Link href="/blog/" style={{ fontSize: "0.94rem", color: "#2563b0", fontWeight: 600 }}>
             ← Back to Blog
           </Link>
           <div style={{ display: "flex", gap: "10px" }}>
-            <Link href="/order-now/" style={{ padding: "9px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.88rem" }}>
+            <Link href="/order-now/" style={{ padding: "9px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.94rem" }}>
               Order Now
             </Link>
-            <Link href="/contact-us/" style={{ padding: "9px 22px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600, fontSize: "0.88rem" }}>
+            <Link href="/contact-us/" style={{ padding: "9px 22px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600, fontSize: "0.94rem" }}>
               Contact Us
             </Link>
           </div>
@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: Props) {
                         <span style={{ fontSize: "0.7rem", background: "#e8f0fb", color: "#2563b0", padding: "2px 8px", borderRadius: "8px", fontWeight: 600, display: "inline-block", marginBottom: "7px" }}>{rCats[0]}</span>
                       )}
                       <div style={{ fontSize: "0.76rem", color: "#888", marginBottom: "6px" }}>{formatDate(rp.date)}</div>
-                      <div style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: rp.title.rendered }} />
+                      <div style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: rp.title.rendered }} />
                       <div style={{ fontSize: "0.82rem", color: "#e87722", fontWeight: 600, marginTop: "10px" }}>Read More →</div>
                     </div>
                   </Link>

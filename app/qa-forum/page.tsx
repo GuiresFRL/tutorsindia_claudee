@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Q&A Forum — Academic Questions & Expert Answers",
+  title: "Q&A Forum — Expert Academic Answers",
   description: "Get answers to your academic questions from Tutors India's expert team. Statistical analysis, research methodology, nursing assignments, and more.",
   alternates: { canonical: "https://tutorsindia.com/qa-forum/" },
 };
@@ -57,7 +57,7 @@ export default function QAForumPage() {
     <>
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ fontSize: "0.9rem", color: "#a0b8e0", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link> / Q&A Forum
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2.2rem)", marginBottom: "12px" }}>QA Forums</h1>

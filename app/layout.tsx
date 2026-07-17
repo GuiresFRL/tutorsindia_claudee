@@ -1,9 +1,26 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { Merriweather, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCallButton from "@/components/ui/FloatingCallButton";
+import EnquiryModal from "@/components/ui/EnquiryModal";
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-merriweather",
+  display: "swap",
+});
+
+const sourceSans3 = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-source-sans",
+  display: "swap",
+});
 
 const siteUrl = "https://tutorsindia.com";
 
@@ -79,18 +96,43 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={`${merriweather.variable} ${sourceSans3.variable}`}>
       <head>
-        {/* Prevent indexing until site is ready for launch */}
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
+        {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{ __html: `
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WF2X4DP');
+        ` }} />
+        {/* End Google Tag Manager */}
+
+        {/* Microsoft Clarity */}
+        <script dangerouslySetInnerHTML={{ __html: `
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "cmdaycrfv8");
+        ` }} />
+
+        {/* Google Analytics (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33260609-2"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-33260609-2');
+        ` }} />
+
         {/* Charset & viewport */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Site verification placeholders — add actual codes when available */}
-        {/* <meta name="google-site-verification" content="YOUR_CODE" /> */}
-        {/* Font Awesome — required for library proxied content icons */}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossOrigin="anonymous" />
+        {/* Preload LCP element — logo is the first painted image on every page */}
+        <link rel="preload" as="image" href="/tutorsindia-logo-hd.jpg" fetchPriority="high" />
+        {/* Font Awesome — preload only; actual load deferred via Script below */}
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" crossOrigin="anonymous" />
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -160,6 +202,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         })}} />
       </head>
       <body style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WF2X4DP"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+
         <TopBar />
         <Header />
         <main style={{ flex: 1 }}>{children}</main>
@@ -167,6 +220,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Floating call button — above WhatsApp */}
         <FloatingCallButton />
+
+        {/* Global "Enquire Now" popup — opened from any page via the OPEN_ENQUIRY_EVENT custom event */}
+        <EnquiryModal />
 
         {/* Elementor tabs initializer */}
         <script dangerouslySetInnerHTML={{ __html: `
@@ -268,18 +324,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 })();
         `}} />
 
-        {/* Tawk.to Live Chat */}
-        <script dangerouslySetInnerHTML={{ __html: `
+        {/* Font Awesome — injected after page load to avoid render-blocking */}
+        <Script
+          id="font-awesome-loader"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: `
+(function(){
+  var l=document.createElement('link');
+  l.rel='stylesheet';l.crossOrigin='anonymous';
+  l.href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+  document.head.appendChild(l);
+})();
+          `}}
+        />
+
+        {/* Tawk.to live chat widget — same account used on tutorsindia.com */}
+        <Script
+          id="tawkto-loader"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: `
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/679b32f93a842732607721d7/1iir3u863';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/679b32f93a842732607721d7/1iir3u863';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
 })();
-        `}} />
+          `}}
+        />
 
         {/* WhatsApp floating button — bottom left */}
         <a

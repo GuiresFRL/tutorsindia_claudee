@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Testimonials — Real Client Experiences",
   description: "Read real testimonials from 2,00,000+ scholars who trusted Tutors India with their academic success. Dissertations, assignments, statistical analysis and more.",
+  alternates: { canonical: "https://tutorsindia.com/testimonials/" },
 };
 
 const featuredTestimonials = [
@@ -70,7 +71,7 @@ export default function TestimonialsPage() {
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", textAlign: "center" }}>
           Hear from Our Clients
         </h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "32px", textAlign: "center" }}>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "32px", textAlign: "center" }}>
           Real students, real results — trusted by scholars across the globe
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "20px", marginBottom: "56px" }} className="two-col-grid">
@@ -79,8 +80,8 @@ export default function TestimonialsPage() {
               <img src={t.avatar} alt={t.author} style={{ width: "56px", height: "56px", borderRadius: "50%", objectFit: "cover", flexShrink: 0, border: "3px solid #dde2ef" }} loading="lazy" />
               <div>
                 <div style={{ color: "#e87722", fontSize: "1.8rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div>
-                <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.75, fontStyle: "italic", marginBottom: "12px" }}>{t.text}</p>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.88rem" }}>{t.author}</div>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.75, fontStyle: "italic", marginBottom: "12px" }}>{t.text}</p>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.94rem" }}>{t.author}</div>
                 {t.location && <div style={{ fontSize: "0.75rem", color: "#888" }}>{t.location}</div>}
                 {t.subject && <div style={{ fontSize: "0.72rem", color: "#e87722", marginTop: "2px" }}>{t.subject}</div>}
               </div>

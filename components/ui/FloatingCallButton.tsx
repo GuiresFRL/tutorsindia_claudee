@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 
 const NUMBERS = [
-  { label: "India", flag: "🇮🇳", number: "+91 8754446690", tel: "tel:+918754446690" },
-  { label: "UK",    flag: "🇬🇧", number: "+44 1143520021", tel: "tel:+441143520021" },
+  { label: "India", code: "IN", codeBg: "#e8f5e9", codeColor: "#1b7a2f", number: "+91 8754446690", tel: "tel:+918754446690" },
+  { label: "United Kingdom", code: "UK", codeBg: "#e8eefc", codeColor: "#1a2a6c", number: "+44 1143520021", tel: "tel:+441143520021" },
 ];
 
 export default function FloatingCallButton() {
@@ -20,14 +20,14 @@ export default function FloatingCallButton() {
   }, []);
 
   return (
-    <div ref={ref} style={{ position: "fixed", bottom: "92px", left: "24px", zIndex: 9999 }}>
+    <div ref={ref} style={{ position: "fixed", bottom: "96px", right: "24px", zIndex: 9999 }}>
 
-      {/* Popup — both numbers */}
+      {/* Popup — call numbers + WhatsApp */}
       {open && (
         <div style={{
           position: "absolute",
           bottom: "68px",
-          left: "0",
+          right: "0",
           background: "#fff",
           borderRadius: "14px",
           boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
@@ -47,7 +47,7 @@ export default function FloatingCallButton() {
               onMouseEnter={(e) => (e.currentTarget.style.background = "#f0f4ff")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
             >
-              <span style={{ fontSize: "1.5rem", flexShrink: 0, lineHeight: 1 }}>{n.flag}</span>
+              <span style={{ width: "34px", height: "34px", borderRadius: "50%", background: n.codeBg, color: n.codeColor, fontSize: "0.72rem", fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, letterSpacing: "0.03em" }}>{n.code}</span>
               <div>
                 <div style={{ fontSize: "0.7rem", color: "#888", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em" }}>{n.label}</div>
                 <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1a2a6c" }}>{n.number}</div>
@@ -57,10 +57,10 @@ export default function FloatingCallButton() {
         </div>
       )}
 
-      {/* Single phone button */}
+      {/* Single toggle button */}
       <button
         onClick={() => setOpen((v) => !v)}
-        aria-label="Call us"
+        aria-label="Contact us"
         style={{
           width: "56px",
           height: "56px",

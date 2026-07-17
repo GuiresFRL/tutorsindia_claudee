@@ -1,10 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
   title: "Professional CV Writing Service UK",
   description: "Professional CV, Personal Statement, Cover Letter & LinkedIn Profile Writing Service by UK certified specialists. Stand out to employers and land interviews.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/cv-writing/" },
 };
 
 const cvIncludes = [
@@ -31,6 +33,15 @@ const faqs = [
   { q: "Is my information on CV being confidential?", a: "Yes, we keep all your information confidential without a doubt. All documents are accessed only by writers who have signed NDAs with Tutors India, and your financial information is protected by 128-bit SSL encryption. If you feel troubled sharing information, we can send only the sample CV template that suits your needs to start the process." },
   { q: "Can I select my own CV writer from Tutors India?", a: "If you have already used Tutors India's CV writing service, you may request the same writer you worked with originally. It is important to check with our service providers for writer availability to ensure the timeline can be met. We also work for urgent delivery — cost may vary based on turnaround requirements." },
 ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  }))
+};
 
 const testimonials = [
   { quote: "I can't express how pleased I am with how the resume turned out. I used to worry that no one would hire me when I looked at my résumé, but now that I've changed it, I'm much more confident in applying for jobs.", author: "Dr. Mikael Sundström, PhD", avatar: "/images/testimonials/user-profile.png" },
@@ -49,6 +60,7 @@ const subjects = [
 export default function CVWritingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
@@ -67,12 +79,12 @@ export default function CVWritingPage() {
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <a href="https://www.tutorsindia.com/wp-content/uploads/2020/11/TI-CV-WRITING.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
+              <a href="/docs/cv-writing-brochure.pdf" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📄 Brochure</a>
               <Link href="/ask-an-expert/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.3)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Ask an Expert</Link>
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>Word · PDF · ASCII<br />Editable Formats<br />100% Satisfaction</div>
           </div>
         </div>
@@ -97,7 +109,7 @@ export default function CVWritingPage() {
         {/* Services Grid */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>What Services Do We Offer Under CV Writing?</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>Complete professional career document services by certified UK and US specialists</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>Complete professional career document services by certified UK and US specialists</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "18px" }} className="two-col-grid">
             {cvServices.map(svc => (
               <div key={svc.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "22px", position: "relative" }}>
@@ -115,7 +127,7 @@ export default function CVWritingPage() {
         {/* CV Includes */}
         <div style={{ marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>CV Writing Features — What We Include</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>An impressive resume needs to contain the right details, presented in the right way</p>
+          <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "18px" }}>An impressive resume needs to contain the right details, presented in the right way</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "16px" }} className="three-col-grid">
             {cvIncludes.map(item => (
               <div key={item.title} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
@@ -150,24 +162,7 @@ export default function CVWritingPage() {
         </div>
 
         {/* Testimonials */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What Our Clients Say</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "16px" }} className="two-col-grid">
-            {testimonials.map((t, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "20px" }}>
-                <div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div>
-                <p style={{ color: "#555", fontSize: "0.87rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "14px" }}>{t.quote}</p>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <img src={t.avatar} alt={t.author} style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" />
-                  <div>
-                    <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.85rem" }}>{t.author}</div>
-                    {t.location && <div style={{ fontSize: "0.74rem", color: "#888" }}>{t.location}</div>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <TestimonialSlider testimonials={testimonials} />
 
         {/* FAQ */}
         <div style={{ marginBottom: "28px" }}>

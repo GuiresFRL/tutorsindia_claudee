@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = serviceCategories.find((c) => c.slug === category);
   if (!cat) return {};
   return {
-    title: `${cat.title} Services | Tutors India`,
+    title: `${cat.title} Services`,
     description: `Expert ${cat.title} services from Tutors India — ${cat.services[0].description.slice(0, 120)}`,
   };
 }
@@ -85,7 +85,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.78rem", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic<br />Writing &amp; Editing<br />Since 2001</div>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
               ))}
             </div>
           </div>
-          <div style={{ background: "#fffbe6", borderLeft: "4px solid var(--orange)", padding: "14px 18px", borderRadius: "0 6px 6px 0", marginTop: "20px", fontSize: "0.88rem", color: "#555" }}>
+          <div style={{ background: "#fffbe6", borderLeft: "4px solid var(--orange)", padding: "14px 18px", borderRadius: "0 6px 6px 0", marginTop: "20px", fontSize: "0.94rem", color: "#555" }}>
             <strong style={{ color: "var(--orange-dark)" }}>Note:</strong> {cat.note}
           </div>
         </div>
@@ -163,7 +163,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
                 "Formatting and referencing included",
                 "Appendices at no additional cost",
               ].map((item) => (
-                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.88rem", color: "var(--text-mid)" }}>
+                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.94rem", color: "var(--text-mid)" }}>
                   <span style={{ color: "var(--orange)", fontWeight: 700 }}>✓</span> {item}
                 </li>
               ))}
@@ -181,7 +181,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
                 "NDA-signed and background-checked",
                 "24/7 availability across all time zones",
               ].map((item) => (
-                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.88rem", color: "#c5d5f0" }}>
+                <li key={item} style={{ display: "flex", gap: "8px", padding: "8px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.94rem", color: "#c5d5f0" }}>
                   <span style={{ color: "#f9c74f" }}>→</span> {item}
                 </li>
               ))}

@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Help Guide — Academic Writing & Dissertation Guides",
+  title: "Help Guide — Academic Writing Guides",
   description: "Academic writing help guides for undergraduate, Masters, MBA and PhD students. Essay writing, dissertation guidelines, subject-specific guides, referencing guides. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/help-guide/" },
 };
 
 const ugGuides = [
@@ -82,13 +83,13 @@ export default function HelpGuidePage() {
 
         {/* Dissertation Stages */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Dissertation Writing — Stage by Stage</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "20px" }}>Navigate every step of your dissertation journey</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "20px" }}>Navigate every step of your dissertation journey</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "16px", marginBottom: "48px" }} className="three-col-grid">
           {dissertationStages.map(stage => (
             <Link key={stage.n} href={stage.link} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "block" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
                 <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "50%", width: "30px", height: "30px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.72rem", fontWeight: 700, flexShrink: 0 }}>{stage.n}</div>
-                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c" }}>{stage.stage}</h3>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c" }}>{stage.stage}</h3>
               </div>
               <p style={{ fontSize: "0.8rem", color: "#666", lineHeight: 1.6, marginBottom: "8px" }}>{stage.desc}</p>
               <span style={{ fontSize: "0.78rem", color: "#e87722", fontWeight: 600 }}>Get Help →</span>
@@ -98,12 +99,12 @@ export default function HelpGuidePage() {
 
         {/* Writing Tips */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Top Academic Writing Tips</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "20px" }}>Guidance from our PhD-qualified academic writing experts</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "20px" }}>Guidance from our PhD-qualified academic writing experts</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px", marginBottom: "48px" }} className="three-col-grid">
           {writingTips.map(tip => (
             <div key={tip.title} style={{ background: "#f5f6fa", borderRadius: "10px", padding: "20px", border: "1px solid #dde2ef" }}>
               <div style={{ fontSize: "1.8rem", marginBottom: "8px" }}>{tip.icon}</div>
-              <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{tip.title}</h3>
+              <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{tip.title}</h3>
               <p style={{ fontSize: "0.8rem", color: "#666", lineHeight: 1.6 }}>{tip.desc}</p>
             </div>
           ))}

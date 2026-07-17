@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Tutors India Recent Trends | Latest Academic Insights",
+  title: "Recent Academic Research Trends",
   description: "Stay updated with the latest academic writing trends, blog posts, and insights from Tutors India.",
   
   alternates: { canonical: "https://tutorsindia.com/recent-trends/" },
@@ -57,7 +57,7 @@ export default function RecentTrendsPage() {
               <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", margin: 0 }}>LinkedIn Updates</h2>
             </div>
             <div style={{ padding: "24px 20px", display: "flex", flexDirection: "column", gap: "16px" }}>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
                 Follow Tutors India on LinkedIn for the latest academic writing tips, research insights, and company updates from our PhD-qualified team.
               </p>
               <a
@@ -73,7 +73,7 @@ export default function RecentTrendsPage() {
                   color: "#fff",
                   borderRadius: "5px",
                   fontWeight: 700,
-                  fontSize: "0.88rem",
+                  fontSize: "0.94rem",
                   textDecoration: "none",
                   width: "fit-content",
                 }}
@@ -89,7 +89,7 @@ export default function RecentTrendsPage() {
               <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", margin: 0 }}>Assignment Blog</h2>
             </div>
             <div style={{ padding: "24px 20px", display: "flex", flexDirection: "column", gap: "16px" }}>
-              <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
                 Read our latest blog posts on dissertation writing, referencing styles, research methodology, and academic best practices.
               </p>
               <Link
@@ -101,7 +101,7 @@ export default function RecentTrendsPage() {
                   color: "#fff",
                   borderRadius: "5px",
                   fontWeight: 700,
-                  fontSize: "0.88rem",
+                  fontSize: "0.94rem",
                   textDecoration: "none",
                   width: "fit-content",
                 }}
@@ -116,7 +116,7 @@ export default function RecentTrendsPage() {
 
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Expert Academic Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

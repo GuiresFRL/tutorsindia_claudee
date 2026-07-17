@@ -1,223 +1,368 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "UK / US Critical Review Writing Service",
-  description: "The US / UK Critical Review Service. Expert critical evaluation and summary of academic texts. Peer-reviewed sources only. Plagiarism-free. Unlimited revisions. Tutors India.",
+  title: "The US / UK Critical Review Service",
+  description: "UK Critical Review Writing at Tutors India will be strictly in British English, strictly follow University Requirement including Citation and Formatting. All our Writers belongs to British and the US.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/critical-review/" },
 };
 
-const criticalReviewSteps = [
-  { n: "01", title: "Initial Appraisal", desc: "Identify author credentials, publication date, edition, publisher, and journal title. Establish the authority, currency, and relevance of the source before detailed analysis." },
-  { n: "02", title: "Content Appraisal", desc: "Analyse intended audience, methodology used, objectives, quality of reasoning, source reliability, validity of arguments, and draw your own informed personal conclusion." },
-  { n: "03", title: "Critical Summary", desc: "Summarise the source content providing an argument overview. Identify what the source says and the key questions or issues it addresses without personal judgment." },
-  { n: "04", title: "Critical Evaluation", desc: "Evaluate the work critically — showing differences from other sources, current usage, strengths and limitations, and the contribution of the work to the field." },
-  { n: "05", title: "Contextual Placement", desc: "Place the source in the context of your broader research. Explain how it relates to your topic, what gap it fills, and how it supports or challenges your arguments." },
-  { n: "06", title: "Synthesis & Conclusion", desc: "Synthesise findings across multiple sources, draw conclusions about the state of knowledge in the field, and identify remaining gaps or areas for future research." },
-];
-
-const serviceTiers = [
-  { tier: "Basic", color: "#2563b0", desc: "3 topics, 1000 words — literature review and research gap identification with basic critical evaluation.", includes: ["3 relevant sources reviewed", "Basic critical evaluation", "Literature overview", "Standard referencing", "Summary and critique"] },
-  { tier: "Advanced", color: "#1a2a6c", desc: "1 topic, 1000 words — clear research gap identification with research questions and deeper analysis.", includes: ["1 focused source/topic", "Clear research gap", "Research questions identified", "Detailed critical analysis", "Academic argumentation"] },
-  { tier: "Premium", color: "#e87722", desc: "Wide seminal research with current literature engagement, solid gap identification, excellent critical analysis (upgradable).", includes: ["Seminal research", "Current literature", "Solid gap identification", "Excellent critical analysis", "Upgradable quality"] },
-];
-
-const subjectCoverage = [
-  { subject: "Management & Business", examples: "Strategy, HRM, Marketing, Finance, Operations" },
-  { subject: "Psychology", examples: "Cognitive, Social, Clinical, Educational Psychology" },
-  { subject: "Healthcare", examples: "Nursing, Medicine, Public Health, Epidemiology" },
-  { subject: "Engineering", examples: "Civil, Mechanical, Electrical, Computer Engineering" },
-  { subject: "Law", examples: "Case law, Legislation, Textbooks, Journals" },
-  { subject: "Social Sciences", examples: "Sociology, Anthropology, Political Science, Economics" },
-  { subject: "Education", examples: "Pedagogy, Curriculum, Educational Leadership" },
-  { subject: "Computer Science", examples: "AI, Data Science, Software Engineering, Networks" },
-];
-
 const faqs = [
-  { q: "What is a critical review and why is it important?", a: "Doing a critical review is one of the most challenging and difficult tasks for students, as it requires evaluating and summarising a text while providing your own opinion and judgment. A critical review demonstrates your ability to critically engage with academic literature, assess the quality of sources, and situate them within the broader field of knowledge. It is a key postgraduate academic skill assessed across many disciplines." },
-  { q: "What subject areas do you cover for critical reviews?", a: "Our service covers critical reviews across all academic disciplines including Business Management, Psychology, Healthcare (including case law, legislation, textbooks, journals), English, Marketing, Chemistry, Science, Public Health, Performance Management, Social Work, Accounting, Human Resource Management, and Law. Our 2000+ expert team covers every major academic discipline." },
-  { q: "How do you ensure the critical review is of high quality?", a: "Our writers use only peer-reviewed sources and articles, applying domain-specific expertise to critically evaluate works. The service maintains strict plagiarism policy — writing in original words with clear references for quotations. All work undergoes a three-level quality check (Technical QC, Editor QC, final requirement verification) and is scanned using Turnitin before delivery." },
-  { q: "What information do I need to provide when ordering a critical review?", a: "To match exactly with your requirement, we need: the source(s) to be critically reviewed, your university guidelines and assessment criteria, the marking rubric, word count, deadline, and any specific focus areas or questions your supervisor has raised. The more detail you provide, the more accurately we can tailor the review to your specific requirements." },
-  { q: "How are revisions handled for critical reviews?", a: "We provide unlimited free revisions for any changes or feedback based on the original instructions. Minor changes are completed within 24 working hours and significant changes within 48 working hours. If your supervisor or tutor provides specific feedback after delivery, share it with us and we will revise the review accordingly at no additional charge." },
-  { q: "Can you write a critical review of multiple sources?", a: "Yes, we can write critical reviews of single sources (individual article/book reviews) as well as comparative reviews of multiple sources. For literature-based research, we can critically evaluate and synthesise multiple sources within a specific topic area, identifying key themes, debates, methodological approaches, and research gaps across the reviewed literature." },
+  {
+    q: "How do you structure the critical review assignments?",
+    a: "With our years of experience, we exclusively assist you in completing your critical thinking assignments. We direct and encourage scholars in obtaining valid reference and arguments to support their arguments. We ensure that the document follows a logical order and fluency of the topic. We evaluate their assumptions that branch between the theory and application and guarantee a successful completion.",
+  },
+  {
+    q: "How can you help me in writing a critical review?",
+    a: "Our experts have extensive experience in addressing your critical review requirement. Our sales team will extensively discuss to understand theoretical knowledge and turn into it to your practical experience. We will apply different hypothesis to support your concept and develop a comprehensive and satisfying reflective report experience.",
+  },
+  {
+    q: "How is Tutors India different from other service providers?",
+    a: "Tutors India experts with extensive experience apply in-depth critical evaluation concepts on a given topic from various aspects, supported by relevant framework.",
+  },
+  {
+    q: "Who will write my critical reviews?",
+    a: "We have a team of brilliant expertise who will write critical reviews on any topic or subjects. Our writers are passionate and talented in working any critical reviews writing to submit their work with more professional way. Our writers are highly qualified and trained in the academic writing field so know how to write your critical review, dissertation, research essays and terms paper on any topic.",
+  },
+  {
+    q: "Can I get some of samples of your critical review writing?",
+    a: "Sure, we share some of the sample critical writing reviews works so it is easy for students to analyze of our works.",
+  },
+  {
+    q: "Is your pricing affordable at Tutors India for Critical review writing?",
+    a: "Tutors India has been providing high quality dissertation to the students of all academic levels like PhD, masters, undergraduate.",
+  },
 ];
 
 const testimonials = [
-  { quote: "Applied substantive literature writing services, pleased with results from Tutors India. Good quality work, adequate changes made in literature review of my research paper. Received polished and advance quality literature review. Highly satisfactory performance!", author: "Shawn Garcia", location: "UK", avatar: "/images/testimonials/t06.jpg" },
-  { quote: "The final work looked so refined and well-structured that even my mentor appreciated the improvement immediately. Highly recommended for serious academic support.", author: "George Whitmore", location: "UK", avatar: "/images/testimonials/george-whitmore.webp" },
-  { quote: "My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.", author: "Hassan Al Falasi", location: "UAE", avatar: "/images/testimonials/hassan-al-falasi.webp" },
+  { quote: "Honestly, I didn't expect this level of quality. The team understood exactly what I needed and delivered work that felt genuinely professional. My confidence went from stressed to unstoppable.", author: "Amelia Brooks", location: "UK", avatar: "/images/testimonials/t15.jpg" },
+  { quote: "I was stuck, frustrated, and running out of time. Tutors India stepped in at the perfect moment and turned everything around faster than I imagined. Worth every bit.", author: "Oliver Bennett", location: "UK", avatar: "/images/testimonials/t13.jpg" },
+  { quote: "The attention to detail was incredible. It didn't feel like I was working with a service provider — it felt like I had an expert academic partner guiding me throughout.", author: "Layla Al Mansoori", avatar: "/images/testimonials/t16.jpg" },
+  { quote: "My research finally started making sense after working with this team. Their guidance simplified complex ideas and gave my project the structure it was missing.", author: "Hassan Al Falasi", location: "UAE", avatar: "/images/testimonials/t17.jpg" },
+  { quote: "I submitted my work with complete confidence for the first time ever. The quality, formatting, and clarity were all beyond what I hoped for.", author: "Charlotte Reed", location: "UK", avatar: "/images/testimonials/t18.jpg" },
+  { quote: "The team handled everything professionally from start to finish. Timely updates, quick responses, and excellent academic quality — exactly what students need during stressful deadlines.", author: "Zain Al Hashmi", location: "UAE", avatar: "/images/testimonials/t19.jpg" },
 ];
 
 const subjects = [
-  "Arts & Humanities", "Biological Sciences", "Business & Management Studies", "Marketing & Communication",
-  "Engineering & Technology", "Natural Sciences & Mathematics", "Biological & Life Science", "Economics & Administration",
-  "Humanities & Social Science", "Law", "Medicine & Health", "Education & Training",
-  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT", "Hospitality, Leisure & Sports",
+  "Arts & Humanities", "Biological Sciences", "Business & Management Studies",
+  "Marketing & Communication", "Engineering & Technology", "Natural Sciences & Mathematics",
+  "Biological & Life science", "Economics & Administration", "Humanities & Social Science",
+  "Law", "Medicine & Health", "Education & Training",
+  "Journalism & Media", "Agriculture & Forestry", "Computer Science & IT",
+  "Hospitality, Leisure & Sports",
+];
+
+const features = [
+  { icon: "📄", title: "Plagiarism Free Work" },
+  { icon: "✨", title: "Uniqueness" },
+  { icon: "📚", title: "Fully Referenced" },
+  { icon: "🎯", title: "100% Requirement Match" },
+  { icon: "⏱", title: "On Time" },
+  { icon: "📝", title: "Word Count Committed" },
+  { icon: "✅", title: "Quality Assurance" },
+  { icon: "🔄", title: "Unlimited Revisions" },
+  { icon: "💰", title: "Affordable" },
+  { icon: "👨‍🎓", title: "Experienced Writers with a minimum degree of Master's with research experience" },
+];
+
+const orderProcess = [
+  { title: "We Identify Your Writer", desc: "In order to get our service, you need to first fill out the form with your information in a comprehensive manner." },
+  { title: "Reference Number", desc: "Upon receiving your Enquiry form, we assign you a reference number. You can know the status of your paper anytime by sending us an email or tracking through CRM." },
+  { title: "Acknowledgment", desc: "Once you have paid for your order you will receive an acknowledgement from us. The writing process here with us begins within couple of days after receiving your order." },
+  { title: "Edit & Proofreading", desc: "Once we receive an order from our writer, we ensure to proofread the document." },
+  { title: "We Check Requirement", desc: "Once your critical review is completed we check for spelling, grammar, content, focus, sources quality against the client requirement." },
+  { title: "Plagiarism Assurance", desc: "Once your critical review is completed it is checked for plagiarism with anti-plagiarism software before the delivery." },
+  { title: "Free Appendices / Resources", desc: "We ensure not only to deliver your work but also additional reference materials will be shared via zip file through google drive or drop box." },
+  { title: "Download Your Order", desc: "You can download your order through our CRM and reminder will be sent through email & SMS. Additional copy will be mailed." },
+  { title: "Request for Amendment", desc: "If you required any changes, you can always come back to us, we are ready to unlimited revisions for the concept being committed. Comments can be shared through guidance@tutorsindia.com." },
+  { title: "Researcher Makes the Changes", desc: "The document will be shared to our writer and once the work is completed, we will share you the complete work through email or you can download the order." },
+];
+
+const guarantees = [
+  { t: "A complete secure & Confidential Service", d: "We offer 100% confidentiality of client's personal details, payment details, project works, and copyrights of research works. All your projects are given unique reference codes. Documents are accessed only by writers who signed NDA with Tutors India. Your financial information is protected by 128-bit secure socket layer (SSL) encryption." },
+  { t: "Fully Referenced", d: "Our critical review work is fully referenced with latest articles and textbooks. We refer only peer-reviewed sources such as scholarly articles and textbooks. We refer databases including Web of Science, ProQuest, Google Scholar, Business Source Complete, and latest newspapers articles such as Economic Times, Forbes, The Wall Street, The Economics to identify the industrial problem." },
+  { t: "Our Guarantees", d: "(1) Unlimited Revision for the work being committed. (2) We ensure on-time delivery (3) We support 24/7. (4) Our word count committed does not include references and bibliography & help you to locate the sources cited (5) Ensure three-level quality check including Technical QC, Editor QC and final check against the requirement (6) Confidentiality of the information (7) Plagiarism free work – less than 5% percent. (8) Only experienced and subject specific writers will be allotted." },
+  { t: "Plagiarism Free Work", d: "We are aware of the consequences of plagiarism. Hence, critical review writing is completely plagiarism free. Our work is scanned against online sources in a similar way like WriteCheck or Turnitin. We ensure that our clients are not finding any issues with regards to plagiarism and so we issue plagiarism-free certificate. Our streamlined and high-quality research writing process ensures your critical review is not just copy-pasted, but written only after brainstorming sessions with our team of professional researchers." },
+  { t: "On Time", d: "Our work is delivered at a specified date and time. Our specific changes to the delivered work will be carried out within 45 days of delivery. We guarantee delivery of minor changes within 24 working hours and significant changes within 48 working hours. We acknowledge all your emails within 30 minutes of working hours." },
+  { t: "Experienced Writers", d: "Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from India, the US, and the UK. We identify the perfect SME according to your subject and area. Expert is selected through a stringent selection process including the signing of non-disclosure and confidentiality agreement." },
 ];
 
 export default function CriticalReviewPage() {
   return (
     <>
+      {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
-          <div>
-            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
-              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<Link href="/our-services/" style={{ color: "#a0b8e0" }}>Services</Link>{" / "}<Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}<span style={{ color: "#fff" }}>Critical Review</span>
-            </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", lineHeight: 1.3, marginBottom: "16px" }}>
-              The US / UK Critical Review Writing Service
-            </h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1rem", lineHeight: 1.75, marginBottom: "10px" }}>
-              Doing a critical review is one of the most challenging and difficult tasks for students, as it requires evaluating and summarising a text while providing your opinion and judgment. Tutors India offers critical review writing assistance in British English, following university requirements for citation and formatting.
-            </p>
-            <p style={{ color: "#f9c74f", fontSize: "0.92rem", fontWeight: 600, marginBottom: "24px" }}>Expert Writers from the US &amp; UK — Peer-Reviewed Sources Only</p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
-              <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
-            </div>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/coursework-writing/" style={{ color: "#a0b8e0" }}>Coursework Writing</Link>{" / "}
+            <span style={{ color: "#fff" }}>Critical Review</span>
           </div>
-          <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
-            <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>Critical Evaluation<br />Summary<br />Mixed Approach</div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
+            The US / UK Critical Review Service
+          </h1>
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "16px" }}>
+            UK Critical Review Writing at Tutors India will be strictly in British English, strictly follow University Requirement including Citation and Formatting. All our Writers belongs to British and the US.
+          </p>
+          <p style={{ color: "#f9c74f", fontSize: "1.1rem", fontFamily: "Merriweather,serif", fontWeight: 700, marginBottom: "28px" }}>
+            Then You&apos;ve Certainly Reached the Right place
+          </p>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-inner{grid-template-columns:1fr!important;}.hero-badge{display:none!important;}}`}</style>
       </section>
 
-      <div style={{ background: "#12214a", padding: "16px 20px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "2,000+", l: "Expert Writers" }, { n: "All Subjects", l: "Covered" }, { n: "Peer-Reviewed", l: "Sources Only" }, { n: "< 5%", l: "Plagiarism" }, { n: "Unlimited", l: "Revisions" }, { n: "30 min", l: "Response" }].map(s => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
-              <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>
+      {/* Intro cards + trust paragraph */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "32px 36px", marginBottom: "32px", borderLeft: "5px solid #1a2a6c" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "8px" }}>
+            UK / US Critical Review Writing Service
+          </h2>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "4px" }}>
+            Assistance for Tutoring and Writing Services exclusively for the UK and Australian Universities –
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+            You will be Amazed with the quality of your Critical Review
+          </p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "20px", marginBottom: "32px" }}>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #1a2a6c" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              Your critical review is written by qualified and experienced researchers from the US &amp; UK
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
+              Our writers have experience in research methodology, industry experience, and educational degrees from international and top-ranked universities from the US, UK &amp; India.
+            </p>
+          </div>
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #e87722" }}>
+            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
+              UK/ the US Critical Review Writing Service
+            </h3>
+            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
+              Our specific Critical Review writing demonstrates an objective, selective, balanced and insightfully critical approach to the contents of the article and include references to research issues including rationale, methodology and findings.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "28px 32px" }}>
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "14px" }}>
+            Critical Review Service
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            Doing critical review is one of the challenging and difficult tasks for students, as it requires students to evaluate and summarize a text and provide their opinion and judgment. This is a challenging task because you need to read selected article and carefully, analyse it and evaluate the quality and originality of the research thereby assess the usefulness and validity of research findings. Further, you also need to explore its weakness and strengths followed by its overall value.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            At Tutors India, our experts being in the research field for more than 20 years, and being part of peer review member for different journals, have capability to handle critical review of various articles at different levels. Our critical review experts attempt to understand the topic of context from different perspectives with reference to the approaches, theories and frameworks. Our aim is to not write another book or journal article but critically evaluate the author&apos;s argument.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, margin: 0 }}>
+            Critical Reviews are written with utmost care based on your specific university guidelines &amp; Specifications. At Tutors India, our experts being in the research field for more than 20 years, and being part of peer review member for different journals, have capability to handle critical review of various articles at different levels.
+          </p>
+        </div>
+      </section>
+
+      {/* Service Tiers */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px", textAlign: "center" }}>
+            What Services do we offer under Critical Review Writing?
+          </h2>
+          <p style={{ color: "#555", textAlign: "center", marginBottom: "32px", lineHeight: 1.7 }}>
+            We write complete critical review from the introduction to recommendations. Although it looks simple, but in practical, it&apos;s a tedious task to complete each and every step.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(270px,1fr))", gap: "20px" }}>
+            {[
+              { tier: "Basic", color: "#1a2a6c", desc: "Developed based on the relevant sources, a reasonable attempt at finding an area that warrant research & evidence of an attempt to provide critical evaluation but mainly descriptive." },
+              { tier: "Advanced", color: "#e87722", desc: "Wide range of sources, a clear identification of research gap in the literature along with aim and research questions." },
+              { tier: "Premium", color: "#2563b0", desc: "Refers to a wide range of seminal research with throughout engagement using latest resources. A solid gap would be identified based on the current literature & justified thoroughly & Excellent critical analysis would be shown (upgradable)." },
+            ].map(t => (
+              <div key={t.tier} style={{ background: "#fff", borderRadius: "10px", padding: "24px", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: `4px solid ${t.color}` }}>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{t.tier}</h3>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Features */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          UK Critical Review Writing Service Feature
+        </h2>
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "8px", fontWeight: 400 }}>
+          A Critical Review Writing Service features that helps to get the grade
+        </h3>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+          Our UK Critical Review writing help guarantees that your review is confidential, and so you do not have to worry about it. Just send us your topic along with the deadline and see the results that are far justified and mark the success of your Critical Review.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: "16px", marginBottom: "48px" }}>
+          {features.map(f => (
+            <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
+              <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>{f.icon}</span>
+              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5 }}>{f.title}</span>
             </div>
           ))}
         </div>
-      </div>
 
-      <section style={{ maxWidth: "1200px", margin: "48px auto", padding: "0 20px" }}>
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
+          Our Critical Review Writing Services is Well Structured Focusing On Four Basic Parts
+        </h3>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+          At Tutors India, we provide help in critically reviewing a journal article, a chapter, text book, movie or any other. Our critical review is well structured focusing on four basic parts.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "16px", marginBottom: "32px" }}>
+          {[
+            { n: "1", t: "Introduction", d: "Provides context for the work being reviewed, states the purpose of the review, and outlines the structure of the critique." },
+            { n: "2", t: "Summary", d: "Briefly summarizes the main argument, purpose, methods, findings, and conclusions of the reviewed work." },
+            { n: "3", t: "Critique", d: "Evaluates the strengths and weaknesses of the work, assessing the quality of evidence, logic, methodology, and overall contribution." },
+            { n: "4", t: "Conclusion", d: "Summarises the main points of the critique and provides an overall assessment of the value of the reviewed work." },
+          ].map(f => (
+            <div key={f.n} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px", display: "flex", gap: "14px" }}>
+              <div style={{ width: "34px", height: "34px", background: "#e87722", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.96rem", flexShrink: 0 }}>{f.n}</div>
+              <div>
+                <h3 style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>{f.t}</h3>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.65, margin: 0 }}>{f.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-        {/* Intro */}
-        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>
-            UK Critical Review Writing Service — Expertly Structured Academic Critique
+        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
+          Critical Review Writing need to convince the Supervisory committee
+        </h3>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+          We write a complete Critical Review that would convince your supervisory committee. Our critical review demonstrates an objective, selective, balanced and insightfully critical approach to the contents of the article and include references to research issues including rationale, methodology and findings. We also offer specific essay from the introduction to recommendations. Further, we offer an expository essay, persuasive essay, descriptive essay and narrative essays.
+        </p>
+      </section>
+
+      {/* Free Offers + Deliverables */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "28px" }}>
+            Free Offers along with your Critical Review Writing Services
           </h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "0.94rem" }}>
-            Tutors India is a pioneer in handling different types of critical reviews. Our highly experienced, professional writers develop plagiarism-free, high-quality critical reviews that demonstrate your ability to evaluate academic sources rigorously. All critical reviews are written in British English with university-specific citation and formatting requirements met in full.
-          </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "0.94rem" }}>
-            Critical Review writing services at Tutors India are handled and written by the style, design, and format of an ideal review required by UK, Australian, and US universities. Our service covers complete critical reviews from introduction to recommendations, with domain-specific expertise across multiple subjects and only peer-reviewed sources and articles used throughout.
-          </p>
-        </div>
-
-        {/* 6-Step Process */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px" }}>Our Critical Review Writing Process</h2>
-          <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "18px" }}>A systematic, rigorous approach to critical evaluation that meets doctoral and postgraduate standards</p>
-          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden" }}>
-            {criticalReviewSteps.map((step, i) => (
-              <div key={step.n} style={{ padding: "16px 22px", borderBottom: i < criticalReviewSteps.length - 1 ? "1px solid #f0f2fa" : "none", display: "flex", gap: "16px", alignItems: "flex-start" }}>
-                <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "50%", width: "32px", height: "32px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.72rem", fontWeight: 700, flexShrink: 0 }}>{step.n}</div>
-                <div>
-                  <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{step.title}</h3>
-                  <p style={{ fontSize: "0.84rem", color: "#666", lineHeight: 1.65 }}>{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Service Tiers */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Service Tiers for Critical Review</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px" }} className="three-col-grid">
-            {serviceTiers.map(t => (
-              <div key={t.tier} style={{ background: "#fff", border: `2px solid ${t.color}`, borderRadius: "10px", overflow: "hidden" }}>
-                <div style={{ background: t.color, color: "#fff", padding: "14px 18px" }}><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>{t.tier}</div></div>
-                <div style={{ padding: "16px" }}>
-                  <p style={{ fontSize: "0.84rem", color: "#555", lineHeight: 1.65, marginBottom: "12px" }}>{t.desc}</p>
-                  <ul style={{ listStyle: "none", padding: 0 }}>
-                    {t.includes.map(i => (<li key={i} style={{ display: "flex", gap: "6px", fontSize: "0.78rem", color: "#555", padding: "4px 0", borderBottom: "1px solid #f0f2fa" }}><span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {i}</li>))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Subject Coverage */}
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px", marginBottom: "28px", border: "1px solid #dde2ef" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>Specialized Subject Coverage</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "12px" }} className="four-col-grid">
-            {subjectCoverage.map(s => (
-              <div key={s.subject} style={{ background: "#fff", borderRadius: "8px", padding: "14px", border: "1px solid #dde2ef" }}>
-                <div style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{s.subject}</div>
-                <div style={{ fontSize: "0.76rem", color: "#666", lineHeight: 1.45 }}>{s.examples}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Guarantees */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", marginBottom: "28px" }} className="two-col-grid">
-          <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "24px" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "14px" }}>Our Core Guarantees</h3>
-            {["Unlimited revision for committed work", "On-time delivery — 45 days for specific changes", "Minor changes within 24 working hours", "Significant changes within 48 working hours", "24/7 support available", "Plagiarism-free — less than 5%", "Three-level quality checks", "100% confidentiality maintained", "Only experienced, subject-specific writers"].map((g, i) => (
-              <div key={i} style={{ display: "flex", gap: "8px", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.83rem", color: "#c5d5f0" }}>
-                <span style={{ color: "#f9c74f", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span> {g}
-              </div>
-            ))}
-          </div>
-          <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "24px" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "14px" }}>What You Receive</h3>
-            {["Critical evaluation of source quality, relevance, and authority", "Summary of key arguments and findings", "Critical commentary on usefulness, effectiveness, and worth", "Author's point of view and potential bias identified", "Relevance to your specific research topic", "Scope and limitations of the source", "Contextual placement within broader literature", "Fully referenced per your citation style", "Plagiarism-free certificate on request", "Three-level quality check before delivery"].map(item => (
-              <div key={item} style={{ display: "flex", gap: "7px", fontSize: "0.82rem", color: "#555", padding: "5px 0", borderBottom: "1px solid #f0f2fa" }}>
-                <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span> {item}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>What Our Clients Say</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "16px" }} className="three-col-grid">
-            {testimonials.map((t, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px" }}>
-                <div style={{ color: "#e87722", fontSize: "2rem", lineHeight: 1, marginBottom: "6px", fontFamily: "serif" }}>&ldquo;</div>
-                <p style={{ color: "#555", fontSize: "0.84rem", lineHeight: 1.7, fontStyle: "italic", marginBottom: "12px" }}>{t.quote}</p>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <img src={t.avatar} alt={t.author} style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover" }} loading="lazy" />
-                  <div>
-                    <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.84rem" }}>{t.author}</div>
-                    {t.location && <div style={{ fontSize: "0.72rem", color: "#888" }}>{t.location}</div>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* FAQ */}
-        <div style={{ marginBottom: "28px" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "16px" }}>Frequently Asked Questions</h2>
-          <FaqAccordion faqs={faqs} />
-        </div>
-
-        <div style={{ background: "#f5f6fa", borderRadius: "12px", padding: "24px" }}>
-          <p style={{ color: "#666", fontSize: "0.86rem", marginBottom: "14px", fontWeight: 600 }}>2000+ Experts — USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {subjects.map(s => (<span key={s} style={{ padding: "5px 13px", background: "#fff", border: "1.5px solid #dde2ef", borderRadius: "16px", fontSize: "0.79rem", color: "#1a2a6c", fontWeight: 500 }}>{s}</span>))}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
+                Free Tutoring
+              </h3>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
+                Free Tutoring for the work being carried out – to speak confidently with your program supervisors. We deliver more than your expectation.
+              </p>
+            </div>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #1a2a6c" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
+                Our Deliverables
+              </h3>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
+                Executive Summary / Abstract, free articles used for writing the dissertation, SPSS data sheet and output, questionnaire or semi-structured interview questions and reflective log or diary used during research.
+              </p>
+            </div>
+            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #2563b0" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
+                Our Critical Review Service is Exclusive
+              </h3>
+              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
+                We do not just provide a critical review, but rather clear explanation and justification for the content written. Critical Review writing services from Tutors India is simply easy and straightforward. You will get the reply within 30 minutes.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get Your Critical Review Written by Experts</h2>
-        <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Peer-Reviewed Sources · US &amp; UK Writers · Unlimited Revisions · Response in 30 min</p>
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
-          <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
+      {/* Subject Expertise */}
+      <section style={{ background: "#1a2a6c", color: "#fff", padding: "48px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", marginBottom: "8px" }}>
+            Your Critical Review is Written by Your Choice of Subject Matter Expertise
+          </h2>
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "10px" }}>
+            We have a team of 2000+ expertise across the subjects &amp; countries (including the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia &amp; Ukraine)
+          </p>
+          <p style={{ color: "#c5d5f0", lineHeight: 1.8, marginBottom: "28px" }}>
+            Tutors India has capability and skills to handle subjects across the field. We chose qualified and experienced subject specific expertise while you order your critical review. We offer topic selection for Management, Social Science, Engineering, Technology, Life Science, Medical, Arts &amp; Literature / Linguistics, and many more.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "28px" }}>
+            {subjects.map(s => (
+              <span key={s} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem" }}>{s}</span>
+            ))}
+          </div>
+          <Link href="/our-writers/" style={{ color: "#f9c74f", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Meet Our Writers →</Link>
+        </div>
+      </section>
+
+      {/* Why Choose — Guarantee Cards */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+          Why Choose Tutors India: Critical Review Writing Service features
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+          Qualified researchers, unlimited revision, only peer-reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
+          {guarantees.map(f => (
+            <div key={f.t} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.t}</h3>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{f.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Order Process */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
+            How Does it work?
+          </h2>
+          <p style={{ color: "#555", marginBottom: "8px" }}>Have a look at what makes us the best in the business</p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
+            After the order is confirmed, we allocate the special team to scrutinize the work regarding necessary availability requirements that would be essential to complete the work.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "20px" }}>
+            {orderProcess.map((p, i) => (
+              <div key={p.title} style={{ background: "#fff", borderRadius: "10px", padding: "20px 24px" }}>
+                <div style={{ width: "36px", height: "36px", background: "#e87722", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.95rem", marginBottom: "12px" }}>{i + 1}</div>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "6px" }}>{p.title}</h3>
+                <p style={{ color: "#555", fontSize: "0.86rem", lineHeight: 1.7, margin: 0 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
+            Track Your Report through our customized CRM — You need not check email frequently rather your report is safe on our customizable CRM and you can download later at any point of time by using your unique username and password.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
+          Frequently Asked Questions
+        </h2>
+        <FaqAccordion faqs={faqs} />
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialSlider testimonials={testimonials} />
+
+      {/* CTA */}
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
+          Place Your Order Today
+        </h2>
+        <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
+          Invest in your Career — get expert Critical Review writing support from our qualified academics today.
+        </p>
+        <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/order-now/" style={{ padding: "12px 36px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
+          <Link href="/contact-us/" style={{ padding: "12px 36px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, textDecoration: "none" }}>Contact Us</Link>
         </div>
       </section>
     </>

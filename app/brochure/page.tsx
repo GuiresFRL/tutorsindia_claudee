@@ -4,59 +4,57 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Tutors India Brochure List | Download Service Brochures",
+  title: "Download Service Brochures",
   description: "Download Tutors India service brochures — Dissertation, Coursework, Publication Support, Development, Editing and more.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://tutorsindia.com/brochure/" },
 };
 
-const BASE = "https://www.tutorsindia.com/wp-content/uploads";
-
 const brochures = [
   {
     title: "Best Doctoral Dissertation Writing Service",
-    img: `${BASE}/2024/08/Best-Doctoral-Dissertation-Writing-Service-scaled-1.webp`,
+    img: "/images/brochures/doctoral-dissertation.webp",
     pdf: null,
   },
   {
     title: "Economics and Finance Dissertation Writing Guidance",
-    img: `${BASE}/2024/08/Economics-and-Finance-Dissertation-Writing-Guidance-scaled-1.webp`,
+    img: "/images/brochures/economics-finance.webp",
     pdf: null,
   },
   {
     title: "Life Science Dissertation and Assignment Help",
-    img: `${BASE}/2024/08/Life-Science-dissertation-and-assignment-help-scaled-1.webp`,
+    img: "/images/brochures/life-science.webp",
     pdf: null,
   },
   {
     title: "Coursework Writing",
-    img: `${BASE}/2024/08/Coursework-Writing-1.webp`,
-    pdf: `${BASE}/2021/11/Coursework-Writing.pdf`,
+    img: "/images/brochures/coursework-writing.webp",
+    pdf: "/docs/coursework-writing-brochure.pdf",
   },
   {
     title: "Publication Support",
-    img: `${BASE}/2024/08/Publication-Support.webp`,
-    pdf: `${BASE}/2021/11/Publication-Support.pdf`,
+    img: "/images/brochures/publication-support.webp",
+    pdf: "/docs/publication-support-brochure.pdf",
   },
   {
     title: "Master Dissertation Writing Service",
-    img: `${BASE}/2024/08/Master-Dissertation-writing-service.webp`,
-    pdf: `${BASE}/2021/11/Master-Dissertation.pdf`,
+    img: "/images/brochures/master-dissertation.webp",
+    pdf: "/docs/master-dissertation-brochure.pdf",
   },
   {
     title: "Development",
-    img: `${BASE}/2024/08/Development-1.webp`,
-    pdf: `${BASE}/2021/11/Development.pdf`,
+    img: "/images/brochures/development.webp",
+    pdf: "/docs/development-brochure.pdf",
   },
   {
     title: "Editing Services",
-    img: `${BASE}/2024/08/Editing-Services-2.webp`,
-    pdf: `${BASE}/2021/11/Editing-Services.pdf`,
+    img: "/images/brochures/editing-services.webp",
+    pdf: "/docs/editing-services-brochure.pdf",
   },
   {
     title: "PhD / DBA Dissertation",
-    img: `${BASE}/2024/08/PHD-Dissertation.webp`,
-    pdf: `${BASE}/2021/11/PHD-Dissertation.pdf`,
+    img: "/images/brochures/phd-dissertation.webp",
+    pdf: "/docs/phd-dissertation-brochure.pdf",
   },
 ];
 
@@ -135,7 +133,7 @@ export default function BrochurePage() {
 
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "44px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Academic Writing Help?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "18px" }}>Our PhD-qualified writers provide tailored support for every stage of your academic journey.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "11px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "11px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>

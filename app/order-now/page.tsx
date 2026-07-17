@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Order Your Project — Academic Writing Services",
+  title: "Order Your Project",
   description: "Order academic writing, dissertation support, statistical analysis or editing from Tutors India. Response within 30 minutes. Trusted since 2001.",
+  alternates: { canonical: "https://tutorsindia.com/order-now/" },
 };
 
 const processSteps = [
@@ -31,7 +32,7 @@ const guarantees = [
   { icon: "🔁", title: "Unlimited Revisions", desc: "Free revisions even after project completion" },
   { icon: "⏱", title: "On-Time Delivery", desc: "95–98% on-time rate — minor changes in 24 hours" },
   { icon: "🔒", title: "100% Confidential", desc: "NDA-signed writers, unique project codes, SSL encryption" },
-  { icon: "📞", title: "24/7 Support", desc: "Email, phone, Skype — always available" },
+  { icon: "📞", title: "24/7 Support", desc: "Email, phone, WhatsApp — always available" },
   { icon: "💷", title: "Affordable Pricing", desc: "Student-friendly rates in your currency" },
 ];
 
@@ -56,7 +57,7 @@ export default function OrderNowPage() {
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>30 min</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Response<br />Guaranteed</div>
           </div>
@@ -112,11 +113,11 @@ export default function OrderNowPage() {
           {/* What We Need */}
           <div>
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>What Information Do We Need?</h2>
-            <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "16px", lineHeight: 1.65 }}>
+            <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "16px", lineHeight: 1.65 }}>
               To provide you with an accurate quote within 30 minutes and ensure we deliver exactly what you need, please have the following information ready when you contact us:
             </p>
             {whatWeNeed.map(item => (
-              <div key={item.item} style={{ display: "flex", gap: "10px", padding: "10px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.88rem", color: "#555" }}>
+              <div key={item.item} style={{ display: "flex", gap: "10px", padding: "10px 0", borderBottom: "1px solid #f0f2fa", fontSize: "0.94rem", color: "#555" }}>
                 <span style={{ fontSize: "1.1rem", flexShrink: 0 }}>{item.icon}</span>
                 {item.item}
               </div>
@@ -131,7 +132,7 @@ export default function OrderNowPage() {
 
         {/* Order Process */}
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "6px", textAlign: "center" }}>Our Order Process — 6 Simple Steps</h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginBottom: "28px", textAlign: "center" }}>Transparent, straightforward, and designed around your success</p>
+        <p style={{ color: "#666", fontSize: "0.96rem", marginBottom: "28px", textAlign: "center" }}>Transparent, straightforward, and designed around your success</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px", marginBottom: "48px" }} className="three-col-grid">
           {processSteps.map(step => (
             <div key={step.n} style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "22px" }}>
@@ -168,7 +169,7 @@ export default function OrderNowPage() {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "24px" }}>
-            <Link href="/our-services/" style={{ padding: "10px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>
+            <Link href="/our-services/" style={{ padding: "10px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>
               View All Services →
             </Link>
           </div>

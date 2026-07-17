@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import { serviceCategories } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Our Services — Academic Writing, Editing & Research Support",
+  title: "Our Services — Academic Writing & Editing",
   description: "Comprehensive academic services including Masters & PhD dissertation writing, coursework, editing, publication support and development from Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/" },
 };
 
 export default function OurServicesPage() {
@@ -19,12 +20,12 @@ export default function OurServicesPage() {
             <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.2rem)", marginBottom: "12px" }}>Our Services</h1>
             <p style={{ color: "#c5d5f0", fontSize: "1.05rem", marginBottom: "20px" }}>Writing, Editing, Statistics, Designing, Coding &amp; Programming Services</p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Order Now</Link>
-              <Link href="/contact-us/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.45)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>Contact Us</Link>
+              <Link href="/order-now/" style={{ padding: "10px 24px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Order Now</Link>
+              <Link href="/contact-us/" style={{ padding: "10px 24px", border: "2px solid rgba(255,255,255,0.45)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>Contact Us</Link>
             </div>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/tutorsindia-logo-hd.jpg" alt="Tutors India" style={{ width: "90px", height: "90px", objectFit: "contain", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.78rem", color: "#c5d5f0", lineHeight: 1.6 }}>Trusted Academic<br />Writing &amp; Editing<br />Since 2001</div>
           </div>
         </div>
@@ -41,7 +42,7 @@ export default function OurServicesPage() {
               </div>
               <ul style={{ padding: "16px 24px", listStyle: "none" }}>
                 {cat.services.slice(0, 6).map((svc) => (
-                  <li key={svc.href} style={{ padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.9rem" }}>
+                  <li key={svc.href} style={{ padding: "8px 0", borderBottom: "1px solid var(--border)", fontSize: "0.96rem" }}>
                     <Link href={svc.href} style={{ color: "var(--blue)", fontWeight: 500 }}>{svc.title}</Link>
                   </li>
                 ))}

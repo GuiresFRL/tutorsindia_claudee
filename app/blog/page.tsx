@@ -13,14 +13,14 @@ import {
 } from "@/lib/api/wordpress";
 
 export const metadata: Metadata = {
-  title: "Blog — Academic Writing Tips & Dissertation Guides",
+  title: "Blog — Academic Writing Tips",
   description:
     "Expert guides on dissertation writing, research methodology, referencing, statistical analysis and academic success from Tutors India's PhD-qualified team.",
   
   alternates: { canonical: "https://tutorsindia.com/blog/" },
 };
 
-export const revalidate = 3600;
+export const revalidate = 0;
 
 const POSTS_PER_PAGE = 15;
 
@@ -95,11 +95,11 @@ export default async function BlogPage({ searchParams }: Props) {
             <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", color: "#1a2a6c", marginBottom: "8px" }}>
               {activeCategory ? `No posts found in "${activeCategory}"` : "Blog posts coming soon"}
             </h2>
-            <p style={{ color: "#666", fontSize: "0.88rem", marginBottom: "16px" }}>
+            <p style={{ color: "#666", fontSize: "0.94rem", marginBottom: "16px" }}>
               {activeCategory ? "Try another category or view all posts." : "We're working on expert guides. Check back shortly."}
             </p>
             {activeCategory && (
-              <Link href="/blog/" style={{ display: "inline-block", padding: "9px 22px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.88rem" }}>
+              <Link href="/blog/" style={{ display: "inline-block", padding: "9px 22px", background: "#1a2a6c", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.94rem" }}>
                 View All Posts
               </Link>
             )}
@@ -202,8 +202,8 @@ export default async function BlogPage({ searchParams }: Props) {
             </p>
           </div>
           <div className="blog-cta-buttons">
-            <Link href="/order-now/" style={{ padding: "10px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem", whiteSpace: "nowrap", display: "inline-block" }}>Order Now</Link>
-            <Link href="/contact-us/" style={{ padding: "10px 22px", border: "2px solid rgba(255,255,255,0.45)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem", whiteSpace: "nowrap", display: "inline-block" }}>Contact Us</Link>
+            <Link href="/order-now/" style={{ padding: "10px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem", whiteSpace: "nowrap", display: "inline-block" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "10px 22px", border: "2px solid rgba(255,255,255,0.45)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem", whiteSpace: "nowrap", display: "inline-block" }}>Contact Us</Link>
           </div>
         </div>
       </section>

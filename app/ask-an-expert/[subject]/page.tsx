@@ -16,9 +16,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { subject: subjectSlug } = await params;
   const subject = getSubject(subjectSlug);
-  if (!subject) return { title: "Ask an Expert | Tutors India" };
+  if (!subject) return { title: "Ask an Expert" };
   return {
-    title: `${subject.title} Q&A — Expert Answers | Tutors India`,
+    title: `${subject.title} Q&A — Expert Answers`,
     description: `Browse free expert answers to ${subject.title} questions. ${subject.desc}`,
     
     alternates: { canonical: `https://tutorsindia.com/ask-an-expert/${subject.slug}/` },
@@ -50,8 +50,8 @@ export default async function SubjectPage({ params }: Props) {
             {subject.desc} Browse free expert answers below or submit your own question.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Link href="/ask-an-expert/ask-a-question/" style={{ padding: "10px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.9rem" }}>Ask a Question Free</Link>
-            <Link href="/ask-an-expert/" style={{ padding: "10px 22px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.9rem" }}>All Subjects</Link>
+            <Link href="/ask-an-expert/ask-a-question/" style={{ padding: "10px 22px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.96rem" }}>Ask a Question Free</Link>
+            <Link href="/ask-an-expert/" style={{ padding: "10px 22px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.96rem" }}>All Subjects</Link>
           </div>
         </div>
       </section>
@@ -61,7 +61,7 @@ export default async function SubjectPage({ params }: Props) {
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", color: "#1a2a6c", marginBottom: "6px" }}>
           {subject.items.length} Expert Answers in {subject.title}
         </h2>
-        <p style={{ color: "#666", fontSize: "0.88rem", marginBottom: "28px" }}>Click any question to read the full expert answer.</p>
+        <p style={{ color: "#666", fontSize: "0.94rem", marginBottom: "28px" }}>Click any question to read the full expert answer.</p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
           {subject.items.map((item, idx) => (
@@ -106,7 +106,7 @@ export default async function SubjectPage({ params }: Props) {
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "48px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Need Full Academic Support?</h2>
-        <p style={{ color: "#c5d5f0", fontSize: "0.9rem", marginBottom: "20px" }}>Our PhD-qualified experts provide comprehensive dissertation, essay, and research support.</p>
+        <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "20px" }}>Our PhD-qualified experts provide comprehensive dissertation, essay, and research support.</p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 30px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>
           <Link href="/contact-us/" style={{ padding: "12px 30px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
