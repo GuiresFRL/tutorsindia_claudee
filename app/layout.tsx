@@ -182,8 +182,8 @@ gtag('config', 'UA-33260609-2');
                 "https://www.facebook.com/TutorsIndia",
                 "https://twitter.com/TutorsIndia",
                 "https://www.linkedin.com/company/tutors-india",
-                "https://www.instagram.com/tutorsindia/",
-                "https://www.youtube.com/c/TutorsIndia"
+                "https://www.instagram.com/tutors_india/",
+                "https://www.youtube.com/channel/UCM7QdIYgF7vWMhgMZuwyfrg/"
               ]
             },
             {
