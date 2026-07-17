@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://tutorsindia.com";
+const BASE = "https://www.tutorsindia.com";
 const ORIGINAL_SITEMAP = "https://www.tutorsindia.com/sitemap.xml";
 
 export const revalidate = 86400; // re-fetch once per day
@@ -42,7 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       };
     });
 
-    // Rewrite www.tutorsindia.com → tutorsindia.com
+    // Normalise every URL to www.tutorsindia.com
     const mapped: MetadataRoute.Sitemap = entries
       .filter((e) => e.loc)
       .map((e) => ({
