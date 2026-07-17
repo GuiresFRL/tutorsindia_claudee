@@ -105,7 +105,8 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail({
       from: `"${process.env.SMTP_FROM_NAME || "Tutorsindia"}" <${process.env.SMTP_USER}>`,
-      to: process.env.LEAD_RECIPIENT,
+      to: "info@tutorsindia.com",
+      cc: ["ganesh@guires.com", "sureshkumar@guires.com"],
       subject: `New Lead: ${name} — ${service || "General Enquiry"}`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
