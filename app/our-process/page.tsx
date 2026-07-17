@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Process — How Tutors India Works | 12-Step Quality Process",
+  title: "Our Process — 12-Step Quality Process",
   description: "Tutors India's 12-step quality process: from writer identification to unlimited revisions. 100% confidentiality guaranteed with unique project reference codes.",
+  alternates: { canonical: "https://tutorsindia.com/our-process/" },
 };
 
 const steps = [

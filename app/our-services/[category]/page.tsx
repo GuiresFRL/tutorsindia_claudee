@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = serviceCategories.find((c) => c.slug === category);
   if (!cat) return {};
   return {
-    title: `${cat.title} Services | Tutors India`,
+    title: `${cat.title} Services`,
     description: `Expert ${cat.title} services from Tutors India — ${cat.services[0].description.slice(0, 120)}`,
   };
 }

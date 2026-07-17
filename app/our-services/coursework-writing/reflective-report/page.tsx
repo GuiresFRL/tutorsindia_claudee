@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "The UK Reflective Report Writing Help | Tutors India",
+  title: "The UK Reflective Report Writing Help",
   description: "UK Reflective Report Writing Help at Tutors India help students to prepare effective reflective log, or account or report. We strictly write in British English, crisp expression, spelling, punctuation, grammar with accurate comprehensive referencing according to the university requirement.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/reflective-report/" },
 };
 
 const faqs = [

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const proxied = await fetchProxiedPage(`/qa-forum/${slug}/`);
   const title = proxied?.title || slugToTitle(slug);
   return {
-    title: `${title} — Q&A Forum | Tutors India`,
+    title: `${title} — Q&A Forum`,
     description: `Expert answer to: ${title}. Get academic guidance from Tutors India's team of PhD-qualified specialists.`,
     alternates: { canonical: `https://tutorsindia.com/qa-forum/${slug}/` },
   };

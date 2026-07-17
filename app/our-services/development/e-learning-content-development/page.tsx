@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "E-Learning – Design & Content Development for Academic Support",
+  title: "E-Learning Content Development",
   description: "High impact and engaging custom and interactive eLearning content development and dissertation writing by qualified and experienced researchers from the US & UK.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/development/e-learning-content-development/" },
 };
 
 const faqs = [

@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Computer Science (CS) & Information Technology (IT) Dissertation & Manuscript Writing, Experimental, Designing or Programming & Editing Services Help",
+  title: "Computer Science & IT Manuscript Writing",
   description: "Expert CS & IT dissertation, manuscript writing, experimental, designing or programming & editing services by qualified researchers from US & UK.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/computer-science-engineering-cse-and-it/" },
 };
 
 const faqs = [

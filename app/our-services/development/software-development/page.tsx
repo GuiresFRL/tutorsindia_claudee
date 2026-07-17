@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Academic Software Application Development Service | Tutors India",
+  title: "Academic Software Development Service",
   description: "Expert academic software application development for CS dissertations. C, C++, Java, .NET, PHP, Python, MySQL, Oracle & more. US & UK qualified developers.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/development/software-development/" },
 };
 
 const faqs = [

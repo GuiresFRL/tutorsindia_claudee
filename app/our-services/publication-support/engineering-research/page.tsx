@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Engineering Dissertation & Manuscript Writing Services Help UK",
+  title: "Engineering Research & Manuscript Writing",
   description: "Expert engineering dissertation & manuscript writing services by qualified researchers from US & UK. IEEE papers, LaTeX, 5000+ PhD theses completed. 15+ years experience.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/engineering-research/" },
 };
 
 const faqs = [

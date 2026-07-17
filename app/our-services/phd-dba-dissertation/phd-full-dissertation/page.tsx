@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Doctorate Full Dissertation Writing Consultation Services | Tutors India",
+  title: "PhD Full Dissertation Writing Service",
   description: "Are you looking for an expert writer of your specific subject for your PhD dissertation writing completely from Abstract writing to Conclusion section with the high research quality?",
+  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-full-dissertation/" },
 };
 
 const faqs = [

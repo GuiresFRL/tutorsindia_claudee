@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Tutors India Brochure List | Download Service Brochures",
+  title: "Download Service Brochures",
   description: "Download Tutors India service brochures — Dissertation, Coursework, Publication Support, Development, Editing and more.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://tutorsindia.com/brochure/" },

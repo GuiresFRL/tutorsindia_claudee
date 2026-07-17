@@ -5,7 +5,7 @@ import { getTIPageById, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutors
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Latest Research Trends — Emerging Academic Topics",
+  title: "Latest Research Trends by Subject",
   description: "Stay current with the latest research trends across all academic disciplines. Expert insights into emerging methodologies, innovations, and research directions.",
   
   alternates: { canonical: "https://tutorsindia.com/latest-research-trends/" },

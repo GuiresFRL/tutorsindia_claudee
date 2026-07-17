@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Manuscript Textual (Qualitative) & Statistical (Quantitative) Analysis Help | Tutors India",
+  title: "Manuscript Qualitative & Statistical Analysis",
   description: "Expert manuscript statistical and qualitative analysis. SPSS, STATA, SAS, R, E-views. 4-6 hour express turnaround. Trusted since 2011. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/manuscript-qualitative-textual-analysis/" },
 };
 
 const faqs = [

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const title = slugToTitle(slug[slug.length - 1]);
   return {
-    title: `${title} — Ask an Expert | Tutors India`,
+    title: `${title} — Ask an Expert`,
     description: `Expert academic answer on: ${title}. Get guidance from Tutors India's PhD-qualified team.`,
   };
 }

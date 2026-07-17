@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = stripTIHtml(wpContent.title.rendered);
     const desc = stripTIHtml(wpContent.excerpt?.rendered ?? "", 160);
     return {
-      title: `${title} | Tutors India`,
+      title: `${title}`,
       description: desc || `${title} — Academic writing support from Tutors India.`,
       robots: { index: false, follow: false },
     };
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const proxied = await fetchProxiedPage(path);
   const title = proxied?.title || slugToTitle(lastSlug);
   return {
-    title: `${title} | Tutors India`,
+    title: `${title}`,
     description: `${title} — Academic writing support from Tutors India.`,
     robots: { index: false, follow: false },
     alternates: { canonical: `https://tutorsindia.com${path}` },

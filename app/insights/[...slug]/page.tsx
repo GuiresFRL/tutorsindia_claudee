@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const lastSlug = slug[slug.length - 1];
   const data = await getInsightsContent(lastSlug, path);
   return {
-    title: `${data.title} — Insights | Tutors India`,
+    title: `${data.title} — Insights`,
     description: `${data.title} — Academic insights, news, and research trends from Tutors India.`,
     robots: { index: false, follow: false },
     alternates: { canonical: `https://tutorsindia.com${path}` },

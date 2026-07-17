@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Engineering & Technology Academic Writing | Masters, PhD | Tutors India",
+  title: "Engineering & Technology Writing Help",
   description: "Expert Engineering & Technology academic writing. Civil, Mechanical, Electrical, Computer, Chemical, Aerospace. IEEE, ASCE, ASME publications. Masters & PhD. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/subjects/engineering-technology-academic-writing/" },
 };
 
 const faqs = [

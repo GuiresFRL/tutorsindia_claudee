@@ -27,13 +27,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  if (!post) return { title: "Post Not Found | Tutors India" };
+  if (!post) return { title: "Post Not Found" };
 
   const image = getFeaturedImage(post);
   const description = stripHtml(post.excerpt.rendered, 160);
 
   return {
-    title: `${stripHtml(post.title.rendered, 70)} | Tutors India Blog`,
+    title: `${stripHtml(post.title.rendered, 70)} — Blog`,
     description,
     
     alternates: { canonical: `https://tutorsindia.com/blog/${slug}/` },

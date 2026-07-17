@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Survey Tool / Instrument development Questionnaire (for Survey), Interview & Focus Group Discussion Guide Development for Master's & Ph.D. Dissertation Service",
+  title: "Survey & Research Tool Development",
   description: "Tutors India offers full help and assistance in completing your tool development – questionnaire, interview and focus group discussion guide development for Master's & PhD Dissertation by experienced hands.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/development/tool-development/" },
 };
 
 const faqs = [

@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Conference & Seminar Paper Development Support Services | Tutors India",
+  title: "Conference & Seminar Paper Writing",
   description: "Complete assistance for publishing conference and seminar papers by qualified UK researchers. Assured journal acceptance, plagiarism-free, on-time delivery. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/conference-paper/" },
 };
 
 const faqs = [

@@ -1,8 +1,14 @@
-"use client";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Business & Management Writing Help",
+  description: "Business and Management Studies academic writing help for UG, Master's and MBA students. Dissertations, case studies and assignments written by experts in strategy, HR and marketing.",
+  alternates: { canonical: "https://tutorsindia.com/subjects/business-management-studies-academic-writing-help/" },
+};
 
 const faqs = [
   {

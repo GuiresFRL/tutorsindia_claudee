@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Tutors India Recent Trends | Latest Academic Insights",
+  title: "Recent Academic Research Trends",
   description: "Stay updated with the latest academic writing trends, blog posts, and insights from Tutors India.",
   
   alternates: { canonical: "https://tutorsindia.com/recent-trends/" },

@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Statistical Analysis Services – Management, Economics, Finance & Engineering",
+  title: "Statistical Analysis Services",
   description: "Expert statistical analysis services by qualified statisticians from the US & UK. SPSS, SAS, R, STATA, E-Views. Express 4–6 hour turnaround. Since 2011.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/statistical-services/" },
 };
 
 const faqs = [

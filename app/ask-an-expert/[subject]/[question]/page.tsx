@@ -19,9 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { subject: subjectSlug, question: questionSlug } = await params;
   const item = getQAItem(subjectSlug, questionSlug);
   const subject = getSubject(subjectSlug);
-  if (!item || !subject) return { title: "Ask an Expert | Tutors India" };
+  if (!item || !subject) return { title: "Ask an Expert" };
   return {
-    title: `${item.question} | Tutors India`,
+    title: `${item.question}`,
     description: `Expert answer: ${item.question} — Free academic Q&A from Tutors India's PhD-qualified specialists.`,
     
     alternates: { canonical: `https://tutorsindia.com/ask-an-expert/${subjectSlug}/${questionSlug}/` },

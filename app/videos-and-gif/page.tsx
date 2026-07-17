@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Tutors India Videos & GIF List | Academic Writing Guides",
+  title: "Academic Writing Videos & Guides",
   description: "Watch Tutors India video guides on dissertation writing, research methods, referencing, and academic support services.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://tutorsindia.com/videos-and-gif/" },

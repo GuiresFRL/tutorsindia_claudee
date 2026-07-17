@@ -6,8 +6,9 @@ import { blogPosts } from "@/lib/data/blog";
 import { siteInfo } from "@/lib/data/site";
 
 export const metadata: Metadata = {
-  title: "Masters/MBA Dissertation Writing and Editing Services",
+  title: "Masters & MBA Dissertation Writing Services",
   description: "Tutors India provides expert Masters, MBA and PhD dissertation writing, editing, statistics and coding services. Trusted by 200,000+ scholars since 2001.",
+  alternates: { canonical: "https://tutorsindia.com/" },
 };
 
 const guarantees = [

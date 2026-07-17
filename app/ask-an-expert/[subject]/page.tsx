@@ -16,9 +16,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { subject: subjectSlug } = await params;
   const subject = getSubject(subjectSlug);
-  if (!subject) return { title: "Ask an Expert | Tutors India" };
+  if (!subject) return { title: "Ask an Expert" };
   return {
-    title: `${subject.title} Q&A — Expert Answers | Tutors India`,
+    title: `${subject.title} Q&A — Expert Answers`,
     description: `Browse free expert answers to ${subject.title} questions. ${subject.desc}`,
     
     alternates: { canonical: `https://tutorsindia.com/ask-an-expert/${subject.slug}/` },

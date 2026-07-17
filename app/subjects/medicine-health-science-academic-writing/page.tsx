@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Medicine & Health Science Academic Writing | Masters, PhD | Tutors India",
+  title: "Medicine & Health Science Writing Help",
   description: "Expert Medicine & Health Science academic writing for Masters and PhD students. Clinical Medicine, Nursing, Public Health, Pharmacology. Vancouver, AMA referencing. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/subjects/medicine-health-science-academic-writing/" },
 };
 
 const faqs = [

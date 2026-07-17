@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Viva Voce Presentation Services | DBA Powerpoint Poster PPT Help UK | Tutors India",
+  title: "PhD Viva Voce Presentation Services",
   description: "Are you worried of how to face your Ph.D. viva-voce in front of your supervisor & doctoral committee? Tutors India offers world-class professional viva-voce training for your success.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-viva-voice/" },
 };
 
 const faqs = [

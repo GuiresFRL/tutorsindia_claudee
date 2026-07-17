@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Testimonials — Real Client Experiences",
   description: "Read real testimonials from 2,00,000+ scholars who trusted Tutors India with their academic success. Dissertations, assignments, statistical analysis and more.",
+  alternates: { canonical: "https://tutorsindia.com/testimonials/" },
 };
 
 const featuredTestimonials = [

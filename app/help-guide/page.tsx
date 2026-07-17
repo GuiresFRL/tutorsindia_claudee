@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Help Guide — Academic Writing & Dissertation Guides",
+  title: "Help Guide — Academic Writing Guides",
   description: "Academic writing help guides for undergraduate, Masters, MBA and PhD students. Essay writing, dissertation guidelines, subject-specific guides, referencing guides. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/help-guide/" },
 };
 
 const ugGuides = [

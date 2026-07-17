@@ -1,8 +1,14 @@
-"use client";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Arts & Humanities Academic Writing Help",
+  description: "Arts and Humanities academic writing help for UG, Master's and PhD students. Dissertations, essays and assignments written by subject matter experts in literature, history and philosophy.",
+  alternates: { canonical: "https://tutorsindia.com/subjects/arts-humanities-academic-writing-help/" },
+};
 
 const faqs = [
   {

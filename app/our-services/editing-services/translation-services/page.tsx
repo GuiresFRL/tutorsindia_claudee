@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 ﻿import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
-export const metadata = {
-  title: "Academic Professional Translation services UK India | Tutors India",
+export const metadata: Metadata = {
+  title: "Academic Translation Services",
   description: "Are you struck with a paper that needs to be translated into the English language? Tutors India offers exclusive professional assistance for all your translation requirements.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/editing-services/translation-services/" },
 };
 
 const faqs = [

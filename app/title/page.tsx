@@ -5,7 +5,7 @@ import { getTIChildPages } from "@/lib/api/tutorsindia";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Dissertation Titles — Free Topic Ideas by Subject",
+  title: "Free Dissertation Titles by Subject",
   description: "Browse hundreds of free dissertation title ideas across all subjects — Business, Engineering, Computer Science, Biology, Law, and more. Updated regularly.",
   
   alternates: { canonical: "https://tutorsindia.com/title/" },

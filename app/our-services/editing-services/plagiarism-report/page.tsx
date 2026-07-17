@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 ﻿import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
-export const metadata = {
-  title: "Plagiarism Correction Service – Rephrasing & Rewriting your Dissertation, Research Papers & Manuscripts",
+export const metadata: Metadata = {
+  title: "Plagiarism Correction & Rewriting Service",
   description: "Plagiarism removal carried out by qualified and experienced researchers from the US & UK. Rephrasing and rewriting service for dissertations, research papers and manuscripts.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/editing-services/plagiarism-report/" },
 };
 
 const faqs = [

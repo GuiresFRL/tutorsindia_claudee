@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const proxied = await fetchProxiedPage(`/our-sample-works/${slug}/`);
   const title = proxied?.title || slugToTitle(slug);
   return {
-    title: `${title} — Sample Works | Tutors India`,
+    title: `${title} — Sample Works`,
     description: `View our ${title.toLowerCase()} sample work. Tutors India provides high-quality academic writing examples for reference and guidance.`,
     
     alternates: { canonical: `https://tutorsindia.com/our-sample-works/${slug}/` },

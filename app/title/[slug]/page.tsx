@@ -16,11 +16,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = await getTIPageBySlug(slug);
-  if (!page) return { title: "Dissertation Titles | Tutors India" };
+  if (!page) return { title: "Dissertation Titles" };
   const desc = stripTIHtml(page.excerpt.rendered, 160);
   const title = stripTIHtml(page.title.rendered);
   return {
-    title: `${title} | Tutors India`,
+    title: `${title}`,
     description: desc,
     
     alternates: { canonical: `https://tutorsindia.com/title/${slug}/` },

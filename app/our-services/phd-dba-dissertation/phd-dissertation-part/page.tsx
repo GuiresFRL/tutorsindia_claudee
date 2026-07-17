@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Part / Chapter-wise PhD Dissertation Writing Help & Consultation | Tutors India",
+  title: "Part & Chapter-Wise PhD Dissertation Help",
   description: "Most scholars complete first few chapters and look for external assistance to carry out only single chapter writing such as PhD level literature review or methodology writing.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-part/" },
 };
 
 const faqs = [

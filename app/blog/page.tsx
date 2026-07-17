@@ -13,7 +13,7 @@ import {
 } from "@/lib/api/wordpress";
 
 export const metadata: Metadata = {
-  title: "Blog — Academic Writing Tips & Dissertation Guides",
+  title: "Blog — Academic Writing Tips",
   description:
     "Expert guides on dissertation writing, research methodology, referencing, statistical analysis and academic success from Tutors India's PhD-qualified team.",
   

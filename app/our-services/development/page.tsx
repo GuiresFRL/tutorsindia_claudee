@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Development Services – Coding, Software, Big Data, Animation, Web & e-Learning",
+  title: "Academic Development & Coding Services",
   description: "Tutors India development services: coding & algorithm, software programming, big data analytics, animation, graphic design, web solutions, online tutoring, e-learning & tool development.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/development/" },
 };
 
 const services = [

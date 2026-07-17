@@ -5,6 +5,7 @@ import TestimonialSlider from '@/components/ui/TestimonialSlider';
 export const metadata: Metadata = {
   title: 'Scientific Editing Writing Services | Clinical & Medical Dissertation',
   description: 'Scientific Editing Service - Clinical & Medical Dissertation, Manuscript',
+  alternates: { canonical: "https://tutorsindia.com/our-services/editing-services/scientific-editing-services/" },
 };
 
 const faqs = [

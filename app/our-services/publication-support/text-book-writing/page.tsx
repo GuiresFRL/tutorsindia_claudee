@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Textbook Content Development & Writing Support Services | Tutors India",
+  title: "Textbook Writing & Content Development",
   description: "Comprehensive assistance to complete textbook writing by qualified UK researchers. Complete textbook writing, new content development, refreshing existing materials. Tutors India.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/text-book-writing/" },
 };
 
 const faqs = [

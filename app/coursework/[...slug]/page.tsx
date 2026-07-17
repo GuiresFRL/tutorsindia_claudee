@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? stripTIHtml(wpPage.excerpt.rendered, 160)
     : `${title} — Academic coursework guidance from Tutors India.`;
   return {
-    title: `${title} | Tutors India`,
+    title: `${title}`,
     description: desc,
     robots: { index: false, follow: false },
     alternates: { canonical: `https://tutorsindia.com${path}` },

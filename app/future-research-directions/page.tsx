@@ -5,7 +5,7 @@ import { getTIPageById, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutors
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Future Research Directions — Emerging Academic Topics",
+  title: "Future Research Directions by Subject",
   description: "Explore future research directions and emerging opportunities across all academic disciplines. Expert insights to guide your research agenda.",
   
   alternates: { canonical: "https://tutorsindia.com/future-research-directions/" },

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const proxied = await fetchProxiedLibraryPage(path);
   const title = proxied?.title || slugToTitle(slug[slug.length - 1]);
   return {
-    title: `${title} | Tutors India`,
+    title: `${title}`,
     description: `${title} — Academic writing sample from Tutors India's library.`,
     robots: { index: false, follow: false },
     alternates: { canonical: `https://tutorsindia.com${path}` },

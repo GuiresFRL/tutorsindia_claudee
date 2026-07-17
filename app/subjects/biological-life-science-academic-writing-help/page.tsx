@@ -1,8 +1,14 @@
-"use client";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Biological & Life Science Writing Help",
+  description: "Biological and Life Science academic writing help for UG, Master's and PhD students. Dissertations, lab reports and manuscripts written by experts in biology, genetics and biotechnology.",
+  alternates: { canonical: "https://tutorsindia.com/subjects/biological-life-science-academic-writing-help/" },
+};
 
 const faqs = [
   {

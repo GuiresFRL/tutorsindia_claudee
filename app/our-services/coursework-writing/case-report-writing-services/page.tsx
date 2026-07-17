@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "The US / UK Case Report Writing Services | Tutors India",
+  title: "The US / UK Case Report Writing Services",
   description: "UK Case Report Writing at Tutors India will be strictly in British English, strictly follow university requirement including Citation and formatting. Our team of US & British Writers guarantees your grade.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/case-report-writing-services/" },
 };
 
 const faqs = [

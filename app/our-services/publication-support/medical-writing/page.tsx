@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Medical Dissertation, Research Paper & Manuscript Writing, Rewriting & Editing Services",
+  title: "Medical Writing & Manuscript Services",
   description: "Expert medical dissertation, research paper and manuscript writing, rewriting & editing services by qualified researchers from US & UK. Academic & Education.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/medical-writing/" },
 };
 
 const faqs = [

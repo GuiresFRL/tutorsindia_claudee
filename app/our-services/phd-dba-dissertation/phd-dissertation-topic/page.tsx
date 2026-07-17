@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD & Professional Doctorate Dissertation Topic Selection & Outline Help | Tutors India",
+  title: "PhD Dissertation Topic Selection Help",
   description: "Are you looking for unique, innovative & convincing Ph.D. dissertation topic based on the strong research gap? We Select Ph.D. level Topic for your UK dissertation.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-topic/" },
 };
 
 const faqs = [

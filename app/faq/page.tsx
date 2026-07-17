@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 export const metadata: Metadata = {
   title: "FAQ — Frequently Asked Questions",
   description: "Get answers to frequently asked questions about Tutors India's academic writing, dissertation, statistical analysis and editing services.",
+  alternates: { canonical: "https://tutorsindia.com/faq/" },
 };
 
 const faqSections = [

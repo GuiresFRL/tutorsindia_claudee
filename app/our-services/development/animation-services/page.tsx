@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Engineering & Animation – 2D, 3D & Multimedia Services | Tutors India",
+  title: "2D, 3D & Multimedia Animation Services",
   description: "Expert 2D, 3D animation, CAD design, architectural rendering, mechanical engineering visuals and multimedia services for dissertations and academic projects.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/development/animation-services/" },
 };
 
 const faqs = [

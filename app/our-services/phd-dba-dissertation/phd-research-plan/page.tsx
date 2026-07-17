@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD & DBA Doctorate Dissertation Research Planning & Consultation Help | Tutors India",
+  title: "PhD Dissertation Research Planning Help",
   description: "Are you not sure how to conduct a Ph.D. Research Plan? Tutors India can provide full assistance to develop the structure of the research Ph.D. research plan as per your university guidelines.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-research-plan/" },
 };
 
 const faqs = [

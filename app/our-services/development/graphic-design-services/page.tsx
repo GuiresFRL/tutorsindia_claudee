@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Graphic Design Services – Illustration and Redrawing Service | Tutors India",
+  title: "Academic Graphic Design & Illustration",
   description: "Expert illustration, redrawing and graphic design services for dissertations, manuscripts and textbooks. Photoshop, CorelDraw, Adobe Illustrator. Affordable & confidential.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/development/graphic-design-services/" },
 };
 
 const faqs = [

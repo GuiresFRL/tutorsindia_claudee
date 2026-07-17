@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Ph.D. Doctorate Research Proposal Writing Help | Tutors India",
+  title: "PhD Research Proposal Writing Help",
   description: "Are you struggling to write a research proposal? All your Ph.D. Research Proposals are written by qualified and experienced researchers from the US & UK.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-research-proposal/" },
 };
 
 const faqs = [

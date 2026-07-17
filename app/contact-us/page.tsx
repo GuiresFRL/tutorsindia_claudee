@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Tutors India",
+  title: "Contact Us",
   description: "Get in touch with Tutors India for academic writing, dissertation support, and research assistance. Response within 30 minutes.",
+  alternates: { canonical: "https://tutorsindia.com/contact-us/" },
 };
 
 const contactDetails = [

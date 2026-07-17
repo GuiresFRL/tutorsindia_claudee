@@ -1,8 +1,13 @@
-﻿"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Dissertation Resit & Resubmission Help",
+  description: "UK dissertation resitting and resubmission writing help. We address your examiner feedback, rework weak chapters and get your dissertation to the standard required to pass.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/resit-dissertation/" },
+};
 
 const resitFaqs = [
   {

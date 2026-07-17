@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const svc = cat?.services.find((s) => s.href.includes(`/${slug}/`));
   if (!svc) return {};
   return {
-    title: `${svc.title} | Tutors India`,
+    title: `${svc.title}`,
     description: svc.description,
   };
 }

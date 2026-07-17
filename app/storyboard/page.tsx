@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "StoryBoard — Tutors India",
+  title: "StoryBoard",
   description: "Tutors India storyboard — visual showcase of our dissertation, data analysis, essay writing, and research services.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://tutorsindia.com/storyboard/" },

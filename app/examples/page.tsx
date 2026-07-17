@@ -5,7 +5,7 @@ import { getTIChildPages, stripTIHtml } from "@/lib/api/tutorsindia";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Examples — Free Academic Writing Examples by Subject",
+  title: "Free Academic Writing Examples",
   description: "Browse free academic writing examples across all major subjects. Expert-written samples demonstrating proper structure, methodology, and referencing.",
   
   alternates: { canonical: "https://tutorsindia.com/examples/" },

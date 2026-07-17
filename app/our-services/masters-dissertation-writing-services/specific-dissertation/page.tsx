@@ -1,7 +1,13 @@
-"use client";
+import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
+
+export const metadata: Metadata = {
+  title: "Specific Dissertation Type Writing Help",
+  description: "Specific type of dissertation writing help for US and UK Master's students — empirical, systematic review, case study, secondary data and mixed-method dissertations.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/specific-dissertation/" },
+};
 
 const specificTypes = [
   { title: "Business Plan", desc: "The most challenging dissertation for any student is undertaking the business plan as part of their dissertation work. At Tutors India, we completely aware of business plan structure and our writers has already completed more than 2500 Business plan dissertation successfully. Our team of writers consists of finance and accountant, subject matter expertise and statistical analyst. By taking our help of business plan dissertation writing." },

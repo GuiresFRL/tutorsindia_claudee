@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? stripTIHtml(wpPage.excerpt.rendered, 160)
     : `${title} — Free university essay example from Tutors India.`;
   return {
-    title: `${title} — Essays | Tutors India`,
+    title: `${title} — Essays`,
     description: desc,
     robots: { index: false, follow: false },
     alternates: { canonical: `https://tutorsindia.com${path}` },

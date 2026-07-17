@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 ﻿import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
-export const metadata = {
-  title: "Academic & Research Transcription Services India UK | Tutors India",
+export const metadata: Metadata = {
+  title: "Academic Research Transcription Services",
   description: "We Transcribe your qualitative textual data obtained through interview guide and focus group discussions. Transcribers are qualified and experienced researchers from the US & UK.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/editing-services/transcription-services/" },
 };
 
 const faqs = [

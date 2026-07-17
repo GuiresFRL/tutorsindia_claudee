@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Clinical Biostatistics / Biometric Services – Biology, Public Health and the Biomedical Sciences",
+  title: "Clinical Biostatistics Services",
   description: "Expert biostatistics and biometric services by qualified biostatisticians from the US & UK. SPSS, SAS, R, STATA, E-Views. Express 4–6 hour turnaround.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/publication-support/biostatistics-services/" },
 };
 
 const faqs = [

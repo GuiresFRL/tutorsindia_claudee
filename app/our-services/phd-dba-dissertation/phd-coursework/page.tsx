@@ -4,8 +4,9 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD & Professional Doctorate Coursework Writing Services | Tutors India",
+  title: "PhD Coursework Writing Services",
   description: "A UK PhD & Professional doctorate degree Coursework Writing Services & Consultation Help. Custom PhD & DBA coursework written by qualified and experienced researchers from the US & UK.",
+  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/phd-coursework/" },
 };
 
 const faqs = [
