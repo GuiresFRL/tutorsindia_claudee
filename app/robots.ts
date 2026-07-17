@@ -18,7 +18,7 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://tutorsindia.com/sitemap.xml",
-    host: "https://tutorsindia.com",
+    sitemap: "https://www.tutorsindia.com/sitemap.xml",
+    host: "https://www.tutorsindia.com",
   };
 }
