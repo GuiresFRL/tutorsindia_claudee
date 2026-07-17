@@ -27,8 +27,8 @@ const siteUrl = "https://tutorsindia.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Masters/MBA Dissertation Writing and Editing Services | Tutors India",
-    template: "%s | Tutors India",
+    default: "Masters/MBA Dissertation Writing and Editing Services",
+    template: "%s",
   },
   description: "Tutors India provides expert Masters, MBA and PhD dissertation writing, editing, statistics and coding services. Trusted by 200,000+ scholars since 2001.",
   keywords: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Tutors India",
-    title: "Masters/MBA Dissertation Writing and Editing Services | Tutors India",
+    title: "Masters/MBA Dissertation Writing and Editing Services",
     description: "Tutors India provides expert Masters, MBA and PhD dissertation writing, editing, statistics and coding services. Trusted by 200,000+ scholars since 2001.",
     url: siteUrl,
     images: [
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Masters/MBA Dissertation Writing and Editing Services | Tutors India",
+    title: "Masters/MBA Dissertation Writing and Editing Services",
     description: "Expert academic writing services — dissertations, assignments, statistical analysis. Trusted by 2,00,000+ scholars since 2001.",
     images: ["/tutorsindia-logo-hd.jpg"],
     creator: "@TutorsIndia",
