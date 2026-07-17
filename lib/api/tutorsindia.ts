@@ -1,10 +1,10 @@
 /**
- * tutorsindia.com main WordPress REST API client.
+ * tutorsindia.net main WordPress REST API client.
  * Used for pages: essays, examples, title, topic, our-sample-works,
  * latest-research-trends, future-research-directions, referencing, insights.
  */
 
-const TI_API = "https://www.tutorsindia.com/wp-json/wp/v2";
+const TI_API = "https://www.tutorsindia.net/wp-json/wp/v2";
 
 const FETCH_OPTS = {
   next: { revalidate: 3600 },
