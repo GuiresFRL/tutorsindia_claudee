@@ -154,6 +154,7 @@ export default function EnquiryModal() {
   return (
     <div
       onClick={close}
+      className="eq-overlay"
       style={{
         position: "fixed",
         inset: 0,
@@ -167,6 +168,7 @@ export default function EnquiryModal() {
     >
       <div
         onClick={(e) => e.stopPropagation()}
+        className="eq-panel"
         style={{
           position: "relative",
           width: "100%",
@@ -183,6 +185,7 @@ export default function EnquiryModal() {
         <button
           onClick={close}
           aria-label="Close"
+          className="eq-close"
           style={{
             position: "absolute",
             top: "-16px",
@@ -197,6 +200,7 @@ export default function EnquiryModal() {
             justifyContent: "center",
             cursor: "pointer",
             boxShadow: "0 4px 14px rgba(0,0,0,0.3)",
+            flexShrink: 0,
           }}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -232,27 +236,28 @@ export default function EnquiryModal() {
           </div>
         ) : (
           <>
-            <h2 style={{ color: "#fff", fontSize: "1.55rem", fontWeight: 700, marginBottom: "16px" }}>
+            <h2 className="eq-heading" style={{ color: "#fff", fontSize: "1.55rem", fontWeight: 700, marginBottom: "16px" }}>
               Enquire Now
             </h2>
-            <div style={{ height: "1px", background: "rgba(255,255,255,0.18)", marginBottom: "24px" }} />
+            <div className="eq-divider" style={{ height: "1px", background: "rgba(255,255,255,0.18)", marginBottom: "24px" }} />
 
-            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
+            <form onSubmit={handleSubmit} className="eq-form" style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
               {/* Name */}
               <div>
-                <label style={labelStyle} htmlFor="eq-name">Name</label>
+                <label style={labelStyle} className="eq-label" htmlFor="eq-name">Name</label>
                 <input
                   id="eq-name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   style={inputStyle}
+                  className="eq-input"
                 />
               </div>
 
               {/* Mobile Number */}
               <div>
-                <label style={labelStyle} htmlFor="eq-phone">
+                <label style={labelStyle} className="eq-label" htmlFor="eq-phone">
                   Mobile Number <span style={{ color: "#ff5c5c" }}>*</span>
                 </label>
                 <div style={{
@@ -267,6 +272,7 @@ export default function EnquiryModal() {
                     autoComplete="off"
                     value={phoneCode}
                     onChange={(e) => setPhoneCode(e.target.value)}
+                    className="eq-input eq-phone-code"
                     style={{
                       ...selectStyle,
                       width: "118px",
@@ -287,6 +293,7 @@ export default function EnquiryModal() {
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
+                    className="eq-input"
                     style={{ ...inputStyle, borderRadius: 0, flex: 1 }}
                   />
                 </div>
@@ -294,7 +301,7 @@ export default function EnquiryModal() {
 
               {/* Email */}
               <div>
-                <label style={labelStyle} htmlFor="eq-email">
+                <label style={labelStyle} className="eq-label" htmlFor="eq-email">
                   Email Id <span style={{ color: "#ff5c5c" }}>*</span>
                 </label>
                 <input
@@ -304,17 +311,19 @@ export default function EnquiryModal() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   style={inputStyle}
+                  className="eq-input"
                 />
               </div>
 
               {/* Country */}
               <div>
-                <label style={labelStyle} htmlFor="eq-country">Country</label>
+                <label style={labelStyle} className="eq-label" htmlFor="eq-country">Country</label>
                 <select
                   id="eq-country"
                   autoComplete="off"
                   value={country}
                   onChange={(e) => handleCountryChange(e.target.value)}
+                  className="eq-input"
                   style={{ ...selectStyle, color: country ? "#1a2a6c" : "#8a93a8" }}
                 >
                   <option value="">Select country</option>
@@ -326,11 +335,12 @@ export default function EnquiryModal() {
 
               {/* Type of Order */}
               <div>
-                <label style={labelStyle} htmlFor="eq-order-type">Type of Order</label>
+                <label style={labelStyle} className="eq-label" htmlFor="eq-order-type">Type of Order</label>
                 <select
                   id="eq-order-type"
                   value={orderType}
                   onChange={(e) => setOrderType(e.target.value)}
+                  className="eq-input"
                   style={{ ...selectStyle, color: orderType ? "#1a2a6c" : "#8a93a8" }}
                 >
                   <option value="">Select type of order</option>
@@ -347,6 +357,7 @@ export default function EnquiryModal() {
               <button
                 type="submit"
                 disabled={status === "loading"}
+                className="eq-submit"
                 style={{
                   width: "100%",
                   padding: "15px",
@@ -367,6 +378,24 @@ export default function EnquiryModal() {
           </>
         )}
       </div>
+
+      {/* Compact mode — triggers on narrow width OR short height, so it covers
+          mobile portrait, mobile landscape, and short/small-height desktop
+          browser windows with one rule, not just one axis. */}
+      <style>{`
+        @media (max-width: 480px), (max-height: 700px) {
+          .eq-overlay { padding: 16px !important; }
+          .eq-panel { padding: 20px 20px 18px !important; max-height: calc(100vh - 32px) !important; }
+          .eq-close { top: -12px !important; right: -12px !important; width: 32px !important; height: 32px !important; }
+          .eq-heading { font-size: 1.25rem !important; margin-bottom: 8px !important; }
+          .eq-divider { margin-bottom: 14px !important; }
+          .eq-form { gap: 12px !important; }
+          .eq-label { margin-bottom: 4px !important; font-size: 0.82rem !important; }
+          .eq-input { padding: 10px 12px !important; font-size: 0.9rem !important; }
+          .eq-phone-code { width: 100px !important; padding-right: 22px !important; }
+          .eq-submit { padding: 12px !important; }
+        }
+      `}</style>
     </div>
   );
 }
