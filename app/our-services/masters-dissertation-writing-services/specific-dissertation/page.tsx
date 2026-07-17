@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Specific Dissertation Type Writing Help",
   description: "Specific type of dissertation writing help for US and UK Master's students — empirical, systematic review, case study, secondary data and mixed-method dissertations.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/specific-dissertation/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/specific-dissertation/" },
 };
 
 const specificTypes = [

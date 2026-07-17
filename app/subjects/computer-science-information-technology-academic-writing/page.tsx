@@ -7,7 +7,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Computer Science & IT Writing Help",
   description: "Computer Science and IT academic writing help for UG, Master's and PhD students. Dissertations, coding projects and manuscripts by experts in AI, data science and software engineering.",
-  alternates: { canonical: "https://tutorsindia.com/subjects/computer-science-information-technology-academic-writing/" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/computer-science-information-technology-academic-writing/" },
 };
 
 const faqs = [

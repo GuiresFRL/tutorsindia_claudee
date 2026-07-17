@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Library — Essay & Dissertation Samples",
   description: "Browse Tutors India's academic library: essays, dissertations, proposals, methodologies, literature reviews, and manuscript templates across all subjects.",
   
-  alternates: { canonical: "https://tutorsindia.com/library/" },
+  alternates: { canonical: "https://www.tutorsindia.com/library/" },
 };
 
 const sections = [

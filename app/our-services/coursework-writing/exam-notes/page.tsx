@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "The UK Exam Notes Writing Help",
   description: "UK Exam Notes Writing Service by subject matter experts. Concise, well-structured revision notes for Masters, MBA and PhD examinations. Tutors India.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/exam-notes/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/exam-notes/" },
 };
 
 const faqs = [

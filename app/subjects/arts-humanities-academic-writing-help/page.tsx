@@ -7,7 +7,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Arts & Humanities Academic Writing Help",
   description: "Arts and Humanities academic writing help for UG, Master's and PhD students. Dissertations, essays and assignments written by subject matter experts in literature, history and philosophy.",
-  alternates: { canonical: "https://tutorsindia.com/subjects/arts-humanities-academic-writing-help/" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/arts-humanities-academic-writing-help/" },
 };
 
 const faqs = [

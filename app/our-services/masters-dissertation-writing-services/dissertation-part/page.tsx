@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Expert Master's Chapter-wise Dissertation Writing Services",
   description: "Masters Dissertation Part or chapter-wise writing help. Looking to avail only to write part dissertation such as introduction literature review methodology etc.",
   keywords: "chapterwise Mentoring Services,Chapter-wise Assistance for Dissertation",
-  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-part/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-part/" },
 };
 
 const partFaqs = [

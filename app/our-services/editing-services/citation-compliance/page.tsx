@@ -5,7 +5,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Citation Compliance & Referencing Service",
   description: "Any research work without proper citations of referenced materials is prone to being rejected by evaluating committee. Tutors India offers dedicated experts for citation and references work.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/editing-services/citation-compliance/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/citation-compliance/" },
 };
 
 const faqs = [

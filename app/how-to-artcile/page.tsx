@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "How To Articles",
   description: "Step-by-step how-to guides and academic writing articles from Tutors India's expert team.",
   
-  alternates: { canonical: "https://tutorsindia.com/how-to-artcile/" },
+  alternates: { canonical: "https://www.tutorsindia.com/how-to-artcile/" },
 };
 
 const articles = [

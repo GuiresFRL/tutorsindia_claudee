@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Programming Help for CS Dissertations",
   description: "Expert computer programming, algorithm development and CS dissertation support. Java, .NET, MATLAB, PHP, Android, NS2/NS3, MySQL, Angular JS & more. US & UK qualified researchers.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/development/programming/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/programming/" },
 };
 
 const faqs = [

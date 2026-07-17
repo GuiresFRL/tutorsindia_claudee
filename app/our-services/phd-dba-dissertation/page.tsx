@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD & DBA Dissertation Writing Services",
   description: "Looking for MBA / DBA Writing & Editing Services? Plagiarism free research with novelty and innovation. Expert PhD writers from UK, US and Australia. Unlimited revisions.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/phd-dba-dissertation/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/" },
 };
 
 const cat = serviceCategories.find((c) => c.slug === "phd-dba-dissertation")!;

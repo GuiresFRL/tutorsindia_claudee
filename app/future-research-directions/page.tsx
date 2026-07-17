@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Future Research Directions by Subject",
   description: "Explore future research directions and emerging opportunities across all academic disciplines. Expert insights to guide your research agenda.",
   
-  alternates: { canonical: "https://tutorsindia.com/future-research-directions/" },
+  alternates: { canonical: "https://www.tutorsindia.com/future-research-directions/" },
 };
 
 export default async function FutureResearchDirectionsPage() {

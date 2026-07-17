@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title}`,
     description: `${title} — Marketing academic sample from Tutors India's expert writers.`,
     robots: { index: false, follow: false },
-    alternates: { canonical: `https://tutorsindia.com${path}` },
+    alternates: { canonical: `https://www.tutorsindia.com${path}` },
   };
 }
 

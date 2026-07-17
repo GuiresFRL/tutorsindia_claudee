@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Free Dissertation Topics by Subject",
   description: "Explore free dissertation topic ideas across Business, Engineering, Computer Science, Biology, Law and more. Expert curated by Tutors India's PhD team.",
   
-  alternates: { canonical: "https://tutorsindia.com/topic/" },
+  alternates: { canonical: "https://www.tutorsindia.com/topic/" },
 };
 
 export default async function TopicPage() {

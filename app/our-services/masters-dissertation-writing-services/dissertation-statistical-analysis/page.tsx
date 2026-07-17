@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Expert Statistical Analysis Services ",
   description: "We offer statistical analysis services using advanced tools to transform your raw data into meaningful results for research purposes.",
   keywords: "Dissertation statistical analysis,Statistical Services for Dissertations,Dissertation Statistics Help",
-  alternates: { canonical: "https://tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/" },
 };
 
 const faqs = [

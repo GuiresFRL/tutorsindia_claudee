@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "The US / UK Critical Review Service",
   description: "UK Critical Review Writing at Tutors India will be strictly in British English, strictly follow University Requirement including Citation and Formatting. All our Writers belongs to British and the US.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/critical-review/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/critical-review/" },
 };
 
 const faqs = [

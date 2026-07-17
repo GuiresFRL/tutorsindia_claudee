@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Professional English Language Editing-Proofreading Services",
   description: "We offer professional and complete language editing assistance to submit your papers with perfection and confidence.",
   keywords: "english language editing services, proofreading services india, english editing service, medical editing services, professional english editing, thesis editing services australia, thesis editing australia, english language correction online,,Academic English Editing,English Editing & Proofreading,Professional English Manuscript Editing Services",
-  alternates: { canonical: "https://tutorsindia.com/our-services/editing-services/language-editing/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/language-editing/" },
 };
 
 const faqs = [

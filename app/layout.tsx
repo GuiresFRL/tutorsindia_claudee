@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     site: "@TutorsIndia",
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: "https://www.tutorsindia.com",
   },
   icons: {
     icon: "/tutorsindia-logo-hd.jpg",

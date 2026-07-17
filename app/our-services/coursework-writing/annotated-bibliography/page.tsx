@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "The UK Annotated Bibliography Writing Help",
   description: "UK Annotated Bibliography Writing Help at Tutors India compiles the literature for the purpose of an extended research project that showcases the mastery of the relevant background including contextual, critical & theoretical evidence of a wide range of reading.",
-  alternates: { canonical: "https://tutorsindia.com/our-services/coursework-writing/annotated-bibliography/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/annotated-bibliography/" },
 };
 
 const faqs = [
