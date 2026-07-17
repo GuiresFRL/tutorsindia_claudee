@@ -9,6 +9,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openNav, setOpenNav] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [mobileMegaExpanded, setMobileMegaExpanded] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const headerRef = useRef<HTMLElement>(null);
 
@@ -114,7 +115,11 @@ export default function Header() {
           </Link>
           <button
             className="hdr-hamburger"
-            onClick={() => setMobileOpen((v) => !v)}
+            onClick={() => {
+              setMobileOpen((v) => !v);
+              setMobileExpanded(null);
+              setMobileMegaExpanded(null);
+            }}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
             style={{
@@ -158,7 +163,10 @@ export default function Header() {
                 </Link>
                 {(item.children || item.megaColumns) && (
                   <button
-                    onClick={() => setMobileExpanded(mobileExpanded === item.href ? null : item.href)}
+                    onClick={() => {
+                      setMobileExpanded(mobileExpanded === item.href ? null : item.href);
+                      setMobileMegaExpanded(null);
+                    }}
                     aria-label="Expand"
                     style={{
                       background: "none",
@@ -196,47 +204,77 @@ export default function Header() {
                 </div>
               )}
 
-              {/* Mobile: mega menu columns */}
+              {/* Mobile: mega menu columns — each category is its own accordion */}
               {mobileExpanded === item.href && item.megaColumns && (
                 <div style={{ paddingBottom: "8px" }}>
-                  {item.megaColumns.map((col) => (
-                    <div key={col.category}>
-                      <Link
-                        href={col.href}
-                        onClick={() => setMobileOpen(false)}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "6px",
-                          padding: "8px 12px",
-                          fontWeight: 700,
-                          fontSize: "13px",
-                          color: "#1a2a6c",
-                          background: "#f0f4ff",
-                          borderRadius: "4px",
-                          margin: "4px 0 2px",
-                        }}
-                      >
-                        <span>{col.icon}</span> {col.category}
-                      </Link>
-                      {col.items.map((sub) => (
-                        <Link
-                          key={sub.label}
-                          href={sub.href}
-                          onClick={() => setMobileOpen(false)}
+                  {item.megaColumns.map((col) => {
+                    const megaKey = `${item.href}::${col.category}`;
+                    const isCatOpen = mobileMegaExpanded === megaKey;
+                    return (
+                      <div key={col.category}>
+                        <div
                           style={{
-                            display: "block",
-                            padding: "5px 24px",
-                            fontSize: "12.5px",
-                            color: "#555",
-                            borderBottom: "1px solid #f4f4f8",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: "6px",
+                            background: "#f0f4ff",
+                            borderRadius: "4px",
+                            margin: "4px 0 2px",
                           }}
                         >
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
+                          <Link
+                            href={col.href}
+                            onClick={() => setMobileOpen(false)}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "6px",
+                              flex: 1,
+                              padding: "8px 12px",
+                              fontWeight: 700,
+                              fontSize: "13px",
+                              color: "#1a2a6c",
+                            }}
+                          >
+                            <span>{col.icon}</span> {col.category}
+                          </Link>
+                          <button
+                            onClick={() => setMobileMegaExpanded(isCatOpen ? null : megaKey)}
+                            aria-label={isCatOpen ? `Collapse ${col.category}` : `Expand ${col.category}`}
+                            aria-expanded={isCatOpen}
+                            style={{
+                              background: "none",
+                              border: "none",
+                              cursor: "pointer",
+                              color: "#1a2a6c",
+                              fontSize: "16px",
+                              padding: "8px 12px",
+                              lineHeight: 1,
+                            }}
+                          >
+                            {isCatOpen ? "−" : "+"}
+                          </button>
+                        </div>
+                        {isCatOpen && col.items.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            onClick={() => setMobileOpen(false)}
+                            style={{
+                              display: "block",
+                              padding: "5px 24px",
+                              fontSize: "12.5px",
+                              color: "#555",
+                              borderBottom: "1px solid #f4f4f8",
+                            }}
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
