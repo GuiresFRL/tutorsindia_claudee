@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Coding and Algorithm",
-    href: "/our-services/development/coding-algorithm/",
+    href: "/our-services/development/coding-and-algorithm/",
     desc: "Programming is difficult as we need to tell computer an unambiguous instruction thereby there is no room for subjective interpretation.",
     icon: "💻",
   },
   {
     title: "Software Programming",
-    href: "/our-services/development/computer-programming/",
+    href: "/our-services/development/programming/",
     desc: "Programming is difficult as we need to tell computer an unambiguous instruction thereby there is no room for subjective interpretation.",
     icon: "⚙️",
   },
@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: "Animation Services",
-    href: "/our-services/development/animation-2d-3d-vfx/",
+    href: "/our-services/development/animation-services/",
     desc: "Our team have capability to deliver 3D Modelling design (3D animation, 3D Flythrough, 3D modelling), architectural design (Commercial, construction, design & drafting, interior design, landscape).",
     icon: "🎬",
   },
@@ -52,13 +52,13 @@ const services = [
   },
   {
     title: "Online Tutoring Services",
-    href: "/our-services/development/online-courses-tutoring/",
+    href: "/our-services/development/online-tutoring-services/",
     desc: "Tutoring services is to serve as centre of learning assistance to students in order to support for their academic courses.",
     icon: "🎓",
   },
   {
     title: "e-Learning Content Development",
-    href: "/our-services/development/e-learning-development/",
+    href: "/our-services/development/e-learning-content-development/",
     desc: "e-Learning has been defined as the delivery of technology supported learning and teaching with more of an interactive process between the teach and students based on sound pedagogical practices.",
     icon: "📱",
   },

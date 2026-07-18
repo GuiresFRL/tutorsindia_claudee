@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { fetchProxiedPage } from "@/lib/api/proxyPage";
 import { getTIPageBySlug, stripTIHtml } from "@/lib/api/tutorsindia";
+import { stripBrokenLinks } from "@/lib/cleanElementor";
 
 export const revalidate = 3600;
 
@@ -27,7 +28,7 @@ function cleanElementorHtml(html: string): string {
   // Remove empty paragraphs and excessive whitespace
   clean = clean.replace(/<p[^>]*>\s*(&nbsp;|\s)*\s*<\/p>/gi, "");
   clean = clean.replace(/\n{3,}/g, "\n\n").trim();
-  return clean;
+  return stripBrokenLinks(clean);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

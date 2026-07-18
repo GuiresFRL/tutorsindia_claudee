@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: "Language Translation",
-    href: "/our-services/editing-services/language-translation/",
+    href: "/our-services/editing-services/translation-services/",
     desc: "Professional language translation services for academic and research documents, ensuring accuracy and context preservation.",
     icon: "🌐",
   },
@@ -52,7 +52,7 @@ const services = [
   },
   {
     title: "Scientific Editing",
-    href: "/our-services/editing-services/scientific-editing/",
+    href: "/our-services/editing-services/scientific-editing-services/",
     desc: "Our in-house internal committee consists of UK and US based Ph.D. holders for writing and as research advisors with rich experience in research.",
     icon: "🧪",
   },
@@ -64,7 +64,7 @@ const services = [
   },
   {
     title: "Peer Review",
-    href: "/our-services/editing-services/peer-review/",
+    href: "/our-services/editing-services/peer-review-submissions/",
     desc: "Professional peer review services to assess your manuscript before submission to journals or academic committees.",
     icon: "👁️",
   },
