@@ -197,6 +197,10 @@ export default async function AcademyPage({ searchParams }: Props) {
           </>
         )}
 
+        <div style={{ margin: "8px 0 24px" }}>
+          <Link href="/recent-trends/" style={{ padding: "9px 18px", border: "1.5px solid #dde2ef", borderRadius: "20px", color: "#1a2a6c", fontSize: "0.85rem", fontWeight: 600, display: "inline-block" }}>Recent Academic Research Trends →</Link>
+        </div>
+
         {/* ── BOTTOM CTA ── */}
         <div className="blog-cta-strip">
           <div>

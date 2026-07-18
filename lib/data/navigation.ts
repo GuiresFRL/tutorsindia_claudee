@@ -188,6 +188,7 @@ export const footerLinks = {
     { label: "Pricing", href: "/pricing/" },
     { label: "Order Now", href: "/order-now/" },
     { label: "Contact Us", href: "/contact-us/" },
+    { label: "Customer Centre", href: "/customer-centre/" },
     { label: "Ask an Expert", href: "/ask-an-expert/" },
     { label: "Privacy Policy", href: "/privacy-policy/" },
     { label: "Terms & Conditions", href: "/terms-and-conditions/" },

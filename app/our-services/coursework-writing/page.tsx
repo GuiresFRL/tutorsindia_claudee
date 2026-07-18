@@ -545,6 +545,16 @@ export default function CourseworkWritingPage() {
           <TestimonialSlider testimonials={testimonials} />
         </div>
 
+        {/* Related resources */}
+        <div style={{ marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "18px" }}>Related Resources</h2>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <Link href="/coursework-assignment/" style={{ padding: "9px 18px", border: "1.5px solid #dde2ef", borderRadius: "20px", color: "#1a2a6c", fontSize: "0.85rem", fontWeight: 600 }}>Coursework &amp; Assignment Help</Link>
+            <Link href="/coursework/nursing-assignment-q-and-a/" style={{ padding: "9px 18px", border: "1.5px solid #dde2ef", borderRadius: "20px", color: "#1a2a6c", fontSize: "0.85rem", fontWeight: 600 }}>Nursing Assignment Q&amp;A</Link>
+            <Link href="/coursework/statistical-analysis/" style={{ padding: "9px 18px", border: "1.5px solid #dde2ef", borderRadius: "20px", color: "#1a2a6c", fontSize: "0.85rem", fontWeight: 600 }}>Statistical Analysis Q&amp;A</Link>
+          </div>
+        </div>
+
         {/* CTA */}
         <div style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", borderRadius: "12px", padding: "36px 28px", textAlign: "center" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#fff", marginBottom: "10px" }}>Invest in your Career</h2>
