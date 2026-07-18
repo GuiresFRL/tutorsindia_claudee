@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Tutors India Academy — in-depth academic study guides, how-to articles, research tips, and learning resources for Masters, MBA and PhD students worldwide.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/academy/" },
+  alternates: { canonical: "https://www.tutorsindia.com/academy" },
 };
 
 export const revalidate = 0;

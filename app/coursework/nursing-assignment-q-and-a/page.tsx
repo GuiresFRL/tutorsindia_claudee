@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Nursing Assignment Q and A",
   description: "Expert answers to common nursing assignment questions — structure, evidence, critical analysis, citation styles, Gibbs Reflective Cycle, and more.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/coursework/nursing-assignment-q-and-a/" },
+  alternates: { canonical: "https://www.tutorsindia.com/coursework/nursing-assignment-q-and-a" },
 };
 
 const qas = [

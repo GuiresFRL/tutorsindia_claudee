@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${item.question}`,
     description: `Expert answer: ${item.question} — Free academic Q&A from Tutors India's PhD-qualified specialists.`,
     
-    alternates: { canonical: `https://www.tutorsindia.com/ask-an-expert/${subjectSlug}/${questionSlug}/` },
+    alternates: { canonical: `https://www.tutorsindia.com/ask-an-expert/${subjectSlug}/${questionSlug}` },
   };
 }
 

@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Engineering Research & Manuscript Writing",
   description: "Expert engineering dissertation & manuscript writing services by qualified researchers from US & UK. IEEE papers, LaTeX, 5000+ PhD theses completed. 15+ years experience.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/engineering-research/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/engineering-research" },
 };
 
 const faqs = [

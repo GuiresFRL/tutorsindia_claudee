@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Free Resources",
   description: "Free academic resources from Tutors India — essays, dissertation examples, titles, topics, referencing guides, research trends, and more.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/free-resources/" },
+  alternates: { canonical: "https://www.tutorsindia.com/free-resources" },
 };
 
 const resourceGroups = [

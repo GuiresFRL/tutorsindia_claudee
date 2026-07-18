@@ -7,7 +7,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Biological & Life Science Writing Help",
   description: "Biological and Life Science academic writing help for UG, Master's and PhD students. Dissertations, lab reports and manuscripts written by experts in biology, genetics and biotechnology.",
-  alternates: { canonical: "https://www.tutorsindia.com/subjects/biological-life-science-academic-writing-help/" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/biological-life-science-academic-writing-help" },
 };
 
 const faqs = [

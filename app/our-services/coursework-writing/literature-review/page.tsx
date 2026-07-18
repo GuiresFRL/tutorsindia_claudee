@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Literature Review Writing Services by Experts",
   description: "TutorsIndia offers an excellent literature review writing services. Our skilled writers provide optimised output that meets your academic needs. ",
   keywords: "literature review writing service, literature review writing help, literature review help uk, literature review assignment help, literature review paper help, literature review writing service uk, literature review dissertation help, thesis literature review help, literature review writing for research paper, literature review writing for research proposal",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/literature-review/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/literature-review" },
 };
 
 const faqs = [

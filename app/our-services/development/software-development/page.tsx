@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Academic Software Development Service",
   description: "Expert academic software application development for CS dissertations. C, C++, Java, .NET, PHP, Python, MySQL, Oracle & more. US & UK qualified developers.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/software-development/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/software-development" },
 };
 
 const faqs = [

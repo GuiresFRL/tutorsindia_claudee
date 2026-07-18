@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD Dissertation Topic Selection Help",
   description: "Are you looking for unique, innovative & convincing Ph.D. dissertation topic based on the strong research gap? We Select Ph.D. level Topic for your UK dissertation.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-topic/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-topic" },
 };
 
 const faqs = [

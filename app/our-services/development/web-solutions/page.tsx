@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Academic Web Solutions & Development",
   description: "Expert web solutions for academic dissertations – web design, SEO/SEM, digital marketing, CMS web applications, software programming. US & UK qualified developers.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/web-solutions/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/web-solutions" },
 };
 
 const faqs = [

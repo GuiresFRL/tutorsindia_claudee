@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD Academic PowerPoint Presentation",
   description: "Are you finding it difficult to create an effective PowerPoint Presentation? Get professional help to complete your poster with perfection from UK Poster experts.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-presentation/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-presentation" },
 };
 
 const faqs = [

@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Conference & Seminar Paper Writing",
   description: "Complete assistance for publishing conference and seminar papers by qualified UK researchers. Assured journal acceptance, plagiarism-free, on-time delivery. Tutors India.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-paper/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-paper" },
 };
 
 const faqs = [

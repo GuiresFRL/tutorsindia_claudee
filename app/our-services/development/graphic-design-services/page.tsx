@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Academic Graphic Design & Illustration",
   description: "Expert illustration, redrawing and graphic design services for dissertations, manuscripts and textbooks. Photoshop, CorelDraw, Adobe Illustrator. Affordable & confidential.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/graphic-design-services/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/graphic-design-services" },
 };
 
 const faqs = [

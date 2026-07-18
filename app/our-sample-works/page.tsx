@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Sample Works — Academic Writing Examples",
   description: "View our sample academic work including dissertations, literature reviews, research proposals, and essays to understand the quality Tutors India delivers.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/our-sample-works/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-sample-works" },
 };
 
 const categories = [

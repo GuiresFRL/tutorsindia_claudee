@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${stripAcademyHtml(post.title.rendered, 70)} — Academy`,
     description,
     
-    alternates: { canonical: `https://www.tutorsindia.com/academy/${slug}/` },
+    alternates: { canonical: `https://www.tutorsindia.com/academy/${slug}` },
     openGraph: {
       title: stripAcademyHtml(post.title.rendered),
       description,

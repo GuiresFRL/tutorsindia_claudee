@@ -5,7 +5,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "About Us — Trusted Academic Guidance",
   description: "Tutors India is the world's reputed academic guidance provider since 2001, having guided more than 4,500 Ph.D. scholars and 10,500 Masters students across the globe.",
-  alternates: { canonical: "https://www.tutorsindia.com/about-us/" },
+  alternates: { canonical: "https://www.tutorsindia.com/about-us" },
 };
 
 const stats = [

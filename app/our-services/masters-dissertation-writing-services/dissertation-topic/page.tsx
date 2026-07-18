@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Master's Dissertation Topic Selection Services in UK, UAE",
   description: "Get expert master’s Dissertation Topic Selection Services in the UK & UAE to choose unique, high-scoring, and university-approved research topics fast.",
   keywords: "master's dissertation topic selection services in UK, master's dissertation topic selection help in UAE, master's dissertation topic help, master's thesis topics service, master's thesis topics help, custom dissertation topic writing services, master's dissertation topic writing services UK, master's dissertation topic writing help UAE",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-topic/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-topic" },
 };
 
 const keyFeatures = [

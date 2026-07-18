@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Academic Editing & Proofreading Services",
   description: "Are you looking for academic & Research editing, transcription, translation, peer review and pre-submission help? Tutors India offers UK & US qualified editors for all academic editing needs.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services" },
 };
 
 const services = [
