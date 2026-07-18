@@ -101,13 +101,13 @@ function removeLeadingBreaks(html: string): string {
   return html.replace(/(<div class="column_attr[^"]*"[^>]*>)\s*(<br\s*\/?>\s*)+/gi, '$1');
 }
 
-/** Rewrite tutorsindia.com URLs to relative */
+/** Rewrite tutorsindia.com/.net URLs to relative (internal links) or leave media hosts intact */
 function rewriteUrls(html: string): string {
   return html
-    .replace(/href="https?:\/\/(?:www\.)?tutorsindia\.com\//g, 'href="/')
-    .replace(/href="https?:\/\/test\.tutorsindia\.com\//g, 'href="/')
-    .replace(/src="https?:\/\/(?:www\.)?tutorsindia\.com\//g, 'src="https://www.tutorsindia.com/')
-    .replace(/src="https?:\/\/test\.tutorsindia\.com\//g, 'src="https://www.tutorsindia.com/');
+    .replace(/href="https?:\/\/(?:www\.)?tutorsindia\.(?:com|net)\//g, 'href="/')
+    .replace(/href="https?:\/\/test\.tutorsindia\.(?:com|net)\//g, 'href="/')
+    .replace(/src="https?:\/\/(?:www\.)?tutorsindia\.(?:com|net)\//g, 'src="/')
+    .replace(/src="https?:\/\/test\.tutorsindia\.(?:com|net)\//g, 'src="/');
 }
 
 /** Remove the page-footer section (pagination, no content) */
@@ -150,7 +150,11 @@ function extractCssLinks(html: string): string[] {
 
 export async function fetchProxiedLibraryPage(path: string): Promise<ProxiedPage | null> {
   const normalised = path.endsWith('/') ? path : `${path}/`;
-  const url = `https://www.tutorsindia.com${normalised}`;
+  // www.tutorsindia.com is now this deployment itself (post domain cutover), so the
+  // original WordPress source has to be fetched from tutorsindia.net instead.
+  // Note: www.tutorsindia.net 301-redirects — the bare (non-www) host is the one
+  // that actually serves the WordPress content.
+  const url = `https://tutorsindia.net${normalised}`;
 
   try {
     const res = await fetch(url, {
