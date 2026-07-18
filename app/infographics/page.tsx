@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Dissertation & Thesis Infographics",
   description: "Visual infographics on dissertation writing, thesis preparation, PhD research, and academic writing concepts from Tutors India.",
   robots: { index: false, follow: false },
-  alternates: { canonical: "https://www.tutorsindia.com/infographics/" },
+  alternates: { canonical: "https://www.tutorsindia.com/infographics" },
 };
 
 export default async function InfographicsPage() {

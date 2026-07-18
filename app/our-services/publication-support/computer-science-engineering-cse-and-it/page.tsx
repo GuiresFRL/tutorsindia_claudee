@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Computer Science & IT Manuscript Writing",
   description: "Expert CS & IT dissertation, manuscript writing, experimental, designing or programming & editing services by qualified researchers from US & UK.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/computer-science-engineering-cse-and-it/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/computer-science-engineering-cse-and-it" },
 };
 
 const faqs = [

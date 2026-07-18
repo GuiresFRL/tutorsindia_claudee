@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD Viva Voce Presentation Services",
   description: "Are you worried of how to face your Ph.D. viva-voce in front of your supervisor & doctoral committee? Tutors India offers world-class professional viva-voce training for your success.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-viva-voice/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-viva-voice" },
 };
 
 const faqs = [

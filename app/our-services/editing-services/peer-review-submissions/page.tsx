@@ -5,7 +5,7 @@ import TestimonialSlider from '@/components/ui/TestimonialSlider';
 export const metadata: Metadata = {
   title: 'Pre-Submission Peer Review Service by Expert',
   description: 'Peer review and Pre Submission help – qualified and experienced researchers from the US & UK',
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/peer-review-submissions/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/peer-review-submissions" },
 };
 
 const faqs = [

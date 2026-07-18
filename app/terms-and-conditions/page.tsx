@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Terms and Conditions",
   description: "Read Tutors India's terms and conditions covering service delivery, payment, refunds, revisions, and quality assurance.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/terms-and-conditions/" },
+  alternates: { canonical: "https://www.tutorsindia.com/terms-and-conditions" },
 };
 
 const sections = [

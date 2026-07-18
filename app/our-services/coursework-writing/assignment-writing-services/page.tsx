@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Assignment Writing Service by Certified Writers",
   description: "Our assignment writing service provides customized solutions for university students, ensuring high-quality work.",
   keywords: "assignment writing service, assignment writing help, cheap assignment writing service, assignment help uk, assignment writers uk, assignment writing service uk, Assignment Writing Services, Assignment Writing Help, Assignment Writing Company",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/assignment-writing-services/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/assignment-writing-services" },
 };
 
 const faqs = [

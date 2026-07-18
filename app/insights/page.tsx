@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Insights — Academic News & Trends",
   description: "Stay updated with the latest academic research trends, industry innovations, news, and educational resources from Tutors India.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/insights/" },
+  alternates: { canonical: "https://www.tutorsindia.com/insights" },
 };
 
 const insightCards = [

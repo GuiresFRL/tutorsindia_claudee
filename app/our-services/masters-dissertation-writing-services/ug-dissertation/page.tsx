@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "UK Undergraduate Dissertation Writing",
   description: "The UK Undergraduate / Bachelor's Complete or Part Dissertation Writing Service. 5000+ UG dissertations completed. Expert writers from UK & US universities.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/ug-dissertation/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/ug-dissertation" },
 };
 
 const chapters = [

@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD Dissertation Research Planning Help",
   description: "Are you not sure how to conduct a Ph.D. Research Plan? Tutors India can provide full assistance to develop the structure of the research Ph.D. research plan as per your university guidelines.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-research-plan/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-research-plan" },
 };
 
 const faqs = [

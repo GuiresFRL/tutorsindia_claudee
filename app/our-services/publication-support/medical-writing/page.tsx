@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Medical Writing & Manuscript Services",
   description: "Expert medical dissertation, research paper and manuscript writing, rewriting & editing services by qualified researchers from US & UK. Academic & Education.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/medical-writing/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/medical-writing" },
 };
 
 const faqs = [

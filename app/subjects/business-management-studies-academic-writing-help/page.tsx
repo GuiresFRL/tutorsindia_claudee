@@ -7,7 +7,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Business & Management Writing Help",
   description: "Business and Management Studies academic writing help for UG, Master's and MBA students. Dissertations, case studies and assignments written by experts in strategy, HR and marketing.",
-  alternates: { canonical: "https://www.tutorsindia.com/subjects/business-management-studies-academic-writing-help/" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/business-management-studies-academic-writing-help" },
 };
 
 const faqs = [

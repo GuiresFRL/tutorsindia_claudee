@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD Dissertation Rework & Resubmission",
   description: "Are you resubmitting your dissertation? Struggling to handle resit dissertation and looking to clear in the second attempt. Tutors India offers exclusive support to rework completely your dissertation based on the supervisor comments.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-rework/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-rework" },
 };
 
 const faqs = [

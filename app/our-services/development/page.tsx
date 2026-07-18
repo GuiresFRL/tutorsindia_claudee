@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Academic Development & Coding Services",
   description: "Tutors India development services: coding & algorithm, software programming, big data analytics, animation, graphic design, web solutions, online tutoring, e-learning & tool development.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development" },
 };
 
 const services = [

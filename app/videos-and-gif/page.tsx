@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Academic Writing Videos & Guides",
   description: "Watch Tutors India video guides on dissertation writing, research methods, referencing, and academic support services.",
   robots: { index: false, follow: false },
-  alternates: { canonical: "https://www.tutorsindia.com/videos-and-gif/" },
+  alternates: { canonical: "https://www.tutorsindia.com/videos-and-gif" },
 };
 
 const videos = [

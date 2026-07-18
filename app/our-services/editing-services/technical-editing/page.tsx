@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Technical Editing & Rewriting Service",
   description: "Are you worried about the language quality of your paper presentation? Tutors India offers professional and complete technical editing assistance to submit your papers with perfection and confidence.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/technical-editing/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/technical-editing" },
 };
 
 const faqs = [

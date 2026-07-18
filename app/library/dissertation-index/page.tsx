@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Dissertation Index — Sample Works",
   description: "Browse PhD and Masters dissertation sample works across all academic disciplines. Tutors India library of dissertation examples.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/library/dissertation-index/" },
+  alternates: { canonical: "https://www.tutorsindia.com/library/dissertation-index" },
 };
 
 export default async function DissertationIndexPage() {

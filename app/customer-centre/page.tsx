@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Customer Centre — Support & Account",
   description: "Tutors India Customer Centre — track your order, request revisions, contact support, download your work. 24/7 support for all clients.",
-  alternates: { canonical: "https://www.tutorsindia.com/customer-centre/" },
+  alternates: { canonical: "https://www.tutorsindia.com/customer-centre" },
 };
 
 const supportOptions = [

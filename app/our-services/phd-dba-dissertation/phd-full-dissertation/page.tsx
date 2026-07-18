@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "PhD Full Dissertation Writing Service",
   description: "Are you looking for an expert writer of your specific subject for your PhD dissertation writing completely from Abstract writing to Conclusion section with the high research quality?",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-full-dissertation/" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-full-dissertation" },
 };
 
 const faqs = [
