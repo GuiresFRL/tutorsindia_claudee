@@ -101,12 +101,17 @@ export async function getBlogCategories(): Promise<WPCategory[]> {
 /**
  * Fetch only the first page (up to `count` posts) — lightweight for related posts.
  * Does NOT paginate; used where only a handful of recent posts are needed.
+ *
+ * Cached for 5 minutes (unlike the zero-cache FETCH_OPTS used by /blog itself) —
+ * this powers the homepage, so every visit re-fetching live made the homepage
+ * the slowest page on the site for the sake of showing 3 teasers a few minutes
+ * fresher. A short cache keeps it feeling current without the latency hit.
  */
 export async function getRecentPosts(count = 6): Promise<WPPost[]> {
   try {
     const res = await fetch(
       `${WP_API_BASE}/posts?_embed&per_page=${Math.min(count, 100)}&page=1&status=publish&orderby=date&order=desc`,
-      FETCH_OPTS
+      { headers: FETCH_OPTS.headers, next: { revalidate: 300 } }
     );
     if (!res.ok) return [];
     const posts: WPPost[] = await res.json();
