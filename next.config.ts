@@ -63,6 +63,21 @@ const nextConfig: NextConfig = {
       { source: "/our-services/phd-dba-dissertation/full-dissertation-2", destination: "/our-services/phd-dba-dissertation/phd-full-dissertation", permanent: true },
       { source: "/our-services/phd-dba-dissertation/power-point-presentation", destination: "/our-services/phd-dba-dissertation/phd-presentation", permanent: true },
       { source: "/our-services/phd-dba-dissertation/quantitative-data-analysis", destination: "/our-services/phd-dba-dissertation", permanent: true },
+
+      // Broken-redirect audit findings (2026-07-18): trailing-slash URLs whose
+      // stripped-slash target has no matching page — redirected straight to the
+      // closest live page instead of 308-ing into a 404.
+      { source: "/academy/research-concepts", destination: "/academy", permanent: true },
+      { source: "/academy/resources", destination: "/academy", permanent: true },
+      { source: "/academy/University", destination: "/academy", permanent: true },
+      { source: "/library/essay-index/management-essays/application-of-theory-of-iinternational-business-a-case-study-of-mcdonald", destination: "/library/essay-index/management-essays", permanent: true },
+      { source: "/help-guide/study-guides-how-to-write-a-dissertation-methodology", destination: "/help-guide/study-guides", permanent: true },
+      { source: "/help-guide/study-guides/guide-for-writing-medical-assignments", destination: "/help-guide/study-guides", permanent: true },
+      { source: "/our-services/data-collection", destination: "/our-services", permanent: true },
+      { source: "/subjects/humanities-assignment-writing-services", destination: "/subjects/arts-humanities-academic-writing-help", permanent: true },
+      { source: "/our-services/coursework-writing/case-study", destination: "/our-services/coursework-writing", permanent: true },
+      { source: "/our-services/coursework-writing/business-plan", destination: "/our-services/coursework-writing", permanent: true },
+      { source: "/our-services/masters-dissertation-writing-services-/dissertation-proposal-", destination: "/our-services/masters-dissertation-writing-services/dissertation-proposal", permanent: true },
     ];
   },
   async headers() {
