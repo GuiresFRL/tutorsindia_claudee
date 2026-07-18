@@ -1,3 +1,5 @@
+import { stripBrokenLinks } from "@/lib/cleanElementor";
+
 /** Extract a div (and all its nested children) from HTML by a CSS class substring. */
 function extractDivByClass(html: string, classSubstring: string): string | null {
   const searchStr = `class="`;
@@ -201,6 +203,9 @@ export async function fetchProxiedLibraryPage(path: string): Promise<ProxiedPage
 
     // Rewrite URLs
     content = rewriteUrls(content);
+
+    // Unwrap links to known-dead internal pages
+    content = stripBrokenLinks(content);
 
     return { title, content, cssLinks };
   } catch {

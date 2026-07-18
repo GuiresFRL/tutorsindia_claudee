@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { stripBrokenLinks } from "@/lib/cleanElementor";
 import {
   getPostBySlug,
   getAllPostSlugs,
@@ -126,7 +127,7 @@ export default async function BlogPostPage({ params }: Props) {
         )}
 
         {/* WordPress HTML content — full width */}
-        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: stripBrokenLinks(post.content.rendered) }} />
 
         {/* Author card */}
         <div style={{ marginTop: "48px", padding: "24px", background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", display: "flex", gap: "16px", alignItems: "center" }}>

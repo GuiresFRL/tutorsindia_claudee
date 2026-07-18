@@ -145,7 +145,7 @@ const services = [
   {
     title: "Essay Writing Services",
     desc: "At Tutors India, we follow strict plagiarism policy while writing an essay for university and post-graduate level work.",
-    href: "/our-services/coursework-writing/essay-writing/",
+    href: "/our-services/coursework-writing/essay-writing-services/",
   },
   {
     title: "Annotated Bibliography",
@@ -165,7 +165,7 @@ const services = [
   {
     title: "Case Report Writing",
     desc: "A case study design provides an opportunity to collect research data from various sources while utilizing different data collection techniques.",
-    href: "/our-services/coursework-writing/case-report-writing/",
+    href: "/our-services/coursework-writing/case-report-writing-services/",
   },
   {
     title: "Exam Notes",
@@ -175,12 +175,12 @@ const services = [
   {
     title: "Assignment Writing",
     desc: "Tutors at Tutors India work on seriously with your assignments and assist you in all the stages either online or email based.",
-    href: "/our-services/coursework-writing/assignment-writing/",
+    href: "/our-services/coursework-writing/assignment-writing-services/",
   },
   {
     title: "References Collection",
     desc: "Referencing is given major significance in your dissertation. Because it is essential to cite from where the information has been obtained.",
-    href: "/our-services/coursework-writing/references-collection/",
+    href: "/our-services/coursework-writing/references-collection-services/",
   },
   {
     title: "Research Methodology",
