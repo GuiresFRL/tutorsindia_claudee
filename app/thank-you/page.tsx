@@ -4,7 +4,6 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Thank You",
   description: "Your enquiry has been received. Our team will contact you within 30 minutes.",
-  robots: { index: false, follow: false },
   alternates: { canonical: "https://www.tutorsindia.com/thank-you" },
 };
 

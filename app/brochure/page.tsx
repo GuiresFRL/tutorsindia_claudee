@@ -6,7 +6,6 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Download Service Brochures",
   description: "Download Tutors India service brochures — Dissertation, Coursework, Publication Support, Development, Editing and more.",
-  robots: { index: false, follow: false },
   alternates: { canonical: "https://www.tutorsindia.com/brochure" },
 };
 

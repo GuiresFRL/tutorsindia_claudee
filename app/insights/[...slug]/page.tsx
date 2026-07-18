@@ -50,7 +50,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${data.title} — Insights`,
     description: `${data.title} — Academic insights, news, and research trends from Tutors India.`,
-    robots: { index: false, follow: false },
     alternates: { canonical: `https://www.tutorsindia.com${path.replace(/\/$/, "")}` },
   };
 }

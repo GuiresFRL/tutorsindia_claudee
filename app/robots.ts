@@ -9,11 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/order-now/",
           "/customer-centre/",
-          "/marketing/",
-          "/brochure/",
-          "/storyboard/",
-          "/infographics/",
-          "/videos-and-gif/",
           "/api/",
         ],
       },
