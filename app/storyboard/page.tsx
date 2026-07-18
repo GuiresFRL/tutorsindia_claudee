@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.tutorsindia.com/storyboard/" },
 };
 
-const BASE = "https://www.tutorsindia.com/wp-content/uploads";
+const BASE = "https://www.tutorsindia.net/wp-content/uploads";
 
 const items = [
   {

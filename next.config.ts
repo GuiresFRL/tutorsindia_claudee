@@ -41,10 +41,13 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
-      // WP media (PDFs, images) referenced by proxied content — stream from the live site
+      // WP media (PDFs, images) referenced by proxied content — stream from tutorsindia.net.
+      // Was pointed at www.tutorsindia.com, which used to be the separate old WordPress
+      // site; now that www.tutorsindia.com IS this deployment, that rewrite looped back
+      // on itself (508 Loop Detected / 400 on Next Image optimization).
       {
         source: "/wp-content/:path*",
-        destination: "https://www.tutorsindia.com/wp-content/:path*",
+        destination: "https://www.tutorsindia.net/wp-content/:path*",
       },
       // Blog images from tutorsindia.net
       {
