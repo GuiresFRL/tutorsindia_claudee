@@ -6,11 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: [
-          "/order-now/",
-          "/customer-centre/",
-          "/api/",
-        ],
       },
     ],
     sitemap: "https://www.tutorsindia.com/sitemap.xml",
