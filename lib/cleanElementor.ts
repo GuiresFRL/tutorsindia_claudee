@@ -67,6 +67,18 @@ export function stripBrokenLinks(html: string): string {
   );
 }
 
+/** <img> sources deleted from the WordPress media library — found via full-site audit (2026-07-18). */
+const BROKEN_IMAGE_SRCS = new Set([
+  "https://www.tutorsindia.com/blog/wp-content/uploads/2019/12/image.png",
+]);
+
+/** Remove <img> tags whose src points at a deleted media file (leaves a broken-image icon otherwise). */
+export function stripBrokenImages(html: string): string {
+  return html.replace(/<img\s+[^>]*src="([^"]+)"[^>]*\/?>/gi, (match, src: string) =>
+    BROKEN_IMAGE_SRCS.has(src) ? "" : match
+  );
+}
+
 /**
  * Extracts readable content from a proxied tutorsindia.com page.
  * Keeps only semantic content elements — headings, paragraphs, lists, images, tables.
@@ -133,6 +145,9 @@ export function cleanElementorHtml(html: string): string {
 
   // 12. Unwrap links to known-dead internal pages
   clean = stripBrokenLinks(clean);
+
+  // 13. Remove images deleted from the WP media library
+  clean = stripBrokenImages(clean);
 
   return clean;
 }
