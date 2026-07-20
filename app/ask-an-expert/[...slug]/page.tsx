@@ -30,12 +30,14 @@ export default async function AskExpertSlugPage({ params }: Props) {
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>
             {breadcrumbPath.map((segment, i) => {
-              const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
+              const href = i === 0 ? "/" : "/ask-an-expert/";
               const label = i === 0 ? "Home" : slugToTitle(segment);
               const isLast = i === breadcrumbPath.length - 1;
+              // Only Home and the Ask-an-Expert hub are real pages — deeper
+              // segments are subject/question slugs with no page of their own.
               return (
                 <span key={i}>
-                  {isLast ? label : <Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link>}
+                  {i <= 1 ? <Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link> : label}
                   {!isLast && " / "}
                 </span>
               );

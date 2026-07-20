@@ -61,12 +61,15 @@ export default async function CatchAllPage({ params }: Props) {
           <div style={{ maxWidth: "960px", margin: "0 auto" }}>
             <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px" }}>
               {breadcrumbPath.map((segment, i) => {
-                const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
                 const label = i === 0 ? "Home" : slugToTitle(segment);
                 const isLast = i === breadcrumbPath.length - 1;
+                // Only "Home" is a real page — this route handles arbitrary-depth
+                // legacy WordPress permalinks, so intermediate segments (e.g. a
+                // category prefix) have no matching page on this site and must
+                // not be linked (they were 404ing when crawled).
                 return (
                   <span key={i}>
-                    {isLast ? <span style={{ color: "#fff" }}>{label}</span> : <Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link>}
+                    {i === 0 ? <Link href="/" style={{ color: "#a0b8e0" }}>{label}</Link> : <span style={{ color: isLast ? "#fff" : "#a0b8e0" }}>{label}</span>}
                     {!isLast && <span style={{ color: "#a0b8e0" }}> / </span>}
                   </span>
                 );
@@ -113,12 +116,14 @@ export default async function CatchAllPage({ params }: Props) {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px", display: "flex", flexWrap: "wrap", gap: "4px" }}>
             {breadcrumbPath.map((segment, i) => {
-              const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
               const label = i === 0 ? "Home" : slugToTitle(segment);
               const isLast = i === breadcrumbPath.length - 1;
+              // Only "Home" is a real page — see comment in the WP-API branch above.
               return (
                 <span key={i} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-                  {isLast ? <span style={{ color: "#fff" }}>{label}</span> : <><Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>}
+                  {i === 0
+                    ? <><Link href="/" style={{ color: "#a0b8e0" }}>{label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>
+                    : <><span style={{ color: isLast ? "#fff" : "#a0b8e0" }}>{label}</span>{!isLast && <span style={{ color: "#a0b8e0" }}>/</span>}</>}
                 </span>
               );
             })}

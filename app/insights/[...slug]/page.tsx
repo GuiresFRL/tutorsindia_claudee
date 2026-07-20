@@ -69,14 +69,15 @@ export default async function InsightsSlugPage({ params }: Props) {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px", display: "flex", flexWrap: "wrap", gap: "4px" }}>
             {breadcrumbPath.map((segment, i) => {
-              const href = "/" + breadcrumbPath.slice(1, i + 1).join("/") + "/";
+              const href = i === 0 ? "/" : "/insights/";
               const label = i === 0 ? "Home" : slugToTitle(segment);
               const isLast = i === breadcrumbPath.length - 1;
+              // Only Home and the Insights hub are real pages.
               return (
                 <span key={i} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-                  {isLast
-                    ? <span style={{ color: "#fff" }}>{label}</span>
-                    : <><Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>}
+                  {i <= 1
+                    ? <><Link href={href} style={{ color: "#a0b8e0" }}>{label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>
+                    : <><span style={{ color: isLast ? "#fff" : "#a0b8e0" }}>{label}</span>{!isLast && <span style={{ color: "#a0b8e0" }}>/</span>}</>}
                 </span>
               );
             })}
