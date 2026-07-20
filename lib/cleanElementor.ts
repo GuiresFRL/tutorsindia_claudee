@@ -57,6 +57,9 @@ const BROKEN_LINK_RELATIVE = [
   "Saunders,%20Mark%20N.%20K.,%20Lewis,%20Philip,%20&amp;%20Thornhill,%20Adrian.%20(2019).%20Research%20methods%20for%20business%20students%20(8th%20ed.).%20Pearson%20Education",
   "•%09Braun,%20V.,%20&amp;%20Clarke,%20V.%20(2022).%20Thematic%20analysis:%20A%20practical%20guide.%20Sage%20Publications.",
   "2)%09Gopee,%20N.,%20&amp;%20Deane,%20M.%20(2013).%20Strategies%20for%20successful%20academic%20writing—Institutional%20and%20non-institutional%20support%20for%20students.%20Nurse%20education%20today,%2033(12),%201624-1631.",
+  "MBA%20Assignment%20Writing%20Help%20in%20UAE",
+  "Dalsky,%20D.%20(2007).%20Students’%20Perception%20of%20Difficulties%20with%20Academic%20Writing.",
+  "Blog-%20PA-%20E&amp;T-%20Civil.docx",
 ];
 
 const BROKEN_LINK_SET = new Set(
