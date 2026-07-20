@@ -60,6 +60,7 @@ const BROKEN_LINK_RELATIVE = [
   "MBA%20Assignment%20Writing%20Help%20in%20UAE",
   "Dalsky,%20D.%20(2007).%20Students’%20Perception%20of%20Difficulties%20with%20Academic%20Writing.",
   "Blog-%20PA-%20E&amp;T-%20Civil.docx",
+  "tutorsindia.com",
 ];
 
 const BROKEN_LINK_SET = new Set(
