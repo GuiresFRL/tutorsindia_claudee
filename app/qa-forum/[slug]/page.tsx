@@ -274,7 +274,7 @@ export default async function QASlugPage({ params }: Props) {
               { href: "/research-methodology/", label: "Research Methodology" },
               { href: "/masters-dissertation/", label: "Masters Dissertation" },
               { href: "/coursework-writing/", label: "Coursework Writing" },
-              { href: "/our-services/publication-support/statistical-analysis/", label: "Statistical Analysis" },
+              { href: "/our-services/publication-support/statistical-services/", label: "Statistical Analysis" },
             ].map((l) => (
               <Link key={l.href} href={l.href} style={{ display: "block", color: "#2563b0", fontSize: "0.85rem", marginBottom: "8px", fontWeight: 600 }}>→ {l.label}</Link>
             ))}
