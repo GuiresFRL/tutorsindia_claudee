@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Online Dissertation Tutoring Services",
-  description: "Tutoring Service – Online Virtual Classes for All Your Academic Support. Qualified and experienced experts including retired professionals, adjuncts, real time faculties and professors across the world.",
+  title: "Master-Online Dissertation Writing Tutors for all subjects and levels",
+  description: "Online Tutoring Service. Through our virtual tutoring service, you can observe improvement in both academic and intellectual proficiency.",
+  keywords: "PhD Tutors In India,UK,online tutoring services,Online Dissertation Writing Tutors",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/development/online-tutoring-services" },
 };
 

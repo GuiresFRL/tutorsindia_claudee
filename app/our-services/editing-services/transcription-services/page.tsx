@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Academic Research Transcription Services",
-  description: "We Transcribe your qualitative textual data obtained through interview guide and focus group discussions. Transcribers are qualified and experienced researchers from the US & UK.",
+  title: "Academic & Research Transcription Services India UK",
+  description: "Academic and Dissertation Transcription Services. We Transcribe your qualitative textual data obtained through interview guide and focus group discussions.",
+  keywords: "Academic Research Transcription Services,Transcription Services for Students and Researchers",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/transcription-services" },
 };
 

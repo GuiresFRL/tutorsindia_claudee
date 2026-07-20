@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Conference Abstract Writing Services",
-  description: "Tutors India provides professional abstract writing services with experienced researchers from the US and UK. Expert conference abstract writing for all disciplines.",
+  title: "Dissertation Abstract Writing Service | Thesis Abstract Writing Help UK",
+  description: "Abstract Writing Help. The first opinion about your work. We assist you with distinct conference abstracts in limited time.",
+  keywords: "How to write an abstract for a manuscript,PhD,Masters,Manuscript,Publication",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-abstract" },
 };
 

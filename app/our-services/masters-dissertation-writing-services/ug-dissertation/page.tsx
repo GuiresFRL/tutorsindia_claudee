@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "UK Undergraduate Dissertation Writing",
-  description: "The UK Undergraduate / Bachelor's Complete or Part Dissertation Writing Service. 5000+ UG dissertations completed. Expert writers from UK & US universities.",
+  title: "UG Dissertation Writing Services | Thesis Writing Help UK",
+  description: "Best Undergraduate dissertation writing service uk. If you are unsure of what to do, avail our full or complete UG thesis writing services now.",
+  keywords: "Professional Dissertation Writing Service,Dissertation Writing Service,Bachelor Dissertation,Undergraduate dissertation",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/ug-dissertation" },
 };
 

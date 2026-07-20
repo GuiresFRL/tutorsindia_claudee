@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Dissertation Topic Selection Help",
-  description: "Are you looking for unique, innovative & convincing Ph.D. dissertation topic based on the strong research gap? We Select Ph.D. level Topic for your UK dissertation.",
+  title: "Dissertation Topic Selection Services | DBA Thesis Topics Help UK",
+  description: "We Select unique PhD level Topic for your dissertation. We choose the Dissertation Topic that incorporates with the Well conceptualization and clear set of aims",
+  keywords: "phd dissertation topic selection, phd dissertation topic writing services, phd dissertation topic writing help, phd thesis topic writing help, phd thesis topic selection, phd research topics statistics, phd research topics for college students",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-topic" },
 };
 

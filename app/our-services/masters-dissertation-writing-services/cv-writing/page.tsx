@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Professional CV Writing Service UK",
-  description: "Professional CV, Personal Statement, Cover Letter & LinkedIn Profile Writing Service by UK certified specialists. Stand out to employers and land interviews.",
+  title: "Professional CV Writing Services UK | Resume Writing Help",
+  description: "Professional Curriculum Vitae (CV) Personal Statement cover letter & LinkedIn Profile Writing Services. we assist for CV & Cover Letter Writing Service",
+  keywords: "CV Writing services, Resume Writing services, LinkedIn Profile Writer",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/cv-writing" },
 };
 

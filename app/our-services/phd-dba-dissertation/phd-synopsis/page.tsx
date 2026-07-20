@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Synopsis Writing Services",
-  description: "Are you looking an expert writer of your specific subject for your PhD dissertation writing completely from Abstract writing to Conclusion section with the high research quality?",
+  title: "PhD Dissertation Synopsis Writing Services | DBA Synopsis Writing UK",
+  description: "PhD Synopsis Writing Services. We helps you in getting your complete thesis synopsis approval making sure that all the required details are in a proper manner.",
+  keywords: "Thesis Synopsis Writing, help for PhD Completing Synopsis",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-synopsis" },
 };
 

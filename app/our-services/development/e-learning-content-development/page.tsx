@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "E-Learning Content Development",
-  description: "High impact and engaging custom and interactive eLearning content development and dissertation writing by qualified and experienced researchers from the US & UK.",
+  title: "E-Learning—Design & Content Development for UK",
+  description: "E-Learning Content Development for Academic Support. We write high impact and engaging custom and interactive content for PhD dissertation- Elearning framework and models",
+  keywords: "PhD Tutors In UK,online tutoring services,Online Dissertation Writing Tutors",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/development/e-learning-content-development" },
 };
 

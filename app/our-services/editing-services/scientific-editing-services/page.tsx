@@ -3,8 +3,9 @@ import FaqAccordion from '@/components/ui/FaqAccordion';
 import TestimonialSlider from '@/components/ui/TestimonialSlider';
 
 export const metadata: Metadata = {
-  title: 'Scientific Editing Writing Services | Clinical & Medical Dissertation',
-  description: 'Scientific Editing Service - Clinical & Medical Dissertation, Manuscript',
+  title: "Scientific Editing Writing Services | Clinical & Medical Dissertation",
+  description: "Scientific and technical Editing Service. We offers professional and complete scientific editing assistance to submit your papers with perfection and confidence",
+  keywords: "Scientific Editing Writing Services, Scientific and technical Editing Service, scientific research paper editing",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/scientific-editing-services" },
 };
 

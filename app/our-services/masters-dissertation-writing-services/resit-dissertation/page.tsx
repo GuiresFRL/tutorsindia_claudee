@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Dissertation Resit & Resubmission Help",
-  description: "UK dissertation resitting and resubmission writing help. We address your examiner feedback, rework weak chapters and get your dissertation to the standard required to pass.",
+  title: "Masters Dissertation & MBA Thesis Rewriting Services UK",
+  description: "Dissertation Resitting or Resubmission Writing Help UK. Struggling to handle resit dissertation and looking to clear in the next attempt. You’ve Reached Right spot.",
+  keywords: "Doing an assignment resit?,Dissertation resit,Resit dissertation help",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/resit-dissertation" },
 };
 

@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Dissertation Rework & Resubmission",
-  description: "Are you resubmitting your dissertation? Struggling to handle resit dissertation and looking to clear in the second attempt. Tutors India offers exclusive support to rework completely your dissertation based on the supervisor comments.",
+  title: "PhD & DBA Dissertation Rewriting Services UK",
+  description: "Complete Resit PhD Dissertation rewriting Help UK. We review feedback, check Rubric Scale, Line by Line & Chapter wise Scrutinization and relevance Sources.",
+  keywords: "Submission and Resubmission of Thesis,Submit your thesis,Resit dissertation help",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-rework" },
 };
 

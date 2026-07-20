@@ -3,8 +3,9 @@ import FaqAccordion from '@/components/ui/FaqAccordion';
 import TestimonialSlider from '@/components/ui/TestimonialSlider';
 
 export const metadata: Metadata = {
-  title: 'Thesis typesetting, Formatting services',
-  description: 'Formatting & Typesetting Service for Journal, Dissertation & Grant Proposals',
+  title: "Thesis typesetting, Formatting services",
+  description: "Formatting and Typesetting Service for Journal, Dissertation & Grant Proposals. Our formatter & typesetter work on your dissertation, assignment and manuscript.",
+  keywords: "Phd Thesis Typesetting Services,Dissertation typesetting",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/formatting-service" },
 };
 

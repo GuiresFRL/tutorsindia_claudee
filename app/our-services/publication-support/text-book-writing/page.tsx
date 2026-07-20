@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Textbook Writing & Content Development",
-  description: "Comprehensive assistance to complete textbook writing by qualified UK researchers. Complete textbook writing, new content development, refreshing existing materials. Tutors India.",
+  title: "Textbook Content Writing Services | Academic Expert",
+  description: "Tutors India provide content writing services & write text book with creative ideas that would attract publishers & helps to complete your textbook writing with UK experts",
+  keywords: "content writing services, cheap content writing services, professional content writing services, professional content writers, textbook writing services, book writing services uk, academic writing services uk, professional academic writing services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/text-book-writing" },
 };
 

@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "The UK Exam Notes Writing Help",
-  description: "UK Exam Notes Writing Service by subject matter experts. Concise, well-structured revision notes for Masters, MBA and PhD examinations. Tutors India.",
+  title: "Exam Notes Writing Service | Exam Revision Note Writers Help UK",
+  description: "Our Exam notes would highlight and organize the key concepts or theories in a topic, tips and hints for the final stage of preparation.",
+  keywords: "Exam Revision Services,Exam Notes Writing Service in UK",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/exam-notes" },
 };
 

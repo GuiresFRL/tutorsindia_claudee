@@ -3,8 +3,9 @@ import FaqAccordion from '@/components/ui/FaqAccordion';
 import TestimonialSlider from '@/components/ui/TestimonialSlider';
 
 export const metadata: Metadata = {
-  title: 'Scientific Grant Proposal Editing and Writing services',
-  description: 'Grant Proposal Editing Service – professional and complete language & scientific editing assistance to submit your grant proposal with perfection and confidence',
+  title: "Scientific Grant Proposal Editing and Writing services",
+  description: "Scientific Grant Proposal Editing. We offers professional and complete language & scientific editing assistance to submit your grant proposal with perfection.",
+  keywords: "Scientific Grant Proposal Editing and Writing,Scientific Editing Services,Writing a Grant Proposal",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/grant-proposal-writing" },
 };
 

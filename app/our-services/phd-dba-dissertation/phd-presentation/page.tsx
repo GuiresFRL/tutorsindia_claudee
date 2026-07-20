@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD Academic PowerPoint Presentation",
-  description: "Are you finding it difficult to create an effective PowerPoint Presentation? Get professional help to complete your poster with perfection from UK Poster experts.",
+  title: "PhD Academic Poster Presentation Services | DBA PowerPoint PPT Help UK",
+  description: "Exclusive power point presentation service. We develops world class PPT presentations for PhD scholars especially for Viva Voce/Interim report presentation.",
+  keywords: "PowerPoint Presentation Service,Powerpoint: Presentation Tips ,PowerPoint Design,Buy PowerPoint Presentations",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-presentation" },
 };
 

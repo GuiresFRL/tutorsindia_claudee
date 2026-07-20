@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Academic Development & Coding Services",
-  description: "Tutors India development services: coding & algorithm, software programming, big data analytics, animation, graphic design, web solutions, online tutoring, e-learning & tool development.",
+  title: "Disseration On Software Development -Tutors India",
+  description: "Our software development Disserttion assignments are custom written by Professional expert software developers",
+  keywords: "Software development, computer programming help, Computer dissertation help uk, computer thesis writing uk, computer science assignment writing, computer science dissertation, coding and algorithm, big data analytics, online tutoring services, Elearning content development, Tool development, Questionnaire development, Questionnaire survey help, web solutions, Animation and graphic design services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/development" },
 };
 

@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Clinical Biostatistics Services",
-  description: "Expert biostatistics and biometric services by qualified biostatisticians from the US & UK. SPSS, SAS, R, STATA, E-Views. Express 4–6 hour turnaround.",
+  title: "Clinical Biostatistics Consulting Service | Biometric Publication Help UK",
+  description: "Our biostatisticians are experts in handling Bayesian methods, causal inference, genetic hierarchical models, phylogeny, and missing data analysis.",
+  keywords: "Biometric Services,Biostatistics services,Biostatistics and Clinical Programming Services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/biostatistics-services" },
 };
 

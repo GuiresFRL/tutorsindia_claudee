@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "The US / UK Case Report Writing Services",
-  description: "UK Case Report Writing at Tutors India will be strictly in British English, strictly follow university requirement including Citation and formatting. Our team of US & British Writers guarantees your grade.",
+  title: "Business Case Study Writing Services UK | Tutors India",
+  description: "We write case reports from a GCSE-level essay to a PhD-level model, including planning, statistical analysis, proofreading.",
+  keywords: "Cheap Case Study Writing Services and Help UK,Case Study Writing Services,Custom Case Study Writing Services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/case-report-writing-services" },
 };
 
