@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { COUNTRIES, flagEmoji } from "@/lib/data/countries";
+import Recaptcha from "@/components/ui/Recaptcha";
 
 const SERVICES = [
   "Masters Dissertation Writing",
@@ -85,6 +86,7 @@ export default function ContactForm() {
   const [phoneCode, setPhoneCode] = useState("+91");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const set = (k: keyof FormData) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -99,13 +101,17 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!recaptchaToken) {
+      setError("Please complete the reCAPTCHA verification.");
+      return;
+    }
     setError("");
     setLoading(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, phone: `${phoneCode} ${form.phone}` }),
+        body: JSON.stringify({ ...form, phone: `${phoneCode} ${form.phone}`, recaptchaToken }),
       });
       const json = await res.json();
       if (!res.ok || !json.ok) throw new Error(json.error || "Failed");
@@ -221,6 +227,9 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* reCAPTCHA */}
+      <Recaptcha onChange={setRecaptchaToken} />
+
       {/* Error */}
       {error && (
         <div style={{ background: "#fff0f0", border: "1px solid #fca5a5", borderRadius: "6px", padding: "12px 16px", color: "#b91c1c", fontSize: "0.9rem" }}>
@@ -231,12 +240,12 @@ export default function ContactForm() {
       {/* Submit */}
       <button
         type="submit"
-        disabled={loading}
+        disabled={loading || !recaptchaToken}
         style={{
-          background: loading ? "#94a3b8" : "linear-gradient(135deg,#1a2a6c,#2563b0)",
+          background: loading || !recaptchaToken ? "#94a3b8" : "linear-gradient(135deg,#1a2a6c,#2563b0)",
           color: "#fff", border: "none", borderRadius: "6px",
           padding: "14px 32px", fontSize: "1rem", fontWeight: 700,
-          cursor: loading ? "not-allowed" : "pointer",
+          cursor: loading || !recaptchaToken ? "not-allowed" : "pointer",
           letterSpacing: "0.02em", transition: "opacity 0.2s",
         }}
       >
