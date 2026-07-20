@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
+import { verifyRecaptcha } from "@/lib/recaptcha";
 
 const NAVY = rgb(0.102, 0.165, 0.424);
 const GREY = rgb(0.333, 0.333, 0.333);
@@ -69,7 +70,12 @@ async function buildPdf(fields: Record<string, string>): Promise<Buffer> {
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
-    const { name, email, subject, question } = data;
+    const { name, email, subject, question, recaptchaToken } = data;
+
+    const captchaOk = await verifyRecaptcha(recaptchaToken);
+    if (!captchaOk) {
+      return NextResponse.json({ ok: false, error: "reCAPTCHA verification failed" }, { status: 400 });
+    }
 
     const pdfBuffer = await buildPdf({ name, email, subject, question });
 

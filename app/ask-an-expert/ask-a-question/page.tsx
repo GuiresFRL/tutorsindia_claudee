@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import Recaptcha from "@/components/ui/Recaptcha";
 
 const inputStyle: React.CSSProperties = {
   width: "100%", padding: "10px 14px", border: "1.5px solid #dde2ef",
@@ -20,6 +21,7 @@ export default function AskAQuestionPage() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", question: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const set = (k: keyof typeof form) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -27,13 +29,17 @@ export default function AskAQuestionPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!recaptchaToken) {
+      setError("Please complete the reCAPTCHA verification.");
+      return;
+    }
     setError("");
     setLoading(true);
     try {
       const res = await fetch("/api/ask-question", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, recaptchaToken }),
       });
       const json = await res.json();
       if (!res.ok || !json.ok) throw new Error(json.error || "Failed");
@@ -108,6 +114,8 @@ export default function AskAQuestionPage() {
                 />
               </div>
 
+              <Recaptcha onChange={setRecaptchaToken} />
+
               {error && (
                 <div style={{ background: "#fff0f0", border: "1px solid #fca5a5", borderRadius: "6px", padding: "10px 14px", color: "#b91c1c", fontSize: "0.94rem" }}>
                   {error}
@@ -116,12 +124,12 @@ export default function AskAQuestionPage() {
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || !recaptchaToken}
                 style={{
-                  padding: "12px 28px", background: loading ? "#94a3b8" : "#e87722",
+                  padding: "12px 28px", background: loading || !recaptchaToken ? "#94a3b8" : "#e87722",
                   color: "#fff", border: "none", borderRadius: "6px",
                   fontWeight: 700, fontSize: "0.95rem",
-                  cursor: loading ? "not-allowed" : "pointer",
+                  cursor: loading || !recaptchaToken ? "not-allowed" : "pointer",
                 }}
               >
                 {loading ? "Sending…" : "Submit Question →"}

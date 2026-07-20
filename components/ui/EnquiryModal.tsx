@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef, FormEvent } from "react";
 import { usePathname } from "next/navigation";
 import { COUNTRIES, flagEmoji } from "@/lib/data/countries";
+import Recaptcha from "@/components/ui/Recaptcha";
 
 // Any component can still open this modal on demand:
 //   window.dispatchEvent(new Event(OPEN_ENQUIRY_EVENT))
@@ -43,6 +44,7 @@ export default function EnquiryModal() {
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
   const [orderType, setOrderType] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -97,6 +99,10 @@ export default function EnquiryModal() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!recaptchaToken) {
+      setStatus("error");
+      return;
+    }
     setStatus("loading");
     try {
       const res = await fetch("/api/contact", {
@@ -108,6 +114,7 @@ export default function EnquiryModal() {
           email,
           country,
           service: orderType,
+          recaptchaToken,
         }),
       });
       const json = await res.json();
@@ -348,26 +355,28 @@ export default function EnquiryModal() {
                 </select>
               </div>
 
+              <Recaptcha onChange={setRecaptchaToken} />
+
               {status === "error" && (
                 <div style={{ background: "rgba(255,92,92,0.15)", border: "1px solid rgba(255,92,92,0.4)", borderRadius: "6px", padding: "10px 14px", color: "#ffb3b3", fontSize: "0.85rem" }}>
-                  Something went wrong. Please try again.
+                  {recaptchaToken ? "Something went wrong. Please try again." : "Please complete the reCAPTCHA verification."}
                 </div>
               )}
 
               <button
                 type="submit"
-                disabled={status === "loading"}
+                disabled={status === "loading" || !recaptchaToken}
                 className="eq-submit"
                 style={{
                   width: "100%",
                   padding: "15px",
-                  background: status === "loading" ? "#a98330" : "#c9971e",
+                  background: status === "loading" || !recaptchaToken ? "#a98330" : "#c9971e",
                   color: "#fff",
                   border: "none",
                   borderRadius: "999px",
                   fontWeight: 700,
                   fontSize: "1rem",
-                  cursor: status === "loading" ? "not-allowed" : "pointer",
+                  cursor: status === "loading" || !recaptchaToken ? "not-allowed" : "pointer",
                   marginTop: "6px",
                   transition: "background 0.18s",
                 }}
