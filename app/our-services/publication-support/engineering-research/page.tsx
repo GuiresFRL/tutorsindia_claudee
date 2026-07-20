@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Engineering Research & Manuscript Writing",
-  description: "Expert engineering dissertation & manuscript writing services by qualified researchers from US & UK. IEEE papers, LaTeX, 5000+ PhD theses completed. 15+ years experience.",
+  title: "Engineering Dissertation Writing Services | Engineering Thesis Help UK",
+  description: "Engineering dissertation writing help. We write complete engineering dissertations that reflect novelty, theoretical analysis, and development of concepts.",
+  keywords: "Engineering Dissertation Topics,Buy Engineering Dissertation Topics Online in UK",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/engineering-research" },
 };
 

@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Academic Editing & Proofreading Services",
-  description: "Are you looking for academic & Research editing, transcription, translation, peer review and pre-submission help? Tutors India offers UK & US qualified editors for all academic editing needs.",
+  title: "Academic Paper Editing: Essays, Theses, Dissertations",
+  description: "We offer a wide range of services such as language and technical editing, formatting services, grand proposal writing, etc.",
+  keywords: "Academic Editing,Academic Editing by Professional Editors,Academic Editing Services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services" },
 };
 

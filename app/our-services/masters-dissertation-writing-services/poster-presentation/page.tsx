@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Academic Poster Presentation Service",
-  description: "Academic poster presentation service for conferences and dissertations. Professionally designed, print-ready research posters delivered on time by subject matter experts.",
+  title: "Poster Presentation Services | MBA PowerPoint PPT Help UK",
+  description: "Academic & Research Posters presentation help. Are your stuck in your poster presentation? Get our professional help to complete your poster with perfection.",
+  keywords: "Scientific poster presentation services,Scientific Poster Design Services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/poster-presentation" },
 };
 

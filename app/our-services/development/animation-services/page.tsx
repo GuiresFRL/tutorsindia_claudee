@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "2D, 3D & Multimedia Animation Services",
-  description: "Expert 2D, 3D animation, CAD design, architectural rendering, mechanical engineering visuals and multimedia services for dissertations and academic projects.",
+  title: "Animation dissertation assignment writing help",
+  description: "2D & 3D Animation and Multimedia Services. Our animation design services are exclusively for students pursuing mechanical, architectural, and electrical engineering.",
+  keywords: "How to write an Animation Essay,animation services,Animation Dissertation Writing Services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/development/animation-services" },
 };
 

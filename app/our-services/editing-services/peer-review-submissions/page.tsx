@@ -3,8 +3,9 @@ import FaqAccordion from '@/components/ui/FaqAccordion';
 import TestimonialSlider from '@/components/ui/TestimonialSlider';
 
 export const metadata: Metadata = {
-  title: 'Pre-Submission Peer Review Service by Expert',
-  description: 'Peer review and Pre Submission help – qualified and experienced researchers from the US & UK',
+  title: "Pre-Submission Peer Review Service by Expert",
+  description: "Peer review and Pre Submission help. Are you seeking journal support to publish your paper. Get help from qualified and experienced researchers from the US and UK",
+  keywords: "Pre-Submission Editing Services,Pre-Submission Editing,Peer Review and pre-submission",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/peer-review-submissions" },
 };
 

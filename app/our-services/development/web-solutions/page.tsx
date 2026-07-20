@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Academic Web Solutions & Development",
-  description: "Expert web solutions for academic dissertations – web design, SEO/SEM, digital marketing, CMS web applications, software programming. US & UK qualified developers.",
+  title: "Web Solution services for Master’s & PhD Academic Dissertation",
+  description: "Web Solutions for Masters & PhD Academic Dissertations. We offer a CMS-based web application. SEO/SEM Digital Marketing and Social Media Impact Analysis",
+  keywords: "Looking for EAI/Web services ideas for a thesis?,Web Solution services for Master’s dissertation",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/development/web-solutions" },
 };
 

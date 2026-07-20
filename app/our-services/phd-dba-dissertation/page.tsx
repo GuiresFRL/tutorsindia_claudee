@@ -4,8 +4,9 @@ import { serviceCategories } from "@/lib/data/services";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "PhD & DBA Dissertation Writing Services",
-  description: "Looking for MBA / DBA Writing & Editing Services? Plagiarism free research with novelty and innovation. Expert PhD writers from UK, US and Australia. Unlimited revisions.",
+  title: "DBA | MBA Dissertation Writing Services | Thesis Writing Help UK",
+  description: "We help you in UK MBA Writing & Editing services such as dissertation topic selection, methodology, statistical analysis and interpretation.",
+  keywords: "phd dissertation writing service, phd thesis writing services, phd dissertation writing help, phd dissertation writing services uk, phd thesis writing help, phd dissertation writing guide, phd dissertation writing assistance, phd thesis writing services uk",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation" },
 };
 

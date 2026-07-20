@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "The US / UK Critical Review Service",
-  description: "UK Critical Review Writing at Tutors India will be strictly in British English, strictly follow University Requirement including Citation and Formatting. All our Writers belongs to British and the US.",
+  title: "Critical Review Writing Service | Critical Analysis Writing Help UK",
+  description: "Professional critical review writing services of assignment essays or articles. We write a critical review with careful analysis of an argument.",
+  keywords: "Guidelines for Critical Writing Assignments,Critical Analysis,critical writing",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/critical-review" },
 };
 

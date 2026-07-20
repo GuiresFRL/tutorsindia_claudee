@@ -4,8 +4,9 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "PhD Coursework Writing Services",
-  description: "A UK PhD & Professional doctorate degree Coursework Writing Services & Consultation Help. Custom PhD & DBA coursework written by qualified and experienced researchers from the US & UK.",
+  title: "DBA | PhD Coursework Writing Services | Coursework Writing",
+  description: "Coursework Writing Services & Consultation Help. We help in the submission of your research methodology literature review and annotated bibliography coursework.",
+  keywords: "phd coursework writing service, phd coursework writing help, phd coursework writing in uk, phd coursework writing services uk, phd research coursework writing services, researchers coursework writing help, phd coursework writing assistance",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-coursework" },
 };
 

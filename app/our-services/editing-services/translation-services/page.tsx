@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Academic Translation Services",
-  description: "Are you struck with a paper that needs to be translated into the English language? Tutors India offers exclusive professional assistance for all your translation requirements.",
+  title: "Academic Professional Translation services UK India",
+  description: "Are you struck with a paper that needs to be translated into the English language? Would you like to get professional help from experienced hands?",
+  keywords: "Global Translation Company,Certified translation services, thesis translation services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/translation-services" },
 };
 

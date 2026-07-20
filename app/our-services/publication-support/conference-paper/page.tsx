@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Conference & Seminar Paper Writing",
-  description: "Complete assistance for publishing conference and seminar papers by qualified UK researchers. Assured journal acceptance, plagiarism-free, on-time delivery. Tutors India.",
+  title: "Conference Paper Writing Service | Seminar Paper Writing Help UK",
+  description: "Conference and seminar paper writing help. We provide manuscript and seminar paper writing help that assures that the paper is accepted in a specific journal.",
+  keywords: "seminar paper development support services, conference development support services, seminar paper development help, conference development help, seminar paper development service",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-paper" },
 };
 

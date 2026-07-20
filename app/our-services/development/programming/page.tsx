@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Programming Help for CS Dissertations",
-  description: "Expert computer programming, algorithm development and CS dissertation support. Java, .NET, MATLAB, PHP, Android, NS2/NS3, MySQL, Angular JS & more. US & UK qualified researchers.",
+  title: "Programming Dissertation Assignment Help UK India",
+  description: "Our programmers and developers provide full assistance in completing your computer science engineering research.",
+  keywords: "Assignment Help,Computer Science Dissertation Writing Services uk",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/development/programming" },
 };
 

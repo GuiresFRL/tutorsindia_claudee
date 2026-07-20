@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Citation Compliance & Referencing Service",
-  description: "Any research work without proper citations of referenced materials is prone to being rejected by evaluating committee. Tutors India offers dedicated experts for citation and references work.",
+  title: "Dissertation & manuscript Citation Compliance Service India UK",
+  description: "Manuscript Citation Compliance help. We provide proper referencing format as per your request and handling different referencing styles such as Harvard, APA, MLA,etc.,",
+  keywords: "citation Compliance in PhD Dissertations,Citation Compliance, APA, Harvard, Foot Note",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/citation-compliance" },
 };
 

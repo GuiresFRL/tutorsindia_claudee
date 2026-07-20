@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Technical Editing & Rewriting Service",
-  description: "Are you worried about the language quality of your paper presentation? Tutors India offers professional and complete technical editing assistance to submit your papers with perfection and confidence.",
+  title: "Copy Editing and Rewriting Service for your Dissertation",
+  description: "Heavy Copyediting and Rewriting Service. We correct all errors and infelicities in grammar, syntax, and usage.",
+  keywords: "Professional Editing services,Dissertation copy editing help,Dissertation editing services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/technical-editing" },
 };
 

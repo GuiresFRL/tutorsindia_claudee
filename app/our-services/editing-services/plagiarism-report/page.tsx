@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Plagiarism Correction & Rewriting Service",
-  description: "Plagiarism removal carried out by qualified and experienced researchers from the US & UK. Rephrasing and rewriting service for dissertations, research papers and manuscripts.",
+  title: "Plagiarism correction services, rephrasing services uk,India",
+  description: "Correction services for Dissertation and Manuscript Plagiarism . Our team is well informed on the technique of removing plagiarism from your document.",
+  keywords: "Plagiarism Correction Service in India,UK,Plagiarism correction services, rephrasing services",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/plagiarism-report" },
 };
 

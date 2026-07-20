@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Big Data Analytics for Research",
-  description: "Expert big data analytics support for academic dissertations and research projects. Hadoop, Spark, MongoDB, MapReduce, Apache Hive, Deep Learning & more. US & UK experts.",
+  title: "Big Data Analytics for Academic—Full-time Program",
+  description: "Big Data Analytics Services for Research Projects. Our team of experts has the capability to handle a wide range of technologies such as Hadoop and MapReduce.",
+  keywords: "Big Data Analytics,Online Data Analytics Master's Degree",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/development/big-data-analytics" },
 };
 

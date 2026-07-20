@@ -4,8 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "UK Dissertation References Collection Service",
-  description: "Professional UK Dissertation References Collection Service by qualified researchers from the US & UK. EMBASE, Emerald, ProQuest, EBSCOhost and 15+ databases. Tutors India.",
+  title: "UK Dissertation References Collection Services",
+  description: "Best Dissertation References Collection Service. We offer complete reference collection services such as books and journals.",
+  keywords: "references collection help,Theses Collection help,Dissertation References Collection Service",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/references-collection-services" },
 };
 
