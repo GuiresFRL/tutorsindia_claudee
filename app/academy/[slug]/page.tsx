@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { stripBrokenLinks, stripBrokenImages } from "@/lib/cleanElementor";
+import { fetchRankMathMeta } from "@/lib/rankmath";
 import {
   getAcademyPostBySlug,
   getAllAcademySlugs,
@@ -34,16 +35,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getAcademyPostBySlug(slug);
   if (!post) return { title: "Guide Not Found — Academy" };
 
-  const image       = getAcademyFeaturedImage(post);
-  const description = stripAcademyHtml(post.excerpt.rendered, 160);
+  const image = getAcademyFeaturedImage(post);
+
+  // Rank Math (the SEO plugin actually configured on this WP install) isn't
+  // exposed on the REST API — fetch the real title/description/keywords it
+  // renders on the live page and use them exactly as-is, no truncation or
+  // rewriting. Falls back to the raw post fields only if that fetch fails.
+  const rankMath = await fetchRankMathMeta(post.link);
+  const title = rankMath.title || stripAcademyHtml(post.title.rendered);
+  const description = rankMath.description || stripAcademyHtml(post.excerpt.rendered, 160);
 
   return {
-    title: `${stripAcademyHtml(post.title.rendered, 70)} — Academy`,
+    title,
     description,
-    
+    keywords: rankMath.keywords || undefined,
     alternates: { canonical: `https://www.tutorsindia.com/academy/${slug}` },
     openGraph: {
-      title: stripAcademyHtml(post.title.rendered),
+      title,
       description,
       type: "article",
       publishedTime: post.date,
@@ -53,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: stripAcademyHtml(post.title.rendered),
+      title,
       description,
       images: image ? [image] : [],
     },
