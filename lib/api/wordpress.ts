@@ -121,12 +121,16 @@ export async function getRecentPosts(count = 6): Promise<WPPost[]> {
   }
 }
 
-/** Fetch a single post by slug */
+/**
+ * Fetch a single post by slug — cached for 60s (not the zero-cache FETCH_OPTS
+ * used by /blog's listing) so repeat visits to the same article are served
+ * from cache instead of re-fetching the WP API on every request.
+ */
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
   try {
     const res = await fetch(
       `${WP_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`,
-      FETCH_OPTS
+      { headers: FETCH_OPTS.headers, next: { revalidate: 60 } }
     );
     if (!res.ok) return null;
     const posts: WPPost[] = await res.json();

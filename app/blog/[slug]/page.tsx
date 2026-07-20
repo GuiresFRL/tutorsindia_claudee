@@ -18,7 +18,8 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export const revalidate = 0;
+// ISR — see app/academy/[slug]/page.tsx for why this isn't 0.
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();

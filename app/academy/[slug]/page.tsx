@@ -18,7 +18,11 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export const revalidate = 0;
+// ISR — a fresh article regenerates within a minute of publishing, but
+// repeat requests in between are served from cache instead of re-fetching
+// the WP API on every hit (revalidate=0 forced a live fetch every single
+// request, which was the direct cause of slow mobile load times).
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const slugs = await getAllAcademySlugs();

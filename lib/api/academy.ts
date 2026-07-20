@@ -110,12 +110,17 @@ export async function getAcademyCategoryList(): Promise<AcademyCategory[]> {
   }
 }
 
-/** Fetch a single Academy post by slug */
+/**
+ * Fetch a single Academy post by slug — cached for 60s (not the zero-cache
+ * FETCH_OPTS used by /academy's listing) so repeat visits to the same
+ * article are served from cache instead of re-fetching the WP API on
+ * every request.
+ */
 export async function getAcademyPostBySlug(slug: string): Promise<AcademyPost | null> {
   try {
     const res = await fetch(
       `${ACADEMY_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`,
-      FETCH_OPTS
+      { headers: FETCH_OPTS.headers, next: { revalidate: 60 } }
     );
     if (!res.ok) return null;
     const posts: AcademyPost[] = await res.json();
@@ -159,12 +164,17 @@ export async function getAllAcademySlugs(): Promise<string[]> {
   }
 }
 
-/** Lightweight recent posts for sidebar/related (first page only) */
+/**
+ * Lightweight recent posts for sidebar/related (first page only) — cached
+ * for 60s. Called from the individual article page, so a no-store fetch
+ * here would force that entire route to render dynamically on every
+ * request even though the article content itself is cached.
+ */
 export async function getRecentAcademyPosts(count = 6): Promise<AcademyPost[]> {
   try {
     const res = await fetch(
       `${ACADEMY_API_BASE}/posts?_embed&per_page=${Math.min(count, 100)}&page=1&status=publish&orderby=date&order=desc`,
-      FETCH_OPTS
+      { headers: FETCH_OPTS.headers, next: { revalidate: 60 } }
     );
     if (!res.ok) return [];
     return res.json();
