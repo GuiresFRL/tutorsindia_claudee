@@ -119,12 +119,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window, document, "clarity", "script", "cmdaycrfv8");
         ` }} />
 
-        {/* Google Analytics (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33260609-2"></script>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PEN58CJ4F"></script>
         <script dangerouslySetInnerHTML={{ __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+gtag('config', 'G-5PEN58CJ4F');
 gtag('config', 'UA-33260609-2');
         ` }} />
 
