@@ -49,18 +49,25 @@ export default async function LibrarySlugPage({ params }: Props) {
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px", display: "flex", flexWrap: "wrap", gap: "4px" }}>
-            {crumbs.map((crumb, i) => (
-              <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-                {i < crumbs.length - 1 ? (
-                  <>
-                    <Link href={crumb.href} style={{ color: "#a0b8e0" }}>{crumb.label}</Link>
-                    <span style={{ color: "#a0b8e0" }}>/</span>
-                  </>
-                ) : (
-                  <span style={{ color: "#fff" }}>{crumb.label}</span>
-                )}
-              </span>
-            ))}
+            {crumbs.map((crumb, i) => {
+              const isLast = i === crumbs.length - 1;
+              // Only Home and the Library hub are real pages.
+              return (
+                <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                  {i <= 1 ? (
+                    <>
+                      <Link href={crumb.href} style={{ color: "#a0b8e0" }}>{crumb.label}</Link>
+                      <span style={{ color: "#a0b8e0" }}>/</span>
+                    </>
+                  ) : (
+                    <>
+                      <span style={{ color: isLast ? "#fff" : "#a0b8e0" }}>{crumb.label}</span>
+                      {!isLast && <span style={{ color: "#a0b8e0" }}>/</span>}
+                    </>
+                  )}
+                </span>
+              );
+            })}
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}>
             {title}

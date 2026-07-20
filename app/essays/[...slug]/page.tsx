@@ -88,11 +88,12 @@ export default async function EssaysSlugPage({ params }: Props) {
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px", display: "flex", flexWrap: "wrap", gap: "4px" }}>
             {crumbs.map((c, i) => {
               const isLast = i === crumbs.length - 1;
+              // Only Home and the Essays hub are real pages.
               return (
                 <span key={i} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-                  {isLast
-                    ? <span style={{ color: "#fff" }}>{c.label}</span>
-                    : <><Link href={c.href} style={{ color: "#a0b8e0" }}>{c.label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>}
+                  {i <= 1
+                    ? <><Link href={c.href} style={{ color: "#a0b8e0" }}>{c.label}</Link><span style={{ color: "#a0b8e0" }}>/</span></>
+                    : <><span style={{ color: isLast ? "#fff" : "#a0b8e0" }}>{c.label}</span>{!isLast && <span style={{ color: "#a0b8e0" }}>/</span>}</>}
                 </span>
               );
             })}
