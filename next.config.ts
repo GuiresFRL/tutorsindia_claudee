@@ -248,6 +248,14 @@ const nextConfig: NextConfig = {
         source: "/blog/wp-content/:path*",
         destination: "https://tutorsindia.net/blog/wp-content/:path*",
       },
+      // Academy images from tutorsindia.net — same domain-cutover issue as the
+      // top-level /wp-content/* rule: without this, /academy/wp-content/*
+      // asset paths fell through to the generic catch-all route, which served
+      // an HTML fallback page (200, text/html) instead of the real image.
+      {
+        source: "/academy/wp-content/:path*",
+        destination: "https://tutorsindia.net/academy/wp-content/:path*",
+      },
     ];
   },
 };
