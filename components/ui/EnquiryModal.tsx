@@ -10,9 +10,6 @@ import Recaptcha from "@/components/ui/Recaptcha";
 // By default the modal auto-opens 7s after landing on a page (see EXCLUDED_PATHS below).
 export const OPEN_ENQUIRY_EVENT = "tutorsindia:open-enquiry";
 
-// Pages where the auto-popup must never appear (user is already mid-order / mid-contact).
-const EXCLUDED_PATHS = ["/contact-us", "/order-now"];
-
 // Show the auto-popup once per browser session, not on every page navigation.
 const SESSION_KEY = "tutorsindia_enquiry_shown";
 
@@ -58,9 +55,6 @@ export default function EnquiryModal() {
   // Auto-open 7s after landing on an eligible page, once per browser session
   useEffect(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
-
-    const cleanPath = (pathname || "/").replace(/\/$/, "") || "/";
-    if (EXCLUDED_PATHS.includes(cleanPath)) return;
 
     let alreadyShown = false;
     try { alreadyShown = sessionStorage.getItem(SESSION_KEY) === "1"; } catch {}
