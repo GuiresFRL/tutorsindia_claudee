@@ -26,7 +26,7 @@
   <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-part/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-rework/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-synopsis/</loc></url>
-  <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/power-point-presentation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-presentation/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/our-services/coursework-writing/assignment-writing-services/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/coursework-writing/essay-writing-services/</loc></url>
@@ -50,10 +50,8 @@
   <url><loc>https://www.tutorsindia.com/our-services/development/coding-and-algorithm/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/development/programming/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/development/software-development/</loc></url>
-  <url><loc>https://www.tutorsindia.com/our-services/development-2/illustration-and-redrawing/</loc></url>
+  <url><loc>https://www.tutorsindia.com/our-services/development/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/development/tool-development/</loc></url>
-  <url><loc>https://www.tutorsindia.com/our-services/development-2/text-or-data-analysis/</loc></url>
-  <url><loc>https://www.tutorsindia.com/our-services/development-2/pilot-study-analysis/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/our-services/editing-services/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/editing-services/language-editing/</loc></url>
@@ -83,8 +81,6 @@
   <url><loc>https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/specific-dissertation/systematic-review/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/specific-dissertation/secondary-data-collection/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/full-dissertation-2/</loc></url>
-  <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-presentation/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-viva-voice/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/ug-dissertation/</loc></url>
@@ -138,7 +134,7 @@
 
   <url><loc>https://www.tutorsindia.com/ask-an-expert/management/</loc></url>
   <url><loc>https://www.tutorsindia.com/ask-an-expert/management/definition-of-bmi/</loc></url>
-  <url><loc>https://www.tutorsindia.com/ask-an-expert/political-science/</loc></url>
+  <url><loc>https://www.tutorsindia.com/ask-an-expert/management/political-science/</loc></url>
   <url><loc>https://www.tutorsindia.com/ask-an-expert/nursing/</loc></url>
 
   <!-- Library -->
@@ -389,8 +385,6 @@
   <!-- Service Pages -->
   <url><loc>https://www.tutorsindia.com/best-masters-phd-dba-dissertation-writing-services-uk/</loc></url>
   <url><loc>https://www.tutorsindia.com/best-phd-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/qualitative-data-analysis/</loc></url>
-  <url><loc>https://www.tutorsindia.com/our-services/phd-dba-dissertation/quantitative-data-analysis/</loc></url>
 
   <!-- More Press Releases -->
   <url><loc>https://www.tutorsindia.com/press-release/mba-dissertation-writing-assistance/</loc></url>
@@ -475,11 +469,7 @@
   <url><loc>https://www.tutorsindia.com/coursework-assignment/</loc></url>
 
   <!-- Services -->
-  <url><loc>https://www.tutorsindia.com/our-services/development/</loc></url>
   <url><loc>https://www.tutorsindia.com/our-services/publication-support/</loc></url>
-
-  <!-- Freelance -->
-  <url><loc>https://www.tutorsindia.com/freelance/academic-writer/</loc></url>
 
   <!-- Sample Works -->
   <url><loc>https://www.tutorsindia.com/our-sample-works/</loc></url>
@@ -886,12 +876,11 @@
   <url><loc>https://www.tutorsindia.com/insights/posters-in-parliament-2025/</loc></url>
   <url><loc>https://www.tutorsindia.com/insights/stem-for-britain/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/title/title-computer-science-titles/</loc></url>
+  <url><loc>https://www.tutorsindia.com/title/computer-science-titles/</loc></url>
   <url><loc>https://www.tutorsindia.com/title/</loc></url>
   <url><loc>https://www.tutorsindia.com/coursework/biology-titles/</loc></url>
   <url><loc>https://www.tutorsindia.com/topic/fashion-topics/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/title/computer-science-titles/</loc></url>
   <url><loc>https://www.tutorsindia.com/title/biology-titles/</loc></url>
   <url><loc>https://www.tutorsindia.com/title/biology-latest-titles/</loc></url>
 
@@ -1400,91 +1389,90 @@
   <url><loc>https://www.tutorsindia.com/blog/research-proposal/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/blog/french-management-thinkers-fayol-demurger-joly/</loc></url>
-    <url><loc>https://www.tutorsindia.com/academy/how-to-article/coding-and-algorithm-development-services-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-assignment-writing-services-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-dissertation-statistical-analysis-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-research-proposal-writing-help-in-australia/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-full-dissertation-writing-service-in-saudi-arabia/</loc></url>
+    <url><loc>https://www.tutorsindia.com/academy/coding-and-algorithm-development-services-in-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-assignment-writing-services-in-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-dissertation-statistical-analysis-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-research-proposal-writing-help-in-australia/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-full-dissertation-writing-service-in-saudi-arabia/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-part-dissertation-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-full-dissertation-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-assignment-writing-service-in-malaysia/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-research-proposal-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-statistical-analysis-service-in-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-part-dissertation-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-full-dissertation-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-assignment-writing-service-in-malaysia/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-research-proposal-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-statistical-analysis-service-in-uk/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-assignment-writing-service-in-australia/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-part-dissertation-writing-service-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-assignment-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-dissertation-proposal-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/mba-dissertation-writing-services-in-saudi-arabia/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-assignment-writing-service-in-australia/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-part-dissertation-writing-service-in-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-assignment-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-dissertation-proposal-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/mba-dissertation-writing-services-in-saudi-arabia/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-economics-dissertation-help-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-statistical-analysis-help-in-australia/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-essay-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/literature-review-writing-service-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/manuscript-development-services-in-germany/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-economics-dissertation-help-in-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-statistical-analysis-help-in-australia/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-essay-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/literature-review-writing-service-in-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/manuscript-development-services-in-germany/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/dissertation-editing-services-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-research-proposal-help-in-qatar/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/mba-assignment-help-in-malaysia/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/dissertation-editing-services-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-research-proposal-help-in-qatar/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/mba-assignment-help-in-malaysia/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/secure-access-control-framework-for-fully-fledged-network-security-control/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/security-and-privacy-issues-over-the-cloud-environment-tips-for-developing-secure-cloud-model/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/tips-for-developing-secure-and-flexible-management-policy-for-multiple-users-over-the-cloud/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/secure-access-control-framework-for-fully-fledged-network-security-control/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/security-and-privacy-issues-over-the-cloud-environment-tips-for-developing-secure-cloud-model/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/tips-for-developing-secure-and-flexible-management-policy-for-multiple-users-over-the-cloud/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-technology/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/business-management/understanding-behavioral-and-trends-of-millennial-best-research-areas-for-future-researchers-2019/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/understanding-behavioral-and-trends-of-millennial-best-research-areas-for-future-researchers-2019/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/recent-phd-research-topic-ideas-for-computer-science-engineering-2020/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/tips-for-developing-intrusion-detection-system-and-significance-of-machine-learning-technique-in-a-cloud-platform/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/recent-phd-research-topic-ideas-for-computer-science-engineering-2020/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/tips-for-developing-intrusion-detection-system-and-significance-of-machine-learning-technique-in-a-cloud-platform/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/futuretopics-titles/recent-phd-research-topic-ideas-for-electronic-engineering-2020/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/recent-phd-research-topic-ideas-for-electronic-engineering-2020/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/recent-phd-research-topic-ideas-for-electrical-engineering-2020/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/tips-concepts-of-the-knowledge-discovery-process-in-cloud-computing/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/business-management/privacy-concerns-among-the-millennials/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/recent-phd-research-topic-ideas-for-electrical-engineering-2020/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/tips-concepts-of-the-knowledge-discovery-process-in-cloud-computing/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/privacy-concerns-among-the-millennials/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/five-challenges-and-their-strategies-for-effective-writing-of-all-types-of-university-assignments-masters-students-journey-during-beginning-of-your-assignment-work-a-case-of-over/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/ten-typical-problems-in-writing-postgraduate-assignments-masters-students-journey-during-beginning-of-your-assignment-work-a-case-of-overenthusiastic-student/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/five-challenges-and-their-strategies-for-effective-writing-of-all-types-of-university-assignments-masters-students-journey-during-beginning-of-your-assignment-work-a-case-of-over/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/ten-typical-problems-in-writing-postgraduate-assignments-masters-students-journey-during-beginning-of-your-assignment-work-a-case-of-overenthusiastic-student/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/business-management/influence-of-mergers-and-acquisitions-on-business-why-do-companies-merger-with-or-acquire-other-companies/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/business-management/impacts-of-artificial-intelligence-in-enhancing-customer-engagement-how-ai-can-improve-customer-experience-strategy/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/business-management/impact-of-big-data-on-customer-retention-in-the-retail-industry/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/influence-of-mergers-and-acquisitions-on-business-why-do-companies-merger-with-or-acquire-other-companies/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/impacts-of-artificial-intelligence-in-enhancing-customer-engagement-how-ai-can-improve-customer-experience-strategy/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/impact-of-big-data-on-customer-retention-in-the-retail-industry/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/futuretopics-titles/recent-trends-of-knowledge-extraction-and-decision-making-process-using-web-mining/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/recent-trends-of-nlp-based-text-analytics-with-specific-to-the-semantic-information-medical-application/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/recent-trends-of-knowledge-extraction-and-decision-making-process-using-web-mining/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/recent-trends-of-nlp-based-text-analytics-with-specific-to-the-semantic-information-medical-application/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/how-to-write-a-masters-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/writing-a-master-dissertation-proposal-for-top-five-uk-university/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/some-dimensions-of-the-different-components-of-the-generic-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/doing-your-management-dissertation-in-the-international-university-guidelines-and-examples/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/writing-your-humanities-postgraduate-latest-research-topics-possible-methodologies-that-can-be-adopted-in-human-rights-and-law/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/how-to-write-a-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/writing-a-master-dissertation-proposal-for-top-five-uk-university/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/some-dimensions-of-the-different-components-of-the-generic-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/doing-your-management-dissertation-in-the-international-university-guidelines-and-examples/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/writing-your-humanities-postgraduate-latest-research-topics-possible-methodologies-that-can-be-adopted-in-human-rights-and-law/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/business-management/macro-economic-challenge-in-the-global-economy-possible-research-areas-for-your-postgraduate-economic-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/business-management/writing-dissertation-literature-review-on-the-role-of-women-entrepreneurs-in-the-internationalization-process-of-firms/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/macro-economic-challenge-in-the-global-economy-possible-research-areas-for-your-postgraduate-economic-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/writing-dissertation-literature-review-on-the-role-of-women-entrepreneurs-in-the-internationalization-process-of-firms/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/project-management-tools-and-techniques/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/demonstrate-understanding-and-knowledge-of-key-theories-of-critical-reflection-and-development-towards-becoming-a-reflective-practitioner/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/project-management-tools-and-techniques/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/demonstrate-understanding-and-knowledge-of-key-theories-of-critical-reflection-and-development-towards-becoming-a-reflective-practitioner/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/business-management/dissertation-data-analysis-in-management-science/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/dissertation-data-analysis-in-management-science/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/dissertation-on-appraise-organizational-structural-contexts-to-lead-work-and-communicate-within-and-between-organizations-in-a-physical-and-virtual-environment-future-directions/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/dissertation-on-appraise-organizational-structural-contexts-to-lead-work-and-communicate-within-and-between-organizations-in-a-physical-and-virtual-environment-future-directions/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/business-management/finding-and-reviewing-hr-literature-and-information-sources-for-phd-hr-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/business-management/business-analytics-dissertation-help-defining-and-identifying-a-research-agenda-for-an-evidence-based-management-framework/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/finding-and-reviewing-hr-literature-and-information-sources-for-phd-hr-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/business-analytics-dissertation-help-defining-and-identifying-a-research-agenda-for-an-evidence-based-management-framework/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/layout-of-engineering-report/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/research-papers/literature-review-on-future-power-networks/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/layout-of-engineering-report/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/literature-review-on-future-power-networks/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/big-data-in-cloud-computing-review-and-opportunities-introduction/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/big-data-in-cloud-computing-review-and-opportunities-introduction/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/business-management/management-and-regulation-risk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/management-and-regulation-risk/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/engineering-and-techology/list-of-topics-and-the-structure-to-write-an-assignment-for-electrical-and-electronics/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/list-of-topics-and-the-structure-to-write-an-assignment-for-electrical-and-electronics/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/technology-news/scope-of-agricultural-entrepreneurship-in-india/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/scope-of-agricultural-entrepreneurship-in-india/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/phd-dissertation/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/academy/manuscript-writing/business-development/trends-in-consumer-finance-industries/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/manuscript-writing/business-development/employee-turnover-and-attrition/</loc></url>
@@ -1493,28 +1481,18 @@
   <url><loc>https://www.tutorsindia.com/academy/coding-algorithms-development/computer-science-it/robotic-process-automation/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/coding-algorithms-development/computer-science-it/role-of-ai-in-healthcare/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/recent-trends-2/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/business-management-info/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/infographics/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/research-papers/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/academy/assignment-writing/economics-finance/economic-trends-in-key-markets/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/assignment-writing/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/academy/assignment-writing/economics-finance/consumption-and-service-sectors/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/assignment-writing/economics-finance/supply-chain-resilience/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/assignment-writing/economics-finance/macroeconomic-aspects-of-nutrition-policy/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/academy/coding-algorithms-development/computer-science-it/natural-language-processing/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/coding-algorithms-development/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/coding-algorithms-development/computer-science-it/edge-computing/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/future-topics/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/engineering-technology-ebooks/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/manuscript-writing/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/academy/research-methodology/medical-healthcare/continued-growth-of-telehealth-and-privacy-concerns/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/research-methodology/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/research-methodology/medical-healthcare/difference-between-direct-primary-care-and-concierge-medicine/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/research-methodology/medical-healthcare/stem-cell-technology/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/research-methodology/medical-healthcare/rise-of-the-nurse-navigator/</loc></url>
@@ -1578,8 +1556,6 @@
   <url><loc>https://www.tutorsindia.com/academy/coding-algorithms-development/computer-science-it/literature-review-on-security-issues-in-biometric-authentication/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/manuscript-writing/biological-life-science/effects-of-biomass-particle-size-in-cellulosic-biofuel-production/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/defenitions/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/theories/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/academy/phd-dissertation/academic-law-writing/evolution-of-crime-punishment-through-years/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/phd-dissertation/arts-humanities/overview-of-media-and-technology-in-society/</loc></url>
@@ -1591,7 +1567,6 @@
   <url><loc>https://www.tutorsindia.com/academy/phd-dissertation/arts-humanities/urban-geography-and-governance-in-rio-de-janeiro/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/assignment-writing/economics-finance/different-organizational-leadership-styles-of-managers/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/future-topics-titles/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/academy/phd-dissertation/business-management/dissertation-on-cultural-conflict-in-sino-indian-employment/</loc></url>
   <url><loc>https://www.tutorsindia.com/academy/research-methodology/medical-healthcare/effects-of-nutrition-on-ibs-essay/</loc></url>
@@ -1629,123 +1604,121 @@
 
   <url><loc>https://www.tutorsindia.com/academy/coding-algorithms-development/computer-science-it/prediction-of-rainfall-using-machine-learning-techniques/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/python-environment-setup-ai-ml/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/ai-ml-foundational-overview/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/academic-essay-types/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/python-environment-setup-ai-ml/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/ai-ml-foundational-overview/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/academic-essay-types/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/q-and-a/academic-essay-writing-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/academic-essay-writing-guide/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/how-to-write-a-dissertation-title-a-masters-guide/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/researchable-dissertation-topic/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/how-to-write-a-dissertation-title-a-masters-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/researchable-dissertation-topic/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/q-and-a/dissertation-writing-services/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/dissertation-writing-services/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/research-proposal-realistic-dissertation-timeline/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/dissertation-formatting-appendices-challenges/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uk-dissertation-topic-selection-help/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/research-proposal-realistic-dissertation-timeline/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/dissertation-formatting-appendices-challenges/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uk-dissertation-topic-selection-help/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/common-challenges-writing-masters-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/ethical-considerations-uk-dissertations/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/why-students-fail-uk-dissertation-marking-criteria/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/common-challenges-writing-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/ethical-considerations-uk-dissertations/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/why-students-fail-uk-dissertation-marking-criteria/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/examiner-ready-uk-masters-dissertation-structure/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/french-masters-dissertation-theory-methodology/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uk-masters-research-proposal-supervisor-expectations/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/examiner-ready-uk-masters-dissertation-structure/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/french-masters-dissertation-theory-methodology/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uk-masters-research-proposal-supervisor-expectations/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/common-mistakes-writing-research-objectives-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/critical-literature-review-uk-research-proposal/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-research-proposal-netherlands/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uk-masters-research-proposal-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/common-mistakes-writing-research-objectives-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/critical-literature-review-uk-research-proposal/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-research-proposal-netherlands/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uk-masters-research-proposal-guide/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/overcome-data-analysis-interpretation-challenges-masters-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uk-research-proposal-methodology-mistakes/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/ethical-issues-delay-research-proposals-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/write-assignment-without-plagiarism/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/overcome-data-analysis-interpretation-challenges-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uk-research-proposal-methodology-mistakes/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/ethical-issues-delay-research-proposals-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/write-assignment-without-plagiarism/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/overcome-research-methodology-challenges-masters-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/how-to-write-masters-dissertation-academic-standards/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/original-research-topic-challenges-masters/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/overcoming-research-methodology-confusion-masters-proposal/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/how-students-explain-significance-masters-research-proposal/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/overcome-research-methodology-challenges-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/how-to-write-masters-dissertation-academic-standards/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/original-research-topic-challenges-masters/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/overcoming-research-methodology-confusion-masters-proposal/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/how-students-explain-significance-masters-research-proposal/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/overcome-masters-dissertation-anxiety-fear-feedback/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/convert-masters-dissertation-into-journal-publication/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/write-masters-assignment-time-management-requirements/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/statistical-techniques-predictive-analytics-masters-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uk-masters-dissertation-child-online-safety-laws-impact/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/quantitative-models-ai-compliance-financial-impact-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/analytical-models-lean-management-cost-efficiency-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/overcome-masters-dissertation-anxiety-fear-feedback/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/convert-masters-dissertation-into-journal-publication/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/write-masters-assignment-time-management-requirements/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/statistical-techniques-predictive-analytics-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uk-masters-dissertation-child-online-safety-laws-impact/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/quantitative-models-ai-compliance-financial-impact-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/analytical-models-lean-management-cost-efficiency-dissertation/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/select-research-methodology-masters-research-proposal/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/harvard-vs-apa-referencing-undergraduate-masters/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/descriptive-to-critical-writing-masters-assignments/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/how-to-write-masters-manuscript-step-by-step/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/select-research-methodology-masters-research-proposal/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/harvard-vs-apa-referencing-undergraduate-masters/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/descriptive-to-critical-writing-masters-assignments/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/how-to-write-masters-manuscript-step-by-step/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/digital-transformation-business-process-efficiency-uk-masters/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/quiet-quitting-silent-resistance-gen-z-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/ai-adoption-barriers-uk-businesses/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/digital-transformation-business-process-efficiency-uk-masters/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/quiet-quitting-silent-resistance-gen-z-uk/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/ai-adoption-barriers-uk-businesses/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uk-masters-dissertation-research-gap-challenges/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/sample-size-cross-sectional-business-uk-masters/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/research-design-techniques-uk-masters-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uae-masters-research-methodology-structure-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uk-masters-dissertation-research-gap-challenges/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/sample-size-cross-sectional-business-uk-masters/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/research-design-techniques-uk-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uae-masters-research-methodology-structure-guide/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/thatcher-npm-reforms-uk-corporate-governance/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uk-phd-ethics-application-step-by-step-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/thatcher-npm-reforms-uk-corporate-governance/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uk-phd-ethics-application-step-by-step-guide/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/sampling-techniques-uk-dissertation-research-guide/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/sampling-strategy-usa-management-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/ethics-review-uk-healthcare-phd-dissertations/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/sampling-techniques-uk-dissertation-research-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/sampling-strategy-usa-management-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/ethics-review-uk-healthcare-phd-dissertations/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/types-of-data-analysis-techniques-uk-masters-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/research-methodology-uae-masters-management-dissertation/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/healthcare-research-methodology-uae-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/types-of-data-analysis-techniques-uk-masters-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/research-methodology-uae-masters-management-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/healthcare-research-methodology-uae-masters-dissertation/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/statistical-data-analysis-masters-thesis-netherlands/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-thesis-ethics-approval-guide/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/sampling-techniques-masters-thesis-germany/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/french-masters-research-methodology-guide/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/research-design-methods-french-phd-dissertation/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/statistical-data-analysis-masters-thesis-netherlands/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-thesis-ethics-approval-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/sampling-techniques-masters-thesis-germany/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/french-masters-research-methodology-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/research-design-methods-french-phd-dissertation/</loc></url>
 
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/netherlands-climate-adaptation-policy-effectiveness/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/uae-phd-research-methodology-writing-guide/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/monetary-fiscal-policies-economic-crises-usa/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/data-analysis-methods-masters-thesis-ireland/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/literature-review-types-masters-thesis-kuwait/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/netherlands-climate-adaptation-policy-effectiveness/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/uae-phd-research-methodology-writing-guide/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/monetary-fiscal-policies-economic-crises-usa/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/data-analysis-methods-masters-thesis-ireland/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/literature-review-types-masters-thesis-kuwait/</loc></url>
 
 <url><loc>https://www.tutorsindia.com/blog/research-proposal-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/statistical-analysis-help-in-qatar/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/statistical-analysis-help-in-qatar/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/assignment-writing-services-in-germany/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-chapter-wise-dissertation-service-in-germany/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-chapter-wise-dissertation-service-in-germany/</loc></url>
 
   <url><loc>https://www.tutorsindia.com/blog/complete-dissertation-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/programming-and-algorithm-dissertation-help-in-kuwait/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/programming-and-algorithm-dissertation-help-in-kuwait/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/dissertation-topic-selection-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/literature-review-writing-help-in-australia/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/literature-review-writing-help-in-australia/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/masters-essay-writing-help-in-uae/</loc></url>
 
- <url><loc>https://www.tutorsindia.com/academy/how-to-article/editing-and-proofreading-help-in-saudi-arabia/</loc></url>
+ <url><loc>https://www.tutorsindia.com/academy/editing-and-proofreading-help-in-saudi-arabia/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/journal-manuscript-writing-services-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/research-methodology-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/research-methodology-writing-help-in-uae/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/publication-support-services-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/masters-complete-dissertation-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/masters-complete-dissertation-help-in-uae/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/dissertation-writing-services-in-germany/</loc></url>
 
-<url><loc>https://www.tutorsindia.com/academy/how-to-article/research-proposal-writing-service-in-uk/</loc></url>
+<url><loc>https://www.tutorsindia.com/academy/research-proposal-writing-service-in-uk/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/statistical-analysis-services-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/assignment-writing-services-in-germany/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/assignment-writing-services-in-germany/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/assignment-writing-support-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/literature-review-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/literature-review-writing-help-in-uae/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/coursework-writing-support-in-uk/</loc></url>
 
  <url><loc>https://www.tutorsindia.com/blog/statistical-analysis-support-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/journal-manuscript-writing-help-in-uae/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/dissertation-topic-selection-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/journal-manuscript-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/dissertation-topic-selection-help-in-uae/</loc></url>
   <url><loc>https://www.tutorsindia.com/blog/research-proposal-writing-service-in-uk/</loc></url>
-  <url><loc>https://www.tutorsindia.com/academy/how-to-article/essay-writing-help-in-uae/</loc></url>
+  <url><loc>https://www.tutorsindia.com/academy/essay-writing-help-in-uae/</loc></url>
 
 </urlset>
