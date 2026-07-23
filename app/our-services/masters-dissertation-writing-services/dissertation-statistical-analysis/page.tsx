@@ -203,52 +203,29 @@ export default function DissertationStatisticalAnalysisPage() {
   return (
     <div style={{ fontFamily: "Georgia, serif", color: "#222" }}>
       {/* Hero */}
-      <section
-        style={{
-          background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)",
-          color: "#fff",
-          padding: "72px 24px 60px",
-        }}
-      >
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <p style={{ fontSize: "1rem", opacity: 0.8, marginBottom: 10, textTransform: "uppercase", letterSpacing: "0.08em" }}>
-            Dissertation statistical analysis
-          </p>
-          <h1
-            style={{
-              fontFamily: "Merriweather, serif",
-              fontSize: "clamp(1.6rem,3.5vw,2.6rem)",
-              fontWeight: 700,
-              lineHeight: 1.3,
-              marginBottom: 20,
-            }}
-          >
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/masters-dissertation-writing-services/" style={{ color: "#a0b8e0" }}>Masters Dissertation</Link>{" / "}
+            <span style={{ color: "#fff" }}>Dissertation Statistical Analysis</span>
+          </div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
             The UK Master&apos;s Dissertation Textual (Qualitative) &amp; Statistical (Quantitative) Analysis Help
           </h1>
-          <p style={{ fontSize: "1.1rem", lineHeight: 1.8, maxWidth: 760, margin: "0 auto 12px", opacity: 0.95 }}>
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "14px" }}>
             Are you not familiar with statistical &amp; content analysis tools? You have data but does not how to recode it? Do you have a problem in analysing your hypothesis?
           </p>
-          <p style={{ fontSize: "1rem", lineHeight: 1.75, maxWidth: 740, margin: "0 auto 12px", opacity: 0.9 }}>
-            Then You&apos;ve Certainly Reached the Right Place! Tutors India, a hub for dissertation qualitative and quantitative analysis Services
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "14px" }}>
+            Then You&apos;ve Certainly Reached the Right Place! Tutors India, a hub for dissertation qualitative and quantitative analysis Services.
           </p>
-          <p style={{ fontSize: "1rem", lineHeight: 1.75, maxWidth: 740, margin: "0 auto 28px", opacity: 0.9 }}>
-            Your dissertation Textual &amp; Statistical Analysis are done by the qualified and experienced Statisticians from the US &amp; UK
+          <p style={{ color: "#a0b8e0", fontSize: "0.95rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "14px" }}>
+            Your dissertation Textual &amp; Statistical Analysis are done by the qualified and experienced Statisticians from the US &amp; UK.
           </p>
-          <Link
-            href="/contact-us"
-            style={{
-              display: "inline-block",
-              background: "#e87722",
-              color: "#fff",
-              padding: "14px 36px",
-              borderRadius: 4,
-              fontWeight: 700,
-              fontSize: "1rem",
-              textDecoration: "none",
-            }}
-          >
-            Get Expert Help Now
-          </Link>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
+            <Link href="/contact-us" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
+          </div>
         </div>
       </section>
 

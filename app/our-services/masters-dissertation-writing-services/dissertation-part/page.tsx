@@ -202,61 +202,26 @@ export default function DissertationPartPage() {
   return (
     <div style={{ fontFamily: "Georgia, serif", color: "#222" }}>
       {/* Hero */}
-      <section
-        style={{
-          background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)",
-          color: "#fff",
-          padding: "72px 24px 60px",
-        }}
-      >
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <h1
-            style={{
-              fontFamily: "Merriweather, serif",
-              fontSize: "clamp(1.6rem,3.5vw,2.6rem)",
-              fontWeight: 700,
-              lineHeight: 1.3,
-              marginBottom: 20,
-            }}
-          >
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/masters-dissertation-writing-services/" style={{ color: "#a0b8e0" }}>Masters Dissertation</Link>{" / "}
+            <span style={{ color: "#fff" }}>Dissertation Part</span>
+          </div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
             The US and the UK Master&apos;s Part / Chapter-wise Dissertation Writing Service
           </h1>
-          <p
-            style={{
-              fontSize: "1.1rem",
-              lineHeight: 1.8,
-              maxWidth: 760,
-              margin: "0 auto 10px",
-              opacity: 0.95,
-            }}
-          >
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "14px" }}>
             If you are looking to avail our services only to write part of your master&apos;s dissertation such as only introduction chapter, literature review, methodology or materials and methods, findings or only interpretation of your statistical analysis or conclusion or only discussion chapter?
           </p>
-          <p
-            style={{
-              fontSize: "1.15rem",
-              fontWeight: 700,
-              marginBottom: 28,
-              opacity: 0.98,
-            }}
-          >
-            Then You&apos;ve Certainly Reached the Right Place
+          <p style={{ color: "#a0b8e0", fontSize: "0.95rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "14px" }}>
+            Then You&apos;ve Certainly Reached the Right Place.
           </p>
-          <Link
-            href="/contact-us"
-            style={{
-              display: "inline-block",
-              background: "#e87722",
-              color: "#fff",
-              padding: "14px 36px",
-              borderRadius: 4,
-              fontWeight: 700,
-              fontSize: "1rem",
-              textDecoration: "none",
-            }}
-          >
-            Get Expert Help Now
-          </Link>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
+            <Link href="/contact-us" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
+          </div>
         </div>
       </section>
 
