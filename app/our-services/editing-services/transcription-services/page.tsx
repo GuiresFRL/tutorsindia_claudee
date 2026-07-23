@@ -100,10 +100,10 @@ export default function TranscriptionServicesPage() {
           <h1 style={{ fontFamily: "'Merriweather',serif", fontSize: "clamp(1.5rem,3vw,2.4rem)", fontWeight: 700, lineHeight: 1.3, marginBottom: "1.5rem" }}>
             Academic &amp; Research Transcription Services
           </h1>
-          <p style={{ fontSize: "1.15rem", opacity: 0.9, maxWidth: 700, margin: "0 auto 0.75rem" }}>
+          <p style={{ fontSize: "1.15rem", opacity: 0.9, maxWidth: 700, marginBottom: "0.75rem" }}>
             We Transcribe your qualitative textual data obtained through interview guide and focus group discussions
           </p>
-          <p style={{ fontSize: "1rem", opacity: 0.8, maxWidth: 700, margin: "0 auto 2rem" }}>
+          <p style={{ fontSize: "1rem", opacity: 0.8, maxWidth: 700, marginBottom: "2rem" }}>
             Academic &amp; Research Transcription Services are carried out by qualified and experienced researchers from the US &amp; UK
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-start", flexWrap: "wrap" }}>
