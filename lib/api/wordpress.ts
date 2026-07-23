@@ -140,6 +140,22 @@ export async function getPostBySlug(slug: string): Promise<WPPost | null> {
   }
 }
 
+/** Search published blog posts by keyword — used by the site search page */
+export async function searchBlogPosts(query: string, limit = 8): Promise<WPPost[]> {
+  if (!query.trim()) return [];
+  try {
+    const res = await fetch(
+      `${WP_API_BASE}/posts?search=${encodeURIComponent(query)}&_embed&per_page=${limit}&status=publish&${LISTING_FIELDS}`,
+      { headers: FETCH_OPTS.headers, next: { revalidate: 60 } }
+    );
+    if (!res.ok) return [];
+    const posts: WPPost[] = await res.json();
+    return posts.filter((p) => p.link.includes("/blog/"));
+  } catch {
+    return [];
+  }
+}
+
 /** Get all post slugs for generateStaticParams (filtered to /blog/ posts) */
 export async function getAllPostSlugs(): Promise<string[]> {
   try {
