@@ -92,7 +92,7 @@ export default function PlagiarismReportPage() {
           <h1 style={{ fontFamily: "'Merriweather',serif", fontSize: "clamp(1.5rem,3vw,2.4rem)", fontWeight: 700, lineHeight: 1.3, marginBottom: "1.5rem" }}>
             Plagiarism Correction Service – Rephrasing &amp; Rewriting your Dissertation, Research Papers &amp; Manuscripts
           </h1>
-          <p style={{ fontSize: "1.1rem", opacity: 0.9, maxWidth: 700, margin: "0 auto 2rem" }}>
+          <p style={{ fontSize: "1.1rem", opacity: 0.9, maxWidth: 700, marginBottom: "2rem" }}>
             Plagiarism removal is carried out by qualified and experienced researchers from the US &amp; UK
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-start", flexWrap: "wrap" }}>

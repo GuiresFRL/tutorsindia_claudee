@@ -88,7 +88,7 @@ export default function ScientificEditingPage() {
           </p>
           <p style={{ fontStyle: 'italic', opacity: 0.85, marginBottom: '2rem' }}>Then You&apos;ve Certainly Reached the Right place</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
-            <a href="/contact" style={{ background: '#e87722', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>Place an Order</a>
+            <a href="/contact-us" style={{ background: '#e87722', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>Place an Order</a>
             <a href="/brochure" style={{ background: 'transparent', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem', border: '2px solid #fff' }}>Brochure</a>
           </div>
         </div>
@@ -193,7 +193,7 @@ export default function ScientificEditingPage() {
             </div>
           </div>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <a href="/contact" style={{ background: '#e87722', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem', display: 'inline-block' }}>ORDER NOW</a>
+            <a href="/contact-us" style={{ background: '#e87722', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem', display: 'inline-block' }}>ORDER NOW</a>
           </div>
         </div>
       </section>
