@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { navigation } from "@/lib/data/navigation";
 import type { NavItem } from "@/lib/types";
 
@@ -10,8 +11,24 @@ export default function Header() {
   const [openNav, setOpenNav] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [mobileMegaExpanded, setMobileMegaExpanded] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
+
+  const submitSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const q = searchQuery.trim();
+    if (!q) return;
+    setSearchOpen(false);
+    router.push(`/search?q=${encodeURIComponent(q)}`);
+  };
+
+  useEffect(() => {
+    if (searchOpen) searchInputRef.current?.focus();
+  }, [searchOpen]);
 
   const openMenu = (key: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -27,6 +44,7 @@ export default function Header() {
     const handler = (e: MouseEvent) => {
       if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
         setOpenNav(null);
+        setSearchOpen(false);
       }
     };
     document.addEventListener("mousedown", handler);
@@ -83,7 +101,65 @@ export default function Header() {
         </nav>
 
         {/* ── CTA buttons + hamburger ── */}
-        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", position: "relative" }}>
+          <button
+            onClick={() => setSearchOpen((v) => !v)}
+            aria-label="Search"
+            aria-expanded={searchOpen}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              color: "#1a2a6c",
+              padding: "6px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <svg width="19" height="19" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="9" cy="9" r="6.5" />
+              <path d="M18 18l-4.35-4.35" strokeLinecap="round" />
+            </svg>
+          </button>
+
+          {searchOpen && (
+            <form
+              onSubmit={submitSearch}
+              style={{
+                position: "absolute",
+                top: "calc(100% + 10px)",
+                right: 0,
+                background: "#fff",
+                border: "1px solid #dde2ef",
+                borderTop: "3px solid #e87722",
+                borderRadius: "0 0 8px 8px",
+                boxShadow: "0 8px 24px rgba(0,0,0,0.13)",
+                padding: "12px",
+                display: "flex",
+                gap: "8px",
+                zIndex: 300,
+                width: "min(320px, 90vw)",
+              }}
+            >
+              <input
+                ref={searchInputRef}
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search services, blog…"
+                style={{ flex: 1, padding: "9px 12px", border: "1px solid #dde2ef", borderRadius: "5px", fontSize: "13.5px" }}
+              />
+              <button
+                type="submit"
+                aria-label="Submit search"
+                style={{ background: "#e87722", color: "#fff", border: "none", borderRadius: "5px", padding: "0 14px", cursor: "pointer", fontWeight: 700, fontSize: "13.5px" }}
+              >
+                Go
+              </button>
+            </form>
+          )}
+
           <Link
             href="/pricing/"
             className="hdr-pricing-btn"

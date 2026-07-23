@@ -130,6 +130,22 @@ export async function getAcademyPostBySlug(slug: string): Promise<AcademyPost | 
   }
 }
 
+/** Search published Academy posts by keyword — used by the site search page */
+export async function searchAcademyPosts(query: string, limit = 8): Promise<AcademyPost[]> {
+  if (!query.trim()) return [];
+  try {
+    const res = await fetch(
+      `${ACADEMY_API_BASE}/posts?search=${encodeURIComponent(query)}&_embed&per_page=${limit}&status=publish&${LISTING_FIELDS}`,
+      { headers: FETCH_OPTS.headers, next: { revalidate: 60 } }
+    );
+    if (!res.ok) return [];
+    const posts: AcademyPost[] = await res.json();
+    return posts;
+  } catch {
+    return [];
+  }
+}
+
 /** Get all Academy post slugs for generateStaticParams */
 export async function getAllAcademySlugs(): Promise<string[]> {
   try {
