@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 ﻿import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
@@ -86,18 +87,23 @@ export default function PlagiarismReportPage() {
       `}</style>
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "4rem 1rem 3rem" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <p style={{ fontSize: "0.85rem", opacity: 0.7, marginBottom: "0.5rem" }}>Editing Services / Plagiarism Report</p>
-          <h1 style={{ fontFamily: "'Merriweather',serif", fontSize: "clamp(1.5rem,3vw,2.4rem)", fontWeight: 700, lineHeight: 1.3, marginBottom: "1.5rem" }}>
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/editing-services" style={{ color: "#a0b8e0" }}>Editing Services</Link>{" / "}
+            <span style={{ color: "#fff" }}>Plagiarism Report</span>
+          </div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
             Plagiarism Correction Service – Rephrasing &amp; Rewriting your Dissertation, Research Papers &amp; Manuscripts
           </h1>
-          <p style={{ fontSize: "1.1rem", opacity: 0.9, maxWidth: 700, marginBottom: "2rem" }}>
-            Plagiarism removal is carried out by qualified and experienced researchers from the US &amp; UK
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: 820, lineHeight: 1.8, marginBottom: "14px" }}>
+            Plagiarism removal is carried out by qualified and experienced researchers from the US &amp; UK.
           </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-start", flexWrap: "wrap" }}>
-            <a href="/order" style={{ background: "#e87722", color: "#fff", padding: "0.75rem 2rem", borderRadius: 4, fontWeight: 700, textDecoration: "none" }}>Place an Order</a>
-            <a href="/brochure" style={{ background: "transparent", color: "#fff", padding: "0.75rem 2rem", borderRadius: 4, fontWeight: 700, textDecoration: "none", border: "2px solid #fff" }}>Brochure</a>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
+            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Place an Order</Link>
+            <Link href="/brochure" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Brochure</Link>
           </div>
         </div>
       </section>
