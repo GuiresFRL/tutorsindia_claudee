@@ -6,7 +6,7 @@ import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCallButton from "@/components/ui/FloatingCallButton";
-import EnquiryModal from "@/components/ui/EnquiryModal";
+import LazyEnquiryModal from "@/components/ui/LazyEnquiryModal";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -225,7 +225,7 @@ gtag('config', 'UA-33260609-2');
         <FloatingCallButton />
 
         {/* Global "Enquire Now" popup — opened from any page via the OPEN_ENQUIRY_EVENT custom event */}
-        <EnquiryModal />
+        <LazyEnquiryModal />
 
         {/* Elementor tabs initializer */}
         <script dangerouslySetInnerHTML={{ __html: `
