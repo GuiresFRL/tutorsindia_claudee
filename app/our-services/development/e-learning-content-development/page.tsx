@@ -98,26 +98,25 @@ export default function ELearningContentDevelopmentPage() {
       `}</style>
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", padding: "4rem 1rem 3rem", color: "#fff" }}>
-        <div className="hero-inner">
-          <span className="hero-badge">E-Learning Content Development</span>
-          <h1 style={{ fontSize: "clamp(1.6rem,4vw,2.6rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1rem" }}>
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/development" style={{ color: "#a0b8e0" }}>Development</Link>{" / "}
+            <span style={{ color: "#fff" }}>E-Learning Content Development</span>
+          </div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
             E-Learning – Design &amp; Content Development for Academic Support
           </h1>
-          <p style={{ fontSize: "1.05rem", opacity: 0.9, marginBottom: "0.75rem" }}>
-            Are you looking for high impact and engaging custom and interactive content? Apart a team of professional expert who can handle eLearning content development or dissertation?
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: 820, lineHeight: 1.8, marginBottom: "14px" }}>
+            Are you looking for high impact and engaging custom and interactive content? Apart a team of professional expert who can handle eLearning content development or dissertation? Your eLearning dissertation is written by qualified and experienced researchers from the US &amp; UK.
           </p>
-          <p style={{ fontSize: "1.1rem", fontWeight: 700, opacity: 1, marginBottom: "0.75rem" }}>
-            Then You&rsquo;ve Certainly Reached the Right place
-          </p>
-          <p style={{ fontSize: "1rem", opacity: 0.85, marginBottom: "2rem" }}>
-            Your eLearning dissertation is written by qualified and experienced researchers from the US &amp; UK
-          </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-start", flexWrap: "wrap" }}>
-            <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".75rem 2rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none" }}>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
+            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
               Order Now
             </Link>
-            <Link href="/contact-us" style={{ background: "transparent", color: "#fff", padding: ".75rem 2rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", border: "2px solid #fff" }}>
+            <Link href="/contact-us" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
               Contact Us
             </Link>
           </div>

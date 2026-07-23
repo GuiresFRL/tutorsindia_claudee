@@ -33,6 +33,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Freelance / Freelance Academic Writer — send to the external
+      // recruitment site instead of serving these on tutorsindia.com.
+      { source: "/freelance", destination: "https://workfoster.com", permanent: true },
+      { source: "/freelance/academic-writer", destination: "https://workfoster.com", permanent: true },
+
       // Stale WordPress-era sitemap URLs with no equivalent page on this site —
       // redirected to the closest live replacement instead of 404ing.
       { source: "/academy/assignment-writing", destination: "/academy", permanent: true },

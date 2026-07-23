@@ -98,21 +98,23 @@ export default function TechnicalEditingPage() {
       `}</style>
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", padding: "4rem 1rem 3rem", color: "#fff" }}>
-        <div className="hero-inner">
-          <span className="hero-badge">Technical Editing</span>
-          <h1 style={{ fontSize: "clamp(1.6rem,4vw,2.6rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1rem" }}>
+      <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+            <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/editing-services" style={{ color: "#a0b8e0" }}>Editing Services</Link>{" / "}
+            <span style={{ color: "#fff" }}>Technical Editing</span>
+          </div>
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
             Heavy Copyediting and Rewriting Service for your Manuscript &amp; Dissertation
           </h1>
-          <p style={{ fontSize: "1.05rem", opacity: 0.9, marginBottom: "0.75rem" }}>
-            Are you worried about the language quality of your paper presentation? Would you like to obtain professional help to complete your language editing? You have reached the right destination. Tutors India offers professional and complete language editing assistance to submit your papers with perfection and confidence
+          <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: 820, lineHeight: 1.8, marginBottom: "14px" }}>
+            Are you worried about the language quality of your paper presentation? Would you like to obtain professional help to complete your language editing? You have reached the right destination. Tutors India offers professional and complete language editing assistance to submit your papers with perfection and confidence.
           </p>
-          <p style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "2rem" }}>
-            Then You&rsquo;ve Certainly Reached the Right place
-          </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-start", flexWrap: "wrap" }}>
-            <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".75rem 2rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none" }}>Order Now</Link>
-            <Link href="/contact-us" style={{ background: "transparent", color: "#fff", padding: ".75rem 2rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", border: "2px solid #fff" }}>Contact Us</Link>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
+            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Order Now</Link>
+            <Link href="/contact-us" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Contact Us</Link>
           </div>
         </div>
       </section>
