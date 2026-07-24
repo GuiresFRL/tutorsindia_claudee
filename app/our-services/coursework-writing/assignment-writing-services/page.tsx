@@ -134,8 +134,11 @@ export default function AssignmentWritingServicesPage() {
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px" }}>
             UK Assignment Writing Help at Tutors India match your study needs across a broad range of subjects. Your Assignment would demonstrate all learning outcomes for that unit and showcase intellectual debate, critical analysis, evidence of original thought and generation of new ideas.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px" }}>
             Our Assignment writers have experience in specific domain experience, aware of theories of learning and educational degrees from international and top-ranked universities from India, the US, and the UK.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+            Whether it is <Link href="/blog/perfecting-an-engineering-course-assignment/" style={{ color: "#1a2a6c", fontWeight: 600 }}>assignment writing</Link> for engineering or business studies, every submission draws only on <Link href="/our-services/editing-services/language-editing/" style={{ color: "#1a2a6c", fontWeight: 600 }}>peer reviewed sources</Link> and the <Link href="/our-services/coursework-writing/references-collection-services/" style={{ color: "#1a2a6c", fontWeight: 600 }}>latest resources</Link> from credible academic databases.
           </p>
         </div>
 
@@ -204,7 +207,7 @@ export default function AssignmentWritingServicesPage() {
           Wide Range of Topics – UK Assignment Writing
         </h2>
         <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
-          We handle a wide range of assignments, including OPM, HRM, Technology, Teacher Training, Sustainable Customer Value, Marketing Management, Research Methodology, Resit, Rural Leadership, Information System Projects, OB, Nursing, Marketing Communication, Change Management, TQM, IBE, CB, Innovation, Service Excellence, HRPD, Case Study, Financial Plan, Business Plan, Market Research Plan, English, Education, Economics, Corporate Strategy, Law, Reflective Writing, Medicine, Business Research, Maths, Statistics, ELT, Biology, Chemistry, Physics, Tourism, Service Quality, Public Health Epidemiology, Dentistry, Psychology, Religion, Spiritual Studies, and many more.
+          We handle a wide range of assignments, including OPM, HRM, Technology, Teacher Training, Sustainable Customer Value, Marketing Management, Research Methodology, Resit, Rural Leadership, Information System Projects, OB, Nursing, Marketing Communication, Change Management, TQM, IBE, CB, Innovation, Service Excellence, HRPD, Case Study, Financial Plan, Business Plan, Market Research Plan, English, Education, Economics, Corporate Strategy, Law, Reflective Writing, Medicine, <Link href="/blog/coursework-writing-support-in-uk/" style={{ color: "#1a2a6c", fontWeight: 600 }}>Business Research</Link>, Maths, Statistics, ELT, Biology, Chemistry, Physics, Tourism, Service Quality, Public Health Epidemiology, Dentistry, Psychology, Religion, Spiritual Studies, and many more.
         </p>
 
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.35rem", color: "#1a2a6c", marginBottom: "10px" }}>

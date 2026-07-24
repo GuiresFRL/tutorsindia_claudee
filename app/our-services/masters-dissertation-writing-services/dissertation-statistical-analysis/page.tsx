@@ -255,6 +255,9 @@ export default function DissertationStatisticalAnalysisPage() {
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444", maxWidth: 780, margin: "0 auto 16px" }}>
             At Tutors India, we assist for Statistics, Biostatistics &amp; Qualitative Analysis (Content &amp; Thematic) – Statistical Consultation for Dissertation Research.
           </p>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#444", maxWidth: 780, margin: "0 auto 16px" }}>
+            Our statistical experts are equally skilled in <Link href="/blog/what-is-hypotheses-testing-and-what-are-its-types/" style={{ color: "#1a2a6c", fontWeight: 600 }}>hypothesis testing</Link>, structuring a comprehensive <Link href="/our-services/coursework-writing/literature-review/" style={{ color: "#1a2a6c", fontWeight: 600 }}>Literature Review</Link>, and ensuring your <Link href="/our-services/coursework-writing/annotated-bibliography/" style={{ color: "#1a2a6c", fontWeight: 600 }}>references and bibliography</Link> meet the highest academic standards — all backed by our commitment to <Link href="/our-services/coursework-writing/case-report-writing-services/" style={{ color: "#1a2a6c", fontWeight: 600 }}>high-quality research writing</Link>.
+          </p>
           <div
             style={{
               background: "#1a2a6c",
@@ -268,7 +271,7 @@ export default function DissertationStatisticalAnalysisPage() {
               lineHeight: 1.7,
             }}
           >
-            &ldquo;Dissertation statistical data analysis is the most important step in any dissertation or thesis.&rdquo;
+            &ldquo;Dissertation <Link href="/help-guide/study-guides/step-by-step-guide-for-dissertation-statistical-analysis-using-spss/" style={{ color: "#f9c74f" }}>Statistical Data analysis</Link> is the most important step in any dissertation or thesis.&rdquo;
           </div>
         </div>
       </section>

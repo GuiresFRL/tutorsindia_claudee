@@ -334,11 +334,11 @@ export default function CourseworkWritingPage() {
         <div style={{ background: "#f0f4ff", border: "1px solid #dde2ef", borderRadius: "12px", padding: "28px", marginBottom: "28px" }}>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>We just not provide writing assistance but also Tutoring</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
-            At Tutors India, we offer both tutoring and coursework writing services. We offer experiments, research, reports, essays, and dissertations.
+            At Tutors India, we offer both tutoring and <Link href="/blog/what-are-the-general-instructions-to-come-up-with-outstanding-academic-coursework-writing-for-research-studies/" style={{ color: "#1a2a6c", fontWeight: 600 }}>coursework writing</Link> services. We offer experiments, research, reports, essays, and dissertations.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>A Trusted the UK Coursework Writing Service at Tutors India</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
-            Tutors India has skilled and talented professional UK writers who work with your UK Master&apos;s and MBA coursework and assist you at all the stages of your UK MBA coursework writing either online or email based. We assist you 24/7 and provide evidence that we deliver what exactly you expect. This is one of the highlights of our services which remains unmatched by our competitors across the world.
+            Tutors India has skilled and talented professional UK writers who work with your UK Master&apos;s and MBA coursework and assist you at all the stages of your UK <Link href="/blog/what-are-the-guidelines-to-present-an-excellent-coursework-writing-for-business-studies/" style={{ color: "#1a2a6c", fontWeight: 600 }}>MBA coursework writing</Link> either online or email based. We assist you 24/7 and provide evidence that we deliver what exactly you expect. This is one of the highlights of our services which remains unmatched by our competitors across the world.
           </p>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our team of UK coursework writing experts consists of experienced professionals who are holding at least a Master&apos;s degree and also Ph.D. holders from the prestigious universities from the UK, US, and Australia, who can help you in writing any coursework whether it is science or management or computer science or Engineering or environmental science.
@@ -349,8 +349,11 @@ export default function CourseworkWritingPage() {
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Our unique approach has helped hundreds of scholars to complete and submit their UK MBA and Master&apos;s coursework across the global successfully.
           </p>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "12px", fontSize: "1rem" }}>
             Tutors India do not sell any paper but we consider every piece of work is unique and therefore we write from scratch based on the precise instructions you provide during the ordering process. Thereby, you can feel relaxed that you are going to get help
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
+            Whether it&apos;s determining the right <Link href="/our-services/coursework-writing/research-methodology/" style={{ color: "#1a2a6c", fontWeight: 600 }}>Research Methodology</Link>, <Link href="/our-services/coursework-writing/essay-writing-services/" style={{ color: "#1a2a6c", fontWeight: 600 }}>writing an essay</Link>, or referencing only <Link href="/our-services/editing-services/language-editing/" style={{ color: "#1a2a6c", fontWeight: 600 }}>peer-reviewed research</Link>, our subject matter experts support every stage of your coursework.
           </p>
         </div>
 
