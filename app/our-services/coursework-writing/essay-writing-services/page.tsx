@@ -193,8 +193,11 @@ export default function EssayWritingServicesPage() {
             Our MBA Essay Writing Services in UK for academic writing assistance for MBA students help them exhibit strategic thinking. Services emphasize management theories and industry-based insights for business-focused coursework. Our experts help students connect theoretical frameworks with real-world business scenarios to meet the high expectations of MBA programmes.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "10px" }}>Academic Writing Support for Students in the UAE</h2>
-          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px", fontSize: "1rem" }}>
             Share your academic requirements, university guidelines, and deadlines with us for customized essay assistance. Our team of experienced academic writers is ready to support students in the UAE with research-based, properly referenced essays that meet international university standards.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
+            Every <Link href="/our-sample-works/poetry-analysis-essay/" style={{ color: "#1a2a6c", fontWeight: 600 }}>academic essay</Link> we deliver is checked against AI-generated content — see why we caution against relying on tools for <Link href="/blog/disadvantages-of-using-chatgpt-essay-writer/" style={{ color: "#1a2a6c", fontWeight: 600 }}>Essay Writing</Link>. Our writers bring genuine <Link href="/our-services/coursework-writing/critical-review/" style={{ color: "#1a2a6c", fontWeight: 600 }}>critical analysis</Link> and a <Link href="/our-services/coursework-writing/references-collection-services/" style={{ color: "#1a2a6c", fontWeight: 600 }}>properly formatted bibliography</Link> to every submission.
           </p>
         </div>
 
@@ -207,7 +210,7 @@ export default function EssayWritingServicesPage() {
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>What You Will Receive from Us for Your Essay Writing Assistance</h2>
           <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "18px", fontSize: "1rem" }}>
-            Students will be offered academically oriented material that is well-researched through the use of credible scholarly sources, correct citations, structured argumentation, analysis, and quality control.
+            Students will be offered academically oriented material that is well-researched through the use of <Link href="/our-services/coursework-writing/references-collection-services/" style={{ color: "#1a2a6c", fontWeight: 600 }}>credible scholarly sources</Link>, correct citations, structured argumentation, analysis, and quality control.
           </p>
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "12px" }}>Our Essay Writing Process</h2>
           <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", fontWeight: 700, color: "#e87722", marginBottom: "10px" }}>Discover Our Process</h3>

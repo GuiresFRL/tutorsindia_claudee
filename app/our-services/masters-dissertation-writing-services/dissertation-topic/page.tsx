@@ -179,7 +179,7 @@ export default function DissertationTopicPage() {
             Expert Dissertation Topic Selection for Master&apos;s Students
           </h1>
           <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "780px", lineHeight: 1.8, marginBottom: "12px" }}>
-            Topic selection for dissertation is an important element of success in academic writing. We offer master&apos;s Dissertation Topic Selection Services that will assist you in finding unique, research-oriented, and feasible topics in all academic areas. Our topic selection services come with professional help and topic recommendations according to the latest research trends.
+            Topic selection for dissertation is an important element of success in academic writing. We offer master&apos;s <Link href="/blog/what-are-the-main-approaches-to-choose-a-topic-mention-some-criteria-for-topic-selection/" style={{ color: "#f9c74f" }}>Dissertation Topic Selection</Link> Services that will assist you in finding unique, research-oriented, and feasible topics in all academic areas. Our topic selection services come with professional help and topic recommendations according to the latest research trends.
           </p>
           <p style={{ color: "#c5d5f0", fontSize: "1rem", maxWidth: "780px", lineHeight: 1.8, marginBottom: "28px" }}>
             Benefit from the assistance of our dissertation writers in topic selection. Your chosen topic will have a research gap for sure!
@@ -285,8 +285,11 @@ export default function DissertationTopicPage() {
           <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "10px" }}>
             Well-Researched Dissertation Topics Selected by Qualified Professionals
           </h2>
-          <p style={{ color: "#555", lineHeight: 1.8 }}>
-            We choose our dissertation topics based on the recommendations from qualified experts in academia, who have extensive knowledge in research methodologies and specific subject matters.
+          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "10px" }}>
+            We choose our dissertation topics based on the recommendations from qualified experts in academia, who have extensive knowledge in <Link href="/our-services/coursework-writing/research-methodology/" style={{ color: "#1a2a6c", fontWeight: 600 }}>research methodologies</Link> and specific subject matters.
+          </p>
+          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
+            Every topic goes through rigorous <Link href="/our-services/editing-services/plagiarism-report/" style={{ color: "#1a2a6c", fontWeight: 600 }}>plagiarism detection</Link> checks, and where needed, we connect you with our team for <Link href="/our-services/publication-support/manuscript-development/" style={{ color: "#1a2a6c", fontWeight: 600 }}>research papers writing</Link> and our <Link href="/blog/dissertation-topics-selection-in-finance-and-accounting-for-mba-students/" style={{ color: "#1a2a6c", fontWeight: 600 }}>Master&apos;s Topic Selection</Link> guidance for finance and accounting students.
           </p>
         </div>
       </section>
