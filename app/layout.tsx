@@ -120,13 +120,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         ` }} />
 
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PEN58CJ4F"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11160128987"></script>
         <script dangerouslySetInnerHTML={{ __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+
+/* Google Ads */
+gtag('config', 'AW-11160128987');
+
+/* Google Analytics 4 */
 gtag('config', 'G-5PEN58CJ4F');
-gtag('config', 'UA-33260609-2');
         ` }} />
 
         {/* Charset & viewport */}
