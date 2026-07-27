@@ -126,7 +126,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-5PEN58CJ4F');
-gtag('config', 'UA-33260609-2');
+
         ` }} />
 
         {/* Charset & viewport */}
