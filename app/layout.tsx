@@ -100,8 +100,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-GB" className={`${merriweather.variable} ${sourceSans3.variable}`}>
       <head>
-        {/* Google Tag Manager */}
-        <script dangerouslySetInnerHTML={{ __html: `
+        {/* Preconnect to third-party origins used below, to shave connection setup time off the (deferred) requests */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://embed.tawk.to" />
+        <link rel="preconnect" href="https://scripts.clarity.ms" />
+
+        {/* Google Tag Manager — deferred until after hydration so it doesn't compete with the critical render path */}
+        <Script id="gtm-loader" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -110,8 +118,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         ` }} />
         {/* End Google Tag Manager */}
 
-        {/* Microsoft Clarity */}
-        <script dangerouslySetInnerHTML={{ __html: `
+        {/* Microsoft Clarity — session-recording analytics, safe to load once the page is idle */}
+        <Script id="clarity-loader" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `
 (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -119,9 +127,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window, document, "clarity", "script", "cmdaycrfv8");
         ` }} />
 
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11160128987"></script>
-        <script dangerouslySetInnerHTML={{ __html: `
+        {/* Google tag (gtag.js) — deferred until after hydration */}
+        <Script id="gtag-src" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11160128987" />
+        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -348,7 +356,7 @@ gtag('config', 'G-5PEN58CJ4F');
         {/* Tawk.to live chat widget — same account used on tutorsindia.com */}
         <Script
           id="tawkto-loader"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{ __html: `
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
