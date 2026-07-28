@@ -100,13 +100,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-GB" className={`${merriweather.variable} ${sourceSans3.variable}`}>
       <head>
-        {/* Preconnect to third-party origins used below, to shave connection setup time off the (deferred) requests */}
+        {/* Preconnect only to the origins needed early — Tawk.to/Clarity load lazily, so preconnecting them now would be wasted */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://embed.tawk.to" />
-        <link rel="preconnect" href="https://scripts.clarity.ms" />
 
         {/* Google Tag Manager — deferred until after hydration so it doesn't compete with the critical render path */}
         <Script id="gtm-loader" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `

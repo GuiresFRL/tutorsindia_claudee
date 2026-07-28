@@ -230,8 +230,8 @@ export default async function Home() {
               <div style={{ fontSize: "2rem", marginBottom: "10px" }}>{g.icon}</div>
               <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{g.title}</h3>
               <p style={{ fontSize: "0.82rem", color: "var(--text-mid)", marginBottom: "12px", lineHeight: 1.55 }}>{g.desc}</p>
-              <Link href={g.href} aria-label={`Read more about ${g.title}`} style={{ padding: "6px 14px", border: "1.5px solid var(--blue)", color: "var(--blue)", borderRadius: "5px", fontSize: "0.82rem", fontWeight: 600 }}>
-                Read More
+              <Link href={g.href} style={{ padding: "6px 14px", border: "1.5px solid var(--blue)", color: "var(--blue)", borderRadius: "5px", fontSize: "0.82rem", fontWeight: 600 }}>
+                Read More<span className="sr-only"> about {g.title}</span>
               </Link>
             </div>
           ))}

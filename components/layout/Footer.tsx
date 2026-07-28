@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{ maxWidth: "1200px", margin: "20px auto 0", textAlign: "center", fontSize: "0.82rem", color: "#607090" }}>
+      <div style={{ maxWidth: "1200px", margin: "20px auto 0", textAlign: "center", fontSize: "0.82rem", color: "#8fa5c8" }}>
         <p>© {new Date().getFullYear()} Tutors India. All rights reserved. |{" "}
           <Link href="/privacy-policy/" style={{ color: "#8fa5c8" }}>Privacy Policy</Link> |{" "}
           <Link href="/terms-and-conditions/" style={{ color: "#8fa5c8" }}>Terms & Conditions</Link> |{" "}
