@@ -143,8 +143,6 @@ gtag('config', 'G-5PEN58CJ4F');
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Preload LCP element — logo is the first painted image on every page */}
         <link rel="preload" as="image" href="/tutorsindia-logo-hd.webp" type="image/webp" fetchPriority="high" />
-        {/* Font Awesome — preload only; actual load deferred via Script below */}
-        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" crossOrigin="anonymous" />
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -335,20 +333,6 @@ gtag('config', 'G-5PEN58CJ4F');
   else processWPContent();
 })();
         `}} />
-
-        {/* Font Awesome — injected after page load to avoid render-blocking */}
-        <Script
-          id="font-awesome-loader"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: `
-(function(){
-  var l=document.createElement('link');
-  l.rel='stylesheet';l.crossOrigin='anonymous';
-  l.href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-  document.head.appendChild(l);
-})();
-          `}}
-        />
 
         {/* Tawk.to live chat widget — same account used on tutorsindia.com */}
         <Script
