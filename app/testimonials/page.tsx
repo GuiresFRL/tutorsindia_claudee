@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Testimonials — Real Client Experiences",
-  description: "Read real testimonials from 2,00,000+ scholars who trusted Tutors India with their academic success. Dissertations, assignments, statistical analysis and more.",
+  description: "Read real testimonials from 10,000+ scholars who trusted Tutors India with their academic success. Dissertations, assignments, statistical analysis and more.",
   alternates: { canonical: "https://www.tutorsindia.com/testimonials" },
 };
 
@@ -55,7 +55,7 @@ export default function TestimonialsPage() {
             From challenging deadlines to outstanding results, our clients share how we made a difference in their academic journey. Read the stories behind the achievements and the trust we&apos;ve built over the years.
           </p>
           <div style={{ display: "flex", gap: "28px", justifyContent: "center", flexWrap: "wrap" }}>
-            {[{ n: "2,00,000+", l: "Scholars Served" }, { n: "25+", l: "Years" }, { n: "4,500+", l: "PhDs Guided" }, { n: "80+", l: "Countries" }].map(s => (
+            {[{ n: "10,000+", l: "Scholars Served" }, { n: "25+", l: "Years" }, { n: "3,500+", l: "PhDs Guided" }, { n: "20+", l: "Countries" }].map(s => (
               <div key={s.l} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
                 <div style={{ fontSize: "0.75rem", color: "#a0b8e0", textTransform: "uppercase" }}>{s.l}</div>
@@ -111,7 +111,7 @@ export default function TestimonialsPage() {
 
         {/* CTA */}
         <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "12px", padding: "40px", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Join 2,00,000+ Satisfied Scholars</h2>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>Join 10,000+ Satisfied Scholars</h2>
           <p style={{ color: "#c5d5f0", fontSize: "0.95rem", marginBottom: "22px" }}>Start your academic success story with Tutors India — trusted since 2001</p>
           <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>

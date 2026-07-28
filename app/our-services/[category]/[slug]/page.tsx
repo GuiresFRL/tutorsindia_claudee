@@ -448,10 +448,10 @@ export default async function ServiceDetailPage({ params }: Props) {
       <div style={{ background: "var(--navy-dark)", color: "#fff", padding: "16px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", gap: "32px", flexWrap: "wrap", justifyContent: "center" }}>
           {[
-            { n: "2,00,000+", l: "Scholars Served" },
-            { n: "2000+", l: "Expert Writers" },
+            { n: "10,000+", l: "Scholars Served" },
+            { n: "150+", l: "Expert Writers" },
             { n: "25+", l: "Years Experience" },
-            { n: "80+", l: "Countries" },
+            { n: "20+", l: "Countries" },
             { n: "95–98%", l: "On-Time Delivery" },
           ].map((s) => (
             <div key={s.l} style={{ textAlign: "center" }}>

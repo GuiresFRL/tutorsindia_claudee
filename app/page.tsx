@@ -15,7 +15,7 @@ const guarantees = [
   { icon: "⏱", title: "On-time Delivery", desc: "We always deliver work before the deadline. 95–98% on-time delivery rate achieved consistently.", href: "/our-process/" },
   { icon: "✅", title: "100% Originality", desc: "All our writing is screened through Turnitin and guaranteed 0–5% plagiarism free.", href: "/our-process/" },
   { icon: "🔁", title: "Unlimited Revisions", desc: "We offer unlimited revisions to committed work without any extra charge, even after completion.", href: "/our-process/" },
-  { icon: "🎓", title: "Domain Expertise", desc: "2000+ subject-specific experts assigned per project. Quality assured by our QC team.", href: "/our-services/" },
+  { icon: "🎓", title: "Domain Expertise", desc: "150+ subject-specific experts assigned per project. Quality assured by our QC team.", href: "/our-services/" },
 ];
 
 const processSteps = [
@@ -71,7 +71,7 @@ export default async function Home() {
               Masters &amp; MBA Dissertation<br />Writing and Editing Services
             </h1>
             <p style={{ fontSize: "1.05rem", color: "#c5d5f0", marginBottom: "8px" }}>Trusted Academic Writing &amp; Editing Services</p>
-            <p style={{ fontSize: "0.95rem", color: "#a0b8e0", marginBottom: "28px" }}>Guaranteed by the best in the Industry — 2,00,000+ scholars served worldwide</p>
+            <p style={{ fontSize: "0.95rem", color: "#a0b8e0", marginBottom: "28px" }}>Guaranteed by the best in the Industry — 10,000+ scholars served worldwide</p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "12px 28px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontSize: "15px", fontWeight: 700 }}>
                 Order Now
@@ -107,7 +107,7 @@ export default async function Home() {
               "Highest quality work in the industry — every piece reviewed by subject matter experts",
               "Registered Company based in Sheffield (U.K), Dallas (U.S) and Chennai (India)",
               "We guarantee your work and care deeply about your academic success",
-              "2000+ PhD and Masters-qualified researchers across 80+ countries",
+              "150+ PhD and Masters-qualified researchers across 20+ countries",
               "25+ years of experience serving students at UK, US, and Australian universities",
             ].map((item) => (
               <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "12px", fontSize: "0.93rem", color: "var(--text-mid)" }}>
@@ -184,13 +184,13 @@ export default async function Home() {
 
       {/* TRUST SECTION */}
       <section style={{ background: "var(--navy)", color: "#fff", padding: "60px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 700, marginBottom: "8px" }}>Academic Research Company — Trusted by 2,00,000+</h2>
+        <h2 style={{ fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 700, marginBottom: "8px" }}>Academic Research Company — Trusted by 10,000+</h2>
         <p style={{ fontSize: "1rem", color: "#c5d5f0", marginBottom: "40px" }}>Scholars, Students &amp; Entrepreneurs across the world Since 2001</p>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "24px" }} className="trust-grid">
           {[
-            { icon: "🏆", title: "Leading provider of Academic Support", desc: "Our UK/US Experts can help you succeed in your Education Career. Tutors India is a pioneer in providing complete academic guidance for the past 22 years with more than 4,500 PhD Candidates and 10,500 Masters Students across the globe." },
+            { icon: "🏆", title: "Leading provider of Academic Support", desc: "Our UK/US Experts can help you succeed in your Education Career. Tutors India is a pioneer in providing complete academic guidance for the past 25 years with more than 3,500 PhD Candidates and 5,000 Masters Students across the globe." },
             { icon: "⭐", title: "We are driven by Trust, Quality & Perfection", desc: "We value our client's time and undertake every instance with dedication. Our specialised scholars review each requirement immediately. Tutors India writers are retained as 'Researchers' who handle each unique and challenging topic with high-class perfectionism." },
-            { icon: "🌍", title: "Global Reach & Expert Network", desc: "2000+ qualified writers from the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia, and Ukraine — covering 80+ countries and every major academic discipline at Masters and PhD level." },
+            { icon: "🌍", title: "Global Reach & Expert Network", desc: "150+ qualified writers from the USA, UK, Australia, Canada, New Zealand, Germany, France, Russia, and Ukraine — covering 20+ countries and every major academic discipline at Masters and PhD level." },
           ].map((card) => (
             <div key={card.title} style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "10px", padding: "28px 22px" }}>
               <div style={{ fontSize: "2rem", marginBottom: "12px" }}>{card.icon}</div>
@@ -355,7 +355,7 @@ export default async function Home() {
       <section style={{ background: "linear-gradient(135deg, var(--navy) 0%, #2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
         <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 700, marginBottom: "12px" }}>Ready to Get Started?</h2>
         <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.88)", marginBottom: "10px" }}>
-          Join 2,00,000+ scholars who have trusted Tutors India with their academic success since 2001.
+          Join 10,000+ scholars who have trusted Tutors India with their academic success since 2001.
         </p>
         <p style={{ fontSize: "0.96rem", color: "rgba(255,255,255,0.7)", marginBottom: "28px" }}>Response within 30 minutes · Unlimited Revisions · Plagiarism Free</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>

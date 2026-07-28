@@ -22,12 +22,12 @@ export const siteInfo = {
     },
   },
   stats: {
-    scholars: "2,00,000+",
-    phdCandidates: "4,500+",
-    mastersStudents: "10,500+",
+    scholars: "10,000+",
+    phdCandidates: "3,500+",
+    mastersStudents: "5,000+",
     yearsInBusiness: "25+",
-    writers: "2000+",
-    countries: "80+",
+    writers: "150+",
+    countries: "20+",
   },
   social: {
     facebook: "https://www.facebook.com/TutorsIndia",

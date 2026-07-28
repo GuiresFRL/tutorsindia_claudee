@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { number: "2,00,000+", label: "Scholars Served" },
-  { number: "4,500+", label: "PhD Candidates Guided" },
-  { number: "10,500+", label: "Masters Students Helped" },
+  { number: "10,000+", label: "Scholars Served" },
+  { number: "3,500+", label: "PhD Candidates Guided" },
+  { number: "5,000+", label: "Masters Students Helped" },
   { number: "25+", label: "Years in Business" },
-  { number: "2000+", label: "Expert Writers" },
-  { number: "80+", label: "Countries Served" },
+  { number: "150+", label: "Expert Writers" },
+  { number: "20+", label: "Countries Served" },
 ];
 
 const features = [
