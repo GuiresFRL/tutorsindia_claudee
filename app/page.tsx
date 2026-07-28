@@ -6,8 +6,8 @@ import { getRecentPosts, getFeaturedImage, getCategories, stripHtml } from "@/li
 import { siteInfo } from "@/lib/data/site";
 
 export const metadata: Metadata = {
-  title: "Masters & MBA Dissertation Writing Services",
-  description: "Tutors India provides expert Masters, MBA and PhD dissertation writing, editing, statistics and coding services. Trusted by 200,000+ scholars since 2001.",
+  title: "Masters and MBA Research Writing Services | Tutors India",
+  description: "Get expert Master's Research Writing Services from Tutors India. We support topic selection, proposals, dissertations, assignment & publication guidance.",
   alternates: { canonical: "https://www.tutorsindia.com" },
 };
 
@@ -65,7 +65,7 @@ export default async function Home() {
       <section style={{ background: "linear-gradient(135deg, var(--navy) 0%, #2563b0 100%)", color: "#fff", padding: "80px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <p style={{ fontSize: "0.85rem", color: "#a0b8e0", marginBottom: "8px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-              Trusted Since 2001 · UK · US · Australia
+              Trusted Since 2001 · UK · UAE · Australia
             </p>
             <h1 style={{ fontFamily: "Merriweather, serif", fontSize: "clamp(1.7rem,3.5vw,2.5rem)", lineHeight: 1.25, marginBottom: "16px" }}>
               Masters &amp; MBA Dissertation<br />Writing and Editing Services
