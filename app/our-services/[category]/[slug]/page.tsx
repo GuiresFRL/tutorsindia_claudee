@@ -450,7 +450,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           {[
             { n: "2,00,000+", l: "Scholars Served" },
             { n: "2000+", l: "Expert Writers" },
-            { n: "22+", l: "Years Experience" },
+            { n: "25+", l: "Years Experience" },
             { n: "80+", l: "Countries" },
             { n: "95–98%", l: "On-Time Delivery" },
           ].map((s) => (
@@ -573,7 +573,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--navy)", marginBottom: "12px" }}>Why Choose Tutors India?</h4>
             {[
               "2000+ PhD & Masters qualified writers",
-              "22+ years of academic expertise",
+              "25+ years of academic expertise",
               "Served 2,00,000+ scholars worldwide",
               "Less than 5% plagiarism guaranteed",
               "Unlimited free revisions",

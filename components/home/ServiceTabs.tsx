@@ -47,7 +47,7 @@ export default function ServiceTabs() {
               {left.map((item) => (
                 <div key={item.href} style={{ padding: "12px 0", borderBottom: "1px solid var(--border)" }}>
                   <Link href={item.href}>
-                    <h4 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--blue)", marginBottom: "3px" }}>{item.title}</h4>
+                    <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--blue)", marginBottom: "3px" }}>{item.title}</h3>
                   </Link>
                   <p style={{ fontSize: "0.85rem", color: "var(--text-mid)" }}>{item.description}</p>
                 </div>
@@ -57,7 +57,7 @@ export default function ServiceTabs() {
               {right.map((item) => (
                 <div key={item.href} style={{ padding: "12px 0", borderBottom: "1px solid var(--border)" }}>
                   <Link href={item.href}>
-                    <h4 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--blue)", marginBottom: "3px" }}>{item.title}</h4>
+                    <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--blue)", marginBottom: "3px" }}>{item.title}</h3>
                   </Link>
                   <p style={{ fontSize: "0.85rem", color: "var(--text-mid)" }}>{item.description}</p>
                 </div>

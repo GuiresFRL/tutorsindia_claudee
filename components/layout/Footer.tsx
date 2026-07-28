@@ -10,14 +10,17 @@ export default function Footer() {
 
         {/* Brand */}
         <div>
-          <img
-            src="/tutorsindia-logo-hd.jpg"
-            alt="Tutors India"
-            width={64}
-            height={64}
-            loading="lazy"
-            style={{ height: "64px", width: "auto", marginBottom: "14px" }}
-          />
+          <picture>
+            <source srcSet="/tutorsindia-logo-hd.webp" type="image/webp" />
+            <img
+              src="/tutorsindia-logo-hd.jpg"
+              alt="Tutors India"
+              width={64}
+              height={64}
+              loading="lazy"
+              style={{ height: "64px", width: "auto", marginBottom: "14px" }}
+            />
+          </picture>
           <p style={{ fontSize: "0.85rem", color: "#8fa5c8", lineHeight: 1.7, marginBottom: "16px" }}>
             Tutors India is a pioneer in providing complete academic guidance and direction since 2001. Trusted by {siteInfo.stats.scholars} scholars, students & entrepreneurs worldwide.
           </p>
@@ -35,7 +38,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h4 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "14px" }}>Our Services</h4>
+          <h3 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "14px" }}>Our Services</h3>
           <ul style={{ listStyle: "none" }}>
             {footerLinks.services.map((link) => (
               <li key={link.href} style={{ marginBottom: "8px" }}>
@@ -47,7 +50,7 @@ export default function Footer() {
 
         {/* Company */}
         <div>
-          <h4 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "14px" }}>Company</h4>
+          <h3 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "14px" }}>Company</h3>
           <ul style={{ listStyle: "none" }}>
             {footerLinks.company.map((link) => (
               <li key={link.href} style={{ marginBottom: "8px" }}>
@@ -59,7 +62,7 @@ export default function Footer() {
 
         {/* Support + Social */}
         <div>
-          <h4 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "14px" }}>Support</h4>
+          <h3 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "14px" }}>Support</h3>
           <ul style={{ listStyle: "none", marginBottom: "20px" }}>
             {footerLinks.support.map((link) => (
               <li key={link.href} style={{ marginBottom: "8px" }}>
@@ -67,7 +70,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <h4 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "10px" }}>Follow Us</h4>
+          <h3 style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700, marginBottom: "10px" }}>Follow Us</h3>
           <SocialIcons size={18} gap={8} variant="circle" />
         </div>
       </div>

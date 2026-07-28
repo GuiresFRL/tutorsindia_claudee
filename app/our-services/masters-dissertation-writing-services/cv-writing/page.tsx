@@ -95,7 +95,7 @@ export default function CVWritingPage() {
       {/* ── STATS BAR ── */}
       <div style={{ background: "#12214a", padding: "16px 20px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "28px", flexWrap: "wrap", justifyContent: "center" }}>
-          {[{ n: "2000+", l: "Expert CV Writers" }, { n: "22+", l: "Years Experience" }, { n: "Global", l: "Jobs Market Knowledge" }, { n: "Unlimited", l: "Revisions" }, { n: "100%", l: "Satisfaction Guarantee" }, { n: "30 min", l: "Response" }].map(s => (
+          {[{ n: "2000+", l: "Expert CV Writers" }, { n: "25+", l: "Years Experience" }, { n: "Global", l: "Jobs Market Knowledge" }, { n: "Unlimited", l: "Revisions" }, { n: "100%", l: "Satisfaction Guarantee" }, { n: "30 min", l: "Response" }].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
               <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
               <div style={{ fontSize: "0.68rem", color: "#a0b8e0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</div>

@@ -65,7 +65,7 @@ export default function TestimonialsSlider() {
               </div>
               <div>
                 <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.88rem" }}>{t.author}</div>
-                {t.location && <div style={{ fontSize: "0.76rem", color: "#9aa5b4" }}>{t.location}</div>}
+                {t.location && <div style={{ fontSize: "0.76rem", color: "#6b7280" }}>{t.location}</div>}
                 <div style={{ display: "flex", gap: "2px", marginTop: "2px" }}>
                   {[...Array(5)].map((_, s) => (
                     <span key={s} style={{ color: "#f59e0b", fontSize: "0.75rem" }}>★</span>

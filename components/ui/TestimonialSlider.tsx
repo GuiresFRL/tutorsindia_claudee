@@ -101,7 +101,7 @@ export default function TestimonialSlider({ testimonials }: { testimonials: Test
               )}
               <div>
                 <div style={{ fontWeight: 700, color: "#1a2a6c", fontSize: "0.88rem", lineHeight: 1.3 }}>{t.author}</div>
-                {t.role && <div style={{ fontSize: "0.75rem", color: "#9aa5b4", marginTop: "2px" }}>{t.role}</div>}
+                {t.role && <div style={{ fontSize: "0.75rem", color: "#6b7280", marginTop: "2px" }}>{t.role}</div>}
               </div>
             </div>
           </div>

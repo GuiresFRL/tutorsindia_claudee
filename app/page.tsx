@@ -108,7 +108,7 @@ export default async function Home() {
               "Registered Company based in Sheffield (U.K), Dallas (U.S) and Chennai (India)",
               "We guarantee your work and care deeply about your academic success",
               "2000+ PhD and Masters-qualified researchers across 80+ countries",
-              "22+ years of experience serving students at UK, US, and Australian universities",
+              "25+ years of experience serving students at UK, US, and Australian universities",
             ].map((item) => (
               <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "12px", fontSize: "0.93rem", color: "var(--text-mid)" }}>
                 <span style={{ color: "var(--orange)", fontWeight: 700, flexShrink: 0, marginTop: "2px" }}>✓</span>
@@ -168,7 +168,7 @@ export default async function Home() {
                 <div style={{ width: "44px", height: "44px", borderRadius: "50%", background: "var(--navy)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.96rem", margin: "0 auto 12px" }}>
                   {step.n}
                 </div>
-                <h4 style={{ fontSize: "0.94rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{step.title}</h4>
+                <h3 style={{ fontSize: "0.94rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{step.title}</h3>
                 <p style={{ fontSize: "0.78rem", color: "var(--text-mid)", lineHeight: 1.5 }}>{step.desc}</p>
               </div>
             ))}
@@ -228,9 +228,9 @@ export default async function Home() {
           {guarantees.map((g) => (
             <div key={g.title} style={{ background: "var(--gray)", borderRadius: "10px", padding: "22px", textAlign: "center" }}>
               <div style={{ fontSize: "2rem", marginBottom: "10px" }}>{g.icon}</div>
-              <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{g.title}</h4>
+              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--navy)", marginBottom: "6px" }}>{g.title}</h3>
               <p style={{ fontSize: "0.82rem", color: "var(--text-mid)", marginBottom: "12px", lineHeight: 1.55 }}>{g.desc}</p>
-              <Link href={g.href} style={{ padding: "6px 14px", border: "1.5px solid var(--blue)", color: "var(--blue)", borderRadius: "5px", fontSize: "0.82rem", fontWeight: 600 }}>
+              <Link href={g.href} aria-label={`Read more about ${g.title}`} style={{ padding: "6px 14px", border: "1.5px solid var(--blue)", color: "var(--blue)", borderRadius: "5px", fontSize: "0.82rem", fontWeight: 600 }}>
                 Read More
               </Link>
             </div>

@@ -174,7 +174,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label style={labelStyle} htmlFor="cf-country">Country <span style={{ color: "#e87722" }}>*</span></label>
-          <select id="cf-country" required value={form.country} onChange={handleCountryChange} style={selectStyle}>
+          <select id="cf-country" aria-label="Country" required value={form.country} onChange={handleCountryChange} style={selectStyle}>
             <option value="">Select country…</option>
             {COUNTRIES.map((c) => (
               <option key={c.iso2} value={c.name}>{flagEmoji(c.iso2)} {c.name}</option>
@@ -186,7 +186,7 @@ export default function ContactForm() {
       {/* Row 3: Service */}
       <div>
         <label style={labelStyle} htmlFor="cf-service">Service Required <span style={{ color: "#e87722" }}>*</span></label>
-        <select id="cf-service" required value={form.service} onChange={set("service")} style={selectStyle}>
+        <select id="cf-service" aria-label="Service" required value={form.service} onChange={set("service")} style={selectStyle}>
           <option value="">Select a service…</option>
           {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
@@ -207,7 +207,7 @@ export default function ContactForm() {
       {/* Row 5: Deadline */}
       <div>
         <label style={labelStyle} htmlFor="cf-deadline">Deadline <span style={{ color: "#e87722" }}>*</span></label>
-        <select id="cf-deadline" required value={form.deadline} onChange={set("deadline")} style={selectStyle}>
+        <select id="cf-deadline" aria-label="Deadline" required value={form.deadline} onChange={set("deadline")} style={selectStyle}>
           <option value="">Select deadline…</option>
           {DEADLINES.map((d) => <option key={d} value={d}>{d}</option>)}
         </select>

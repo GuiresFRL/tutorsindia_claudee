@@ -12,7 +12,7 @@ const stats = [
   { number: "2,00,000+", label: "Scholars Served" },
   { number: "4,500+", label: "PhD Candidates Guided" },
   { number: "10,500+", label: "Masters Students Helped" },
-  { number: "22+", label: "Years in Business" },
+  { number: "25+", label: "Years in Business" },
   { number: "2000+", label: "Expert Writers" },
   { number: "80+", label: "Countries Served" },
 ];
@@ -47,7 +47,7 @@ const whyPoints = [
   "Registered Company based in Sheffield (UK), Dallas (US) and Chennai (India)",
   "We guarantee your work and care deeply about your academic success",
   "2000+ PhD and Masters-qualified researchers across 80+ countries",
-  "22+ years of experience serving students at UK, US, and Australian universities",
+  "25+ years of experience serving students at UK, US, and Australian universities",
   "Our unique approach has helped hundreds of scholars complete and submit dissertations globally",
   "We handle research works of all subjects from various countries across the globe",
 ];
@@ -80,7 +80,7 @@ export default function AboutPage() {
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
             <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
-            <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>22+</div>
+            <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#f9c74f" }}>25+</div>
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0" }}>Years of Academic<br />Excellence</div>
           </div>
         </div>

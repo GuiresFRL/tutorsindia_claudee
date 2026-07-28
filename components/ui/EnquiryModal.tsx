@@ -316,6 +316,7 @@ export default function EnquiryModal() {
               <div>
                 <select
                   id="eq-country"
+                  aria-label="Country"
                   autoComplete="off"
                   value={country}
                   onChange={(e) => handleCountryChange(e.target.value)}
@@ -333,6 +334,7 @@ export default function EnquiryModal() {
               <div>
                 <select
                   id="eq-order-type"
+                  aria-label="Type of order"
                   value={orderType}
                   onChange={(e) => setOrderType(e.target.value)}
                   className="eq-input"

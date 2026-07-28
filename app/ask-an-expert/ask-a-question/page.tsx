@@ -93,7 +93,7 @@ export default function AskAQuestionPage() {
 
               <div>
                 <label style={labelStyle} htmlFor="aq-subject">Subject / Topic <span style={{ color: "#e87722" }}>*</span></label>
-                <select id="aq-subject" required value={form.subject} onChange={set("subject")} style={inputStyle}>
+                <select id="aq-subject" aria-label="Subject" required value={form.subject} onChange={set("subject")} style={inputStyle}>
                   <option value="">Select a subject</option>
                   {["Accounts","Statistics","Management","Nursing","Economics","Psychology","Marketing","Philosophy","Other"].map((s) => (
                     <option key={s}>{s}</option>

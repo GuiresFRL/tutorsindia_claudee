@@ -25,7 +25,7 @@ export const siteInfo = {
     scholars: "2,00,000+",
     phdCandidates: "4,500+",
     mastersStudents: "10,500+",
-    yearsInBusiness: "22+",
+    yearsInBusiness: "25+",
     writers: "2000+",
     countries: "80+",
   },

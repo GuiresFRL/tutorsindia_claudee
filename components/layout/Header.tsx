@@ -73,14 +73,17 @@ export default function Header() {
       }}>
         {/* ── Logo ── */}
         <Link href="/" style={{ flexShrink: 0, display: "flex", alignItems: "center" }}>
-          <img
-            src="/tutorsindia-logo-hd.jpg"
-            alt="Tutors India — Trusted Academic Writing Services Since 2001"
-            width={62}
-            height={62}
-            fetchPriority="high"
-            style={{ height: "62px", width: "auto", objectFit: "contain" }}
-          />
+          <picture>
+            <source srcSet="/tutorsindia-logo-hd.webp" type="image/webp" />
+            <img
+              src="/tutorsindia-logo-hd.jpg"
+              alt="Tutors India — Trusted Academic Writing Services Since 2001"
+              width={62}
+              height={62}
+              fetchPriority="high"
+              style={{ height: "62px", width: "auto", objectFit: "contain" }}
+            />
+          </picture>
         </Link>
 
         {/* ── Desktop nav ── */}
@@ -153,7 +156,7 @@ export default function Header() {
               <button
                 type="submit"
                 aria-label="Submit search"
-                style={{ background: "#e87722", color: "#fff", border: "none", borderRadius: "5px", padding: "0 14px", cursor: "pointer", fontWeight: 700, fontSize: "13.5px" }}
+                style={{ background: "#b85812", color: "#fff", border: "none", borderRadius: "5px", padding: "0 14px", cursor: "pointer", fontWeight: 700, fontSize: "13.5px" }}
               >
                 Go
               </button>
@@ -179,7 +182,7 @@ export default function Header() {
             href="/order-now/"
             style={{
               padding: "8px 18px",
-              background: "#e87722",
+              background: "#b85812",
               color: "#fff",
               borderRadius: "4px",
               fontSize: "13.5px",
@@ -360,7 +363,7 @@ export default function Header() {
             <Link href="/pricing/" onClick={() => setMobileOpen(false)} style={{ flex: 1, textAlign: "center", padding: "10px", border: "2px solid #1a2a6c", color: "#1a2a6c", borderRadius: "4px", fontWeight: 600, fontSize: "14px" }}>
               Pricing
             </Link>
-            <Link href="/order-now/" onClick={() => setMobileOpen(false)} style={{ flex: 1, textAlign: "center", padding: "10px", background: "#e87722", color: "#fff", borderRadius: "4px", fontWeight: 700, fontSize: "14px" }}>
+            <Link href="/order-now/" onClick={() => setMobileOpen(false)} style={{ flex: 1, textAlign: "center", padding: "10px", background: "#b85812", color: "#fff", borderRadius: "4px", fontWeight: 700, fontSize: "14px" }}>
               Order Now
             </Link>
           </div>

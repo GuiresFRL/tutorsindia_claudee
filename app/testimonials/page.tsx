@@ -55,7 +55,7 @@ export default function TestimonialsPage() {
             From challenging deadlines to outstanding results, our clients share how we made a difference in their academic journey. Read the stories behind the achievements and the trust we&apos;ve built over the years.
           </p>
           <div style={{ display: "flex", gap: "28px", justifyContent: "center", flexWrap: "wrap" }}>
-            {[{ n: "2,00,000+", l: "Scholars Served" }, { n: "22+", l: "Years" }, { n: "4,500+", l: "PhDs Guided" }, { n: "80+", l: "Countries" }].map(s => (
+            {[{ n: "2,00,000+", l: "Scholars Served" }, { n: "25+", l: "Years" }, { n: "4,500+", l: "PhDs Guided" }, { n: "80+", l: "Countries" }].map(s => (
               <div key={s.l} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#f9c74f" }}>{s.n}</div>
                 <div style={{ fontSize: "0.75rem", color: "#a0b8e0", textTransform: "uppercase" }}>{s.l}</div>
