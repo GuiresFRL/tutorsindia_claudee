@@ -20,17 +20,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       m[1].trim()
     );
 
-    // Normalise host to www.tutorsindia.com and drop the trailing slash so
-    // every URL matches its page's canonical tag (avoids 308 redirects when
-    // search engines crawl the sitemap).
-    const mapped: MetadataRoute.Sitemap = locs.map((loc) => {
-      const normalised = loc.replace(
-        /^https?:\/\/(?:www\.)?tutorsindia\.com/,
-        BASE
-      );
-      const url = normalised.replace(/\/$/, "") || BASE;
-      return { url, lastModified: new Date().toISOString(), priority: 0.6, changeFrequency: "monthly" };
-    });
+   // Normalize host and keep trailing slash URLs to match Next.js trailingSlash: true
+const mapped: MetadataRoute.Sitemap = locs.map((loc) => {
+  let normalised = loc.replace(
+    /^https?:\/\/(?:www\.)?tutorsindia\.com/,
+    BASE
+  );
+
+  // Ensure all URLs have trailing slash
+  if (!normalised.endsWith("/")) {
+    normalised += "/";
+  }
+
+  return {
+    url: normalised,
+    lastModified: new Date().toISOString(),
+    priority: 0.6,
+    changeFrequency: "monthly",
+  };
+});
 
     // Deduplicate by URL
     const seen = new Set<string>();
@@ -43,6 +51,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return deduped;
   } catch (err) {
     console.error("sitemap.ts: failed to read original sitemap", err);
-    return [{ url: BASE, lastModified: new Date().toISOString(), priority: 1.0 }];
-  }
+return [
+  {
+    url: `${BASE}/`,
+    lastModified: new Date().toISOString(),
+    priority: 1.0,
+  },
+];  }
 }
