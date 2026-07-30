@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Economics & Finance Writing Help",
   description: "Expert Economics & Finance academic writing. Macroeconomics, Microeconomics, Financial Markets, Econometrics. Harvard, APA. Masters & PhD. Tutors India.",
-  alternates: { canonical: "https://www.tutorsindia.com/subjects/economics-finance-academic-writing-help" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/economics-finance-academic-writing-help/" },
 };
 
 const faqs = [

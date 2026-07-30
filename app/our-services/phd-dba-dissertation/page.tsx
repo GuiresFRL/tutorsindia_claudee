@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "DBA | MBA Dissertation Writing Services | Thesis Writing Help UK",
   description: "We help you in UK MBA Writing & Editing services such as dissertation topic selection, methodology, statistical analysis and interpretation.",
   keywords: "phd dissertation writing service, phd thesis writing services, phd dissertation writing help, phd dissertation writing services uk, phd thesis writing help, phd dissertation writing guide, phd dissertation writing assistance, phd thesis writing services uk",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/" },
 };
 
 const cat = serviceCategories.find((c) => c.slug === "phd-dba-dissertation")!;

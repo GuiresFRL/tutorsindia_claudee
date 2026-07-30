@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "PhD Academic Poster Presentation Services | DBA PowerPoint PPT Help UK",
   description: "Exclusive power point presentation service. We develops world class PPT presentations for PhD scholars especially for Viva Voce/Interim report presentation.",
   keywords: "PowerPoint Presentation Service,Powerpoint: Presentation Tips ,PowerPoint Design,Buy PowerPoint Presentations",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-presentation" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-presentation/" },
 };
 
 const faqs = [

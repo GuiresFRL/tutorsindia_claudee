@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Medicine & Health Science Writing Help",
   description: "Expert Medicine & Health Science academic writing for Masters and PhD students. Clinical Medicine, Nursing, Public Health, Pharmacology. Vancouver, AMA referencing. Tutors India.",
-  alternates: { canonical: "https://www.tutorsindia.com/subjects/medicine-health-science-academic-writing" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/medicine-health-science-academic-writing/" },
 };
 
 const faqs = [

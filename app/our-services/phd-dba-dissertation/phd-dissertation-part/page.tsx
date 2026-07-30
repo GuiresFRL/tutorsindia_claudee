@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "PhD Part Dissertation Writing Services | DBA Part Thesis Writing Help UK",
   description: "PhD Dissertation Part writing help. Looking for assistance to carry out single chapter writing such as writing only abstract literature review methodology etc.",
   keywords: "PhD Chapterwise Mentoring Services,PhD Thesis Writing Services in India,UK",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-part" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-part/" },
 };
 
 const faqs = [

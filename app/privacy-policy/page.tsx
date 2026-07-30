@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Tutors India's privacy policy covering data collection, usage, payment terms, and your rights as a user.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/privacy-policy" },
+  alternates: { canonical: "https://www.tutorsindia.com/privacy-policy/" },
 };
 
 const sections = [

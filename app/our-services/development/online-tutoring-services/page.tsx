@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Master-Online Dissertation Writing Tutors for all subjects and levels",
   description: "Online Tutoring Service. Through our virtual tutoring service, you can observe improvement in both academic and intellectual proficiency.",
   keywords: "PhD Tutors In India,UK,online tutoring services,Online Dissertation Writing Tutors",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/online-tutoring-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/online-tutoring-services/" },
 };
 
 const faqs = [
@@ -106,8 +106,8 @@ export default function OnlineTutoringServicesPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
-            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
-            <Link href="/our-services/development" style={{ color: "#a0b8e0" }}>Development</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/development/" style={{ color: "#a0b8e0" }}>Development</Link>{" / "}
             <span style={{ color: "#fff" }}>Online Tutoring Services</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
@@ -120,10 +120,10 @@ export default function OnlineTutoringServicesPage() {
             Online Tutoring is done by the qualified and experienced experts including retired professionals, adjuncts, real time faculties and professors across the world
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
               Order Now
             </Link>
-            <Link href="/contact-us" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
               Contact Us
             </Link>
           </div>
@@ -420,7 +420,7 @@ export default function OnlineTutoringServicesPage() {
           <p style={{ opacity: 0.9, marginBottom: "2rem", lineHeight: 1.7 }}>
             Invest in your career by availing language editing help from the UK &amp; the US Qualified researchers
           </p>
-          <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
+          <Link href="/order/" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
             Get Started Now
           </Link>
         </div>

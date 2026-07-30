@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Coursework & Assignment Help",
   description: "Expert coursework and assignment writing help for Masters, MBA and PhD students. Essays, reports, case studies, literature reviews, research methodology and more. Tutors India.",
-  alternates: { canonical: "https://www.tutorsindia.com/coursework-assignment" },
+  alternates: { canonical: "https://www.tutorsindia.com/coursework-assignment/" },
 };
 
 const assignmentTypes = [

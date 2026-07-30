@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Survey Tools for Dissertation: Instrument Development Guide",
   description: "Professional questionnaire development for your dissertation. We offer full help and assistance in completing your tool development by experienced hands.",
   keywords: "Survey Tool development,Questionnaire development,Master’s & Ph.D. Dissertation Service",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/tool-development" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/tool-development/" },
 };
 
 const faqs = [
@@ -112,8 +112,8 @@ export default function ToolDevelopmentPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
-            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
-            <Link href="/our-services/development" style={{ color: "#a0b8e0" }}>Development</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/development/" style={{ color: "#a0b8e0" }}>Development</Link>{" / "}
             <span style={{ color: "#fff" }}>Tool Development</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
@@ -126,10 +126,10 @@ export default function ToolDevelopmentPage() {
             Tutors at Tutors India has capability and skills to design questionnaire, interview or focus group guide
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
               Place an Order
             </Link>
-            <Link href="/contact-us" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
               Contact Us
             </Link>
           </div>
@@ -494,7 +494,7 @@ export default function ToolDevelopmentPage() {
           <p style={{ opacity: 0.9, marginBottom: "2rem", lineHeight: 1.7 }}>
             Invest in your career by availing survey tool and questionnaire development help from qualified researchers
           </p>
-          <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
+          <Link href="/order/" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
             Get Started Now
           </Link>
         </div>

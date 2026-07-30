@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Exam Notes Writing Service | Exam Revision Note Writers Help UK",
   description: "Our Exam notes would highlight and organize the key concepts or theories in a topic, tips and hints for the final stage of preparation.",
   keywords: "Exam Revision Services,Exam Notes Writing Service in UK",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/exam-notes" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/exam-notes/" },
 };
 
 const faqs = [

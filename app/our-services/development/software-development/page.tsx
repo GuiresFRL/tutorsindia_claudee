@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Academic Software Development Service UK India",
   description: "Academic Software Application Development Service. Our team of software experts who have the capability to handle a range of programming tools includes C, C++, Java, etc.",
   keywords: "Software Application Development Service,Educational Software and Application Development,Custom Software Application Development Services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/software-development" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/software-development/" },
 };
 
 const faqs = [

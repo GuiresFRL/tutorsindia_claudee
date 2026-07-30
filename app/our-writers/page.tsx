@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Writers — PhD & Masters Experts",
   description: "Tutors India's 2000+ expert writers hold PhD or Masters degrees from top UK and US universities. Native English speakers with 5+ years research experience.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-writers" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-writers/" },
 };
 
 const countries = ["United States", "United Kingdom", "Australia", "Canada", "New Zealand", "Germany", "France", "Russia", "Ukraine", "India"];

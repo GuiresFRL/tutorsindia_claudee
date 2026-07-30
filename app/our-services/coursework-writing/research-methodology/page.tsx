@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Expert Research Methodology Writing Services",
   description: "Research Methodology Service Help UK. We offer a wide range of dissertation methodology writing services such as Qualitative Research Grounded theory designs etc.",
   keywords: "research methodology writing service, research methodology academic writing, research methodology writing help, research methodology thesis writing, phd dissertation methodology writing help, phd research methodology writing help, uk dissertation research methodology writing service, custom research methodology writing service, qualitative research methodology writing service, quantitative research methodology writing service",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/research-methodology" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/research-methodology/" },
 };
 
 const faqs = [

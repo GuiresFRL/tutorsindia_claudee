@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "UK Annotated Bibliography Writing Services",
   description: "The UK Annotated Bibliography Writing Help. We ensure that annotation would inform the reader of the relevance quality of the sources and accuracy.",
   keywords: "Cheap Annotated Bibliography Writing UK,UK Top Rated Annotated Bibliography Writing Services,Need Help Writing An Annotated Bibliography",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/annotated-bibliography" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/annotated-bibliography/" },
 };
 
 const faqs = [

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Medical Dissertation Writing Service | Medical Manuscript Writing Help UK",
   description: "Medical Dissertation writing Services. Unique medical writing services includes clinical research pharmacology Public Health nutrition and food based clinical trials",
   keywords: "medical thesis writing services, medical research paper writing service, medical manuscript writing service, medical dissertation writing help, medical manuscript writing, dissertation help india,",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/medical-writing" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/medical-writing/" },
 };
 
 const faqs = [

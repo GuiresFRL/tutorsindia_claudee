@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Masters Dissertation & MBA Thesis Rewriting Services UK",
   description: "Dissertation Resitting or Resubmission Writing Help UK. Struggling to handle resit dissertation and looking to clear in the next attempt. You’ve Reached Right spot.",
   keywords: "Doing an assignment resit?,Dissertation resit,Resit dissertation help",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/resit-dissertation" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/resit-dissertation/" },
 };
 
 const resitFaqs = [
@@ -186,7 +186,7 @@ export default function ResitDissertationPage() {
             Are you resubmitting your dissertation? Struggling to handle resit dissertation and looking to clear in the second attempt. Then You&apos;ve Certainly Reached the Right Place! Tutors India offers exclusive support to rework completely your dissertation based on the supervisor comments and as per the university guidelines. We provide full, or part dissertation is reworking assistance to complete your master&apos;s dissertation submission successfully.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/contact-us" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
           </div>
         </div>
       </section>
@@ -679,7 +679,7 @@ export default function ResitDissertationPage() {
           Invest in your career by availing resit dissertation help from qualified UK researchers.
         </p>
         <Link
-          href="/contact-us"
+          href="/contact-us/"
           style={{
             display: "inline-block",
             background: "#e87722",

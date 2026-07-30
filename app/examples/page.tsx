@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Free Academic Writing Examples",
   description: "Browse free academic writing examples across all major subjects. Expert-written samples demonstrating proper structure, methodology, and referencing.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/examples" },
+  alternates: { canonical: "https://www.tutorsindia.com/examples/" },
 };
 
 export default async function ExamplesPage() {

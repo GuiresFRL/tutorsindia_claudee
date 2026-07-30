@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Business Case Study Writing Services UK | Tutors India",
   description: "We write case reports from a GCSE-level essay to a PhD-level model, including planning, statistical analysis, proofreading.",
   keywords: "Cheap Case Study Writing Services and Help UK,Case Study Writing Services,Custom Case Study Writing Services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/case-report-writing-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/case-report-writing-services/" },
 };
 
 const faqs = [

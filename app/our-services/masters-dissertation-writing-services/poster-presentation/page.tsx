@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Poster Presentation Services | MBA PowerPoint PPT Help UK",
   description: "Academic & Research Posters presentation help. Are your stuck in your poster presentation? Get our professional help to complete your poster with perfection.",
   keywords: "Scientific poster presentation services,Scientific Poster Design Services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/poster-presentation" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/poster-presentation/" },
 };
 
 const faqs = [
@@ -221,7 +221,7 @@ export default function PosterPresentationPage() {
             We offer full end-to-end assistance to developing your academic poster presentation that stands apart.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/contact-us" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
           </div>
         </div>
       </section>
@@ -571,7 +571,7 @@ export default function PosterPresentationPage() {
           Invest in your career by availing language editing help from the UK &amp; US Qualified researchers.
         </p>
         <Link
-          href="/contact-us"
+          href="/contact-us/"
           style={{
             display: "inline-block",
             background: "#e87722",

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Expert guides on dissertation writing, research methodology, referencing, statistical analysis and academic success from Tutors India's PhD-qualified team.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/blog" },
+  alternates: { canonical: "https://www.tutorsindia.com/blog/" },
 };
 
 export const revalidate = 0;

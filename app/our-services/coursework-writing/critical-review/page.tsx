@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Critical Review Writing Service | Critical Analysis Writing Help UK",
   description: "Professional critical review writing services of assignment essays or articles. We write a critical review with careful analysis of an argument.",
   keywords: "Guidelines for Critical Writing Assignments,Critical Analysis,critical writing",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/critical-review" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/critical-review/" },
 };
 
 const faqs = [

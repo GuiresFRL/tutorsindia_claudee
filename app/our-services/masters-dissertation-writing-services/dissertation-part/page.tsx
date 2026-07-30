@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Expert Master's Chapter-wise Dissertation Writing Services",
   description: "Masters Dissertation Part or chapter-wise writing help. Looking to avail only to write part dissertation such as introduction literature review methodology etc.",
   keywords: "chapterwise Mentoring Services,Chapter-wise Assistance for Dissertation",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-part" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-part/" },
 };
 
 const partFaqs = [
@@ -220,7 +220,7 @@ export default function DissertationPartPage() {
             Then You&apos;ve Certainly Reached the Right Place.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/contact-us" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
           </div>
         </div>
       </section>
@@ -695,7 +695,7 @@ export default function DissertationPartPage() {
           Invest in your career by availing language editing help from the UK &amp; the US Qualified researchers.
         </p>
         <Link
-          href="/contact-us"
+          href="/contact-us/"
           style={{
             display: "inline-block",
             background: "#e87722",

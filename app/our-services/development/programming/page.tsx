@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Programming Dissertation Assignment Help UK India",
   description: "Our programmers and developers provide full assistance in completing your computer science engineering research.",
   keywords: "Assignment Help,Computer Science Dissertation Writing Services uk",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/programming" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/programming/" },
 };
 
 const faqs = [

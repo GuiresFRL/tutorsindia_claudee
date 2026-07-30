@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Research Proposal Writing Services | Tutors India",
   description: "Our expert writers offer research proposal writing services, ensuring your ideas are clearly communicated and aligned with academic or funding requirements.",
   keywords: "phd research proposal writing services, phd research proposal writing service uk, phd thesis proposal writing services, phd thesis proposal writing help, phd dissertation proposal writing services, phd dissertation proposal writing assistance, phd research proposal writers in uk, Research Proposal Writing Services, Dissertation Proposal Help, Research Proposal Writing Help",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-research-proposal" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-research-proposal/" },
 };
 
 const faqs = [

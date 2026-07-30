@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Ask an Expert — Free Academic Q&A in 24 Hours",
   description: "Ask any academic question and receive a free expert answer within 24 hours. Browse Q&A across Accounts, Statistics, Management, Nursing, Economics, and Psychology.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/ask-an-expert" },
+  alternates: { canonical: "https://www.tutorsindia.com/ask-an-expert/" },
 };
 
 export default function AskAnExpertPage() {

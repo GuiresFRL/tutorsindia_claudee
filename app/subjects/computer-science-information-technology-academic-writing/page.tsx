@@ -7,7 +7,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Computer Science & IT Writing Help",
   description: "Computer Science and IT academic writing help for UG, Master's and PhD students. Dissertations, coding projects and manuscripts by experts in AI, data science and software engineering.",
-  alternates: { canonical: "https://www.tutorsindia.com/subjects/computer-science-information-technology-academic-writing" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/computer-science-information-technology-academic-writing/" },
 };
 
 const faqs = [
@@ -150,7 +150,7 @@ export default function ComputerScienceITWritingPage() {
             <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 28, opacity: 0.9 }}>
               The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their Computer Science &amp; IT related research paper writing successfully.
             </p>
-            <Link href="/order" style={{ background: "#f90", color: "#fff", padding: "13px 30px", borderRadius: 6, fontWeight: 700, textDecoration: "none", display: "inline-block" }}>
+            <Link href="/order/" style={{ background: "#f90", color: "#fff", padding: "13px 30px", borderRadius: 6, fontWeight: 700, textDecoration: "none", display: "inline-block" }}>
               Order Now
             </Link>
           </div>
@@ -328,7 +328,7 @@ export default function ComputerScienceITWritingPage() {
         <p style={{ color: "#fff", fontSize: 16, marginBottom: 28 }}>
           Invest in your career by availing language editing help from the UK &amp; the US Qualified researchers
         </p>
-        <Link href="/order" style={{ background: "#1a2a6c", color: "#fff", padding: "14px 36px", borderRadius: 6, fontWeight: 700, textDecoration: "none", display: "inline-block" }}>
+        <Link href="/order/" style={{ background: "#1a2a6c", color: "#fff", padding: "14px 36px", borderRadius: 6, fontWeight: 700, textDecoration: "none", display: "inline-block" }}>
           Order Now
         </Link>
       </section>

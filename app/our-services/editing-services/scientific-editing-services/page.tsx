@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Scientific Editing Writing Services | Clinical & Medical Dissertation",
   description: "Scientific and technical Editing Service. We offers professional and complete scientific editing assistance to submit your papers with perfection and confidence",
   keywords: "Scientific Editing Writing Services, Scientific and technical Editing Service, scientific research paper editing",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/scientific-editing-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/scientific-editing-services/" },
 };
 
 const faqs = [
@@ -83,8 +83,8 @@ export default function ScientificEditingPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ fontSize: '0.82rem', color: '#a0b8e0', marginBottom: '14px' }}>
             <Link href="/" style={{ color: '#a0b8e0' }}>Home</Link>{' / '}
-            <Link href="/our-services" style={{ color: '#a0b8e0' }}>Our Services</Link>{' / '}
-            <Link href="/our-services/editing-services" style={{ color: '#a0b8e0' }}>Editing Services</Link>{' / '}
+            <Link href="/our-services/" style={{ color: '#a0b8e0' }}>Our Services</Link>{' / '}
+            <Link href="/our-services/editing-services/" style={{ color: '#a0b8e0' }}>Editing Services</Link>{' / '}
             <span style={{ color: '#fff' }}>Scientific Editing Services</span>
           </div>
           <h1 style={{ fontFamily: 'Merriweather,serif', fontSize: 'clamp(1.6rem,3vw,2.4rem)', marginBottom: '18px', lineHeight: 1.3 }}>
@@ -95,8 +95,8 @@ export default function ScientificEditingPage() {
           </p>
           <p style={{ color: '#c5d5f0', fontStyle: 'italic', marginBottom: '14px' }}>Then You&apos;ve Certainly Reached the Right place</p>
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '24px' }}>
-            <Link href="/contact-us" style={{ padding: '12px 32px', background: '#e87722', color: '#fff', borderRadius: '5px', fontWeight: 700, fontSize: '0.95rem' }}>Place an Order</Link>
-            <Link href="/brochure" style={{ padding: '12px 32px', border: '2px solid rgba(255,255,255,0.5)', color: '#fff', borderRadius: '5px', fontWeight: 600, fontSize: '0.95rem' }}>Brochure</Link>
+            <Link href="/contact-us/" style={{ padding: '12px 32px', background: '#e87722', color: '#fff', borderRadius: '5px', fontWeight: 700, fontSize: '0.95rem' }}>Place an Order</Link>
+            <Link href="/brochure/" style={{ padding: '12px 32px', border: '2px solid rgba(255,255,255,0.5)', color: '#fff', borderRadius: '5px', fontWeight: 600, fontSize: '0.95rem' }}>Brochure</Link>
           </div>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function ScientificEditingPage() {
             </div>
           </div>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <a href="/contact-us" style={{ background: '#e87722', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem', display: 'inline-block' }}>ORDER NOW</a>
+            <a href="/contact-us/" style={{ background: '#e87722', color: '#fff', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem', display: 'inline-block' }}>ORDER NOW</a>
           </div>
         </div>
       </section>

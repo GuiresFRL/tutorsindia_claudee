@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Big Data Analytics for Academic—Full-time Program",
   description: "Big Data Analytics Services for Research Projects. Our team of experts has the capability to handle a wide range of technologies such as Hadoop and MapReduce.",
   keywords: "Big Data Analytics,Online Data Analytics Master's Degree",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/big-data-analytics" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/big-data-analytics/" },
 };
 
 const faqs = [

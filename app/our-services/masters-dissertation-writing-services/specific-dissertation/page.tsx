@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Masters & MBA Specific Dissertation/Thesis Writing Help UK",
   description: "Custom Specific Dissertations are written based on your university guidelines-qualitative or quantitative Business Plan Meta-Analysis and Systematic Review.",
   keywords: "Dissertation Writing Services UK,Writing a dissertation,specific dissertation,Urgent Dissertation Help",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/specific-dissertation" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/specific-dissertation/" },
 };
 
 const specificTypes = [

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "PhD Viva Voce Presentation Services | DBA Powerpoint Poster PPT Help UK",
   description: "Guidance on preparing for your Public Viva-Voce Examination and Training Help. We employ detailed approach to face your viva-voce training efficiently.",
   keywords: "PhD Viva voce Presentation,Phd viva-voce presentation on work,How to survive a PhD viva",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-viva-voice" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-viva-voice/" },
 };
 
 const faqs = [

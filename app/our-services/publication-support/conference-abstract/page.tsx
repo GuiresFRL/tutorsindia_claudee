@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Dissertation Abstract Writing Service | Thesis Abstract Writing Help UK",
   description: "Abstract Writing Help. The first opinion about your work. We assist you with distinct conference abstracts in limited time.",
   keywords: "How to write an abstract for a manuscript,PhD,Masters,Manuscript,Publication",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-abstract" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-abstract/" },
 };
 
 const faqs = [

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Animation dissertation assignment writing help",
   description: "2D & 3D Animation and Multimedia Services. Our animation design services are exclusively for students pursuing mechanical, architectural, and electrical engineering.",
   keywords: "How to write an Animation Essay,animation services,Animation Dissertation Writing Services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/animation-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/animation-services/" },
 };
 
 const faqs = [

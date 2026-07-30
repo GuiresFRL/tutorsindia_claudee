@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "E-Learning—Design & Content Development for UK",
   description: "E-Learning Content Development for Academic Support. We write high impact and engaging custom and interactive content for PhD dissertation- Elearning framework and models",
   keywords: "PhD Tutors In UK,online tutoring services,Online Dissertation Writing Tutors",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/e-learning-content-development" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/e-learning-content-development/" },
 };
 
 const faqs = [
@@ -102,8 +102,8 @@ export default function ELearningContentDevelopmentPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
-            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
-            <Link href="/our-services/development" style={{ color: "#a0b8e0" }}>Development</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/development/" style={{ color: "#a0b8e0" }}>Development</Link>{" / "}
             <span style={{ color: "#fff" }}>E-Learning Content Development</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
@@ -113,10 +113,10 @@ export default function ELearningContentDevelopmentPage() {
             Are you looking for high impact and engaging custom and interactive content? Apart a team of professional expert who can handle eLearning content development or dissertation? Your eLearning dissertation is written by qualified and experienced researchers from the US &amp; UK.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
               Order Now
             </Link>
-            <Link href="/contact-us" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>
               Contact Us
             </Link>
           </div>
@@ -488,7 +488,7 @@ export default function ELearningContentDevelopmentPage() {
           <p style={{ opacity: 0.9, marginBottom: "2rem", lineHeight: 1.7 }}>
             Invest in your career by availing eLearning dissertation writing help from the UK &amp; the US Qualified researchers
           </p>
-          <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
+          <Link href="/order/" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
             Get Started Now
           </Link>
         </div>

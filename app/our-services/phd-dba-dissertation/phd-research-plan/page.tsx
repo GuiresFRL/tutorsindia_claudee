@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "PhD Dissertation Research Planning Services | DBA Research Planning Help UK",
   description: "Professional PhD Research Planning. We help students to develop Research plan consists of research task content oriented framework and scope of research work.",
   keywords: "Research Planning & Writing,Writing a Good PhD Research Proposal",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-research-plan" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-research-plan/" },
 };
 
 const faqs = [

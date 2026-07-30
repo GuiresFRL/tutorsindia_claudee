@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Full PhD Dissertation Writing Services",
   description: "Tutors India provides complete dissertation writing services for PhD, from in-depth research to final writing. Our experts ensure high-quality thesis, tailored for your academic success.",
   keywords: "phd full dissertation writing services, phd full thesis writing help, phd complete dissertation writing services, phd complete thesis writing help, phd dissertation writing help uk, phd dissertation writing support uk, phd writing service uk, phd complete thesis writing service",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-full-dissertation" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-full-dissertation/" },
 };
 
 const faqs = [

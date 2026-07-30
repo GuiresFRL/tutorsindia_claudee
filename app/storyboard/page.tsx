@@ -6,7 +6,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "StoryBoard",
   description: "Tutors India storyboard — visual showcase of our dissertation, data analysis, essay writing, and research services.",
-  alternates: { canonical: "https://www.tutorsindia.com/storyboard" },
+  alternates: { canonical: "https://www.tutorsindia.com/storyboard/" },
 };
 
 const BASE = "https://www.tutorsindia.net/wp-content/uploads";

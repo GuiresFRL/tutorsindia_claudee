@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Professional CV Writing Services UK | Resume Writing Help",
   description: "Professional Curriculum Vitae (CV) Personal Statement cover letter & LinkedIn Profile Writing Services. we assist for CV & Cover Letter Writing Service",
   keywords: "CV Writing services, Resume Writing services, LinkedIn Profile Writer",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/cv-writing" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/cv-writing/" },
 };
 
 const cvIncludes = [

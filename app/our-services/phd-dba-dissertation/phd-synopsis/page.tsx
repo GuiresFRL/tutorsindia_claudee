@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "PhD Dissertation Synopsis Writing Services | DBA Synopsis Writing UK",
   description: "PhD Synopsis Writing Services. We helps you in getting your complete thesis synopsis approval making sure that all the required details are in a proper manner.",
   keywords: "Thesis Synopsis Writing, help for PhD Completing Synopsis",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-synopsis" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-synopsis/" },
 };
 
 const faqs = [

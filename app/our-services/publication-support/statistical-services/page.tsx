@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Statistical Data Analysis Services | Statistics Data Analysis Help UK",
   description: "We offer statistical services and apply a range of statistical techniques, including modern statistical computing, frequentist methods, and the Bayesian approach.",
   keywords: "Statistical Services for Dissertations,Statistical Consulting and Data Analysis Services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/statistical-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/statistical-services/" },
 };
 
 const faqs = [

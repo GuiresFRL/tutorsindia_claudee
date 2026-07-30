@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Computer Science Dissertation Writing Service | IT Thesis Writing Help UK",
   description: "Computer Science & Information Technology Dissertation writing Help. We deliver exceptional work where your dissertation will deserve for publication.",
   keywords: "Journal of Computer Science and Technology ,Get Engineering Dissertation publication support",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/computer-science-engineering-cse-and-it" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/computer-science-engineering-cse-and-it/" },
 };
 
 const faqs = [

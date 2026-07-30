@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Thank You",
   description: "Your enquiry has been received. Our team will contact you within 30 minutes.",
-  alternates: { canonical: "https://www.tutorsindia.com/thank-you" },
+  alternates: { canonical: "https://www.tutorsindia.com/thank-you/" },
 };
 
 export default function ThankYouPage() {

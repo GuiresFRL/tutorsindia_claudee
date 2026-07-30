@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Academic & Research Transcription Services India UK",
   description: "Academic and Dissertation Transcription Services. We Transcribe your qualitative textual data obtained through interview guide and focus group discussions.",
   keywords: "Academic Research Transcription Services,Transcription Services for Students and Researchers",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/transcription-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/transcription-services/" },
 };
 
 const faqs = [
@@ -99,8 +99,8 @@ export default function TranscriptionServicesPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
-            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
-            <Link href="/our-services/editing-services" style={{ color: "#a0b8e0" }}>Editing Services</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/editing-services/" style={{ color: "#a0b8e0" }}>Editing Services</Link>{" / "}
             <span style={{ color: "#fff" }}>Transcription Services</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
@@ -113,8 +113,8 @@ export default function TranscriptionServicesPage() {
             Academic &amp; Research Transcription Services are carried out by qualified and experienced researchers from the US &amp; UK.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Place an Order</Link>
-            <Link href="/brochure" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Brochure</Link>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Place an Order</Link>
+            <Link href="/brochure/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Brochure</Link>
           </div>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function TranscriptionServicesPage() {
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#555", marginBottom: "1.25rem" }}>
             Transcribers are qualified an experienced researcher from the US &amp; UK. Our transcribers are native English speakers and trained for the specific transcription service, Subject-Matter Expertise, experienced Professionals and Language Experts for Multilingual Transcription
           </p>
-          <a href="/our-process" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our Process →</a>
+          <a href="/our-process/" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our Process →</a>
         </div>
       </section>
 
@@ -188,7 +188,7 @@ export default function TranscriptionServicesPage() {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "2rem" }}>
-            <a href="/order" style={{ background: "#e87722", color: "#fff", padding: "0.75rem 2.5rem", borderRadius: 4, fontWeight: 700, textDecoration: "none", display: "inline-block" }}>ORDER NOW</a>
+            <a href="/order/" style={{ background: "#e87722", color: "#fff", padding: "0.75rem 2.5rem", borderRadius: 4, fontWeight: 700, textDecoration: "none", display: "inline-block" }}>ORDER NOW</a>
           </div>
         </div>
       </section>
@@ -208,7 +208,7 @@ export default function TranscriptionServicesPage() {
             ))}
           </div>
           <div style={{ marginTop: "1.5rem" }}>
-            <a href="/our-writers" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our Writers →</a>
+            <a href="/our-writers/" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our Writers →</a>
           </div>
         </div>
       </section>
@@ -334,7 +334,7 @@ export default function TranscriptionServicesPage() {
           <p style={{ fontSize: "1.05rem", lineHeight: 1.8, color: "#333", marginBottom: "1.5rem" }}>
             Qualified researchers, unlimited revision, only peer-reviewed articles, plagiarism report, 24/7 support, 100% match with the requirement and on time delivery
           </p>
-          <a href="/our-guarantees" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our Guarantees →</a>
+          <a href="/our-guarantees/" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our Guarantees →</a>
         </div>
       </section>
 
@@ -448,7 +448,7 @@ export default function TranscriptionServicesPage() {
             Tutors India has capability and skills to handle subjects across the field. We chose qualified and experienced subject specific expertise while you order your Ph.D. or Master's dissertation. We have more than 2000+ expertise working across the world who can handle arts, literature, sciences, engineering or medicine.
           </p>
           <div style={{ marginTop: "1.5rem" }}>
-            <a href="/our-writers" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our writers →</a>
+            <a href="/our-writers/" style={{ color: "#e87722", fontWeight: 700, textDecoration: "none" }}>Our writers →</a>
           </div>
         </div>
       </section>
@@ -472,7 +472,7 @@ export default function TranscriptionServicesPage() {
           <p style={{ fontSize: "1.1rem", opacity: 0.9, marginBottom: "2rem" }}>
             Invest in your career by availing transcription help from the UK &amp; the US Qualified researchers
           </p>
-          <a href="/order" style={{ background: "#e87722", color: "#fff", padding: "0.85rem 2.5rem", borderRadius: 4, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>Order Now</a>
+          <a href="/order/" style={{ background: "#e87722", color: "#fff", padding: "0.85rem 2.5rem", borderRadius: 4, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>Order Now</a>
         </div>
       </section>
     </>

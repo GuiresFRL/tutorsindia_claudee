@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "PhD & DBA Dissertation Rewriting Services UK",
   description: "Complete Resit PhD Dissertation rewriting Help UK. We review feedback, check Rubric Scale, Line by Line & Chapter wise Scrutinization and relevance Sources.",
   keywords: "Submission and Resubmission of Thesis,Submit your thesis,Resit dissertation help",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-rework" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/phd-dba-dissertation/phd-dissertation-rework/" },
 };
 
 const faqs = [

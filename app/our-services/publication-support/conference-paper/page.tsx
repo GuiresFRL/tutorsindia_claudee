@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Conference Paper Writing Service | Seminar Paper Writing Help UK",
   description: "Conference and seminar paper writing help. We provide manuscript and seminar paper writing help that assures that the paper is accepted in a specific journal.",
   keywords: "seminar paper development support services, conference development support services, seminar paper development help, conference development help, seminar paper development service",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-paper" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/conference-paper/" },
 };
 
 const faqs = [

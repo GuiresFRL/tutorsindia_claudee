@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Assignment Directory",
   description: "Browse Tutors India's full directory of academic writing services — dissertations, coursework, publication support, editing, development, and more.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/assignment-directory" },
+  alternates: { canonical: "https://www.tutorsindia.com/assignment-directory/" },
 };
 
 const categories = [

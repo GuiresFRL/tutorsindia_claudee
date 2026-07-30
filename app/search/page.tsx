@@ -79,7 +79,7 @@ export default async function SearchPage({
       {query && totalResults === 0 && (
         <p style={{ color: "#666" }}>
           No results found for &ldquo;{query}&rdquo;. Try a different keyword, or{" "}
-          <Link href="/contact-us" style={{ color: "#e87722", fontWeight: 600 }}>contact us</Link> for help.
+          <Link href="/contact-us/" style={{ color: "#e87722", fontWeight: 600 }}>contact us</Link> for help.
         </p>
       )}
 

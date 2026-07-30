@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Clinical Biostatistics Consulting Service | Biometric Publication Help UK",
   description: "Our biostatisticians are experts in handling Bayesian methods, causal inference, genetic hierarchical models, phylogeny, and missing data analysis.",
   keywords: "Biometric Services,Biostatistics services,Biostatistics and Clinical Programming Services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/biostatistics-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/biostatistics-services/" },
 };
 
 const faqs = [

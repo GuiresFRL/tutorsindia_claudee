@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Reflective Report Writing Services | Analytical Report Writing Help UK",
   description: "Our UK Reflective Report Writing Service strictly follows guidelines. We write a complete Reflective Report that would convince your faculty.",
   keywords: "Reflective Report Writing Service in UK,Reflective report writing,1st class reflective reports",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/reflective-report" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/coursework-writing/reflective-report/" },
 };
 
 const faqs = [

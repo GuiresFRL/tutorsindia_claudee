@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Copy Editing and Rewriting Service for your Dissertation",
   description: "Heavy Copyediting and Rewriting Service. We correct all errors and infelicities in grammar, syntax, and usage.",
   keywords: "Professional Editing services,Dissertation copy editing help,Dissertation editing services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/technical-editing" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/technical-editing/" },
 };
 
 const faqs = [
@@ -102,8 +102,8 @@ export default function TechnicalEditingPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
-            <Link href="/our-services" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
-            <Link href="/our-services/editing-services" style={{ color: "#a0b8e0" }}>Editing Services</Link>{" / "}
+            <Link href="/our-services/" style={{ color: "#a0b8e0" }}>Our Services</Link>{" / "}
+            <Link href="/our-services/editing-services/" style={{ color: "#a0b8e0" }}>Editing Services</Link>{" / "}
             <span style={{ color: "#fff" }}>Technical Editing</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
@@ -113,8 +113,8 @@ export default function TechnicalEditingPage() {
             Are you worried about the language quality of your paper presentation? Would you like to obtain professional help to complete your language editing? You have reached the right destination. Tutors India offers professional and complete language editing assistance to submit your papers with perfection and confidence.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/order-now" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Order Now</Link>
-            <Link href="/contact-us" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Contact Us</Link>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Order Now</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Contact Us</Link>
           </div>
         </div>
       </section>
@@ -460,7 +460,7 @@ export default function TechnicalEditingPage() {
           <p style={{ opacity: 0.9, marginBottom: "2rem", lineHeight: 1.7 }}>
             Invest in your career by availing language editing help from the UK &amp; the US Qualified researchers
           </p>
-          <Link href="/order" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
+          <Link href="/order/" style={{ background: "#e87722", color: "#fff", padding: ".875rem 2.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
             Get Started Now
           </Link>
         </div>

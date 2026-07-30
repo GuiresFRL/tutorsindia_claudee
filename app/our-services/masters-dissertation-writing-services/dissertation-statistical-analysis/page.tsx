@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Expert Statistical Analysis Services ",
   description: "We offer statistical analysis services using advanced tools to transform your raw data into meaningful results for research purposes.",
   keywords: "Dissertation statistical analysis,Statistical Services for Dissertations,Dissertation Statistics Help",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/" },
 };
 
 const faqs = [
@@ -224,7 +224,7 @@ export default function DissertationStatisticalAnalysisPage() {
             Your dissertation Textual &amp; Statistical Analysis are done by the qualified and experienced Statisticians from the US &amp; UK.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/contact-us" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
+            <Link href="/contact-us/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get Expert Help Now</Link>
           </div>
         </div>
       </section>
@@ -586,7 +586,7 @@ export default function DissertationStatisticalAnalysisPage() {
           Invest in your career by availing dissertation statistical analysis help from qualified UK &amp; US researchers.
         </p>
         <Link
-          href="/contact-us"
+          href="/contact-us/"
           style={{
             display: "inline-block",
             background: "#e87722",

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Latest Research Trends by Subject",
   description: "Stay current with the latest research trends across all academic disciplines. Expert insights into emerging methodologies, innovations, and research directions.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/latest-research-trends" },
+  alternates: { canonical: "https://www.tutorsindia.com/latest-research-trends/" },
 };
 
 export default async function LatestResearchTrendsPage() {

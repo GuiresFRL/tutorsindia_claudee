@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Statistical Analysis Q&A",
   description: "Expert answers to common statistical analysis questions — test selection, hypothesis formulation, Likert scales, regression, SEM, Bayesian analysis, and more.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/coursework/statistical-analysis" },
+  alternates: { canonical: "https://www.tutorsindia.com/coursework/statistical-analysis/" },
 };
 
 const qas = [

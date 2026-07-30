@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Our Quality Procedures",
   description: "Learn about Tutors India's rigorous quality assurance procedures including plagiarism checks, editing, proofreading, and dual quality reviews.",
   
-  alternates: { canonical: "https://www.tutorsindia.com/our-quality-procedures" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-quality-procedures/" },
 };
 
 const steps = [

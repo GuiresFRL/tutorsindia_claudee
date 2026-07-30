@@ -8,7 +8,7 @@ import { siteInfo } from "@/lib/data/site";
 export const metadata: Metadata = {
   title: "Masters and MBA Research Writing Services | Tutors India",
   description: "Get expert Master's Research Writing Services from Tutors India. We support topic selection, proposals, dissertations, assignment & publication guidance.",
-  alternates: { canonical: "https://www.tutorsindia.com" },
+  alternates: { canonical: "https://www.tutorsindia.com/" },
 };
 
 const guarantees = [

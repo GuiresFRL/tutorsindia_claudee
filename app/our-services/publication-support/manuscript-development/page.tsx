@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Expert Manuscript Writing & Editing Services",
   description: "Tutors India provides high quality manuscript development writing services & all kind of academic manuscript editing service & help for UK PhD & Masters students.",
   keywords: "manuscript writing services, medical manuscript writing services, medical manuscript editing service, manuscript writing help, manuscript development services, manuscript editing services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/manuscript-development" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/manuscript-development/" },
 };
 
 const faqs = [

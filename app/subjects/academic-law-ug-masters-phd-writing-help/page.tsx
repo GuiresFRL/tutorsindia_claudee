@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/ui/TestimonialSlider";
 export const metadata: Metadata = {
   title: "Academic Law Writing Help | UG, Masters, PhD",
   description: "Expert Academic Law Writing for UG, Masters and PhD students. Commercial law, criminal law, international law, constitutional law. Harvard & OSCOLA. Tutors India.",
-  alternates: { canonical: "https://www.tutorsindia.com/subjects/academic-law-ug-masters-phd-writing-help" },
+  alternates: { canonical: "https://www.tutorsindia.com/subjects/academic-law-ug-masters-phd-writing-help/" },
 };
 
 const faqs = [

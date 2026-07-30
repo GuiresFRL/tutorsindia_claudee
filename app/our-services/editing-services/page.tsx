@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Academic Paper Editing: Essays, Theses, Dissertations",
   description: "We offer a wide range of services such as language and technical editing, formatting services, grand proposal writing, etc.",
   keywords: "Academic Editing,Academic Editing by Professional Editors,Academic Editing Services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/editing-services/" },
 };
 
 const services = [

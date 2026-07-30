@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Master's Dissertation Writing Services in UK, UAE",
   description: "Tutors India has skilled and talented UK writers who work with your UK master's and MBA projects and assist you at all the stages of your dissertation writing.",
   keywords: "masters dissertation writing services, masters thesis writing services, masters dissertation writing help, masters dissertation writing services in uk, masters thesis writing help, masters dissertation writing guide, masters dissertation writing assistance",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/" },
 };
 
 const services = [

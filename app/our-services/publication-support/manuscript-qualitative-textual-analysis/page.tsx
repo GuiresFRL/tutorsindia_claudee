@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Manuscript Statistical Analysis Service | Manuscript Statistics Help UK",
   description: "Preparing a manuscript statistical report needs patience and precise data. Whether it is for medical, engineering, or management.",
   keywords: "Manuscript Textual analysis,Qualitative analysis,Quantitative analysis,Statistical analysis help",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/manuscript-qualitative-textual-analysis" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/manuscript-qualitative-textual-analysis/" },
 };
 
 const faqs = [

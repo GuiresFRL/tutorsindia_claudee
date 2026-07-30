@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Textbook Content Writing Services | Academic Expert",
   description: "Tutors India provide content writing services & write text book with creative ideas that would attract publishers & helps to complete your textbook writing with UK experts",
   keywords: "content writing services, cheap content writing services, professional content writing services, professional content writers, textbook writing services, book writing services uk, academic writing services uk, professional academic writing services",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/text-book-writing" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/publication-support/text-book-writing/" },
 };
 
 const faqs = [

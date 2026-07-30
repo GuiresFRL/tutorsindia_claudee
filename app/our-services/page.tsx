@@ -5,7 +5,7 @@ import { serviceCategories } from "@/lib/data/services";
 export const metadata: Metadata = {
   title: "Our Services — Academic Writing & Editing",
   description: "Comprehensive academic services including Masters & PhD dissertation writing, coursework, editing, publication support and development from Tutors India.",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/" },
 };
 
 export default function OurServicesPage() {

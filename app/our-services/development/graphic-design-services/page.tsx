@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Graphic design dissertation writing services",
   description: "Illustration and Redrawing Service for your Academic Career. A clear illustration of technical or scientific drawing can illustrate an in-depth concept easily.",
   keywords: "Dissertation subjects graphic design,Graphic design thesis",
-  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/graphic-design-services" },
+  alternates: { canonical: "https://www.tutorsindia.com/our-services/development/graphic-design-services/" },
 };
 
 const faqs = [
