@@ -105,6 +105,7 @@ export const navigation: NavItem[] = [
           { label: "Formatting Service", href: "/our-services/editing-services/formatting-service/" },
           { label: "Scientific Editing", href: "/our-services/editing-services/scientific-editing-services/" },
           { label: "Grant Proposal Writing", href: "/our-services/editing-services/grant-proposal-writing/" },
+          { label: "Peer Review Submissions", href: "/our-services/editing-services/peer-review-submissions/" },
         ],
       },
     ],
