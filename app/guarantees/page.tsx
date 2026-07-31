@@ -147,7 +147,7 @@ export default function GuaranteesPage() {
 
         <div style={{ marginTop: "40px", background: "var(--navy)", color: "#fff", borderRadius: "12px", padding: "32px", textAlign: "center" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "12px" }}>Ready to Experience Our Guarantees?</h2>
-          <p style={{ color: "#c5d5f0", marginBottom: "20px" }}>Order today and see why 2,00,000+ students trust Tutors India.</p>
+          <p style={{ color: "#c5d5f0", marginBottom: "20px" }}>Order today and see why 20000+ students trust Tutors India.</p>
           <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "10px 28px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Order Now</Link>
             <Link href="/contact-us/" style={{ padding: "10px 28px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>

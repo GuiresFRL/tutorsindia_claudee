@@ -574,7 +574,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             {[
               "2000+ PhD & Masters qualified writers",
               "25+ years of academic expertise",
-              "Served 2,00,000+ scholars worldwide",
+              "Served 20000+ scholars worldwide",
               "Less than 5% plagiarism guaranteed",
               "Unlimited free revisions",
               "95–98% on-time delivery rate",
@@ -614,7 +614,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section style={{ background: "linear-gradient(135deg, var(--navy) 0%, #2563b0 100%)", color: "#fff", padding: "48px 20px", textAlign: "center" }}>
         <h2 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "10px" }}>Ready to Get Started?</h2>
         <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.85)", marginBottom: "24px", maxWidth: "600px", margin: "0 auto 24px" }}>
-          Join 2,00,000+ scholars who have trusted Tutors India with their academic success since 2001. Response within 30 minutes.
+          Join 20000+ scholars who have trusted Tutors India with their academic success since 2001. Response within 30 minutes.
         </p>
         <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 32px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>

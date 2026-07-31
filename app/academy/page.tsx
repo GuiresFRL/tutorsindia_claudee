@@ -208,7 +208,7 @@ export default async function AcademyPage({ searchParams }: Props) {
               Need Personal Academic Support?
             </h2>
             <p style={{ color: "#c5d5f0", fontSize: "0.86rem" }}>
-              2,00,000+ scholars helped since 2001. Dissertations, assignments, statistical analysis &amp; editing.
+              20000+ scholars helped since 2001. Dissertations, assignments, statistical analysis &amp; editing.
             </p>
           </div>
           <div className="blog-cta-buttons">

@@ -210,7 +210,7 @@ export default async function AcademyPostPage({ params }: Props) {
           Need Expert Academic Support?
         </h2>
         <p style={{ color: "#c5d5f0", fontSize: "0.93rem", marginBottom: "20px" }}>
-          Join 2,00,000+ scholars who trusted Tutors India. Dissertations, assignments, statistical analysis &amp; editing.
+          Join 20000+ scholars who trusted Tutors India. Dissertations, assignments, statistical analysis &amp; editing.
         </p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 30px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>

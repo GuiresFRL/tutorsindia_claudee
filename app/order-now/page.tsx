@@ -50,7 +50,7 @@ export default function OrderNowPage() {
             <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.2rem)", marginBottom: "14px" }}>Order Your Project</h1>
             <p style={{ color: "#c5d5f0", fontSize: "1.05rem", marginBottom: "10px" }}>Invest in Your Career — Place Your Order Today</p>
             <p style={{ color: "#a0b8e0", fontSize: "0.92rem", lineHeight: 1.75, maxWidth: "660px", marginBottom: "22px" }}>
-              Join 2,00,000+ scholars who have trusted Tutors India with their academic success since 2001. You will get a reply within 30 minutes which enables you to place your order quickly without any delay in submissions.
+              Join 20000+ scholars who have trusted Tutors India with their academic success since 2001. You will get a reply within 30 minutes which enables you to place your order quickly without any delay in submissions.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/contact-us/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Send Enquiry Now</Link>

@@ -20,7 +20,7 @@ const selfServiceLinks = [
   { icon: "💡", title: "Ask an Expert", desc: "Free consultation with our PhD-qualified subject matter experts.", href: "/ask-an-expert/" },
   { icon: "💰", title: "Pricing", desc: "View our transparent pricing for all academic writing services.", href: "/pricing/" },
   { icon: "📖", title: "Help Guide", desc: "Academic writing guides and dissertation resources for students.", href: "/help-guide/" },
-  { icon: "⭐", title: "Testimonials", desc: "Read real reviews from 2,00,000+ satisfied scholars worldwide.", href: "/testimonials/" },
+  { icon: "⭐", title: "Testimonials", desc: "Read real reviews from 20000+ satisfied scholars worldwide.", href: "/testimonials/" },
 ];
 
 const officeHours = [
