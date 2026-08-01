@@ -161,10 +161,51 @@ const faqSchema = {
   })),
 };
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      name: "Master's Topic Selection Services",
+      image: "https://www.tutorsindia.com/wp-content/uploads/2025/02/New-Project.jpg",
+      description: "Professional dissertation topic selection services providing research topic identification, research gap analysis, feasibility assessment, novelty evaluation, problem statement development, and university-aligned dissertation topic support for master's students.",
+      url: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-topic/",
+      brand: {
+        "@type": "Organization",
+        name: "Tutors India",
+        areaServed: [
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Place", name: "Europe" },
+          { "@type": "Place", name: "Gulf Region" },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        ratingCount: "665",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tutorsindia.com/" },
+    { "@type": "ListItem", position: 2, name: "Our Services", item: "https://www.tutorsindia.com/our-services/" },
+    { "@type": "ListItem", position: 3, name: "Masters Dissertation", item: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/" },
+    { "@type": "ListItem", position: 4, name: "Dissertation Topic", item: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-topic/" },
+  ],
+};
+
 export default function DissertationTopicPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>

@@ -68,9 +68,50 @@ const qaBoxes = [
 
 
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      name: "Master's Full Dissertation Writing Services",
+      image: "https://www.tutorsindia.com/wp-content/uploads/2025/02/New-Project.jpg",
+      description: "Professional full dissertation writing services providing end-to-end support including topic selection, research proposal, literature review, research methodology, data analysis, chapter writing, editing, proofreading, formatting, and submission-ready dissertations for master's students.",
+      url: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/full-dissertation/",
+      brand: {
+        "@type": "Organization",
+        name: "Tutors India",
+        areaServed: [
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Place", name: "Europe" },
+          { "@type": "Place", name: "Gulf Region" },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        ratingCount: "735",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tutorsindia.com/" },
+    { "@type": "ListItem", position: 2, name: "Our Services", item: "https://www.tutorsindia.com/our-services/" },
+    { "@type": "ListItem", position: 3, name: "Masters Dissertation", item: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/" },
+    { "@type": "ListItem", position: 4, name: "Full Dissertation", item: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/full-dissertation/" },
+  ],
+};
+
 export default function FullDissertationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

@@ -101,9 +101,50 @@ const guarantees = [
   },
 ];
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      name: "Master's Research Methodology Services",
+      image: "https://www.tutorsindia.com/wp-content/uploads/2025/02/New-Project.jpg",
+      description: "Professional research methodology services providing research design, qualitative and quantitative methodology, data collection strategies, sampling techniques, research framework development, statistical planning, and methodology writing support for master's and postgraduate coursework.",
+      url: "https://www.tutorsindia.com/our-services/coursework-writing/research-methodology/",
+      brand: {
+        "@type": "Organization",
+        name: "Tutors India",
+        areaServed: [
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Place", name: "Europe" },
+          { "@type": "Place", name: "Gulf Region" },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        ratingCount: "796",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tutorsindia.com/" },
+    { "@type": "ListItem", position: 2, name: "Our Services", item: "https://www.tutorsindia.com/our-services/" },
+    { "@type": "ListItem", position: 3, name: "Coursework Writing", item: "https://www.tutorsindia.com/our-services/coursework-writing/" },
+    { "@type": "ListItem", position: 4, name: "Research Methodology", item: "https://www.tutorsindia.com/our-services/coursework-writing/research-methodology/" },
+  ],
+};
+
 export default function ResearchMethodologyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

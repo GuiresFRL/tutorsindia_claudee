@@ -107,6 +107,45 @@ const editingLevels = [
   },
 ];
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      name: "Language Editing Services",
+      image: "https://www.tutorsindia.com/wp-content/uploads/2025/02/New-Project.jpg",
+      description: "Professional language editing services providing grammar correction, proofreading, academic editing, journal formatting, style enhancement, plagiarism checking, manuscript polishing, and publication-ready document preparation by expert editors.",
+      url: "https://www.tutorsindia.com/our-services/editing-services/language-editing/",
+      brand: {
+        "@type": "Organization",
+        name: "Tutors India",
+        areaServed: [
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Place", name: "Europe" },
+          { "@type": "Place", name: "Gulf Region" },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        ratingCount: "615",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tutorsindia.com/" },
+    { "@type": "ListItem", position: 2, name: "Our Services", item: "https://www.tutorsindia.com/our-services/" },
+    { "@type": "ListItem", position: 3, name: "Editing Services", item: "https://www.tutorsindia.com/our-services/editing-services/" },
+    { "@type": "ListItem", position: 4, name: "Language Editing", item: "https://www.tutorsindia.com/our-services/editing-services/language-editing/" },
+  ],
+};
+
 export default function LanguageEditingPage() {
   return (
     <>
@@ -114,6 +153,8 @@ export default function LanguageEditingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{`
         .hero-inner { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
         .hero-badge { display: inline-block; background: #e87722; color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .75rem; border-radius: 999px; margin-bottom: 1rem; }

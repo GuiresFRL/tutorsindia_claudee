@@ -53,10 +53,51 @@ const testimonials = [
   { quote: "Excellent Hadoop and big data analytics support. The code was clean, well documented and executable.", author: "PhD Candidate", location: "USA" },
 ];
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      name: "Coding and Algorithm Development Services",
+      image: "https://www.tutorsindia.com/wp-content/uploads/2025/02/New-Project.jpg",
+      description: "Professional coding and algorithm development services providing custom algorithm design, software programming, machine learning implementation, simulation modelling, code optimization, debugging, technical documentation, and research-oriented programming support for engineering and computer science projects.",
+      url: "https://www.tutorsindia.com/our-services/development/coding-and-algorithm/",
+      brand: {
+        "@type": "Organization",
+        name: "Tutors India",
+        areaServed: [
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Place", name: "Europe" },
+          { "@type": "Place", name: "Gulf Region" },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        ratingCount: "605",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tutorsindia.com/" },
+    { "@type": "ListItem", position: 2, name: "Our Services", item: "https://www.tutorsindia.com/our-services/" },
+    { "@type": "ListItem", position: 3, name: "Development", item: "https://www.tutorsindia.com/our-services/development/" },
+    { "@type": "ListItem", position: 4, name: "Coding and Algorithm", item: "https://www.tutorsindia.com/our-services/development/coding-and-algorithm/" },
+  ],
+};
+
 export default function CodingAlgorithmPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>

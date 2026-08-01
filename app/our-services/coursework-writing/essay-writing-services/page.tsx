@@ -65,9 +65,50 @@ const subjects = [
   "Hospitality, Leisure & Sports",
 ];
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      name: "Academic Essay Writing Services",
+      image: "https://www.tutorsindia.com/wp-content/uploads/2025/02/New-Project.jpg",
+      description: "Professional essay writing services providing custom academic essays, research-based writing, critical analysis, editing, proofreading, academic referencing, and subject-specific essay support for master's and MBA students.",
+      url: "https://www.tutorsindia.com/our-services/coursework-writing/essay-writing-services/",
+      brand: {
+        "@type": "Organization",
+        name: "Tutors India",
+        areaServed: [
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Place", name: "Europe" },
+          { "@type": "Place", name: "Gulf Region" },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        ratingCount: "748",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tutorsindia.com/" },
+    { "@type": "ListItem", position: 2, name: "Our Services", item: "https://www.tutorsindia.com/our-services/" },
+    { "@type": "ListItem", position: 3, name: "Coursework Writing", item: "https://www.tutorsindia.com/our-services/coursework-writing/" },
+    { "@type": "ListItem", position: 4, name: "Essay Writing Services", item: "https://www.tutorsindia.com/our-services/coursework-writing/essay-writing-services/" },
+  ],
+};
+
 export default function EssayWritingServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
