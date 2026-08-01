@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title} — Sample Works`,
     description: `View our ${title.toLowerCase()} sample work. Tutors India provides high-quality academic writing examples for reference and guidance.`,
     
-    alternates: { canonical: `https://www.tutorsindia.com/our-sample-works/${slug}` },
+    alternates: { canonical: `https://www.tutorsindia.com/our-sample-works/${slug}/` },
   };
 }
 

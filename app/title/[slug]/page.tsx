@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title}`,
     description: desc,
     
-    alternates: { canonical: `https://www.tutorsindia.com/title/${slug}` },
+    alternates: { canonical: `https://www.tutorsindia.com/title/${slug}/` },
   };
 }
 

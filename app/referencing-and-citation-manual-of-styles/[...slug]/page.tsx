@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title}`,
     description: `${title} — Referencing and citation guide from Tutors India.`,
-    alternates: { canonical: `https://www.tutorsindia.com${path.replace(/\/$/, "")}` },
+    alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
   };
 }
 

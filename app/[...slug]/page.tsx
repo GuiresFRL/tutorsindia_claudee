@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: `${title}`,
       description: desc || `${title} — Academic writing support from Tutors India.`,
-      alternates: { canonical: `https://www.tutorsindia.com${path.replace(/\/$/, "")}` },
+      alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
     };
   }
 
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title}`,
     description: `${title} — Academic writing support from Tutors India.`,
-    alternates: { canonical: `https://www.tutorsindia.com${path.replace(/\/$/, "")}` },
+    alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
   };
 }
 

@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title}`,
     description: `${title} — Academic writing sample from Tutors India's library.`,
-    alternates: { canonical: `https://www.tutorsindia.com${path.replace(/\/$/, "")}` },
+    alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
   };
 }
 

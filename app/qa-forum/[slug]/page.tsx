@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title} — Q&A Forum`,
     description: `Expert answer to: ${title}. Get academic guidance from Tutors India's team of PhD-qualified specialists.`,
-    alternates: { canonical: `https://www.tutorsindia.com/qa-forum/${slug}` },
+    alternates: { canonical: `https://www.tutorsindia.com/qa-forum/${slug}/` },
   };
 }
 

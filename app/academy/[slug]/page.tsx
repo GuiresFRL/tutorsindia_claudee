@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     keywords: rankMath.keywords || undefined,
-    alternates: { canonical: `https://www.tutorsindia.com/academy/${slug}` },
+    alternates: { canonical: `https://www.tutorsindia.com/academy/${slug}/` },
     openGraph: {
       title,
       description,

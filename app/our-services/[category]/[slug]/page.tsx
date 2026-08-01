@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${svc.title}`,
     description: svc.description,
-    alternates: { canonical: `https://www.tutorsindia.com/our-services/${category}/${slug}` },
+    alternates: { canonical: `https://www.tutorsindia.com/our-services/${category}/${slug}/` },
   };
 }
 
