@@ -26,9 +26,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     staticEntries = locs
       // Individual blog/academy post URLs come from the live WP fetch below
-      // instead — drop the stale snapshot versions so new posts aren't
-      // shadowed by old ones. Section index pages (/blog/, /academy/) stay.
-      .filter((loc) => !/\/(blog|academy)\/[^/]+\/?$/.test(loc))
+      // instead — drop every stale snapshot URL under those sections (blog
+      // is flat, academy can be nested 1+ segments deep) so old/duplicate
+      // paths don't sit alongside the live-fetched ones. Section index
+      // pages (/blog/, /academy/) themselves are kept.
+      .filter((loc) => !/\/blog\/[^/]+\/?$/.test(loc) && !/\/academy\/.+$/.test(loc))
       .map((loc) => {
         let normalised = loc.replace(/^https?:\/\/(?:www\.)?tutorsindia\.com/, BASE);
         if (!normalised.endsWith("/")) normalised += "/";
