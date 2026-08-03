@@ -42,7 +42,7 @@ const FETCH_OPTS = {
  * Fetch ALL published Academy posts — paginated through WP REST API.
  * WP REST API caps at 100 per page; this fetches every page in parallel.
  */
-const LISTING_FIELDS = "_fields=id,slug,date,modified,title,excerpt,_links,_embedded";
+const LISTING_FIELDS = "_fields=id,slug,link,date,modified,title,excerpt,_links,_embedded";
 
 export interface AcademyCategory {
   id: number;
@@ -206,7 +206,7 @@ export async function getRecentAcademyPosts(count = 6): Promise<AcademyPost[]> {
  * multiple categories assigned, since WP resolves that ambiguity for us.
  */
 export function getAcademyCategorySlug(post: AcademyPost): string {
-  const match = post.link.match(/\/academy\/([^/]+)\/[^/]+\/?$/);
+  const match = post.link?.match(/\/academy\/([^/]+)\/[^/]+\/?$/);
   return match ? match[1] : "how-to-article";
 }
 
