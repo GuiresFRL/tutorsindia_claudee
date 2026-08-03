@@ -1,61 +1,70 @@
 import type { MetadataRoute } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { getAllPostSlugs } from "@/lib/api/wordpress";
+import { getAllAcademySlugs } from "@/lib/api/academy";
 
 const BASE = "https://www.tutorsindia.com";
 
-export const revalidate = 86400; // re-read once per day
+export const revalidate = 3600; // re-check for new blog/academy posts hourly
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date().toISOString();
+
+  // The original WordPress-era sitemap.xml is bundled locally — the domain
+  // it used to live at (www.tutorsindia.com) is now this deployment itself,
+  // so fetching it live would be a self-referencing request. This covers
+  // every static/service/subject page, but predates current blog/academy
+  // content, so those two sections are fetched live below instead.
+  let staticEntries: MetadataRoute.Sitemap = [];
   try {
-    // The original WordPress-era sitemap.xml is bundled locally — the domain
-    // it used to live at (www.tutorsindia.com) is now this deployment itself,
-    // so fetching it live would be a self-referencing request.
     const xml = readFileSync(
       join(process.cwd(), "lib/data/original-sitemap.xml"),
       "utf-8"
     );
+    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());
 
-    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) =>
-      m[1].trim()
-    );
-
-   // Normalize host and keep trailing slash URLs to match Next.js trailingSlash: true
-const mapped: MetadataRoute.Sitemap = locs.map((loc) => {
-  let normalised = loc.replace(
-    /^https?:\/\/(?:www\.)?tutorsindia\.com/,
-    BASE
-  );
-
-  // Ensure all URLs have trailing slash
-  if (!normalised.endsWith("/")) {
-    normalised += "/";
-  }
-
-  return {
-    url: normalised,
-    lastModified: new Date().toISOString(),
-    priority: 0.6,
-    changeFrequency: "monthly",
-  };
-});
-
-    // Deduplicate by URL
-    const seen = new Set<string>();
-    const deduped = mapped.filter((e) => {
-      if (seen.has(e.url)) return false;
-      seen.add(e.url);
-      return true;
-    });
-
-    return deduped;
+    staticEntries = locs
+      // Individual blog/academy post URLs come from the live WP fetch below
+      // instead — drop the stale snapshot versions so new posts aren't
+      // shadowed by old ones. Section index pages (/blog/, /academy/) stay.
+      .filter((loc) => !/\/(blog|academy)\/[^/]+\/?$/.test(loc))
+      .map((loc) => {
+        let normalised = loc.replace(/^https?:\/\/(?:www\.)?tutorsindia\.com/, BASE);
+        if (!normalised.endsWith("/")) normalised += "/";
+        return { url: normalised, lastModified: now, priority: 0.6, changeFrequency: "monthly" as const };
+      });
   } catch (err) {
     console.error("sitemap.ts: failed to read original sitemap", err);
-return [
-  {
-    url: `${BASE}/`,
-    lastModified: new Date().toISOString(),
-    priority: 1.0,
-  },
-];  }
+  }
+
+  // Live blog + academy posts — ensures posts published after the static
+  // snapshot was taken (or at any point going forward) appear automatically.
+  const [blogSlugs, academySlugs] = await Promise.all([
+    getAllPostSlugs(),
+    getAllAcademySlugs(),
+  ]);
+
+  const blogEntries: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${BASE}/blog/${slug}/`,
+    lastModified: now,
+    priority: 0.7,
+    changeFrequency: "weekly",
+  }));
+
+  const academyEntries: MetadataRoute.Sitemap = academySlugs.map((slug) => ({
+    url: `${BASE}/academy/${slug}/`,
+    lastModified: now,
+    priority: 0.7,
+    changeFrequency: "weekly",
+  }));
+
+  const combined = [...staticEntries, ...blogEntries, ...academyEntries];
+
+  // Deduplicate by URL (last occurrence wins)
+  const seen = new Map<string, MetadataRoute.Sitemap[number]>();
+  for (const entry of combined) seen.set(entry.url, entry);
+
+  const deduped = [...seen.values()];
+  return deduped.length ? deduped : [{ url: `${BASE}/`, lastModified: now, priority: 1.0 }];
 }
