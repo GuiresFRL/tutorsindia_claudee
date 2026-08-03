@@ -8,6 +8,7 @@ import {
   getAcademyImageAlt,
   getAcademyAuthor,
   getAcademyCategories,
+  getAcademyCategorySlug,
   stripAcademyHtml,
   formatAcademyDate,
 } from "@/lib/api/academy";
@@ -120,10 +121,12 @@ export default async function AcademyPage({ searchParams }: Props) {
                 const cats    = getAcademyCategories(post);
                 const excerpt = stripAcademyHtml(post.excerpt.rendered, 130);
                 const date    = formatAcademyDate(post.date);
+                const categorySlug = getAcademyCategorySlug(post);
+                const postHref = `/academy/${categorySlug}/${post.slug}/`;
 
                 return (
                   <article key={post.id} className="blog-card">
-                    <Link href={`/academy/${post.slug}/`} className="blog-card-img">
+                    <Link href={postHref} className="blog-card-img">
                       {image ? (
                         <img src={image} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
                       ) : (
@@ -139,11 +142,11 @@ export default async function AcademyPage({ searchParams }: Props) {
                         <span>✍️ {author}</span>
                       </div>
                       <h2 className="blog-card-title">
-                        <Link href={`/academy/${post.slug}/`} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                        <Link href={postHref} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                       </h2>
                       {excerpt && <p className="blog-card-excerpt">{excerpt}</p>}
                       <div className="blog-card-footer">
-                        <Link href={`/academy/${post.slug}/`} className="blog-read-more">Read Guide →</Link>
+                        <Link href={postHref} className="blog-read-more">Read Guide →</Link>
                         {cats[1] && (
                           <span style={{ fontSize: "0.7rem", background: "#f5f6fa", color: "#555", padding: "2px 8px", borderRadius: "8px", border: "1px solid #dde2ef" }}>
                             {cats[1]}

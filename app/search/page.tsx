@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { serviceCategories } from "@/lib/data/services";
 import { searchBlogPosts, stripHtml } from "@/lib/api/wordpress";
-import { searchAcademyPosts, stripAcademyHtml } from "@/lib/api/academy";
+import { searchAcademyPosts, stripAcademyHtml, getAcademyCategorySlug } from "@/lib/api/academy";
 
 export const metadata: Metadata = {
   title: "Search Results | Tutors India",
@@ -122,7 +122,7 @@ export default async function SearchPage({
           </h2>
           <div style={{ display: "grid", gap: "14px" }}>
             {academyResults.map((post) => (
-              <Link key={post.id} href={`/academy/${post.slug}/`} style={{ display: "block", padding: "16px", border: "1px solid #dde2ef", borderRadius: "8px" }}>
+              <Link key={post.id} href={`/academy/${getAcademyCategorySlug(post)}/${post.slug}/`} style={{ display: "block", padding: "16px", border: "1px solid #dde2ef", borderRadius: "8px" }}>
                 <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                 <div style={{ color: "#555", fontSize: "0.92rem", lineHeight: 1.6 }}>{stripAcademyHtml(post.excerpt.rendered)}</div>
               </Link>

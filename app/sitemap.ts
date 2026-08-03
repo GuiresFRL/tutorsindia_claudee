@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { getAllPostSlugs } from "@/lib/api/wordpress";
-import { getAllAcademySlugs } from "@/lib/api/academy";
+import { getAllAcademySlugsWithCategory } from "@/lib/api/academy";
 
 const BASE = "https://www.tutorsindia.com";
 
@@ -40,9 +40,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Live blog + academy posts — ensures posts published after the static
   // snapshot was taken (or at any point going forward) appear automatically.
-  const [blogSlugs, academySlugs] = await Promise.all([
+  const [blogSlugs, academyPairs] = await Promise.all([
     getAllPostSlugs(),
-    getAllAcademySlugs(),
+    getAllAcademySlugsWithCategory(),
   ]);
 
   const blogEntries: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
@@ -52,8 +52,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly",
   }));
 
-  const academyEntries: MetadataRoute.Sitemap = academySlugs.map((slug) => ({
-    url: `${BASE}/academy/${slug}/`,
+  // Nested /academy/{category}/{slug}/ URLs, matching WordPress's own
+  // permalink structure — the category segment is whichever category WP
+  // itself resolves the post's link to, so multi-category posts are
+  // unambiguous.
+  const academyEntries: MetadataRoute.Sitemap = academyPairs.map(({ category, slug }) => ({
+    url: `${BASE}/academy/${category}/${slug}/`,
     lastModified: now,
     priority: 0.7,
     changeFrequency: "weekly",
