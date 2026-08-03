@@ -199,6 +199,51 @@ export async function getRecentAcademyPosts(count = 6): Promise<AcademyPost[]> {
   }
 }
 
+/**
+ * Extract the category URL segment WordPress itself uses for this post
+ * (its `link` field is already `.../academy/{category}/{slug}/`) — this is
+ * the single source of truth for which category "wins" when a post has
+ * multiple categories assigned, since WP resolves that ambiguity for us.
+ */
+export function getAcademyCategorySlug(post: AcademyPost): string {
+  const match = post.link.match(/\/academy\/([^/]+)\/[^/]+\/?$/);
+  return match ? match[1] : "how-to-article";
+}
+
+/** Get all Academy {category, slug} pairs for generateStaticParams on the nested route */
+export async function getAllAcademySlugsWithCategory(): Promise<{ category: string; slug: string }[]> {
+  try {
+    const firstRes = await fetch(
+      `${ACADEMY_API_BASE}/posts?per_page=100&page=1&status=publish&_fields=slug,link`,
+      FETCH_OPTS
+    );
+    if (!firstRes.ok) return [];
+
+    const totalPages = parseInt(firstRes.headers.get("X-WP-TotalPages") ?? "1", 10);
+    const firstPage: AcademyPost[] = await firstRes.json();
+
+    let allPosts = [...firstPage];
+
+    if (totalPages > 1) {
+      const remaining = await Promise.allSettled(
+        Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((pageNum) =>
+          fetch(
+            `${ACADEMY_API_BASE}/posts?per_page=100&page=${pageNum}&status=publish&_fields=slug,link`,
+            FETCH_OPTS
+          ).then((r) => (r.ok ? (r.json() as Promise<AcademyPost[]>) : []))
+        )
+      );
+      remaining.forEach((r) => {
+        if (r.status === "fulfilled") allPosts = [...allPosts, ...r.value];
+      });
+    }
+
+    return allPosts.map((p) => ({ category: getAcademyCategorySlug(p), slug: p.slug }));
+  } catch {
+    return [];
+  }
+}
+
 /* ── Helper utilities (mirrors blog helpers) ── */
 
 export function getAcademyFeaturedImage(post: AcademyPost): string | null {
