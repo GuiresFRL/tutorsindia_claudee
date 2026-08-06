@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["*/feed/", "*/tag/"],
       },
     ],
     sitemap: "https://www.tutorsindia.com/sitemap.xml",
