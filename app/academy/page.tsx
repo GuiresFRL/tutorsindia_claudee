@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.tutorsindia.com/academy/" },
 };
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 const POSTS_PER_PAGE = 15;
 
