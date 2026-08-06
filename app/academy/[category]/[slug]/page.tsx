@@ -86,7 +86,7 @@ export default async function AcademyPostPage({ params }: Props) {
   const cats     = getPayloadCategoryNames(post);
   const date     = formatPayloadDate(post.publishing?.publishedAt || post.createdAt);
   const modified = formatPayloadDate(post.updatedAt);
-  const contentHtml = renderLexicalToHtml(post.content);
+  const contentHtml = renderLexicalToHtml(post.content, Boolean(image));
 
   const related = recentPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
