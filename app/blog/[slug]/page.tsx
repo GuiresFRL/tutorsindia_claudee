@@ -1,60 +1,55 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { stripBrokenLinks, stripBrokenImages } from "@/lib/cleanElementor";
-import { fetchRankMathMeta } from "@/lib/rankmath";
 import {
-  getPostBySlug,
-  getAllPostSlugs,
-  getRecentPosts,
-  getFeaturedImage,
-  getFeaturedImageAlt,
-  getAuthorName,
-  getCategories,
-  stripHtml,
-  formatDate,
-} from "@/lib/api/wordpress";
+  getPayloadPostBySlug,
+  getAllPayloadSlugs,
+  getRecentPayloadPosts,
+  getPayloadImageUrl,
+  getPayloadImageAlt,
+  getPayloadAuthor,
+  getPayloadCategoryNames,
+  excerptFromLexical,
+  renderLexicalToHtml,
+  formatPayloadDate,
+} from "@/lib/api/payload";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-// ISR — see app/academy/[slug]/page.tsx for why this isn't 0.
+// ISR — a fresh article regenerates within a minute of publishing, but
+// repeat requests in between are served from cache instead of re-fetching
+// the Payload API on every hit.
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-  const slugs = await getAllPostSlugs();
-  return slugs.map((slug) => ({ slug }));
+  const pairs = await getAllPayloadSlugs("blog");
+  return pairs.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  const post = await getPayloadPostBySlug("blog", slug);
   if (!post) return { title: "Post Not Found" };
 
-  const image = getFeaturedImage(post);
-
-  // Rank Math (the SEO plugin actually configured on this WP install) isn't
-  // exposed on the REST API — fetch the real title/description/keywords it
-  // renders on the live page and use them exactly as-is, no truncation or
-  // rewriting. Falls back to the raw post fields only if that fetch fails.
-  const rankMath = await fetchRankMathMeta(post.link);
-  const title = rankMath.title || stripHtml(post.title.rendered);
-  const description = rankMath.description || stripHtml(post.excerpt.rendered, 160);
+  const image = getPayloadImageUrl(post.heroImage);
+  const title = post.seo?.metaTitle || post.title;
+  const description = post.seo?.metaDescription || excerptFromLexical(post.content, 160);
 
   return {
     title,
     description,
-    keywords: rankMath.keywords || undefined,
+    keywords: post.seo?.metaKeywords || undefined,
     alternates: { canonical: `https://www.tutorsindia.com/blog/${slug}/` },
     openGraph: {
       title,
       description,
       type: "article",
-      publishedTime: post.date,
-      modifiedTime: post.modified,
+      publishedTime: post.publishing?.publishedAt,
+      modifiedTime: post.updatedAt,
       url: `https://tutorsindia.com/blog/${slug}/`,
-      images: image ? [{ url: image, alt: getFeaturedImageAlt(post) }] : [],
+      images: image ? [{ url: image, alt: getPayloadImageAlt(post) }] : [],
     },
     twitter: {
       card: "summary_large_image",
@@ -69,18 +64,19 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
 
   const [post, allPosts] = await Promise.all([
-    getPostBySlug(slug),
-    getRecentPosts(6),   // lightweight — only fetches first page for related posts
+    getPayloadPostBySlug("blog", slug),
+    getRecentPayloadPosts("blog", 6), // lightweight — only fetches first page for related posts
   ]);
 
   if (!post) notFound();
 
-  const image = getFeaturedImage(post);
-  const alt = getFeaturedImageAlt(post);
-  const author = getAuthorName(post);
-  const cats = getCategories(post);
-  const date = formatDate(post.date);
-  const modified = formatDate(post.modified);
+  const image = getPayloadImageUrl(post.heroImage);
+  const alt = getPayloadImageAlt(post);
+  const author = getPayloadAuthor(post);
+  const cats = getPayloadCategoryNames(post);
+  const date = formatPayloadDate(post.publishing?.publishedAt || post.createdAt);
+  const modified = formatPayloadDate(post.updatedAt);
+  const contentHtml = renderLexicalToHtml(post.content);
   const related = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
@@ -92,7 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
             <Link href="/blog/" style={{ color: "#a0b8e0" }}>Blog</Link>{" / "}
-            <span style={{ color: "#fff" }} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+            <span style={{ color: "#fff" }}>{post.title}</span>
           </div>
 
           {/* Categories */}
@@ -107,15 +103,14 @@ export default async function BlogPostPage({ params }: Props) {
           )}
 
           {/* Title */}
-          <h1
-            style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", lineHeight: 1.35, marginBottom: "18px" }}
-            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-          />
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3.5vw,2.2rem)", lineHeight: 1.35, marginBottom: "18px" }}>
+            {post.title}
+          </h1>
 
           {/* Meta row */}
           <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", fontSize: "0.84rem", color: "#a0b8e0", alignItems: "center" }}>
             <span>📅 {date}</span>
-            {post.modified !== post.date && <span>🔄 Updated: {modified}</span>}
+            {post.updatedAt !== post.createdAt && <span>🔄 Updated: {modified}</span>}
             <span>✍️ {author}</span>
           </div>
         </div>
@@ -135,8 +130,8 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        {/* WordPress HTML content — full width */}
-        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: stripBrokenImages(stripBrokenLinks(post.content.rendered)) }} />
+        {/* Article content — rendered from Payload's Lexical rich text */}
+        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
         {/* Author card */}
         <div style={{ marginTop: "48px", padding: "24px", background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", display: "flex", gap: "16px", alignItems: "center" }}>
@@ -181,13 +176,13 @@ export default async function BlogPostPage({ params }: Props) {
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "22px" }} className="related-grid">
               {related.map((rp) => {
-                const rImage = getFeaturedImage(rp);
-                const rCats = getCategories(rp);
+                const rImage = getPayloadImageUrl(rp.heroImage);
+                const rCats = getPayloadCategoryNames(rp);
                 return (
                   <Link key={rp.id} href={`/blog/${rp.slug}/`} style={{ display: "block", background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
                     <div style={{ background: "#e8f0fb", height: "160px", overflow: "hidden" }}>
                       {rImage ? (
-                        <img src={rImage} alt={getFeaturedImageAlt(rp)} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+                        <img src={rImage} alt={getPayloadImageAlt(rp)} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
                       ) : (
                         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "2.5rem" }}>📖</div>
                       )}
@@ -196,8 +191,8 @@ export default async function BlogPostPage({ params }: Props) {
                       {rCats[0] && (
                         <span style={{ fontSize: "0.7rem", background: "#e8f0fb", color: "#2563b0", padding: "2px 8px", borderRadius: "8px", fontWeight: 600, display: "inline-block", marginBottom: "7px" }}>{rCats[0]}</span>
                       )}
-                      <div style={{ fontSize: "0.76rem", color: "#888", marginBottom: "6px" }}>{formatDate(rp.date)}</div>
-                      <div style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: rp.title.rendered }} />
+                      <div style={{ fontSize: "0.76rem", color: "#888", marginBottom: "6px" }}>{formatPayloadDate(rp.publishing?.publishedAt || rp.createdAt)}</div>
+                      <div style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }}>{rp.title}</div>
                       <div style={{ fontSize: "0.82rem", color: "#e87722", fontWeight: 600, marginTop: "10px" }}>Read More →</div>
                     </div>
                   </Link>
@@ -222,7 +217,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* WP content + layout styles */}
+      {/* Content + layout styles */}
       <style>{`
         @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr 1fr !important; } }
         @media (max-width: 500px) { .related-grid { grid-template-columns: 1fr !important; } }
@@ -251,13 +246,7 @@ export default async function BlogPostPage({ params }: Props) {
         .wp-content pre code { background: transparent; color: inherit; padding: 0; }
         .wp-content figure { margin: 24px 0; }
         .wp-content figcaption { text-align: center; font-size: 0.8rem; color: #888; margin-top: 8px; font-style: italic; }
-        .wp-content .wp-block-separator { border: none; border-top: 2px solid #dde2ef; margin: 32px 0; }
-        .wp-content .wp-block-image { margin: 20px 0; }
-        .wp-content .wp-block-quote { border-left: 4px solid #e87722; padding: 14px 20px; margin: 24px 0; background: #fff8f0; border-radius: 0 8px 8px 0; }
-        .wp-content .has-text-align-center { text-align: center; }
         .wp-content strong { color: #333; }
-        .wp-content .wp-block-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
-        @media (max-width: 600px) { .wp-content .wp-block-columns { grid-template-columns: 1fr; } }
       `}</style>
     </>
   );

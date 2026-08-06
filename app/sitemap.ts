@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
-import { getAllPostSlugs } from "@/lib/api/wordpress";
-import { getAllAcademySlugsWithCategory } from "@/lib/api/academy";
+import { getAllPayloadSlugs } from "@/lib/api/payload";
 
 const BASE = "https://www.tutorsindia.com";
 
@@ -40,24 +39,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("sitemap.ts: failed to read original sitemap", err);
   }
 
-  // Live blog + academy posts — ensures posts published after the static
-  // snapshot was taken (or at any point going forward) appear automatically.
-  const [blogSlugs, academyPairs] = await Promise.all([
-    getAllPostSlugs(),
-    getAllAcademySlugsWithCategory(),
+  // Live blog + academy posts from Payload CMS — ensures posts published
+  // after the static snapshot was taken (or at any point going forward)
+  // appear automatically.
+  const [blogPairs, academyPairs] = await Promise.all([
+    getAllPayloadSlugs("blog"),
+    getAllPayloadSlugs("academy"),
   ]);
 
-  const blogEntries: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+  const blogEntries: MetadataRoute.Sitemap = blogPairs.map(({ slug }) => ({
     url: `${BASE}/blog/${slug}/`,
     lastModified: now,
     priority: 0.7,
     changeFrequency: "weekly",
   }));
 
-  // Nested /academy/{category}/{slug}/ URLs, matching WordPress's own
-  // permalink structure — the category segment is whichever category WP
-  // itself resolves the post's link to, so multi-category posts are
-  // unambiguous.
+  // Nested /academy/{category}/{slug}/ URLs — the category segment is this
+  // post's first Payload category, so multi-category posts stay unambiguous.
   const academyEntries: MetadataRoute.Sitemap = academyPairs.map(({ category, slug }) => ({
     url: `${BASE}/academy/${category}/${slug}/`,
     lastModified: now,

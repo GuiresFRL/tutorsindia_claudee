@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { serviceCategories } from "@/lib/data/services";
-import { searchBlogPosts, stripHtml } from "@/lib/api/wordpress";
-import { searchAcademyPosts, stripAcademyHtml, getAcademyCategorySlug } from "@/lib/api/academy";
+import { searchPayloadPosts, excerptFromLexical, getPayloadCategorySlug } from "@/lib/api/payload";
 
 export const metadata: Metadata = {
   title: "Search Results | Tutors India",
@@ -43,8 +42,8 @@ export default async function SearchPage({
   const [serviceResults, blogResults, academyResults] = query
     ? await Promise.all([
         Promise.resolve(searchServices(query)),
-        searchBlogPosts(query, 8),
-        searchAcademyPosts(query, 8),
+        searchPayloadPosts("blog", query, 8),
+        searchPayloadPosts("academy", query, 8),
       ])
     : [[], [], []];
 
@@ -107,8 +106,8 @@ export default async function SearchPage({
           <div style={{ display: "grid", gap: "14px" }}>
             {blogResults.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}/`} style={{ display: "block", padding: "16px", border: "1px solid #dde2ef", borderRadius: "8px" }}>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                <div style={{ color: "#555", fontSize: "0.92rem", lineHeight: 1.6 }}>{stripHtml(post.excerpt.rendered)}</div>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{post.title}</div>
+                <div style={{ color: "#555", fontSize: "0.92rem", lineHeight: 1.6 }}>{excerptFromLexical(post.content)}</div>
               </Link>
             ))}
           </div>
@@ -122,9 +121,9 @@ export default async function SearchPage({
           </h2>
           <div style={{ display: "grid", gap: "14px" }}>
             {academyResults.map((post) => (
-              <Link key={post.id} href={`/academy/${getAcademyCategorySlug(post)}/${post.slug}/`} style={{ display: "block", padding: "16px", border: "1px solid #dde2ef", borderRadius: "8px" }}>
-                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                <div style={{ color: "#555", fontSize: "0.92rem", lineHeight: 1.6 }}>{stripAcademyHtml(post.excerpt.rendered)}</div>
+              <Link key={post.id} href={`/academy/${getPayloadCategorySlug(post)}/${post.slug}/`} style={{ display: "block", padding: "16px", border: "1px solid #dde2ef", borderRadius: "8px" }}>
+                <div style={{ fontWeight: 700, color: "#1a2a6c", marginBottom: "4px" }}>{post.title}</div>
+                <div style={{ color: "#555", fontSize: "0.92rem", lineHeight: 1.6 }}>{excerptFromLexical(post.content)}</div>
               </Link>
             ))}
           </div>
