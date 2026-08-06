@@ -281,11 +281,26 @@ function renderTextNode(node: LexicalNode): string {
   return text;
 }
 
-function renderChildren(nodes: LexicalNode[] | undefined, skip: { upload: boolean }): string {
+function plainText(node: LexicalNode): string {
+  if (node.type === "text") return node.text ?? "";
+  return (node.children ?? []).map(plainText).join("");
+}
+
+function normalizeTitle(s: string): string {
+  return s.toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, " ").trim();
+}
+
+interface RenderSkip {
+  upload: boolean;
+  /** Post title to compare the first heading against — cleared after the first heading node is seen. */
+  titleHeading: string | null;
+}
+
+function renderChildren(nodes: LexicalNode[] | undefined, skip: RenderSkip): string {
   return (nodes ?? []).map((n) => renderLexicalNode(n, skip)).join("");
 }
 
-function renderLexicalNode(node: LexicalNode, skip: { upload: boolean }): string {
+function renderLexicalNode(node: LexicalNode, skip: RenderSkip): string {
   switch (node.type) {
     case "text":
       return renderTextNode(node);
@@ -296,6 +311,14 @@ function renderLexicalNode(node: LexicalNode, skip: { upload: boolean }): string
       return inner.trim() ? `<p>${inner}</p>` : "";
     }
     case "heading": {
+      // The page banner already renders the post title as an <h1> — drop
+      // the article's own first heading if it's just that same title
+      // repeated as an h2 (a recurring pattern in this CMS's content).
+      if (skip.titleHeading !== null) {
+        const isTitleRepeat = normalizeTitle(plainText(node)) === normalizeTitle(skip.titleHeading);
+        skip.titleHeading = null;
+        if (isTitleRepeat) return "";
+      }
       const tag = node.tag && /^h[1-6]$/.test(node.tag) ? node.tag : "h2";
       return `<${tag}>${renderChildren(node.children, skip)}</${tag}>`;
     }
@@ -335,8 +358,9 @@ function renderLexicalNode(node: LexicalNode, skip: { upload: boolean }): string
 
 export function renderLexicalToHtml(
   content: { root: LexicalNode } | null | undefined,
-  skipFirstImage = false
+  skipFirstImage = false,
+  postTitle: string | null = null
 ): string {
   if (!content?.root) return "";
-  return renderChildren(content.root.children, { upload: skipFirstImage });
+  return renderChildren(content.root.children, { upload: skipFirstImage, titleHeading: postTitle });
 }
