@@ -137,21 +137,27 @@ export async function getPayloadCategories(source: PayloadSource): Promise<(Payl
   }
 }
 
-/** Single post by source + slug — cached for 60s. */
+/**
+ * Single post by source + slug — cached for 60s.
+ *
+ * Deliberately does NOT swallow fetch/network errors into `null`: a transient
+ * failure reaching guires.info must not be indistinguishable from "this post
+ * doesn't exist," because the caller calls notFound() on `null` and Next's
+ * ISR then caches that 404 response for the revalidate window — turning one
+ * flaky request into a real 404 for every visitor until the cache clears.
+ * Letting the error throw instead surfaces a (uncached) error page and lets
+ * the next request retry cleanly.
+ */
 export async function getPayloadPostBySlug(source: PayloadSource, slug: string): Promise<PayloadPost | null> {
-  try {
-    const where = whereQS({
-      "where[source][equals]": source,
-      "where[slug][equals]": slug,
-      "where[publishing.status][equals]": "published",
-    });
-    const res = await fetch(`${API}/posts?limit=1&${where}`, { headers: FETCH_OPTS.headers, next: { revalidate: 60 } });
-    if (!res.ok) return null;
-    const json = await res.json();
-    return json.docs?.[0] ?? null;
-  } catch {
-    return null;
-  }
+  const where = whereQS({
+    "where[source][equals]": source,
+    "where[slug][equals]": slug,
+    "where[publishing.status][equals]": "published",
+  });
+  const res = await fetch(`${API}/posts?limit=1&${where}`, { headers: FETCH_OPTS.headers, next: { revalidate: 60 } });
+  if (!res.ok) throw new Error(`[Payload] getPayloadPostBySlug: ${res.status} fetching ${source}/${slug}`);
+  const json = await res.json();
+  return json.docs?.[0] ?? null;
 }
 
 /** Search published posts by keyword (title only — Payload's REST API has no full-text search param without a plugin). */
