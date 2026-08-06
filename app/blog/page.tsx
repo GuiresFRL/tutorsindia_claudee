@@ -2,15 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BlogCategoryFilter from "@/components/ui/BlogCategoryFilter";
 import {
-  getBlogPostsPage,
-  getBlogCategories,
-  getFeaturedImage,
-  getFeaturedImageAlt,
-  getAuthorName,
-  getCategories,
-  stripHtml,
-  formatDate,
-} from "@/lib/api/wordpress";
+  getPayloadPostsPage,
+  getPayloadCategories,
+  getPayloadImageUrl,
+  getPayloadImageAlt,
+  getPayloadAuthor,
+  getPayloadCategoryNames,
+  excerptFromLexical,
+  formatPayloadDate,
+} from "@/lib/api/payload";
 
 export const metadata: Metadata = {
   title: "Blog — Academic Writing Tips",
@@ -36,8 +36,8 @@ export default async function BlogPage({ searchParams }: Props) {
 
   // Fetch categories + first page of posts in parallel
   const [categoriesData, postsData] = await Promise.all([
-    getBlogCategories(),
-    getBlogPostsPage(currentPage, POSTS_PER_PAGE, categoryId),
+    getPayloadCategories("blog"),
+    getPayloadPostsPage("blog", currentPage, POSTS_PER_PAGE, categoryId),
   ]);
 
   const { posts, total: totalPosts, totalPages } = postsData;
@@ -108,12 +108,12 @@ export default async function BlogPage({ searchParams }: Props) {
           <>
             <div className="blog-grid">
               {posts.map((post) => {
-                const image   = getFeaturedImage(post);
-                const alt     = getFeaturedImageAlt(post);
-                const author  = getAuthorName(post);
-                const cats    = getCategories(post);
-                const excerpt = stripHtml(post.excerpt.rendered, 130);
-                const date    = formatDate(post.date);
+                const image   = getPayloadImageUrl(post.heroImage);
+                const alt     = getPayloadImageAlt(post);
+                const author  = getPayloadAuthor(post);
+                const cats    = getPayloadCategoryNames(post);
+                const excerpt = excerptFromLexical(post.content, 130);
+                const date    = formatPayloadDate(post.publishing?.publishedAt || post.createdAt);
 
                 return (
                   <article key={post.id} className="blog-card">
@@ -133,7 +133,7 @@ export default async function BlogPage({ searchParams }: Props) {
                         <span>✍️ {author}</span>
                       </div>
                       <h2 className="blog-card-title">
-                        <Link href={`/blog/${post.slug}/`} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                        <Link href={`/blog/${post.slug}/`}>{post.title}</Link>
                       </h2>
                       {excerpt && <p className="blog-card-excerpt">{excerpt}</p>}
                       <div className="blog-card-footer">

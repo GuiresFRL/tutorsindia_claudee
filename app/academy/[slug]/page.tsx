@@ -1,5 +1,5 @@
 import { notFound, permanentRedirect } from "next/navigation";
-import { getAcademyPostBySlug, getAcademyCategorySlug, getAllAcademySlugsWithCategory } from "@/lib/api/academy";
+import { getPayloadPostBySlug, getPayloadCategorySlug, getAllPayloadSlugs } from "@/lib/api/payload";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -12,14 +12,14 @@ interface Props {
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-  const pairs = await getAllAcademySlugsWithCategory();
+  const pairs = await getAllPayloadSlugs("academy");
   return pairs.map(({ slug }) => ({ slug }));
 }
 
 export default async function LegacyAcademyRedirect({ params }: Props) {
   const { slug } = await params;
-  const post = await getAcademyPostBySlug(slug);
+  const post = await getPayloadPostBySlug("academy", slug);
   if (!post) notFound();
-  const category = getAcademyCategorySlug(post);
+  const category = getPayloadCategorySlug(post);
   permanentRedirect(`/academy/${category}/${slug}/`);
 }

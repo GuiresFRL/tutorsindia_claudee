@@ -1,20 +1,19 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
-import { stripBrokenLinks, stripBrokenImages } from "@/lib/cleanElementor";
-import { fetchRankMathMeta } from "@/lib/rankmath";
 import {
-  getAcademyPostBySlug,
-  getAllAcademySlugsWithCategory,
-  getAcademyCategorySlug,
-  getRecentAcademyPosts,
-  getAcademyFeaturedImage,
-  getAcademyImageAlt,
-  getAcademyAuthor,
-  getAcademyCategories,
-  stripAcademyHtml,
-  formatAcademyDate,
-} from "@/lib/api/academy";
+  getPayloadPostBySlug,
+  getAllPayloadSlugs,
+  getPayloadCategorySlug,
+  getRecentPayloadPosts,
+  getPayloadImageUrl,
+  getPayloadImageAlt,
+  getPayloadAuthor,
+  getPayloadCategoryNames,
+  excerptFromLexical,
+  renderLexicalToHtml,
+  formatPayloadDate,
+} from "@/lib/api/payload";
 
 interface Props {
   params: Promise<{ category: string; slug: string }>;
@@ -22,42 +21,36 @@ interface Props {
 
 // ISR — a fresh article regenerates within a minute of publishing, but
 // repeat requests in between are served from cache instead of re-fetching
-// the WP API on every hit.
+// the Payload API on every hit.
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-  return getAllAcademySlugsWithCategory();
+  return getAllPayloadSlugs("academy");
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { category, slug } = await params;
-  const post = await getAcademyPostBySlug(slug);
+  const { slug } = await params;
+  const post = await getPayloadPostBySlug("academy", slug);
   if (!post) return { title: "Guide Not Found — Academy" };
 
-  const image = getAcademyFeaturedImage(post);
-
-  // Rank Math (the SEO plugin actually configured on this WP install) isn't
-  // exposed on the REST API — fetch the real title/description/keywords it
-  // renders on the live page and use them exactly as-is, no truncation or
-  // rewriting. Falls back to the raw post fields only if that fetch fails.
-  const rankMath = await fetchRankMathMeta(post.link);
-  const title = rankMath.title || stripAcademyHtml(post.title.rendered);
-  const description = rankMath.description || stripAcademyHtml(post.excerpt.rendered, 160);
-  const canonicalCategory = getAcademyCategorySlug(post);
+  const image = getPayloadImageUrl(post.heroImage);
+  const title = post.seo?.metaTitle || post.title;
+  const description = post.seo?.metaDescription || excerptFromLexical(post.content, 160);
+  const canonicalCategory = getPayloadCategorySlug(post);
 
   return {
     title,
     description,
-    keywords: rankMath.keywords || undefined,
+    keywords: post.seo?.metaKeywords || undefined,
     alternates: { canonical: `https://www.tutorsindia.com/academy/${canonicalCategory}/${slug}/` },
     openGraph: {
       title,
       description,
       type: "article",
-      publishedTime: post.date,
-      modifiedTime: post.modified,
+      publishedTime: post.publishing?.publishedAt,
+      modifiedTime: post.updatedAt,
       url: `https://tutorsindia.com/academy/${canonicalCategory}/${slug}/`,
-      images: image ? [{ url: image, alt: getAcademyImageAlt(post) }] : [],
+      images: image ? [{ url: image, alt: getPayloadImageAlt(post) }] : [],
     },
     twitter: {
       card: "summary_large_image",
@@ -72,27 +65,28 @@ export default async function AcademyPostPage({ params }: Props) {
   const { category, slug } = await params;
 
   const [post, recentPosts] = await Promise.all([
-    getAcademyPostBySlug(slug),
-    getRecentAcademyPosts(6),
+    getPayloadPostBySlug("academy", slug),
+    getRecentPayloadPosts("academy", 6),
   ]);
 
   if (!post) notFound();
 
   // Keep exactly one canonical URL per post — if the category segment in
-  // the request doesn't match WordPress's own category for this post
-  // (renamed category, stale link, etc.), send crawlers/users to the
-  // correct nested URL instead of serving duplicate content under both.
-  const correctCategory = getAcademyCategorySlug(post);
+  // the request doesn't match this post's actual (first) category, send
+  // crawlers/users to the correct nested URL instead of serving duplicate
+  // content under both.
+  const correctCategory = getPayloadCategorySlug(post);
   if (category !== correctCategory) {
     redirect(`/academy/${correctCategory}/${slug}/`);
   }
 
-  const image    = getAcademyFeaturedImage(post);
-  const alt      = getAcademyImageAlt(post);
-  const author   = getAcademyAuthor(post);
-  const cats     = getAcademyCategories(post);
-  const date     = formatAcademyDate(post.date);
-  const modified = formatAcademyDate(post.modified);
+  const image    = getPayloadImageUrl(post.heroImage);
+  const alt      = getPayloadImageAlt(post);
+  const author   = getPayloadAuthor(post);
+  const cats     = getPayloadCategoryNames(post);
+  const date     = formatPayloadDate(post.publishing?.publishedAt || post.createdAt);
+  const modified = formatPayloadDate(post.updatedAt);
+  const contentHtml = renderLexicalToHtml(post.content);
 
   const related = recentPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
@@ -105,7 +99,7 @@ export default async function AcademyPostPage({ params }: Props) {
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px" }}>
             <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
             <Link href="/academy/" style={{ color: "#a0b8e0" }}>Academy</Link>{" / "}
-            <span style={{ color: "#fff" }} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+            <span style={{ color: "#fff" }}>{post.title}</span>
           </div>
 
           {/* Categories */}
@@ -120,15 +114,14 @@ export default async function AcademyPostPage({ params }: Props) {
           )}
 
           {/* Title */}
-          <h1
-            style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3.5vw,2.1rem)", lineHeight: 1.35, marginBottom: "16px" }}
-            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-          />
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3.5vw,2.1rem)", lineHeight: 1.35, marginBottom: "16px" }}>
+            {post.title}
+          </h1>
 
           {/* Meta */}
           <div style={{ display: "flex", gap: "18px", flexWrap: "wrap", fontSize: "0.83rem", color: "#a0b8e0" }}>
             <span>📅 {date}</span>
-            {post.modified !== post.date && <span>🔄 Updated: {modified}</span>}
+            {post.updatedAt !== post.createdAt && <span>🔄 Updated: {modified}</span>}
             <span>✍️ {author}</span>
           </div>
         </div>
@@ -144,8 +137,8 @@ export default async function AcademyPostPage({ params }: Props) {
           </div>
         )}
 
-        {/* WordPress HTML content */}
-        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: stripBrokenImages(stripBrokenLinks(post.content.rendered)) }} />
+        {/* Article content — rendered from Payload's Lexical rich text */}
+        <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
         {/* Author card */}
         <div style={{ marginTop: "44px", padding: "22px", background: "#f5f6fa", border: "1px solid #dde2ef", borderRadius: "12px", display: "flex", gap: "14px", alignItems: "center" }}>
@@ -186,14 +179,14 @@ export default async function AcademyPostPage({ params }: Props) {
             </h2>
             <div className="related-grid">
               {related.map((rp) => {
-                const rImage = getAcademyFeaturedImage(rp);
-                const rCats  = getAcademyCategories(rp);
-                const rCategorySlug = getAcademyCategorySlug(rp);
+                const rImage = getPayloadImageUrl(rp.heroImage);
+                const rCats  = getPayloadCategoryNames(rp);
+                const rCategorySlug = getPayloadCategorySlug(rp);
                 return (
                   <Link key={rp.id} href={`/academy/${rCategorySlug}/${rp.slug}/`} style={{ display: "block", background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
                     <div style={{ background: "#e8f0fb", height: "155px", overflow: "hidden" }}>
                       {rImage ? (
-                        <img src={rImage} alt={getAcademyImageAlt(rp)} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+                        <img src={rImage} alt={getPayloadImageAlt(rp)} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
                       ) : (
                         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "2.5rem" }}>🎓</div>
                       )}
@@ -202,8 +195,8 @@ export default async function AcademyPostPage({ params }: Props) {
                       {rCats[0] && (
                         <span style={{ fontSize: "0.7rem", background: "#e8f0fb", color: "#2563b0", padding: "2px 8px", borderRadius: "8px", fontWeight: 600, display: "inline-block", marginBottom: "6px" }}>{rCats[0]}</span>
                       )}
-                      <div style={{ fontSize: "0.76rem", color: "#888", marginBottom: "5px" }}>{formatAcademyDate(rp.date)}</div>
-                      <div style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: rp.title.rendered }} />
+                      <div style={{ fontSize: "0.76rem", color: "#888", marginBottom: "5px" }}>{formatPayloadDate(rp.publishing?.publishedAt || rp.createdAt)}</div>
+                      <div style={{ fontSize: "0.96rem", fontWeight: 700, color: "#1a2a6c", lineHeight: 1.4 }}>{rp.title}</div>
                       <div style={{ fontSize: "0.82rem", color: "#e87722", fontWeight: 600, marginTop: "8px" }}>Read Guide →</div>
                     </div>
                   </Link>
@@ -228,7 +221,7 @@ export default async function AcademyPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* WP content styles — identical to blog post */}
+      {/* Content styles — identical to blog post */}
       <style>{`
         @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr 1fr !important; } }
         @media (max-width: 480px) { .related-grid { grid-template-columns: 1fr !important; } }
@@ -257,10 +250,7 @@ export default async function AcademyPostPage({ params }: Props) {
         .wp-content pre code { background: transparent; color: inherit; padding: 0; }
         .wp-content figure { margin: 22px 0; }
         .wp-content figcaption { text-align: center; font-size: 0.8rem; color: #888; margin-top: 6px; font-style: italic; }
-        .wp-content .wp-block-separator { border: none; border-top: 2px solid #dde2ef; margin: 30px 0; }
         .wp-content strong { color: #333; }
-        .wp-content .wp-block-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
-        @media (max-width: 600px) { .wp-content .wp-block-columns { grid-template-columns: 1fr; } }
       `}</style>
     </>
   );

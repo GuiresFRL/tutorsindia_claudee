@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ServiceTabs from "@/components/home/ServiceTabs";
 import TestimonialsSlider from "@/components/home/TestimonialsSlider";
-import { getRecentPosts, getFeaturedImage, getCategories, stripHtml } from "@/lib/api/wordpress";
+import { getRecentPayloadPosts, getPayloadImageUrl, getPayloadCategoryNames, excerptFromLexical } from "@/lib/api/payload";
 import { siteInfo } from "@/lib/data/site";
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ const stats = [
 ];
 
 export default async function Home() {
-  const recentPosts = await getRecentPosts(3);
+  const recentPosts = await getRecentPayloadPosts("blog", 3);
 
   return (
     <>
@@ -304,16 +304,16 @@ export default async function Home() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "24px" }} className="blog-grid">
             {recentPosts.map((post) => {
-              const image = getFeaturedImage(post);
-              const cats = getCategories(post);
-              const excerpt = stripHtml(post.excerpt.rendered, 100);
+              const image = getPayloadImageUrl(post.heroImage);
+              const cats = getPayloadCategoryNames(post);
+              const excerpt = excerptFromLexical(post.content, 100);
               return (
                 <article key={post.id} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "10px", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                   <Link href={`/blog/${post.slug}/`} style={{ display: "block", position: "relative", height: "180px", overflow: "hidden", background: "#dde8f5" }}>
                     {image ? (
                       <img
                         src={image}
-                        alt={post.title.rendered}
+                        alt={post.title}
                         width={400}
                         height={180}
                         loading="lazy"
@@ -330,12 +330,12 @@ export default async function Home() {
                   </Link>
                   <div style={{ padding: "18px", display: "flex", flexDirection: "column", flex: 1 }}>
                     <div style={{ fontSize: "0.76rem", color: "var(--text-light)", marginBottom: "7px" }}>
-                      {new Date(post.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                      {new Date(post.publishing?.publishedAt || post.createdAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
                     </div>
                     <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--navy)", marginBottom: "8px", lineHeight: 1.4 }}>
-                      <Link href={`/blog/${post.slug}/`} style={{ color: "var(--navy)" }} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                      <Link href={`/blog/${post.slug}/`} style={{ color: "var(--navy)" }}>{post.title}</Link>
                     </h3>
-                    <p style={{ fontSize: "0.84rem", color: "var(--text-mid)", marginBottom: "14px", lineHeight: 1.6 }}>{excerpt}…</p>
+                    <p style={{ fontSize: "0.84rem", color: "var(--text-mid)", marginBottom: "14px", lineHeight: 1.6 }}>{excerpt}</p>
                     <Link href={`/blog/${post.slug}/`} style={{ color: "var(--blue)", fontWeight: 600, fontSize: "0.84rem", marginTop: "auto" }}>Read More →</Link>
                   </div>
                 </article>

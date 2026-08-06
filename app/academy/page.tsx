@@ -2,16 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import AcademyCategoryFilter from "@/components/ui/AcademyCategoryFilter";
 import {
-  getAcademyPostsPage,
-  getAcademyCategoryList,
-  getAcademyFeaturedImage,
-  getAcademyImageAlt,
-  getAcademyAuthor,
-  getAcademyCategories,
-  getAcademyCategorySlug,
-  stripAcademyHtml,
-  formatAcademyDate,
-} from "@/lib/api/academy";
+  getPayloadPostsPage,
+  getPayloadCategories,
+  getPayloadImageUrl,
+  getPayloadImageAlt,
+  getPayloadAuthor,
+  getPayloadCategoryNames,
+  getPayloadCategorySlug,
+  excerptFromLexical,
+  formatPayloadDate,
+} from "@/lib/api/payload";
 
 export const metadata: Metadata = {
   title: "Academy — Study Guides & Resources",
@@ -37,8 +37,8 @@ export default async function AcademyPage({ searchParams }: Props) {
 
   // Fetch categories + current page of posts in parallel
   const [categoriesData, postsData] = await Promise.all([
-    getAcademyCategoryList(),
-    getAcademyPostsPage(currentPage, POSTS_PER_PAGE, categoryId),
+    getPayloadCategories("academy"),
+    getPayloadPostsPage("academy", currentPage, POSTS_PER_PAGE, categoryId),
   ]);
 
   const { posts, total: totalPosts, totalPages } = postsData;
@@ -115,13 +115,13 @@ export default async function AcademyPage({ searchParams }: Props) {
           <>
             <div className="blog-grid" style={{ marginBottom: "36px" }}>
               {posts.map((post) => {
-                const image   = getAcademyFeaturedImage(post);
-                const alt     = getAcademyImageAlt(post);
-                const author  = getAcademyAuthor(post);
-                const cats    = getAcademyCategories(post);
-                const excerpt = stripAcademyHtml(post.excerpt.rendered, 130);
-                const date    = formatAcademyDate(post.date);
-                const categorySlug = getAcademyCategorySlug(post);
+                const image   = getPayloadImageUrl(post.heroImage);
+                const alt     = getPayloadImageAlt(post);
+                const author  = getPayloadAuthor(post);
+                const cats    = getPayloadCategoryNames(post);
+                const excerpt = excerptFromLexical(post.content, 130);
+                const date    = formatPayloadDate(post.publishing?.publishedAt || post.createdAt);
+                const categorySlug = getPayloadCategorySlug(post);
                 const postHref = `/academy/${categorySlug}/${post.slug}/`;
 
                 return (
@@ -142,7 +142,7 @@ export default async function AcademyPage({ searchParams }: Props) {
                         <span>✍️ {author}</span>
                       </div>
                       <h2 className="blog-card-title">
-                        <Link href={postHref} dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                        <Link href={postHref}>{post.title}</Link>
                       </h2>
                       {excerpt && <p className="blog-card-excerpt">{excerpt}</p>}
                       <div className="blog-card-footer">
