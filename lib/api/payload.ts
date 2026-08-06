@@ -281,38 +281,45 @@ function renderTextNode(node: LexicalNode): string {
   return text;
 }
 
-function renderChildren(nodes: LexicalNode[] | undefined): string {
-  return (nodes ?? []).map(renderLexicalNode).join("");
+function renderChildren(nodes: LexicalNode[] | undefined, skip: { upload: boolean }): string {
+  return (nodes ?? []).map((n) => renderLexicalNode(n, skip)).join("");
 }
 
-function renderLexicalNode(node: LexicalNode): string {
+function renderLexicalNode(node: LexicalNode, skip: { upload: boolean }): string {
   switch (node.type) {
     case "text":
       return renderTextNode(node);
     case "linebreak":
       return "<br />";
     case "paragraph": {
-      const inner = renderChildren(node.children);
+      const inner = renderChildren(node.children, skip);
       return inner.trim() ? `<p>${inner}</p>` : "";
     }
     case "heading": {
       const tag = node.tag && /^h[1-6]$/.test(node.tag) ? node.tag : "h2";
-      return `<${tag}>${renderChildren(node.children)}</${tag}>`;
+      return `<${tag}>${renderChildren(node.children, skip)}</${tag}>`;
     }
     case "link": {
       const href = node.fields?.url ?? "#";
       const target = node.fields?.newTab ? ' target="_blank" rel="noopener noreferrer"' : "";
-      return `<a href="${escapeHtml(href)}"${target}>${renderChildren(node.children)}</a>`;
+      return `<a href="${escapeHtml(href)}"${target}>${renderChildren(node.children, skip)}</a>`;
     }
     case "list": {
       const tag = node.listType === "number" ? "ol" : "ul";
-      return `<${tag}>${renderChildren(node.children)}</${tag}>`;
+      return `<${tag}>${renderChildren(node.children, skip)}</${tag}>`;
     }
     case "listitem":
-      return `<li>${renderChildren(node.children)}</li>`;
+      return `<li>${renderChildren(node.children, skip)}</li>`;
     case "quote":
-      return `<blockquote>${renderChildren(node.children)}</blockquote>`;
+      return `<blockquote>${renderChildren(node.children, skip)}</blockquote>`;
     case "upload": {
+      // The page already shows the post's featured image in the banner —
+      // drop the article's own first inline image so it doesn't repeat
+      // immediately underneath as a visually redundant second banner image.
+      if (skip.upload) {
+        skip.upload = false;
+        return "";
+      }
       const img = node.value;
       const src = getPayloadImageUrl(img);
       if (!src) return "";
@@ -322,11 +329,14 @@ function renderLexicalNode(node: LexicalNode): string {
     default:
       // Unknown node type (embed, table, etc. not yet supported) — render
       // its children as plain text rather than dropping the content silently.
-      return renderChildren(node.children);
+      return renderChildren(node.children, skip);
   }
 }
 
-export function renderLexicalToHtml(content: { root: LexicalNode } | null | undefined): string {
+export function renderLexicalToHtml(
+  content: { root: LexicalNode } | null | undefined,
+  skipFirstImage = false
+): string {
   if (!content?.root) return "";
-  return renderChildren(content.root.children);
+  return renderChildren(content.root.children, { upload: skipFirstImage });
 }
