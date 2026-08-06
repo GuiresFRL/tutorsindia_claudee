@@ -76,7 +76,7 @@ export default async function BlogPostPage({ params }: Props) {
   const cats = getPayloadCategoryNames(post);
   const date = formatPayloadDate(post.publishing?.publishedAt || post.createdAt);
   const modified = formatPayloadDate(post.updatedAt);
-  const contentHtml = renderLexicalToHtml(post.content, Boolean(image));
+  const contentHtml = renderLexicalToHtml(post.content, Boolean(image), post.title);
   const related = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
