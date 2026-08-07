@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import BlogCategoryFilter from "@/components/ui/BlogCategoryFilter";
 import {
@@ -119,7 +120,7 @@ export default async function BlogPage({ searchParams }: Props) {
                   <article key={post.id} className="blog-card">
                     <Link href={`/blog/${post.slug}/`} className="blog-card-img">
                       {image ? (
-                        <img src={image} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
+                        <Image src={image} alt={alt} fill sizes="(max-width: 768px) 100vw, 380px" style={{ objectFit: "cover" }} />
                       ) : (
                         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", fontSize: "3rem" }}>📖</div>
                       )}

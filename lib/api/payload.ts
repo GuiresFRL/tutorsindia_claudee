@@ -154,10 +154,25 @@ export async function getPayloadPostBySlug(source: PayloadSource, slug: string):
     "where[slug][equals]": slug,
     "where[publishing.status][equals]": "published",
   });
-  const res = await fetch(`${API}/posts?limit=1&${where}`, { headers: FETCH_OPTS.headers, next: { revalidate: 60 } });
-  if (!res.ok) throw new Error(`[Payload] getPayloadPostBySlug: ${res.status} fetching ${source}/${slug}`);
-  const json = await res.json();
-  return json.docs?.[0] ?? null;
+  const url = `${API}/posts?limit=1&${where}`;
+
+  // A single transient 5xx from guires.info shouldn't take down the whole
+  // build (generateStaticParams hits this for 1000+ pages) or falsely
+  // surface as a hard error for one visitor — retry a couple of times
+  // before giving up.
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const res = await fetch(url, { headers: FETCH_OPTS.headers, next: { revalidate: 60 } });
+      if (!res.ok) throw new Error(`[Payload] getPayloadPostBySlug: ${res.status} fetching ${source}/${slug}`);
+      const json = await res.json();
+      return json.docs?.[0] ?? null;
+    } catch (err) {
+      lastErr = err;
+      if (attempt < 2) await new Promise((r) => setTimeout(r, 300 * (attempt + 1)));
+    }
+  }
+  throw lastErr;
 }
 
 /** Search published posts by keyword (title only — Payload's REST API has no full-text search param without a plugin). */
@@ -291,7 +306,6 @@ function normalizeTitle(s: string): string {
 }
 
 interface RenderSkip {
-  upload: boolean;
   /** Post title to compare the first heading against — cleared after the first heading node is seen. */
   titleHeading: string | null;
 }
@@ -336,13 +350,6 @@ function renderLexicalNode(node: LexicalNode, skip: RenderSkip): string {
     case "quote":
       return `<blockquote>${renderChildren(node.children, skip)}</blockquote>`;
     case "upload": {
-      // The page already shows the post's featured image in the banner —
-      // drop the article's own first inline image so it doesn't repeat
-      // immediately underneath as a visually redundant second banner image.
-      if (skip.upload) {
-        skip.upload = false;
-        return "";
-      }
       const img = node.value;
       const src = getPayloadImageUrl(img);
       if (!src) return "";
@@ -358,9 +365,8 @@ function renderLexicalNode(node: LexicalNode, skip: RenderSkip): string {
 
 export function renderLexicalToHtml(
   content: { root: LexicalNode } | null | undefined,
-  skipFirstImage = false,
   postTitle: string | null = null
 ): string {
   if (!content?.root) return "";
-  return renderChildren(content.root.children, { upload: skipFirstImage, titleHeading: postTitle });
+  return renderChildren(content.root.children, { titleHeading: postTitle });
 }
