@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import {
@@ -86,7 +87,7 @@ export default async function AcademyPostPage({ params }: Props) {
   const cats     = getPayloadCategoryNames(post);
   const date     = formatPayloadDate(post.publishing?.publishedAt || post.createdAt);
   const modified = formatPayloadDate(post.updatedAt);
-  const contentHtml = renderLexicalToHtml(post.content, Boolean(image), post.title);
+  const contentHtml = renderLexicalToHtml(post.content, post.title);
 
   const related = recentPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
@@ -133,7 +134,15 @@ export default async function AcademyPostPage({ params }: Props) {
         {/* Featured image */}
         {image && (
           <div style={{ marginBottom: "32px", borderRadius: "12px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}>
-            <img src={image} alt={alt} style={{ width: "100%", height: "auto", display: "block", maxHeight: "500px", objectFit: "cover" }} />
+            <Image
+              src={image}
+              alt={alt}
+              width={post.heroImage?.width ?? 1200}
+              height={post.heroImage?.height ?? 630}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+              style={{ width: "100%", height: "auto", display: "block", maxHeight: "500px", objectFit: "cover" }}
+            />
           </div>
         )}
 
@@ -184,9 +193,9 @@ export default async function AcademyPostPage({ params }: Props) {
                 const rCategorySlug = getPayloadCategorySlug(rp);
                 return (
                   <Link key={rp.id} href={`/academy/${rCategorySlug}/${rp.slug}/`} style={{ display: "block", background: "#fff", border: "1px solid #dde2ef", borderRadius: "12px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
-                    <div style={{ background: "#e8f0fb", height: "155px", overflow: "hidden" }}>
+                    <div style={{ background: "#e8f0fb", height: "155px", overflow: "hidden", position: "relative" }}>
                       {rImage ? (
-                        <img src={rImage} alt={getPayloadImageAlt(rp)} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+                        <Image src={rImage} alt={getPayloadImageAlt(rp)} fill sizes="(max-width: 768px) 100vw, 380px" style={{ objectFit: "cover" }} />
                       ) : (
                         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "2.5rem" }}>🎓</div>
                       )}

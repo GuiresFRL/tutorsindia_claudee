@@ -21,6 +21,15 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["pdf-lib", "nodemailer"],
   },
 
+  // Let next/image optimize (resize + WebP/AVIF + responsive srcset) images
+  // served from the Payload CMS instead of shipping the full-size original.
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "www.guires.info" },
+      { protocol: "https", hostname: "guires.info" },
+    ],
+  },
+
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production"
