@@ -108,7 +108,7 @@ export default async function BlogPage({ searchParams }: Props) {
         ) : (
           <>
             <div className="blog-grid">
-              {posts.map((post) => {
+              {posts.map((post, i) => {
                 const image   = getPayloadImageUrl(post.heroImage);
                 const alt     = getPayloadImageAlt(post);
                 const author  = getPayloadAuthor(post);
@@ -120,7 +120,7 @@ export default async function BlogPage({ searchParams }: Props) {
                   <article key={post.id} className="blog-card">
                     <Link href={`/blog/${post.slug}/`} className="blog-card-img">
                       {image ? (
-                        <Image src={image} alt={alt} fill sizes="(max-width: 768px) 100vw, 380px" style={{ objectFit: "cover" }} />
+                        <Image src={image} alt={alt} fill sizes="(max-width: 768px) 100vw, 380px" style={{ objectFit: "cover" }} priority={i < 3} />
                       ) : (
                         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", fontSize: "3rem" }}>📖</div>
                       )}
