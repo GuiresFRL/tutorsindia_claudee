@@ -57,9 +57,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      { source: "/academy/assignment-writing", destination: "/academy/", permanent: true },
       { source: "/academy/business-management-info", destination: "/academy/", permanent: true },
-      { source: "/academy/coding-algorithms-development", destination: "/academy/", permanent: true },
       { source: "/academy/defenitions", destination: "/academy/", permanent: true },
       { source: "/academy/engineering-and-technology", destination: "/academy/", permanent: true },
       { source: "/academy/engineering-technology-ebooks", destination: "/academy/", permanent: true },
@@ -67,12 +65,20 @@ const nextConfig: NextConfig = {
       { source: "/academy/future-topics-titles", destination: "/academy/", permanent: true },
       { source: "/academy/how-to-article", destination: "/academy/", permanent: true },
       { source: "/academy/infographics", destination: "/academy/", permanent: true },
-      { source: "/academy/manuscript-writing", destination: "/academy/", permanent: true },
-      { source: "/academy/phd-dissertation", destination: "/academy/", permanent: true },
       { source: "/academy/recent-trends-2", destination: "/academy/", permanent: true },
-      { source: "/academy/research-methodology", destination: "/academy/", permanent: true },
       { source: "/academy/research-papers", destination: "/academy/", permanent: true },
       { source: "/academy/theories", destination: "/academy/", permanent: true },
+
+      // These five old WordPress taxonomy prefixes were retired during the
+      // Payload CMS migration — none of them are live category slugs there
+      // (verified against the current category list) — so every URL nested
+      // under them, not just the bare category page, should redirect to the
+      // academy index instead of 404ing.
+      { source: "/academy/assignment-writing/:path*", destination: "/academy/", permanent: true },
+      { source: "/academy/coding-algorithms-development/:path*", destination: "/academy/", permanent: true },
+      { source: "/academy/manuscript-writing/:path*", destination: "/academy/", permanent: true },
+      { source: "/academy/phd-dissertation/:path*", destination: "/academy/", permanent: true },
+      { source: "/academy/research-methodology/:path*", destination: "/academy/", permanent: true },
 
       {
         source: "/ask-an-expert/political-science",
