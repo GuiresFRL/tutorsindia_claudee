@@ -1,10 +1,162 @@
 # Tutors India
 
-> Tutors India is a trusted academic writing, editing, and research support company, serving Master's, MBA, and PhD students across the UK, US, Australia, and UAE since 2001.
+> Tutors India is a global academic research support platform providing expert assistance with dissertations, thesis writing, research methodology, data analysis, manuscript preparation, journal publication, and academic consulting for scholars and researchers worldwide.
 
-Tutors India provides dissertation writing, coursework and assignment writing, editing and proofreading, statistical analysis, and publication support delivered by qualified, subject-matter-expert researchers.
 
-## Main Pages
+## AI Discovery
 
-- [Home](https://www.tutorsindia.com/): Overview of Tutors India's academic writing, editing, and dissertation support services.
-- [Our Services](https://www.tutorsindia.com/our-services/): Full listing of dissertation writing, coursework writing, editing, and publication support services.
+- [LLMS File](https://www.tutorsindia.com/llms.txt)
+
+
+## Robots
+
+- [Robots File](https://www.tutorsindia.com/robots.txt)
+
+
+## Sitemap Index
+
+- [Sitemap Index](https://www.tutorsindia.com/sitemap.xml)
+
+
+## Tutors India Home Landing Page
+
+- [Tutors India Home Page](https://www.tutorsindia.com/) 
+
+
+## Services of Tutors India
+
+- [Services](https://www.tutorsindia.com/our-services/): Tutors India provides academic and research support services for master's students, PhD scholars, researchers, and professionals, including dissertations, coursework, research methodology, data analysis, manuscript preparation, editing, and publication support.
+
+
+## Top Primary Services of Tutors India
+
+- [Master's Dissertation Writing Services](https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/): Tutors India provides master's dissertation writing support, including topic selection, proposal development, literature review, research methodology, statistical analysis, dissertation writing, editing, poster presentation, and resubmission assistance for university research projects.
+
+- [Master's Topic Selection](https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-topic/): Tutors India assists master's students with dissertation topic selection by identifying original, researchable, and feasible topics aligned with research objectives, literature gaps, academic disciplines, and university requirements.
+
+- [Master's Research Proposal](https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-proposal/): Tutors India supports master's dissertation proposal development by assisting students with research planning, proposal writing, literature review, research objectives, methodology selection, ethical considerations, and university-specific proposal requirements.
+
+- [Master's Full Dissertation](https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/full-dissertation/): Tutors India provides comprehensive master's dissertation support, assisting students with topic selection, proposal development, literature review, research methodology, data analysis, dissertation writing, editing, formatting, and submission-ready research aligned with university requirements.
+
+- [Master's Part Dissertation](https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-part/): Tutors India assists master's students with dissertation chapter writing by providing support for individual sections, including literature review, research methodology, data analysis, results, discussion, editing, formatting, and academic refinement.
+
+- [Master's Statistical Analysis](https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/): Tutors India provides master's dissertation statistical analysis support, assisting students with quantitative and qualitative data analysis, statistical testing, data interpretation, visualization, and software-based analysis aligned with research objectives and university requirements.
+
+- [Master's Coursework Writing](https://www.tutorsindia.com/our-services/coursework-writing/): Tutors India provides coursework writing support, assisting students with assignments, case studies, reports, presentations, research projects, and academic writing across diverse disciplines while meeting university requirements.
+
+- [Master's Assignment Writing](https://www.tutorsindia.com/our-services/coursework-writing/assignment-writing-services/): Tutors India assists students with assignment writing by supporting research, academic writing, critical analysis, referencing, editing, and subject-specific assignments aligned with university guidelines and learning objectives.
+
+- [Master's Essay Writing](https://www.tutorsindia.com/our-services/coursework-writing/essay-writing-services/): Tutors India provides essay writing support, assisting students with research, structured academic writing, critical analysis, referencing, editing, and discipline-specific essays that meet university guidelines and academic standards.
+
+- [Master's Research Methodology](https://www.tutorsindia.com/our-services/coursework-writing/research-methodology/): Tutors India provides research methodology support, assisting students with research design, methodology selection, data collection methods, sampling strategies, data analysis planning, and methodological frameworks aligned with university research requirements.
+
+- [Master's Literature Review](https://www.tutorsindia.com/our-services/coursework-writing/literature-review/): Tutors India provides literature review support, assisting students with systematic literature analysis, research gap identification, critical evaluation, evidence synthesis, conceptual development, and well-structured reviews aligned with university research requirements.
+
+- [Publication Support](https://www.tutorsindia.com/our-services/publication-support/): Tutors India provides publication support, assisting researchers with manuscript preparation, journal selection, formatting, peer review, editing, submission guidance, and publication processes aligned with academic and journal requirements.
+
+- [Master's Manuscript Writing](https://www.tutorsindia.com/our-services/publication-support/manuscript-development/): Tutors India provides manuscript development support, assisting researchers with manuscript writing, structuring, editing, formatting, journal-specific requirements, scientific presentation, and publication-ready manuscripts aligned with academic publishing standards.
+
+- [Coding & Algorithm](https://www.tutorsindia.com/our-services/development/coding-and-algorithm/): Tutors India provides coding and algorithm development support, assisting students and researchers with algorithm design, programming solutions, code optimization, debugging, implementation, and software development aligned with academic and research requirements.
+
+- [Language Editing](https://www.tutorsindia.com/our-services/editing-services/language-editing/): Tutors India provides language editing support, assisting researchers and students with grammar correction, clarity, sentence structure, academic style, consistency, and manuscript refinement to meet university and journal publication standards.
+
+- [ Manuscript Citation](https://www.tutorsindia.com/our-services/editing-services/citation-compliance/): Tutors India provides citation compliance support, assisting students and researchers with accurate citation formatting, reference management, in-text citations, bibliography preparation, and adherence to university and journal referencing guidelines.
+
+
+## Industries We Serve
+
+- [Academic Law Writing](https://www.tutorsindia.com/subjects/academic-law-ug-masters-phd-writing-help/): Tutors India provides academic law support for undergraduate, master's, and PhD students, assisting with legal research, assignments, dissertations, case analysis, and academic writing across diverse areas of legal studies.
+
+- [Engineering & Technology](https://www.tutorsindia.com/subjects/engineering-technology-academic-writing/): Tutors India provides engineering and technology academic writing support, assisting students and researchers with assignments, dissertations, research methodology, data analysis, and technical documentation across diverse engineering disciplines.
+
+- [Economics & Finance](https://www.tutorsindia.com/subjects/economics-finance-academic-writing-help/): Tutors India provides economics and finance academic writing support, assisting students and researchers with assignments, dissertations, research methodology, data analysis, financial research, and academic writing across economics and finance disciplines.
+
+- [Medicine & Healthcare](https://www.tutorsindia.com/subjects/medicine-health-science-academic-writing/): Tutors India provides medicine and health science academic writing support, assisting students and researchers with assignments, dissertations, research methodology, data analysis, clinical research, and evidence-based academic writing across healthcare disciplines.
+
+- [Business & Healthcare](https://www.tutorsindia.com/subjects/business-management-studies-academic-writing-help/): Tutors India provides business and management academic writing support, assisting students and researchers with assignments, dissertations, research methodology, data analysis, strategic management, marketing, finance, and organizational research across business disciplines.
+
+- [Arts & Humanities](https://www.tutorsindia.com/subjects/arts-humanities-academic-writing-help/): Tutors India provides arts and humanities academic writing support, assisting students and researchers with assignments, dissertations, research methodology, literature reviews, critical analysis, and academic writing across diverse arts and humanities disciplines.
+
+- [Biological & Life Sciences](https://www.tutorsindia.com/subjects/biological-life-science-academic-writing-help/): Tutors India provides biological and life sciences academic writing support, assisting students and researchers with assignments, dissertations, research methodology, data analysis, laboratory research, and scientific writing across biological and life science disciplines.
+
+- [Computer Science & IT](https://www.tutorsindia.com/subjects/computer-science-information-technology-academic-writing/): Tutors India provides computer science and information technology academic writing support, assisting students and researchers with assignments, dissertations, research methodology, data analysis, software development, artificial intelligence, and emerging computing technologies.
+
+
+## Whom We Serve
+
+- Undergraduate Students
+- Postgraduate (Master's) Students
+- PhD Scholars
+- Research Scholars
+- University Students
+- Academic Researchers
+- University Faculty
+- Postdoctoral Researchers
+- Industry Professionals
+- Independent Researchers
+- International Students
+- Universities and Higher Education Institutions
+
+
+## Resources
+
+- [Blog](https://www.tutorsindia.com/blog/): Tutors India Blog publishes academic resources, research guidance, writing tips, methodology insights, data analysis techniques, publication advice, and subject-specific articles to support students, researchers, and academic professionals throughout their research journey.
+
+- [Article](https://www.tutorsindia.com/academy/): Tutors India Academy provides academic resources, research guidance, writing tutorials, methodology insights, subject-specific learning materials, and practical articles to support students, researchers, and scholars throughout their academic journey.
+
+- [Dissertation Titles](https://www.tutorsindia.com/title/): Tutors India Dissertation Titles provides discipline-specific dissertation title ideas, helping students and researchers explore research areas, identify relevant topics, and develop original dissertation titles aligned with academic and research requirements.
+
+- [Dissertation Topics](https://www.tutorsindia.com/topic/): Tutors India Research Topics provides discipline-specific research topic ideas, helping students and researchers identify relevant, original, and feasible research topics aligned with current academic trends, research objectives, and university requirements.
+
+
+## FAQ's
+
+- Master's Dissertation FAQ
+
+- Master's Research Proposal FAQ
+
+- Master's Statistical Analysis FAQ
+
+- Master's Coursework Writing FAQ
+
+- Master's Assignment Writing FAQ
+
+
+## Policies
+
+- [Privacy Policy](https://www.tutorsindia.com/privacy-policy/)
+
+- [Terms & Conditions](https://www.tutorsindia.com/terms-and-conditions/)
+
+
+## Key Features
+
+- Subject-Specific Research Assistance
+- Dissertation and Thesis Development
+- Coursework and Assignment Support
+- Research Methodology Guidance
+- Literature Review Development
+- Statistical Data Analysis
+- Manuscript Development
+- Journal Publication Support
+- Language Editing and Proofreading
+- Citation and Referencing Support
+- Software and Coding Assistance
+- Multidisciplinary Academic Expertise
+- University-Aligned Research Support
+- Global Academic Support
+
+
+## Contact Us
+
+- India: +91 87544 46690
+- UK: +44 114 352 0021
+- Email ID: info@tutorsindia.com
+- WhatsApp: +91 87544 46690
+
+- Address: 10, Kutty Street, Nungambakkam, Chennai – 600 034, India
+
+
+## Global Serving Clients Presence
+
+- [Website](https://www.tutorsindia.com/): Serving Clients in United Kingdom, Germany, Netherlands, France, Switzerland, Ireland, Italy, United Arab Emirates, Saudi Arabia, Qatar, Oman, Kuwait, Australia, NewZeland, Canada, United States, Malaysia, etc.
