@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Merriweather, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/layout/TopBar";
@@ -108,37 +107,70 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Google Tag Manager — deferred until after hydration so it doesn't compete with the critical render path */}
-        <Script id="gtm-loader" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WF2X4DP');
-        ` }} />
-        {/* End Google Tag Manager */}
+        {/*
+          GTM / gtag / Clarity / Tawk.to all wait for the first real user
+          interaction (scroll, touch, mouse move, keypress) or a 4s fallback
+          timeout, whichever comes first — instead of firing on hydration or
+          window-load. None of them are needed for the initial paint, and
+          keeping them off the main thread during first render is the
+          biggest lever left for LCP/TBT once images are already optimized.
+        */}
+        <script id="deferred-third-party" dangerouslySetInnerHTML={{ __html: `
+(function(){
+  var loaded = false;
+  function loadThirdParty(){
+    if (loaded) return;
+    loaded = true;
 
-        {/* Microsoft Clarity — session-recording analytics, safe to load once the page is idle */}
-        <Script id="clarity-loader" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `
-(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "cmdaycrfv8");
-        ` }} />
+    // Google Tag Manager
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WF2X4DP');
 
-        {/* Google tag (gtag.js) — deferred until after hydration */}
-        <Script id="gtag-src" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11160128987" />
-        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    // Google tag (gtag.js)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'AW-11160128987');
+    gtag('config', 'G-5PEN58CJ4F');
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-11160128987';
+    document.head.appendChild(gtagScript);
 
-/* Google Ads */
-gtag('config', 'AW-11160128987');
+    // Microsoft Clarity
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "cmdaycrfv8");
 
-/* Google Analytics 4 */
-gtag('config', 'G-5PEN58CJ4F');
+    // Tawk.to live chat widget
+    var Tawk_API=window.Tawk_API||{}, Tawk_LoadStart=new Date();
+    window.Tawk_API = Tawk_API;
+    window.Tawk_LoadStart = Tawk_LoadStart;
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/679b32f93a842732607721d7/1iir3u863';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+
+    ['scroll','mousemove','touchstart','keydown'].forEach(function(evt){
+      window.removeEventListener(evt, loadThirdParty);
+    });
+    clearTimeout(fallbackTimer);
+  }
+  ['scroll','mousemove','touchstart','keydown'].forEach(function(evt){
+    window.addEventListener(evt, loadThirdParty, { once: true, passive: true });
+  });
+  var fallbackTimer = setTimeout(loadThirdParty, 4000);
+})();
         ` }} />
 
         {/* Charset & viewport */}
@@ -336,23 +368,6 @@ gtag('config', 'G-5PEN58CJ4F');
   else processWPContent();
 })();
         `}} />
-
-        {/* Tawk.to live chat widget — same account used on tutorsindia.com */}
-        <Script
-          id="tawkto-loader"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{ __html: `
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/679b32f93a842732607721d7/1iir3u863';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-})();
-          `}}
-        />
 
         {/* WhatsApp floating button — bottom left */}
         <a
