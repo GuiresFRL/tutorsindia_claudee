@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Dissertation & Thesis Infographics",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function InfographicsPage() {
-  const proxied = await fetchProxiedPage("/infographics/");
+  const proxied = getStaticContent("infographics", []);
 
   return (
     <>

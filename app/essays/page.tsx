@@ -1,18 +1,21 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIChildPages, stripTIHtml } from "@/lib/api/tutorsindia";
+import { stripTIHtml, type TIPage } from "@/lib/api/tutorsindia";
+import essaysListingRaw from "@/lib/data/static-content/_listings/essays.json";
 
-export const revalidate = 3600;
+const essaysListing = essaysListingRaw as unknown as TIPage[];
+
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Free University Essay Examples",
   description: "Browse free university essay examples across 50+ subjects. Expert-written samples demonstrating proper structure, research methods, and citation styles.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/essays/" },
 };
 
 export default async function EssaysPage() {
-  const subjects = await getTIChildPages(14476);
+  const subjects = essaysListing;
 
   return (
     <>

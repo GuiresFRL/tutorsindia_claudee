@@ -1,18 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Topic Selection Sample Work",
   description: "Browse topic selection sample work from Tutors India's PhD-qualified academic experts. Dissertation and research topic samples across all disciplines.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/topic-selection-sample-work/" },
 };
 
 export default async function TopicSelectionSampleWorkPage() {
-  const proxied = await fetchProxiedPage("/topic-selection-sample-work/");
+  const proxied = getStaticContent("topic-selection-sample-work", []);
 
   return (
     <>

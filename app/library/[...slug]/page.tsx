@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { readFileSync } from "fs";
-import { join } from "path";
-import { fetchProxiedLibraryPage } from "@/lib/api/proxyPage";
+import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -15,29 +13,14 @@ function slugToTitle(slug: string): string {
   return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
-// Pre-render every known /library/* URL at build time so real traffic hits a
-// static page instead of a cold proxy-fetch-and-scrape of tutorsindia.net —
-// that live round trip (network fetch + HTML parsing) was the cause of slow
-// mobile loads. Any URL not in this list still works — it's rendered on
-// first request and cached for `revalidate` seconds after that.
-export async function generateStaticParams() {
-  try {
-    const xml = readFileSync(join(process.cwd(), "lib/data/original-sitemap.xml"), "utf-8");
-    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());
-    return locs
-      .filter((u) => u.includes("/library/"))
-      .map((u) => new URL(u).pathname.replace(/^\/library\//, "").replace(/\/$/, ""))
-      .filter(Boolean)
-      .map((path) => ({ slug: path.split("/") }));
-  } catch {
-    return [];
-  }
+export function generateStaticParams() {
+  return getAllStaticSlugs("library").map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const path = `/library/${slug.join("/")}/`;
-  const proxied = await fetchProxiedLibraryPage(path);
+  const proxied = getStaticContent("library", slug);
   const title = proxied?.title || slugToTitle(slug[slug.length - 1]);
   return {
     title: `${title}`,
@@ -48,8 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LibrarySlugPage({ params }: Props) {
   const { slug } = await params;
-  const path = `/library/${slug.join("/")}/`;
-  const proxied = await fetchProxiedLibraryPage(path);
+  const proxied = getStaticContent("library", slug);
 
   if (!proxied) notFound();
 

@@ -1,18 +1,21 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIChildPages } from "@/lib/api/tutorsindia";
+import type { TIPage } from "@/lib/api/tutorsindia";
+import topicListingRaw from "@/lib/data/static-content/_listings/topic.json";
 
-export const revalidate = 3600;
+const topicListing = topicListingRaw as unknown as TIPage[];
+
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Free Dissertation Topics by Subject",
   description: "Explore free dissertation topic ideas across Business, Engineering, Computer Science, Biology, Law and more. Expert curated by Tutors India's PhD team.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/topic/" },
 };
 
 export default async function TopicPage() {
-  const pages = await getTIChildPages(16086); // parent ID for /topic/
+  const pages = topicListing;
 
   return (
     <>

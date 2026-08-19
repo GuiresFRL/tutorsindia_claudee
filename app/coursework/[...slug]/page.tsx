@@ -1,13 +1,15 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
-import { getTIPageBySlug, stripTIHtml } from "@/lib/api/tutorsindia";
-import { cleanElementorHtml } from "@/lib/cleanElementor";
+import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
+}
+
+export function generateStaticParams() {
+  return getAllStaticSlugs("coursework").map((slug) => ({ slug }));
 }
 
 function slugToTitle(slug: string): string {
@@ -17,14 +19,9 @@ function slugToTitle(slug: string): string {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const path = `/coursework/${slug.join("/")}/`;
-  const lastSlug = slug[slug.length - 1];
-  const wpPage = await getTIPageBySlug(lastSlug);
-  const title = wpPage?.title?.rendered
-    ? wpPage.title.rendered.replace(/<[^>]+>/g, "")
-    : slugToTitle(lastSlug);
-  const desc = wpPage?.excerpt?.rendered
-    ? stripTIHtml(wpPage.excerpt.rendered, 160)
-    : `${title} — Academic coursework guidance from Tutors India.`;
+  const page = getStaticContent("coursework", slug);
+  const title = page?.title || slugToTitle(slug[slug.length - 1]);
+  const desc = page?.excerpt || `${title} — Academic coursework guidance from Tutors India.`;
   return {
     title: `${title}`,
     description: desc,
@@ -34,22 +31,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CourseworkSlugPage({ params }: Props) {
   const { slug } = await params;
-  const path = `/coursework/${slug.join("/")}/`;
   const lastSlug = slug[slug.length - 1];
 
-  // Try WP API first, clean Elementor wrappers
-  const wpPage = await getTIPageBySlug(lastSlug);
-  const rawWp = wpPage?.content?.rendered?.trim() ?? "";
-  const wpContent = rawWp.length >= 50 ? cleanElementorHtml(rawWp) : "";
-
-  // Proxy fallback
-  const proxied = wpContent.length < 200 ? await fetchProxiedPage(path) : null;
-
-  const title = wpPage?.title?.rendered
-    ? wpPage.title.rendered.replace(/<[^>]+>/g, "")
-    : proxied?.title || slugToTitle(lastSlug);
-
-  const content = wpContent.length >= 200 ? wpContent : (proxied?.content ?? "");
+  const page = getStaticContent("coursework", slug);
+  const title = page?.title || slugToTitle(lastSlug);
+  const content = page?.content ?? "";
 
   const crumbs = [
     { label: "Home", href: "/" },
@@ -78,10 +64,9 @@ export default async function CourseworkSlugPage({ params }: Props) {
               );
             })}
           </div>
-          <h1
-            style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}
-            dangerouslySetInnerHTML={{ __html: wpPage?.title?.rendered || title }}
-          />
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}>
+            {title}
+          </h1>
         </div>
       </section>
 

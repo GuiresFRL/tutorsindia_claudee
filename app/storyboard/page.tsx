@@ -9,62 +9,60 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.tutorsindia.com/storyboard/" },
 };
 
-const BASE = "https://www.tutorsindia.net/wp-content/uploads";
-
 const items = [
   {
     title: "Data Analysis",
-    img: `${BASE}/2024/03/Data-analysis.jpg`,
+    img: "/static-content/images/60816f6ae4f39304.jpg",
     href: "/data-analysis/",
   },
   {
     title: "Conference Paper",
-    img: `${BASE}/2024/03/Conference-Paper-600x416-1.jpg`,
+    img: "/static-content/images/6530c377fab6f38e.jpg",
     href: "/publication-support/",
   },
   {
     title: "UK Master's Dissertation Writing Help",
-    img: `${BASE}/2018/08/Masters-Dissertation-Writing-Help-and-Guidance.jpg`,
+    img: "/static-content/images/58caabc794165d51.jpg",
     href: "/masters-dissertation/",
   },
   {
     title: "Essay Writing",
-    img: `${BASE}/2024/03/Essay-Writing-600x416-1.jpg`,
+    img: "/static-content/images/271087aaa6b8cda2.jpg",
     href: "/essay-writing/",
   },
   {
     title: "Make Data Analysis Easy",
-    img: `${BASE}/2024/03/Data-analysis-made-easy-with-Tutors-India-600x428-1.jpg`,
+    img: "/static-content/images/91c3186d765776cc.jpg",
     href: "/data-analysis/",
   },
   {
     title: "PhD Dissertation",
-    img: `${BASE}/2024/03/Dissertation-600x357-1.jpg`,
+    img: "/static-content/images/99b89ff2617b10bf.jpg",
     href: "/phd-dissertation/",
   },
   {
     title: "UK Masters Research Proposal Writing Help",
-    img: `${BASE}/2024/03/UK-Masters-Research-Proposal-Writing-Help.jpg`,
+    img: "/static-content/images/a4eafafbe952d8b8.jpg",
     href: "/research-proposal/",
   },
   {
     title: "Medicine Thesis Writing for Ph.D. Students",
-    img: `${BASE}/2024/03/Medicine-thesis-writing-for-Ph.D.-students.jpg`,
+    img: "/static-content/images/624e6e60a17c366b.jpg",
     href: "/phd-dissertation/",
   },
   {
     title: "Exam Notes",
-    img: `${BASE}/2024/03/Exam-Notes-600x416-1.jpg`,
+    img: "/static-content/images/42920e3d0fb84369.jpg",
     href: "/coursework-writing/",
   },
   {
     title: "Masters Dissertation Proposal Writing Services",
-    img: `${BASE}/2024/03/UK-Masters-Research-Proposal-Writing-Help.jpg`,
+    img: "/static-content/images/a4eafafbe952d8b8.jpg",
     href: "/masters-dissertation/",
   },
   {
     title: "Each and Every Assignment",
-    img: `${BASE}/2024/03/3.jpg`,
+    img: "/static-content/images/fba76c09b6739c4c.jpg",
     href: "/assignment-writing/",
   },
 ];

@@ -1,0 +1,17 @@
+{
+  "url": "https://www.tutorsindia.com/qa-forum/logistic-regression-output-interpretation/",
+  "path": "/qa-forum/logistic-regression-output-interpretation/",
+  "section": "qa-forum",
+  "slug": "logistic-regression-output-interpretation",
+  "source": "wp-rest-post",
+  "title": "Can you help me to interpret my Logistic regression output?",
+  "excerpt": "Q & A Forum Statistical Analysis Q: Can you help me to interpret my Logistic regression output? Sure, I will be here to help you with […]",
+  "content": "<p><span style=\"color:red\">Q &amp; A Forum </span><br>\n\n<span style=\"font-size:18px;padding-top:10px\">Statistical Analysis</span></p>\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<h1>Q: Can you help me to interpret my Logistic regression output?</h1>\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" width=\"687\" height=\"447\" src=\"/static-content/images/44e2b18185555389.webp\" class=\"attachment-large size-large wp-image-13200\" alt=\"Bibliography and Appendices\" srcset=\"/static-content/images/44e2b18185555389.webp 687w, https://tutorsindia.net/wp-content/uploads/2024/11/Bibliography-and-Appendices-300x195.webp 300w, https://tutorsindia.net/wp-content/uploads/2024/11/Bibliography-and-Appendices-224x146.webp 224w, https://tutorsindia.net/wp-content/uploads/2024/11/Bibliography-and-Appendices-50x33.webp 50w, https://tutorsindia.net/wp-content/uploads/2024/11/Bibliography-and-Appendices-115x75.webp 115w, https://tutorsindia.net/wp-content/uploads/2024/11/Bibliography-and-Appendices-600x390.webp 600w\" sizes=\"(max-width: 687px) 100vw, 687px\" />\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\tSure, I will be here to help you with your logistic regression output interpretation. The following steps will be covered:\n<ul style=\"list-style:disc;padding:10px 40px;\">\n \t<li><strong>Odds Ratios (Exp(B)):</strong> We will be looking at the odds of the outcome as they are affected by a one-unit increase in predictors.</li>\n \t<li><strong>Significance (p-values):</strong> We will see which predictors are statistically significant.</li>\n \t<li><strong>Model Fit:</strong> We will look at things like Nagelkerke R² and -2 Log Likelihood.</li>\n \t<li><strong>Discrimination Ability:</strong> We will talk about the AUC and classification accuracy.</li>\n</ul>\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t<h3 style=\"color: white!important;font-weight:600\">Explore how we can collaborate to elevate your research and uphold the highest standards of academic integrity. Contact us today to learn more about our services and how we can assist you in making a meaningful impact in your field</h3>",
+  "images": [
+    {
+      "src": "https://tutorsindia.net/wp-content/uploads/2024/11/Bibliography-and-Appendices.webp",
+      "local": "/static-content/images/44e2b18185555389.webp"
+    }
+  ],
+  "contentLen": 2364
+}

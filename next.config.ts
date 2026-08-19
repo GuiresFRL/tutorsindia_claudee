@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
@@ -15,6 +16,14 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Force all URLs to use trailing slash
   trailingSlash: true,
+
+  // Pin the workspace root to this project — an unrelated package-lock.json
+  // higher up the filesystem was making Next.js infer the wrong root, which
+  // broke server-side fs reads (e.g. the static-content JSON data files)
+  // that resolve paths from process.cwd().
+  turbopack: {
+    root: __dirname,
+  },
 
   // Reduce unused JS — target modern browsers only
   experimental: {
