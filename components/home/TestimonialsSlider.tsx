@@ -78,11 +78,11 @@ export default function TestimonialsSlider() {
       </div>
 
       {/* Nav row */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", marginTop: "28px" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", marginTop: "28px", flexWrap: "wrap", maxWidth: "100%" }}>
         <button onClick={prev} aria-label="Previous" style={btnStyle}>‹</button>
 
         {/* Dots — 44×44px touch target wrapping small visual dot */}
-        <div style={{ display: "flex", gap: "2px", alignItems: "center" }}>
+        <div style={{ display: "flex", gap: "2px", alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
           {testimonials.map((_, i) => (
             <button
               key={i}
