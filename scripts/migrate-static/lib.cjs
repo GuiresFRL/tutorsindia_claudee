@@ -109,6 +109,32 @@ function collapseLineBreaks(html) { return html.replace(/(<br\s*\/?>\s*){3,}/gi,
 function removeLeadingBreaks(html) { return html.replace(/(<div class="column_attr[^"]*"[^>]*>)\s*(<br\s*\/?>\s*)+/gi, "$1"); }
 function removePageFooter(html) { return html.replace(/<div class="section section-page-footer">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/, ""); }
 
+function rewriteUrls(html) {
+  let out = html;
+  // Blanket-fix the raw hosting-account domain first, in every context
+  // (well-formed attrs, malformed attrs missing quotes, CSS url(), form
+  // action, and even plain citation text) — always the wrong host, never
+  // a legitimate destination.
+  out = out.replace(/https?:\/\/qzg\.dmr\.mybluehost\.me/gi, "https://www.tutorsindia.com");
+  // Now relative-ize every tutorsindia.com/.net origin, tolerating the
+  // quote/space irregularities seen in this WP export (href=" http...,
+  // href=http... with no quote at all, etc.)
+  out = out.replace(
+    /((?:href|src|action)\s*=\s*['"]?\s*)https?:\/\/(?:www\.|test\.)?tutorsindia\.(?:com|net)\//gi,
+    "$1/"
+  );
+  out = out.replace(
+    /(url\(\s*['"]?)https?:\/\/(?:www\.|test\.)?tutorsindia\.(?:com|net)\//gi,
+    "$1/"
+  );
+  // Bare-origin form (no path at all, e.g. action="https://www.tutorsindia.com")
+  out = out.replace(
+    /((?:href|src|action)\s*=\s*['"]?\s*)https?:\/\/(?:www\.|test\.)?tutorsindia\.(?:com|net)(['"\s>])/gi,
+    "$1/$2"
+  );
+  return out;
+}
+
 async function fetchProxiedLibraryPage(pagePath) {
   const normalised = pagePath.endsWith("/") ? pagePath : `${pagePath}/`;
   const url = `https://tutorsindia.net${normalised}`;
@@ -131,6 +157,7 @@ async function fetchProxiedLibraryPage(pagePath) {
     content = removePageFooter(content);
     content = collapseLineBreaks(content);
     content = removeLeadingBreaks(content);
+    content = rewriteUrls(content);
     return { title, content, raw: html };
   } catch (e) {
     return null;
@@ -164,6 +191,7 @@ function cleanElementorHtml(html) {
   clean = clean.replace(/<p[^>]*>[\s]*(&nbsp;|\s)*[\s]*<\/p>/gi, "");
   clean = clean.replace(/<(h[1-6])[^>]*>\s*<\/\1>/gi, "");
   clean = clean.replace(/\n{3,}/g, "\n\n").trim();
+  clean = rewriteUrls(clean);
   return clean;
 }
 
@@ -222,6 +250,14 @@ async function localizeImages(html) {
   for (const [orig, local] of rewriteMap) {
     content = content.split(orig).join(local);
   }
+  // WordPress img tags also carry a `srcset` attribute (responsive size
+  // variants) — those aren't downloaded/localized, so they'd otherwise
+  // stay pointed at the live tutorsindia.net/.com originals forever. The
+  // primary `src` above is already localized and is what browsers use
+  // without srcset support, so it's safe to just drop the attribute
+  // rather than fetch every width variant of every image.
+  content = content.replace(/\s+srcset="[^"]*"/gi, "");
+  content = content.replace(/\s+sizes="[^"]*"/gi, "");
   return { content, images };
 }
 
