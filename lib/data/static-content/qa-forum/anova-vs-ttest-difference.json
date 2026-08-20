@@ -1,0 +1,17 @@
+{
+  "url": "https://www.tutorsindia.com/qa-forum/anova-vs-ttest-difference/",
+  "path": "/qa-forum/anova-vs-ttest-difference/",
+  "section": "qa-forum",
+  "slug": "anova-vs-ttest-difference",
+  "source": "wp-rest-post",
+  "title": "What’s the difference between ANOVA and t-test?",
+  "excerpt": "Q & A Forum Statistical Analysis Q: What’s the difference between ANOVA and t-test? T-test: Tests the significance of the difference between two group means.…",
+  "content": "<p><span style=\"color:red\">Q &amp; A Forum </span><br>\n\n<span style=\"font-size:18px;padding-top:10px\">Statistical Analysis</span></p>\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<h1>Q: What’s the difference between ANOVA and t-test?</h1>\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" width=\"687\" height=\"447\" src=\"/static-content/images/44e2b18185555389.webp\" class=\"attachment-large size-large wp-image-13200\" alt=\"Bibliography and Appendices\" />\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t<strong>T-test:</strong>\n<ul style=\"list-style:disc;padding: 10px 0px 10px 50px;\">\n \t<li>Tests the significance of the difference between two group means.</li>\n \t<li>For example, a t-test could be done to compare the test scores of the 2 classes.</li>\n</ul>\n<strong>ANOVA (Analysis of Variance):</strong>\n<ul style=\"list-style:disc;padding: 10px 0px 10px 50px;\">\n \t<li>Tests the difference among three or more groups by seeing if at least one group is significantly different.</li>\n \t<li>For example, the test scores in many classes can be compared using ANOVA.</li>\n</ul>\nIn sum, use a t-test for two groups and ANOVA when three or more groups are concerned. ANOVA can also deal with several much more complex situations, where possibly multiple factors could affect the outcome.\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t<h3 style=\"color: white!important;font-weight:600\">Explore how we can collaborate to elevate your research and uphold the highest standards of academic integrity. Contact us today to learn more about our services and how we can assist you in making a meaningful impact in your field</h3>",
+  "images": [
+    {
+      "src": "https://tutorsindia.net/wp-content/uploads/2024/11/Bibliography-and-Appendices.webp",
+      "local": "/static-content/images/44e2b18185555389.webp"
+    }
+  ],
+  "contentLen": 2476
+}

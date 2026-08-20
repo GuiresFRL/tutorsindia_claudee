@@ -1,18 +1,21 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIChildPages } from "@/lib/api/tutorsindia";
+import type { TIPage } from "@/lib/api/tutorsindia";
+import titleListingRaw from "@/lib/data/static-content/_listings/title.json";
 
-export const revalidate = 3600;
+const titleListing = titleListingRaw as unknown as TIPage[];
+
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Free Dissertation Titles by Subject",
   description: "Browse hundreds of free dissertation title ideas across all subjects — Business, Engineering, Computer Science, Biology, Law, and more. Updated regularly.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/title/" },
 };
 
 export default async function TitlePage() {
-  const pages = await getTIChildPages(15900); // parent ID for /title/
+  const pages = titleListing;
 
   return (
     <>

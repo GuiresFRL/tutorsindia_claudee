@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -13,10 +13,14 @@ function slugToTitle(slug: string): string {
   return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
+export function generateStaticParams() {
+  return getAllStaticSlugs("help-guide").map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const path = `/help-guide/${slug.join("/")}/`;
-  const proxied = await fetchProxiedPage(path);
+  const proxied = getStaticContent("help-guide", slug);
   const title = proxied?.title || slugToTitle(slug[slug.length - 1]);
   return {
     title: `${title}`,
@@ -27,8 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function HelpGuideSlugPage({ params }: Props) {
   const { slug } = await params;
-  const path = `/help-guide/${slug.join("/")}/`;
-  const proxied = await fetchProxiedPage(path);
+  const proxied = getStaticContent("help-guide", slug);
 
   if (!proxied) notFound();
 

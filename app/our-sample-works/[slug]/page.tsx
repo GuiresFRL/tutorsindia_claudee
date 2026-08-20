@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -12,21 +12,25 @@ function slugToTitle(slug: string): string {
   return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
+export function generateStaticParams() {
+  return getAllStaticSlugs("our-sample-works").map(([slug]) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const proxied = await fetchProxiedPage(`/our-sample-works/${slug}/`);
+  const proxied = getStaticContent("our-sample-works", [slug]);
   const title = proxied?.title || slugToTitle(slug);
   return {
     title: `${title} — Sample Works`,
     description: `View our ${title.toLowerCase()} sample work. Tutors India provides high-quality academic writing examples for reference and guidance.`,
-    
+
     alternates: { canonical: `https://www.tutorsindia.com/our-sample-works/${slug}/` },
   };
 }
 
 export default async function SampleWorkPage({ params }: Props) {
   const { slug } = await params;
-  const proxied = await fetchProxiedPage(`/our-sample-works/${slug}/`);
+  const proxied = getStaticContent("our-sample-works", [slug]);
   const title = proxied?.title || slugToTitle(slug);
 
   return (

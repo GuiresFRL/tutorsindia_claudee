@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Marketing — Academic Samples & Insights",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function MarketingPage() {
-  const proxied = await fetchProxiedPage("/marketing/");
+  const proxied = getStaticContent("marketing", []);
 
   return (
     <>

@@ -1,18 +1,21 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIChildPages, stripTIHtml } from "@/lib/api/tutorsindia";
+import { stripTIHtml, type TIPage } from "@/lib/api/tutorsindia";
+import examplesListingRaw from "@/lib/data/static-content/_listings/examples.json";
 
-export const revalidate = 3600;
+const examplesListing = examplesListingRaw as unknown as TIPage[];
+
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Free Academic Writing Examples",
   description: "Browse free academic writing examples across all major subjects. Expert-written samples demonstrating proper structure, methodology, and referencing.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/examples/" },
 };
 
 export default async function ExamplesPage() {
-  const subjects = await getTIChildPages(13815);
+  const subjects = examplesListing;
 
   return (
     <>

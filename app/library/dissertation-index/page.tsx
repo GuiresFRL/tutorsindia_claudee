@@ -1,18 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Dissertation Index — Sample Works",
   description: "Browse PhD and Masters dissertation sample works across all academic disciplines. Tutors India library of dissertation examples.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/library/dissertation-index/" },
 };
 
 export default async function DissertationIndexPage() {
-  const proxied = await fetchProxiedPage("/library/dissertation-index/");
+  const proxied = getStaticContent("library", ["dissertation-index"]);
 
   return (
     <>

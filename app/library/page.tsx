@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedLibraryPage } from "@/lib/api/proxyPage";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Library — Essay & Dissertation Samples",
@@ -25,7 +25,7 @@ const sections = [
 ];
 
 export default async function LibraryPage() {
-  const proxied = await fetchProxiedLibraryPage("/library/");
+  const proxied = getStaticContent("library", []);
 
   return (
     <>

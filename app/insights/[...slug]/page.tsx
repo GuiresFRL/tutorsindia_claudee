@@ -1,10 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
-import { getTIPostBySlug, getTIPageBySlug, stripTIHtml } from "@/lib/api/tutorsindia";
-import { cleanElementorHtml } from "@/lib/cleanElementor";
+import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -14,52 +12,27 @@ function slugToTitle(slug: string): string {
   return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
-async function getInsightsContent(lastSlug: string, path: string) {
-  // Try WP posts first (most insights articles are posts)
-  const post = await getTIPostBySlug(lastSlug);
-  if (post && (post.content?.rendered?.trim().length ?? 0) > 50) {
-    return {
-      title: post.title.rendered.replace(/<[^>]+>/g, ""),
-      content: cleanElementorHtml(post.content.rendered),
-      source: "wp-post" as const,
-    };
-  }
-  // Try WP pages
-  const page = await getTIPageBySlug(lastSlug);
-  if (page && (page.content?.rendered?.trim().length ?? 0) > 50) {
-    return {
-      title: page.title.rendered.replace(/<[^>]+>/g, ""),
-      content: cleanElementorHtml(page.content.rendered),
-      source: "wp-page" as const,
-    };
-  }
-  // Proxy fallback
-  const proxied = await fetchProxiedPage(path);
-  return {
-    title: proxied?.title || slugToTitle(lastSlug),
-    content: proxied?.content ?? "",
-    source: "proxy" as const,
-  };
+export function generateStaticParams() {
+  return getAllStaticSlugs("insights").map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const path = `/insights/${slug.join("/")}/`;
-  const lastSlug = slug[slug.length - 1];
-  const data = await getInsightsContent(lastSlug, path);
+  const page = getStaticContent("insights", slug);
+  const title = page?.title || slugToTitle(slug[slug.length - 1]);
   return {
-    title: `${data.title} — Insights`,
-    description: `${data.title} — Academic insights, news, and research trends from Tutors India.`,
+    title: `${title} — Insights`,
+    description: `${title} — Academic insights, news, and research trends from Tutors India.`,
     alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
   };
 }
 
 export default async function InsightsSlugPage({ params }: Props) {
   const { slug } = await params;
-  const path = `/insights/${slug.join("/")}/`;
-  const lastSlug = slug[slug.length - 1];
-  const data = await getInsightsContent(lastSlug, path);
-  const { title, content } = data;
+  const page = getStaticContent("insights", slug);
+  const title = page?.title || slugToTitle(slug[slug.length - 1]);
+  const content = page?.content ?? "";
 
   const breadcrumbPath = ["", "insights", ...slug];
 

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Sample Works — Academic Writing Examples",
@@ -26,7 +26,7 @@ const categories = [
 ];
 
 export default async function SampleWorksPage() {
-  const proxied = await fetchProxiedPage("/our-sample-works/");
+  const proxied = getStaticContent("our-sample-works", []);
 
   return (
     <>

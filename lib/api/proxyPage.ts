@@ -103,13 +103,22 @@ function removeLeadingBreaks(html: string): string {
   return html.replace(/(<div class="column_attr[^"]*"[^>]*>)\s*(<br\s*\/?>\s*)+/gi, '$1');
 }
 
-/** Rewrite tutorsindia.com/.net URLs to relative (internal links) or leave media hosts intact */
+/**
+ * Rewrite internal links to relative paths. Covers both tutorsindia.com/.net
+ * and the raw hosting-account domain (qzg.dmr.mybluehost.me) — WordPress's
+ * database still has some absolute links baked in against that underlying
+ * host from before it was pointed at tutorsindia.net, so pages built with
+ * the classic/BeTheme editor carry them straight through into the scraped
+ * content.
+ */
 function rewriteUrls(html: string): string {
   return html
     .replace(/href="https?:\/\/(?:www\.)?tutorsindia\.(?:com|net)\//g, 'href="/')
     .replace(/href="https?:\/\/test\.tutorsindia\.(?:com|net)\//g, 'href="/')
+    .replace(/href="https?:\/\/qzg\.dmr\.mybluehost\.me\//g, 'href="/')
     .replace(/src="https?:\/\/(?:www\.)?tutorsindia\.(?:com|net)\//g, 'src="/')
-    .replace(/src="https?:\/\/test\.tutorsindia\.(?:com|net)\//g, 'src="/');
+    .replace(/src="https?:\/\/test\.tutorsindia\.(?:com|net)\//g, 'src="/')
+    .replace(/src="https?:\/\/qzg\.dmr\.mybluehost\.me\//g, 'src="/');
 }
 
 /** Remove the page-footer section (pagination, no content) */

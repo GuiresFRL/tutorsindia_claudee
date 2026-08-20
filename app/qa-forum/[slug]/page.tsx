@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -14,7 +14,7 @@ function slugToTitle(slug: string): string {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const proxied = await fetchProxiedPage(`/qa-forum/${slug}/`);
+  const proxied = getStaticContent("qa-forum", [slug]);
   const title = proxied?.title || slugToTitle(slug);
   return {
     title: `${title} — Q&A Forum`,
@@ -200,8 +200,8 @@ const staticAnswers: Record<string, { q: string; a: string[] }> = {
 export default async function QASlugPage({ params }: Props) {
   const { slug } = await params;
   const staticData = staticAnswers[slug];
-  // Only fetch proxy for slugs without a static answer
-  const proxied = staticData ? null : await fetchProxiedPage(`/qa-forum/${slug}/`);
+  // Only use the migrated content for slugs without a hardcoded static answer
+  const proxied = staticData ? null : getStaticContent("qa-forum", [slug]);
   const title = staticData?.q || proxied?.title || slugToTitle(slug);
   const hasProxiedContent = !staticData && proxied?.content && proxied.content.trim().length > 100;
 

@@ -1,19 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIPageById, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutorsindia";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Future Research Directions by Subject",
   description: "Explore future research directions and emerging opportunities across all academic disciplines. Expert insights to guide your research agenda.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/future-research-directions/" },
 };
 
 export default async function FutureResearchDirectionsPage() {
-  const page = await getTIPageById(13770);
-  const image = page ? getTIFeaturedImage(page) : null;
+  const page = getStaticContent("future-research-directions", []);
+  const image = page?.featuredImage?.local ?? null;
 
   return (
     <>
@@ -26,7 +26,7 @@ export default async function FutureResearchDirectionsPage() {
             <span style={{ color: "#fff" }}>Future Research Directions</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.3rem)", marginBottom: "12px" }}>
-            {page ? <span dangerouslySetInnerHTML={{ __html: page.title.rendered }} /> : "Future Research Directions"}
+            {page ? page.title : "Future Research Directions"}
           </h1>
           <p style={{ color: "#c5d5f0", fontSize: "0.97rem", maxWidth: "680px", marginBottom: "20px" }}>
             Discover emerging research opportunities and future directions across all academic fields. Find your next research agenda with expert-curated insights.
@@ -46,7 +46,7 @@ export default async function FutureResearchDirectionsPage() {
           </div>
         )}
         {page ? (
-          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content }} />
         ) : (
           <p style={{ color: "#666" }}>Loading content…</p>
         )}

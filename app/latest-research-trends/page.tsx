@@ -1,19 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIPageById, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutorsindia";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Latest Research Trends by Subject",
   description: "Stay current with the latest research trends across all academic disciplines. Expert insights into emerging methodologies, innovations, and research directions.",
-  
+
   alternates: { canonical: "https://www.tutorsindia.com/latest-research-trends/" },
 };
 
 export default async function LatestResearchTrendsPage() {
-  const page = await getTIPageById(13798);
-  const image = page ? getTIFeaturedImage(page) : null;
+  const page = getStaticContent("latest-research-trends", []);
+  const image = page?.featuredImage?.local ?? null;
 
   return (
     <>
@@ -26,7 +26,7 @@ export default async function LatestResearchTrendsPage() {
             <span style={{ color: "#fff" }}>Latest Research Trends</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.3rem)", marginBottom: "12px" }}>
-            {page ? <span dangerouslySetInnerHTML={{ __html: page.title.rendered }} /> : "Latest Research Trends"}
+            {page ? page.title : "Latest Research Trends"}
           </h1>
           <p style={{ color: "#c5d5f0", fontSize: "0.97rem", maxWidth: "680px", marginBottom: "20px" }}>
             Stay up to date with the latest emerging research directions, methodologies, and innovations across all academic disciplines.
@@ -46,7 +46,7 @@ export default async function LatestResearchTrendsPage() {
           </div>
         )}
         {page ? (
-          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content }} />
         ) : (
           <p style={{ color: "#666" }}>Loading content…</p>
         )}

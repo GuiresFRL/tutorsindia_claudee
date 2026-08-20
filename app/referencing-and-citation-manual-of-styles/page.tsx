@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIPageById } from "@/lib/api/tutorsindia";
+import { getStaticContent } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Referencing & Citation Style Guides",
@@ -104,7 +104,7 @@ const tips = [
 ];
 
 export default async function ReferencingPage() {
-  const page = await getTIPageById(499);
+  const page = getStaticContent("referencing-and-citation-manual-of-styles", []);
   return (
     <>
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
@@ -190,7 +190,7 @@ export default async function ReferencingPage() {
       {/* Live WP content */}
       {page && (
         <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px 20px" }}>
-          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.content }} />
         </section>
       )}
     </>

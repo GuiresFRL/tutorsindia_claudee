@@ -1,10 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTIPageBySlug, getTIPostBySlug, getTIFeaturedImage, stripTIHtml } from "@/lib/api/tutorsindia";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
-import { cleanElementorHtml } from "@/lib/cleanElementor";
+import { getStaticRootContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -14,24 +12,25 @@ function slugToTitle(slug: string): string {
   return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
+export function generateStaticParams() {
+  return getAllStaticSlugs("_root").map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const lastSlug = slug[slug.length - 1];
   const path = `/${slug.join("/")}/`;
 
-  const wpContent = (await getTIPageBySlug(lastSlug)) ?? (await getTIPostBySlug(lastSlug));
-  if (wpContent && wpContent.content?.rendered?.trim().length > 50) {
-    const title = stripTIHtml(wpContent.title.rendered);
-    const desc = stripTIHtml(wpContent.excerpt?.rendered ?? "", 160);
+  const wpContent = getStaticRootContent(slug);
+  if (wpContent && wpContent.content?.trim().length > 50) {
     return {
-      title: `${title}`,
-      description: desc || `${title} — Academic writing support from Tutors India.`,
+      title: wpContent.title,
+      description: wpContent.excerpt || `${wpContent.title} — Academic writing support from Tutors India.`,
       alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
     };
   }
 
-  const proxied = await fetchProxiedPage(path);
-  const title = proxied?.title || slugToTitle(lastSlug);
+  const title = wpContent?.title || slugToTitle(lastSlug);
   return {
     title: `${title}`,
     description: `${title} — Academic writing support from Tutors India.`,
@@ -42,18 +41,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CatchAllPage({ params }: Props) {
   const { slug } = await params;
   const lastSlug = slug[slug.length - 1];
-  const path = `/${slug.join("/")}/`;
   const breadcrumbPath = ["", ...slug];
 
-  // Try WP REST API first (works for non-BeBuilder posts/pages)
-  const wpContent = (await getTIPageBySlug(lastSlug)) ?? (await getTIPostBySlug(lastSlug));
+  const wpContent = getStaticRootContent(slug);
 
-  if (wpContent && wpContent.content?.rendered?.trim().length > 50) {
-    const image = getTIFeaturedImage(wpContent);
-    const title = stripTIHtml(wpContent.title.rendered);
-    const date = wpContent.modified
-      ? new Date(wpContent.modified).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
-      : "";
+  if (wpContent && wpContent.content?.trim().length > 50) {
+    const image = wpContent.featuredImage?.local ?? null;
+    const title = wpContent.title;
+    const date = "";
 
     return (
       <>
@@ -75,8 +70,9 @@ export default async function CatchAllPage({ params }: Props) {
                 );
               })}
             </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.35, marginBottom: "10px" }}
-              dangerouslySetInnerHTML={{ __html: wpContent.title.rendered }} />
+            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.4rem,3vw,2rem)", lineHeight: 1.35, marginBottom: "10px" }}>
+              {title}
+            </h1>
             {date && <p style={{ color: "#a0b8e0", fontSize: "0.82rem" }}>Updated {date}</p>}
           </div>
         </section>
@@ -87,7 +83,7 @@ export default async function CatchAllPage({ params }: Props) {
               <img src={image} alt={title} style={{ width: "100%", height: "auto", display: "block", maxHeight: "420px", objectFit: "cover" }} />
             </div>
           )}
-          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: cleanElementorHtml(wpContent.content.rendered) }} />
+          <div className="wp-content" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: wpContent.content }} />
           <div style={{ marginTop: "36px", display: "flex", justifyContent: "flex-end", gap: "12px" }}>
             <Link href="/order-now/" style={{ padding: "9px 20px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.87rem" }}>Order Now</Link>
             <Link href="/contact-us/" style={{ padding: "9px 20px", border: "1.5px solid #1a2a6c", color: "#1a2a6c", borderRadius: "5px", fontWeight: 600, fontSize: "0.87rem" }}>Contact Us</Link>
@@ -106,8 +102,8 @@ export default async function CatchAllPage({ params }: Props) {
     );
   }
 
-  // Fallback: BeBuilder/Elementor page — use HTML proxy
-  const proxied = await fetchProxiedPage(path);
+  // Fallback: content extracted via raw-HTML scrape during migration
+  const proxied = wpContent;
   const title = proxied?.title || slugToTitle(lastSlug);
 
   return (

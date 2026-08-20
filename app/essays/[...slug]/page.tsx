@@ -1,10 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { fetchProxiedPage } from "@/lib/api/proxyPage";
-import { getTIPageBySlug, stripTIHtml } from "@/lib/api/tutorsindia";
-import { stripBrokenLinks } from "@/lib/cleanElementor";
+import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -14,34 +12,16 @@ function slugToTitle(slug: string): string {
   return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
-/**
- * Strips Elementor section/column wrapper divs from WP content.rendered,
- * keeping semantic elements (h1-h6, p, ul, ol, li, a, strong, em, blockquote, table, img).
- */
-function cleanElementorHtml(html: string): string {
-  // Remove script/style/noscript blocks
-  let clean = html.replace(/<(script|style|noscript)[^>]*>[\s\S]*?<\/\1>/gi, "");
-  // Remove elementor wrapper divs (open tags) — keep inner content
-  clean = clean.replace(/<div[^>]*class="[^"]*elementor[^"]*"[^>]*>/gi, "");
-  // Remove all remaining plain <div> open/close tags
-  clean = clean.replace(/<\/?div[^>]*>/gi, "");
-  // Remove empty paragraphs and excessive whitespace
-  clean = clean.replace(/<p[^>]*>\s*(&nbsp;|\s)*\s*<\/p>/gi, "");
-  clean = clean.replace(/\n{3,}/g, "\n\n").trim();
-  return stripBrokenLinks(clean);
+export function generateStaticParams() {
+  return getAllStaticSlugs("essays").map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const path = `/essays/${slug.join("/")}/`;
-  const lastSlug = slug[slug.length - 1];
-  const wpPage = await getTIPageBySlug(lastSlug);
-  const title = wpPage?.title.rendered
-    ? wpPage.title.rendered.replace(/<[^>]+>/g, "")
-    : slugToTitle(lastSlug);
-  const desc = wpPage?.excerpt?.rendered
-    ? stripTIHtml(wpPage.excerpt.rendered, 160)
-    : `${title} — Free university essay example from Tutors India.`;
+  const page = getStaticContent("essays", slug);
+  const title = page?.title || slugToTitle(slug[slug.length - 1]);
+  const desc = page?.excerpt || `${title} — Free university essay example from Tutors India.`;
   return {
     title: `${title} — Essays`,
     description: desc,
@@ -51,25 +31,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EssaysSlugPage({ params }: Props) {
   const { slug } = await params;
-  const path = `/essays/${slug.join("/")}/`;
   const lastSlug = slug[slug.length - 1];
   const isCategory = slug.length === 1;
 
-  // Try WP REST API first — content.rendered has Elementor HTML, clean it
-  const wpPage = await getTIPageBySlug(lastSlug);
-  const rawWpContent = wpPage?.content?.rendered?.trim() ?? "";
-  const wpContent = rawWpContent.length >= 50 ? cleanElementorHtml(rawWpContent) : "";
-
-  // Proxy fallback if WP content is still thin after cleaning
-  const proxied = wpContent.length < 200 ? await fetchProxiedPage(path) : null;
-
-  const title = wpPage?.title?.rendered
-    ? wpPage.title.rendered.replace(/<[^>]+>/g, "")
-    : proxied?.title || slugToTitle(lastSlug);
-
-  const content = wpContent.length >= 200
-    ? wpContent
-    : (proxied?.content ?? "");
+  const page = getStaticContent("essays", slug);
+  const title = page?.title || slugToTitle(lastSlug);
+  const content = page?.content ?? "";
 
   // Build breadcrumb
   const crumbs = [
@@ -98,10 +65,9 @@ export default async function EssaysSlugPage({ params }: Props) {
               );
             })}
           </div>
-          <h1
-            style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}
-            dangerouslySetInnerHTML={{ __html: wpPage?.title?.rendered || title }}
-          />
+          <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.2rem,2.5vw,1.9rem)", lineHeight: 1.35, marginBottom: "12px" }}>
+            {title}
+          </h1>
           {isCategory && (
             <p style={{ color: "#c5d5f0", fontSize: "0.93rem" }}>
               Free essay examples demonstrating proper structure, research methods, and citation styles.
