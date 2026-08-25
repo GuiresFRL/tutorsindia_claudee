@@ -78,15 +78,12 @@ const nextConfig: NextConfig = {
       { source: "/academy/research-papers", destination: "/academy/", permanent: true },
       { source: "/academy/theories", destination: "/academy/", permanent: true },
 
-      // These five old WordPress taxonomy prefixes were retired during the
-      // Payload CMS migration — none of them are live category slugs there
-      // (verified against the current category list) — so every URL nested
-      // under them, not just the bare category page, should redirect to the
-      // academy index instead of 404ing.
-      { source: "/academy/assignment-writing/:path*", destination: "/academy/", permanent: true },
-      { source: "/academy/coding-algorithms-development/:path*", destination: "/academy/", permanent: true },
-      { source: "/academy/manuscript-writing/:path*", destination: "/academy/", permanent: true },
-      { source: "/academy/phd-dissertation/:path*", destination: "/academy/", permanent: true },
+      // Only research-methodology is still a genuinely dead prefix (no live
+      // Payload category uses it). assignment-writing, coding-algorithms-development,
+      // manuscript-writing, and phd-dissertation were wildcard-redirected here
+      // too when this was first added, but new posts have since been published
+      // under those exact category slugs — a blanket redirect would now
+      // incorrectly intercept real, live articles instead of 404ing dead ones.
       { source: "/academy/research-methodology/:path*", destination: "/academy/", permanent: true },
 
       {
