@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { getAllPayloadSlugs } from "@/lib/api/payload";
+import { isNoindexPath } from "@/lib/data/noindex-paths";
 
 const BASE = "https://www.tutorsindia.com";
 
@@ -63,7 +64,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly",
   }));
 
-  const combined = [...staticEntries, ...blogEntries, ...academyEntries];
+  const combined = [...staticEntries, ...blogEntries, ...academyEntries]
+    // Explicitly excluded pages — see lib/data/noindex-paths.ts
+    .filter((entry) => !isNoindexPath(entry.url.replace(BASE, "")));
 
   // Deduplicate by URL (last occurrence wins)
   const seen = new Map<string, MetadataRoute.Sitemap[number]>();

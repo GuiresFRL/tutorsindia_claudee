@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
+import { isNoindexPath } from "@/lib/data/noindex-paths";
 
 export const revalidate = false;
 
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title}`,
     description: `${title} — Academic writing guidance from Tutors India's PhD-qualified experts.`,
     alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
+    ...(isNoindexPath(path) && { robots: { index: false, follow: false } }),
   };
 }
 

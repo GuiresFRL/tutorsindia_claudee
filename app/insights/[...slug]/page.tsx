@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
+import { isNoindexPath } from "@/lib/data/noindex-paths";
 
 export const revalidate = false;
 
@@ -25,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title} — Insights`,
     description: `${title} — Academic insights, news, and research trends from Tutors India.`,
     alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
+    ...(isNoindexPath(path) && { robots: { index: false, follow: false } }),
   };
 }
 

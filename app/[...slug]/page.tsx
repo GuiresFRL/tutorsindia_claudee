@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getStaticRootContent, getAllStaticSlugs } from "@/lib/api/staticContent";
+import { isNoindexPath } from "@/lib/data/noindex-paths";
 
 export const revalidate = false;
 
@@ -22,11 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/${slug.join("/")}/`;
 
   const wpContent = getStaticRootContent(slug);
+  const noindex = isNoindexPath(path);
   if (wpContent && wpContent.content?.trim().length > 50) {
     return {
       title: wpContent.title,
       description: wpContent.excerpt || `${wpContent.title} — Academic writing support from Tutors India.`,
       alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
+      ...(noindex && { robots: { index: false, follow: false } }),
     };
   }
 
@@ -35,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title}`,
     description: `${title} — Academic writing support from Tutors India.`,
     alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
+    ...(noindex && { robots: { index: false, follow: false } }),
   };
 }
 

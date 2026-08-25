@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
+import { isNoindexPath } from "@/lib/data/noindex-paths";
 
 export const revalidate = false;
 
@@ -25,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `View our ${title.toLowerCase()} sample work. Tutors India provides high-quality academic writing examples for reference and guidance.`,
 
     alternates: { canonical: `https://www.tutorsindia.com/our-sample-works/${slug}/` },
+    ...(isNoindexPath(`/our-sample-works/${slug}/`) && { robots: { index: false, follow: false } }),
   };
 }
 
