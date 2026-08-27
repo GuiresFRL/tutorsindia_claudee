@@ -8,34 +8,45 @@ export const metadata: Metadata = {
 };
 
 const ugPgPricing = [
-  { service: "Topic & Problem Identification", detail: "2–3 topics with 500-word descriptions each", price: "From £320" },
-  { service: "Research Proposal", detail: "1,000–1,500 words with full proposal structure", price: "From £300" },
+  { service: "Topic & Problem Identification", detail: "2–3 topics with 100-word descriptions each", price: "From £100" },
+  { service: "Research Proposal", detail: "1,000–1,500 words with full proposal structure
+", price: "From £190" },
   { service: "Full Dissertation (UG/PG)", detail: "12,000 words — complete dissertation", price: "From £950" },
-  { service: "Questionnaire Development", detail: "20–25 questions with response categories", price: "From £300" },
-  { service: "Literature Review", detail: "3,000–5,000 words with 80+ references", price: "From £320" },
-  { service: "Research Methodology", detail: "2,000–3,000 words with full justification", price: "From £280" },
-  { service: "Statistical Analysis", detail: "Data analysis plus 2,000 words interpretation", price: "From £450" },
-  { service: "Editing & Proofreading", detail: "Per 10,000 words — language and technical", price: "From £180" },
+  { service: "Questionnaire Development", detail: "20–25 questions with response categories
+", price: "From £150" },
+  { service: "Literature Review", detail: "5,000 words with 50 - 80 references
+", price: "From £320" },
+  { service: "Research Methodology", detail: "2,000–3,000 words with full justification
+", price: "From £280" },
+  { service: "Statistical Analysis", detail: "Data analysis plus 2,000 words interpretation
+", price: "From £450" },
+  { service: "Editing & Proofreading", detail: "Per 10,000 words — language and technical
+", price: "From £190" },
 ];
 
 const phdPricing = [
-  { service: "PhD Topic & Problem Identification", detail: "2–3 topics with 500-word descriptions each", price: "From £480" },
-  { service: "PhD Research Proposal", detail: "2,500–3,500 words with full structure", price: "From £640" },
-  { service: "PhD Full Dissertation", detail: "25,000 words — complete doctoral dissertation", price: "From £1,700" },
-  { service: "PhD Synopsis", detail: "2,000–3,000 words synopsis document", price: "From £480" },
-  { service: "PhD Statistical Analysis", detail: "Complex analysis plus 3,000+ words", price: "From £890" },
+  { service: "PhD Topic & Problem Identification", detail: "2–3 topics with 100-word descriptions each", price: "From £150" },
+  { service: "PhD Research Proposal", detail: "2,500–3,500 words with full structure
+", price: "From £250" },
+  { service: "PhD Full Dissertation", detail: "25,000 words — complete doctoral dissertation
+", price: "From £1,700" },
+  { service: "PhD Synopsis", detail: "2,000–3,000 words synopsis document
+", price: "From £250" },
+  { service: "PhD Statistical Analysis", detail: "Complex analysis plus 3,000+ words
+", price: "From £790" },
   { service: "PhD Literature Review", detail: "5,000–8,000 words with 100+ references", price: "From £560" },
-  { service: "PhD Viva Preparation", detail: "Comprehensive viva coaching package", price: "From £480" },
+  { service: "PhD Viva Preparation", detail: "Comprehensive viva coaching package", price: "From £200" },
   { service: "PhD Dissertation Rework", detail: "Full rework based on examiner feedback", price: "From £960" },
 ];
 
 const publicationPricing = [
-  { service: "Journal Manuscript Writing", detail: "2,500 words (under 1.0 impact factor)", price: "From £933" },
-  { service: "Statistical Analysis for Manuscripts", detail: "Analysis plus results section writing", price: "From £890" },
-  { service: "Language Editing", detail: "Per 10,000 words — native English editors", price: "From £180" },
-  { service: "Technical Editing", detail: "Per 10,000 words — subject matter expert", price: "From £240" },
-  { service: "Conference Abstract", detail: "300–500 words compelling abstract", price: "From £180" },
-  { service: "Grant Proposal Writing", detail: "Complete grant application package", price: "From £960" },
+  { service: "Journal Manuscript Writing", detail: "2,500 words (under 1.0 impact factor)
+", price: "From £790" },
+  { service: "Statistical Analysis for Manuscripts", detail: "Analysis plus results section writing", price: "From £790" },
+  { service: "Language Editing", detail: "Per 10,000 words — native English editors", price: "From £200" },
+  { service: "Technical Editing", detail: "Per 10,000 words — subject matter expert", price: "From £200" },
+  { service: "Conference Abstract", detail: "300–500 words compelling abstract", price: "From £100" },
+  { service: "Grant Proposal Writing", detail: "Complete grant application package", price: "From £690" },
 ];
 
 const includes = [
