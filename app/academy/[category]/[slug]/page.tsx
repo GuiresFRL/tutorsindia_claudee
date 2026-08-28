@@ -15,6 +15,7 @@ import {
   renderLexicalToHtml,
   formatPayloadDate,
 } from "@/lib/api/payload";
+import PostSidebar, { type SidebarRecentPost } from "@/components/blog/PostSidebar";
 
 interface Props {
   params: Promise<{ category: string; slug: string }>;
@@ -90,6 +91,17 @@ export default async function AcademyPostPage({ params }: Props) {
   const contentHtml = renderLexicalToHtml(post.content, post.title);
 
   const related = recentPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const sidebarPosts: SidebarRecentPost[] = recentPosts
+    .filter((p) => p.slug !== slug)
+    .slice(0, 5)
+    .map((p) => ({
+      id: p.id,
+      title: p.title,
+      href: `/academy/${getPayloadCategorySlug(p)}/${p.slug}/`,
+      image: getPayloadImageUrl(p.heroImage),
+      imageAlt: getPayloadImageAlt(p),
+      date: formatPayloadDate(p.publishing?.publishedAt || p.createdAt),
+    }));
 
   return (
     <>
@@ -128,8 +140,9 @@ export default async function AcademyPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── ARTICLE — FULL WIDTH ── */}
-      <article style={{ maxWidth: "900px", margin: "0 auto", padding: "40px 20px" }}>
+      {/* ── ARTICLE + SIDEBAR ── */}
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px 20px", display: "grid", gridTemplateColumns: "1fr 340px", gap: "40px", alignItems: "start" }} className="post-layout">
+      <article style={{ minWidth: 0 }}>
 
         {/* Featured image */}
         {image && (
@@ -178,6 +191,9 @@ export default async function AcademyPostPage({ params }: Props) {
           </div>
         </div>
       </article>
+
+      <PostSidebar recentPosts={sidebarPosts} recentHeading="Recent Guides" />
+      </div>
 
       {/* ── RELATED GUIDES — FULL WIDTH ── */}
       {related.length > 0 && (
@@ -234,6 +250,7 @@ export default async function AcademyPostPage({ params }: Props) {
       <style>{`
         @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr 1fr !important; } }
         @media (max-width: 480px) { .related-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 900px) { .post-layout { grid-template-columns: 1fr !important; } }
 
         .wp-content { font-size: 1rem; line-height: 1.85; color: #444; }
         .wp-content h2 { font-family: Merriweather, serif; font-size: 1.45rem; font-weight: 700; color: #1a2a6c; margin: 34px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f2fa; }
