@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // 410 Gone — removed WordPress archive paths that should never resolve again.
-export function middleware(_request: NextRequest) {
+export function proxy(_request: NextRequest) {
   return new NextResponse("Gone", {
     status: 410,
     headers: { "Content-Type": "text/plain" },
