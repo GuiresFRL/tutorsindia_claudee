@@ -258,7 +258,8 @@ export default async function BlogPostPage({ params }: Props) {
         .wp-content a:hover { color: #e87722; }
         .wp-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0; }
         .wp-content blockquote { border-left: 4px solid #e87722; padding: 14px 20px; margin: 24px 0; background: #fff8f0; border-radius: 0 8px 8px 0; font-style: italic; color: #555; font-size: 1.02rem; }
-        .wp-content table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.9rem; border-radius: 8px; overflow: hidden; }
+        .wp-content .wp-table-wrap { overflow-x: auto; margin: 24px 0; }
+        .wp-content table { width: 100%; border-collapse: collapse; margin: 0; font-size: 0.9rem; border-radius: 8px; overflow: hidden; }
         .wp-content th { background: #1a2a6c; color: #fff; padding: 12px 16px; text-align: left; font-size: 0.88rem; }
         .wp-content td { padding: 10px 16px; border-bottom: 1px solid #dde2ef; }
         .wp-content tr:last-child td { border-bottom: none; }

@@ -45,6 +45,9 @@ export interface LexicalNode {
   fields?: { url?: string; newTab?: boolean };
   value?: PayloadMedia;
   listType?: string;
+  headerState?: number;
+  colSpan?: number;
+  rowSpan?: number;
   children?: LexicalNode[];
 }
 
@@ -355,6 +358,17 @@ function renderLexicalNode(node: LexicalNode, skip: RenderSkip): string {
       if (!src) return "";
       const alt = escapeHtml(img?.altText || img?.title || "");
       return `<img src="${src}" alt="${alt}" loading="lazy" />`;
+    }
+    case "table":
+      return `<div class="wp-table-wrap"><table>${renderChildren(node.children, skip)}</table></div>`;
+    case "tablerow":
+      return `<tr>${renderChildren(node.children, skip)}</tr>`;
+    case "tablecell": {
+      const isHeader = !!node.headerState;
+      const tag = isHeader ? "th" : "td";
+      const span = node.colSpan && node.colSpan > 1 ? ` colspan="${node.colSpan}"` : "";
+      const rowSpan = node.rowSpan && node.rowSpan > 1 ? ` rowspan="${node.rowSpan}"` : "";
+      return `<${tag}${span}${rowSpan}>${renderChildren(node.children, skip)}</${tag}>`;
     }
     default:
       // Unknown node type (embed, table, etc. not yet supported) — render
