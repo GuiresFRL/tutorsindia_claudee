@@ -57,5 +57,9 @@ export default function Recaptcha({ onChange }: RecaptchaProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <div ref={containerRef} id={`recaptcha-${containerId}`} />;
+  // Reserve the standard reCAPTCHA v2 checkbox widget's rendered size (78px
+  // tall) before grecaptcha.render() fills it in — otherwise the surrounding
+  // layout (e.g. the auto-popup enquiry modal) jumps when the async script
+  // finishes loading, which shows up as a real-user CLS shift.
+  return <div ref={containerRef} id={`recaptcha-${containerId}`} style={{ minHeight: 78 }} />;
 }
