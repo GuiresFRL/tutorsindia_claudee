@@ -230,6 +230,16 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      {
+        // Static images/fonts/icons in public/ are content-hashed by name
+        // only rarely (most are stable filenames) but change infrequently
+        // enough in practice to cache aggressively at the edge/browser —
+        // Next.js otherwise serves public/ with no cache lifetime at all.
+        source: "/:path*.:ext(webp|avif|jpg|jpeg|png|gif|svg|ico|woff|woff2)",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" },
+        ],
+      },
     ];
   },
 
