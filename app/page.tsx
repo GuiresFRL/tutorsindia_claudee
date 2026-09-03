@@ -286,7 +286,7 @@ export default async function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href={card.href} style={{ display: "block", textAlign: "center", padding: "11px", fontSize: "0.85rem", fontWeight: 600, color: "var(--blue)", borderTop: "1px solid var(--border)", marginTop: "auto" }}>
+                <Link href={card.href} aria-label={`View ${card.head} Samples`} style={{ display: "block", textAlign: "center", padding: "11px", fontSize: "0.85rem", fontWeight: 600, color: "var(--blue)", borderTop: "1px solid var(--border)", marginTop: "auto" }}>
                   View Samples →
                 </Link>
               </div>

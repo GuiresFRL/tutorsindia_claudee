@@ -157,7 +157,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       s1.async=true;
       s1.src='https://embed.tawk.to/679b32f93a842732607721d7/1iir3u863';
       s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
       s0.parentNode.insertBefore(s1,s0);
     })();
 
