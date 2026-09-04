@@ -47,15 +47,22 @@ export default function OrderNowPage() {
             <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
               <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}<span style={{ color: "#fff" }}>Order Now</span>
             </div>
-            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.2rem)", marginBottom: "14px" }}>Order Your Project</h1>
-            <p style={{ color: "#c5d5f0", fontSize: "1.05rem", marginBottom: "10px" }}>Invest in Your Career — Place Your Order Today</p>
-            <p style={{ color: "#a0b8e0", fontSize: "0.92rem", lineHeight: 1.75, maxWidth: "660px", marginBottom: "22px" }}>
-              Join 20000+ scholars who have trusted Tutors India with their academic success since 2001. You will get a reply within 30 minutes which enables you to place your order quickly without any delay in submissions.
+            <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.2rem)", marginBottom: "14px" }}>Need Help With Your Dissertation, Thesis or Research?</h1>
+            <p style={{ color: "#c5d5f0", fontSize: "1.05rem", lineHeight: 1.7, maxWidth: "660px", marginBottom: "18px" }}>
+              Get expert academic guidance from PhD-qualified researchers — from research proposal to statistics, editing and publication support.
             </p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/contact-us/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Send Enquiry Now</Link>
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px", marginBottom: "24px" }}>
+              {["Free consultation", "Personalised quotation", "Response within 30 minutes", "25+ years of experience"].map((item) => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: "8px", color: "#c5d5f0", fontSize: "0.94rem" }}>
+                  <span style={{ color: "#f9c74f", fontWeight: 700 }}>✓</span> {item}
+                </div>
+              ))}
+            </div>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
+              <Link href="/contact-us/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Get A Free Quote</Link>
               <a href="tel:+441143520021" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>📞 Call UK Office</a>
             </div>
+            <p style={{ color: "#a0b8e0", fontSize: "0.82rem", marginTop: "14px" }}>No obligation • Confidential enquiry</p>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
             <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />

@@ -75,12 +75,13 @@ export default async function Home() {
             <p style={{ fontSize: "0.95rem", color: "#a0b8e0", marginBottom: "28px" }}>Guaranteed by the best in the Industry — 10,000+ scholars served worldwide</p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/order-now/" style={{ padding: "12px 28px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontSize: "15px", fontWeight: 700 }}>
-                Order Now
+                Get A Free Quote
               </Link>
               <Link href="/our-process/" style={{ padding: "12px 28px", background: "rgba(255,255,255,0.15)", color: "#fff", borderRadius: "5px", fontSize: "15px", fontWeight: 600, border: "2px solid rgba(255,255,255,0.4)" }}>
                 View Our Process
               </Link>
             </div>
+            <p style={{ fontSize: "0.85rem", color: "#a0b8e0", marginTop: "14px" }}>✓ Free Consultation &nbsp; ✓ No Obligation &nbsp; ✓ Response within 30 minutes</p>
         </div>
       </section>
 
@@ -142,7 +143,7 @@ export default async function Home() {
               Contact Us
             </Link>
             <Link href="/order-now/" style={{ flex: 1, textAlign: "center", padding: "10px 20px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontSize: "14px", fontWeight: 700 }}>
-              Order Now
+              Get A Free Quote
             </Link>
           </div>
         </div>
@@ -357,10 +358,10 @@ export default async function Home() {
         <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.88)", marginBottom: "10px" }}>
           Join 10,000+ scholars who have trusted Tutors India with their academic success since 2001.
         </p>
-        <p style={{ fontSize: "0.96rem", color: "rgba(255,255,255,0.7)", marginBottom: "28px" }}>Response within 30 minutes · Unlimited Revisions · Plagiarism Free</p>
+        <p style={{ fontSize: "0.96rem", color: "rgba(255,255,255,0.7)", marginBottom: "28px" }}>Free Consultation · Response within 30 minutes · Unlimited Revisions · Plagiarism Free</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "13px 36px", background: "var(--orange)", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>
-            Order Now
+            Get A Free Quote
           </Link>
           <Link href="/contact-us/" style={{ padding: "13px 36px", border: "2px solid #fff", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "1rem" }}>
             Contact Us

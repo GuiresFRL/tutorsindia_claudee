@@ -190,7 +190,7 @@ export default function Header() {
               whiteSpace: "nowrap",
             }}
           >
-            Order Now
+            Get A Free Quote
           </Link>
           <button
             className="hdr-hamburger"
