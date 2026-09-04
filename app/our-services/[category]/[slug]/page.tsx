@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { serviceCategories } from "@/lib/data/services";
@@ -413,6 +414,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: cat.title, url: `/our-services/${cat.slug}/` }, { name: svc.title }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -67,6 +68,7 @@ export default async function SubjectPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Subjects", url: "/subjects/" }, { name: subject.title }]} />
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>

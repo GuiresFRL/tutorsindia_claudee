@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import type { Metadata } from "next";
 import { getStaticContent } from "@/lib/api/staticContent";
 
@@ -107,6 +108,7 @@ export default async function ReferencingPage() {
   const page = getStaticContent("referencing-and-citation-manual-of-styles", []);
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Referencing &amp; Citation Manual" }]} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>

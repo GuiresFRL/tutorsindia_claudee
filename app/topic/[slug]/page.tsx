@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
@@ -32,6 +33,7 @@ export default async function TopicDetailPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Dissertation Topics", url: "/topic/" }, { name: page.title }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "48px 20px 40px" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>

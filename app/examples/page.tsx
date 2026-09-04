@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import type { Metadata } from "next";
 import { stripTIHtml, type TIPage } from "@/lib/api/tutorsindia";
 import examplesListingRaw from "@/lib/data/static-content/_listings/examples.json";
@@ -19,6 +20,7 @@ export default async function ExamplesPage() {
 
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Examples" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

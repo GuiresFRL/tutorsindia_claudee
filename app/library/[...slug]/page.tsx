@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getStaticContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 import { isNoindexPath } from "@/lib/data/noindex-paths";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export const revalidate = false;
 
@@ -50,6 +51,7 @@ export default async function LibrarySlugPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Library", url: "/library/" }, { name: title }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

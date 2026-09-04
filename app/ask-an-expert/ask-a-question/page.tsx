@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Recaptcha from "@/components/ui/Recaptcha";
@@ -52,6 +53,7 @@ export default function AskAQuestionPage() {
 
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Ask an Expert", url: "/ask-an-expert/" }, { name: "Ask a Question" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>

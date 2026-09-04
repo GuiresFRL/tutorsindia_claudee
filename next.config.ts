@@ -78,13 +78,13 @@ const nextConfig: NextConfig = {
       { source: "/academy/research-papers", destination: "/academy/", permanent: true },
       { source: "/academy/theories", destination: "/academy/", permanent: true },
 
-      // Only research-methodology is still a genuinely dead prefix (no live
-      // Payload category uses it). assignment-writing, coding-algorithms-development,
-      // manuscript-writing, and phd-dissertation were wildcard-redirected here
-      // too when this was first added, but new posts have since been published
-      // under those exact category slugs — a blanket redirect would now
-      // incorrectly intercept real, live articles instead of 404ing dead ones.
-      { source: "/academy/research-methodology/:path*", destination: "/academy/", permanent: true },
+      // The research-methodology wildcard redirect (kept as the last of the
+      // "genuinely dead category" prefixes) was itself found to intercept a
+      // live, published post (research-methodology/medical-healthcare/
+      // stem-cell-technology — the category is a trashed Payload leftover,
+      // but the post is real) — removed for the same reason the sibling
+      // prefixes were removed above: a blanket redirect can't tell a dead
+      // category from a live post that happens to still carry a stale one.
 
       {
         source: "/ask-an-expert/political-science",

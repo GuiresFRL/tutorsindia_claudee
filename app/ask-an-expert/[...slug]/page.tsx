@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import CTASidebar from "@/components/ui/CTASidebar";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -26,6 +27,7 @@ export default async function AskExpertSlugPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Ask an Expert", url: "/ask-an-expert/" }, { name: title }]} />
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.96rem", color: "#a0b8e0", marginBottom: "12px" }}>

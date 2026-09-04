@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Image from "next/image";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
@@ -139,10 +140,16 @@ export default function ComputerScienceITWritingPage() {
   return (
     <main style={{ color: "#222" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Subjects", url: "/subjects/" }, { name: "Computer Science & IT" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1a2a6c 0%, #2d3a5e 100%)", color: "#fff", padding: "60px 20px 40px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 40, flexWrap: "wrap" }}>
           <div style={{ flex: 1, minWidth: 280 }}>
+            <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "14px" }}>
+              <Link href="/" style={{ color: "#a0b8e0" }}>Home</Link>{" / "}
+              <Link href="/subjects/" style={{ color: "#a0b8e0" }}>Subjects</Link>{" / "}
+              <span style={{ color: "#fff" }}>Computer Science &amp; IT</span>
+            </div>
             <p style={{ color: "#f90", fontWeight: 700, marginBottom: 8, fontSize: 14, textTransform: "uppercase", letterSpacing: 1 }}>PhD, Master&apos;s &amp; Authors / Publishers</p>
             <h1 style={{ fontFamily: "Merriweather, serif", fontSize: "clamp(1.6rem,4vw,2.6rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: 20 }}>
               Computer Science &amp; Information Technology– Academic Writing

@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FaqAccordion from '@/components/ui/FaqAccordion';
 import TestimonialSlider from '@/components/ui/TestimonialSlider';
 
@@ -55,6 +56,7 @@ const testimonials = [
 export default function FormattingServicePage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Formatting Service" }]} />
       <style>{`
         .three-col-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
         .two-col-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
