@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getStaticRootContent, getAllStaticSlugs } from "@/lib/api/staticContent";
 import { isNoindexPath } from "@/lib/data/noindex-paths";
-import { getPayloadPostBySlug, getPayloadCategorySlug } from "@/lib/api/payload";
 
 export const revalidate = false;
 
@@ -48,20 +46,6 @@ export default async function CatchAllPage({ params }: Props) {
   const { slug } = await params;
   const lastSlug = slug[slug.length - 1];
   const breadcrumbPath = ["", ...slug];
-
-  // Stray /academy/<...>/<slug> URLs (3+ segments) fall through to this
-  // catch-all instead of app/academy/[category]/[slug] — usually because
-  // Payload's legacy `urlPath` field still reflects an old category the
-  // post was later moved out of. Rather than serve a thin placeholder at
-  // a URL search engines might have discovered, look the slug up directly
-  // and send it to its real, current canonical URL.
-  if (slug[0] === "academy" && slug.length > 2) {
-    const post = await getPayloadPostBySlug("academy", lastSlug);
-    if (post) {
-      const correctCategory = getPayloadCategorySlug(post);
-      redirect(`/academy/${correctCategory}/${lastSlug}/`);
-    }
-  }
 
   const wpContent = getStaticRootContent(slug);
 
