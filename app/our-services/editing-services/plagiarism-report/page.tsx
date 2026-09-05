@@ -73,7 +73,7 @@ const faqSchema = {
 export default function PlagiarismReportPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Plagiarism Report" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Plagiarism Report" , url: "https://www.tutorsindia.com/our-services/editing-services/plagiarism-report/" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -106,7 +106,7 @@ export default async function AcademyPostPage({ params }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Academy", url: "/academy/" }, { name: post.title }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Academy", url: "/academy/" }, { name: post.title , url: `https://www.tutorsindia.com/academy/${correctCategory}/${slug}/` }]} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "48px 20px 40px" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>

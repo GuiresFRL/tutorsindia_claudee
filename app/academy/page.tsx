@@ -61,7 +61,7 @@ export default async function AcademyPage({ searchParams }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Academy" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Academy" , url: "https://www.tutorsindia.com/academy/" }]} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

@@ -62,7 +62,7 @@ const testimonials = [
 export default function ProgrammingPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Programming" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Programming" , url: "https://www.tutorsindia.com/our-services/development/programming/" }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}

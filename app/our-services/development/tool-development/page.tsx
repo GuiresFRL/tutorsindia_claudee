@@ -92,7 +92,7 @@ const tools = [
 export default function ToolDevelopmentPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Tool Development" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Tool Development" , url: "https://www.tutorsindia.com/our-services/development/tool-development/" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

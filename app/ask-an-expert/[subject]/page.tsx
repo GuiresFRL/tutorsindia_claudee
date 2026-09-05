@@ -33,7 +33,7 @@ export default async function SubjectPage({ params }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Ask an Expert", url: "/ask-an-expert/" }, { name: subject.title }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Ask an Expert", url: "/ask-an-expert/" }, { name: subject.title , url: `https://www.tutorsindia.com/ask-an-expert/${subject.slug}/` }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

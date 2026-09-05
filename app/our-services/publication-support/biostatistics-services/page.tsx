@@ -57,7 +57,7 @@ const testimonials = [
 export default function BiostatisticsServicesPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Publication Support", url: "/our-services/publication-support/" }, { name: "Biostatistics Services" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Publication Support", url: "/our-services/publication-support/" }, { name: "Biostatistics Services" , url: "https://www.tutorsindia.com/our-services/publication-support/biostatistics-services/" }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}

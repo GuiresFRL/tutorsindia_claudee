@@ -57,7 +57,7 @@ const includes = [
 export default function PricingPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Pricing" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Pricing" , url: "https://www.tutorsindia.com/pricing/" }]} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">
           <div>

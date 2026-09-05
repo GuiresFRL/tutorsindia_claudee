@@ -50,7 +50,7 @@ export default async function HelpGuideSlugPage({ params }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Help Guide", url: "/help-guide/" }, { name: title }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Help Guide", url: "/help-guide/" }, { name: title , url: `https://www.tutorsindia.com/help-guide/${slug.join("/")}/` }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

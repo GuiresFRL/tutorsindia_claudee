@@ -32,7 +32,7 @@ const faqs = [
 export default function ContactPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Contact Us" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Contact Us" , url: "https://www.tutorsindia.com/contact-us/" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,var(--navy) 0%,#2563b0 100%)", color: "#fff", padding: "60px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

@@ -17,7 +17,7 @@ export default async function DissertationIndexPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Library", url: "/library/" }, { name: "Dissertation Index" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Library", url: "/library/" }, { name: "Dissertation Index" , url: "https://www.tutorsindia.com/library/dissertation-index/" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

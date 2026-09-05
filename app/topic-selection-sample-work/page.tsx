@@ -17,7 +17,7 @@ export default async function TopicSelectionSampleWorkPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Topic Selection Sample Work" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Topic Selection Sample Work" , url: "https://www.tutorsindia.com/topic-selection-sample-work/" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

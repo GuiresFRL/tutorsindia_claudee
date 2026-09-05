@@ -203,7 +203,7 @@ const subjects = [
 export default function PosterPresentationPage() {
   return (
     <div style={{ fontFamily: "Georgia, serif", color: "#222" }}>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Masters Dissertation", url: "/our-services/masters-dissertation-writing-services/" }, { name: "Poster Presentation" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Masters Dissertation", url: "/our-services/masters-dissertation-writing-services/" }, { name: "Poster Presentation" , url: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/poster-presentation/" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

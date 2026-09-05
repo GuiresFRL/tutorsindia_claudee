@@ -72,7 +72,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Privacy Policy" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Privacy Policy" , url: "https://www.tutorsindia.com/privacy-policy/" }]} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px" }}>

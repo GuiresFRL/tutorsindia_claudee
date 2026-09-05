@@ -92,7 +92,7 @@ const qas = [
 export default function StatisticalAnalysisQAPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Coursework", url: "/our-services/coursework-writing/" }, { name: "Statistical Analysis" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Coursework", url: "/our-services/coursework-writing/" }, { name: "Statistical Analysis" , url: "https://www.tutorsindia.com/coursework/statistical-analysis/" }]} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px" }}>

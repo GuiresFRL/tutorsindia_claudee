@@ -48,7 +48,7 @@ export default async function MarketingSlugPage({ params }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Marketing", url: "/marketing/" }, { name: title }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Marketing", url: "/marketing/" }, { name: title , url: `https://www.tutorsindia.com/marketing/${slug.join("/")}/` }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

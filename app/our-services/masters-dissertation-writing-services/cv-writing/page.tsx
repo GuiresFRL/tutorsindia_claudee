@@ -62,7 +62,7 @@ const subjects = [
 export default function CVWritingPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Masters Dissertation", url: "/our-services/masters-dissertation-writing-services/" }, { name: "CV Writing" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Masters Dissertation", url: "/our-services/masters-dissertation-writing-services/" }, { name: "CV Writing" , url: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/cv-writing/" }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>

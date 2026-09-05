@@ -56,7 +56,7 @@ const testimonials = [
 export default function FormattingServicePage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Formatting Service" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Formatting Service" , url: "https://www.tutorsindia.com/our-services/editing-services/formatting-service/" }]} />
       <style>{`
         .three-col-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
         .two-col-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }

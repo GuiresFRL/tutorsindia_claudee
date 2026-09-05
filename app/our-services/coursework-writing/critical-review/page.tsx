@@ -94,7 +94,7 @@ const guarantees = [
 export default function CriticalReviewPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Coursework Writing", url: "/our-services/coursework-writing/" }, { name: "Critical Review" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Coursework Writing", url: "/our-services/coursework-writing/" }, { name: "Critical Review" , url: "https://www.tutorsindia.com/our-services/coursework-writing/critical-review/" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

@@ -45,7 +45,7 @@ const moreTestimonials = [
 export default function TestimonialsPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Testimonials" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Testimonials" , url: "https://www.tutorsindia.com/testimonials/" }]} />
       {/* HERO */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px", textAlign: "center" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <>
-    <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Thank You" }]} />
+    <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Thank You" , url: "https://www.tutorsindia.com/thank-you/" }]} />
     <section style={{ minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "60px 20px", background: "#f5f7fb" }}>
       <div style={{ maxWidth: "560px", width: "100%", background: "#fff", borderRadius: "12px", border: "1px solid #dde2ef", boxShadow: "0 4px 24px rgba(26,42,108,0.08)", padding: "48px 40px", textAlign: "center" }}>
         {/* Checkmark */}

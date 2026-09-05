@@ -75,7 +75,7 @@ const editingLevels = [
 export default function TechnicalEditingPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Technical Editing" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Technical Editing" , url: "https://www.tutorsindia.com/our-services/editing-services/technical-editing/" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

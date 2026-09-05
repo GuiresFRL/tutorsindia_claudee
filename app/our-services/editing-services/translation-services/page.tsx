@@ -81,7 +81,7 @@ const faqSchema = {
 export default function TranslationServicesPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Translation Services" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Translation Services" , url: "https://www.tutorsindia.com/our-services/editing-services/translation-services/" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -67,7 +67,7 @@ const subjects = [
 export default function UGDissertationPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Masters Dissertation", url: "/our-services/masters-dissertation-writing-services/" }, { name: "UG Dissertation" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Masters Dissertation", url: "/our-services/masters-dissertation-writing-services/" }, { name: "UG Dissertation" , url: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/ug-dissertation/" }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>

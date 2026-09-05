@@ -86,7 +86,7 @@ const faqJsonLd = {
 export default function OnlineTutoringServicesPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Online Tutoring Services" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Online Tutoring Services" , url: "https://www.tutorsindia.com/our-services/development/online-tutoring-services/" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

@@ -61,7 +61,7 @@ export default async function BlogPage({ searchParams }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Blog" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Blog" , url: "https://www.tutorsindia.com/blog/" }]} />
       {/* ── HERO ── */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>

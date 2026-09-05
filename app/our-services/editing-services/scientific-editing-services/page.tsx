@@ -56,7 +56,7 @@ const testimonials = [
 export default function ScientificEditingPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Scientific Editing Services" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Services", url: "/our-services/" }, { name: "Editing Services", url: "/our-services/editing-services/" }, { name: "Scientific Editing Services" , url: "https://www.tutorsindia.com/our-services/editing-services/scientific-editing-services/" }]} />
       <style>{`
         .three-col-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
         .four-col-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }

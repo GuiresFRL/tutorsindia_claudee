@@ -62,7 +62,7 @@ const testimonials = [
 export default function AboutPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "About Us" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "About Us" , url: "https://www.tutorsindia.com/about-us/" }]} />
       {/* HERO */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "64px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "40px", alignItems: "center" }} className="hero-inner">

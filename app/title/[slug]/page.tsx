@@ -33,7 +33,7 @@ export default async function TitleDetailPage({ params }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Dissertation Titles", url: "/title/" }, { name: page.title }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Dissertation Titles", url: "/title/" }, { name: page.title , url: `https://www.tutorsindia.com/title/${slug}/` }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "48px 20px 40px" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>

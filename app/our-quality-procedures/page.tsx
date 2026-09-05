@@ -53,7 +53,7 @@ const achievements = [
 export default function QualityProceduresPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Quality Procedures" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Our Quality Procedures" , url: "https://www.tutorsindia.com/our-quality-procedures/" }]} />
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "0.82rem", color: "#a0b8e0", marginBottom: "12px" }}>

@@ -18,7 +18,7 @@ export default async function FutureResearchDirectionsPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Insights", url: "/insights/" }, { name: "Future Research Directions" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Insights", url: "/insights/" }, { name: "Future Research Directions" , url: "https://www.tutorsindia.com/future-research-directions/" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>

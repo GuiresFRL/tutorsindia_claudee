@@ -136,7 +136,7 @@ export default function ArtsHumanitiesWritingPage() {
   return (
     <main style={{ color: "#222" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Subjects", url: "/subjects/" }, { name: "Arts & Humanities" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Subjects", url: "/subjects/" }, { name: "Arts & Humanities" , url: "https://www.tutorsindia.com/subjects/arts-humanities-academic-writing-help/" }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1a2a6c 0%, #2d3a5e 100%)", color: "#fff", padding: "60px 20px 40px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 40, flexWrap: "wrap" }}>

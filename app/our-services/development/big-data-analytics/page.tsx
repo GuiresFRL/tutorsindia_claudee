@@ -58,7 +58,7 @@ const testimonials = [
 export default function BigDataAnalyticsPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Big Data Analytics" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Big Data Analytics" , url: "https://www.tutorsindia.com/our-services/development/big-data-analytics/" }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}

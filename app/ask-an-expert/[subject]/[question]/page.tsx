@@ -41,7 +41,7 @@ export default async function QAPage({ params }: Props) {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Ask an Expert", url: "/ask-an-expert/" }, { name: subject.title, url: `/ask-an-expert/${subject.slug}/` }, { name: "Expert Answer" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Ask an Expert", url: "/ask-an-expert/" }, { name: subject.title, url: `/ask-an-expert/${subject.slug}/` }, { name: "Expert Answer" , url: `https://www.tutorsindia.com/ask-an-expert/${subjectSlug}/${questionSlug}/` }]} />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "52px 20px 44px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>

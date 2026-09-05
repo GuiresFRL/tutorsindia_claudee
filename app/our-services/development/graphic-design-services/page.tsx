@@ -62,7 +62,7 @@ const testimonials = [
 export default function GraphicDesignServicesPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Graphic Design Services" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "Services", url: "/our-services/" }, { name: "Development", url: "/our-services/development/" }, { name: "Graphic Design Services" , url: "https://www.tutorsindia.com/our-services/development/graphic-design-services/" }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
