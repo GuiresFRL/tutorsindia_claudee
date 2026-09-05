@@ -64,7 +64,7 @@ export const navigation: NavItem[] = [
           { label: "Manuscript Development", href: "/our-services/publication-support/manuscript-development/" },
           { label: "Conference Paper", href: "/our-services/publication-support/conference-paper/" },
           { label: "Textbook Writing", href: "/our-services/publication-support/text-book-writing/" },
-          { label: "Manuscript Statistics", href: "/our-services/publication-support/statistical-services/" },
+          { label: "Manuscript Statistics", href: "/our-services/publication-support/manuscript-qualitative-textual-analysis/" },
           { label: "Conference Abstract", href: "/our-services/publication-support/conference-abstract/" },
           { label: "Medical Writing", href: "/our-services/publication-support/medical-writing/" },
           { label: "Biostatistics Services", href: "/our-services/publication-support/biostatistics-services/" },
@@ -97,7 +97,6 @@ export const navigation: NavItem[] = [
         items: [
           { label: "Language Editing", href: "/our-services/editing-services/language-editing/" },
           { label: "Technical Editing", href: "/our-services/editing-services/technical-editing/" },
-          { label: "Proofreading", href: "/our-services/editing-services/language-editing/" },
           { label: "Plagiarism Report", href: "/our-services/editing-services/plagiarism-report/" },
           { label: "Transcription Services", href: "/our-services/editing-services/transcription-services/" },
           { label: "Translation Services", href: "/our-services/editing-services/translation-services/" },
