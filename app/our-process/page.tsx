@@ -93,7 +93,7 @@ export default function OurProcessPage() {
         </div>
 
         <div style={{ marginTop: "32px", background: "var(--orange)", color: "#fff", borderRadius: "12px", padding: "28px", textAlign: "center" }}>
-          <h3 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "10px" }}>Ready to Place Your Order?</h3>
+          <h3 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "10px" }}>Ready to Get A Free Quote?</h3>
           <p style={{ color: "rgba(255,255,255,0.85)", marginBottom: "20px" }}>Get a response within 30 minutes. Invest in your career by availing services from our UK/US qualified researchers.</p>
           <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "11px 28px", background: "#fff", color: "var(--orange)", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>

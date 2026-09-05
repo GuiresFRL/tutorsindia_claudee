@@ -1,17 +1,22 @@
 "use client";
 
-import { useEffect, useState, useRef, FormEvent } from "react";
+import { useEffect, useState, FormEvent } from "react";
 import { usePathname } from "next/navigation";
 import { COUNTRIES, flagEmoji } from "@/lib/data/countries";
 import Recaptcha from "@/components/ui/Recaptcha";
 
 // Any component can still open this modal on demand:
 //   window.dispatchEvent(new Event(OPEN_ENQUIRY_EVENT))
-// By default the modal auto-opens 7s after landing on a page (see EXCLUDED_PATHS below).
+// By default the modal auto-opens on an intent signal (scroll depth or exit
+// intent) rather than a flat timer — see the auto-open effect below.
 export const OPEN_ENQUIRY_EVENT = "tutorsindia:open-enquiry";
 
 // Show the auto-popup once per browser session, not on every page navigation.
 const SESSION_KEY = "tutorsindia_enquiry_shown";
+
+// Trigger thresholds for the intent-based auto-popup.
+const SCROLL_DEPTH_TRIGGER = 0.5; // 50% down the page
+const EXIT_INTENT_ARM_DELAY_MS = 2000; // ignore stray cursor-near-top moves right after load
 
 const ORDER_TYPES = [
   "Masters Dissertation Writing",
@@ -43,8 +48,6 @@ export default function EnquiryModal() {
   const [orderType, setOrderType] = useState("");
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
   // Manual open trigger (kept for any future button/link that wants to open it directly)
   useEffect(() => {
     const onOpen = () => { setOpen(true); setStatus("idle"); };
@@ -52,21 +55,49 @@ export default function EnquiryModal() {
     return () => window.removeEventListener(OPEN_ENQUIRY_EVENT, onOpen);
   }, []);
 
-  // Auto-open 7s after landing on an eligible page, once per browser session
+  // Auto-open on an intent signal — whichever fires first:
+  //   1. Scroll depth: the visitor has scrolled past SCROLL_DEPTH_TRIGGER of
+  //      the page, i.e. they're actually reading/engaging, not bouncing.
+  //   2. Exit intent (desktop only): the cursor leaves through the top of
+  //      the viewport, the classic "about to close the tab" signal.
+  // Once per browser session, not on every page navigation. Replaces the
+  // previous flat 7s timer, which fired on every visitor regardless of
+  // engagement and interrupted people who were still reading.
   useEffect(() => {
-    if (timerRef.current) clearTimeout(timerRef.current);
-
     let alreadyShown = false;
     try { alreadyShown = sessionStorage.getItem(SESSION_KEY) === "1"; } catch {}
     if (alreadyShown) return;
 
-    timerRef.current = setTimeout(() => {
+    const trigger = () => {
       setOpen(true);
       setStatus("idle");
       try { sessionStorage.setItem(SESSION_KEY, "1"); } catch {}
-    }, 7000);
+      cleanup();
+    };
 
-    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrolled = window.scrollY + window.innerHeight;
+      const depth = doc.scrollHeight > 0 ? scrolled / doc.scrollHeight : 0;
+      if (depth >= SCROLL_DEPTH_TRIGGER) trigger();
+    };
+
+    let exitIntentArmed = false;
+    const armTimer = setTimeout(() => { exitIntentArmed = true; }, EXIT_INTENT_ARM_DELAY_MS);
+    const onMouseOut = (e: MouseEvent) => {
+      if (exitIntentArmed && e.clientY <= 0 && !e.relatedTarget) trigger();
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    document.addEventListener("mouseout", onMouseOut);
+
+    function cleanup() {
+      clearTimeout(armTimer);
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("mouseout", onMouseOut);
+    }
+
+    return cleanup;
   }, [pathname]);
 
   useEffect(() => {

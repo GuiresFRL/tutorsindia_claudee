@@ -147,7 +147,7 @@ export default function MastersDissertationPage() {
             All our dissertations are customized according to the requirements of the respective universities and are free from plagiarism. Those students who want Dissertation Writing Services in UK can get expert assistance in several fields of academic disciplines. We also offer Dissertation Writing Help in UAE to those students who require professional help to meet their academic deadline and standards of their university.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Place an Order</Link>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get A Free Quote</Link>
             <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Reach Our Experts</Link>
           </div>
         </div>
@@ -374,7 +374,7 @@ export default function MastersDissertationPage() {
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
-          Place Your Order Today
+          Get A Free Quote Today
         </h2>
         <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
           Invest in your Career — get expert Master&apos;s dissertation writing support from our qualified academics today.

@@ -154,7 +154,7 @@ export default function PhDDBADissertationPage() {
               MBA or DBA thesis / dissertation writing requires extensive referencing search, including text books, journal articles, monographs, newspaper articles, etc. we provide you the full articles that were used for referencing which help to check the authentication. Thus, our MBA thesis writing service is comprehensive and ensures quality, reliability and validity which all helps you to defend your research in front of your external committee.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
+              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Get A Free Quote</Link>
               <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
             </div>
           </div>

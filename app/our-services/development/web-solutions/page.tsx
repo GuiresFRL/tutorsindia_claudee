@@ -81,7 +81,7 @@ export default function WebSolutionsPage() {
               Are you looking for web solutions services that includes web design, SEO / SEM, digital marketing or software programming or web based application using CMS (Drupal etc)? Then You&apos;ve come to the right destination. Tutors India offers complete assistance for your thesis submission with full detailed attention at an affordable price.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "20px" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
+              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Get A Free Quote</Link>
               <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
             </div>
           </div>

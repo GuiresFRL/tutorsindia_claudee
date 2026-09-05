@@ -117,7 +117,7 @@ export default function FAQPage() {
           </div>
           <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact-us/" style={{ padding: "10px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Contact Us</Link>
-            <Link href="/order-now/" style={{ padding: "10px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Place an Order</Link>
+            <Link href="/order-now/" style={{ padding: "10px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Get A Free Quote</Link>
           </div>
         </div>
       </section>

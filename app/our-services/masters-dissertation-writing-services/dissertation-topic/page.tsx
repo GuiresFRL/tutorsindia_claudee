@@ -226,7 +226,7 @@ export default function DissertationTopicPage() {
             Benefit from the assistance of our dissertation writers in topic selection. Your chosen topic will have a research gap for sure!
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Place an Order</Link>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get A Free Quote</Link>
             <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Then You&apos;ve Certainly Reached the Right Place</Link>
           </div>
         </div>

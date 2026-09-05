@@ -23,7 +23,7 @@ const sourceSans3 = Source_Sans_3({
   display: "swap",
 });
 
-const siteUrl = "https://tutorsindia.com";
+const siteUrl = "https://www.tutorsindia.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

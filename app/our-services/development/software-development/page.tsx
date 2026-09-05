@@ -82,7 +82,7 @@ export default function SoftwareDevelopmentPage() {
               Are you having difficulty with your software programming? Would you like to obtain professional help to complete your application development? You have reached the right destination. Tutors India has well trained and experienced professionals to assist you with your software requirement.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "20px" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
+              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Get A Free Quote</Link>
               <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
             </div>
           </div>

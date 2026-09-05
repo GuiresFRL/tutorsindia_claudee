@@ -82,7 +82,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
             <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.5rem,3vw,2.1rem)", margin: "0 0 14px" }}>{intro.headline}</h1>
             <p style={{ color: "#c5d5f0", fontSize: "1rem", maxWidth: "760px", lineHeight: 1.75, marginBottom: "22px" }}>{intro.intro}</p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/order-now/" style={{ padding: "11px 26px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.92rem" }}>Place an Order</Link>
+              <Link href="/order-now/" style={{ padding: "11px 26px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.92rem" }}>Get A Free Quote</Link>
               <Link href="/contact-us/" style={{ padding: "11px 26px", border: "2px solid rgba(255,255,255,0.45)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.92rem" }}>Contact Us</Link>
             </div>
           </div>

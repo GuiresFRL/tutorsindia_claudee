@@ -94,7 +94,7 @@ export default function OrderNowPage() {
 
           {/* Contact Form */}
           <div>
-            <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>Contact Us to Place Your Order</h2>
+            <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.3rem", fontWeight: 700, color: "#1a2a6c", marginBottom: "20px" }}>Contact Us to Get A Free Quote</h2>
             <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
               <ContactForm />
             </div>

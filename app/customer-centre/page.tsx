@@ -16,7 +16,7 @@ const supportOptions = [
 ];
 
 const selfServiceLinks = [
-  { icon: "📋", title: "Place a New Order", desc: "Submit your requirements and receive a quote within 30 minutes.", href: "/order-now/" },
+  { icon: "📋", title: "Get A Free Quote", desc: "Submit your requirements and receive a quote within 30 minutes.", href: "/order-now/" },
   { icon: "❓", title: "Frequently Asked Questions", desc: "Find answers to common questions about our services, payment, and delivery.", href: "/faq/" },
   { icon: "💡", title: "Ask an Expert", desc: "Free consultation with our PhD-qualified subject matter experts.", href: "/ask-an-expert/" },
   { icon: "💰", title: "Pricing", desc: "View our transparent pricing for all academic writing services.", href: "/pricing/" },
@@ -43,7 +43,7 @@ export default function CustomerCentrePage() {
             Welcome to the Tutors India Customer Centre. Get support, manage your orders, track deliveries, request revisions, and access all client resources in one place. Our team is available 24/7 to assist you.
           </p>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
+            <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Get A Free Quote</Link>
             <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Support</Link>
           </div>
         </div>

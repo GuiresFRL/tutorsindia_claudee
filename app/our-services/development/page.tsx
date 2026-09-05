@@ -128,7 +128,7 @@ export default function DevelopmentPage() {
               Then You have reached the right place. We make difference in terms of deadline and quality. Tutors India is the leading technology solutions company that architects and engineers scalable and high-performing software solutions.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "20px" }}>
-              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Place an Order</Link>
+              <Link href="/order-now/" style={{ padding: "12px 28px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700 }}>Get A Free Quote</Link>
               <Link href="/contact-us/" style={{ padding: "12px 28px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600 }}>Contact Us</Link>
             </div>
           </div>
@@ -301,7 +301,7 @@ export default function DevelopmentPage() {
 
       {/* CTA */}
       <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Place Your Order Today</h2>
+        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "10px" }}>Get A Free Quote Today</h2>
         <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Invest in your Career · US &amp; UK Developers · Unlimited Revisions · Reply in 30 Minutes</p>
         <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>

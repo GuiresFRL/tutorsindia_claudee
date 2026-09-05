@@ -104,7 +104,7 @@ export default function SubjectsPage() {
       </section>
 
       <section style={{ background: "#e87722", color: "#fff", padding: "52px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "8px" }}>Invest in Your Career — Place Your Order Today</h2>
+        <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 700, marginBottom: "8px" }}>Invest in Your Career — Get A Free Quote Today</h2>
         <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.88)", marginBottom: "22px" }}>Availing topic selection from our UK / US Qualified researchers across all subject areas</p>
         <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/order-now/" style={{ padding: "12px 32px", background: "#fff", color: "#e87722", borderRadius: "5px", fontWeight: 700 }}>Order Now</Link>

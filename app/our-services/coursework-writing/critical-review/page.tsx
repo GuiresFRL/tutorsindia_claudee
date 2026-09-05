@@ -114,7 +114,7 @@ export default function CriticalReviewPage() {
             Then You&apos;ve Certainly Reached the Right place
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>Place an Order</Link>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>Get A Free Quote</Link>
             <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Contact Us</Link>
           </div>
         </div>
@@ -358,7 +358,7 @@ export default function CriticalReviewPage() {
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
-          Place Your Order Today
+          Get A Free Quote Today
         </h2>
         <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
           Invest in your Career — get expert Critical Review writing support from our qualified academics today.

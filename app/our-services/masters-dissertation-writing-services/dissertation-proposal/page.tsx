@@ -159,7 +159,7 @@ export default function DissertationProposalPage() {
             Are you struggling with <Link href="/blog/how-to-writing-a-research-proposal-in-apa-style/" style={{ color: "#c5d5f0", textDecoration: "underline" }}>writing the research proposal</Link> or convert your idea into a solid research plan? Alternatively, you may have an idea but lack the experience to create a professional research proposal or need assistance aligning it with professional standards. Our dissertation proposal writing Help can help you write a compelling and well-structured research proposal that meets academic standards and sets you up for success.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
-            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Place an Order</Link>
+            <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get A Free Quote</Link>
             <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Contact Us</Link>
           </div>
         </div>
@@ -426,7 +426,7 @@ export default function DissertationProposalPage() {
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.6rem", marginBottom: "12px" }}>
-          Place Your Order Today
+          Get A Free Quote Today
         </h2>
         <p style={{ color: "#c5d5f0", marginBottom: "28px", fontSize: "1rem" }}>
           Get expert dissertation proposal writing support from our qualified academics today.
