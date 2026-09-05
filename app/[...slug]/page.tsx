@@ -39,7 +39,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title}`,
     description: `${title} — Academic writing support from Tutors India.`,
     alternates: { canonical: `https://www.tutorsindia.com${path.endsWith("/") ? path : path + "/"}` },
-    ...(noindex && { robots: { index: false, follow: false } }),
+    // No real migrated content for this slug — the page renders only the
+    // "available on the live Tutors India website" placeholder, so it's
+    // always noindexed rather than relying on someone adding it to
+    // NOINDEX_PATHS by hand. (noindex still applies here too, redundantly.)
+    robots: { index: false, follow: false },
   };
 }
 
