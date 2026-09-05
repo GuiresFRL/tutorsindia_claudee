@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Merriweather, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/layout/TopBar";
@@ -108,12 +109,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
 
         {/*
-          GTM / gtag / Clarity / Tawk.to all wait for the first real user
-          interaction (scroll, touch, mouse move, keypress) or a 4s fallback
-          timeout, whichever comes first — instead of firing on hydration or
-          window-load. None of them are needed for the initial paint, and
-          keeping them off the main thread during first render is the
-          biggest lever left for LCP/TBT once images are already optimized.
+          GTM and gtag load unconditionally via next/script (afterInteractive)
+          below — Google's automatic-event measurement expects the tag to
+          fire promptly on every visit, and gating it behind an interaction
+          signal caused GA/Tag Assistant to flag it as misconfigured (some
+          visitors who bounced before interacting were never measured).
+          Clarity and Tawk.to still wait for the first real user interaction
+          (scroll, touch, mouse move, keypress) or a 4s fallback timeout —
+          neither affects analytics measurement, so deferring them is still
+          a clean win for LCP/TBT during first render.
         */}
         <script id="deferred-third-party" dangerouslySetInnerHTML={{ __html: `
 (function(){
@@ -121,25 +125,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   function loadThirdParty(){
     if (loaded) return;
     loaded = true;
-
-    // Google Tag Manager
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WF2X4DP');
-
-    // Google tag (gtag.js)
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', 'AW-11160128987');
-    gtag('config', 'G-5PEN58CJ4F');
-    var gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-11160128987';
-    document.head.appendChild(gtagScript);
 
     // Microsoft Clarity
     (function(c,l,a,r,i,t,y){
@@ -171,6 +156,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   var fallbackTimer = setTimeout(loadThirdParty, 4000);
 })();
         ` }} />
+
+        {/* Google Tag Manager — fires unconditionally after hydration so
+            automatic event measurement works for every visitor, not just
+            ones who interact within the deferred-load window above. */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WF2X4DP');`}
+        </Script>
+
+        {/* Google tag (gtag.js) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11160128987" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'AW-11160128987');
+          gtag('config', 'G-5PEN58CJ4F');`}
+        </Script>
 
         {/* Charset & viewport */}
         <meta charSet="utf-8" />

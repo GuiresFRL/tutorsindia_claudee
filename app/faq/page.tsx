@@ -88,7 +88,7 @@ export default function FAQPage() {
             <p style={{ color: "#a0b8e0", fontSize: "0.92rem", lineHeight: 1.7, maxWidth: "650px" }}>Find answers to the most common questions about our academic writing, dissertation support, statistical analysis, and editing services. Can&apos;t find your answer? Contact us and we&apos;ll respond within 30 minutes.</p>
           </div>
           <div style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "24px", textAlign: "center", minWidth: "170px" }} className="hero-badge">
-            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
+            <img src="/images/samples/dissertation-samples.webp" alt="Academic experts collaborating" loading="lazy" style={{ width: "220px", height: "140px", objectFit: "cover", borderRadius: "8px", marginBottom: "10px" }} />
             <div style={{ fontSize: "0.75rem", color: "#c5d5f0", lineHeight: 1.6 }}>30 min<br />Response Time<br />24/7 Support</div>
           </div>
         </div>
