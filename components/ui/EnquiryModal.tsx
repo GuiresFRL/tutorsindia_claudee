@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect, useState, FormEvent } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { COUNTRIES, flagEmoji } from "@/lib/data/countries";
-import Recaptcha from "@/components/ui/Recaptcha";
 
 // Any component can still open this modal on demand:
 //   window.dispatchEvent(new Event(OPEN_ENQUIRY_EVENT))
@@ -18,39 +16,17 @@ const SESSION_KEY = "tutorsindia_enquiry_shown";
 const SCROLL_DEPTH_TRIGGER = 0.5; // 50% down the page
 const EXIT_INTENT_ARM_DELAY_MS = 2000; // ignore stray cursor-near-top moves right after load
 
-const ORDER_TYPES = [
-  "Masters Dissertation Writing",
-  "PhD Dissertation Writing",
-  "MBA / DBA Dissertation Writing",
-  "Coursework / Assignment Writing",
-  "Statistical Analysis",
-  "Editing & Proofreading",
-  "Publication Support",
-  "Other",
-];
-
-const selectChevron =
-  "data:image/svg+xml;utf8," +
-  encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="%23667" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-  );
+const ZOHO_IFRAME_ID = "ziframe_921158";
+const ZOHO_FORM_SRC =
+  "https://forms.zohopublic.com/guiressolutions1/form/ContactFormpopup/formperma/ZzD2uuRUF3ThNcFRA5bWSqYlnWGTacg0brk43YDykU0";
 
 export default function EnquiryModal() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
-
-  const [name, setName] = useState("");
-  const [phoneCode, setPhoneCode] = useState("+91");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [country, setCountry] = useState("");
-  const [orderType, setOrderType] = useState("");
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   // Manual open trigger (kept for any future button/link that wants to open it directly)
   useEffect(() => {
-    const onOpen = () => { setOpen(true); setStatus("idle"); };
+    const onOpen = () => setOpen(true);
     window.addEventListener(OPEN_ENQUIRY_EVENT, onOpen);
     return () => window.removeEventListener(OPEN_ENQUIRY_EVENT, onOpen);
   }, []);
@@ -70,7 +46,6 @@ export default function EnquiryModal() {
 
     const trigger = () => {
       setOpen(true);
-      setStatus("idle");
       try { sessionStorage.setItem(SESSION_KEY, "1"); } catch {}
       cleanup();
     };
@@ -112,68 +87,42 @@ export default function EnquiryModal() {
     };
   }, [open]);
 
+  // Zoho appends the page the visitor came from as a `referrername` query
+  // param on the iframe src, once, right after it mounts — mirrors the
+  // embed snippet Zoho provides, translated to a React effect instead of an
+  // inline <script> (which JSX won't execute).
+  useEffect(() => {
+    if (!open) return;
+    try {
+      const zfFrame = document.getElementById(ZOHO_IFRAME_ID) as HTMLIFrameElement | null;
+      if (!zfFrame) return;
+      let ifrmSrc = zfFrame.src;
+      if (!/[?&]referrername=/.test(ifrmSrc)) {
+        let rfr = window.location.href;
+        try {
+          rfr =
+            window.self !== window.top
+              ? (window.top as Window).location.href
+              : /^https?:\/\/[\w.-]+\.[a-zA-Z]{2,}/i.test(rfr)
+              ? rfr
+              : "";
+        } catch {}
+        if (rfr) {
+          if (rfr.length > 1800) {
+            const queryIndex = rfr.indexOf("?");
+            if (queryIndex > -1) rfr = rfr.substring(0, queryIndex);
+            if (rfr.length > 1800) rfr = rfr.substring(0, 1800);
+          }
+          ifrmSrc += (ifrmSrc.indexOf("?") > 0 ? "&" : "?") + "referrername=" + encodeURIComponent(rfr);
+        }
+      }
+      if (zfFrame.src !== ifrmSrc) zfFrame.src = ifrmSrc;
+    } catch {}
+  }, [open]);
+
   if (!open) return null;
 
   const close = () => setOpen(false);
-
-  const handleCountryChange = (value: string) => {
-    setCountry(value);
-    const match = COUNTRIES.find((c) => c.name === value);
-    if (match) setPhoneCode(match.dial);
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!recaptchaToken) {
-      setStatus("error");
-      return;
-    }
-    setStatus("loading");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          phone: `${phoneCode} ${phone}`,
-          email,
-          country,
-          service: orderType,
-          recaptchaToken,
-        }),
-      });
-      const json = await res.json();
-      if (!res.ok || !json.ok) throw new Error(json.error || "Failed");
-      setStatus("done");
-    } catch {
-      setStatus("error");
-    }
-  };
-
-  const inputStyle: React.CSSProperties = {
-    width: "100%",
-    padding: "13px 16px",
-    border: "none",
-    borderRadius: "8px",
-    fontSize: "0.95rem",
-    color: "#1a2a6c",
-    background: "#fff",
-    outline: "none",
-    boxSizing: "border-box",
-    fontFamily: "inherit",
-  };
-
-  const selectStyle: React.CSSProperties = {
-    ...inputStyle,
-    appearance: "none",
-    WebkitAppearance: "none",
-    backgroundImage: `url("${selectChevron}")`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "right 14px center",
-    paddingRight: "36px",
-    cursor: "pointer",
-    color: "#1a2a6c",
-  };
 
   return (
     <div
@@ -198,7 +147,6 @@ export default function EnquiryModal() {
           width: "100%",
           maxWidth: "440px",
           maxHeight: "calc(100vh - 48px)",
-          background: "linear-gradient(150deg,#1c2c74 0%,#141f52 100%)",
           borderRadius: "16px",
           boxShadow: "0 24px 64px rgba(0,0,0,0.45)",
         }}
@@ -237,176 +185,16 @@ export default function EnquiryModal() {
             maxHeight: "calc(100vh - 48px)",
             overflowY: "auto",
             borderRadius: "16px",
-            padding: "34px 32px 28px",
           }}
         >
-        {status === "done" ? (
-          <div style={{ textAlign: "center", padding: "24px 0" }}>
-            <div style={{ fontSize: "2.6rem", marginBottom: "12px" }}>✅</div>
-            <h2 style={{ color: "#fff", fontSize: "1.3rem", fontWeight: 700, marginBottom: "10px" }}>
-              Thank You!
-            </h2>
-            <p style={{ color: "#c5d5f0", fontSize: "0.92rem", lineHeight: 1.6 }}>
-              Your enquiry has been received. Our team will get back to you within 30 minutes.
-            </p>
-            <button
-              onClick={close}
-              style={{
-                marginTop: "22px",
-                padding: "12px 30px",
-                background: "#e87722",
-                color: "#fff",
-                border: "none",
-                borderRadius: "999px",
-                fontWeight: 700,
-                fontSize: "0.95rem",
-                cursor: "pointer",
-              }}
-            >
-              Close
-            </button>
-          </div>
-        ) : (
-          <>
-            <h2 className="eq-heading" style={{ color: "#fff", fontSize: "1.55rem", fontWeight: 700, marginBottom: "16px" }}>
-              Enquire Now
-            </h2>
-            <div className="eq-divider" style={{ height: "1px", background: "rgba(255,255,255,0.18)", marginBottom: "24px" }} />
-
-            <form onSubmit={handleSubmit} className="eq-form" style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-              {/* Name */}
-              <div>
-                <input
-                  id="eq-name"
-                  type="text"
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  style={inputStyle}
-                  className="eq-input"
-                />
-              </div>
-
-              {/* Mobile Number */}
-              <div>
-                <div style={{
-                  display: "flex",
-                  alignItems: "stretch",
-                  background: "#fff",
-                  borderRadius: "8px",
-                  overflow: "hidden",
-                }}>
-                  <select
-                    aria-label="Country code"
-                    autoComplete="off"
-                    value={phoneCode}
-                    onChange={(e) => setPhoneCode(e.target.value)}
-                    className="eq-input eq-phone-code"
-                    style={{
-                      ...selectStyle,
-                      width: "118px",
-                      flexShrink: 0,
-                      borderRadius: 0,
-                      paddingRight: "28px",
-                      backgroundPosition: "right 10px center",
-                      borderRight: "1px solid #e5e8f0",
-                    }}
-                  >
-                    {COUNTRIES.map((c) => (
-                      <option key={c.iso2} value={c.dial}>{flagEmoji(c.iso2)} {c.dial}</option>
-                    ))}
-                  </select>
-                  <input
-                    id="eq-phone"
-                    type="tel"
-                    required
-                    placeholder="Mobile Number *"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="eq-input"
-                    style={{ ...inputStyle, borderRadius: 0, flex: 1 }}
-                  />
-                </div>
-              </div>
-
-              {/* Email */}
-              <div>
-                <input
-                  id="eq-email"
-                  type="email"
-                  required
-                  placeholder="Email Id *"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  style={inputStyle}
-                  className="eq-input"
-                />
-              </div>
-
-              {/* Country */}
-              <div>
-                <select
-                  id="eq-country"
-                  aria-label="Country"
-                  autoComplete="off"
-                  value={country}
-                  onChange={(e) => handleCountryChange(e.target.value)}
-                  className="eq-input"
-                  style={{ ...selectStyle, color: country ? "#1a2a6c" : "#8a93a8" }}
-                >
-                  <option value="">Country</option>
-                  {COUNTRIES.map((c) => (
-                    <option key={c.iso2} value={c.name}>{flagEmoji(c.iso2)} {c.name}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Type of Order */}
-              <div>
-                <select
-                  id="eq-order-type"
-                  aria-label="Type of order"
-                  value={orderType}
-                  onChange={(e) => setOrderType(e.target.value)}
-                  className="eq-input"
-                  style={{ ...selectStyle, color: orderType ? "#1a2a6c" : "#8a93a8" }}
-                >
-                  <option value="">Select type of order</option>
-                  {ORDER_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
-                </select>
-              </div>
-
-              <Recaptcha onChange={setRecaptchaToken} />
-
-              {status === "error" && (
-                <div style={{ background: "rgba(255,92,92,0.15)", border: "1px solid rgba(255,92,92,0.4)", borderRadius: "6px", padding: "10px 14px", color: "#ffb3b3", fontSize: "0.85rem" }}>
-                  {recaptchaToken ? "Something went wrong. Please try again." : "Please complete the reCAPTCHA verification."}
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={status === "loading" || !recaptchaToken}
-                className="eq-submit"
-                style={{
-                  width: "100%",
-                  padding: "15px",
-                  background: status === "loading" || !recaptchaToken ? "#a98330" : "#c9971e",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "999px",
-                  fontWeight: 700,
-                  fontSize: "1rem",
-                  cursor: status === "loading" || !recaptchaToken ? "not-allowed" : "pointer",
-                  marginTop: "6px",
-                  transition: "background 0.18s",
-                }}
-              >
-                {status === "loading" ? "Submitting…" : "Submit"}
-              </button>
-            </form>
-          </>
-        )}
+          <iframe
+            id={ZOHO_IFRAME_ID}
+            aria-label="Contact Form popup"
+            className="eq-iframe"
+            frameBorder={0}
+            style={{ height: "600px", width: "100%", display: "block", border: "none" }}
+            src={ZOHO_FORM_SRC}
+          />
         </div>
       </div>
 
@@ -417,14 +205,9 @@ export default function EnquiryModal() {
         @media (max-width: 480px), (max-height: 700px) {
           .eq-overlay { padding: 16px !important; }
           .eq-panel { max-height: calc(100vh - 32px) !important; }
-          .eq-scroll { padding: 20px 20px 18px !important; max-height: calc(100vh - 32px) !important; }
+          .eq-scroll { max-height: calc(100vh - 32px) !important; }
           .eq-close { top: -12px !important; right: -12px !important; width: 32px !important; height: 32px !important; }
-          .eq-heading { font-size: 1.25rem !important; margin-bottom: 8px !important; }
-          .eq-divider { margin-bottom: 14px !important; }
-          .eq-form { gap: 12px !important; }
-          .eq-input { padding: 10px 12px !important; font-size: 0.9rem !important; }
-          .eq-phone-code { width: 100px !important; padding-right: 22px !important; }
-          .eq-submit { padding: 12px !important; }
+          .eq-iframe { height: 420px !important; }
         }
       `}</style>
     </div>
