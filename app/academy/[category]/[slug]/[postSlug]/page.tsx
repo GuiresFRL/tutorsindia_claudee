@@ -62,10 +62,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function AcademyNestedCategoryPostPage({ params }: Props) {
-  const { postSlug: slug } = await params;
+  const { category, slug, postSlug } = await params;
 
   const [post, recentPosts] = await Promise.all([
-    getPayloadPostBySlug("academy", slug),
+    getPayloadPostBySlug("academy", postSlug),
     getRecentPayloadPosts("academy", 6),
   ]);
 
@@ -79,9 +79,9 @@ export default async function AcademyNestedCategoryPostPage({ params }: Props) {
   const modified = formatPayloadDate(post.updatedAt);
   const contentHtml = renderLexicalToHtml(post.content, post.title);
 
-  const related = recentPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const related = recentPosts.filter((p) => p.slug !== postSlug).slice(0, 3);
   const sidebarPosts: SidebarRecentPost[] = recentPosts
-    .filter((p) => p.slug !== slug)
+    .filter((p) => p.slug !== postSlug)
     .slice(0, 5)
     .map((p) => ({
       id: p.id,
