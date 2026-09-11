@@ -4,9 +4,9 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import TestimonialSlider from "@/components/ui/TestimonialSlider";
 
 export const metadata: Metadata = {
-  title: "Master's Dissertation Writing Services in UK, UAE",
-  description: "Tutors India has skilled and talented UK writers who work with your UK master's and MBA projects and assist you at all the stages of your dissertation writing.",
-  keywords: "masters dissertation writing services, masters thesis writing services, masters dissertation writing help, masters dissertation writing services in uk, masters thesis writing help, masters dissertation writing guide, masters dissertation writing assistance",
+  title: "Dissertation Writing Services for Masters & MBA | Tutors India",
+  description: "Struggling with your dissertation? Get expert Dissertation Writing Services for Masters & MBA, with plagiarism-free work and unlimited revisions.",
+  keywords: "Dissertation Writing Services, Dissertation Writing Support in UK, Dissertation Writing Help in UAE, UK Dissertation Writing Services, Best Dissertation Writing Services in UK, Master's Dissertation Services in UK, MBA Dissertation Help in UK, MBA Dissertation Support in UK, Dissertation Writing Services in UAE, Master's Dissertation Services in UAE, Masters Dissertation Help in UAE, MBA Dissertation Services in UAE, MBA Dissertation Help in UAE, MBA Dissertation Help in UK",
   alternates: { canonical: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/" },
 };
 
@@ -21,53 +21,69 @@ const services = [
   { title: "CV Writing Services", desc: "We also provide exclusive UK dissertation proofreading services where we proofread for grammar, contextual spelling, punctuations, sentence structure, style and vocabulary enhancement.", href: "/our-services/masters-dissertation-writing-services/cv-writing/" },
 ];
 
-const features = [
-  { icon: "📄", title: "Plagiarism Free Work" },
-  { icon: "✨", title: "Uniqueness" },
-  { icon: "📚", title: "Fully Referenced" },
-  { icon: "🎯", title: "100% Requirement Match" },
-  { icon: "⏱", title: "On Time" },
-  { icon: "📝", title: "Word Count Committed" },
-  { icon: "✅", title: "Quality Assurance" },
-  { icon: "🔄", title: "Unlimited Revisions" },
-  { icon: "💰", title: "Affordable" },
-  { icon: "👨‍🎓", title: "Experienced Writers with a minimum degree of Master's with research experience" },
+const programTypes = [
+  { type: "MSc Programs", support: "Research method, data analysis, interpretation" },
+  { type: "MA Programs", support: "Literature analysis, argumentation, academic writing" },
+  { type: "MRes Programs", support: "Rigorous methodology, research tools, credibility of data" },
+  { type: "MTech Programs", support: "Technical methodology, implementation, innovation" },
 ];
 
-const orderProcess = [
-  { title: "We Identify Your Writer", desc: "In order to get our service, you need to first fill out the form with your information in a comprehensive manner." },
-  { title: "Reference Number", desc: "Upon receiving your Enquiry form, we assign you a reference number. You can know the status of your paper anytime by sending us an email or tracking through CRM." },
-  { title: "Acknowledgment", desc: "Once you have paid for your order you will receive an acknowledgement from us. The writing process here with us begins within couple of days after receiving your order." },
-  { title: "Edit & Proofreading", desc: "Once we receive an order from our writer, we ensure to proofread the document." },
-  { title: "We Check Requirement", desc: "Once your dissertation is completed we check for spelling, grammar, content, focus, sources quality against the client requirement." },
-  { title: "Plagiarism Assurance", desc: "Once your dissertation is completed it is checked for plagiarism with anti-plagiarism software before the delivery." },
-  { title: "Free Appendices / Resources", desc: "We ensure not only to deliver your work but also additional reference materials will be shared via zip file through google drive or drop box." },
-  { title: "Download Your Order", desc: "You can download your order through our CRM and reminder will be sent through email & SMS. Additional copy will be mailed." },
-  { title: "Request for Amendment", desc: "If you required any changes, you can always come back to us, we are ready to unlimited revisions for the concept being committed. Comments can be shared through guidance@tutorsindia.com." },
-  { title: "Researcher Makes the Changes", desc: "The document will be shared to our writer or programmer and once the work is completed, we will share you the complete work through email or you can download the order." },
+const emirateSystems = [
+  { emirate: "Dubai (Combination Systems)", system: "Blend international standards with local business considerations; heavy on innovation" },
+  { emirate: "Abu Dhabi (Research Oriented)", system: "Highly oriented towards research methodologies; publication internationally accepted; policy-oriented" },
+  { emirate: "Sharjah & Northern Emirates", system: "Professionally applied; community relevance; research utility" },
 ];
 
-const additionalFeatures = [
-  {
-    title: "Authenticated References",
-    desc: "All our research writing, editing, and rewriting services are fully referenced and cited academically using style (Harvard, Chicago, MLA, APA) guide provided by the university. We support our arguments and offer a factual basis, to ensure protect against charges of plagiarism. Further, Tutors India demonstrates to assessors that you have carried out the necessary research and allow the reader to locate the material. We reference, even the materials are paraphrased or quote from another source to acknowledge and retrospect the intellectual property rights. We ensure to provide both in-text and list of references (books, chapters in an edited book, journal articles, electronic journal articles, web document, letter, emails, online discussion forums, personal interviews, pamphlets or brochures, reprint diagrams, illustrations, charts or pictures, lecturer or tutors).",
-  },
-  {
-    title: "Plagiarism Free",
-    desc: "We ensure that the document is less than 5 or 0 percent of plagiarism. We correct all errors and infelicities in grammar, syntax, and usage. Rewrite any wordy or convoluted patch. We edit or rewrite your complete Master's / Postgraduate dissertation and manuscript to ensure that your writing does represent your own assertions and abilities. Paraphrase the content using our own words. We re-read the original article, summarize, digest and explain through our own words.",
-  },
-  {
-    title: "Unlimited Revision Support with Quality Check & Assurance",
-    desc: "We consult researchers on how they have to handle the research work in every step, i.e., when choosing a topic, framing the right methodology, collecting the data and every such step, which no other service provider does. We provide unlimited revisions absolutely free of cost as per the commitment made by us since we, as researchers, understand that every researcher has their own perception. We welcome participatory research in which your feedback/comments are discussed, justified and incorporated. This process goes unlimited due to which we support every time our researchers/clients with the same smile and enthusiasm.",
-  },
+const uaeIncludes = [
+  "The peculiarities of the referencing style demanded by most local universities (we know them all)",
+  "Presenting the research from both international and local perspectives",
+  "Composing the paper in accordance with international standards of academic writing",
+  "Understanding the unique requirements of your university",
+  "Studying while being employed as a full-time worker in the UAE is a common occurrence",
+];
+
+const processPhases = [
+  { phase: "Planning", desc: "Think of an issue to research that actually matters. Try to make your proposal and methodology strong and appealing." },
+  { phase: "Research", desc: "During the process of data gathering and analysis, we assist you in making conclusions about findings. What do your findings suggest? Do you need any changes in your methodology?" },
+  { phase: "Analysis", desc: "Move things together. The analysis has to be clear. The discussion has to reflect findings and their implications." },
+  { phase: "Final", desc: "We ensure that grammar, style, citations and format will not distract from the ideas of your work." },
+];
+
+const beforeAfter = [
+  { before: "Not sure whether you're on the right track", after: "Certainty regarding what needs to be done and why" },
+  { before: "Insecurity concerning your approach to writing", after: "Confidence gained by a deep knowledge of your own research" },
+  { before: "Fuzzy writing which hides your thoughts", after: "Academic writing that is concise with well-supported arguments" },
+];
+
+const studentInsights = [
+  { quote: "I never knew if my research was groundbreaking or not. Thank you for explaining precisely why the methodology was effective, which allowed me to gain confidence and proceed to the next level.", attribution: "MSc Psychology, Sheffield, UK" },
+  { quote: "I thought the purpose of proofreading was to correct grammatical errors. However, my data analysis needed a complete overhaul. Thank you for pointing that out.", attribution: "MBA Student, Netherlands" },
+  { quote: "Completing my master's degree alongside my profession seemed impossible before outlining the process. Dividing the project into stages made it possible to approach the objective with more enthusiasm rather than fear of the unknown.", attribution: "MTech Student, UAE" },
 ];
 
 const testimonials = [
-  { quote: "I used to use another service, but I usually received poorly written papers and overpaid for it. I made my decision after discovering your service and receiving a superb dissertation from you. Thank you very much.", name: "C S", location: "Sheffield, UK" },
-  { quote: "My friend recommended that I use your service just when I was about to give up on my dissertation. Because I was trapped and didn't know what to do, the suggestion came at a good moment. I'm now a PhD holder, and I'm overjoyed about it. Thank you for your help.", name: "Ishani", location: "" },
-  { quote: "I knew dissertation writing was way more difficult in the higher studies. But when it came to my research paper that was to be handed in in 72 hours, I had no variants. I made the right choice when I ordered my paper from Tutors India and I'll definitely use your services in the future.", name: "Olivia", location: "UK" },
-  { quote: "Great service for non-native English writing authors! Tutors India's dissertation writing service helps me to formulate my ideas in more clear and straight forward way and to eliminate common grammatical errors. Moreover, the results are delivered in time and for very reasonable price.", name: "Ryan", location: "" },
-  { quote: "The dissertation presented by you for the project is truly commendable. I really appreciate your efforts and professionalism by which you have completed the project well on time. I'll definitely refer to my friends who struggle in writing the dissertation.", name: "Aryaman", location: "" },
+  { quote: "My supervisor commented that my methodology was more rigorous than many PhD proposals. I wouldn't have developed that confidence without Tutors India's guidance through the research design phase.", name: "Daniel Thompson", role: "MSc Psychology Student", location: "University of Sheffield, UK" },
+  { quote: "The support I received throughout my dissertation journey was exceptional. Tutors India's Master's Dissertation Services helped me strengthen my research methodology and improve the quality of my writing.", name: "Hannah Becker", role: "MPhil Student", location: "Germany" },
+  { quote: "Every chapter was reviewed with great attention to detail. Tutors India's Master's Dissertation Services made the entire research process more manageable and less stressful.", name: "Thomas de Vries", role: "MBA Student", location: "Netherlands" },
+  { quote: "From literature review to final formatting, the guidance was excellent. Tutors India's Master's Dissertation Services exceeded my expectations and helped me submit with confidence.", name: "Niamh O'Sullivan", role: "MSc Student", location: "Ireland" },
+  { quote: "The Master's Dissertation Help Services made my graduation journey much easier. The academic experts supported me at every stage and helped me submit a high-quality dissertation on time.", name: "Khalid Al Nuaimi", role: "MEng Student", location: "UAE" },
+  { quote: "I needed professional guidance to complete my master's dissertation before graduation. Tutors India's Master's Dissertation Help Services delivered outstanding academic support throughout the project.", name: "Abdullah Al Qahtani", role: "MTech Student", location: "Saudi Arabia" },
+  { quote: "The Master's Dissertation Help Services helped me develop a strong research framework and complete my master's graduation requirements without unnecessary stress.", name: "Mohammed Al Marri", role: "MBA Student", location: "Qatar" },
+  { quote: "Balancing work and studies was challenging, but Tutors India's Master's Dissertation Help Services provided reliable academic support that helped me complete my master's and achieve my graduation goals.", name: "Fatma Al Balushi", role: "MSc Student", location: "Oman" },
+];
+
+const contactOptions = [
+  { title: "Get an Instant Quote", desc: "Share your brief details and receive a transparent, no-obligation quote", href: "/order-now/" },
+  { title: "Chat via WhatsApp", desc: "Quick questions answered within hours", href: "https://wa.me/918754446690" },
+  { title: "Email Your Requirements", desc: "Send your detailed brief for a personalized support plan", href: "mailto:info@tutorsindia.com" },
+];
+
+const contactChecklist = [
+  { title: "Free Consultation", desc: "Discuss your dissertation needs at no cost" },
+  { title: "Quick Quote", desc: "Get transparent pricing with no obligation" },
+  { title: "Contact Form", desc: "Reach out through our website" },
+  { title: "WhatsApp", desc: "Message for quick assistance" },
+  { title: "Email", desc: "Send requirements for a personalized plan" },
 ];
 
 const subjects = [
@@ -78,10 +94,21 @@ const subjects = [
   "Agriculture & Forestry", "Computer Science & IT", "Hospitality, Leisure & Sports",
 ];
 
+const faqs = [
+  { q: "What is a master's dissertation?", a: "A master's dissertation is an independent research project completed as part of a postgraduate degree. It involves investigating a specific topic, analysing evidence, and presenting well-supported findings using accepted academic research methods and university guidelines." },
+  { q: "How difficult is a master's dissertation?", a: "A master's dissertation can be challenging because it requires research, critical thinking, academic writing, and time management. With proper planning, guidance, and consistent effort, students can complete their dissertation and meet university expectations." },
+  { q: "Is a dissertation compulsory in a Master's degree?", a: "It depends on your university and programme. Many Master's courses require a dissertation, while others may offer alternatives such as a capstone project, internship, or additional coursework. Always check your university's academic requirements." },
+  { q: "What if I fail my Master's dissertation?", a: "Many universities allow students to revise and resubmit their dissertation or complete additional assessments. The available options depend on your university's academic regulations and the examiner's feedback." },
+  { q: "Which is harder, a thesis or a dissertation?", a: "The answer depends on your university's terminology. Generally, a doctoral dissertation is more demanding because it requires original research, while a Master's dissertation focuses on applying established research methods to a specific topic." },
+  { q: "How does your service differ from simply completing the work for me?", a: "Our Master's dissertation services provide expert academic collaboration and guidance. We support your research, methodology, analysis, and writing—empowering you to understand and own your work. This approach ensures your dissertation genuinely represents your research and intellectual development, which is essential for academic integrity and your professional growth." },
+  { q: "Can you help with MBA dissertation specifically?", a: "Yes, our specialized MBA Dissertation Help addresses the unique requirements of business dissertations. We combine academic rigor with commercial viability, supporting strategy, management, finance, marketing, and leadership research. Our MBA experts understand both academic standards and business application requirements." },
+  { q: "Do you provide UK and UAE dissertation writing services?", a: "Yes, we specialize in UK Dissertation Writing Services for Russell Group, Red Brick, and Post-1992 universities. We also provide comprehensive Dissertation Writing Services, UAE for Dubai, Abu Dhabi, and Northern Emirates institutions. Choose the contact option that works best for you." },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [],
+  mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
 const productSchema = {
@@ -91,7 +118,7 @@ const productSchema = {
       "@type": "Product",
       name: "Master's Dissertation Writing Services",
       image: "https://www.tutorsindia.com/wp-content/uploads/2025/02/New-Project.jpg",
-      description: "Professional master's dissertation writing services providing topic selection, proposal development, literature review, research methodology, data analysis, dissertation writing, editing, proofreading, and academic support for postgraduate students.",
+      description: "Struggling with your dissertation? Get expert Dissertation Writing Services for Masters & MBA, with plagiarism-free work and unlimited revisions.",
       url: "https://www.tutorsindia.com/our-services/masters-dissertation-writing-services/",
       brand: {
         "@type": "Organization",
@@ -138,13 +165,10 @@ export default function MastersDissertationPage() {
             <span style={{ color: "#fff" }}>Masters Dissertation Writing Services</span>
           </div>
           <h1 style={{ fontFamily: "Merriweather,serif", fontSize: "clamp(1.6rem,3vw,2.4rem)", marginBottom: "18px", lineHeight: 1.3 }}>
-            Achieving Academic Excellence with Master&apos;s Dissertation Writing Services
+            Master&apos;s Dissertation Guidance from Academic Experts
           </h1>
           <p style={{ color: "#c5d5f0", fontSize: "1.05rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "28px" }}>
-            Our Master&apos;s Dissertation Writing Services can help you write an original and researched dissertation that meets all the academic requirements of the universities and institutes. Our team of experts offers complete assistance in writing your dissertation right from selecting a topic, developing a proposal, writing the literature review, doing research and conducting analysis of data, and academic writing to the final editing and formatting process.
-          </p>
-          <p style={{ color: "#c5d5f0", fontSize: "0.98rem", maxWidth: "820px", lineHeight: 1.8, marginBottom: "28px" }}>
-            All our dissertations are customized according to the requirements of the respective universities and are free from plagiarism. Those students who want Dissertation Writing Services in UK can get expert assistance in several fields of academic disciplines. We also offer Dissertation Writing Help in UAE to those students who require professional help to meet their academic deadline and standards of their university.
+            An academic expert in your field can guide you throughout your research process, from finding the best topic to completing the final editing. You can strengthen your research, understand your methodology, and prepare confidently for examiners&apos; questions.
           </p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
             <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Get A Free Quote</Link>
@@ -153,153 +177,301 @@ export default function MastersDissertationPage() {
         </div>
       </section>
 
-      {/* Post Graduate / Why Tutors India */}
+      {/* Let's Talk About Your Dissertation */}
       <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "32px 36px", marginBottom: "32px", borderLeft: "5px solid #1a2a6c" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "8px" }}>
-            Post Graduate / Master&apos;s Dissertation Writing Service
-          </h2>
-          <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "4px" }}>
-            Assistance for Tutoring and Writing Services exclusively for the UK and Australian Universities –
-          </p>
-          <p style={{ color: "#555", lineHeight: 1.8, margin: 0 }}>
-            You will be Amazed with the quality of your dissertation
-          </p>
-        </div>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "20px", marginBottom: "32px" }}>
-          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #1a2a6c" }}>
-            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
-              Why Tutors India for Master&apos;s Dissertation Writing Services?
-            </h3>
-            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
-              The US &amp; UK writers at Tutors India aim at inculcating knowledge within students and build a great confidence to submit their dissertation successfully.
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "24px" }}>
+          Let&apos;s Talk About Your Dissertation
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
+          <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "28px 32px", borderLeft: "5px solid #1a2a6c" }}>
+            <p style={{ color: "#444", lineHeight: 1.8 }}>
+              You have been studying and writing papers for all the years of your education; When you start writing your dissertation, it feels frustrating and difficult. You do not understand what your supervisor means by this or that; you are beginning to wonder if your chosen methodology is correct.
+            </p>
+            <p style={{ color: "#444", lineHeight: 1.8, marginTop: "14px", marginBottom: 0 }}>
+              You are trying to make your revisions and analyse your results. You are trying to make time to work on your dissertation while doing all the other things that must be done. This is why you might want to consider getting <Link href="/our-services/masters-dissertation-writing-services/dissertation-topic/" style={{ color: "#1a2a6c", fontWeight: 600 }}>professional dissertation writing assistance</Link>.
             </p>
           </div>
-          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", boxShadow: "0 2px 12px rgba(26,42,108,0.08)", borderTop: "4px solid #e87722" }}>
-            <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>
-              UK Master&apos;s Dissertation at Tutors India helps to complete your degree successfully
-            </h3>
-            <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7, margin: 0 }}>
-              We just not provide writing assistance but also Tutoring — we tutor you at every stage on how we proceeded with the dissertation along with the keywords strategy used.
+          <div style={{ background: "#f0f4ff", borderRadius: "12px", padding: "28px 32px", borderLeft: "5px solid #e87722" }}>
+            <p style={{ color: "#444", lineHeight: 1.8 }}>
+              A dissertation is serious business, and you must write it carefully and think about it thoroughly. That is why it will help you to have someone to whom you can turn in your back and who will support you and believe in you at every stage.
+            </p>
+            <p style={{ color: "#444", lineHeight: 1.8, marginTop: "14px", marginBottom: 0 }}>
+              Master&apos;s Dissertation Services in UK universities and dissertation writing help in UAE education systems are here to give you their professional knowledge and experience.
             </p>
           </div>
-        </div>
-
-        <div style={{ background: "#fff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "28px 32px" }}>
-          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "14px" }}>
-            A Trusted Dissertation Writing Service at Tutors India
-          </h3>
-          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
-            Tutors India has skilled and talented professional UK writers who work with your UK Master&apos;s and MBA projects and assist you at all the stages of your UK <Link href="/blog/how-to-write-a-masters-dissertation-for-management/" style={{ color: "#1a2a6c", fontWeight: 600 }}>MBA dissertation writing</Link> either online or email based. They assist you 24/7 and provide evidence that we deliver what exactly you expect. This is one of the highlights of our services which remains unmatched by our competitors across the world.
-          </p>
-          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
-            Our team of UK dissertation writing experts consists of experienced professionals who are holding at least a Master&apos;s degree and also Ph.D. holders from the prestigious universities from the UK, US, and Australia, who can help you in writing any dissertation whether it is science or management or computer science or Engineering or environmental science. Our experts write your UK Master&apos;s and MBA dissertation/ projects (exclusively for the UK universities MBA dissertation writing service (UK MBA, ME, M.Sc., M.S., MPH, MPhil) without plagiarism and set in innovative ideas. Our unique approach has helped hundreds of scholars to complete and submit their UK MBA and Master&apos;s dissertation across the global successfully.
-          </p>
-          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
-            Tutors India has in-house internal committee consists of UK and US based Ph.D. holders for writing and as research advisors, postdoctoral fellows and M.D holding Ph.D. with rich experience in research. Some of our writers are trained at Harvard School, Oxford, London School of Business, and the University of Birmingham.
-          </p>
-          <p style={{ color: "#444", lineHeight: 1.8, margin: 0 }}>
-            Not sure where to begin? Learn about the different types of <Link href="/blog/what-are-the-different-types-of-dissertations-in-uk-universities/" style={{ color: "#1a2a6c", fontWeight: 600 }}>UK Master&apos;s dissertation</Link> formats, get expert help with your <Link href="/our-services/masters-dissertation-writing-services/dissertation-proposal/" style={{ color: "#1a2a6c", fontWeight: 600 }}>Master&apos;s Dissertation Proposal</Link>, or explore our <Link href="/our-services/masters-dissertation-writing-services/dissertation-statistical-analysis/" style={{ color: "#1a2a6c", fontWeight: 600 }}>Dissertation Statistical Analysis</Link> support.
-          </p>
         </div>
       </section>
 
-      {/* Our UK Dissertation Services */}
+      {/* UK Support */}
       <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "32px", textAlign: "center" }}>
-            Our UK Dissertation Services
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "16px" }}>
+            Advanced Master&apos;s Dissertation &amp; Academic Writing Support in the UK
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(270px,1fr))", gap: "20px" }}>
-            {services.map(s => (
-              <Link key={s.title} href={s.href} style={{ background: "#fff", borderRadius: "10px", padding: "24px", textDecoration: "none", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: "4px solid #1a2a6c", display: "block" }}>
-                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{s.title}</h3>
-                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7 }}>{s.desc}</p>
-              </Link>
-            ))}
-          </div>
-          <p style={{ color: "#666", fontSize: "0.85rem", marginTop: "24px", lineHeight: 1.7 }}>
-            <strong>Note:</strong> All our writing, editing, coding, algorithm, software programming &amp; statistics services are provided by our qualified expertise who are scrutinized in terms of their qualification in the specific subject, research experience, capability to write for the higher education system in the US, UK and Australia, and native language speakers of respective countries. However, in the case of software programming, coding &amp; algorithm service, we hire only registered vendors based on their exclusive sample work and portfolio.
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            UK universities are challenging to crack. Whether you study at Oxford, Leeds, or Manchester, your examiners will expect you to produce work with a higher standard than you were used to during your undergraduate studies. Our <Link href="/our-services/masters-dissertation-writing-services/full-dissertation/" style={{ color: "#1a2a6c", fontWeight: 600 }}>dissertation writing service</Link> is designed to meet these standards, providing you with original content filled with critical analysis, methodological rigour, and arguments that do not rest on a superficial level.
           </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+            When your professor tells you that your paper needs more critical analysis or that your methodology is not justified enough, it means you need to approach the task differently. The best dissertation writing services in UK will help you achieve that.
+          </p>
+
+          <div style={{ overflowX: "auto", marginBottom: "36px" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.94rem", background: "#fff" }}>
+              <thead>
+                <tr style={{ background: "#1a2a6c", color: "#fff" }}>
+                  <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>Program Type</th>
+                  <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>Support We Provide</th>
+                </tr>
+              </thead>
+              <tbody>
+                {programTypes.map((p, i) => (
+                  <tr key={p.type} style={{ background: i % 2 === 0 ? "#f5f7ff" : "#fff" }}>
+                    <td style={{ padding: "10px 16px", color: "#1a2a6c", fontWeight: 600, borderBottom: "1px solid #e8ecf4" }}>{p.type}</td>
+                    <td style={{ padding: "10px 16px", color: "#444", borderBottom: "1px solid #e8ecf4" }}>{p.support}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            Academic Support for Master&apos;s Dissertation Research in the UK
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            You may not be looking for someone to write your dissertation for you. Instead, you may need <strong>Master&apos;s Dissertation Support in UK</strong> from someone who asks the right questions, helps you identify what may be wrong with your paper, and encourages you to consider a different perspective that you may have overlooked.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+            Our Dissertation Writing Support in UK is designed to help you strengthen your research skills and work more confidently through each stage of your dissertation. This may include support with research design, methodology, data analysis, supervisor feedback, academic structure, referencing, and final revisions. The goal is to help you understand your research and present your own work clearly and effectively.
+          </p>
+
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            Professional MBA Dissertation Support in the UK
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            A dissertation on an MBA involves a specific kind of research that simultaneously focuses on theoretical and economic topics. This is why MBA dissertation help in UK is highly demanded by students who want to achieve high grades without compromising the practical application of their research.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "20px" }}>
+            MBA dissertation help in UK is available in terms of strategy, finance, marketing, operations, human resources, and organisational skills. Regardless of the topic and area of research you are interested in, be it something like &apos;Startup Disruption&apos; or &apos;Change Management&apos; – our professionals will provide you with the best quality of research following the standards of the British education system.
+          </p>
+
+          <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "10px", padding: "28px 32px", textAlign: "center" }}>
+            <p style={{ fontSize: "1.05rem", fontWeight: 600, marginBottom: "18px" }}>
+              Are you ready to get professional MBA dissertation help?
+            </p>
+            <Link href="/contact-us/" style={{ display: "inline-block", padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>
+              Start your UK dissertation today — Email your university details
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Service Features */}
+      {/* Cross-link services grid */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "32px", textAlign: "center" }}>
+          Our UK Dissertation Services
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(270px,1fr))", gap: "20px" }}>
+          {services.map(s => (
+            <Link key={s.title} href={s.href} style={{ background: "#fff", borderRadius: "10px", padding: "24px", textDecoration: "none", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: "4px solid #1a2a6c", display: "block" }}>
+              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{s.title}</h3>
+              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7 }}>{s.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* UAE Support */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "16px" }}>
+            Academic Dissertation Writing and Research Support in the UAE
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            UAE universities are highly diverse, which means that you can be studying in a local framework, the British system, a mix of the two, or you can be studying with international peers in your class. You could be <Link href="/blog/dissertation-writing-help-in-uae/" style={{ color: "#1a2a6c", fontWeight: 600 }}>researching regional issues</Link> or something global in nature. Whatever your case may be, you will need <strong>dissertation writing service in UAE</strong>{" "}since standard guidelines may not be enough to satisfy your institution&apos;s faculty.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+            Dissertation writing help UAE is a must if you are studying in the region. We offer professional dissertation writing in UAE for students who are based in Dubai, Abu Dhabi, Sharjah and the Northern Emirates. Our experts provide writing assistance in accordance with different university guidelines and requirements, depending on the region and specific institution.
+          </p>
+
+          <div style={{ overflowX: "auto", marginBottom: "36px" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.94rem", background: "#fff" }}>
+              <thead>
+                <tr style={{ background: "#1a2a6c", color: "#fff" }}>
+                  <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>Emirate / Type</th>
+                  <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>System</th>
+                </tr>
+              </thead>
+              <tbody>
+                {emirateSystems.map((e, i) => (
+                  <tr key={e.emirate} style={{ background: i % 2 === 0 ? "#f5f7ff" : "#fff" }}>
+                    <td style={{ padding: "10px 16px", color: "#1a2a6c", fontWeight: 600, borderBottom: "1px solid #e8ecf4" }}>{e.emirate}</td>
+                    <td style={{ padding: "10px 16px", color: "#444", borderBottom: "1px solid #e8ecf4" }}>{e.system}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            Comprehensive Master&apos;s Dissertation Assistance for UAE Students
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            We offer our postgraduate students in the UAE assistance with their Msc, MA, MTech, and specialised master&apos;s thesis. Master&apos;s dissertation services in UAE are developed to meet the unique demands of both the practical and theoretical approaches of local institutions.
+          </p>
+
+          <div style={{ background: "#fff", borderRadius: "10px", padding: "24px 28px", marginBottom: "20px" }}>
+            <p style={{ color: "#1a2a6c", fontWeight: 700, marginBottom: "14px" }}>Our Masters dissertation help in UAE includes:</p>
+            <ul style={{ margin: 0, paddingLeft: "22px", color: "#444", lineHeight: 1.9 }}>
+              {uaeIncludes.map(item => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+            Therefore, instead of following a universal pattern, we will help you meet the specific expectations of your college.
+          </p>
+
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.15rem", color: "#1a2a6c", marginBottom: "10px" }}>
+            MBA Dissertation Research in the UAE Business Environment
+          </h3>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "14px" }}>
+            The business scenario in the UAE is highly volatile. You could be researching sustainable business models, digital strategies, regional growth opportunities, or even family business management, among others, while considering the need for global outlook along with the local dynamics. This is where an MBA <Link href="/blog/statistical-analysis-help-in-uae/" style={{ color: "#1a2a6c", fontWeight: 600 }}>dissertation services</Link> in UAE can provide support to you.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "20px" }}>
+            An MBA dissertation help in UAE can enable your research to not only include the theoretical aspects but also practical ones that are relevant to the Gulf region. By availing of our services, you can be assured of showcasing a thorough understanding of both the academic and regional perspectives of your research.
+          </p>
+
+          <div style={{ background: "#1a2a6c", color: "#fff", borderRadius: "10px", padding: "28px 32px", textAlign: "center" }}>
+            <p style={{ fontSize: "1.05rem", fontWeight: 600, marginBottom: "18px" }}>
+              Do you wish to begin your dissertation process now with the support of experts familiar with the local business scenario in UAE?
+            </p>
+            <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+              <Link href="/order-now/" style={{ padding: "12px 32px", background: "#e87722", color: "#fff", borderRadius: "5px", fontWeight: 700, fontSize: "0.95rem" }}>Start Your UAE Dissertation</Link>
+              <Link href="/contact-us/" style={{ padding: "12px 32px", border: "2px solid rgba(255,255,255,0.5)", color: "#fff", borderRadius: "5px", fontWeight: 600, fontSize: "0.95rem" }}>Share Details of Your Research</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Collaborative Process */}
       <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
         <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
-          UK Master&apos;s Dissertation Service Feature
+          The Dissertation Development Process: A Collaborative Approach
         </h2>
-        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.1rem", color: "#1a2a6c", marginBottom: "8px", fontWeight: 400 }}>
-          A Dissertation Writing Service features that helps to get the grade
-        </h3>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
-          We help you in a broad range of services from the selection of a dissertation topic to complete your master&apos;s dissertation successfully with the expected grade. UK MBA / or Ph.D. thesis topics are selected based on your area of interest, <Link href="/blog/how-to-write-the-research-limitations-section-of-your-masters-dissertation/" style={{ color: "#1a2a6c", fontWeight: 600 }}>research gap</Link>, and feasibility of data collection. We make you strong in your dissertation by dealing with all the questions that you have in your mind. The process also entails data collection, statistical analysis and presentation in the format of your Institute. As a final process, the master&apos;s thesis is further put to review and proofreading to ensure that you get quality work.
+        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
+          This isn&apos;t a one-time feedback session. It&apos;s a research partnership moving through distinct phases:
         </p>
+        <div style={{ overflowX: "auto", marginBottom: "24px" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.94rem" }}>
+            <thead>
+              <tr style={{ background: "#1a2a6c", color: "#fff" }}>
+                <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>Phase</th>
+                <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>What occurs here</th>
+              </tr>
+            </thead>
+            <tbody>
+              {processPhases.map((p, i) => (
+                <tr key={p.phase} style={{ background: i % 2 === 0 ? "#f5f7ff" : "#fff" }}>
+                  <td style={{ padding: "10px 16px", color: "#1a2a6c", fontWeight: 600, borderBottom: "1px solid #e8ecf4" }}>{p.phase}</td>
+                  <td style={{ padding: "10px 16px", color: "#444", borderBottom: "1px solid #e8ecf4" }}>{p.desc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ color: "#444", lineHeight: 1.8 }}>
+          Throughout this process, you&apos;re doing the thinking and writing. We&apos;re the experienced voice asking questions, catching inconsistencies, and pushing you to do better work.
+        </p>
+      </section>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: "16px", marginBottom: "48px" }}>
-          {features.map(f => (
-            <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "18px 20px", display: "flex", gap: "10px", alignItems: "flex-start" }}>
-              <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>{f.icon}</span>
-              <span style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.94rem", lineHeight: 1.5 }}>{f.title}</span>
+      {/* Before / After */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
+            From Uncertainty to Clarity in Dissertation Research
+          </h2>
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.94rem", background: "#fff" }}>
+              <thead>
+                <tr style={{ background: "#1a2a6c", color: "#fff" }}>
+                  <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>Before the Support</th>
+                  <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "Merriweather,serif" }}>With the Expert Advice</th>
+                </tr>
+              </thead>
+              <tbody>
+                {beforeAfter.map((b, i) => (
+                  <tr key={b.before} style={{ background: i % 2 === 0 ? "#f5f7ff" : "#fff" }}>
+                    <td style={{ padding: "10px 16px", color: "#444", borderBottom: "1px solid #e8ecf4" }}>{b.before}</td>
+                    <td style={{ padding: "10px 16px", color: "#444", borderBottom: "1px solid #e8ecf4" }}>{b.after}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Student Insights */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
+          Insights from Students on Their Research Experience
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "20px" }}>
+          {studentInsights.map(s => (
+            <div key={s.attribution} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
+              <p style={{ color: "#444", fontSize: "0.94rem", lineHeight: 1.75, fontStyle: "italic", marginBottom: "14px" }}>
+                &ldquo;{s.quote}&rdquo;
+              </p>
+              <p style={{ color: "#1a2a6c", fontWeight: 600, fontSize: "0.85rem", margin: 0 }}>— {s.attribution}</p>
             </div>
           ))}
         </div>
-
-        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
-          Your Choice of Primary or Secondary Research
-        </h3>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
-          Choice of data collection depends on the research design (quantitative or qualitative design). Tutors India helps in survey tool validation and also online and face to face data collection process. We help you to conduct surveys [in person Interviews: Formal to informal; structured to unstructured; focus group discussion, observations, self-administered questionnaire, diaries, citizen report cards, Delphi techniques, expert judgment, online surveys, secondary sources such as journals, newspaper articles, annual reports, government sources such as census, budgets, policies, procedures, etc.
-        </p>
-
-        <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "10px" }}>
-          Your Choice of Quantitative or Qualitative or Triangulation Methodologies
-        </h3>
-        <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "28px" }}>
-          We are completely aware that there are a way and difference in the methodology section being written for management and health care or economics. As every discipline has its structure of methodologies and therefore, &apos;Tutors India&apos; provide consultation and writing services for your research methodology using our subject matter expertise. We offer a wide range of dissertation research methodology writing services, either being qualitative methods or quantitative research methods or a combination of both or critical and action oriented, our writers are well experienced in handling any methodology across the discipline.
-        </p>
       </section>
 
-      {/* What You Expect + Free Features */}
+      {/* Client Testimonials */}
       <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.4rem", color: "#1a2a6c", marginBottom: "28px" }}>
-            What You Expect when you order Master&apos;s Dissertation Writing Service
+          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px", textAlign: "center" }}>
+            Client Testimonials
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
-            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
-                Get Some of Our Service Features at Free of Costs
-              </h3>
-              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
-                We Share references sourced for your dissertation in the form of PDFs, questionnaire or interview guide and primary research output without data at free of costs.
-              </p>
-            </div>
-            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #1a2a6c" }}>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
-                Get your Primary Research Completed at an Additional Cost
-              </h3>
-              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
-                Tutors India has exclusive custom data collection services to gather useful information in various domains. We make sure the research work needs to be ethical with primary data, needs to be original with novelty. The choice of research method to use depends on many factors, such as the number of respondents, data collection time frame, and the characteristics of the population under investigation.
-              </p>
-            </div>
-            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #2563b0" }}>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
-                Appendices or Additional Work at Free of Costs
-              </h3>
-              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
-                The dissertation writing not only involves the collection of data required for the analysis but also involves additional material to support the findings. Appendix involves supportive materials that includes data, audio, video, hi-resolution images. We will help you to provide those supplementary materials as free and present in the order in which they are introduced in the text (Appendix A, Appendix B, etc.).
-              </p>
-            </div>
-            <div style={{ background: "#fff", borderRadius: "10px", padding: "24px", borderLeft: "4px solid #e87722" }}>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>
-                Development of Questionnaire or Interview Questions
-              </h3>
-              <p style={{ color: "#555", fontSize: "0.96rem", lineHeight: 1.7 }}>
-                At Tutors India, we assist you in developing questionnaire — Open ended, closed ended, Objective questionnaire, structured and unstructured questionnaire, focus group guide, interview guide for all your research work. Response categories of questionnaire include Use of Likert Scale, Category proliferation, Ranking, etc.
-              </p>
-            </div>
+          <TestimonialSlider testimonials={testimonials.map(t => ({ quote: t.quote, author: t.name, role: `${t.role} — ${t.location}` }))} />
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
+        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "28px" }}>
+          Frequently Asked Questions
+        </h2>
+        <FaqAccordion faqs={faqs} />
+      </section>
+
+      {/* Contact Options */}
+      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <p style={{ color: "#444", lineHeight: 1.8, maxWidth: "820px", marginBottom: "32px" }}>
+            What you&apos;ll get: A real conversation about your dissertation situation, honest feedback on where you stand, and a practical plan for what comes next. No sales pitch. No pressure. Just expert guidance from someone who understands your field and your university&apos;s expectations.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "20px", marginBottom: "40px" }}>
+            {contactOptions.map(c => (
+              <Link key={c.title} href={c.href} style={{ background: "#fff", borderRadius: "10px", padding: "24px", textDecoration: "none", boxShadow: "0 2px 8px rgba(26,42,108,0.07)", borderTop: "4px solid #e87722", display: "block" }}>
+                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "8px" }}>{c.title}</h3>
+                <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7, margin: 0 }}>{c.desc}</p>
+              </Link>
+            ))}
+          </div>
+
+          <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1.2rem", color: "#1a2a6c", marginBottom: "18px" }}>
+            Contact Options
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "14px" }}>
+            {contactChecklist.map(c => (
+              <div key={c.title} style={{ display: "flex", gap: "10px", alignItems: "flex-start", background: "#fff", borderRadius: "8px", padding: "14px 18px" }}>
+                <span style={{ color: "#e87722", fontWeight: 700, flexShrink: 0 }}>✓</span>
+                <span style={{ color: "#444", fontSize: "0.92rem", lineHeight: 1.6 }}>
+                  <strong style={{ color: "#1a2a6c" }}>{c.title}</strong> – {c.desc}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -321,55 +493,9 @@ export default function MastersDissertationPage() {
               <span key={s} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "6px 16px", borderRadius: "20px", fontSize: "0.85rem" }}>{s}</span>
             ))}
           </div>
-          <p style={{ color: "#c5d5f0", fontSize: "0.96rem", marginBottom: "20px" }}>
-            As well as your order, you will also get the following
-          </p>
           <Link href="/our-writers/" style={{ color: "#f9c74f", fontWeight: 600, fontSize: "0.95rem" }}>Meet Our Writers →</Link>
         </div>
       </section>
-
-      {/* Additional Features */}
-      <section style={{ maxWidth: "1200px", margin: "56px auto", padding: "0 20px" }}>
-        <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "32px" }}>
-          Our Additional Features
-        </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "24px" }}>
-          {additionalFeatures.map(f => (
-            <div key={f.title} style={{ background: "#f5f7ff", border: "1px solid #dde2ef", borderRadius: "10px", padding: "24px" }}>
-              <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "1rem", color: "#1a2a6c", marginBottom: "10px" }}>{f.title}</h3>
-              <p style={{ color: "#555", fontSize: "0.94rem", lineHeight: 1.7 }}>{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Order Process */}
-      <section style={{ background: "#f0f4ff", padding: "56px 20px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Merriweather,serif", fontSize: "1.5rem", color: "#1a2a6c", marginBottom: "8px" }}>
-            Order Process
-          </h2>
-          <p style={{ color: "#555", marginBottom: "8px" }}>Have a look at what makes us the best in the business</p>
-          <p style={{ color: "#444", lineHeight: 1.8, marginBottom: "32px" }}>
-            At Tutors India we are equipped with writers who have passion towards research and associated with writing all their lives.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "20px" }}>
-            {orderProcess.map((p, i) => (
-              <div key={p.title} style={{ background: "#fff", borderRadius: "10px", padding: "20px 24px" }}>
-                <div style={{ width: "36px", height: "36px", background: "#e87722", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.95rem", marginBottom: "12px" }}>{i + 1}</div>
-                <h3 style={{ fontFamily: "Merriweather,serif", fontSize: "0.95rem", color: "#1a2a6c", marginBottom: "6px" }}>{p.title}</h3>
-                <p style={{ color: "#555", fontSize: "0.86rem", lineHeight: 1.7 }}>{p.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p style={{ color: "#555", fontSize: "0.94rem", marginTop: "24px", lineHeight: 1.7 }}>
-            Since we deliver the research work, and there is a possibility that research can be viewed in different direction, we offer unlimited revision support for the concept being accepted.
-          </p>
-        </div>
-      </section>
-
-      {/* Testimonials Slider */}
-      <TestimonialSlider testimonials={testimonials.map(t => ({ ...t, author: t.name }))} />
 
       {/* CTA */}
       <section style={{ background: "linear-gradient(135deg,#1a2a6c 0%,#2563b0 100%)", color: "#fff", padding: "56px 20px", textAlign: "center" }}>
