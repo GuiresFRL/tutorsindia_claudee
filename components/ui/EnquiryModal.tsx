@@ -15,8 +15,8 @@ const SESSION_KEY = "tutorsindia_enquiry_shown";
 // Trigger thresholds for the intent-based auto-popup.
 const SCROLL_DEPTH_TRIGGER = 0.5; // 50% down the page
 const EXIT_INTENT_ARM_DELAY_MS = 2000; // ignore stray cursor-near-top moves right after load
-const FLAT_TIMER_MS = 3000; // fallback: show after 3s even with no scroll/exit signal
 const TAB_HIDDEN_ARM_DELAY_MS = 2000; // mobile has no mouse exit-intent — treat backgrounding the tab as the equivalent "leaving" signal
+const WINDOW_BLUR_ARM_DELAY_MS = 2000; // Alt+Tab to another desktop app: the tab stays "visible" but the browser window loses focus
 
 const ZOHO_IFRAME_ID = "ziframe_921158";
 const ZOHO_FORM_SRC =
@@ -41,9 +41,13 @@ export default function EnquiryModal() {
   //   3. Tab hidden (mobile/tablet): there's no mouse to read exit-intent
   //      from on touch devices, so backgrounding the tab — switching apps,
   //      going home, opening a new tab — is the closest equivalent signal.
-  //   4. Flat timer: a 3s fallback so the popup still reaches visitors who
-  //      don't scroll and don't leave (e.g. they just sit and read).
-  // Once per browser session, not on every page navigation.
+  //   4. Window blur (desktop): Alt+Tab / clicking into a different
+  //      application. The tab itself stays "visible" here (visibilitychange
+  //      won't fire), only the browser window loses OS focus.
+  // Once per browser session, not on every page navigation. Deliberately no
+  // flat timer: a fixed delay fires before almost anyone actually leaves, so
+  // it drowns out every genuine exit signal below it — the previous 3s timer
+  // was removed for exactly that reason.
   useEffect(() => {
     let alreadyShown = false;
     try { alreadyShown = sessionStorage.getItem(SESSION_KEY) === "1"; } catch {}
@@ -74,19 +78,25 @@ export default function EnquiryModal() {
       if (tabHiddenArmed && document.visibilityState === "hidden") trigger();
     };
 
-    const flatTimer = setTimeout(trigger, FLAT_TIMER_MS);
+    let windowBlurArmed = false;
+    const windowBlurArmTimer = setTimeout(() => { windowBlurArmed = true; }, WINDOW_BLUR_ARM_DELAY_MS);
+    const onWindowBlur = () => {
+      if (windowBlurArmed) trigger();
+    };
 
     window.addEventListener("scroll", onScroll, { passive: true });
     document.addEventListener("mouseout", onMouseOut);
     document.addEventListener("visibilitychange", onVisibilityChange);
+    window.addEventListener("blur", onWindowBlur);
 
     function cleanup() {
       clearTimeout(exitArmTimer);
       clearTimeout(tabHiddenArmTimer);
-      clearTimeout(flatTimer);
+      clearTimeout(windowBlurArmTimer);
       window.removeEventListener("scroll", onScroll);
       document.removeEventListener("mouseout", onMouseOut);
       document.removeEventListener("visibilitychange", onVisibilityChange);
+      window.removeEventListener("blur", onWindowBlur);
     }
 
     return cleanup;
