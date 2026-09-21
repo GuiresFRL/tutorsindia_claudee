@@ -1,106 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-
-// Any component can still open this modal on demand:
-//   window.dispatchEvent(new Event(OPEN_ENQUIRY_EVENT))
-// By default the modal auto-opens on an intent signal (scroll depth or exit
-// intent) rather than a flat timer — see the auto-open effect below.
-export const OPEN_ENQUIRY_EVENT = "tutorsindia:open-enquiry";
-
-// Show the auto-popup once per browser session, not on every page navigation.
-const SESSION_KEY = "tutorsindia_enquiry_shown";
-
-// Trigger thresholds for the intent-based auto-popup.
-const SCROLL_DEPTH_TRIGGER = 0.5; // 50% down the page
-const EXIT_INTENT_ARM_DELAY_MS = 2000; // ignore stray cursor-near-top moves right after load
-const TAB_HIDDEN_ARM_DELAY_MS = 2000; // mobile has no mouse exit-intent — treat backgrounding the tab as the equivalent "leaving" signal
-const WINDOW_BLUR_ARM_DELAY_MS = 2000; // Alt+Tab to another desktop app: the tab stays "visible" but the browser window loses focus
+import { OPEN_ENQUIRY_EVENT } from "@/components/ui/enquiryEvent";
 
 const ZOHO_IFRAME_ID = "ziframe_921158";
 const ZOHO_FORM_SRC =
   "https://forms.zohopublic.com/guiressolutions1/form/ContactFormpopup/formperma/ZzD2uuRUF3ThNcFRA5bWSqYlnWGTacg0brk43YDykU0";
 
-export default function EnquiryModal() {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+// Opens only on demand (the floating "Enquire" button) — it no longer
+// auto-opens on scroll, exit intent, or a timer.
+// `openOnMount` covers the first click, when this chunk is still loading and
+// the OPEN_ENQUIRY_EVENT fired before the listener below existed.
+export default function EnquiryModal({ openOnMount = false }: { openOnMount?: boolean }) {
+  const [open, setOpen] = useState(openOnMount);
 
-  // Manual open trigger (kept for any future button/link that wants to open it directly)
   useEffect(() => {
     const onOpen = () => setOpen(true);
     window.addEventListener(OPEN_ENQUIRY_EVENT, onOpen);
     return () => window.removeEventListener(OPEN_ENQUIRY_EVENT, onOpen);
   }, []);
-
-  // Auto-open on an intent signal — whichever fires first:
-  //   1. Scroll depth: the visitor has scrolled past SCROLL_DEPTH_TRIGGER of
-  //      the page, i.e. they're actually reading/engaging, not bouncing.
-  //   2. Exit intent (desktop): the cursor leaves through the top of the
-  //      viewport, the classic "about to close the tab" signal.
-  //   3. Tab hidden (mobile/tablet): there's no mouse to read exit-intent
-  //      from on touch devices, so backgrounding the tab — switching apps,
-  //      going home, opening a new tab — is the closest equivalent signal.
-  //   4. Window blur (desktop): Alt+Tab / clicking into a different
-  //      application. The tab itself stays "visible" here (visibilitychange
-  //      won't fire), only the browser window loses OS focus.
-  // Once per browser session, not on every page navigation. Deliberately no
-  // flat timer: a fixed delay fires before almost anyone actually leaves, so
-  // it drowns out every genuine exit signal below it — the previous 3s timer
-  // was removed for exactly that reason.
-  useEffect(() => {
-    let alreadyShown = false;
-    try { alreadyShown = sessionStorage.getItem(SESSION_KEY) === "1"; } catch {}
-    if (alreadyShown) return;
-
-    const trigger = () => {
-      setOpen(true);
-      try { sessionStorage.setItem(SESSION_KEY, "1"); } catch {}
-      cleanup();
-    };
-
-    const onScroll = () => {
-      const doc = document.documentElement;
-      const scrolled = window.scrollY + window.innerHeight;
-      const depth = doc.scrollHeight > 0 ? scrolled / doc.scrollHeight : 0;
-      if (depth >= SCROLL_DEPTH_TRIGGER) trigger();
-    };
-
-    let exitIntentArmed = false;
-    const exitArmTimer = setTimeout(() => { exitIntentArmed = true; }, EXIT_INTENT_ARM_DELAY_MS);
-    const onMouseOut = (e: MouseEvent) => {
-      if (exitIntentArmed && e.clientY <= 0 && !e.relatedTarget) trigger();
-    };
-
-    let tabHiddenArmed = false;
-    const tabHiddenArmTimer = setTimeout(() => { tabHiddenArmed = true; }, TAB_HIDDEN_ARM_DELAY_MS);
-    const onVisibilityChange = () => {
-      if (tabHiddenArmed && document.visibilityState === "hidden") trigger();
-    };
-
-    let windowBlurArmed = false;
-    const windowBlurArmTimer = setTimeout(() => { windowBlurArmed = true; }, WINDOW_BLUR_ARM_DELAY_MS);
-    const onWindowBlur = () => {
-      if (windowBlurArmed) trigger();
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    document.addEventListener("mouseout", onMouseOut);
-    document.addEventListener("visibilitychange", onVisibilityChange);
-    window.addEventListener("blur", onWindowBlur);
-
-    function cleanup() {
-      clearTimeout(exitArmTimer);
-      clearTimeout(tabHiddenArmTimer);
-      clearTimeout(windowBlurArmTimer);
-      window.removeEventListener("scroll", onScroll);
-      document.removeEventListener("mouseout", onMouseOut);
-      document.removeEventListener("visibilitychange", onVisibilityChange);
-      window.removeEventListener("blur", onWindowBlur);
-    }
-
-    return cleanup;
-  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
