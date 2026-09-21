@@ -137,15 +137,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     var Tawk_API=window.Tawk_API||{}, Tawk_LoadStart=new Date();
     window.Tawk_API = Tawk_API;
     window.Tawk_LoadStart = Tawk_LoadStart;
-    // Chat is opened from the site's own float icon (components/ui/FloatingActions),
-    // so Tawk's default bubble is hidden as soon as it loads — unless the visitor
-    // already clicked that icon before Tawk was ready, in which case open it.
-    Tawk_API.onLoad = function(){
-      if (window.__openTawkOnLoad) { window.__openTawkOnLoad = false; Tawk_API.showWidget(); Tawk_API.maximize(); }
-      else Tawk_API.hideWidget();
-    };
-    // Minimising the chat window returns to the float icon rather than Tawk's bubble.
-    Tawk_API.onChatMinimized = function(){ Tawk_API.hideWidget(); };
     (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
       s1.async=true;
@@ -163,7 +154,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     window.addEventListener(evt, loadThirdParty, { once: true, passive: true });
   });
   var fallbackTimer = setTimeout(loadThirdParty, 4000);
-  window.__loadThirdParty = loadThirdParty;
 })();
         ` }} />
 
@@ -279,7 +269,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main style={{ flex: 1 }}>{children}</main>
         <Footer />
 
-        {/* Right-side float stack: Enquire (popup), Chat, WhatsApp, Call */}
+        {/* Right-side speed-dial: Enquire (popup), WhatsApp, Call — sits above Tawk.to's own chat bubble */}
         <FloatingActions />
 
         {/* "Enquire Now" popup — opened only from the Enquire float icon (OPEN_ENQUIRY_EVENT), never automatically */}
