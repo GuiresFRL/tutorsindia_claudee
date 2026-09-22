@@ -20,28 +20,9 @@ const iconProps = {
   strokeLinejoin: "round" as const,
 };
 
-// Tawk.to is loaded lazily by the snippet in app/layout.tsx, which also hides
-// Tawk's own bubble so the Chat tab below is the only entry point.
-interface TawkWindow extends Window {
-  Tawk_API?: { maximize?: () => void; showWidget?: () => void };
-  __loadThirdParty?: () => void;
-  __openTawkOnLoad?: boolean;
-}
-
-function openChat() {
-  const w = window as TawkWindow;
-  if (w.Tawk_API?.maximize) {
-    w.Tawk_API.showWidget?.();
-    w.Tawk_API.maximize();
-    return;
-  }
-  // Not loaded yet — load it now and have its onLoad handler open the chat.
-  w.__openTawkOnLoad = true;
-  w.__loadThirdParty?.();
-}
-
 // Docked to the right edge of the viewport: each tab shows just its icon and
-// slides out to reveal its label on hover/focus.
+// slides out to reveal its label on hover/focus. Tawk.to keeps its own
+// default bubble (bottom-right, unmodified) — this bar doesn't touch it.
 export default function FloatingActions() {
   const [callOpen, setCallOpen] = useState(false);
   const callRef = useRef<HTMLDivElement>(null);
@@ -134,22 +115,6 @@ export default function FloatingActions() {
               <path d="M3 7l9 6 9-6" />
             </svg>
             <span>Enquire Now</span>
-          </button>
-        </div>
-
-        {/* Live chat (Tawk.to) */}
-        <div className="side-tab-wrap">
-          <button
-            type="button"
-            className="side-tab"
-            style={{ background: "#e0a526" }}
-            aria-label="Start a live chat"
-            onClick={openChat}
-          >
-            <svg {...iconProps}>
-              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-            </svg>
-            <span>Live Chat</span>
           </button>
         </div>
       </div>

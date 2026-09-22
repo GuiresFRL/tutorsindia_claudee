@@ -137,15 +137,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     var Tawk_API=window.Tawk_API||{}, Tawk_LoadStart=new Date();
     window.Tawk_API = Tawk_API;
     window.Tawk_LoadStart = Tawk_LoadStart;
-    // Chat is opened from the site's own side tab (components/ui/FloatingActions),
-    // so Tawk's default bubble is hidden as soon as it loads — unless the visitor
-    // already clicked that tab before Tawk was ready, in which case open it.
-    Tawk_API.onLoad = function(){
-      if (window.__openTawkOnLoad) { window.__openTawkOnLoad = false; Tawk_API.showWidget(); Tawk_API.maximize(); }
-      else Tawk_API.hideWidget();
-    };
-    // Minimising the chat window returns to the side tab rather than Tawk's bubble.
-    Tawk_API.onChatMinimized = function(){ Tawk_API.hideWidget(); };
     (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
       s1.async=true;
@@ -163,7 +154,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     window.addEventListener(evt, loadThirdParty, { once: true, passive: true });
   });
   var fallbackTimer = setTimeout(loadThirdParty, 4000);
-  window.__loadThirdParty = loadThirdParty;
 })();
         ` }} />
 
